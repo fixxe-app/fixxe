@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad ja Apple'i kiibiga Mac.
   apk_title: APK-fail
   apk_desc: 'Android ilma Google Playta: Huawei, oma püsivara, AOSP.'
+  github_title: "APK GitHubist"
+  github_desc: "Sama APK iga versiooni jaoks ja kogu lähtekood."
+  source_note: "Lähtekood on avatud ja saadaval GitHubis GPL-3.0 litsentsi all."
   web_title: Veebiversioon
   web_desc: Avaneb brauseris. Midagi pole vaja paigaldada.
   pwa_title: Lisa avakuvale

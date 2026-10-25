@@ -4,19 +4,24 @@ Real-time multi-currency converter for **Android**, **iOS** and as an installabl
 Mid-market rates, 300+ currencies incl. crypto, 40 languages.
 Built entirely with CLI tools — no Android Studio required.
 
-**Install:** Google Play (Android) · App Store (iOS) · https://telebimmer.com/fixxe/ — the PWA installs
-to the home screen on both platforms.
+**Get FIXXE:** [Google Play](https://play.google.com/store/apps/details?id=com.karpinity.fixxe) ·
+[App Store](https://apps.apple.com/app/id6815242016) (iPhone, iPad, Apple-silicon Mac) ·
+[APK from GitHub releases](https://github.com/fixxe-app/fixxe/releases/latest) for Android without
+Google Play · [web app](https://telebimmer.com/fixxe/) that installs to the home screen.
 
-APKs are deliberately **not** published here, for a reason that is easy to get wrong: the app uses
-**Play App Signing**, so the key that signs what users install lives at Google. Anything built and
-signed locally carries a different signature and therefore cannot be installed over a Play copy,
-nor updated from Play afterwards.
+**Open source.** The complete source code — Android, iOS and the web app — is published here under
+the [GPL-3.0](LICENSE) licence. See [About the app](https://telebimmer.com/fixxe/about/) for a
+description in 40 languages.
+
+### About the APK
+
+The app uses **Play App Signing**, so the key that signs what users install from Google Play lives at
+Google. Anything built and signed locally carries a different signature and therefore cannot be
+installed over a Play copy, nor updated from Play afterwards.
 
 Google's own universal APK (Play Console → App bundle explorer → Downloads, or
 `androidpublisher.generatedapks`) carries the right certificate, but it is **not** a general-purpose
-download: it still contains the app-bundle split metadata (`res/xml/splits0.xml`), and on a device
-without the Play Store Android refuses to start it — "Something went wrong. Check that Google Play
-is enabled on your device". Verified on a clean AOSP image.
+APK: it keeps split-APK metadata, and without the Play Store Android refuses to start it.
 
 What works off-store is a plain **release APK** built here and signed with the upload key. Every
 release publishes it on the [GitHub releases page](https://github.com/fixxe-app/fixxe/releases)

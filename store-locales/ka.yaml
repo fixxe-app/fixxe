@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad და Mac Apple-ის ჩიპით.
   apk_title: APK ფაილი
   apk_desc: 'Android Google Play-ის გარეშე: Huawei, მორგებული პროგრამული უზრუნველყოფა, AOSP.'
+  github_title: "APK GitHub-იდან"
+  github_desc: "იგივე APK ყოველი ვერსიისთვის და სრული საწყისი კოდი."
+  source_note: "საწყისი კოდი ღიაა და ხელმისაწვდომია GitHub-ზე GPL-3.0 ლიცენზიით."
   web_title: ვებვერსია
   web_desc: იხსნება ბრაუზერში. არაფრის დაყენება არ სჭირდება.
   pwa_title: მთავარ ეკრანზე დამატება

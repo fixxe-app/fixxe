@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad und Mac mit Apple Silicon.
   apk_title: APK-Datei
   apk_desc: Android ohne Google Play — Huawei, eigene Firmware, AOSP.
+  github_title: "APK von GitHub"
+  github_desc: "Dasselbe APK zu jeder Version – und der vollständige Quellcode."
+  source_note: "Der Quellcode ist offen und auf GitHub unter der Lizenz GPL-3.0 verfügbar."
   web_title: Web-Version
   web_desc: Öffnet sich im Browser. Nichts zu installieren.
   pwa_title: Zum Startbildschirm hinzufügen

@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad и Mac са Apple чипом.
   apk_title: APK датотека
   apk_desc: 'Android без Google Play-а: Huawei, прилагођени фирмвер, AOSP.'
+  github_title: "APK са GitHub-а"
+  github_desc: "Исти APK за сваку верзију и комплетан изворни код."
+  source_note: "Изворни код је отворен и доступан на GitHub-у под лиценцом GPL-3.0."
   web_title: Веб верзија
   web_desc: Отвара се у прегледачу. Нема шта да се инсталира.
   pwa_title: Додај на почетни екран

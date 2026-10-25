@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad in Mac s čipom Apple.
   apk_title: Datoteka APK
   apk_desc: 'Android brez Googla Play: Huawei, prilagojena strojna programska oprema, AOSP.'
+  github_title: "APK z GitHuba"
+  github_desc: "Isti APK za vsako različico in celotna izvorna koda."
+  source_note: "Izvorna koda je odprta in na voljo na GitHubu pod licenco GPL-3.0."
   web_title: Spletna različica
   web_desc: Odpre se v brskalniku. Ni treba ničesar namestiti.
   pwa_title: Dodaj na začetni zaslon

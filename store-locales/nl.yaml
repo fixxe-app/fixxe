@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad en Mac met Apple silicon.
   apk_title: APK-bestand
   apk_desc: 'Android zonder Google Play: Huawei, eigen firmware, AOSP.'
+  github_title: "APK van GitHub"
+  github_desc: "Dezelfde APK bij elke versie, plus de volledige broncode."
+  source_note: "De broncode is open en beschikbaar op GitHub onder de GPL-3.0-licentie."
   web_title: Webversie
   web_desc: Opent in de browser. Je hoeft niets te installeren.
   pwa_title: Aan beginscherm toevoegen

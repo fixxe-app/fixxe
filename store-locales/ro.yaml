@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad și Mac cu cip Apple.
   apk_title: Fișier APK
   apk_desc: 'Android fără Google Play: Huawei, firmware personalizat, AOSP.'
+  github_title: "APK de pe GitHub"
+  github_desc: "Același APK pentru fiecare versiune, plus codul sursă complet."
+  source_note: "Codul sursă este deschis și disponibil pe GitHub sub licența GPL-3.0."
   web_title: Versiunea web
   web_desc: Se deschide în browser. Nu ai nimic de instalat.
   pwa_title: Adaugă pe ecranul principal

@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone、iPad 和搭载 Apple 芯片的 Mac。
   apk_title: APK 文件
   apk_desc: 没有 Google Play 的 Android——华为、定制固件、AOSP。
+  github_title: "从 GitHub 获取 APK"
+  github_desc: "每个版本相同的 APK，以及完整源代码。"
+  source_note: "源代码以 GPL-3.0 许可证在 GitHub 上开放提供。"
   web_title: 网页版
   web_desc: 在浏览器中打开，无需安装。
   pwa_title: 添加到主屏幕

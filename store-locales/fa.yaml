@@ -67,6 +67,9 @@ landing:
   ios_desc: ‏iPhone و iPad و Mac با تراشهٔ Apple.
   apk_title: فایل APK
   apk_desc: ‏Android بدون Google Play — هوآوی، سیستم‌عامل سفارشی، AOSP.
+  github_title: "‏APK از GitHub"
+  github_desc: "‏همان APK برای هر نسخه، به‌علاوهٔ کد منبع کامل."
+  source_note: "‏کد منبع باز است و در GitHub تحت مجوز GPL-3.0 در دسترس است."
   web_title: نسخهٔ وب
   web_desc: در مرورگر باز می‌شود. چیزی برای نصب نیست.
   pwa_title: افزودن به صفحهٔ خانه

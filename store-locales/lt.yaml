@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad ir Mac su Apple lustu.
   apk_title: APK failas
   apk_desc: 'Android be Google Play: Huawei, pritaikyta programinė įranga, AOSP.'
+  github_title: "APK iš GitHub"
+  github_desc: "Tas pats APK kiekvienai versijai ir visas pirminis kodas."
+  source_note: "Pirminis kodas atviras ir pasiekiamas GitHub pagal GPL-3.0 licenciją."
   web_title: Interneto versija
   web_desc: Atsiveria naršyklėje. Nieko nereikia diegti.
   pwa_title: Įtraukti į pradžios ekraną

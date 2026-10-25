@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad και Mac με τσιπ Apple.
   apk_title: Αρχείο APK
   apk_desc: 'Android χωρίς Google Play: Huawei, προσαρμοσμένο firmware, AOSP.'
+  github_title: "APK από το GitHub"
+  github_desc: "Το ίδιο APK για κάθε έκδοση, μαζί με τον πλήρη πηγαίο κώδικα."
+  source_note: "Ο πηγαίος κώδικας είναι ανοικτός και διαθέσιμος στο GitHub με άδεια GPL-3.0."
   web_title: Έκδοση για το web
   web_desc: Ανοίγει στο πρόγραμμα περιήγησης. Δεν χρειάζεται εγκατάσταση.
   pwa_title: Προσθήκη στην αρχική οθόνη

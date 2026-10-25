@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad ja Apple-piirillä varustettu Mac.
   apk_title: APK-tiedosto
   apk_desc: 'Android ilman Google Playtä: Huawei, omat laiteohjelmistot, AOSP.'
+  github_title: "APK GitHubista"
+  github_desc: "Sama APK jokaiseen versioon sekä koko lähdekoodi."
+  source_note: "Lähdekoodi on avoin ja saatavilla GitHubissa GPL-3.0-lisenssillä."
   web_title: Verkkoversio
   web_desc: Avautuu selaimessa. Mitään ei tarvitse asentaa.
   pwa_title: Lisää aloitusnäytölle

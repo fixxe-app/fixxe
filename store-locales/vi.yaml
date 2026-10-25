@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad và Mac dùng chip Apple.
   apk_title: Tệp APK
   apk_desc: 'Android không có Google Play: Huawei, firmware tùy chỉnh, AOSP.'
+  github_title: "APK từ GitHub"
+  github_desc: "Cùng một tệp APK cho mỗi phiên bản, kèm toàn bộ mã nguồn."
+  source_note: "Mã nguồn được mở và có sẵn trên GitHub theo giấy phép GPL-3.0."
   web_title: Bản web
   web_desc: Mở trong trình duyệt. Không phải cài gì cả.
   pwa_title: Thêm vào màn hình chính

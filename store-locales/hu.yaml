@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad és Apple chipes Mac.
   apk_title: APK-fájl
   apk_desc: 'Android a Google Play nélkül: Huawei, egyedi firmware, AOSP.'
+  github_title: "APK a GitHubról"
+  github_desc: "Ugyanaz az APK minden verzióhoz, plusz a teljes forráskód."
+  source_note: "A forráskód nyílt, és a GitHubon érhető el GPL-3.0 licenc alatt."
   web_title: Webes változat
   web_desc: A böngészőben nyílik meg. Semmit sem kell telepíteni.
   pwa_title: Hozzáadás a kezdőképernyőhöz

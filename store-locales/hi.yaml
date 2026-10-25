@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad और Apple चिप वाले Mac।
   apk_title: APK फ़ाइल
   apk_desc: Google Play के बिना Android — Huawei, कस्टम फ़र्मवेयर, AOSP।
+  github_title: "GitHub से APK"
+  github_desc: "हर संस्करण के लिए वही APK, साथ में पूरा स्रोत कोड।"
+  source_note: "स्रोत कोड खुला है और GitHub पर GPL-3.0 लाइसेंस के तहत उपलब्ध है।"
   web_title: वेब संस्करण
   web_desc: ब्राउज़र में खुलता है। कुछ भी इंस्टॉल नहीं करना पड़ता।
   pwa_title: होम स्क्रीन पर जोड़ें

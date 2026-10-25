@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad и Mac с чип на Apple.
   apk_title: Файл APK
   apk_desc: 'Android без Google Play: Huawei, собствен фърмуер, AOSP.'
+  github_title: "APK от GitHub"
+  github_desc: "Същият APK за всяка версия плюс пълният изходен код."
+  source_note: "Изходният код е отворен и достъпен в GitHub под лиценз GPL-3.0."
   web_title: Уеб версия
   web_desc: Отваря се в браузъра. Няма какво да се инсталира.
   pwa_title: Добавяне към началния екран

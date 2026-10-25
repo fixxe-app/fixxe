@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad og Mac med Apple-brikke.
   apk_title: APK-fil
   apk_desc: 'Android uten Google Play: Huawei, egen fastvare, AOSP.'
+  github_title: "APK fra GitHub"
+  github_desc: "Samme APK for hver versjon, pluss hele kildekoden."
+  source_note: "Kildekoden er åpen og tilgjengelig på GitHub under GPL-3.0-lisensen."
   web_title: Nettversjon
   web_desc: Åpnes i nettleseren. Ingenting å installere.
   pwa_title: Legg til på hjemskjermen

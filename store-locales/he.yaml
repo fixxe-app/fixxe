@@ -67,6 +67,9 @@ landing:
   ios_desc: ‏iPhone, iPad ו-Mac עם שבב Apple.
   apk_title: קובץ APK
   apk_desc: ‏Android ללא Google Play — Huawei, קושחה מותאמת, AOSP.
+  github_title: "‏APK מ-GitHub"
+  github_desc: "‏אותו APK לכל גרסה, בתוספת קוד המקור המלא."
+  source_note: "‏קוד המקור פתוח וזמין ב-GitHub תחת רישיון GPL-3.0."
   web_title: גרסת האינטרנט
   web_desc: נפתחת בדפדפן. אין מה להתקין.
   pwa_title: הוספה למסך הבית

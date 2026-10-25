@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad, Apple 실리콘 Mac.
   apk_title: APK 파일
   apk_desc: 구글 플레이가 없는 안드로이드 — 화웨이, 커스텀 펌웨어, AOSP.
+  github_title: "GitHub에서 APK"
+  github_desc: "모든 버전의 동일한 APK와 전체 소스 코드."
+  source_note: "소스 코드는 GPL-3.0 라이선스로 GitHub에 공개되어 있습니다."
   web_title: 웹 버전
   web_desc: 브라우저에서 열립니다. 설치할 것이 없습니다.
   pwa_title: 홈 화면에 추가

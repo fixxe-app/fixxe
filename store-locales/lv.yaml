@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad un Mac ar Apple mikroshēmu.
   apk_title: APK fails
   apk_desc: 'Android bez Google Play: Huawei, pielāgota programmatūra, AOSP.'
+  github_title: "APK no GitHub"
+  github_desc: "Tas pats APK katrai versijai un pilns pirmkods."
+  source_note: "Pirmkods ir atvērts un pieejams GitHub ar GPL-3.0 licenci."
   web_title: Tīmekļa versija
   web_desc: Atveras pārlūkā. Nekas nav jāinstalē.
   pwa_title: Pievienot sākuma ekrānam

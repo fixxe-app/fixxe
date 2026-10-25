@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad ve Apple çipli Mac.
   apk_title: APK dosyası
   apk_desc: 'Google Play''siz Android: Huawei, özel yazılımlar, AOSP.'
+  github_title: "GitHub'dan APK"
+  github_desc: "Her sürüm için aynı APK, artı kaynak kodun tamamı."
+  source_note: "Kaynak kodu açıktır ve GitHub'da GPL-3.0 lisansıyla sunulmaktadır."
   web_title: Web sürümü
   web_desc: Tarayıcıda açılır. Kurulacak bir şey yok.
   pwa_title: Ana ekrana ekle

@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad et Mac à puce Apple.
   apk_title: Fichier APK
   apk_desc: Android sans Google Play — Huawei, firmwares personnalisés, AOSP.
+  github_title: "APK depuis GitHub"
+  github_desc: "Le même APK pour chaque version, plus le code source complet."
+  source_note: "Le code source est ouvert et disponible sur GitHub sous licence GPL-3.0."
   web_title: Version web
   web_desc: S'ouvre dans le navigateur. Rien à installer.
   pwa_title: Ajouter à l'écran d'accueil

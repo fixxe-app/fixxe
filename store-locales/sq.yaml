@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad dhe Mac me çip Apple.
   apk_title: Skedar APK
   apk_desc: 'Android pa Google Play: Huawei, firmware të personalizuar, AOSP.'
+  github_title: "APK nga GitHub"
+  github_desc: "I njëjti APK për çdo version, plus kodi i plotë burimor."
+  source_note: "Kodi burimor është i hapur dhe i disponueshëm në GitHub nën licencën GPL-3.0."
   web_title: Versioni në web
   web_desc: Hapet në shfletues. S'ka asgjë për të instaluar.
   pwa_title: Shto në ekranin bazë

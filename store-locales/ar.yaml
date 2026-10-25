@@ -67,6 +67,9 @@ landing:
   ios_desc: ‏iPhone وiPad وMac بمعالج Apple.
   apk_title: ملف APK
   apk_desc: ‏Android بلا Google Play — هواوي، أنظمة معدّلة، AOSP.
+  github_title: "‏APK من GitHub"
+  github_desc: "‏نفس ملف APK لكل إصدار، إضافة إلى الشيفرة المصدرية الكاملة."
+  source_note: "‏الشيفرة المصدرية مفتوحة ومتاحة على GitHub بموجب رخصة GPL-3.0."
   web_title: نسخة الويب
   web_desc: تُفتح في المتصفح، ولا شيء لتثبيته.
   pwa_title: إضافة إلى الشاشة الرئيسية

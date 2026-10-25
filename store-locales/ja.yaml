@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone、iPad、Appleシリコン搭載のMac。
   apk_title: APKファイル
   apk_desc: Google Playのない Android — Huawei、カスタムファームウェア、AOSP。
+  github_title: "GitHub から APK"
+  github_desc: "各バージョンの同じ APK と、完全なソースコード。"
+  source_note: "ソースコードは GPL-3.0 ライセンスのもと GitHub で公開されています。"
   web_title: ウェブ版
   web_desc: ブラウザで開きます。インストールは不要です。
   pwa_title: ホーム画面に追加

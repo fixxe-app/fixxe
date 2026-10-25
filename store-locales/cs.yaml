@@ -67,6 +67,9 @@ landing:
   ios_desc: iPhone, iPad a Mac s čipem Apple.
   apk_title: Soubor APK
   apk_desc: 'Android bez Google Play: Huawei, vlastní firmware, AOSP.'
+  github_title: "APK z GitHubu"
+  github_desc: "Stejné APK ke každé verzi a kompletní zdrojový kód."
+  source_note: "Zdrojový kód je otevřený a dostupný na GitHubu pod licencí GPL-3.0."
   web_title: Webová verze
   web_desc: Otevře se v prohlížeči. Není co instalovat.
   pwa_title: Přidat na plochu
