@@ -8,10 +8,16 @@
 # после проверки, что в нём нет ничего лишнего: ни чужих логинов, ни адресов
 # серверов, ни путей с этого Mac, ни ключей.
 #
+# После push — релиз vN на GitHub с APK этой версии (web/FIXXE.apk, собран
+# release.sh): так его находят и люди, и каталоги вроде IzzyOnDroid. Нужен
+# токен аккаунта (FIXXE_GITHUB_TOKEN в .release.local) — SSH-ключ умеет
+# только пушить код.
+#
 # Usage: tools/publish-public.sh            # собрать снимок и проверить (без push)
-#        tools/publish-public.sh --push     # и отправить в FIXXE_PUBLIC_REMOTE
+#        tools/publish-public.sh --push     # и отправить в FIXXE_PUBLIC_REMOTE + релиз с APK
 set -euo pipefail
 cd "$(dirname "$0")/.."
+MAIN=$(pwd)
 # shellcheck disable=SC1091
 [ -f .release.local ] && . ./.release.local
 OUT="${FIXXE_PUBLIC_DIR:-$HOME/fixxe-public}"
@@ -63,6 +69,28 @@ if [ "${1:-}" = "--push" ]; then
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "$REMOTE"
   git push -q -u origin main --tags
   echo "✓ отправлено в $REMOTE"
+
+  # 5. Релиз на GitHub с APK этой версии
+  TOKEN="${FIXXE_GITHUB_TOKEN:-}"
+  REPO=$(echo "$REMOTE" | sed -E 's#.*[:/]([^/]+/[^/]+)$#\1#; s#\.git$##')
+  APK="$MAIN/web/FIXXE.apk"
+  AAPT=$(ls -d "${ANDROID_HOME:-$HOME/android-sdk}"/build-tools/*/aapt2 2>/dev/null | tail -1)
+  APK_N=$([ -f "$APK" ] && [ -n "$AAPT" ] && "$AAPT" dump badging "$APK" 2>/dev/null | grep -oE "versionCode='[0-9]+'" | grep -oE '[0-9]+' || true)
+  if [ -z "$TOKEN" ]; then
+    echo "ℹ релиз на GitHub не создан: нет FIXXE_GITHUB_TOKEN в .release.local"
+  elif [ "$APK_N" != "$N" ]; then
+    echo "⚠ релиз на GitHub не создан: web/FIXXE.apk — версия ${APK_N:-?}, а нужна $N (собери release.sh)"
+  else
+    NOTES="$MAIN/store-release-notes.txt"
+    if GH_TOKEN="$TOKEN" gh release view "v$N" -R "$REPO" >/dev/null 2>&1; then
+      GH_TOKEN="$TOKEN" gh release upload "v$N" "$APK#FIXXE-1.$N.apk" -R "$REPO" --clobber >/dev/null
+      echo "✓ релиз v$N уже был — APK обновлён"
+    else
+      GH_TOKEN="$TOKEN" gh release create "v$N" "$APK#FIXXE-1.$N.apk" -R "$REPO" \
+        -t "FIXXE 1.$N" -F "$NOTES" --latest >/dev/null
+      echo "✓ релиз FIXXE 1.$N с APK: https://github.com/$REPO/releases/tag/v$N"
+    fi
+  fi
 else
   echo "  push не делался (добавь --push, когда репозиторий на GitHub создан)"
 fi

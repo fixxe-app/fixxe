@@ -26,3 +26,8 @@ FIXXE_PUBLIC_REMOTE=""                   # git@github.com:<account>/fixxe.git
 # Регулярное выражение (grep -E): имена людей, почты, адреса своих серверов,
 # названия записей в связке ключей — всё, что не должно попасть в открытый снимок
 FIXXE_PUBLIC_DENY='myname|me@example\.com|10\.0\.0\.'
+
+# Токен GitHub-аккаунта для релизов с APK (fine-grained: только этот репозиторий,
+# Contents: Read and write). Лучше не писать прямо, а брать из связки ключей:
+# FIXXE_GITHUB_TOKEN="$(security find-generic-password -s 'my github token' -a 'me' -w)"
+FIXXE_GITHUB_TOKEN=""

@@ -18,7 +18,9 @@ download: it still contains the app-bundle split metadata (`res/xml/splits0.xml`
 without the Play Store Android refuses to start it — "Something went wrong. Check that Google Play
 is enabled on your device". Verified on a clean AOSP image.
 
-What works off-store is a plain **release APK** built here and signed with the upload key:
+What works off-store is a plain **release APK** built here and signed with the upload key. Every
+release publishes it on the [GitHub releases page](https://github.com/fixxe-app/fixxe/releases)
+(`FIXXE-1.N.apk`) and at `telebimmer.com/fixxe/FIXXE.apk`:
 
 ```bash
 # the upload keystore and its password live outside the repo — see .release.local.example

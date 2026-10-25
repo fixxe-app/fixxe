@@ -202,6 +202,11 @@ gh release create "v$N" --title "FIXXE v$N" --notes "versionName=1.$N
 $NOTE"
 
 echo "✓ v$N помечен. versionCode=$N == тег v$N."
+
+# 5b. Открытый репозиторий: чистый снимок этой версии (best-effort, без остановки выпуска)
+if [ -n "${FIXXE_PUBLIC_REMOTE:-}" ]; then
+  ./tools/publish-public.sh --push || echo "⚠ открытый репозиторий не обновлён — см. выше; повтори: tools/publish-public.sh --push"
+fi
 echo
 echo "  Заметки для магазинов (АНГЛИЙСКИЙ) — обнови store-release-notes.txt, затем:"
 if [ "$ANDROID_CHANGED" = "1" ]; then
