@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="back">뒤로</string>
+    <string name="close">닫기</string>
+    <string name="delete">삭제</string>
+    <string name="selected">선택됨: %1$d</string>
+    <string name="loading">불러오는 중…</string>
+    <string name="updated">업데이트 %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">네트워크 오류</string>
+    <string name="clear">지우기</string>
+    <string name="add_currency">＋ 통화 추가</string>
+    <string name="mid_market">중간 시장 환율 ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">버전 %1$s</string>
+    <string name="base_currency">기준 통화</string>
+    <string name="delete_currency_title">통화를 삭제할까요?</string>
+    <string name="delete_currency_msg">목록에서 %1$s — %2$s 을(를) 삭제할까요?</string>
+    <string name="add_currency_title">사용 가능한 %1$d개 통화 중 선택</string>
+    <string name="search_hint">코드 또는 이름…</string>
+    <string name="settings">설정</string>
+    <string name="setting_precision">표시 정밀도:  %1$s</string>
+    <string name="setting_source">환율 출처:  %1$s</string>
+    <string name="setting_language">🌐 언어:  %1$s</string>
+    <string name="precision_title">표시 정밀도</string>
+    <string name="prec_0">0 — 정수</string>
+    <string name="prec_1">소수점 1자리</string>
+    <string name="prec_2">소수점 2자리</string>
+    <string name="prec_4">소수점 4자리</string>
+    <string name="precision_value_int">정수</string>
+    <string name="precision_value_n">소수점 %1$d자리</string>
+    <string name="source_title">환율 출처</string>
+    <string name="source_auto">자동 (대체 포함)</string>
+    <string name="language_title">언어</string>
+    <string name="language_system">시스템 기본값</string>
+    <string name="source_info_title">환율 출처</string>
+    <string name="source_info_message">중간 시장 환율 — 글로벌 시장의 매수와 매도 사이의 중간값입니다.\n\n기준 통화: EUR, 다른 통화쌍은 유로를 통해 계산됩니다.\n\n출처(자동 대체):\n1. ExchangeRate-API — 기본\n2. F.A. — 기본 출처가 다운된 경우\n3. Frankfurter (ECB) — 두 번째 대체\n\n자동 업데이트 시 또는 ↻ 를 누를 때 기본 출처가 응답하지 않으면 앱이 자동으로 다음 출처에서 데이터를 가져옵니다. 현재 출처는 업데이트 시간 옆 상단에 표시됩니다.\n\n설정(⚙)에서 특정 출처를 강제로 지정할 수 있습니다 — 나머지는 여전히 대체로 남아 있습니다.\n\n하루에 한 번 업데이트됩니다. 다른 참고 환율 서비스와의 차이는 보통 0.5% 미만입니다 — 이는 실시간 시세가 아닌 참고 환율입니다.\n\n라이선스 및 출처 표기:\n• ExchangeRate-API —“Rates By Exchange Rate API” 링크가 필요합니다(하단 바닥글, 클릭 가능).\n• F.A. — CC0(퍼블릭 도메인), 표기 불필요.\n• Frankfurter — MIT, 데이터는 유럽 중앙은행(ECB)에서 제공됩니다.</string>
+    <string name="filter_all">전체</string>
+    <string name="switch_source_title">소스를 전환할까요?</string>
+    <string name="switch_source_msg">%1$s은(는) 현재 소스가 아닌 %2$s을(를) 통해 사용할 수 있습니다. 전환하고 추가할까요?</string>
+    <string name="switch_and_add">전환 후 추가</string>
+    <string name="already_added">이미 목록에 있음</string>
+    <string name="reorder">순서 변경</string>
+    <string name="rates_offline">오프라인 · %1$s 환율 · %2$s</string>
+    <string name="rates_stale">⚠ 환율이 오래되었습니다 — %1$s · %2$s</string>
+    <string name="clear_confirm_title">모든 금액을 지울까요?</string>
+    <string name="clear_confirm_msg">모든 금액이 0이 됩니다.</string>
+    <string name="refresh">환율 새로 고침</string>
+    <string name="setting_theme">모양:  %1$s</string>
+    <string name="theme_title">모양</string>
+    <string name="theme_system">시스템 설정</string>
+    <string name="theme_light">밝게</string>
+    <string name="theme_dark">어둡게</string>
+    <string name="setting_grouping">천 단위 구분:  %1$s</string>
+    <string name="grouping_title">천 단위 구분</string>
+    <string name="group_none">없음 — 1234.56</string>
+    <string name="group_space">공백 — 1 234.56</string>
+    <string name="group_comma">쉼표 — 1,234.56</string>
+</resources>

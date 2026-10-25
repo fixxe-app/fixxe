@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Đã hiểu</string>
+    <string name="cancel">Hủy</string>
+    <string name="back">Quay lại</string>
+    <string name="close">Đóng</string>
+    <string name="delete">Xóa</string>
+    <string name="selected">Đã chọn: %1$d</string>
+    <string name="loading">Đang tải…</string>
+    <string name="updated">Cập nhật %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Lỗi mạng</string>
+    <string name="clear">XÓA</string>
+    <string name="add_currency">＋ Thêm tiền tệ</string>
+    <string name="mid_market">Tỷ giá trung bình ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">phiên bản %1$s</string>
+    <string name="base_currency">Tiền tệ cơ sở</string>
+    <string name="delete_currency_title">Gỡ tiền tệ?</string>
+    <string name="delete_currency_msg">Gỡ %1$s — %2$s khỏi danh sách?</string>
+    <string name="add_currency_title">Chọn từ %1$d loại tiền tệ có sẵn</string>
+    <string name="search_hint">Mã hoặc tên…</string>
+    <string name="settings">Cài đặt</string>
+    <string name="setting_precision">Độ chính xác hiển thị:  %1$s</string>
+    <string name="setting_source">Nguồn tỷ giá:  %1$s</string>
+    <string name="setting_language">🌐 Ngôn ngữ:  %1$s</string>
+    <string name="precision_title">Độ chính xác hiển thị</string>
+    <string name="prec_0">0 — số nguyên</string>
+    <string name="prec_1">1 chữ số thập phân</string>
+    <string name="prec_2">2 chữ số thập phân</string>
+    <string name="prec_4">4 chữ số thập phân</string>
+    <string name="precision_value_int">số nguyên</string>
+    <string name="precision_value_n">%1$d chữ số</string>
+    <string name="source_title">Nguồn tỷ giá</string>
+    <string name="source_auto">Tự động (có dự phòng)</string>
+    <string name="language_title">Ngôn ngữ</string>
+    <string name="language_system">Mặc định hệ thống</string>
+    <string name="source_info_title">Nguồn tỷ giá</string>
+    <string name="source_info_message">Tỷ giá trung bình — điểm giữa giữa giá mua và giá bán trên thị trường toàn cầu.\n\nTiền tệ cơ sở: EUR, các cặp khác được tính qua đồng euro.\n\nNguồn (tự động dự phòng):\n1. ExchangeRate-API — chính\n2. F.A. — khi nguồn chính không hoạt động\n3. Frankfurter (ECB) — dự phòng thứ hai\n\nNếu nguồn chính không phản hồi khi tự động cập nhật hoặc khi nhấn ↻, ứng dụng sẽ tự lấy dữ liệu từ nguồn tiếp theo. Nguồn hiện tại hiển thị ở trên cùng, bên cạnh thời gian cập nhật.\n\nTrong Cài đặt (⚙) bạn có thể buộc dùng một nguồn cụ thể — các nguồn còn lại vẫn làm dự phòng.\n\nCập nhật mỗi ngày một lần. Chênh lệch so với các dịch vụ tham chiếu khác thường dưới 0.5% — đây là tỷ giá tham chiếu, không phải báo giá thời gian thực.\n\nGiấy phép và ghi công:\n• ExchangeRate-API — yêu cầu liên kết “Rates By Exchange Rate API” (ở chân trang, có thể nhấp).\n• F.A. — CC0 (phạm vi công cộng), không cần ghi công.\n• Frankfurter — MIT, dữ liệu từ Ngân hàng Trung ương châu Âu (ECB).</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="switch_source_title">Đổi nguồn?</string>
+    <string name="switch_source_msg">%1$s có sẵn qua %2$s, không phải nguồn hiện tại. Đổi và thêm?</string>
+    <string name="switch_and_add">Đổi &amp; thêm</string>
+    <string name="already_added">Đã có trong danh sách</string>
+    <string name="reorder">Sắp xếp lại</string>
+    <string name="rates_offline">Ngoại tuyến · tỷ giá từ %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Tỷ giá đã cũ — từ %1$s · %2$s</string>
+    <string name="clear_confirm_title">Xóa tất cả số tiền?</string>
+    <string name="clear_confirm_msg">Mọi số tiền sẽ được đặt về 0.</string>
+    <string name="refresh">Làm mới tỷ giá</string>
+    <string name="setting_theme">Giao diện:  %1$s</string>
+    <string name="theme_title">Giao diện</string>
+    <string name="theme_system">Theo hệ thống</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="setting_grouping">Dấu phân cách hàng nghìn:  %1$s</string>
+    <string name="grouping_title">Dấu phân cách hàng nghìn</string>
+    <string name="group_none">Không — 1234.56</string>
+    <string name="group_space">Dấu cách — 1 234.56</string>
+    <string name="group_comma">Dấu phẩy — 1,234.56</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Строки только для сборки вне Google Play. В Play-сборке их нет. -->
+<resources>
+    <string name="update_available">FIXXE %1$s is available</string>
+    <string name="update_open">Download</string>
+</resources>

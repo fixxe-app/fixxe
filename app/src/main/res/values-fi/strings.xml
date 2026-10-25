@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Selvä</string>
+    <string name="cancel">Peruuta</string>
+    <string name="back">Takaisin</string>
+    <string name="close">Sulje</string>
+    <string name="delete">Poista</string>
+    <string name="selected">Valittu: %1$d</string>
+    <string name="loading">Ladataan…</string>
+    <string name="updated">Päivitetty %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Verkkovirhe</string>
+    <string name="clear">TYHJENNÄ</string>
+    <string name="add_currency">＋ Lisää valuutta</string>
+    <string name="mid_market">Keskimarkkinakurssit ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Perusvaluutta</string>
+    <string name="delete_currency_title">Poistetaanko valuutta?</string>
+    <string name="delete_currency_msg">Poistetaanko %1$s — %2$s luettelosta?</string>
+    <string name="add_currency_title">Valitse %1$d saatavilla olevasta valuutasta</string>
+    <string name="search_hint">Koodi tai nimi…</string>
+    <string name="settings">Asetukset</string>
+    <string name="setting_precision">Näyttötarkkuus:  %1$s</string>
+    <string name="setting_source">Kurssilähde:  %1$s</string>
+    <string name="setting_language">🌐 Kieli:  %1$s</string>
+    <string name="precision_title">Näyttötarkkuus</string>
+    <string name="prec_0">0 — kokonaisluvut</string>
+    <string name="prec_1">1 desimaali</string>
+    <string name="prec_2">2 desimaalia</string>
+    <string name="prec_4">4 desimaalia</string>
+    <string name="precision_value_int">kokonaisluvut</string>
+    <string name="precision_value_n">%1$d des.</string>
+    <string name="source_title">Kurssilähde</string>
+    <string name="source_auto">Automaattinen (varajärjestelmällä)</string>
+    <string name="language_title">Kieli</string>
+    <string name="language_system">Järjestelmän oletus</string>
+    <string name="source_info_title">Kurssilähde</string>
+    <string name="source_info_message">Keskimarkkinakurssi — osto- ja myyntikurssin keskiarvo maailmanmarkkinoilla.\n\nPerusvaluutta: EUR, muut parit lasketaan euron kautta.\n\nLähteet (automaattinen varajärjestelmä):\n1. ExchangeRate-API — ensisijainen\n2. F.A. — jos ensisijainen ei toimi\n3. Frankfurter (ECB) — toinen varalähde\n\nJos ensisijainen lähde ei vastaa automaattipäivityksen aikana tai painettaessa ↻, sovellus hakee tiedot automaattisesti seuraavasta. Nykyinen lähde näkyy ylhäällä päivitysajan vieressä.\n\nAsetuksissa (⚙) voit pakottaa tietyn lähteen — muut jäävät silti varalähteiksi.\n\nPäivittyy kerran päivässä. Ero muihin viitepalveluihin on yleensä alle 0.5% — nämä ovat viitekursseja, eivät reaaliaikaisia noteerauksia.\n\nLisenssit ja attribuutio:\n• ExchangeRate-API — vaatii linkin “Rates By Exchange Rate API” (alatunnisteessa, klikattava).\n• F.A. — CC0 (public domain), ei attribuutiota vaadita.\n• Frankfurter — MIT, tiedot European Central Bank (ECB).</string>
+    <string name="filter_all">Kaikki</string>
+    <string name="switch_source_title">Vaihdetaanko lähde?</string>
+    <string name="switch_source_msg">%1$s on saatavilla lähteen %2$s kautta, ei nykyisen lähteen. Vaihda ja lisää?</string>
+    <string name="switch_and_add">Vaihda ja lisää</string>
+    <string name="already_added">Jo listassa</string>
+    <string name="reorder">Järjestä uudelleen</string>
+    <string name="rates_offline">Offline · kurssit %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kurssit ovat vanhentuneet — %1$s · %2$s</string>
+    <string name="clear_confirm_title">Tyhjennetäänkö kaikki summat?</string>
+    <string name="clear_confirm_msg">Kaikki summat nollataan.</string>
+    <string name="refresh">Päivitä kurssit</string>
+    <string name="setting_theme">Ulkoasu:  %1$s</string>
+    <string name="theme_title">Ulkoasu</string>
+    <string name="theme_system">Järjestelmän mukaan</string>
+    <string name="theme_light">Vaalea</string>
+    <string name="theme_dark">Tumma</string>
+    <string name="setting_grouping">Tuhaterotin:  %1$s</string>
+    <string name="grouping_title">Tuhaterotin</string>
+    <string name="group_none">Ei mitään — 1234.56</string>
+    <string name="group_space">Välilyönti — 1 234.56</string>
+    <string name="group_comma">Pilkku — 1,234.56</string>
+</resources>

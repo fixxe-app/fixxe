@@ -1,0 +1,80 @@
+title: "FIXXE – Valūtas kalkulators"
+subtitle: Kursi no trim avotiem
+short_description: Vidējie kursi no 3 avotiem, 300+ valūtu, darbojas bezsaistē, bez reklāmām.
+keywords: valūta,konvertors,kurss,maiņa,nauda,ceļojums,forex,kripto,finanses,eiro
+promotional_text: Trīs kursu avoti ar automātisku pāreju, bezsaistes kursi ar brīdinājumu par novecošanu un gudra noapaļošana, kas nesabojā mazas summas.
+description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika vidējiem tirgus kursiem — neitrālo viduspunktu starp pasaules pirkšanas un pārdošanas cenām, bez banku uzcenojuma.
+
+
+  AR KO FIXXE ATŠĶIRAS
+
+
+  • Trīs kursu avoti ar automātisku pāreju — ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
+
+
+  • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
+
+
+  • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei.
+
+
+  • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
+
+
+  • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
+
+
+  VALŪTAS
+
+
+  • 300+ valūtu ar valstu karogiem
+
+  • Reģionālās valūtas, kuras konvertori bieži izlaiž: Krievijas rublis, Serbijas dinārs, Gruzijas lari, Tadžikistānas somoni, Kirgizstānas soms
+
+  • Kriptovalūtas — Bitcoin, Ethereum un vēl 150+ — un dārgmetāli
+
+
+  IKDIENAS SĪKUMI
+
+
+  • Rakstiet jebkurā laukā, un visas pārējās valūtas atjaunojas uzreiz
+
+  • Velciet rindas aiz roktura, lai mainītu secību, noņemiet vienu ar vienu pieskārienu
+
+  • Avotu zinoša meklēšana: filtrējiet valūtas pēc pakalpojuma sniedzēja, redziet, kur katra pieejama, mainiet avotu ar vienu pieskārienu
+
+  • Precizitāte: veseli skaitļi, 1, 2 vai 4 cipari aiz komata
+
+  • 40 valodas, pēc noklusējuma angļu, ar iespēju sekot ierīces valodai — tostarp izkārtojumi no labās uz kreiso
+
+  • Telefons, planšete un tīmeklis: tā pati lietotne iPhone, iPad, Android un kā tīmekļa lietotne, ko var ielikt sākuma ekrānā
+
+
+  Rādītie kursi ir orientējošas vidējās vērtības, nevis reāllaika biržas kotācijas.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "“Mainīt avotu un pievienot” tagad tiešām pievieno valūtu un pārslēdz kursu avotu. Pēc tastatūras aizvēršanas saraksts katru reizi atgriežas tieši iepriekšējā vietā."
+landing:
+  page_title: FIXXE — valūtas konvertors
+  install_title: Instalēšanas veidi
+  about_title: Par lietotni
+  lang_label: Valoda
+  play_title: Google Play
+  play_desc: Android tālruņi un planšetdatori.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad un Mac ar Apple mikroshēmu.
+  apk_title: APK fails
+  apk_desc: 'Android bez Google Play: Huawei, pielāgota programmatūra, AOSP.'
+  web_title: Tīmekļa versija
+  web_desc: Atveras pārlūkā. Nekas nav jāinstalē.
+  pwa_title: Pievienot sākuma ekrānam
+  pwa_desc: Tīmekļa versija kļūst par lietotnes ikonu un turpina darboties bezsaistē.
+  pwa_ios: 'iPhone, iPad: “Kopīgot” → “Pievienot sākuma ekrānam”'
+  pwa_android: 'Android: pārlūka izvēlne → “Instalēt lietotni”'
+  btn_open: Atvērt
+  btn_download: Lejupielādēt
+  btn_store: Atvērt veikalā
+  privacy: Privātums
+  terms: Noteikumi

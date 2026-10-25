@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Rozumím</string>
+    <string name="cancel">Zrušit</string>
+    <string name="back">Zpět</string>
+    <string name="close">Zavřít</string>
+    <string name="delete">Smazat</string>
+    <string name="selected">Vybráno: %1$d</string>
+    <string name="loading">Načítání…</string>
+    <string name="updated">Aktualizováno %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Chyba sítě</string>
+    <string name="clear">VYMAZAT</string>
+    <string name="add_currency">＋ Přidat měnu</string>
+    <string name="mid_market">Střední tržní kurzy ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Základní měna</string>
+    <string name="delete_currency_title">Odebrat měnu?</string>
+    <string name="delete_currency_msg">Odebrat %1$s — %2$s ze seznamu?</string>
+    <string name="add_currency_title">Vyberte z %1$d dostupných měn</string>
+    <string name="search_hint">Kód nebo název…</string>
+    <string name="settings">Nastavení</string>
+    <string name="setting_precision">Přesnost zobrazení:  %1$s</string>
+    <string name="setting_source">Zdroj kurzů:  %1$s</string>
+    <string name="setting_language">🌐 Jazyk:  %1$s</string>
+    <string name="precision_title">Přesnost zobrazení</string>
+    <string name="prec_0">0 — celá čísla</string>
+    <string name="prec_1">1 desetinné místo</string>
+    <string name="prec_2">2 desetinná místa</string>
+    <string name="prec_4">4 desetinná místa</string>
+    <string name="precision_value_int">celá čísla</string>
+    <string name="precision_value_n">%1$d des.</string>
+    <string name="source_title">Zdroj kurzů</string>
+    <string name="source_auto">Automaticky (se zálohou)</string>
+    <string name="language_title">Jazyk</string>
+    <string name="language_system">Výchozí nastavení systému</string>
+    <string name="source_info_title">Zdroj kurzů</string>
+    <string name="source_info_message">Střední tržní kurz — střed mezi nákupem a prodejem na globálním trhu.\n\nZákladní měna: EUR, ostatní páry se počítají přes euro.\n\nZdroje (automatická záloha):\n1. ExchangeRate-API — primární\n2. F.A. — pokud primární nefunguje\n3. Frankfurter (ECB) — druhá záloha\n\nPokud primární zdroj během automatické aktualizace nebo po ↻ neodpovídá, aplikace automaticky převezme data z dalšího. Aktuální zdroj je zobrazen nahoře vedle času aktualizace.\n\nV Nastavení (⚙) můžete vynutit konkrétní zdroj — ostatní stále zůstávají jako záloha.\n\nAktualizace jednou denně. Rozdíl oproti jiným referenčním službám je obvykle pod 0.5% — jde o referenční kurzy, nikoli kotace v reálném čase.\n\nLicence a uvedení zdroje:\n• ExchangeRate-API — vyžaduje odkaz “Rates By Exchange Rate API” (v zápatí, klikací).\n• F.A. — CC0 (volné dílo), uvedení zdroje není nutné.\n• Frankfurter — MIT, data z European Central Bank (ECB).</string>
+    <string name="filter_all">Vše</string>
+    <string name="switch_source_title">Přepnout zdroj?</string>
+    <string name="switch_source_msg">%1$s je dostupné přes %2$s, ne přes aktuální zdroj. Přepnout a přidat?</string>
+    <string name="switch_and_add">Přepnout a přidat</string>
+    <string name="already_added">Již v seznamu</string>
+    <string name="reorder">Změnit pořadí</string>
+    <string name="rates_offline">Offline · kurzy z %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kurzy jsou zastaralé — z %1$s · %2$s</string>
+    <string name="clear_confirm_title">Vymazat všechny částky?</string>
+    <string name="clear_confirm_msg">Všechny částky budou vynulovány.</string>
+    <string name="refresh">Obnovit kurzy</string>
+    <string name="setting_theme">Vzhled:  %1$s</string>
+    <string name="theme_title">Vzhled</string>
+    <string name="theme_system">Podle systému</string>
+    <string name="theme_light">Světlý</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="setting_grouping">Oddělovač tisíců:  %1$s</string>
+    <string name="grouping_title">Oddělovač tisíců</string>
+    <string name="group_none">Žádný — 1234.56</string>
+    <string name="group_space">Mezera — 1 234.56</string>
+    <string name="group_comma">Čárka — 1,234.56</string>
+</resources>

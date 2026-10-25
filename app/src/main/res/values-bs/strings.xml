@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">U redu</string>
+    <string name="cancel">Otkaži</string>
+    <string name="back">Nazad</string>
+    <string name="close">Zatvori</string>
+    <string name="delete">Izbriši</string>
+    <string name="selected">Odabrano: %1$d</string>
+    <string name="loading">Učitavanje…</string>
+    <string name="updated">Ažurirano %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Greška mreže</string>
+    <string name="clear">OČISTI</string>
+    <string name="add_currency">＋ Dodaj valutu</string>
+    <string name="mid_market">Srednji tržišni kursevi ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Osnovna valuta</string>
+    <string name="delete_currency_title">Ukloniti valutu?</string>
+    <string name="delete_currency_msg">Ukloniti %1$s — %2$s sa liste?</string>
+    <string name="add_currency_title">Odaberite od %1$d dostupnih valuta</string>
+    <string name="search_hint">Kôd ili naziv…</string>
+    <string name="settings">Postavke</string>
+    <string name="setting_precision">Prikazana preciznost:  %1$s</string>
+    <string name="setting_source">Izvor kursa:  %1$s</string>
+    <string name="setting_language">🌐 Jezik:  %1$s</string>
+    <string name="precision_title">Prikazana preciznost</string>
+    <string name="prec_0">0 — cijeli brojevi</string>
+    <string name="prec_1">1 decimala</string>
+    <string name="prec_2">2 decimale</string>
+    <string name="prec_4">4 decimale</string>
+    <string name="precision_value_int">cijeli brojevi</string>
+    <string name="precision_value_n">%1$d dec.</string>
+    <string name="source_title">Izvor kursa</string>
+    <string name="source_auto">Automatski (sa rezervom)</string>
+    <string name="language_title">Jezik</string>
+    <string name="language_system">Zadano sistemom</string>
+    <string name="source_info_title">Izvor kursa</string>
+    <string name="source_info_message">Srednji tržišni kurs — sredina između kupovnog i prodajnog na globalnom tržištu.\n\nOsnovna valuta: EUR, ostali parovi se računaju preko eura.\n\nIzvori (automatska rezerva):\n1. ExchangeRate-API — primarni\n2. F.A. — ako primarni ne radi\n3. Frankfurter (ECB) — druga rezerva\n\nAko primarni izvor ne odgovori tokom automatskog ažuriranja ili na ↻, aplikacija automatski uzima podatke od sljedećeg. Trenutni izvor je prikazan na vrhu pored vremena ažuriranja.\n\nU Postavkama (⚙) možete nametnuti određeni izvor — ostali i dalje ostaju kao rezerva.\n\nAžurira se jednom dnevno. Razlika u odnosu na druge referentne servise je obično manja od 0.5% — to su referentni kursevi, a ne kotacije u stvarnom vremenu.\n\nLicence i atribucija:\n• ExchangeRate-API — zahtijeva link „Rates By Exchange Rate API“ (u podnožju, klikabilan).\n• F.A. — CC0 (javno vlasništvo), bez obavezne atribucije.\n• Frankfurter — MIT, podaci iz Evropske centralne banke (ECB).</string>
+    <string name="filter_all">Sve</string>
+    <string name="switch_source_title">Promijeniti izvor?</string>
+    <string name="switch_source_msg">%1$s je dostupan preko %2$s, ne preko trenutnog izvora. Promijeniti i dodati?</string>
+    <string name="switch_and_add">Promijeni i dodaj</string>
+    <string name="already_added">Već na listi</string>
+    <string name="reorder">Promijeni redoslijed</string>
+    <string name="rates_offline">Offline · kursevi od %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kursevi su zastarjeli — od %1$s · %2$s</string>
+    <string name="clear_confirm_title">Obrisati sve iznose?</string>
+    <string name="clear_confirm_msg">Svi iznosi bit će postavljeni na nulu.</string>
+    <string name="refresh">Osvježi kurseve</string>
+    <string name="setting_theme">Izgled:  %1$s</string>
+    <string name="theme_title">Izgled</string>
+    <string name="theme_system">Kao sistem</string>
+    <string name="theme_light">Svijetlo</string>
+    <string name="theme_dark">Tamno</string>
+    <string name="setting_grouping">Razdvajanje hiljada:  %1$s</string>
+    <string name="grouping_title">Razdvajanje hiljada</string>
+    <string name="group_none">Bez — 1234.56</string>
+    <string name="group_space">Razmak — 1 234.56</string>
+    <string name="group_comma">Zarez — 1,234.56</string>
+</resources>

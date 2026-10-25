@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Am înțeles</string>
+    <string name="cancel">Anulează</string>
+    <string name="back">Înapoi</string>
+    <string name="close">Închide</string>
+    <string name="delete">Șterge</string>
+    <string name="selected">Selectate: %1$d</string>
+    <string name="loading">Se încarcă…</string>
+    <string name="updated">Actualizat %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Eroare de rețea</string>
+    <string name="clear">GOLEȘTE</string>
+    <string name="add_currency">＋ Adaugă valută</string>
+    <string name="mid_market">Cursuri medii de piață ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Valută de bază</string>
+    <string name="delete_currency_title">Elimini valuta?</string>
+    <string name="delete_currency_msg">Elimini %1$s — %2$s din listă?</string>
+    <string name="add_currency_title">Alege din %1$d valute disponibile</string>
+    <string name="search_hint">Cod sau nume…</string>
+    <string name="settings">Setări</string>
+    <string name="setting_precision">Precizie afișare:  %1$s</string>
+    <string name="setting_source">Sursa cursurilor:  %1$s</string>
+    <string name="setting_language">🌐 Limbă:  %1$s</string>
+    <string name="precision_title">Precizie afișare</string>
+    <string name="prec_0">0 — numere întregi</string>
+    <string name="prec_1">1 zecimală</string>
+    <string name="prec_2">2 zecimale</string>
+    <string name="prec_4">4 zecimale</string>
+    <string name="precision_value_int">numere întregi</string>
+    <string name="precision_value_n">%1$d zec.</string>
+    <string name="source_title">Sursa cursurilor</string>
+    <string name="source_auto">Automat (cu rezervă)</string>
+    <string name="language_title">Limbă</string>
+    <string name="language_system">Implicit din sistem</string>
+    <string name="source_info_title">Sursa cursurilor</string>
+    <string name="source_info_message">Curs mediu de piață — punctul de mijloc între cumpărare și vânzare pe piața globală.\n\nValută de bază: EUR, celelalte perechi se calculează prin euro.\n\nSurse (rezervă automată):\n1. ExchangeRate-API — principală\n2. F.A. — dacă principala nu funcționează\n3. Frankfurter (ECB) — a doua rezervă\n\nDacă sursa principală nu răspunde în timpul actualizării automate sau la ↻, aplicația preia automat datele de la următoarea. Sursa curentă este afișată sus, lângă ora actualizării.\n\nÎn Setări (⚙) poți impune o anumită sursă — celelalte rămân în continuare ca rezervă.\n\nSe actualizează o dată pe zi. Diferența față de alte servicii de referință este de obicei sub 0.5% — acestea sunt cursuri de referință, nu cotații în timp real.\n\nLicențe și atribuire:\n• ExchangeRate-API — necesită linkul “Rates By Exchange Rate API” (în subsol, pe care se poate face clic).\n• F.A. — CC0 (domeniu public), fără atribuire necesară.\n• Frankfurter — MIT, date de la Banca Centrală Europeană (ECB).</string>
+    <string name="filter_all">Toate</string>
+    <string name="switch_source_title">Schimbi sursa?</string>
+    <string name="switch_source_msg">%1$s este disponibil prin %2$s, nu prin sursa curentă. Schimbi și îl adaugi?</string>
+    <string name="switch_and_add">Schimbă și adaugă</string>
+    <string name="already_added">Deja în listă</string>
+    <string name="reorder">Reordonare</string>
+    <string name="rates_offline">Offline · cursuri din %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Cursurile sunt învechite — din %1$s · %2$s</string>
+    <string name="clear_confirm_title">Ștergeți toate sumele?</string>
+    <string name="clear_confirm_msg">Toate sumele vor fi aduse la zero.</string>
+    <string name="refresh">Actualizează cursurile</string>
+    <string name="setting_theme">Aspect:  %1$s</string>
+    <string name="theme_title">Aspect</string>
+    <string name="theme_system">Ca sistemul</string>
+    <string name="theme_light">Luminos</string>
+    <string name="theme_dark">Întunecat</string>
+    <string name="setting_grouping">Separator de mii:  %1$s</string>
+    <string name="grouping_title">Separator de mii</string>
+    <string name="group_none">Fără — 1234.56</string>
+    <string name="group_space">Spațiu — 1 234.56</string>
+    <string name="group_comma">Virgulă — 1,234.56</string>
+</resources>

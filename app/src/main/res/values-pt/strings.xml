@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Entendi</string>
+    <string name="cancel">Cancelar</string>
+    <string name="back">Voltar</string>
+    <string name="close">Fechar</string>
+    <string name="delete">Excluir</string>
+    <string name="selected">Selecionado: %1$d</string>
+    <string name="loading">Carregando…</string>
+    <string name="updated">Atualizado %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Erro de rede</string>
+    <string name="clear">LIMPAR</string>
+    <string name="add_currency">＋ Adicionar moeda</string>
+    <string name="mid_market">Taxas de mercado médio ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Moeda base</string>
+    <string name="delete_currency_title">Remover moeda?</string>
+    <string name="delete_currency_msg">Remover %1$s — %2$s da lista?</string>
+    <string name="add_currency_title">Escolha entre %1$d moedas disponíveis</string>
+    <string name="search_hint">Código ou nome…</string>
+    <string name="settings">Configurações</string>
+    <string name="setting_precision">Precisão de exibição:  %1$s</string>
+    <string name="setting_source">Fonte das taxas:  %1$s</string>
+    <string name="setting_language">🌐 Idioma:  %1$s</string>
+    <string name="precision_title">Precisão de exibição</string>
+    <string name="prec_0">0 — inteiros</string>
+    <string name="prec_1">1 casa decimal</string>
+    <string name="prec_2">2 casas decimais</string>
+    <string name="prec_4">4 casas decimais</string>
+    <string name="precision_value_int">inteiros</string>
+    <string name="precision_value_n">%1$d dec.</string>
+    <string name="source_title">Fonte das taxas</string>
+    <string name="source_auto">Automático (com alternativa)</string>
+    <string name="language_title">Idioma</string>
+    <string name="language_system">Padrão do sistema</string>
+    <string name="source_info_title">Fonte das taxas</string>
+    <string name="source_info_message">Taxa de mercado médio — o ponto médio entre compra e venda no mercado global.\n\nMoeda base: EUR, os outros pares são calculados através do euro.\n\nFontes (alternativa automática):\n1. ExchangeRate-API — principal\n2. F.A. — se a principal estiver indisponível\n3. Frankfurter (ECB) — segunda alternativa\n\nSe a fonte principal não responder durante a atualização automática ou ao tocar em ↻, o app pega automaticamente os dados da próxima. A fonte atual é mostrada no topo, ao lado do horário de atualização.\n\nNas Configurações (⚙) você pode forçar uma fonte específica — as outras continuam como alternativa.\n\nAtualiza uma vez por dia. A diferença em relação a outros serviços de referência costuma ser inferior a 0.5% — são taxas de referência, não cotações em tempo real.\n\nLicenças e atribuição:\n• ExchangeRate-API — exige o link “Rates By Exchange Rate API” (no rodapé, clicável).\n• F.A. — CC0 (domínio público), sem atribuição necessária.\n• Frankfurter — MIT, dados do European Central Bank (ECB).</string>
+    <string name="filter_all">Todas</string>
+    <string name="switch_source_title">Trocar de fonte?</string>
+    <string name="switch_source_msg">%1$s está disponível via %2$s, não pela fonte atual. Trocar e adicionar?</string>
+    <string name="switch_and_add">Trocar e adicionar</string>
+    <string name="already_added">Já está na lista</string>
+    <string name="reorder">Reordenar</string>
+    <string name="rates_offline">Offline · taxas de %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Taxas desatualizadas — de %1$s · %2$s</string>
+    <string name="clear_confirm_title">Limpar todos os valores?</string>
+    <string name="clear_confirm_msg">Todos os valores voltarão a zero.</string>
+    <string name="refresh">Atualizar taxas</string>
+    <string name="setting_theme">Aparência:  %1$s</string>
+    <string name="theme_title">Aparência</string>
+    <string name="theme_system">Seguir o sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="setting_grouping">Separador de milhares:  %1$s</string>
+    <string name="grouping_title">Separador de milhares</string>
+    <string name="group_none">Nenhum — 1234.56</string>
+    <string name="group_space">Espaço — 1 234.56</string>
+    <string name="group_comma">Vírgula — 1,234.56</string>
+</resources>

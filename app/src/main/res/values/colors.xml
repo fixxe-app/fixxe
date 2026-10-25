@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Светлая тема. Тёмные значения — в values-night/colors.xml; имена одинаковые,
+     поэтому вёрстка про тему не знает и ссылается только на роли. -->
+<resources>
+    <!-- Вспомогательный текст не бледнее 4.5:1 к фону, значки не бледнее 3:1
+         (WCAG AA; проверка — tools/check-contrast.py, она же рубеж выпуска).
+         Раньше строка курса была 2.4:1, подвал — 1.7:1. -->
+    <color name="primary">#1565C0</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="background">#F2F3F5</color>   <!-- фон экрана -->
+    <color name="surface">#FFFFFF</color>      <!-- карточки и панели -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#6F6F6F</color>
+    <color name="accent">#1565C0</color>       <!-- кнопки и ссылки -->
+    <color name="brand_green">#2E7D32</color>  <!-- логотип FIXXE -->
+    <color name="source_green">#43A047</color> <!-- точка источника -->
+    <color name="divider">#EEEEEE</color>
+    <color name="hint">#6E6E6E</color>
+    <color name="icon_faint">#8B8B8B</color>   <!-- ручка перетаскивания, подсказка ввода -->
+    <color name="icon_muted">#687074</color>
+    <color name="badge_bg">#E8EEF9</color>   <!-- плашка со счётчиком валют -->
+    <!-- строка статуса: офлайн и устаревшие курсы — раньше зашиты в код одним цветом на обе темы -->
+    <color name="status_offline">#86685E</color>
+    <color name="status_stale">#C93E14</color>
+</resources>

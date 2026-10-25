@@ -1,0 +1,80 @@
+title: "FIXXE – Konverter valuta"
+subtitle: Kursevi iz tri izvora
+short_description: Srednji kursevi iz 3 izvora, 300+ valuta, radi offline, bez reklama.
+keywords: valuta,konvertor,kurs,mjenjačnica,novac,putovanje,forex,kripto,finansije,euro
+promotional_text: Tri izvora kursa sa automatskom zamjenom, offline kursevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
+description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kursevima — neutralnom sredinom između svjetskih kupovnih i prodajnih cijena, bez bankarskih marži.
+
+
+  PO ČEMU SE FIXXE RAZLIKUJE
+
+
+  • Tri izvora kursa sa automatskom zamjenom — ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina konvertora ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+
+
+  • Radi bez interneta — posljednji kursevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti kursevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
+
+
+  • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2%, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu.
+
+
+  • Dinamična osnovica — kursevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-nazad.
+
+
+  • Bez reklama. Bez računa. Bez praćenja. Jedina dozvola je pristup internetu; vaš spisak, njegov redoslijed i postavke nikada ne napuštaju uređaj.
+
+
+  VALUTE
+
+
+  • 300+ valuta sa zastavama država
+
+  • Regionalne valute koje konvertori često preskaču: ruska rublja, srpski dinar, gruzijski lari, tadžikistanski somoni, kirgiski som
+
+  • Kriptovalute — Bitcoin, Ethereum i još 150+ — i plemeniti metali
+
+
+  SVAKODNEVNI DETALJI
+
+
+  • Upišite u bilo koje polje i sve ostale valute preračunavaju se odmah
+
+  • Povucite redove za ručicu da promijenite redoslijed, uklonite jedan jednim dodirom
+
+  • Pretraga svjesna izvora: filtrirajte valute po pružaocu, vidite gdje je koja dostupna, promijenite izvor jednim dodirom
+
+  • Preciznost: cijeli brojevi, 1, 2 ili 4 decimale
+
+  • 40 jezika, engleski kao zadani, uz mogućnost praćenja jezika uređaja — uključujući rasporede zdesna nalijevo
+
+  • Telefon, tablet i web: ista aplikacija na iPhoneu, iPadu, Androidu i kao web aplikacija koju možete staviti na početni ekran
+
+
+  Prikazani kursevi su okvirne srednje vrijednosti, a ne berzanske kotacije u realnom vremenu.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "„Promijeni izvor i dodaj” sada zaista dodaje valutu i mijenja izvor kurseva. Nakon zatvaranja tastature lista se svaki put vraća tačno na prijašnje mjesto."
+landing:
+  page_title: FIXXE — konvertor valuta
+  install_title: Načini instalacije
+  about_title: O aplikaciji
+  lang_label: Jezik
+  play_title: Google Play
+  play_desc: Android telefoni i tableti.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad i Mac s Apple čipom.
+  apk_title: APK datoteka
+  apk_desc: 'Android bez Google Playa: Huawei, prilagođeni firmver, AOSP.'
+  web_title: Web verzija
+  web_desc: Otvara se u pregledniku. Nema se šta instalirati.
+  pwa_title: Dodaj na početni ekran
+  pwa_desc: Web verzija postaje ikona aplikacije i nastavlja raditi offline.
+  pwa_ios: 'iPhone, iPad: „Podijeli” → „Dodaj na početni ekran”'
+  pwa_android: 'Android: meni preglednika → „Instaliraj aplikaciju”'
+  btn_open: Otvori
+  btn_download: Preuzmi
+  btn_store: Otvori u prodavnici
+  privacy: Privatnost
+  terms: Uslovi

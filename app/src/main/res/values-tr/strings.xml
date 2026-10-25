@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Anladım</string>
+    <string name="cancel">İptal</string>
+    <string name="back">Geri</string>
+    <string name="close">Kapat</string>
+    <string name="delete">Sil</string>
+    <string name="selected">Seçili: %1$d</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="updated">Güncellendi %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Ağ hatası</string>
+    <string name="clear">TEMİZLE</string>
+    <string name="add_currency">＋ Para birimi ekle</string>
+    <string name="mid_market">Piyasa orta kuru ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">sürüm %1$s</string>
+    <string name="base_currency">Ana para birimi</string>
+    <string name="delete_currency_title">Para birimi kaldırılsın mı?</string>
+    <string name="delete_currency_msg">%1$s — %2$s listeden kaldırılsın mı?</string>
+    <string name="add_currency_title">Mevcut %1$d para biriminden seçin</string>
+    <string name="search_hint">Kod veya ad…</string>
+    <string name="settings">Ayarlar</string>
+    <string name="setting_precision">Gösterim hassasiyeti:  %1$s</string>
+    <string name="setting_source">Kur kaynağı:  %1$s</string>
+    <string name="setting_language">🌐 Dil:  %1$s</string>
+    <string name="precision_title">Gösterim hassasiyeti</string>
+    <string name="prec_0">0 — tam sayılar</string>
+    <string name="prec_1">1 ondalık</string>
+    <string name="prec_2">2 ondalık</string>
+    <string name="prec_4">4 ondalık</string>
+    <string name="precision_value_int">tam sayılar</string>
+    <string name="precision_value_n">%1$d ondalık</string>
+    <string name="source_title">Kur kaynağı</string>
+    <string name="source_auto">Otomatik (yedekli)</string>
+    <string name="language_title">Dil</string>
+    <string name="language_system">Sistem varsayılanı</string>
+    <string name="source_info_title">Kur kaynağı</string>
+    <string name="source_info_message">Piyasa orta kuru — küresel piyasadaki alış ve satış arasındaki orta nokta.\n\nAna para birimi: EUR, diğer pariteler euro üzerinden hesaplanır.\n\nKaynaklar (otomatik yedek):\n1. ExchangeRate-API — birincil\n2. F.A. — birincil kaynak çalışmıyorsa\n3. Frankfurter (ECB) — ikinci yedek\n\nBirincil kaynak otomatik güncelleme sırasında ya da ↻ ile yanıt vermezse, uygulama verileri otomatik olarak bir sonrakinden alır. Geçerli kaynak en üstte güncelleme saatinin yanında gösterilir.\n\nAyarlar’da (⚙) belirli bir kaynağı zorunlu kılabilirsiniz — diğerleri yine de yedek olarak kalır.\n\nGünde bir kez güncellenir. Diğer referans servislerinden farkı genellikle 0.5% altındadır — bunlar referans kurlardır, gerçek zamanlı fiyatlar değildir.\n\nLisanslar ve atıf:\n• ExchangeRate-API — “Rates By Exchange Rate API” bağlantısını gerektirir (alt bilgide, tıklanabilir).\n• F.A. — CC0 (kamu malı), atıf gerektirmez.\n• Frankfurter — MIT, veriler Avrupa Merkez Bankası’ndan (ECB).</string>
+    <string name="filter_all">Tümü</string>
+    <string name="switch_source_title">Kaynak değişsin mi?</string>
+    <string name="switch_source_msg">%1$s %2$s üzerinden mevcut, geçerli kaynakta değil. Değiştirip eklensin mi?</string>
+    <string name="switch_and_add">Değiştir ve ekle</string>
+    <string name="already_added">Zaten listede</string>
+    <string name="reorder">Yeniden sırala</string>
+    <string name="rates_offline">Çevrimdışı · %1$s kurları · %2$s</string>
+    <string name="rates_stale">⚠ Kurlar güncel değil — %1$s · %2$s</string>
+    <string name="clear_confirm_title">Tüm tutarlar temizlensin mi?</string>
+    <string name="clear_confirm_msg">Tüm tutarlar sıfırlanacak.</string>
+    <string name="refresh">Kurları yenile</string>
+    <string name="setting_theme">Görünüm:  %1$s</string>
+    <string name="theme_title">Görünüm</string>
+    <string name="theme_system">Sistemle aynı</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="setting_grouping">Binlik ayırıcı:  %1$s</string>
+    <string name="grouping_title">Binlik ayırıcı</string>
+    <string name="group_none">Yok — 1234.56</string>
+    <string name="group_space">Boşluk — 1 234.56</string>
+    <string name="group_comma">Virgül — 1,234.56</string>
+</resources>

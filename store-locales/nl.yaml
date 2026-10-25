@@ -1,0 +1,80 @@
+title: "FIXXE – Valutacalculator"
+subtitle: Koersen uit drie bronnen
+short_description: Middenkoersen uit 3 bronnen, 300+ valuta's, werkt offline, geen reclame.
+keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro
+promotional_text: Drie koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
+description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele middenkoersen — het neutrale midden tussen wereldwijde koop- en verkoopprijzen, zonder bankmarges.
+
+
+  WAT FIXXE ANDERS MAAKT
+
+
+  • Drie koersbronnen met automatische wissel — ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+
+
+  • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
+
+
+  • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul.
+
+
+  • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
+
+
+  • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
+
+
+  VALUTA''S
+
+
+  • 300+ valuta''s met landenvlaggen
+
+  • Regionale valuta''s die omrekeners vaak overslaan: Russische roebel, Servische dinar, Georgische lari, Tadzjiekse somoni, Kirgizische som
+
+  • Crypto — Bitcoin, Ethereum en 150+ andere — en edelmetalen
+
+
+  DAGELIJKSE DETAILS
+
+
+  • Typ in een willekeurig veld en alle andere valuta''s passen zich meteen aan
+
+  • Sleep rijen aan het handvat om ze te ordenen, verwijder er een met één tik
+
+  • Bronbewust zoeken: filter valuta''s per aanbieder, zie waar elke valuta bestaat, wissel van bron met één tik
+
+  • Precisie: hele getallen, 1, 2 of 4 decimalen
+
+  • 40 talen, standaard Engels, met de optie de taal van je toestel te volgen — inclusief indelingen van rechts naar links
+
+  • Telefoon, tablet en web: dezelfde app op iPhone, iPad, Android en als web-app die je op je beginscherm zet
+
+
+  Getoonde koersen zijn middenkoersen ter referentie, geen handelskoersen in realtime.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "‘Bron wisselen en toevoegen’ voegt de valuta nu echt toe en wisselt de koersbron. Na het sluiten van het toetsenbord staat de lijst elke keer weer precies waar hij stond."
+landing:
+  page_title: FIXXE — valutaomrekener
+  install_title: Manieren om te installeren
+  about_title: Over de app
+  lang_label: Taal
+  play_title: Google Play
+  play_desc: Android-telefoons en -tablets.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad en Mac met Apple silicon.
+  apk_title: APK-bestand
+  apk_desc: 'Android zonder Google Play: Huawei, eigen firmware, AOSP.'
+  web_title: Webversie
+  web_desc: Opent in de browser. Je hoeft niets te installeren.
+  pwa_title: Aan beginscherm toevoegen
+  pwa_desc: De webversie wordt een app-pictogram en blijft offline werken.
+  pwa_ios: 'iPhone, iPad: ''Deel'' → ''Zet op beginscherm'''
+  pwa_android: 'Android: browsermenu → ''App installeren'''
+  btn_open: Openen
+  btn_download: Downloaden
+  btn_store: In de store openen
+  privacy: Privacy
+  terms: Voorwaarden

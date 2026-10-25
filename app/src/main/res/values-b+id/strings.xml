@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Mengerti</string>
+    <string name="cancel">Batal</string>
+    <string name="back">Kembali</string>
+    <string name="close">Tutup</string>
+    <string name="delete">Hapus</string>
+    <string name="selected">Dipilih: %1$d</string>
+    <string name="loading">Memuat…</string>
+    <string name="updated">Diperbarui %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Kesalahan jaringan</string>
+    <string name="clear">HAPUS</string>
+    <string name="add_currency">＋ Tambah mata uang</string>
+    <string name="mid_market">Kurs tengah pasar ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">versi %1$s</string>
+    <string name="base_currency">Mata uang dasar</string>
+    <string name="delete_currency_title">Hapus mata uang?</string>
+    <string name="delete_currency_msg">Hapus %1$s — %2$s dari daftar?</string>
+    <string name="add_currency_title">Pilih dari %1$d mata uang tersedia</string>
+    <string name="search_hint">Kode atau nama…</string>
+    <string name="settings">Pengaturan</string>
+    <string name="setting_precision">Presisi tampilan:  %1$s</string>
+    <string name="setting_source">Sumber kurs:  %1$s</string>
+    <string name="setting_language">🌐 Bahasa:  %1$s</string>
+    <string name="precision_title">Presisi tampilan</string>
+    <string name="prec_0">0 — bilangan bulat</string>
+    <string name="prec_1">1 desimal</string>
+    <string name="prec_2">2 desimal</string>
+    <string name="prec_4">4 desimal</string>
+    <string name="precision_value_int">bilangan bulat</string>
+    <string name="precision_value_n">%1$d des.</string>
+    <string name="source_title">Sumber kurs</string>
+    <string name="source_auto">Otomatis (dengan cadangan)</string>
+    <string name="language_title">Bahasa</string>
+    <string name="language_system">Bawaan sistem</string>
+    <string name="source_info_title">Sumber kurs</string>
+    <string name="source_info_message">Kurs tengah pasar — titik tengah antara harga beli dan jual di pasar global.\n\nMata uang dasar: EUR, pasangan lain dihitung melalui euro.\n\nSumber (cadangan otomatis):\n1. ExchangeRate-API — utama\n2. F.A. — jika yang utama tidak aktif\n3. Frankfurter (ECB) — cadangan kedua\n\nJika sumber utama tidak merespons saat pembaruan otomatis atau saat menekan ↻, aplikasi otomatis mengambil data dari sumber berikutnya. Sumber saat ini ditampilkan di atas, di samping waktu pembaruan.\n\nDi Pengaturan (⚙) Anda dapat memaksa sumber tertentu — yang lain tetap menjadi cadangan.\n\nDiperbarui sekali sehari. Selisih dari layanan referensi lain biasanya di bawah 0.5% — ini adalah kurs referensi, bukan kutipan waktu nyata.\n\nLisensi dan atribusi:\n• ExchangeRate-API — memerlukan tautan “Rates By Exchange Rate API” (di footer, dapat diklik).\n• F.A. — CC0 (domain publik), tanpa atribusi.\n• Frankfurter — MIT, data dari Bank Sentral Eropa (ECB).</string>
+    <string name="filter_all">Semua</string>
+    <string name="switch_source_title">Ganti sumber?</string>
+    <string name="switch_source_msg">%1$s tersedia melalui %2$s, bukan sumber saat ini. Ganti dan tambahkan?</string>
+    <string name="switch_and_add">Ganti &amp; tambah</string>
+    <string name="already_added">Sudah ada di daftar</string>
+    <string name="reorder">Ubah urutan</string>
+    <string name="rates_offline">Offline · kurs per %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kurs sudah usang — per %1$s · %2$s</string>
+    <string name="clear_confirm_title">Hapus semua jumlah?</string>
+    <string name="clear_confirm_msg">Semua jumlah akan menjadi nol.</string>
+    <string name="refresh">Perbarui kurs</string>
+    <string name="setting_theme">Tampilan:  %1$s</string>
+    <string name="theme_title">Tampilan</string>
+    <string name="theme_system">Ikuti sistem</string>
+    <string name="theme_light">Terang</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="setting_grouping">Pemisah ribuan:  %1$s</string>
+    <string name="grouping_title">Pemisah ribuan</string>
+    <string name="group_none">Tanpa — 1234.56</string>
+    <string name="group_space">Spasi — 1 234.56</string>
+    <string name="group_comma">Koma — 1,234.56</string>
+</resources>

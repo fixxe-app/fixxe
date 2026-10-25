@@ -1,0 +1,80 @@
+title: "FIXXE – Valiutų skaičiuoklė"
+subtitle: Kursai iš trijų šaltinių
+short_description: Vidutiniai kursai iš 3 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
+keywords: valiuta,keitiklis,kursas,keitykla,pinigai,kelionė,forex,kripto,finansai,euras
+promotional_text: Trys kursų šaltiniai su automatiniu perjungimu, kursai neprisijungus su įspėjimu dėl senumo ir protingas apvalinimas, nesugadinantis mažų sumų.
+description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiais vidutiniais rinkos kursais. Tai neutralus taškas tarp pasaulinių pirkimo ir pardavimo kainų, be bankų antkainių.
+
+
+  KUO FIXXE SKIRIASI
+
+
+  • Trys kursų šaltiniai su automatiniu perjungimu — ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+
+
+  • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
+
+
+  • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio.
+
+
+  • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
+
+
+  • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
+
+
+  VALIUTOS
+
+
+  • 300+ valiutų su šalių vėliavomis
+
+  • Regioninės valiutos, kurias keitikliai dažnai praleidžia: Rusijos rublis, Serbijos dinaras, Gruzijos laris, Tadžikistano somonis, Kirgizijos somas
+
+  • Kriptovaliutos — Bitcoin, Ethereum ir dar 150+ — bei taurieji metalai
+
+
+  KASDIENĖS SMULKMENOS
+
+
+  • Rašykite bet kuriame laukelyje ir visos kitos valiutos atsinaujina iškart
+
+  • Vilkite eilutes už rankenėlės, kad pakeistumėte tvarką, pašalinkite vieną vienu palietimu
+
+  • Šaltinį žinanti paieška: filtruokite valiutas pagal tiekėją, matykite, kur kiekviena prieinama, pakeiskite šaltinį vienu palietimu
+
+  • Tikslumas: sveikieji skaičiai, 1, 2 arba 4 skaitmenys po kablelio
+
+  • 40 kalbų, numatytoji anglų, su galimybe sekti įrenginio kalbą — įskaitant išdėstymus iš dešinės į kairę
+
+  • Telefonas, planšetė ir internetas: ta pati programėlė iPhone, iPad, Android ir kaip žiniatinklio programėlė, kurią galima įsidėti į pradžios ekraną
+
+
+  Rodomi kursai yra orientaciniai vidutiniai dydžiai, o ne tikralaikės biržos kotiruotės.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "„Keisti šaltinį ir pridėti“ dabar tikrai prideda valiutą ir perjungia kursų šaltinį. Uždarius klaviatūrą, sąrašas kaskart grįžta tiksliai į ankstesnę vietą."
+landing:
+  page_title: FIXXE — valiutų keitiklis
+  install_title: Diegimo būdai
+  about_title: Apie programėlę
+  lang_label: Kalba
+  play_title: Google Play
+  play_desc: Android telefonai ir planšetės.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad ir Mac su Apple lustu.
+  apk_title: APK failas
+  apk_desc: 'Android be Google Play: Huawei, pritaikyta programinė įranga, AOSP.'
+  web_title: Interneto versija
+  web_desc: Atsiveria naršyklėje. Nieko nereikia diegti.
+  pwa_title: Įtraukti į pradžios ekraną
+  pwa_desc: Interneto versija tampa programėlės piktograma ir toliau veikia neprisijungus.
+  pwa_ios: 'iPhone, iPad: „Bendrinti“ → „Įtraukti į pradžios ekraną“'
+  pwa_android: 'Android: naršyklės meniu → „Įdiegti programą“'
+  btn_open: Atidaryti
+  btn_download: Atsisiųsti
+  btn_store: Atidaryti parduotuvėje
+  privacy: Privatumas
+  terms: Sąlygos

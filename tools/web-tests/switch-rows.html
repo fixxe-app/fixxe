@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+  Сценарии переключения строк для веб-версии. Открывается безголовым Chrome
+  из tools/smoke-web.sh; результат пишется в <pre id="result"> как PASS/FAIL.
+  Лежит вне web/, на сайт не попадает.
+
+  1. Ввёл число в одну строку, кликнул по другой, ничего не вводя.
+     Числа не должны сбрасываться. Раньше обработчик фокуса брал сумму из
+     замыкания — посчитанную при создании строки, — и всё откатывалось к ней.
+  2. Гоняем курсор между двумя строками, ничего не вводя.
+     Числа не должны уползать.
+  3. Удаляем активную валюту — сумма переводится в новую, а не переносится
+     как есть (1000 JPY не должны становиться 1000 EUR).
+  4. Разбор суммы — те же правила, что на Android и iOS: «1,5» это 1,5 при
+     любой группировке, «1,234.56» — 1234,56 и т. д.
+
+  Фокус отправляется событием явно: в безголовом браузере у окна нет фокуса,
+  и element.focus() двигает курсор, но события focus не порождает — без
+  этого тест молча проходил бы на любом коде.
+-->
+<meta charset="utf-8">
+<title>switch-rows</title>
+<iframe id="app" src="/web/index.html" style="width:420px;height:900px"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+frame.addEventListener('load', async () => {
+  try {
+    const d = frame.contentDocument;
+    // ждём курсы
+    for (let i = 0; i < 60 && !d.querySelector('.card[data-code="USD"]'); i++) await wait(250);
+    if (!d.querySelector('.card[data-code="USD"]')) throw new Error('курсы не загрузились');
+    await wait(400);
+
+    const inp = c => d.querySelector(`.card[data-code="${c}"] .amount`);
+    const vals = () => Object.fromEntries([...d.querySelectorAll('.card')]
+                        .map(c => [c.dataset.code, c.querySelector('.amount').value]));
+    const focus = async c => { inp(c).focus(); inp(c).dispatchEvent(new FocusEvent('focus')); await wait(120); };
+    const type = async (c, v) => { await focus(c); inp(c).value = v;
+                                   inp(c).dispatchEvent(new Event('input', {bubbles: true})); await wait(200); };
+    const diff = (a, b) => Object.keys(a).filter(k => a[k] !== b[k]).map(k => `${k}: ${a[k]} → ${b[k]}`);
+
+    const codes = [...d.querySelectorAll('.card')].map(c => c.dataset.code);
+    const [first, second, third] = [codes.at(-1), codes[1], codes[0]];
+    const problems = [];
+
+    // 1
+    await type(first, '100');
+    const a1 = vals(); await focus(second); await wait(300); const b1 = vals();
+    const d1 = diff(a1, b1);
+    if (d1.length) problems.push(`клик по ${second} после ввода в ${first} сбросил числа: ${d1.join(', ')}`);
+
+    // 2
+    const a2 = vals();
+    for (let i = 0; i < 6; i++) { await focus(third); await focus(second); }
+    await wait(300); const b2 = vals();
+    const d2 = diff(a2, b2);
+    if (d2.length) problems.push(`12 переключений ${third}↔${second} сдвинули числа: ${d2.join(', ')}`);
+
+    // 3
+    const w = frame.contentWindow;
+    const victim = codes[1], heir = codes.find(c => c !== victim);
+    await type(victim, '100');
+    const rates = w.eval('allRates');
+    const want = 100 / rates[victim] * rates[heir];
+    w.eval(`confirmDelete(${JSON.stringify(victim)})`);
+    await wait(150);
+    d.querySelector('#modal-root [data-ok]').click();
+    await wait(300);
+    const got = w.eval('activeAmount'), nowActive = w.eval('activeCurrency');
+    if (nowActive !== heir || Math.abs(got - want) > 1e-9 * Math.max(1, want))
+      problems.push(`удаление активной ${victim}: стало ${got} ${nowActive}, ожидалось ${want} ${heir}`);
+
+    // 4
+    const cases = [['1,5',0,1.5],['1,5',2,1.5],['2.5',0,2.5],['1,234.56',0,1234.56],['1.234,56',0,1234.56],
+                   ['1 234,56',2,1234.56],['1,234,567',0,1234567],['1,500',2,1500],['1,500',0,1.5],
+                   ['',0,0],[',',0,0],['-',0,0],['1e999',0,0]];
+    const saved = w.eval('grouping');
+    for (const [txt, g, exp] of cases){
+      w.eval(`grouping = ${g}`);
+      const v = w.parseAmount(txt);
+      if (Math.abs(v - exp) > 1e-9) problems.push(`разбор «${txt}» при группировке ${g}: ${v}, ожидалось ${exp}`);
+    }
+    w.eval(`grouping = ${saved}`);
+
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + e.message;
+  }
+});
+</script>

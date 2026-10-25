@@ -1,0 +1,80 @@
+title: "FIXXE – Döviz Çevirici"
+subtitle: Üç kaynaktan kurlar
+short_description: 3 kaynaktan piyasa ortalaması kurlar, 300+ para birimi, çevrimdışı, reklamsız.
+keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro
+promotional_text: Otomatik yedekli üç kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
+description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sade bir döviz çeviricisidir — dünya alış ve satış fiyatlarının tarafsız ortası, banka farkları olmadan.
+
+
+  FIXXE''Yİ FARKLI KILAN NE
+
+
+  • Otomatik yedekli üç kur kaynağı — ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
+
+
+  • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
+
+
+  • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez.
+
+
+  • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+  • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
+
+
+  PARA BİRİMLERİ
+
+
+  • Ülke bayraklarıyla 300+ para birimi
+
+  • Çeviricilerin sıkça atladığı bölgesel para birimleri: Rus rublesi, Sırp dinarı, Gürcü larisi, Tacik somonisi, Kırgız somu
+
+  • Kripto — Bitcoin, Ethereum ve 150+ diğeri — ve değerli madenler
+
+
+  GÜNLÜK AYRINTILAR
+
+
+  • Herhangi bir alana yazın, diğer tüm para birimleri anında güncellensin
+
+  • Satırları tutamacından sürükleyerek sıralayın, tek dokunuşla birini kaldırın
+
+  • Kaynak bilen arama: para birimlerini sağlayıcıya göre süzün, her birinin nerede bulunduğunu görün, tek dokunuşla kaynak değiştirin
+
+  • Hassasiyet: tam sayılar, 1, 2 veya 4 ondalık basamak
+
+  • 40 dil, varsayılan İngilizce, cihaz dilini izleme seçeneğiyle — sağdan sola yerleşimler dahil
+
+  • Telefon, tablet ve web: iPhone, iPad, Android''de ve ana ekrana kurabileceğiniz bir web uygulaması olarak aynı uygulama
+
+
+  Gösterilen kurlar referans niteliğinde piyasa ortalamalarıdır, gerçek zamanlı borsa fiyatları değildir.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "“Kaynağı değiştir ve ekle” artık para birimini gerçekten ekliyor ve kur kaynağını değiştiriyor. Klavyeyi kapattığınızda liste her seferinde tam olarak eski yerine dönüyor."
+landing:
+  page_title: FIXXE — döviz çevirici
+  install_title: Kurulum yolları
+  about_title: Uygulama hakkında
+  lang_label: Dil
+  play_title: Google Play
+  play_desc: Android telefon ve tabletler.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad ve Apple çipli Mac.
+  apk_title: APK dosyası
+  apk_desc: 'Google Play''siz Android: Huawei, özel yazılımlar, AOSP.'
+  web_title: Web sürümü
+  web_desc: Tarayıcıda açılır. Kurulacak bir şey yok.
+  pwa_title: Ana ekrana ekle
+  pwa_desc: Web sürümü bir uygulama simgesine dönüşür ve çevrimdışı çalışmayı sürdürür.
+  pwa_ios: 'iPhone, iPad: «Paylaş» → «Ana Ekrana Ekle»'
+  pwa_android: 'Android: tarayıcı menüsü → «Uygulamayı yükle»'
+  btn_open: Aç
+  btn_download: İndir
+  btn_store: Mağazada aç
+  privacy: Gizlilik
+  terms: Koşullar

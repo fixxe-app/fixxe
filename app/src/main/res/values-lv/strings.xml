@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Sapratu</string>
+    <string name="cancel">Atcelt</string>
+    <string name="back">Atpakaļ</string>
+    <string name="close">Aizvērt</string>
+    <string name="delete">Dzēst</string>
+    <string name="selected">Atlasīts: %1$d</string>
+    <string name="loading">Ielādē…</string>
+    <string name="updated">Atjaunināts %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Tīkla kļūda</string>
+    <string name="clear">NOTĪRĪT</string>
+    <string name="add_currency">＋ Pievienot valūtu</string>
+    <string name="mid_market">Vidējā tirgus kursi ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Bāzes valūta</string>
+    <string name="delete_currency_title">Noņemt valūtu?</string>
+    <string name="delete_currency_msg">Noņemt %1$s — %2$s no saraksta?</string>
+    <string name="add_currency_title">Izvēlieties no %1$d pieejamajām valūtām</string>
+    <string name="search_hint">Kods vai nosaukums…</string>
+    <string name="settings">Iestatījumi</string>
+    <string name="setting_precision">Attēlošanas precizitāte:  %1$s</string>
+    <string name="setting_source">Kursu avots:  %1$s</string>
+    <string name="setting_language">🌐 Valoda:  %1$s</string>
+    <string name="precision_title">Attēlošanas precizitāte</string>
+    <string name="prec_0">0 — veseli skaitļi</string>
+    <string name="prec_1">1 cipars aiz komata</string>
+    <string name="prec_2">2 cipari aiz komata</string>
+    <string name="prec_4">4 cipari aiz komata</string>
+    <string name="precision_value_int">veseli skaitļi</string>
+    <string name="precision_value_n">%1$d cip.</string>
+    <string name="source_title">Kursu avots</string>
+    <string name="source_auto">Automātiski (ar rezerves avotu)</string>
+    <string name="language_title">Valoda</string>
+    <string name="language_system">Sistēmas noklusējums</string>
+    <string name="source_info_title">Kursu avots</string>
+    <string name="source_info_message">Vidējā tirgus kurss — viduspunkts starp pirkšanas un pārdošanas kursu pasaules tirgū.\n\nBāzes valūta: EUR, citi pāri tiek aprēķināti caur eiro.\n\nAvoti (automātiska pārslēgšanās):\n1. ExchangeRate-API — primārais\n2. F.A. — ja primārais nedarbojas\n3. Frankfurter (ECB) — otrais rezerves\n\nJa primārais avots neatbild automātiskās atjaunināšanas laikā vai nospiežot ↻, lietotne automātiski ņem datus no nākamā. Pašreizējais avots ir redzams augšpusē blakus atjaunināšanas laikam.\n\nIestatījumos (⚙) varat piespiedu kārtā izvēlēties konkrētu avotu — pārējie joprojām paliek kā rezerve.\n\nAtjaunina reizi dienā. Atšķirība no citiem atsauces pakalpojumiem parasti ir mazāka par 0.5% — tie ir atsauces kursi, nevis reāllaika kotējumi.\n\nLicences un atsauces:\n• ExchangeRate-API — nepieciešama saite “Rates By Exchange Rate API” (kājenē, noklikšķināma).\n• F.A. — CC0 (public domain), atsauce nav nepieciešama.\n• Frankfurter — MIT, dati no European Central Bank (ECB).</string>
+    <string name="filter_all">Visi</string>
+    <string name="switch_source_title">Mainīt avotu?</string>
+    <string name="switch_source_msg">%1$s ir pieejams caur %2$s, nevis pašreizējo avotu. Pārslēgt un pievienot?</string>
+    <string name="switch_and_add">Pārslēgt un pievienot</string>
+    <string name="already_added">Jau sarakstā</string>
+    <string name="reorder">Mainīt secību</string>
+    <string name="rates_offline">Bezsaistē · kursi no %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kursi ir novecojuši — no %1$s · %2$s</string>
+    <string name="clear_confirm_title">Notīrīt visas summas?</string>
+    <string name="clear_confirm_msg">Visas summas tiks iestatītas uz nulli.</string>
+    <string name="refresh">Atsvaidzināt kursus</string>
+    <string name="setting_theme">Izskats:  %1$s</string>
+    <string name="theme_title">Izskats</string>
+    <string name="theme_system">Kā sistēmā</string>
+    <string name="theme_light">Gaišs</string>
+    <string name="theme_dark">Tumšs</string>
+    <string name="setting_grouping">Tūkstošu atdalītājs:  %1$s</string>
+    <string name="grouping_title">Tūkstošu atdalītājs</string>
+    <string name="group_none">Nav — 1234.56</string>
+    <string name="group_space">Atstarpe — 1 234.56</string>
+    <string name="group_comma">Komats — 1,234.56</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Értem</string>
+    <string name="cancel">Mégse</string>
+    <string name="back">Vissza</string>
+    <string name="close">Bezárás</string>
+    <string name="delete">Törlés</string>
+    <string name="selected">Kijelölve: %1$d</string>
+    <string name="loading">Betöltés…</string>
+    <string name="updated">Frissítve %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Hálózati hiba</string>
+    <string name="clear">TÖRLÉS</string>
+    <string name="add_currency">＋ Pénznem hozzáadása</string>
+    <string name="mid_market">Középárfolyamok ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">verzió %1$s</string>
+    <string name="base_currency">Alappénznem</string>
+    <string name="delete_currency_title">Pénznem eltávolítása?</string>
+    <string name="delete_currency_msg">Eltávolítja a(z) %1$s — %2$s elemet a listából?</string>
+    <string name="add_currency_title">Válasszon a(z) %1$d elérhető pénznem közül</string>
+    <string name="search_hint">Kód vagy név…</string>
+    <string name="settings">Beállítások</string>
+    <string name="setting_precision">Megjelenítési pontosság:  %1$s</string>
+    <string name="setting_source">Árfolyamforrás:  %1$s</string>
+    <string name="setting_language">🌐 Nyelv:  %1$s</string>
+    <string name="precision_title">Megjelenítési pontosság</string>
+    <string name="prec_0">0 — egész számok</string>
+    <string name="prec_1">1 tizedesjegy</string>
+    <string name="prec_2">2 tizedesjegy</string>
+    <string name="prec_4">4 tizedesjegy</string>
+    <string name="precision_value_int">egész számok</string>
+    <string name="precision_value_n">%1$d tiz.</string>
+    <string name="source_title">Árfolyamforrás</string>
+    <string name="source_auto">Automatikus (tartalékkal)</string>
+    <string name="language_title">Nyelv</string>
+    <string name="language_system">Rendszer alapértelmezése</string>
+    <string name="source_info_title">Árfolyamforrás</string>
+    <string name="source_info_message">Középárfolyam — a vételi és eladási ár közötti középpont a globális piacon.\n\nAlappénznem: EUR, a többi párt az eurón keresztül számítjuk.\n\nForrások (automatikus tartalék):\n1. ExchangeRate-API — elsődleges\n2. F.A. — ha az elsődleges nem elérhető\n3. Frankfurter (ECB) — második tartalék\n\nHa az elsődleges forrás nem válaszol az automatikus frissítés során vagy a ↻ gombra, az alkalmazás automatikusan a következőből veszi az adatokat. Az aktuális forrás felül látható a frissítés ideje mellett.\n\nA Beállításokban (⚙) kényszeríthet egy adott forrást — a többi továbbra is tartalékként marad.\n\nNaponta egyszer frissül. A más referenciaszolgáltatásoktól való eltérés általában 0.5% alatt van — ezek referenciaárfolyamok, nem valós idejű jegyzések.\n\nLicencek és forrásmegjelölés:\n• ExchangeRate-API — megköveteli a “Rates By Exchange Rate API” hivatkozást (a láblécben, kattintható).\n• F.A. — CC0 (közkincs), forrásmegjelölés nem szükséges.\n• Frankfurter — MIT, adatok a European Central Bank (ECB) forrásból.</string>
+    <string name="filter_all">Mind</string>
+    <string name="switch_source_title">Forrás váltása?</string>
+    <string name="switch_source_msg">A(z) %1$s a(z) %2$s forráson keresztül érhető el, nem a jelenlegin. Váltasz és hozzáadod?</string>
+    <string name="switch_and_add">Váltás és hozzáadás</string>
+    <string name="already_added">Már a listán</string>
+    <string name="reorder">Átrendezés</string>
+    <string name="rates_offline">Offline · árfolyamok: %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Az árfolyamok elavultak — %1$s · %2$s</string>
+    <string name="clear_confirm_title">Törli az összes összeget?</string>
+    <string name="clear_confirm_msg">Minden összeg nullázódik.</string>
+    <string name="refresh">Árfolyamok frissítése</string>
+    <string name="setting_theme">Megjelenés:  %1$s</string>
+    <string name="theme_title">Megjelenés</string>
+    <string name="theme_system">Rendszer szerint</string>
+    <string name="theme_light">Világos</string>
+    <string name="theme_dark">Sötét</string>
+    <string name="setting_grouping">Ezres elválasztó:  %1$s</string>
+    <string name="grouping_title">Ezres elválasztó</string>
+    <string name="group_none">Nincs — 1234.56</string>
+    <string name="group_space">Szóköz — 1 234.56</string>
+    <string name="group_comma">Vessző — 1,234.56</string>
+</resources>

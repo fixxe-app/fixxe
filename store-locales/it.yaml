@@ -1,0 +1,80 @@
+title: "FIXXE – Convertitore valute"
+subtitle: Tassi da tre fonti
+short_description: Tassi medi da 3 fonti, 300+ valute, funziona offline, senza pubblicità.
+keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro
+promotional_text: Tre fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
+description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi di mercato in tempo reale: il punto neutro fra i prezzi mondiali di acquisto e di vendita, senza ricarichi bancari.
+
+
+  COSA RENDE FIXXE DIVERSO
+
+
+  • Tre fonti di tassi con passaggio automatico — ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
+
+
+  • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
+
+
+  • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano.
+
+
+  • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
+
+
+  • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
+
+
+  VALUTE
+
+
+  • 300+ valute con bandiere
+
+  • Valute regionali che gli altri convertitori spesso saltano: rublo russo, dinaro serbo, lari georgiano, somoni tagiko, som kirghiso
+
+  • Cripto — Bitcoin, Ethereum e altre 150+ — e metalli preziosi
+
+
+  DETTAGLI DI OGNI GIORNO
+
+
+  • Scrivi in un campo qualsiasi e tutte le altre valute si aggiornano all''istante
+
+  • Trascina le righe dalla maniglia per riordinarle, togline una con un tocco
+
+  • Ricerca consapevole della fonte: filtra le valute per fornitore, vedi dove si trova ciascuna, cambia fonte con un tocco
+
+  • Precisione: numeri interi, 1, 2 o 4 decimali
+
+  • 40 lingue, inglese come impostazione iniziale, con l''opzione di seguire la lingua del dispositivo — layout da destra a sinistra compresi
+
+  • Telefono, tablet e web: la stessa app su iPhone, iPad, Android e come app web da installare nella schermata Home
+
+
+  I tassi mostrati sono valori medi di riferimento, non quotazioni di mercato in tempo reale.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "«Cambia fonte e aggiungi» ora aggiunge davvero la valuta e cambia la fonte dei tassi. Chiusa la tastiera, l’elenco torna ogni volta esattamente dov’era."
+landing:
+  page_title: FIXXE — convertitore di valute
+  install_title: Modi per installare
+  about_title: Informazioni sull'app
+  lang_label: Lingua
+  play_title: Google Play
+  play_desc: Telefoni e tablet Android.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad e Mac con chip Apple.
+  apk_title: File APK
+  apk_desc: 'Android senza Google Play: Huawei, firmware personalizzati, AOSP.'
+  web_title: Versione web
+  web_desc: Si apre nel browser. Non c'è nulla da installare.
+  pwa_title: Aggiungi alla schermata Home
+  pwa_desc: La versione web diventa un'icona dell'app e continua a funzionare offline.
+  pwa_ios: 'iPhone, iPad: «Condividi» → «Aggiungi a Home»'
+  pwa_android: 'Android: menu del browser → «Installa app»'
+  btn_open: Apri
+  btn_download: Scarica
+  btn_store: Apri nello store
+  privacy: Privacy
+  terms: Termini

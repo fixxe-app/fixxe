@@ -1,0 +1,28 @@
+# Настройки ОДНОГО издателя — скопируй в .release.local (он вне git) и заполни.
+# Репозиторий открытый, поэтому ничего из этого в скриптах не захардкожено.
+# Без файла release.sh / ship-ios.sh работают, но пропускают эти шаги.
+
+# Android: upload-ключ для Google Play и отдельного APK
+FIXXE_UPLOAD_KEYSTORE="$HOME/path/to/upload.jks"
+# пароль лучше не писать прямо — брать из связки ключей, например:
+# FIXXE_KEYSTORE_PASSWORD="$(security find-generic-password -s 'my keystore' -a 'upload' -w)"
+FIXXE_KEYSTORE_PASSWORD=""
+
+# Зеркало PWA, куда release.sh кладёт web/ по SSH (пусто — не деплоить)
+FIXXE_MIRROR_SSH=""                      # user@host
+FIXXE_MIRROR_DIR="/var/www/fixxe"        # каталог сайта на хосте
+FIXXE_MIRROR_URL=""                      # адрес, только для сообщения
+
+# App Store Connect: профиль testflight-ops с ключом API (tools/ship-ios.sh)
+TESTFLIGHT_OPS_PROFILE="$HOME/path/to/testflight-ops.local.md"
+# Google Play: JSON-ключ сервисного аккаунта (tools/check-store-listings.py)
+PLAY_SERVICE_ACCOUNT_JSON="$HOME/path/to/service-account.json"
+
+# Открытый репозиторий, куда tools/publish-public.sh кладёт снимок исходников
+FIXXE_PUBLIC_DIR="$HOME/fixxe-public"
+FIXXE_PUBLIC_AUTHOR="Karpinity <noreply@example.com>"
+FIXXE_PUBLIC_REMOTE=""                   # git@github.com:<account>/fixxe.git
+
+# Регулярное выражение (grep -E): имена людей, почты, адреса своих серверов,
+# названия записей в связке ключей — всё, что не должно попасть в открытый снимок
+FIXXE_PUBLIC_DENY='myname|me@example\.com|10\.0\.0\.'

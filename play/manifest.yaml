@@ -1,0 +1,2348 @@
+default_locale: en-US
+contact:
+  email: innovation@karpinity.com
+  website: https://telebimmer.com/fixxe/
+category: FINANCE
+release:
+  status: draft
+graphics:
+  icon: icon-512.png
+  feature_graphic: feature-1024x500.png
+  phone_screenshots:
+  - phone-1.png
+  - phone-2.png
+  - phone-3.png
+  - phone-4.png
+  - phone-5.png
+  tablet_screenshots:
+  - tablet-1.png
+  - tablet-2.png
+  - tablet-3.png
+  - tablet-4.png
+  - tablet-5.png
+content_rating:
+  violence: none
+  sexual_content: none
+  language: none
+  controlled_substances: none
+  gambling: false
+  user_generated_content: false
+data_safety:
+  collects_personal_info: false
+  shares_data_with_third_parties: false
+  data_encrypted_in_transit: true
+  data_deletion_supported: false
+pricing:
+  free: true
+  tier: null
+locales:
+  ar:
+    title: FIXXE – محول العملات
+    short_description: أسعار وسطية من 3 مصادر، 300+ عملة، تعمل دون اتصال، بلا إعلانات.
+    full_description: '‏FIXXE محوّل عملات سريع وأنيق بأسعار السوق الوسطية الحية — النقطة المحايدة بين أسعار الشراء والبيع العالمية، بلا هوامش مصرفية.
+
+
+      ما الذي يميز FIXXE
+
+
+      • ثلاثة مصادر للأسعار مع تبديل تلقائي — ExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها.
+
+
+      • يعمل دون اتصال — تبقى آخر الأسعار على جهازك، فيواصل التطبيق الحساب بلا شبكة. وإذا مضى على تلك الأسعار أكثر من يوم، يقولها صراحةً بدل أن يُظهرها وكأنها حديثة.
+
+
+      • تقريب ذكي — الدقة التي تختارها حدّ أدنى لا قيد: إذا كان التقريب سيشوّه المبلغ بأكثر من 2%، تُضاف خانات عشرية تلقائيًا. لا يتحول 0.94 فرنك سويسري إلى «1»، ولا تهبط المبالغ الصغيرة من العملات الرقمية إلى الصفر.
+
+
+      • أساس متغيّر — تُحتسب الأسعار مقابل العملة التي تحرّرها، لا مقابل عملة ثابتة. بلا تنقّل ذهابًا وإيابًا.
+
+
+      • بلا إعلانات. بلا حسابات. بلا تتبّع. الإذن الوحيد هو الوصول إلى الإنترنت؛ وقائمتك وترتيبها وإعداداتك لا تغادر جهازك أبدًا.
+
+
+      العملات
+
+
+      • أكثر من 300 عملة مع أعلام الدول
+
+      • عملات إقليمية كثيرًا ما تتجاهلها المحوّلات: الروبل الروسي، الدينار الصربي، اللاري الجورجي، السوموني الطاجيكي، السوم القيرغيزي
+
+      • العملات الرقمية — بيتكوين وإيثيريوم وأكثر من 150 غيرها — والمعادن الثمينة
+
+
+      تفاصيل يومية
+
+
+      • اكتب في أي حقل فتتحدّث بقية العملات فورًا
+
+      • اسحب الصفوف من المقبض لإعادة ترتيبها، واحذف أحدها بلمسة واحدة
+
+      • بحث يراعي المصدر: رشّح العملات حسب المزوّد، وانظر أين تتوفر كل منها، وبدّل المصدر بلمسة
+
+      • الدقة: أعداد صحيحة أو 1 أو 2 أو 4 خانات عشرية
+
+      • 40 لغة، الإنجليزية افتراضيًا، مع خيار اتباع لغة الجهاز — وتخطيطات من اليمين إلى اليسار
+
+      • هاتف ولوحي وويب: التطبيق نفسه على iPhone وiPad وAndroid، وكتطبيق ويب تثبّته على الشاشة الرئيسية
+
+
+      الأسعار المعروضة قيم وسطية استرشادية، وليست تسعيرات تداول لحظية.
+
+      Rates By Exchange Rate API.
+
+      '
+  bg:
+    title: FIXXE – Валутен конвертор
+    short_description: Средни курсове от 3 източника, 300+ валути, работи офлайн, без реклами.
+    full_description: 'FIXXE е бърз и изчистен валутен конвертор с актуални средни пазарни курсове — неутралната среда между световните цени купува и продава, без банкови надбавки.
+
+
+      С КАКВО FIXXE Е РАЗЛИЧЕН
+
+
+      • Три източника на курсове с автоматично превключване — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже.
+
+
+      • Работи офлайн — последните курсове остават на устройството, така че приложението смята и без връзка. А ако тези курсове са по-стари от денонощие, го казва направо, вместо да ги представя за актуални.
+
+
+      • Умно закръгляне — избраната точност е минимум, а не усмирителна риза: ако закръглянето би изкривило сумата с повече от 2%, знаците след десетичната запетая се добавят сами. 0,94 CHF никога не става „1", а малките суми в криптовалути никога не падат до нула.
+
+
+      • Динамична база — курсовете се преизчисляват спрямо валутата, която редактирате, а не спрямо фиксирана. Без превключване напред-назад.
+
+
+      • Без реклами. Без профили. Без проследяване. Единственото разрешение е достъп до интернет; вашият списък, неговата подредба и настройките никога не напускат устройството.
+
+
+      ВАЛУТИ
+
+
+      • 300+ валути със знамена на държави
+
+      • Регионални валути, които конверторите често пропускат: руска рубла, сръбски динар, грузински лари, таджикски сомони, киргизки сом
+
+      • Криптовалути — Bitcoin, Ethereum и още 150+ — и благородни метали
+
+
+      ВСЕКИДНЕВНИ ДЕТАЙЛИ
+
+
+      • Пишете в което и да е поле и всички останали валути се обновяват веднага
+
+      • Влачете редовете за дръжката, за да ги подредите, премахвате един с едно докосване
+
+      • Търсене, което знае източниците: филтрирайте валути по доставчик, вижте къде е налична всяка, сменете източника с едно докосване
+
+      • Точност: цели числа, 1, 2 или 4 знака след запетаята
+
+      • 40 езика, английски по подразбиране, с опция да следва езика на устройството — включително подредби отдясно наляво
+
+      • Телефон, таблет и уеб: същото приложение на iPhone, iPad, Android и като уеб приложение, което слагате на началния екран
+
+
+      Показаните курсове са ориентировъчни средни стойности, а не борсови котировки в реално време.
+
+      Rates By Exchange Rate API.
+
+      '
+  cs-CZ:
+    title: FIXXE – Převodník měn
+    short_description: Střední kurzy ze 3 zdrojů, 300+ měn, funguje offline, bez reklam.
+    full_description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními středními kurzy — neutrálním středem mezi světovými nákupními a prodejními cenami, bez bankovních přirážek.
+
+
+      ČÍM SE FIXXE LIŠÍ
+
+
+      • Tři zdroje kurzů s automatickým přepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+
+
+      • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
+
+
+      • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu.
+
+
+      • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
+
+
+      • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
+
+
+      MĚNY
+
+
+      • 300+ měn s vlajkami zemí
+
+      • Regionální měny, které převodníky často vynechávají: ruský rubl, srbský dinár, gruzínské lari, tádžické somoni, kyrgyzský som
+
+      • Kryptoměny — Bitcoin, Ethereum a 150+ dalších — a drahé kovy
+
+
+      DROBNOSTI PRO KAŽDÝ DEN
+
+
+      • Pište do kteréhokoli pole a všechny ostatní měny se okamžitě přepočítají
+
+      • Řádky přetahujte za úchyt a měňte jejich pořadí, jeden odeberete jediným klepnutím
+
+      • Hledání znalé zdrojů: filtrujte měny podle poskytovatele, uvidíte, kde je která dostupná, zdroj změníte jedním klepnutím
+
+      • Přesnost: celá čísla, 1, 2 nebo 4 desetinná místa
+
+      • 40 jazyků, výchozí angličtina, s možností řídit se jazykem zařízení — včetně rozložení zprava doleva
+
+      • Telefon, tablet i web: stejná aplikace na iPhonu, iPadu, Androidu a jako webová aplikace, kterou si přidáte na plochu
+
+
+      Zobrazené kurzy jsou orientační střední hodnoty, nikoli burzovní kotace v reálném čase.
+
+      Rates By Exchange Rate API.
+
+      '
+  da-DK:
+    title: FIXXE – Valutaomregner
+    short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uden reklamer.
+    full_description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser — det neutrale midtpunkt mellem verdens købs- og salgspriser, uden banktillæg.
+
+
+      DET HER GØR FIXXE ANDERLEDES
+
+
+      • Tre kurskilder med automatisk skift — ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
+
+
+      • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
+
+
+      • Smart afrunding — den præcision, du vælger, er et minimum, ikke en spændetrøje: ville afrundingen forvride beløbet med mere end 2%, kommer der decimaler til af sig selv. 0,94 CHF bliver aldrig til „1", og små kryptobeløb falder aldrig til nul.
+
+
+      • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+      • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
+
+
+      VALUTAER
+
+
+      • 300+ valutaer med landeflag
+
+      • Regionale valutaer, som omregnere ofte springer over: russisk rubel, serbisk dinar, georgisk lari, tadsjikisk somoni, kirgisisk som
+
+      • Krypto — Bitcoin, Ethereum og 150+ flere — samt ædelmetaller
+
+
+      HVERDAGENS DETALJER
+
+
+      • Skriv i et vilkårligt felt, og alle andre valutaer opdateres med det samme
+
+      • Træk rækker i håndtaget for at omarrangere dem, fjern en med et enkelt tryk
+
+      • Kildebevidst søgning: filtrér valutaer efter udbyder, se hvor hver enkelt findes, skift kilde med ét tryk
+
+      • Præcision: hele tal, 1, 2 eller 4 decimaler
+
+      • 40 sprog, engelsk som standard, med mulighed for at følge enhedens sprog — layout fra højre mod venstre inkluderet
+
+      • Telefon, tablet og web: den samme app på iPhone, iPad, Android og som webapp, du kan lægge på hjemmeskærmen
+
+
+      De viste kurser er vejledende middelkurser, ikke handelskurser i realtid.
+
+      Rates By Exchange Rate API.
+
+      '
+  de-DE:
+    title: FIXXE – Währungsrechner
+    short_description: Mittelkurse aus 3 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
+    full_description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
+
+
+      WAS FIXXE ANDERS MACHT
+
+
+      • Drei Kursquellen mit automatischem Wechsel — ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
+
+
+      • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
+
+
+      • Kluges Runden — die gewählte Genauigkeit ist ein Minimum, keine Zwangsjacke: Würde das Runden den Betrag um mehr als 2% verzerren, kommen automatisch weitere Nachkommastellen dazu. Aus 0,94 CHF wird nie „1“, und kleine Kryptobeträge fallen nie auf null.
+
+
+      • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
+
+
+      • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
+
+
+      WÄHRUNGEN
+
+
+      • 300+ Währungen mit Länderflaggen
+
+      • Regionale Währungen, die andere Rechner oft auslassen: russischer Rubel, serbischer Dinar, georgischer Lari, tadschikischer Somoni, kirgisischer Som
+
+      • Krypto — Bitcoin, Ethereum und 150+ weitere — sowie Edelmetalle
+
+
+      FÜRS TÄGLICHE RECHNEN
+
+
+      • In ein beliebiges Feld tippen, alle anderen Währungen aktualisieren sich sofort
+
+      • Zeilen am Griff ziehen, um sie neu zu ordnen, eine mit einem Tippen entfernen
+
+      • Quellenbewusste Suche: Währungen nach Anbieter filtern, sehen, wo es welche gibt, Quelle mit einem Tippen wechseln
+
+      • Genauigkeit: ganze Zahlen, 1, 2 oder 4 Nachkommastellen
+
+      • 40 Sprachen, Englisch als Standard, auf Wunsch der Gerätesprache folgend — auch mit Rechts-nach-links-Layouts
+
+      • Telefon, Tablet und Web: dieselbe App auf iPhone, iPad, Android und als Web-App für den Startbildschirm
+
+
+      Die angezeigten Kurse sind Mittelkurse als Richtwert, keine Börsenkurse in Echtzeit.
+
+      Rates By Exchange Rate API.
+
+      '
+  el-GR:
+    title: FIXXE – Μετατροπέας νομισμάτων
+    short_description: Μέσες ισοτιμίες από 3 πηγές, 300+ νομίσματα, εκτός σύνδεσης, χωρίς διαφημίσεις.
+    full_description: 'Το FIXXE είναι ένας γρήγορος και καθαρός μετατροπέας νομισμάτων με ζωντανές μέσες ισοτιμίες αγοράς — το ουδέτερο μέσο ανάμεσα στις παγκόσμιες τιμές αγοράς και πώλησης, χωρίς τραπεζικά περιθώρια.
+
+
+      ΤΙ ΚΑΝΕΙ ΤΟ FIXXE ΔΙΑΦΟΡΕΤΙΚΟ
+
+
+      • Τρεις πηγές ισοτιμιών με αυτόματη εναλλαγή — ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα.
+
+
+      • Λειτουργεί εκτός σύνδεσης — οι τελευταίες ισοτιμίες μένουν στη συσκευή, οπότε η εφαρμογή συνεχίζει να υπολογίζει χωρίς δίκτυο. Κι αν αυτές οι ισοτιμίες είναι πάνω από μία ημέρα παλιές, το λέει καθαρά αντί να τις παρουσιάζει ως τρέχουσες.
+
+
+      • Έξυπνη στρογγυλοποίηση — η ακρίβεια που επιλέγετε είναι ελάχιστο όριο, όχι ζουρλομανδύας: αν η στρογγυλοποίηση αλλοίωνε το ποσό πάνω από 2%, τα δεκαδικά προστίθενται μόνα τους. Το 0,94 CHF δεν γίνεται ποτέ «1» και τα μικρά ποσά σε κρυπτονομίσματα δεν μηδενίζονται ποτέ.
+
+
+      • Δυναμική βάση — οι ισοτιμίες υπολογίζονται ως προς το νόμισμα που επεξεργάζεστε, όχι ως προς ένα σταθερό. Χωρίς συνεχείς εναλλαγές.
+
+
+      • Χωρίς διαφημίσεις. Χωρίς λογαριασμούς. Χωρίς παρακολούθηση. Η μόνη άδεια είναι η πρόσβαση στο διαδίκτυο· η λίστα σας, η σειρά της και οι ρυθμίσεις δεν φεύγουν ποτέ από τη συσκευή.
+
+
+      ΝΟΜΙΣΜΑΤΑ
+
+
+      • 300+ νομίσματα με σημαίες χωρών
+
+      • Περιφερειακά νομίσματα που οι μετατροπείς συχνά παραλείπουν: ρωσικό ρούβλι, σερβικό δηνάριο, γεωργιανό λάρι, τατζικικό σομόνι, κιργιζικό σομ
+
+      • Κρυπτονομίσματα — Bitcoin, Ethereum και 150+ ακόμη — και πολύτιμα μέταλλα
+
+
+      ΚΑΘΗΜΕΡΙΝΕΣ ΛΕΠΤΟΜΕΡΕΙΕΣ
+
+
+      • Πληκτρολογήστε σε οποιοδήποτε πεδίο και όλα τα άλλα νομίσματα ενημερώνονται αμέσως
+
+      • Σύρετε τις γραμμές από τη λαβή για να τις αναδιατάξετε, αφαιρέστε μία με ένα άγγιγμα
+
+      • Αναζήτηση με επίγνωση πηγής: φιλτράρετε νομίσματα ανά πάροχο, δείτε πού υπάρχει το καθένα, αλλάξτε πηγή με ένα άγγιγμα
+
+      • Ακρίβεια: ακέραιοι, 1, 2 ή 4 δεκαδικά
+
+      • 40 γλώσσες, αγγλικά από προεπιλογή, με δυνατότητα να ακολουθεί τη γλώσσα της συσκευής — μαζί με διατάξεις από δεξιά προς τα αριστερά
+
+      • Τηλέφωνο, tablet και web: η ίδια εφαρμογή σε iPhone, iPad, Android και ως web εφαρμογή που εγκαθιστάτε στην αρχική οθόνη
+
+
+      Οι ισοτιμίες που εμφανίζονται είναι ενδεικτικές μέσες τιμές, όχι χρηματιστηριακές τιμές σε πραγματικό χρόνο.
+
+      Rates By Exchange Rate API.
+
+      '
+  en-US:
+    title: FIXXE – Currency Converter
+    short_description: Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.
+    full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+
+
+      WHY FIXXE IS DIFFERENT
+
+
+      • Three rate sources with automatic fallback — ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+
+
+      • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
+
+
+      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero.
+
+
+      • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
+
+
+      CURRENCIES
+
+
+      • 300+ currencies with country flags
+
+      • Regional currencies that converters often skip: Russian ruble, Serbian dinar, Georgian lari, Tajikistani somoni, Kyrgyz som
+
+      • Crypto — Bitcoin, Ethereum and 150+ more — and precious metals
+
+
+      EVERYDAY DETAILS
+
+
+      • Type in any field and every other currency updates instantly
+
+      • Drag rows by the handle to reorder them, remove one with a single tap
+
+      • Source-aware search: filter currencies by provider, see where each one is available, switch source in one tap
+
+      • Precision: whole numbers, 1, 2 or 4 decimals
+
+      • 40 languages, English by default, with an option to follow your device language — right-to-left layouts included
+
+      • Phone, tablet and web: the same app on iPhone, iPad, Android and as a web app you can install to the home screen
+
+
+      Displayed rates are mid-market reference values, not real-time trading quotes.
+
+      Rates By Exchange Rate API.
+
+      '
+  en-GB:
+    title: FIXXE – Currency Converter
+    short_description: Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.
+    full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+
+
+      WHY FIXXE IS DIFFERENT
+
+
+      • Three rate sources with automatic fallback — ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+
+
+      • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
+
+
+      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero.
+
+
+      • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
+
+
+      CURRENCIES
+
+
+      • 300+ currencies with country flags
+
+      • Regional currencies that converters often skip: Russian ruble, Serbian dinar, Georgian lari, Tajikistani somoni, Kyrgyz som
+
+      • Crypto — Bitcoin, Ethereum and 150+ more — and precious metals
+
+
+      EVERYDAY DETAILS
+
+
+      • Type in any field and every other currency updates instantly
+
+      • Drag rows by the handle to reorder them, remove one with a single tap
+
+      • Source-aware search: filter currencies by provider, see where each one is available, switch source in one tap
+
+      • Precision: whole numbers, 1, 2 or 4 decimals
+
+      • 40 languages, English by default, with an option to follow your device language — right-to-left layouts included
+
+      • Phone, tablet and web: the same app on iPhone, iPad, Android and as a web app you can install to the home screen
+
+
+      Displayed rates are mid-market reference values, not real-time trading quotes.
+
+      Rates By Exchange Rate API.
+
+      '
+  es-ES:
+    title: FIXXE – Conversor de divisas
+    short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
+
+
+      QUÉ HACE DISTINTO A FIXXE
+
+
+      • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+
+
+      • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
+
+
+      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+
+
+      • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+      • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
+
+
+      MONEDAS
+
+
+      • 300+ monedas con banderas
+
+      • Monedas regionales que otros conversores suelen saltarse: rublo ruso, dinar serbio, lari georgiano, somoni tayiko, som kirguís
+
+      • Cripto: Bitcoin, Ethereum y 150+ más, además de metales preciosos
+
+
+      DETALLES DEL DÍA A DÍA
+
+
+      • Escribe en cualquier campo y el resto de monedas se actualiza al instante
+
+      • Arrastra las filas por el asa para reordenarlas y quita cualquiera con un toque
+
+      • Búsqueda consciente de la fuente: filtra monedas por proveedor, mira dónde está cada una y cambia de fuente con un toque
+
+      • Precisión: números enteros, 1, 2 o 4 decimales
+
+      • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
+
+      • Teléfono, tableta y web: la misma aplicación en iPhone, iPad, Android y como aplicación web que puedes instalar en la pantalla de inicio
+
+
+      Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
+
+      Rates By Exchange Rate API.
+
+      '
+  es-419:
+    title: FIXXE – Conversor de divisas
+    short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
+
+
+      QUÉ HACE DISTINTO A FIXXE
+
+
+      • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+
+
+      • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
+
+
+      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+
+
+      • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+      • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
+
+
+      MONEDAS
+
+
+      • 300+ monedas con banderas
+
+      • Monedas regionales que otros conversores suelen saltarse: rublo ruso, dinar serbio, lari georgiano, somoni tayiko, som kirguís
+
+      • Cripto: Bitcoin, Ethereum y 150+ más, además de metales preciosos
+
+
+      DETALLES DEL DÍA A DÍA
+
+
+      • Escribe en cualquier campo y el resto de monedas se actualiza al instante
+
+      • Arrastra las filas por el asa para reordenarlas y quita cualquiera con un toque
+
+      • Búsqueda consciente de la fuente: filtra monedas por proveedor, mira dónde está cada una y cambia de fuente con un toque
+
+      • Precisión: números enteros, 1, 2 o 4 decimales
+
+      • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
+
+      • Teléfono, tableta y web: la misma aplicación en iPhone, iPad, Android y como aplicación web que puedes instalar en la pantalla de inicio
+
+
+      Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
+
+      Rates By Exchange Rate API.
+
+      '
+  et:
+    title: FIXXE – Valuutakalkulaator
+    short_description: Keskkursid 3 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
+    full_description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssidega — see on neutraalne keskpunkt maailma ostu- ja müügihindade vahel, ilma pangamarginaalita.
+
+
+      MIS TEEB FIXXE TEISTSUGUSEKS
+
+
+      • Kolm kursiallikat automaatse vahetusega — ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+
+
+      • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
+
+
+      • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli.
+
+
+      • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
+
+
+      • Reklaamivaba. Kontota. Jälgimiseta. Ainus luba on internetiühendus; teie loend, selle järjekord ja seaded ei lahku kunagi seadmest.
+
+
+      VALUUTAD
+
+
+      • 300+ valuutat riigilippudega
+
+      • Piirkondlikud valuutad, mille kalkulaatorid sageli vahele jätavad: Vene rubla, Serbia dinaar, Gruusia lari, Tadžikistani somoni, Kõrgõzstani somm
+
+      • Krüpto — Bitcoin, Ethereum ja 150+ muud — ning väärismetallid
+
+
+      IGAPÄEVASED PISIASJAD
+
+
+      • Kirjutage ükskõik millisesse lahtrisse ja kõik teised valuutad uuenevad kohe
+
+      • Lohistage ridu käepidemest, et järjekorda muuta, eemaldage üks ühe puudutusega
+
+      • Allikat tundev otsing: filtreerige valuutasid pakkuja järgi, vaadake, kus igaüks saadaval on, vahetage allikat ühe puudutusega
+
+      • Täpsus: täisarvud, 1, 2 või 4 kohta pärast koma
+
+      • 40 keelt, vaikimisi inglise keel, võimalusega järgida seadme keelt — koos paremalt vasakule paigutustega
+
+      • Telefon, tahvel ja veeb: sama rakendus iPhone''is, iPadis, Androidis ja veebirakendusena, mille saab avakuvale panna
+
+
+      Näidatud kursid on orienteerivad keskväärtused, mitte reaalajas kauplemisnoteeringud.
+
+      Rates By Exchange Rate API.
+
+      '
+  fa:
+    title: FIXXE – مبدل ارز
+    short_description: نرخ میانهٔ بازار از ۳ منبع، بیش از ۳۰۰ ارز، کار بدون اینترنت، بدون تبلیغ.
+    full_description: '‏FIXXE یک مبدل ارز سریع و تمیز با نرخ‌های میانهٔ بازار است — نقطهٔ بی‌طرف میان قیمت‌های خرید و فروش جهانی، بدون حاشیهٔ سود بانک‌ها.
+
+
+      چه چیزی FIXXE را متفاوت می‌کند
+
+
+      • سه منبع نرخ با جابه‌جایی خودکار — ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند.
+
+
+      • بدون اینترنت کار می‌کند — آخرین نرخ‌ها روی دستگاه می‌مانند، پس برنامه بدون اتصال هم محاسبه می‌کند. و اگر آن نرخ‌ها بیش از یک روز قدیمی باشند، همین را صریح می‌گوید، نه اینکه آن‌ها را تازه جلوه دهد.
+
+
+      • گِرد کردن هوشمند — دقتی که انتخاب می‌کنید کف است، نه قید: اگر گِرد کردن مبلغ را بیش از ۲٪ منحرف کند، رقم‌های اعشاری خودبه‌خود اضافه می‌شوند. ‏۰٫۹۴ فرانک سوئیس هرگز «۱» نمی‌شود و مبالغ کوچک رمزارز هرگز به صفر نمی‌رسند.
+
+
+      • پایهٔ پویا — نرخ‌ها نسبت به ارزی که در حال ویرایش آن هستید دوباره حساب می‌شوند، نه نسبت به ارزی ثابت. بی‌نیاز از رفت‌وبرگشت.
+
+
+      • بدون تبلیغ. بدون حساب کاربری. بدون ردیابی. تنها اجازهٔ لازم دسترسی به اینترنت است؛ فهرست شما، ترتیب آن و تنظیماتتان هرگز از دستگاه بیرون نمی‌روند.
+
+
+      ارزها
+
+
+      • بیش از ۳۰۰ ارز همراه با پرچم کشورها
+
+      • ارزهای منطقه‌ای که مبدل‌ها اغلب نادیده می‌گیرند: روبل روسیه، دینار صربستان، لاری گرجستان، سامانی تاجیکستان، سوم قرقیزستان
+
+      • رمزارزها — بیت‌کوین، اتریوم و بیش از ۱۵۰ مورد دیگر — و فلزات گران‌بها
+
+
+      جزئیات روزمره
+
+
+      • در هر کادری بنویسید، بقیهٔ ارزها بی‌درنگ به‌روز می‌شوند
+
+      • ردیف‌ها را از دستگیره بکشید تا جابه‌جا شوند، یکی را با یک ضربه بردارید
+
+      • جست‌وجوی آگاه از منبع: ارزها را بر پایهٔ ارائه‌دهنده پالایش کنید، ببینید هرکدام کجا موجود است، و با یک ضربه منبع را عوض کنید
+
+      • دقت: عدد درست، یک، دو یا چهار رقم اعشار
+
+      • ۴۰ زبان، به‌طور پیش‌فرض انگلیسی، با گزینهٔ پیروی از زبان دستگاه — همراه با چیدمان راست‌به‌چپ
+
+      • گوشی، تبلت و وب: همان برنامه روی iPhone و iPad و Android، و به‌صورت برنامهٔ وب که روی صفحهٔ خانه نصب می‌شود
+
+
+      نرخ‌های نمایش‌داده‌شده مقادیر میانهٔ مرجع‌اند، نه قیمت‌های معاملاتی لحظه‌ای.
+
+      Rates By Exchange Rate API.
+
+      '
+  fi-FI:
+    title: FIXXE – Valuuttalaskuri
+    short_description: Keskikurssit 3 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
+    full_description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset keskikurssit — puolueeton keskikohta maailman osto- ja myyntihintojen välissä, ilman pankkien katteita.
+
+
+      MIKÄ TEKEE FIXXESTÄ ERILAISEN
+
+
+      • Kolme kurssilähdettä automaattisella vaihdolla — ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
+
+
+      • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
+
+
+      • Älykäs pyöristys — valitsemasi tarkkuus on vähimmäismäärä, ei pakkopaita: jos pyöristys vääristäisi summaa yli 2 %, desimaaleja lisätään itsestään. 0,94 CHF ei muutu koskaan ykköseksi eivätkä pienet kryptosummat katoa nollaan.
+
+
+      • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
+
+
+      • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
+
+
+      VALUUTAT
+
+
+      • 300+ valuuttaa maalippuineen
+
+      • Alueellisia valuuttoja, jotka muuntimet usein ohittavat: Venäjän rupla, Serbian dinaari, Georgian lari, Tadžikistanin somoni, Kirgisian som
+
+      • Kryptot — Bitcoin, Ethereum ja yli 150 muuta — sekä jalometallit
+
+
+      ARJEN YKSITYISKOHDAT
+
+
+      • Kirjoita mihin tahansa kenttään, ja kaikki muut valuutat päivittyvät heti
+
+      • Vedä rivejä kahvasta järjestelläksesi ne, poista yksi yhdellä napautuksella
+
+      • Lähteen tunteva haku: suodata valuutat tarjoajan mukaan, näe missä kukin on saatavilla, vaihda lähdettä yhdellä napautuksella
+
+      • Tarkkuus: kokonaisluvut, 1, 2 tai 4 desimaalia
+
+      • 40 kieltä, oletuksena englanti, halutessasi laitteen kielen mukaan — myös oikealta vasemmalle luettavat asettelut
+
+      • Puhelin, tabletti ja web: sama sovellus iPhonessa, iPadissa, Androidissa ja verkkosovelluksena, jonka voit asentaa aloitusnäytölle
+
+
+      Näytetyt kurssit ovat ohjeellisia keskikursseja, eivät reaaliaikaisia pörssinoteerauksia.
+
+      Rates By Exchange Rate API.
+
+      '
+  fr-FR:
+    title: FIXXE – Convertisseur devises
+    short_description: Taux interbancaires de 3 sources, 300+ devises, hors ligne, sans publicité.
+    full_description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des taux interbancaires en direct — le point médian neutre entre les prix mondiaux d''achat et de vente, sans marge bancaire.
+
+
+      CE QUI DISTINGUE FIXXE
+
+
+      • Trois sources de taux avec bascule automatique — ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+
+
+      • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
+
+
+      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro.
+
+
+      • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
+
+
+      • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
+
+
+      DEVISES
+
+
+      • 300+ devises avec drapeaux
+
+      • Des devises régionales que les convertisseurs oublient souvent : rouble russe, dinar serbe, lari géorgien, somoni tadjik, som kirghize
+
+      • Crypto — Bitcoin, Ethereum et 150+ autres — et métaux précieux
+
+
+      AU QUOTIDIEN
+
+
+      • Saisissez dans n''importe quel champ, toutes les autres devises se mettent à jour aussitôt
+
+      • Réordonnez les lignes en les tirant par la poignée, supprimez-en une d''une seule touche
+
+      • Recherche consciente des sources : filtrez les devises par fournisseur, voyez où chacune existe, changez de source d''une touche
+
+      • Précision : nombres entiers, 1, 2 ou 4 décimales
+
+      • 40 langues, anglais par défaut, avec une option pour suivre la langue de l''appareil — mises en page de droite à gauche comprises
+
+      • Téléphone, tablette et web : la même application sur iPhone, iPad, Android et en application web à installer sur l''écran d''accueil
+
+
+      Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
+
+      Rates By Exchange Rate API.
+
+      '
+  fr-CA:
+    title: FIXXE – Convertisseur devises
+    short_description: Taux interbancaires de 3 sources, 300+ devises, hors ligne, sans publicité.
+    full_description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des taux interbancaires en direct — le point médian neutre entre les prix mondiaux d''achat et de vente, sans marge bancaire.
+
+
+      CE QUI DISTINGUE FIXXE
+
+
+      • Trois sources de taux avec bascule automatique — ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+
+
+      • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
+
+
+      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro.
+
+
+      • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
+
+
+      • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
+
+
+      DEVISES
+
+
+      • 300+ devises avec drapeaux
+
+      • Des devises régionales que les convertisseurs oublient souvent : rouble russe, dinar serbe, lari géorgien, somoni tadjik, som kirghize
+
+      • Crypto — Bitcoin, Ethereum et 150+ autres — et métaux précieux
+
+
+      AU QUOTIDIEN
+
+
+      • Saisissez dans n''importe quel champ, toutes les autres devises se mettent à jour aussitôt
+
+      • Réordonnez les lignes en les tirant par la poignée, supprimez-en une d''une seule touche
+
+      • Recherche consciente des sources : filtrez les devises par fournisseur, voyez où chacune existe, changez de source d''une touche
+
+      • Précision : nombres entiers, 1, 2 ou 4 décimales
+
+      • 40 langues, anglais par défaut, avec une option pour suivre la langue de l''appareil — mises en page de droite à gauche comprises
+
+      • Téléphone, tablette et web : la même application sur iPhone, iPad, Android et en application web à installer sur l''écran d''accueil
+
+
+      Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
+
+      Rates By Exchange Rate API.
+
+      '
+  iw-IL:
+    title: FIXXE – ממיר מטבעות
+    short_description: שערים ממוצעים מ-3 מקורות, 300+ מטבעות, עובד לא מקוון, בלי פרסומות.
+    full_description: '‏FIXXE הוא ממיר מטבעות מהיר ונקי עם שערי אמצע חיים — נקודת האמצע הניטרלית בין מחירי הקנייה והמכירה בעולם, בלי מרווחי בנק.
+
+
+      מה שונה ב-FIXXE
+
+
+      • שלושה מקורות שערים עם מעבר אוטומטי — ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום.
+
+
+      • עובד לא מקוון — השערים האחרונים נשמרים במכשיר, כך שהאפליקציה ממשיכה לחשב גם בלי חיבור. ואם השערים האלה בני יותר מיממה, היא אומרת זאת במפורש במקום להציג אותם כעדכניים.
+
+
+      • עיגול חכם — הדיוק שבחרת הוא מינימום, לא כבלים: אם העיגול יעוות את הסכום ביותר מ-2%, נוספות ספרות עשרוניות מעצמן. ‏0.94 פרנק שווייצרי לא הופך ל„1", וסכומי קריפטו קטנים לא צונחים לאפס.
+
+
+      • בסיס דינמי — השערים מחושבים מחדש מול המטבע שאתם עורכים, לא מול מטבע קבוע. בלי מעבר הלוך ושוב.
+
+
+      • בלי פרסומות. בלי חשבונות. בלי מעקב. ההרשאה היחידה היא גישה לאינטרנט; הרשימה שלכם, סדרה וההגדרות לא עוזבות את המכשיר.
+
+
+      מטבעות
+
+
+      • מעל 300 מטבעות עם דגלי מדינות
+
+      • מטבעות אזוריים שממירים נוטים לדלג עליהם: רובל רוסי, דינר סרבי, לארי גאורגי, סומוני טג''יקי, סום קירגיזי
+
+      • קריפטו — ביטקוין, את''ריום ועוד 150+ — ומתכות יקרות
+
+
+      פרטים של יום-יום
+
+
+      • הקלידו בכל שדה וכל שאר המטבעות מתעדכנים מיד
+
+      • גררו שורות בידית כדי לסדר אותן מחדש, הסירו אחת בנגיעה אחת
+
+      • חיפוש מודע למקור: סננו מטבעות לפי ספק, ראו היכן כל אחד זמין, החליפו מקור בנגיעה
+
+      • דיוק: מספרים שלמים, 1, 2 או 4 ספרות אחרי הנקודה
+
+      • 40 שפות, אנגלית כברירת מחדל, עם אפשרות לעקוב אחר שפת המכשיר — כולל פריסות מימין לשמאל
+
+      • טלפון, טאבלט ואינטרנט: אותה אפליקציה ב-iPhone, ב-iPad, ב-Android וכאפליקציית רשת שאפשר להתקין במסך הבית
+
+
+      השערים המוצגים הם ערכי אמצע להתמצאות, לא ציטוטי מסחר בזמן אמת.
+
+      Rates By Exchange Rate API.
+
+      '
+  hi-IN:
+    title: FIXXE – मुद्रा परिवर्तक
+    short_description: 3 स्रोतों से मध्य-बाज़ार दरें, 300+ मुद्राएँ, ऑफ़लाइन चलता है, विज्ञापन नहीं।
+    full_description: 'FIXXE एक तेज़ और साफ़-सुथरा मुद्रा कनवर्टर है, जिसमें सजीव मध्य-बाज़ार दरें हैं — दुनिया भर के खरीद और बिक्री भावों के बीच का तटस्थ बिंदु, बैंक मार्जिन के बिना।
+
+
+      FIXXE अलग कैसे है
+
+
+      • स्वतः बदलने वाले तीन दर-स्रोत — ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते।
+
+
+      • ऑफ़लाइन काम करता है — पिछली दरें आपके उपकरण पर रहती हैं, इसलिए बिना कनेक्शन भी ऐप गणना करता रहता है। और अगर वे दरें एक दिन से पुरानी हों, तो वह साफ़ कह देता है, उन्हें ताज़ा बताकर नहीं चलाता।
+
+
+      • समझदार पूर्णांकन — आपकी चुनी हुई सटीकता न्यूनतम है, बंधन नहीं: अगर पूर्णांकन से रकम 2% से ज़्यादा बिगड़े तो दशमलव अपने आप बढ़ जाते हैं। 0.94 CHF कभी „1" नहीं बनता, और क्रिप्टो की छोटी रकम कभी शून्य नहीं होती।
+
+
+      • गतिशील आधार — दरें उसी मुद्रा के सापेक्ष फिर से निकाली जाती हैं जिसे आप लिख रहे हैं, किसी तय मुद्रा के नहीं। बार-बार अदल-बदल की ज़रूरत नहीं।
+
+
+      • कोई विज्ञापन नहीं। कोई खाता नहीं। कोई ट्रैकिंग नहीं। एकमात्र अनुमति इंटरनेट की है; आपकी सूची, उसका क्रम और सेटिंग्स कभी उपकरण से बाहर नहीं जातीं।
+
+
+      मुद्राएँ
+
+
+      • देशों के झंडों के साथ 300+ मुद्राएँ
+
+      • क्षेत्रीय मुद्राएँ जिन्हें कनवर्टर अक्सर छोड़ देते हैं: रूसी रूबल, सर्बियाई दिनार, जॉर्जियाई लारी, ताजिक सोमोनी, किर्गिज़ सोम
+
+      • क्रिप्टो — बिटकॉइन, एथेरियम और 150+ और — तथा बहुमूल्य धातुएँ
+
+
+      रोज़मर्रा की बारीकियाँ
+
+
+      • किसी भी खाने में लिखिए, बाकी सारी मुद्राएँ तुरंत बदल जाती हैं
+
+      • पंक्तियों को हैंडल से खींचकर क्रम बदलिए, एक को एक ही टैप से हटाइए
+
+      • स्रोत जानने वाली खोज: मुद्राओं को प्रदाता के हिसाब से छाँटिए, देखिए कौन कहाँ उपलब्ध है, एक टैप में स्रोत बदलिए
+
+      • सटीकता: पूर्ण संख्याएँ, 1, 2 या 4 दशमलव
+
+      • 40 भाषाएँ, डिफ़ॉल्ट अंग्रेज़ी, उपकरण की भाषा अपनाने के विकल्प के साथ — दाएँ-से-बाएँ लेआउट समेत
+
+      • फ़ोन, टैबलेट और वेब: वही ऐप iPhone, iPad, Android पर और वेब ऐप के रूप में जिसे होम स्क्रीन पर लगाया जा सकता है
+
+
+      दिखाई गई दरें संदर्भ के लिए मध्य-बाज़ार मान हैं, वास्तविक समय के ट्रेडिंग भाव नहीं।
+
+      Rates By Exchange Rate API.
+
+      '
+  hr:
+    title: FIXXE – Pretvarač valuta
+    short_description: Srednji tečajevi iz 3 izvora, 300+ valuta, radi offline, bez oglasa.
+    full_description: 'FIXXE je brz i pregledan pretvarač valuta sa živim srednjim tečajevima — neutralnom sredinom između svjetskih kupovnih i prodajnih cijena, bez bankovnih marži.
+
+
+      PO ČEMU SE FIXXE RAZLIKUJE
+
+
+      • Tri izvora tečaja s automatskom zamjenom — ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+
+
+      • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
+
+
+      • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2 %, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu.
+
+
+      • Dinamična osnovica — tečajevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-natrag.
+
+
+      • Bez oglasa. Bez računa. Bez praćenja. Jedino dopuštenje je pristup internetu; vaš popis, njegov redoslijed i postavke nikada ne napuštaju uređaj.
+
+
+      VALUTE
+
+
+      • 300+ valuta sa zastavama država
+
+      • Regionalne valute koje pretvarači često preskaču: ruski rubalj, srpski dinar, gruzijski lari, tadžikistanski somoni, kirgiski som
+
+      • Kriptovalute — Bitcoin, Ethereum i još 150+ — te plemeniti metali
+
+
+      SVAKODNEVNI DETALJI
+
+
+      • Upišite u bilo koje polje i sve ostale valute preračunavaju se odmah
+
+      • Povucite retke za ručku da promijenite redoslijed, uklonite jedan jednim dodirom
+
+      • Pretraga svjesna izvora: filtrirajte valute po pružatelju, vidite gdje je koja dostupna, promijenite izvor jednim dodirom
+
+      • Preciznost: cijeli brojevi, 1, 2 ili 4 decimale
+
+      • 40 jezika, engleski kao zadani, uz mogućnost praćenja jezika uređaja — uključujući rasporede zdesna nalijevo
+
+      • Telefon, tablet i web: ista aplikacija na iPhoneu, iPadu, Androidu i kao web-aplikacija koju možete postaviti na početni zaslon
+
+
+      Prikazani tečajevi su okvirne srednje vrijednosti, a ne burzovne kotacije u stvarnom vremenu.
+
+      Rates By Exchange Rate API.
+
+      '
+  hu-HU:
+    title: FIXXE – Valutaváltó
+    short_description: Középárfolyamok 3 forrásból, 300+ pénznem, offline is, reklám nélkül.
+    full_description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokkal — ez a világpiaci vételi és eladási ár közötti semleges középpont, banki felárak nélkül.
+
+
+      MIBEN MÁS A FIXXE
+
+
+      • Három árfolyamforrás automatikus váltással — ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+
+
+      • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
+
+
+      • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára.
+
+
+      • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
+
+
+      • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
+
+
+      PÉNZNEMEK
+
+
+      • 300+ pénznem országzászlókkal
+
+      • Regionális pénznemek, amelyeket a váltók gyakran kihagynak: orosz rubel, szerb dinár, grúz lari, tádzsik szomoni, kirgiz szom
+
+      • Kripto — Bitcoin, Ethereum és további 150+ — valamint nemesfémek
+
+
+      MINDENNAPI RÉSZLETEK
+
+
+      • Írj bármelyik mezőbe, és az összes többi pénznem azonnal frissül
+
+      • A sorokat a fogantyújuknál húzva rendezheted át, egyet egyetlen koppintással törölhetsz
+
+      • Forrástudatos keresés: szűrd a pénznemeket szolgáltató szerint, lásd, hol érhető el mindegyik, és válts forrást egy koppintással
+
+      • Pontosság: egész számok, 1, 2 vagy 4 tizedesjegy
+
+      • 40 nyelv, alapértelmezetten angol, a készülék nyelvének követésével is — a jobbról balra írt elrendezésekkel együtt
+
+      • Telefon, táblagép és web: ugyanaz az alkalmazás iPhone-on, iPaden, Androidon és webalkalmazásként, amelyet a kezdőképernyőre tehetsz
+
+
+      A megjelenített árfolyamok tájékoztató középárfolyamok, nem valós idejű tőzsdei jegyzések.
+
+      Rates By Exchange Rate API.
+
+      '
+  id:
+    title: FIXXE – Konversi Mata Uang
+    short_description: Kurs tengah dari 3 sumber, 300+ mata uang, jalan offline, tanpa iklan.
+    full_description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs tengah pasar secara langsung — titik netral antara harga beli dan harga jual dunia, tanpa marjin bank.
+
+
+      APA YANG MEMBUAT FIXXE BERBEDA
+
+
+      • Tiga sumber kurs dengan pergantian otomatis — ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
+
+
+      • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
+
+
+      • Pembulatan cerdas — ketelitian yang Anda pilih adalah batas bawah, bukan belenggu: bila pembulatan akan menyimpangkan jumlah lebih dari 2%, angka di belakang koma bertambah sendiri. 0,94 CHF tidak pernah menjadi „1", dan jumlah kripto yang kecil tidak pernah jatuh ke nol.
+
+
+      • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
+
+
+      • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
+
+
+      MATA UANG
+
+
+      • 300+ mata uang dengan bendera negara
+
+      • Mata uang kawasan yang sering dilewati konverter lain: rubel Rusia, dinar Serbia, lari Georgia, somoni Tajikistan, som Kirgizstan
+
+      • Kripto — Bitcoin, Ethereum, dan 150+ lainnya — serta logam mulia
+
+
+      HAL-HAL SEHARI-HARI
+
+
+      • Ketik di kolom mana pun, dan semua mata uang lain langsung menyesuaikan
+
+      • Seret baris pada pegangannya untuk menata ulang, hapus satu dengan sekali ketuk
+
+      • Pencarian yang sadar sumber: saring mata uang menurut penyedia, lihat di mana masing-masing tersedia, ganti sumber dengan sekali ketuk
+
+      • Ketelitian: bilangan bulat, 1, 2, atau 4 angka di belakang koma
+
+      • 40 bahasa, bawaan bahasa Inggris, dengan pilihan mengikuti bahasa perangkat — termasuk tata letak dari kanan ke kiri
+
+      • Ponsel, tablet, dan web: aplikasi yang sama di iPhone, iPad, Android, dan sebagai aplikasi web yang bisa dipasang di layar beranda
+
+
+      Kurs yang ditampilkan adalah nilai tengah sebagai acuan, bukan kuotasi perdagangan waktu nyata.
+
+      Rates By Exchange Rate API.
+
+      '
+  it-IT:
+    title: FIXXE – Convertitore valute
+    short_description: Tassi medi da 3 fonti, 300+ valute, funziona offline, senza pubblicità.
+    full_description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi di mercato in tempo reale: il punto neutro fra i prezzi mondiali di acquisto e di vendita, senza ricarichi bancari.
+
+
+      COSA RENDE FIXXE DIVERSO
+
+
+      • Tre fonti di tassi con passaggio automatico — ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
+
+
+      • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
+
+
+      • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano.
+
+
+      • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
+
+
+      • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
+
+
+      VALUTE
+
+
+      • 300+ valute con bandiere
+
+      • Valute regionali che gli altri convertitori spesso saltano: rublo russo, dinaro serbo, lari georgiano, somoni tagiko, som kirghiso
+
+      • Cripto — Bitcoin, Ethereum e altre 150+ — e metalli preziosi
+
+
+      DETTAGLI DI OGNI GIORNO
+
+
+      • Scrivi in un campo qualsiasi e tutte le altre valute si aggiornano all''istante
+
+      • Trascina le righe dalla maniglia per riordinarle, togline una con un tocco
+
+      • Ricerca consapevole della fonte: filtra le valute per fornitore, vedi dove si trova ciascuna, cambia fonte con un tocco
+
+      • Precisione: numeri interi, 1, 2 o 4 decimali
+
+      • 40 lingue, inglese come impostazione iniziale, con l''opzione di seguire la lingua del dispositivo — layout da destra a sinistra compresi
+
+      • Telefono, tablet e web: la stessa app su iPhone, iPad, Android e come app web da installare nella schermata Home
+
+
+      I tassi mostrati sono valori medi di riferimento, non quotazioni di mercato in tempo reale.
+
+      Rates By Exchange Rate API.
+
+      '
+  ja-JP:
+    title: FIXXE – 通貨換算・為替レート
+    short_description: 3つの情報源の仲値レート、300以上の通貨、オフライン対応、広告なし。
+    full_description: 'FIXXEは、実勢の仲値レートで動く速くて見やすい通貨換算アプリです。仲値とは世界の買値と売値のちょうど中間で、銀行の上乗せを含みません。
+
+
+      FIXXEが違うところ
+
+
+      • 自動で切り替わる3つのレート情報源 — ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。
+
+
+      • オフラインでも動く — 最後のレートは端末に残るので、通信がなくても計算を続けられます。そのレートが1日以上前のものなら、新しいふりをせずにはっきりそう伝えます。
+
+
+      • 賢い丸め — 選んだ桁数は下限であって拘束ではありません。丸めによって金額が2%以上ずれる場合は、小数点以下が自動で増えます。0.94 CHFが「1」になることはなく、少額の暗号資産がゼロに潰れることもありません。
+
+
+      • 動く基準通貨 — レートは固定通貨ではなく、いま入力している通貨を基準に計算し直されます。行ったり来たりの切り替えは不要です。
+
+
+      • 広告なし。アカウントなし。追跡なし。必要な権限はインターネット接続だけで、通貨の一覧も並び順も設定も端末から出ません。
+
+
+      通貨
+
+
+      • 国旗付きで300以上の通貨
+
+      • 他の換算アプリが抜かしがちな地域通貨 — ロシア・ルーブル、セルビア・ディナール、ジョージア・ラリ、タジキスタン・ソモニ、キルギス・ソム
+
+      • 暗号資産 — ビットコイン、イーサリアムほか150以上 — と貴金属
+
+
+      毎日使うための工夫
+
+
+      • どの欄に入力しても、ほかの通貨がその場で更新されます
+
+      • 行はハンドルをつかんで並べ替え、ひとつ消すのはワンタップ
+
+      • 情報源を踏まえた検索 — 提供元で通貨を絞り込み、どこで扱っているかを確認し、ワンタップで情報源を切り替え
+
+      • 精度は整数、小数1桁、2桁、4桁から
+
+      • 40言語に対応、既定は英語、端末の言語に合わせる設定も — 右から左に書く言語のレイアウトも含みます
+
+      • スマートフォン、タブレット、ウェブ — iPhone、iPad、Androidで同じアプリ、ホーム画面に追加できるウェブアプリとしても
+
+
+      表示されるレートは参考用の仲値であり、リアルタイムの取引値ではありません。
+
+      Rates By Exchange Rate API.
+
+      '
+  ka-GE:
+    title: FIXXE – ვალუტის კონვერტორი
+    short_description: საშუალო კურსები 3 წყაროდან, 300+ ვალუტა, მუშაობს ოფლაინ, რეკლამის გარეშე.
+    full_description: 'FIXXE არის სწრაფი და მოწესრიგებული ვალუტის კონვერტორი ბაზრის საშუალო კურსებით — ეს არის ნეიტრალური შუაწერტილი მსოფლიო ყიდვისა და გაყიდვის ფასებს შორის, საბანკო ზედნადების გარეშე.
+
+
+      რით განსხვავდება FIXXE
+
+
+      • კურსის სამი წყარო ავტომატური გადართვით — ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს.
+
+
+      • მუშაობს ოფლაინ — ბოლო კურსები რჩება მოწყობილობაზე, ამიტომ აპლიკაცია კავშირის გარეშეც ითვლის. და თუ ეს კურსები ერთ დღეზე ძველია, ამას პირდაპირ ამბობს, ნაცვლად იმისა, რომ ახალივით წარმოაჩინოს.
+
+
+      • ჭკვიანი დამრგვალება — არჩეული სიზუსტე მინიმუმია და არა სავალდებულო ჩარჩო: თუ დამრგვალება თანხას 2%-ზე მეტად დაამახინჯებს, ათწილადები თავისით ემატება. 0,94 CHF არასოდეს ხდება „1", და კრიპტოვალუტის მცირე თანხები არასოდეს ნულდება.
+
+
+      • დინამიური ბაზისი — კურსები გადაითვლება იმ ვალუტასთან, რომელსაც ამჟამად ასწორებთ, და არა ფიქსირებულთან. აღარ არის საჭირო წინ-უკან გადართვა.
+
+
+      • რეკლამის გარეშე. ანგარიშის გარეშე. თვალყურის დევნების გარეშე. ერთადერთი ნებართვა ინტერნეტზე წვდომაა; თქვენი სია, მისი თანმიმდევრობა და პარამეტრები მოწყობილობას არასოდეს ტოვებს.
+
+
+      ვალუტები
+
+
+      • 300+ ვალუტა ქვეყნების დროშებით
+
+      • რეგიონული ვალუტები, რომლებსაც კონვერტორები ხშირად ტოვებენ: რუსული რუბლი, სერბული დინარი, ქართული ლარი, ტაჯიკური სომონი, ყირგიზული სომი
+
+      • კრიპტო — Bitcoin, Ethereum და კიდევ 150+ — და ძვირფასი ლითონები
+
+
+      ყოველდღიური წვრილმანები
+
+
+      • აკრიფეთ ნებისმიერ ველში და დანარჩენი ვალუტები მაშინვე განახლდება
+
+      • გადაათრიეთ სტრიქონები სახელურით თანმიმდევრობის შესაცვლელად, ერთი მოაშორეთ ერთი შეხებით
+
+      • წყაროს მცოდნე ძიება: გაფილტრეთ ვალუტები მომწოდებლის მიხედვით, ნახეთ სად არის თითოეული ხელმისაწვდომი, შეცვალეთ წყარო ერთი შეხებით
+
+      • სიზუსტე: მთელი რიცხვები, 1, 2 ან 4 ათწილადი
+
+      • 40 ენა, ნაგულისხმევად ინგლისური, მოწყობილობის ენის მიყოლის შესაძლებლობით — მათ შორის მარჯვნიდან მარცხნივ განლაგებები
+
+      • ტელეფონი, ტაბლეტი და ვები: იგივე აპლიკაცია iPhone-ზე, iPad-ზე, Android-ზე და ვებაპლიკაციად, რომელიც მთავარ ეკრანზე დაგყავთ
+
+
+      ნაჩვენები კურსები საორიენტაციო საშუალო მნიშვნელობებია და არა რეალურ დროში სავაჭრო კოტირებები.
+
+      Rates By Exchange Rate API.
+
+      '
+  ko-KR:
+    title: FIXXE – 환율 계산기
+    short_description: 3개 출처의 중간환율, 300개 이상 통화, 오프라인 사용, 광고 없음.
+    full_description: 'FIXXE는 실시간 중간환율로 동작하는 빠르고 깔끔한 환율 계산기입니다. 중간환율은 전 세계 매수가와 매도가의 중립적인 중간값으로, 은행 마진이 섞이지 않습니다.
+
+
+      FIXXE가 다른 점
+
+
+      • 자동으로 전환되는 세 곳의 환율 출처 — ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다.
+
+
+      • 오프라인에서도 동작 — 마지막 환율이 기기에 남아 있어 연결이 없어도 계산이 이어집니다. 그 환율이 하루보다 오래됐다면 최신인 척하지 않고 분명히 알려줍니다.
+
+
+      • 똑똑한 반올림 — 선택한 자릿수는 하한이지 족쇄가 아닙니다. 반올림으로 금액이 2% 넘게 틀어질 상황이면 소수 자릿수가 저절로 늘어납니다. 0.94 CHF가 „1"이 되는 일은 없고, 소액 암호화폐가 0으로 사라지지도 않습니다.
+
+
+      • 바뀌는 기준 통화 — 환율은 고정된 통화가 아니라 지금 입력 중인 통화를 기준으로 다시 계산됩니다. 앞뒤로 전환할 필요가 없습니다.
+
+
+      • 광고 없음. 계정 없음. 추적 없음. 요구하는 권한은 인터넷 접속 하나뿐이며, 통화 목록과 순서, 설정은 기기를 벗어나지 않습니다.
+
+
+      통화
+
+
+      • 국기와 함께 300개 이상의 통화
+
+      • 다른 계산기가 자주 빠뜨리는 지역 통화 — 러시아 루블, 세르비아 디나르, 조지아 라리, 타지키스탄 소모니, 키르기스스탄 솜
+
+      • 암호화폐 — 비트코인, 이더리움 등 150종 이상 — 과 귀금속
+
+
+      매일 쓰기 좋은 점
+
+
+      • 어느 칸에 입력해도 나머지 통화가 즉시 바뀝니다
+
+      • 손잡이를 끌어 줄 순서를 바꾸고, 한 번 눌러 하나를 지웁니다
+
+      • 출처를 아는 검색 — 공급처별로 통화를 거르고, 각 통화가 어디에 있는지 확인하고, 한 번 눌러 출처를 바꿉니다
+
+      • 정밀도: 정수, 소수점 1자리, 2자리, 4자리
+
+      • 40개 언어, 기본은 영어, 기기 언어를 따르는 설정도 — 오른쪽에서 왼쪽으로 쓰는 배치까지
+
+      • 휴대폰, 태블릿, 웹 — iPhone, iPad, Android에서 같은 앱, 홈 화면에 설치하는 웹 앱으로도
+
+
+      표시되는 환율은 참고용 중간값이며, 실시간 거래 호가가 아닙니다.
+
+      Rates By Exchange Rate API.
+
+      '
+  lt:
+    title: FIXXE – Valiutų skaičiuoklė
+    short_description: Vidutiniai kursai iš 3 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
+    full_description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiais vidutiniais rinkos kursais. Tai neutralus taškas tarp pasaulinių pirkimo ir pardavimo kainų, be bankų antkainių.
+
+
+      KUO FIXXE SKIRIASI
+
+
+      • Trys kursų šaltiniai su automatiniu perjungimu — ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+
+
+      • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
+
+
+      • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio.
+
+
+      • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
+
+
+      • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
+
+
+      VALIUTOS
+
+
+      • 300+ valiutų su šalių vėliavomis
+
+      • Regioninės valiutos, kurias keitikliai dažnai praleidžia: Rusijos rublis, Serbijos dinaras, Gruzijos laris, Tadžikistano somonis, Kirgizijos somas
+
+      • Kriptovaliutos — Bitcoin, Ethereum ir dar 150+ — bei taurieji metalai
+
+
+      KASDIENĖS SMULKMENOS
+
+
+      • Rašykite bet kuriame laukelyje ir visos kitos valiutos atsinaujina iškart
+
+      • Vilkite eilutes už rankenėlės, kad pakeistumėte tvarką, pašalinkite vieną vienu palietimu
+
+      • Šaltinį žinanti paieška: filtruokite valiutas pagal tiekėją, matykite, kur kiekviena prieinama, pakeiskite šaltinį vienu palietimu
+
+      • Tikslumas: sveikieji skaičiai, 1, 2 arba 4 skaitmenys po kablelio
+
+      • 40 kalbų, numatytoji anglų, su galimybe sekti įrenginio kalbą — įskaitant išdėstymus iš dešinės į kairę
+
+      • Telefonas, planšetė ir internetas: ta pati programėlė iPhone, iPad, Android ir kaip žiniatinklio programėlė, kurią galima įsidėti į pradžios ekraną
+
+
+      Rodomi kursai yra orientaciniai vidutiniai dydžiai, o ne tikralaikės biržos kotiruotės.
+
+      Rates By Exchange Rate API.
+
+      '
+  lv:
+    title: FIXXE – Valūtas kalkulators
+    short_description: Vidējie kursi no 3 avotiem, 300+ valūtu, darbojas bezsaistē, bez reklāmām.
+    full_description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika vidējiem tirgus kursiem — neitrālo viduspunktu starp pasaules pirkšanas un pārdošanas cenām, bez banku uzcenojuma.
+
+
+      AR KO FIXXE ATŠĶIRAS
+
+
+      • Trīs kursu avoti ar automātisku pāreju — ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
+
+
+      • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
+
+
+      • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei.
+
+
+      • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
+
+
+      • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
+
+
+      VALŪTAS
+
+
+      • 300+ valūtu ar valstu karogiem
+
+      • Reģionālās valūtas, kuras konvertori bieži izlaiž: Krievijas rublis, Serbijas dinārs, Gruzijas lari, Tadžikistānas somoni, Kirgizstānas soms
+
+      • Kriptovalūtas — Bitcoin, Ethereum un vēl 150+ — un dārgmetāli
+
+
+      IKDIENAS SĪKUMI
+
+
+      • Rakstiet jebkurā laukā, un visas pārējās valūtas atjaunojas uzreiz
+
+      • Velciet rindas aiz roktura, lai mainītu secību, noņemiet vienu ar vienu pieskārienu
+
+      • Avotu zinoša meklēšana: filtrējiet valūtas pēc pakalpojuma sniedzēja, redziet, kur katra pieejama, mainiet avotu ar vienu pieskārienu
+
+      • Precizitāte: veseli skaitļi, 1, 2 vai 4 cipari aiz komata
+
+      • 40 valodas, pēc noklusējuma angļu, ar iespēju sekot ierīces valodai — tostarp izkārtojumi no labās uz kreiso
+
+      • Telefons, planšete un tīmeklis: tā pati lietotne iPhone, iPad, Android un kā tīmekļa lietotne, ko var ielikt sākuma ekrānā
+
+
+      Rādītie kursi ir orientējošas vidējās vērtības, nevis reāllaika biržas kotācijas.
+
+      Rates By Exchange Rate API.
+
+      '
+  mk-MK:
+    title: FIXXE – Конвертор на валути
+    short_description: Средни курсеви од 3 извори, 300+ валути, работи офлајн, без реклами.
+    full_description: 'FIXXE е брз и прегледен конвертор на валути со живи средни курсеви — неутралната средина меѓу светските куповни и продажни цени, без банкарски маржи.
+
+
+      ПО ШТО СЕ РАЗЛИКУВА FIXXE
+
+
+      • Три извори на курсеви со автоматска замена — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо.
+
+
+      • Работи офлајн — последните курсеви остануваат на уредот, па апликацијата пресметува и без врска. А ако тие курсеви се постари од еден ден, тоа го кажува отворено наместо да ги претставува како свежи.
+
+
+      • Паметно заокружување — избраната прецизност е минимум, а не лудачка кошула: ако заокружувањето би го искривило износот за повеќе од 2%, децималите се додаваат сами. 0,94 CHF никогаш не станува „1", а малите износи во криптовалути никогаш не паѓаат на нула.
+
+
+      • Динамична основа — курсевите се пресметуваат спрема валутата што ја уредувате, а не спрема фиксна. Без префрлање напред-назад.
+
+
+      • Без реклами. Без сметки. Без следење. Единствената дозвола е пристап до интернет; вашиот список, неговиот редослед и поставките никогаш не го напуштаат уредот.
+
+
+      ВАЛУТИ
+
+
+      • 300+ валути со знамиња на држави
+
+      • Регионални валути што конверторите често ги прескокнуваат: руска рубља, српски денар, грузиски лари, таџикистански сомони, киргиски сом
+
+      • Криптовалути — Bitcoin, Ethereum и уште 150+ — и благородни метали
+
+
+      СЕКОЈДНЕВНИ ДЕТАЛИ
+
+
+      • Внесете во кое било поле и сите други валути се ажурираат веднаш
+
+      • Влечете ги редовите за рачката за да го смените редоследот, отстранете еден со еден допир
+
+      • Пребарување свесно за изворот: филтрирајте валути по давател, видете каде е достапна секоја, сменете извор со еден допир
+
+      • Прецизност: цели броеви, 1, 2 или 4 децимали
+
+      • 40 јазици, англиски како стандарден, со можност да го следи јазикот на уредот — вклучувајќи распореди оддесна налево
+
+      • Телефон, таблет и веб: истата апликација на iPhone, iPad, Android и како веб апликација што ја ставате на почетниот екран
+
+
+      Прикажаните курсеви се ориентациони средни вредности, а не берзански котации во реално време.
+
+      Rates By Exchange Rate API.
+
+      '
+  no-NO:
+    title: FIXXE – Valutakalkulator
+    short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uten reklame.
+    full_description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurser — det nøytrale midtpunktet mellom verdens kjøps- og salgspriser, uten bankpåslag.
+
+
+      DETTE GJØR FIXXE ANNERLEDES
+
+
+      • Tre kurskilder med automatisk bytte — ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter.
+
+
+      • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
+
+
+      • Smart avrunding — presisjonen du velger er et minimum, ikke en tvangstrøye: ville avrundingen forvrenge beløpet med mer enn 2 %, legges desimaler til av seg selv. 0,94 CHF blir aldri «1», og små kryptobeløp faller aldri til null.
+
+
+      • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
+
+
+      • Ingen reklame. Ingen kontoer. Ingen sporing. Eneste tillatelse er internettilgang; listen din, rekkefølgen og innstillingene forlater aldri enheten.
+
+
+      VALUTAER
+
+
+      • 300+ valutaer med landflagg
+
+      • Regionale valutaer som kalkulatorer ofte hopper over: russisk rubel, serbisk dinar, georgisk lari, tadsjikisk somoni, kirgisisk som
+
+      • Krypto — Bitcoin, Ethereum og 150+ til — og edle metaller
+
+
+      HVERDAGSDETALJER
+
+
+      • Skriv i et hvilket som helst felt, og alle andre valutaer oppdateres med én gang
+
+      • Dra rader i håndtaket for å endre rekkefølgen, fjern en med ett trykk
+
+      • Kildebevisst søk: filtrer valutaer etter leverandør, se hvor hver enkelt finnes, bytt kilde med ett trykk
+
+      • Presisjon: hele tall, 1, 2 eller 4 desimaler
+
+      • 40 språk, engelsk som standard, med mulighet for å følge språket på enheten — også oppsett fra høyre mot venstre
+
+      • Telefon, nettbrett og web: den samme appen på iPhone, iPad, Android og som nettapp du kan legge på startskjermen
+
+
+      Kursene som vises er veiledende middelkurser, ikke handelskurser i sanntid.
+
+      Rates By Exchange Rate API.
+
+      '
+  nl-NL:
+    title: FIXXE – Valutacalculator
+    short_description: Middenkoersen uit 3 bronnen, 300+ valuta's, werkt offline, geen reclame.
+    full_description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele middenkoersen — het neutrale midden tussen wereldwijde koop- en verkoopprijzen, zonder bankmarges.
+
+
+      WAT FIXXE ANDERS MAAKT
+
+
+      • Drie koersbronnen met automatische wissel — ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+
+
+      • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
+
+
+      • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul.
+
+
+      • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
+
+
+      • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
+
+
+      VALUTA''S
+
+
+      • 300+ valuta''s met landenvlaggen
+
+      • Regionale valuta''s die omrekeners vaak overslaan: Russische roebel, Servische dinar, Georgische lari, Tadzjiekse somoni, Kirgizische som
+
+      • Crypto — Bitcoin, Ethereum en 150+ andere — en edelmetalen
+
+
+      DAGELIJKSE DETAILS
+
+
+      • Typ in een willekeurig veld en alle andere valuta''s passen zich meteen aan
+
+      • Sleep rijen aan het handvat om ze te ordenen, verwijder er een met één tik
+
+      • Bronbewust zoeken: filter valuta''s per aanbieder, zie waar elke valuta bestaat, wissel van bron met één tik
+
+      • Precisie: hele getallen, 1, 2 of 4 decimalen
+
+      • 40 talen, standaard Engels, met de optie de taal van je toestel te volgen — inclusief indelingen van rechts naar links
+
+      • Telefoon, tablet en web: dezelfde app op iPhone, iPad, Android en als web-app die je op je beginscherm zet
+
+
+      Getoonde koersen zijn middenkoersen ter referentie, geen handelskoersen in realtime.
+
+      Rates By Exchange Rate API.
+
+      '
+  pl-PL:
+    title: FIXXE – Przelicznik walut
+    short_description: Kursy średnie z 3 źródeł, 300+ walut, działa offline, bez reklam.
+    full_description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursami średnimi — neutralnym środkiem między światowymi cenami kupna i sprzedaży, bez marż bankowych.
+
+
+      CZYM FIXXE SIĘ WYRÓŻNIA
+
+
+      • Trzy źródła kursów z automatycznym przełączaniem — ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje.
+
+
+      • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
+
+
+      • Mądre zaokrąglanie — wybrana dokładność to minimum, a nie kaftan bezpieczeństwa: jeśli zaokrąglenie zniekształciłoby kwotę o ponad 2%, miejsca po przecinku dopisują się same. 0,94 CHF nigdy nie zamieni się w „1", a małe kwoty w kryptowalutach nie spadną do zera.
+
+
+      • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
+
+
+      • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
+
+
+      WALUTY
+
+
+      • 300+ walut z flagami państw
+
+      • Waluty regionalne, które przeliczniki często pomijają: rubel rosyjski, dinar serbski, lari gruzińskie, somoni tadżyckie, som kirgiski
+
+      • Kryptowaluty — Bitcoin, Ethereum i ponad 150 innych — oraz metale szlachetne
+
+
+      CODZIENNE SZCZEGÓŁY
+
+
+      • Wpisuj w dowolnym polu, a pozostałe waluty przeliczają się natychmiast
+
+      • Przeciągaj wiersze za uchwyt, aby zmienić kolejność, usuwaj jednym dotknięciem
+
+      • Wyszukiwanie świadome źródła: filtruj waluty według dostawcy, sprawdź, gdzie jest dostępna każda z nich, zmień źródło jednym dotknięciem
+
+      • Dokładność: liczby całkowite, 1, 2 lub 4 miejsca po przecinku
+
+      • 40 języków, domyślnie angielski, z opcją podążania za językiem urządzenia — łącznie z układami od prawej do lewej
+
+      • Telefon, tablet i sieć: ta sama aplikacja na iPhonie, iPadzie, Androidzie i jako aplikacja internetowa, którą zainstalujesz na ekranie głównym
+
+
+      Pokazywane kursy to średnie wartości odniesienia, a nie notowania giełdowe w czasie rzeczywistym.
+
+      Rates By Exchange Rate API.
+
+      '
+  pt-PT:
+    title: FIXXE – Conversor de moedas
+    short_description: Taxas médias de 3 fontes, 300+ moedas, funciona offline, sem anúncios.
+    full_description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
+
+
+      O QUE TORNA O FIXXE DIFERENTE
+
+
+      • Três fontes de taxas com troca automática — ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+
+
+      • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
+
+
+      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero.
+
+
+      • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
+
+
+      • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
+
+
+      MOEDAS
+
+
+      • 300+ moedas com bandeiras
+
+      • Moedas regionais que os conversores costumam saltar: rublo russo, dinar sérvio, lari georgiano, somoni tajique, som quirguiz
+
+      • Cripto — Bitcoin, Ethereum e mais de 150 — e metais preciosos
+
+
+      PORMENORES DO DIA A DIA
+
+
+      • Escreva em qualquer campo e todas as outras moedas atualizam-se de imediato
+
+      • Arraste as linhas pela pega para as reordenar, remova uma com um toque
+
+      • Pesquisa atenta à fonte: filtre moedas por fornecedor, veja onde existe cada uma, mude de fonte com um toque
+
+      • Precisão: números inteiros, 1, 2 ou 4 casas decimais
+
+      • 40 idiomas, inglês por omissão, com a opção de seguir o idioma do dispositivo — esquemas da direita para a esquerda incluídos
+
+      • Telemóvel, tablet e web: a mesma aplicação no iPhone, iPad, Android e como aplicação web para instalar no ecrã principal
+
+
+      As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
+
+      Rates By Exchange Rate API.
+
+      '
+  pt-BR:
+    title: FIXXE – Conversor de moedas
+    short_description: Taxas médias de 3 fontes, 300+ moedas, funciona offline, sem anúncios.
+    full_description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
+
+
+      O QUE TORNA O FIXXE DIFERENTE
+
+
+      • Três fontes de taxas com troca automática — ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+
+
+      • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
+
+
+      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero.
+
+
+      • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
+
+
+      • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
+
+
+      MOEDAS
+
+
+      • 300+ moedas com bandeiras
+
+      • Moedas regionais que os conversores costumam saltar: rublo russo, dinar sérvio, lari georgiano, somoni tajique, som quirguiz
+
+      • Cripto — Bitcoin, Ethereum e mais de 150 — e metais preciosos
+
+
+      PORMENORES DO DIA A DIA
+
+
+      • Escreva em qualquer campo e todas as outras moedas atualizam-se de imediato
+
+      • Arraste as linhas pela pega para as reordenar, remova uma com um toque
+
+      • Pesquisa atenta à fonte: filtre moedas por fornecedor, veja onde existe cada uma, mude de fonte com um toque
+
+      • Precisão: números inteiros, 1, 2 ou 4 casas decimais
+
+      • 40 idiomas, inglês por omissão, com a opção de seguir o idioma do dispositivo — esquemas da direita para a esquerda incluídos
+
+      • Telemóvel, tablet e web: a mesma aplicação no iPhone, iPad, Android e como aplicação web para instalar no ecrã principal
+
+
+      As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
+
+      Rates By Exchange Rate API.
+
+      '
+  ro:
+    title: FIXXE – Convertor valutar
+    short_description: Cursuri medii din 3 surse, 300+ valute, funcționează offline, fără reclame.
+    full_description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii de piață în timp real — punctul neutru dintre prețurile mondiale de cumpărare și de vânzare, fără adaosuri bancare.
+
+
+      CE ÎL FACE PE FIXXE DIFERIT
+
+
+      • Trei surse de curs cu trecere automată — ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
+
+
+      • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
+
+
+      • Rotunjire inteligentă — precizia aleasă este un minim, nu o cămașă de forță: dacă rotunjirea ar denatura suma cu peste 2%, zecimalele se adaugă singure. 0,94 CHF nu devine niciodată „1", iar sumele mici în cripto nu cad niciodată la zero.
+
+
+      • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
+
+
+      • Fără reclame. Fără conturi. Fără urmărire. Singura permisiune este accesul la internet; lista ta, ordinea ei și setările nu părăsesc niciodată dispozitivul.
+
+
+      VALUTE
+
+
+      • 300+ valute cu steaguri de țară
+
+      • Valute regionale pe care convertoarele le sar adesea: rubla rusească, dinarul sârbesc, lari georgian, somoni tadjik, som kârgâz
+
+      • Cripto — Bitcoin, Ethereum și peste 150 altele — și metale prețioase
+
+
+      DETALII DE ZI CU ZI
+
+
+      • Scrie în orice câmp și toate celelalte valute se actualizează instantaneu
+
+      • Trage rândurile de mâner ca să le reordonezi, scoate unul dintr-o singură atingere
+
+      • Căutare conștientă de sursă: filtrează valutele după furnizor, vezi unde există fiecare, schimbă sursa dintr-o atingere
+
+      • Precizie: numere întregi, 1, 2 sau 4 zecimale
+
+      • 40 de limbi, engleză implicit, cu opțiunea de a urma limba dispozitivului — inclusiv aranjări de la dreapta la stânga
+
+      • Telefon, tabletă și web: aceeași aplicație pe iPhone, iPad, Android și ca aplicație web pe care o instalezi pe ecranul principal
+
+
+      Cursurile afișate sunt valori medii de referință, nu cotații bursiere în timp real.
+
+      Rates By Exchange Rate API.
+
+      '
+  ru-RU:
+    title: FIXXE – Конвертер валют
+    short_description: Среднерыночные курсы из 3 источников, 300+ валют, офлайн, без рекламы.
+    full_description: 'FIXXE — быстрый и чистый конвертер валют со среднерыночными курсами: это нейтральная середина между мировыми ценами покупки и продажи, без банковских наценок.
+
+
+      ЧЕМ FIXXE ОТЛИЧАЕТСЯ
+
+
+      • Три источника курсов с автоматическим резервом — ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает.
+
+
+      • Работает офлайн — последние курсы хранятся на устройстве, так что приложение считает и без связи. А если этим курсам больше суток, оно честно об этом говорит, а не делает вид, что они свежие.
+
+
+      • Умное округление — выбранная точность это минимум, а не смирительная рубашка: если округление исказит сумму больше чем на 2%, знаки после запятой добавляются сами. 0,94 CHF никогда не превратится в «1», а малые суммы криптовалют не схлопнутся в ноль.
+
+
+      • Динамическая база — курсы пересчитываются относительно той валюты, которую вы редактируете, а не фиксированной. Не нужно переключаться туда-сюда.
+
+
+      • Без рекламы. Без аккаунтов. Без слежки. Единственное разрешение — доступ в интернет; ваш список, порядок и настройки не покидают устройство.
+
+
+      ВАЛЮТЫ
+
+
+      • 300+ валют с флагами стран
+
+      • Региональные валюты, которые конвертеры часто пропускают: российский рубль, сербский динар, грузинский лари, таджикский сомони, киргизский сом
+
+      • Криптовалюты — биткойн, эфир и ещё 150+ — и драгоценные металлы
+
+
+      МЕЛОЧИ НА КАЖДЫЙ ДЕНЬ
+
+
+      • Вводите в любом поле — остальные валюты пересчитываются мгновенно
+
+      • Перетаскивайте строки за ручку, удаляйте одним касанием
+
+      • Поиск с учётом источника: фильтр валют по источнику, видно, где какая доступна, переключение одним касанием
+
+      • Точность: целые числа, 1, 2 или 4 знака после запятой
+
+      • 40 языков, по умолчанию английский, с опцией следовать языку устройства — включая раскладки справа налево
+
+      • Телефон, планшет и веб: одно и то же приложение на iPhone, iPad, Android и как веб-приложение, которое ставится на домашний экран
+
+
+      Показанные курсы — среднерыночные справочные значения, а не биржевые котировки в реальном времени.
+
+      Rates By Exchange Rate API.
+
+      '
+  sk:
+    title: FIXXE – Prevodník mien
+    short_description: Stredné kurzy z 3 zdrojov, 300+ mien, funguje offline, bez reklám.
+    full_description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi strednými kurzami — neutrálnym stredom medzi svetovými nákupnými a predajnými cenami, bez bankových prirážok.
+
+
+      ČÍM SA FIXXE LÍŠI
+
+
+      • Tri zdroje kurzov s automatickým prepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
+
+
+      • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
+
+
+      • Chytré zaokrúhľovanie — zvolená presnosť je minimum, nie zvieracia kazajka: ak by zaokrúhlenie skreslilo sumu o viac než 2 %, desatinné miesta sa pridajú samy. Z 0,94 CHF sa nikdy nestane „1“ a malé sumy v kryptomenách nikdy neklesnú na nulu.
+
+
+      • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
+
+
+      • Žiadne reklamy. Žiadne účty. Žiadne sledovanie. Jediné oprávnenie je prístup na internet; váš zoznam, jeho poradie a nastavenia zariadenie nikdy neopustia.
+
+
+      MENY
+
+
+      • 300+ mien s vlajkami krajín
+
+      • Regionálne meny, ktoré prevodníky často vynechávajú: ruský rubeľ, srbský dinár, gruzínske lari, tadžické somoni, kirgizský som
+
+      • Kryptomeny — Bitcoin, Ethereum a 150+ ďalších — a drahé kovy
+
+
+      DROBNOSTI NA KAŽDÝ DEŇ
+
+
+      • Píšte do ktoréhokoľvek poľa a všetky ostatné meny sa okamžite prepočítajú
+
+      • Riadky preťahujte za úchyt a meňte ich poradie, jeden odstránite jediným ťuknutím
+
+      • Vyhľadávanie znalé zdrojov: filtrujte meny podľa poskytovateľa, uvidíte, kde je ktorá dostupná, zdroj zmeníte jedným ťuknutím
+
+      • Presnosť: celé čísla, 1, 2 alebo 4 desatinné miesta
+
+      • 40 jazykov, predvolená angličtina, s možnosťou riadiť sa jazykom zariadenia — vrátane rozložení sprava doľava
+
+      • Telefón, tablet aj web: tá istá aplikácia na iPhone, iPade, Androide a ako webová aplikácia, ktorú si pridáte na plochu
+
+
+      Zobrazené kurzy sú orientačné stredné hodnoty, nie burzové kotácie v reálnom čase.
+
+      Rates By Exchange Rate API.
+
+      '
+  sl:
+    title: FIXXE – Pretvornik valut
+    short_description: Srednji tečaji iz 3 virov, 300+ valut, deluje brez povezave, brez oglasov.
+    full_description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi tečaji — nevtralno sredino med svetovnimi nakupnimi in prodajnimi cenami, brez bančnih pribitkov.
+
+
+      V ČEM JE FIXXE DRUGAČEN
+
+
+      • Trije viri tečajev s samodejnim preklopom — ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
+
+
+      • Deluje brez povezave — zadnji tečaji ostanejo v napravi, zato aplikacija računa tudi brez omrežja. Če pa so ti tečaji starejši od dneva, to pove naravnost, namesto da bi jih prikazovala kot sveže.
+
+
+      • Pametno zaokroževanje — izbrana natančnost je najmanjša možna, ne prisilni jopič: če bi zaokroževanje popačilo znesek za več kot 2 %, se decimalke dodajo same. 0,94 CHF nikoli ne postane „1", majhni zneski v kriptovalutah pa nikoli ne padejo na nič.
+
+
+      • Dinamična osnova — tečaji se preračunajo glede na valuto, ki jo urejate, ne glede na stalno. Brez preklapljanja sem in tja.
+
+
+      • Brez oglasov. Brez računov. Brez sledenja. Edino dovoljenje je dostop do interneta; vaš seznam, njegov vrstni red in nastavitve nikoli ne zapustijo naprave.
+
+
+      VALUTE
+
+
+      • 300+ valut z zastavami držav
+
+      • Regionalne valute, ki jih pretvorniki pogosto spregledajo: ruski rubelj, srbski dinar, gruzijski lari, tadžikistanski somoni, kirgiški som
+
+      • Kriptovalute — Bitcoin, Ethereum in še 150+ — ter plemenite kovine
+
+
+      VSAKDANJE PODROBNOSTI
+
+
+      • Vnesite v katero koli polje in vse druge valute se posodobijo takoj
+
+      • Vrstice povlecite za ročico, da spremenite vrstni red, eno odstranite z enim dotikom
+
+      • Iskanje, ki pozna vire: valute filtrirajte po ponudniku, poglejte, kje je katera na voljo, vir zamenjajte z enim dotikom
+
+      • Natančnost: cela števila, 1, 2 ali 4 decimalke
+
+      • 40 jezikov, privzeto angleščina, z možnostjo sledenja jeziku naprave — vključno s postavitvami od desne proti levi
+
+      • Telefon, tablica in splet: ista aplikacija na iPhonu, iPadu, Androidu in kot spletna aplikacija, ki jo postavite na začetni zaslon
+
+
+      Prikazani tečaji so okvirne srednje vrednosti, ne borzne kotacije v realnem času.
+
+      Rates By Exchange Rate API.
+
+      '
+  sr:
+    title: FIXXE – Конвертор валута
+    short_description: Средњи курсеви из 3 извора, 300+ валута, ради офлајн, без реклама.
+    full_description: 'FIXXE је брз и прегледан конвертор валута са живим средњим курсевима — неутралном средином између светских куповних и продајних цена, без банкарских маржи.
+
+
+      ПО ЧЕМУ СЕ FIXXE РАЗЛИКУЈЕ
+
+
+      • Три извора курса са аутоматском заменом — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа.
+
+
+      • Ради без интернета — последњи курсеви остају на уређају, па апликација рачуна и без везе. А ако су ти курсеви старији од једног дана, то отворено каже уместо да их приказује као свеже.
+
+
+      • Паметно заокруживање — изабрана прецизност је минимум, а не лудачка кошуља: ако би заокруживање искривило износ за више од 2%, децимале се додају саме. 0,94 CHF никада не постаје „1", а мали износи у криптовалутама никада не падну на нулу.
+
+
+      • Динамична основица — курсеви се прерачунавају према валути коју управо уређујете, а не према непроменљивој. Без пребацивања напред-назад.
+
+
+      • Без реклама. Без налога. Без праћења. Једина дозвола је приступ интернету; ваш списак, његов редослед и подешавања никада не напуштају уређај.
+
+
+      ВАЛУТЕ
+
+
+      • 300+ валута са заставама држава
+
+      • Регионалне валуте које конвертори често прескачу: руска рубља, српски динар, грузијски лари, таџикистански сомони, киргиски сом
+
+      • Криптовалуте — Bitcoin, Ethereum и још 150+ — и племенити метали
+
+
+      СВАКОДНЕВНИ ДЕТАЉИ
+
+
+      • Упишите у било које поље и све остале валуте прерачунавају се одмах
+
+      • Превуците редове за ручицу да промените редослед, уклоните један једним додиром
+
+      • Претрага свесна извора: филтрирајте валуте по пружаоцу, видите где је која доступна, промените извор једним додиром
+
+      • Прецизност: цели бројеви, 1, 2 или 4 децимале
+
+      • 40 језика, енглески као подразумевани, уз могућност праћења језика уређаја — укључујући распореде здесна налево
+
+      • Телефон, таблет и веб: иста апликација на iPhone-у, iPad-у, Android-у и као веб апликација коју можете поставити на почетни екран
+
+
+      Приказани курсеви су оквирне средње вредности, а не берзанске котације у реалном времену.
+
+      Rates By Exchange Rate API.
+
+      '
+  sv-SE:
+    title: FIXXE – Valutaomvandlare
+    short_description: Mittkurser från 3 källor, 300+ valutor, fungerar offline, utan reklam.
+    full_description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurser — den neutrala mittpunkten mellan världens köp- och säljpriser, utan bankpåslag.
+
+
+      DET HÄR SKILJER FIXXE
+
+
+      • Tre kurskällor med automatiskt byte — ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
+
+
+      • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
+
+
+      • Smart avrundning — den precision du väljer är ett minimum, inte en tvångströja: skulle avrundningen snedvrida beloppet med mer än 2% läggs decimaler till av sig själva. 0,94 CHF blir aldrig ”1”, och små kryptobelopp faller aldrig till noll.
+
+
+      • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
+
+
+      • Ingen reklam. Inga konton. Ingen spårning. Enda behörigheten är internetåtkomst; din lista, dess ordning och dina inställningar lämnar aldrig enheten.
+
+
+      VALUTOR
+
+
+      • 300+ valutor med landsflaggor
+
+      • Regionala valutor som omvandlare ofta hoppar över: rysk rubel, serbisk dinar, georgisk lari, tadzjikisk somoni, kirgizisk som
+
+      • Krypto — Bitcoin, Ethereum och 150+ till — samt ädelmetaller
+
+
+      VARDAGSDETALJER
+
+
+      • Skriv i vilket fält som helst så uppdateras alla andra valutor direkt
+
+      • Dra rader i handtaget för att ordna om dem, ta bort en med en tryckning
+
+      • Källmedveten sökning: filtrera valutor per leverantör, se var varje valuta finns, byt källa med en tryckning
+
+      • Precision: heltal, 1, 2 eller 4 decimaler
+
+      • 40 språk, engelska som standard, med möjlighet att följa enhetens språk — layouter från höger till vänster inkluderade
+
+      • Telefon, surfplatta och webb: samma app på iPhone, iPad, Android och som webbapp du kan lägga på hemskärmen
+
+
+      Visade kurser är vägledande mittkurser, inte handelskurser i realtid.
+
+      Rates By Exchange Rate API.
+
+      '
+  th:
+    title: FIXXE – แปลงสกุลเงิน
+    short_description: อัตรากลางตลาดจาก 3 แหล่ง 300+ สกุลเงิน ใช้ออฟไลน์ได้ ไม่มีโฆษณา
+    full_description: 'FIXXE คือเครื่องแปลงสกุลเงินที่เร็วและสะอาดตา พร้อมอัตรากลางตลาดแบบสด — จุดกึ่งกลางที่เป็นกลางระหว่างราคาซื้อและราคาขายทั่วโลก ไม่มีส่วนต่างของธนาคาร
+
+
+      FIXXE ต่างออกไปอย่างไร
+
+
+      • สามแหล่งอัตราที่สลับให้อัตโนมัติ — ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย
+
+
+      • ใช้งานออฟไลน์ได้ — อัตราล่าสุดถูกเก็บไว้ในเครื่อง แอปจึงคำนวณต่อได้แม้ไม่มีสัญญาณ และถ้าอัตราเหล่านั้นเก่ากว่าหนึ่งวัน แอปจะบอกตรง ๆ แทนที่จะทำเป็นว่ายังใหม่อยู่
+
+
+      • ปัดเศษอย่างฉลาด — ความละเอียดที่คุณเลือกเป็นขั้นต่ำ ไม่ใช่กรอบบังคับ ถ้าการปัดเศษจะทำให้จำนวนคลาดเคลื่อนเกิน 2% ทศนิยมจะเพิ่มให้เอง 0.94 CHF ไม่มีวันกลายเป็น „1" และจำนวนคริปโตเล็ก ๆ ไม่มีวันเหลือศูนย์
+
+
+      • ฐานยืดหยุ่น — อัตราคำนวณใหม่เทียบกับสกุลเงินที่คุณกำลังพิมพ์ ไม่ใช่สกุลที่ตายตัว ไม่ต้องสลับไปมา
+
+
+      • ไม่มีโฆษณา ไม่มีบัญชี ไม่มีการติดตาม สิทธิ์เดียวที่ขอคือการเข้าถึงอินเทอร์เน็ต รายการของคุณ ลำดับ และการตั้งค่าไม่เคยออกจากเครื่อง
+
+
+      สกุลเงิน
+
+
+      • มากกว่า 300 สกุลเงินพร้อมธงประเทศ
+
+      • สกุลเงินภูมิภาคที่เครื่องแปลงมักข้าม: รูเบิลรัสเซีย ดีนาร์เซอร์เบีย ลารีจอร์เจีย โซโมนีทาจิกิสถาน ซอมคีร์กีซ
+
+      • คริปโต — บิตคอยน์ อีเทอเรียม และอีกกว่า 150 — รวมถึงโลหะมีค่า
+
+
+      รายละเอียดประจำวัน
+
+
+      • พิมพ์ในช่องไหนก็ได้ แล้วสกุลเงินอื่นทั้งหมดจะอัปเดตทันที
+
+      • ลากแถวที่ที่จับเพื่อจัดลำดับใหม่ ลบออกได้ด้วยการแตะครั้งเดียว
+
+      • ค้นหาโดยรู้แหล่งที่มา: กรองสกุลเงินตามผู้ให้บริการ ดูว่าแต่ละสกุลมีที่ไหน เปลี่ยนแหล่งด้วยการแตะครั้งเดียว
+
+      • ความละเอียด: จำนวนเต็ม 1, 2 หรือ 4 ตำแหน่งทศนิยม
+
+      • 40 ภาษา ค่าเริ่มต้นเป็นอังกฤษ พร้อมตัวเลือกให้ตามภาษาของเครื่อง — รวมถึงการจัดวางจากขวาไปซ้าย
+
+      • โทรศัพท์ แท็บเล็ต และเว็บ: แอปเดียวกันบน iPhone, iPad, Android และเป็นเว็บแอปที่ติดตั้งลงหน้าจอหลักได้
+
+
+      อัตราที่แสดงเป็นค่ากลางสำหรับอ้างอิง ไม่ใช่ราคาซื้อขายแบบเรียลไทม์
+
+      Rates By Exchange Rate API.
+
+      '
+  tr-TR:
+    title: FIXXE – Döviz Çevirici
+    short_description: 3 kaynaktan piyasa ortalaması kurlar, 300+ para birimi, çevrimdışı, reklamsız.
+    full_description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sade bir döviz çeviricisidir — dünya alış ve satış fiyatlarının tarafsız ortası, banka farkları olmadan.
+
+
+      FIXXE''Yİ FARKLI KILAN NE
+
+
+      • Otomatik yedekli üç kur kaynağı — ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
+
+
+      • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
+
+
+      • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez.
+
+
+      • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+      • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
+
+
+      PARA BİRİMLERİ
+
+
+      • Ülke bayraklarıyla 300+ para birimi
+
+      • Çeviricilerin sıkça atladığı bölgesel para birimleri: Rus rublesi, Sırp dinarı, Gürcü larisi, Tacik somonisi, Kırgız somu
+
+      • Kripto — Bitcoin, Ethereum ve 150+ diğeri — ve değerli madenler
+
+
+      GÜNLÜK AYRINTILAR
+
+
+      • Herhangi bir alana yazın, diğer tüm para birimleri anında güncellensin
+
+      • Satırları tutamacından sürükleyerek sıralayın, tek dokunuşla birini kaldırın
+
+      • Kaynak bilen arama: para birimlerini sağlayıcıya göre süzün, her birinin nerede bulunduğunu görün, tek dokunuşla kaynak değiştirin
+
+      • Hassasiyet: tam sayılar, 1, 2 veya 4 ondalık basamak
+
+      • 40 dil, varsayılan İngilizce, cihaz dilini izleme seçeneğiyle — sağdan sola yerleşimler dahil
+
+      • Telefon, tablet ve web: iPhone, iPad, Android''de ve ana ekrana kurabileceğiniz bir web uygulaması olarak aynı uygulama
+
+
+      Gösterilen kurlar referans niteliğinde piyasa ortalamalarıdır, gerçek zamanlı borsa fiyatları değildir.
+
+      Rates By Exchange Rate API.
+
+      '
+  vi:
+    title: FIXXE – Chuyển đổi tiền tệ
+    short_description: Tỷ giá trung bình từ 3 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
+    full_description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàng với tỷ giá trung bình thị trường theo thời gian thực — điểm trung lập giữa giá mua và giá bán toàn cầu, không có chênh lệch của ngân hàng.
+
+
+      ĐIỀU LÀM NÊN KHÁC BIỆT
+
+
+      • Ba nguồn tỷ giá tự động chuyển đổi — ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+
+
+      • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
+
+
+      • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không.
+
+
+      • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
+
+
+      • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
+
+
+      TIỀN TỆ
+
+
+      • Hơn 300 loại tiền kèm cờ quốc gia
+
+      • Những đồng tiền khu vực mà các ứng dụng khác hay bỏ qua: rúp Nga, dinar Serbia, lari Gruzia, somoni Tajikistan, som Kyrgyzstan
+
+      • Tiền mã hóa — Bitcoin, Ethereum và hơn 150 loại khác — cùng kim loại quý
+
+
+      CHI TIẾT HẰNG NGÀY
+
+
+      • Nhập vào ô bất kỳ, mọi đồng tiền còn lại cập nhật ngay lập tức
+
+      • Kéo hàng ở tay cầm để sắp xếp lại, bỏ một hàng chỉ bằng một chạm
+
+      • Tìm kiếm biết nguồn: lọc tiền tệ theo nhà cung cấp, xem mỗi loại có ở đâu, đổi nguồn bằng một chạm
+
+      • Độ chính xác: số nguyên, 1, 2 hoặc 4 chữ số thập phân
+
+      • 40 ngôn ngữ, mặc định tiếng Anh, có tùy chọn theo ngôn ngữ của máy — kể cả bố cục từ phải sang trái
+
+      • Điện thoại, máy tính bảng và web: cùng một ứng dụng trên iPhone, iPad, Android và dưới dạng ứng dụng web cài lên màn hình chính
+
+
+      Tỷ giá hiển thị là giá trị trung bình để tham khảo, không phải giá giao dịch theo thời gian thực.
+
+      Rates By Exchange Rate API.
+
+      '
+  zh-CN:
+    title: FIXXE – 汇率换算·货币转换
+    short_description: 三个来源的中间汇率，300+ 种货币，离线可用，没有广告。
+    full_description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实时中间汇率——全球买价与卖价之间的中立中点，不含银行加价。
+
+
+      FIXXE 的不同之处
+
+
+      • 三个汇率来源自动接替——ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
+
+
+      • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
+
+
+      • 智能取整——你选的小数位是下限，不是枷锁：若取整会让金额偏差超过 2%，小数位会自动增加。0.94 瑞士法郎不会变成「1」，小额加密货币也不会归零。
+
+
+      • 动态基准——汇率按你正在输入的那种货币重新计算，而不是某个固定货币。不必来回切换。
+
+
+      • 没有广告。不用账号。不做追踪。唯一需要的权限是联网；你的货币列表、排列顺序和设置从不离开设备。
+
+
+      货币
+
+
+      • 300 多种货币，带国旗
+
+      • 其他换算工具常常漏掉的地区货币：俄罗斯卢布、塞尔维亚第纳尔、格鲁吉亚拉里、塔吉克索莫尼、吉尔吉斯索姆
+
+      • 加密货币——比特币、以太坊等 150 多种——以及贵金属
+
+
+      日常细节
+
+
+      • 在任意一栏输入，其余货币立刻跟着更新
+
+      • 拖动行首的手柄重新排序，轻点一次即可删除一行
+
+      • 知道来源的搜索：按供应方筛选货币，看看每种在哪里能查到，一点即可切换来源
+
+      • 精度：整数，1 位、2 位或 4 位小数
+
+      • 40 种语言，默认英语，也可跟随设备语言——包括从右到左的版式
+
+      • 手机、平板和网页：iPhone、iPad、Android 上是同一个应用，也可作为网页应用装到主屏幕
+
+
+      显示的汇率为参考性中间价，并非实时交易报价。
+
+      Rates By Exchange Rate API.
+
+      '

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Selge</string>
+    <string name="cancel">Tühista</string>
+    <string name="back">Tagasi</string>
+    <string name="close">Sulge</string>
+    <string name="delete">Kustuta</string>
+    <string name="selected">Valitud: %1$d</string>
+    <string name="loading">Laadimine…</string>
+    <string name="updated">Uuendatud %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Võrguviga</string>
+    <string name="clear">TÜHJENDA</string>
+    <string name="add_currency">＋ Lisa valuuta</string>
+    <string name="mid_market">Keskturu kursid ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Baasvaluuta</string>
+    <string name="delete_currency_title">Eemalda valuuta?</string>
+    <string name="delete_currency_msg">Eemalda %1$s — %2$s loendist?</string>
+    <string name="add_currency_title">Vali %1$d saadaoleva valuuta seast</string>
+    <string name="search_hint">Kood või nimi…</string>
+    <string name="settings">Seaded</string>
+    <string name="setting_precision">Kuvamistäpsus:  %1$s</string>
+    <string name="setting_source">Kursi allikas:  %1$s</string>
+    <string name="setting_language">🌐 Keel:  %1$s</string>
+    <string name="precision_title">Kuvamistäpsus</string>
+    <string name="prec_0">0 — täisarvud</string>
+    <string name="prec_1">1 kümnendkoht</string>
+    <string name="prec_2">2 kümnendkohta</string>
+    <string name="prec_4">4 kümnendkohta</string>
+    <string name="precision_value_int">täisarvud</string>
+    <string name="precision_value_n">%1$d koht.</string>
+    <string name="source_title">Kursi allikas</string>
+    <string name="source_auto">Automaatne (varuallikaga)</string>
+    <string name="language_title">Keel</string>
+    <string name="language_system">Süsteemi vaikeväärtus</string>
+    <string name="source_info_title">Kursi allikas</string>
+    <string name="source_info_message">Keskturu kurss — keskpunkt ostu- ja müügikursi vahel maailmaturul.\n\nBaasvaluuta: EUR, teised paarid arvutatakse euro kaudu.\n\nAllikad (automaatne varuvariant):\n1. ExchangeRate-API — peamine\n2. F.A. — kui peamine ei tööta\n3. Frankfurter (ECB) — teine varuvariant\n\nKui peamine allikas ei vasta automaatse uuendamise ajal või ↻ vajutamisel, võtab rakendus andmed automaatselt järgmisest. Praegune allikas kuvatakse üleval uuendamisaja kõrval.\n\nSeadetes (⚙) saad sundida kindla allika — teised jäävad ikkagi varuvariandiks.\n\nUuendatakse kord päevas. Erinevus teistest viiteteenustest on tavaliselt alla 0.5% — need on viitekursid, mitte reaalajas noteeringud.\n\nLitsentsid ja viited:\n• ExchangeRate-API — nõuab linki “Rates By Exchange Rate API” (jaluses, klõpsatav).\n• F.A. — CC0 (public domain), viidet pole vaja.\n• Frankfurter — MIT, andmed European Central Bank (ECB).</string>
+    <string name="filter_all">Kõik</string>
+    <string name="switch_source_title">Vahetada allikat?</string>
+    <string name="switch_source_msg">%1$s on saadaval %2$s kaudu, mitte praeguse allika kaudu. Vahetada ja lisada?</string>
+    <string name="switch_and_add">Vaheta ja lisa</string>
+    <string name="already_added">Juba loendis</string>
+    <string name="reorder">Muuda järjekorda</string>
+    <string name="rates_offline">Võrguühenduseta · kursid seisuga %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kursid on aegunud — seisuga %1$s · %2$s</string>
+    <string name="clear_confirm_title">Kustutada kõik summad?</string>
+    <string name="clear_confirm_msg">Kõik summad nullitakse.</string>
+    <string name="refresh">Värskenda kursse</string>
+    <string name="setting_theme">Välimus:  %1$s</string>
+    <string name="theme_title">Välimus</string>
+    <string name="theme_system">Nagu süsteemis</string>
+    <string name="theme_light">Hele</string>
+    <string name="theme_dark">Tume</string>
+    <string name="setting_grouping">Tuhandeliste eraldaja:  %1$s</string>
+    <string name="grouping_title">Tuhandeliste eraldaja</string>
+    <string name="group_none">Puudub — 1234.56</string>
+    <string name="group_space">Tühik — 1 234.56</string>
+    <string name="group_comma">Koma — 1,234.56</string>
+</resources>

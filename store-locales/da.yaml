@@ -1,0 +1,80 @@
+title: "FIXXE – Valutaomregner"
+subtitle: Kurser fra tre kilder
+short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uden reklamer.
+keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro
+promotional_text: Tre kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
+description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser — det neutrale midtpunkt mellem verdens købs- og salgspriser, uden banktillæg.
+
+
+  DET HER GØR FIXXE ANDERLEDES
+
+
+  • Tre kurskilder med automatisk skift — ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
+
+
+  • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
+
+
+  • Smart afrunding — den præcision, du vælger, er et minimum, ikke en spændetrøje: ville afrundingen forvride beløbet med mere end 2%, kommer der decimaler til af sig selv. 0,94 CHF bliver aldrig til „1", og små kryptobeløb falder aldrig til nul.
+
+
+  • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+  • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
+
+
+  VALUTAER
+
+
+  • 300+ valutaer med landeflag
+
+  • Regionale valutaer, som omregnere ofte springer over: russisk rubel, serbisk dinar, georgisk lari, tadsjikisk somoni, kirgisisk som
+
+  • Krypto — Bitcoin, Ethereum og 150+ flere — samt ædelmetaller
+
+
+  HVERDAGENS DETALJER
+
+
+  • Skriv i et vilkårligt felt, og alle andre valutaer opdateres med det samme
+
+  • Træk rækker i håndtaget for at omarrangere dem, fjern en med et enkelt tryk
+
+  • Kildebevidst søgning: filtrér valutaer efter udbyder, se hvor hver enkelt findes, skift kilde med ét tryk
+
+  • Præcision: hele tal, 1, 2 eller 4 decimaler
+
+  • 40 sprog, engelsk som standard, med mulighed for at følge enhedens sprog — layout fra højre mod venstre inkluderet
+
+  • Telefon, tablet og web: den samme app på iPhone, iPad, Android og som webapp, du kan lægge på hjemmeskærmen
+
+
+  De viste kurser er vejledende middelkurser, ikke handelskurser i realtid.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "“Skift kilde og tilføj” tilføjer nu faktisk valutaen og skifter kurskilde. Når du lukker tastaturet, vender listen hver gang tilbage præcis dertil, hvor den var."
+landing:
+  page_title: FIXXE — valutaomregner
+  install_title: Måder at installere på
+  about_title: Om appen
+  lang_label: Sprog
+  play_title: Google Play
+  play_desc: Android-telefoner og -tablets.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad og Mac med Apple-chip.
+  apk_title: APK-fil
+  apk_desc: 'Android uden Google Play: Huawei, egen firmware, AOSP.'
+  web_title: Webversion
+  web_desc: Åbnes i browseren. Der er intet at installere.
+  pwa_title: Føj til hjemmeskærm
+  pwa_desc: Webversionen bliver et appikon og virker stadig offline.
+  pwa_ios: 'iPhone, iPad: „Del“ → „Føj til hjemmeskærm“'
+  pwa_android: 'Android: browsermenuen → „Installer app“'
+  btn_open: Åbn
+  btn_download: Hent
+  btn_store: Åbn i butikken
+  privacy: Privatliv
+  terms: Vilkår

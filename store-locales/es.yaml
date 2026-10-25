@@ -1,0 +1,80 @@
+title: "FIXXE – Conversor de divisas"
+subtitle: Tipos de tres fuentes
+short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas
+promotional_text: Tres fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
+description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
+
+
+  QUÉ HACE DISTINTO A FIXXE
+
+
+  • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+
+
+  • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
+
+
+  • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+
+
+  • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+  • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
+
+
+  MONEDAS
+
+
+  • 300+ monedas con banderas
+
+  • Monedas regionales que otros conversores suelen saltarse: rublo ruso, dinar serbio, lari georgiano, somoni tayiko, som kirguís
+
+  • Cripto: Bitcoin, Ethereum y 150+ más, además de metales preciosos
+
+
+  DETALLES DEL DÍA A DÍA
+
+
+  • Escribe en cualquier campo y el resto de monedas se actualiza al instante
+
+  • Arrastra las filas por el asa para reordenarlas y quita cualquiera con un toque
+
+  • Búsqueda consciente de la fuente: filtra monedas por proveedor, mira dónde está cada una y cambia de fuente con un toque
+
+  • Precisión: números enteros, 1, 2 o 4 decimales
+
+  • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
+
+  • Teléfono, tableta y web: la misma aplicación en iPhone, iPad, Android y como aplicación web que puedes instalar en la pantalla de inicio
+
+
+  Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "«Cambiar de fuente y añadir» ahora sí añade la divisa y cambia la fuente de los tipos. Al cerrar el teclado, la lista vuelve siempre exactamente a donde estaba."
+landing:
+  page_title: FIXXE — conversor de divisas
+  install_title: Formas de instalar
+  about_title: Sobre la aplicación
+  lang_label: Idioma
+  play_title: Google Play
+  play_desc: Teléfonos y tabletas Android.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad y Mac con chip de Apple.
+  apk_title: Archivo APK
+  apk_desc: 'Android sin Google Play: Huawei, firmware alternativo, AOSP.'
+  web_title: Versión web
+  web_desc: Se abre en el navegador. No hay que instalar nada.
+  pwa_title: Añadir a la pantalla de inicio
+  pwa_desc: La versión web se convierte en un icono de aplicación y sigue funcionando sin conexión.
+  pwa_ios: 'iPhone, iPad: «Compartir» → «Añadir a pantalla de inicio»'
+  pwa_android: 'Android: menú del navegador → «Instalar aplicación»'
+  btn_open: Abrir
+  btn_download: Descargar
+  btn_store: Abrir en la tienda
+  privacy: Privacidad
+  terms: Términos

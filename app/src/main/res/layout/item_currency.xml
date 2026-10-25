@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="3dp"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="0dp"
+    app:strokeColor="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Строка 1: ✕ | флаг | код | (пробел) | символ+сумма -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="2dp">
+
+            <!-- Удалить — СЛЕВА, подальше от суммы -->
+            <!-- Иконка, а не символ «✕»: TalkBack читал его как «знак умножения».
+                 Зона нажатия 48 dp (норма Material), а место в строке прежнее —
+                 36 dp: лишнее съедают отрицательные отступы, вторая строка
+                 карточки выровнена по этой ширине. -->
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-6dp"
+                android:layout_marginEnd="-6dp"
+                android:layout_marginVertical="-6dp"
+                android:padding="15dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/icon_faint"
+                android:contentDescription="@string/delete"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <!-- Флаг -->
+            <TextView
+                android:id="@+id/tvFlag"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:textSize="22sp" />
+
+            <!-- Код валюты -->
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:letterSpacing="0.02" />
+
+            <!-- растяжка -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- символ + поле суммы -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginEnd="3dp" />
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:digits="0123456789.,"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:gravity="end"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="0"
+                    android:textColorHint="@color/hint"
+                    android:selectAllOnFocus="true"
+                    android:paddingVertical="0dp" />
+            </LinearLayout>
+
+            <!-- Ручка для drag -->
+            <!-- Иконка вместо символа «⠿» (TalkBack: «шрифт Брайля»); зона 48 dp -->
+            <ImageView
+                android:id="@+id/ivDragHandle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-4dp"
+                android:layout_marginEnd="-8dp"
+                android:layout_marginVertical="-6dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_drag_indicator"
+                android:tint="@color/icon_faint"
+                android:contentDescription="@string/reorder" />
+        </LinearLayout>
+
+        <!-- Строка 2: отступ = 6+36+4+36+8 = 90dp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="90dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:textColor="@color/text_tertiary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tvRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text_tertiary"
+                android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Во ред</string>
+    <string name="cancel">Откажи</string>
+    <string name="back">Назад</string>
+    <string name="close">Затвори</string>
+    <string name="delete">Избриши</string>
+    <string name="selected">Избрано: %1$d</string>
+    <string name="loading">Се вчитува…</string>
+    <string name="updated">Ажурирано %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Мрежна грешка</string>
+    <string name="clear">ИСЧИСТИ</string>
+    <string name="add_currency">＋ Додај валута</string>
+    <string name="mid_market">Средни пазарни курсеви ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">верз. %1$s</string>
+    <string name="base_currency">Основна валута</string>
+    <string name="delete_currency_title">Да се отстрани валутата?</string>
+    <string name="delete_currency_msg">Да се отстрани %1$s — %2$s од списокот?</string>
+    <string name="add_currency_title">Изберете од %1$d достапни валути</string>
+    <string name="search_hint">Код или име…</string>
+    <string name="settings">Поставки</string>
+    <string name="setting_precision">Прикажана прецизност:  %1$s</string>
+    <string name="setting_source">Извор на курс:  %1$s</string>
+    <string name="setting_language">🌐 Јазик:  %1$s</string>
+    <string name="precision_title">Прикажана прецизност</string>
+    <string name="prec_0">0 — цели броеви</string>
+    <string name="prec_1">1 децимала</string>
+    <string name="prec_2">2 децимали</string>
+    <string name="prec_4">4 децимали</string>
+    <string name="precision_value_int">цели броеви</string>
+    <string name="precision_value_n">%1$d дец.</string>
+    <string name="source_title">Извор на курс</string>
+    <string name="source_auto">Автоматски (со резерва)</string>
+    <string name="language_title">Јазик</string>
+    <string name="language_system">Системски стандард</string>
+    <string name="source_info_title">Извор на курс</string>
+    <string name="source_info_message">Среден пазарен курс — средината помеѓу куповниот и продажниот на глобалниот пазар.\n\nОсновна валута: EUR, другите парови се пресметуваат преку еврото.\n\nИзвори (автоматска резерва):\n1. ExchangeRate-API — примарен\n2. F.A. — ако примарниот не работи\n3. Frankfurter (ECB) — втора резерва\n\nАко примарниот извор не одговори за време на автоматското ажурирање или на ↻, апликацијата автоматски зема податоци од следниот. Тековниот извор е прикажан на врвот покрај времето на ажурирање.\n\nВо Поставки (⚙) може да наметнете одреден извор — другите сепак остануваат како резерва.\n\nСе ажурира еднаш дневно. Разликата во однос на други референтни сервиси обично е помала од 0.5% — тоа се референтни курсеви, а не котации во реално време.\n\nЛиценци и атрибуција:\n• ExchangeRate-API — бара линк „Rates By Exchange Rate API“ (во подножјето, кликабилен).\n• F.A. — CC0 (јавна сопственост), без задолжителна атрибуција.\n• Frankfurter — MIT, податоци од Европската централна банка (ECB).</string>
+    <string name="filter_all">Сите</string>
+    <string name="switch_source_title">Промена на извор?</string>
+    <string name="switch_source_msg">%1$s е достапен преку %2$s, не преку тековниот извор. Да се промени и додаде?</string>
+    <string name="switch_and_add">Промени и додај</string>
+    <string name="already_added">Веќе на листата</string>
+    <string name="reorder">Пренареди</string>
+    <string name="rates_offline">Офлајн · курсеви од %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Курсевите се застарени — од %1$s · %2$s</string>
+    <string name="clear_confirm_title">Да се избришат сите износи?</string>
+    <string name="clear_confirm_msg">Сите износи ќе станат нула.</string>
+    <string name="refresh">Освежи курсеви</string>
+    <string name="setting_theme">Изглед:  %1$s</string>
+    <string name="theme_title">Изглед</string>
+    <string name="theme_system">Како системот</string>
+    <string name="theme_light">Светло</string>
+    <string name="theme_dark">Темно</string>
+    <string name="setting_grouping">Одделувач на илјади:  %1$s</string>
+    <string name="grouping_title">Одделувач на илјади</string>
+    <string name="group_none">Без — 1234.56</string>
+    <string name="group_space">Празно место — 1 234.56</string>
+    <string name="group_comma">Запирка — 1,234.56</string>
+</resources>

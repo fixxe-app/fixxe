@@ -1,0 +1,80 @@
+title: "FIXXE – Převodník měn"
+subtitle: Kurzy ze tří zdrojů
+short_description: Střední kurzy ze 3 zdrojů, 300+ měn, funguje offline, bez reklam.
+keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro
+promotional_text: Tři zdroje kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
+description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními středními kurzy — neutrálním středem mezi světovými nákupními a prodejními cenami, bez bankovních přirážek.
+
+
+  ČÍM SE FIXXE LIŠÍ
+
+
+  • Tři zdroje kurzů s automatickým přepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+
+
+  • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
+
+
+  • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu.
+
+
+  • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
+
+
+  • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
+
+
+  MĚNY
+
+
+  • 300+ měn s vlajkami zemí
+
+  • Regionální měny, které převodníky často vynechávají: ruský rubl, srbský dinár, gruzínské lari, tádžické somoni, kyrgyzský som
+
+  • Kryptoměny — Bitcoin, Ethereum a 150+ dalších — a drahé kovy
+
+
+  DROBNOSTI PRO KAŽDÝ DEN
+
+
+  • Pište do kteréhokoli pole a všechny ostatní měny se okamžitě přepočítají
+
+  • Řádky přetahujte za úchyt a měňte jejich pořadí, jeden odeberete jediným klepnutím
+
+  • Hledání znalé zdrojů: filtrujte měny podle poskytovatele, uvidíte, kde je která dostupná, zdroj změníte jedním klepnutím
+
+  • Přesnost: celá čísla, 1, 2 nebo 4 desetinná místa
+
+  • 40 jazyků, výchozí angličtina, s možností řídit se jazykem zařízení — včetně rozložení zprava doleva
+
+  • Telefon, tablet i web: stejná aplikace na iPhonu, iPadu, Androidu a jako webová aplikace, kterou si přidáte na plochu
+
+
+  Zobrazené kurzy jsou orientační střední hodnoty, nikoli burzovní kotace v reálném čase.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "„Změnit zdroj a přidat“ nyní měnu opravdu přidá a přepne zdroj kurzů. Po zavření klávesnice se seznam pokaždé vrátí přesně tam, kde byl."
+landing:
+  page_title: FIXXE — převodník měn
+  install_title: Způsoby instalace
+  about_title: O aplikaci
+  lang_label: Jazyk
+  play_title: Google Play
+  play_desc: Telefony a tablety s Androidem.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad a Mac s čipem Apple.
+  apk_title: Soubor APK
+  apk_desc: 'Android bez Google Play: Huawei, vlastní firmware, AOSP.'
+  web_title: Webová verze
+  web_desc: Otevře se v prohlížeči. Není co instalovat.
+  pwa_title: Přidat na plochu
+  pwa_desc: Webová verze se stane ikonou aplikace a dál funguje offline.
+  pwa_ios: 'iPhone, iPad: „Sdílet“ → „Přidat na plochu“'
+  pwa_android: 'Android: nabídka prohlížeče → „Nainstalovat aplikaci“'
+  btn_open: Otevřít
+  btn_download: Stáhnout
+  btn_store: Otevřít v obchodě
+  privacy: Soukromí
+  terms: Podmínky

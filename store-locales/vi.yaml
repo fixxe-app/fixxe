@@ -1,0 +1,80 @@
+title: "FIXXE – Chuyển đổi tiền tệ"
+subtitle: Tỷ giá từ ba nguồn
+short_description: Tỷ giá trung bình từ 3 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
+keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro
+promotional_text: Ba nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
+description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàng với tỷ giá trung bình thị trường theo thời gian thực — điểm trung lập giữa giá mua và giá bán toàn cầu, không có chênh lệch của ngân hàng.
+
+
+  ĐIỀU LÀM NÊN KHÁC BIỆT
+
+
+  • Ba nguồn tỷ giá tự động chuyển đổi — ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+
+
+  • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
+
+
+  • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không.
+
+
+  • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
+
+
+  • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
+
+
+  TIỀN TỆ
+
+
+  • Hơn 300 loại tiền kèm cờ quốc gia
+
+  • Những đồng tiền khu vực mà các ứng dụng khác hay bỏ qua: rúp Nga, dinar Serbia, lari Gruzia, somoni Tajikistan, som Kyrgyzstan
+
+  • Tiền mã hóa — Bitcoin, Ethereum và hơn 150 loại khác — cùng kim loại quý
+
+
+  CHI TIẾT HẰNG NGÀY
+
+
+  • Nhập vào ô bất kỳ, mọi đồng tiền còn lại cập nhật ngay lập tức
+
+  • Kéo hàng ở tay cầm để sắp xếp lại, bỏ một hàng chỉ bằng một chạm
+
+  • Tìm kiếm biết nguồn: lọc tiền tệ theo nhà cung cấp, xem mỗi loại có ở đâu, đổi nguồn bằng một chạm
+
+  • Độ chính xác: số nguyên, 1, 2 hoặc 4 chữ số thập phân
+
+  • 40 ngôn ngữ, mặc định tiếng Anh, có tùy chọn theo ngôn ngữ của máy — kể cả bố cục từ phải sang trái
+
+  • Điện thoại, máy tính bảng và web: cùng một ứng dụng trên iPhone, iPad, Android và dưới dạng ứng dụng web cài lên màn hình chính
+
+
+  Tỷ giá hiển thị là giá trị trung bình để tham khảo, không phải giá giao dịch theo thời gian thực.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "“Đổi nguồn và thêm” giờ đã thực sự thêm tiền tệ và đổi nguồn tỷ giá. Sau khi đóng bàn phím, danh sách luôn trở về đúng vị trí cũ."
+landing:
+  page_title: FIXXE — ứng dụng quy đổi tiền tệ
+  install_title: Cách cài đặt
+  about_title: Giới thiệu ứng dụng
+  lang_label: Ngôn ngữ
+  play_title: Google Play
+  play_desc: Điện thoại và máy tính bảng Android.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad và Mac dùng chip Apple.
+  apk_title: Tệp APK
+  apk_desc: 'Android không có Google Play: Huawei, firmware tùy chỉnh, AOSP.'
+  web_title: Bản web
+  web_desc: Mở trong trình duyệt. Không phải cài gì cả.
+  pwa_title: Thêm vào màn hình chính
+  pwa_desc: Bản web trở thành biểu tượng ứng dụng và vẫn chạy khi không có mạng.
+  pwa_ios: 'iPhone, iPad: «Chia sẻ» → «Thêm vào MH chính»'
+  pwa_android: 'Android: menu trình duyệt → «Cài đặt ứng dụng»'
+  btn_open: Mở
+  btn_download: Tải xuống
+  btn_store: Mở trong cửa hàng
+  privacy: Quyền riêng tư
+  terms: Điều khoản

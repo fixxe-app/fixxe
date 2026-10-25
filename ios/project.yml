@@ -1,0 +1,66 @@
+name: FIXXE
+options:
+  deploymentTarget:
+    iOS: "15.0"
+  xcodeVersion: "15.0"
+targets:
+  FIXXE:
+    type: application
+    platform: iOS
+    sources:
+      - FIXXE
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.karpinity.fixxe
+        MARKETING_VERSION: "1.64"
+        CURRENT_PROJECT_VERSION: "64"
+        TARGETED_DEVICE_FAMILY: "1,2"   # iPhone + iPad
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: FIXXE
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        # Ответ на вопрос об экспортном шифровании: только HTTPS к публичным API
+        # курсов. Без него каждая новая сборка уходит в ASC с пустым полем, и
+        # версию нельзя отправить на ревью (ошибка «cannot be reviewed»).
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        # iPhone — только портрет; iPad должен поддерживать все ориентации
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        SWIFT_VERSION: "5.9"
+        CODE_SIGN_STYLE: Automatic
+    info:
+      path: FIXXE/Info.plist
+      properties:
+        # Переводы лежат в своём i18n.json, а не в .lproj, поэтому App Store
+        # не догадывается о них сам и пишет на странице приложения одну-
+        # единственную «English». Перечисляем языки явно — иначе человек не
+        # узнает, что приложение говорит на его языке, пока не установит.
+        CFBundleLocalizations: [ar, bg, bs, cs, da, de, el, en, es, et, fa, fi, fr, he, hi, hr, hu, id, it, ja, ka, ko, lt, lv, mk, nb, nl, pl, pt, ro, ru, sk, sl, sq, sr, sv, th, tr, vi, zh]
+        CFBundleDevelopmentRegion: en
+  FIXXEUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - FIXXEUITests
+    dependencies:
+      - target: FIXXE
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.karpinity.fixxe.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.9"
+  # Юнит-тесты модели. Нужны там, где UI-тестом не дотянуться: на Mac
+  # («Designed for iPad») Apple UI-тесты не запускает, а баг с уползающими
+  # при переключении строк суммами был именно там.
+  FIXXETests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - FIXXETests
+    dependencies:
+      - target: FIXXE
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.karpinity.fixxe.tests
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.9"

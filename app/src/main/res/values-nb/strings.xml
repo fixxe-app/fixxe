@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Skjønner</string>
+    <string name="cancel">Avbryt</string>
+    <string name="back">Tilbake</string>
+    <string name="close">Lukk</string>
+    <string name="delete">Slett</string>
+    <string name="selected">Valgt: %1$d</string>
+    <string name="loading">Laster…</string>
+    <string name="updated">Oppdatert %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Nettverksfeil</string>
+    <string name="clear">TØM</string>
+    <string name="add_currency">＋ Legg til valuta</string>
+    <string name="mid_market">Midtmarkedskurser ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Basisvaluta</string>
+    <string name="delete_currency_title">Fjerne valuta?</string>
+    <string name="delete_currency_msg">Fjerne %1$s — %2$s fra listen?</string>
+    <string name="add_currency_title">Velg blant %1$d tilgjengelige valutaer</string>
+    <string name="search_hint">Kode eller navn…</string>
+    <string name="settings">Innstillinger</string>
+    <string name="setting_precision">Visningspresisjon:  %1$s</string>
+    <string name="setting_source">Kurskilde:  %1$s</string>
+    <string name="setting_language">🌐 Språk:  %1$s</string>
+    <string name="precision_title">Visningspresisjon</string>
+    <string name="prec_0">0 — heltall</string>
+    <string name="prec_1">1 desimal</string>
+    <string name="prec_2">2 desimaler</string>
+    <string name="prec_4">4 desimaler</string>
+    <string name="precision_value_int">heltall</string>
+    <string name="precision_value_n">%1$d des.</string>
+    <string name="source_title">Kurskilde</string>
+    <string name="source_auto">Auto (med reserve)</string>
+    <string name="language_title">Språk</string>
+    <string name="language_system">Systemstandard</string>
+    <string name="source_info_title">Kurskilde</string>
+    <string name="source_info_message">Midtmarkedskurs — midtpunktet mellom kjøp og salg på det globale markedet.\n\nBasisvaluta: EUR, andre par beregnes gjennom euroen.\n\nKilder (automatisk reserve):\n1. ExchangeRate-API — primær\n2. F.A. — hvis den primære er nede\n3. Frankfurter (ECB) — andre reserve\n\nHvis den primære kilden ikke svarer under autooppdatering eller ved ↻, henter appen automatisk data fra den neste. Den gjeldende kilden vises øverst ved siden av oppdateringstidspunktet.\n\nI Innstillinger (⚙) kan du tvinge en bestemt kilde — de andre forblir fortsatt som reserve.\n\nOppdateres én gang om dagen. Forskjellen fra andre referansetjenester er vanligvis under 0.5% — dette er referansekurser, ikke sanntidsnoteringer.\n\nLisenser og attribusjon:\n• ExchangeRate-API — krever lenken “Rates By Exchange Rate API” (i bunnteksten, klikkbar).\n• F.A. — CC0 (public domain), ingen attribusjon kreves.\n• Frankfurter — MIT, data fra European Central Bank (ECB).</string>
+    <string name="filter_all">Alle</string>
+    <string name="switch_source_title">Bytte kilde?</string>
+    <string name="switch_source_msg">%1$s er tilgjengelig via %2$s, ikke den gjeldende kilden. Bytte og legge til?</string>
+    <string name="switch_and_add">Bytt og legg til</string>
+    <string name="already_added">Allerede i listen</string>
+    <string name="reorder">Endre rekkefølge</string>
+    <string name="rates_offline">Frakoblet · kurser fra %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kursene er utdaterte — fra %1$s · %2$s</string>
+    <string name="clear_confirm_title">Tømme alle beløp?</string>
+    <string name="clear_confirm_msg">Alle beløp nullstilles.</string>
+    <string name="refresh">Oppdater kurser</string>
+    <string name="setting_theme">Utseende:  %1$s</string>
+    <string name="theme_title">Utseende</string>
+    <string name="theme_system">Følg systemet</string>
+    <string name="theme_light">Lys</string>
+    <string name="theme_dark">Mørk</string>
+    <string name="setting_grouping">Tusenskille:  %1$s</string>
+    <string name="grouping_title">Tusenskille</string>
+    <string name="group_none">Ingen — 1234.56</string>
+    <string name="group_space">Mellomrom — 1 234.56</string>
+    <string name="group_comma">Komma — 1,234.56</string>
+</resources>

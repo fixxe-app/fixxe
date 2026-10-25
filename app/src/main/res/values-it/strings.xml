@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Capito</string>
+    <string name="cancel">Annulla</string>
+    <string name="back">Indietro</string>
+    <string name="close">Chiudi</string>
+    <string name="delete">Elimina</string>
+    <string name="selected">Selezionati: %1$d</string>
+    <string name="loading">Caricamento…</string>
+    <string name="updated">Aggiornato %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Errore di rete</string>
+    <string name="clear">CANCELLA</string>
+    <string name="add_currency">＋ Aggiungi valuta</string>
+    <string name="mid_market">Tassi di mercato medio ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Valuta di base</string>
+    <string name="delete_currency_title">Rimuovere la valuta?</string>
+    <string name="delete_currency_msg">Rimuovere %1$s — %2$s dall\'elenco?</string>
+    <string name="add_currency_title">Scegli tra %1$d valute disponibili</string>
+    <string name="search_hint">Codice o nome…</string>
+    <string name="settings">Impostazioni</string>
+    <string name="setting_precision">Precisione di visualizzazione:  %1$s</string>
+    <string name="setting_source">Fonte dei tassi:  %1$s</string>
+    <string name="setting_language">🌐 Lingua:  %1$s</string>
+    <string name="precision_title">Precisione di visualizzazione</string>
+    <string name="prec_0">0 — interi</string>
+    <string name="prec_1">1 decimale</string>
+    <string name="prec_2">2 decimali</string>
+    <string name="prec_4">4 decimali</string>
+    <string name="precision_value_int">interi</string>
+    <string name="precision_value_n">%1$d dec.</string>
+    <string name="source_title">Fonte dei tassi</string>
+    <string name="source_auto">Auto (con ripiego)</string>
+    <string name="language_title">Lingua</string>
+    <string name="language_system">Predefinito di sistema</string>
+    <string name="source_info_title">Fonte dei tassi</string>
+    <string name="source_info_message">Tasso di mercato medio — il punto medio tra acquisto e vendita sul mercato globale.\n\nValuta di base: EUR, le altre coppie sono calcolate tramite l\'euro.\n\nFonti (ripiego automatico):\n1. ExchangeRate-API — principale\n2. F.A. — se la principale non è disponibile\n3. Frankfurter (ECB) — secondo ripiego\n\nSe la fonte principale non risponde durante l\'aggiornamento automatico o premendo ↻, l\'app prende automaticamente i dati dalla successiva. La fonte attuale è mostrata in alto, accanto all\'ora di aggiornamento.\n\nNelle Impostazioni (⚙) puoi forzare una fonte specifica — le altre restano comunque come ripiego.\n\nSi aggiorna una volta al giorno. La differenza rispetto ad altri servizi di riferimento è di solito inferiore allo 0.5% — sono tassi di riferimento, non quotazioni in tempo reale.\n\nLicenze e attribuzione:\n• ExchangeRate-API — richiede il link “Rates By Exchange Rate API” (nel piè di pagina, cliccabile).\n• F.A. — CC0 (pubblico dominio), nessuna attribuzione richiesta.\n• Frankfurter — MIT, dati della European Central Bank (ECB).</string>
+    <string name="filter_all">Tutte</string>
+    <string name="switch_source_title">Cambiare fonte?</string>
+    <string name="switch_source_msg">%1$s è disponibile tramite %2$s, non dalla fonte attuale. Cambiare e aggiungerlo?</string>
+    <string name="switch_and_add">Cambia e aggiungi</string>
+    <string name="already_added">Già nell\'elenco</string>
+    <string name="reorder">Riordina</string>
+    <string name="rates_offline">Offline · tassi del %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Tassi non aggiornati — del %1$s · %2$s</string>
+    <string name="clear_confirm_title">Azzerare tutti gli importi?</string>
+    <string name="clear_confirm_msg">Tutti gli importi torneranno a zero.</string>
+    <string name="refresh">Aggiorna i tassi</string>
+    <string name="setting_theme">Aspetto:  %1$s</string>
+    <string name="theme_title">Aspetto</string>
+    <string name="theme_system">Come il sistema</string>
+    <string name="theme_light">Chiaro</string>
+    <string name="theme_dark">Scuro</string>
+    <string name="setting_grouping">Separatore delle migliaia:  %1$s</string>
+    <string name="grouping_title">Separatore delle migliaia</string>
+    <string name="group_none">Nessuno — 1234.56</string>
+    <string name="group_space">Spazio — 1 234.56</string>
+    <string name="group_comma">Virgola — 1,234.56</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Тёмная тема. Фон не чёрный, а тёмно-серый: на OLED чистый чёрный даёт
+     резкие границы карточек. Синий и зелёный осветлены — исходные оттенки
+     на тёмном фоне не проходят по контрасту. -->
+<resources>
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="text_primary">#ECECEC</color>
+    <color name="text_secondary">#B4B4B4</color>
+    <color name="text_tertiary">#8C8C8C</color>
+    <color name="accent">#64B5F6</color>
+    <color name="brand_green">#81C784</color>
+    <color name="source_green">#81C784</color>
+    <color name="divider">#2C2C2C</color>
+    <color name="hint">#858585</color>
+    <color name="icon_faint">#696969</color>
+    <color name="icon_muted">#78909C</color>
+    <color name="badge_bg">#1B2A3A</color>
+    <!-- строка статуса: офлайн и устаревшие курсы -->
+    <color name="status_offline">#BCAAA4</color>
+    <color name="status_stale">#FF8A65</color>
+</resources>

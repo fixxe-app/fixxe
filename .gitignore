@@ -1,0 +1,64 @@
+# Build outputs
+build/
+app/build/
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+local.properties
+gradle.properties.bak
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+**/.DS_Store
+
+# Android generated
+app/src/main/res/raw/
+app/release/
+
+# Keystore / signing secrets (never commit)
+*.jks
+*.keystore
+keystore.properties
+
+# iOS
+ios/build/
+xcuserdata/
+*.xcuserstate
+
+# Секреты публикации — НИКОГДА не коммитить
+# (полные права выпуска в App Store и Google Play)
+app-ship.tar.gz
+app-ship/
+credentials/
+*.p12
+*.p8
+*.tfbundle
+*.pob
+*.mobileprovision
+*.cer
+*.pass
+
+# Результаты сборки, которые release.sh кладёт рядом с сайтом: APK и сведения
+# о его версии всегда пишутся парой и в git не нужны
+web/latest.json
+
+# Ключи и секреты — на случай, если такой файл окажется в папке проекта:
+# репозиторий публичный, и git add -A отправил бы его наружу
+*.p8
+*.p12
+*.pem
+*.jks
+*.keystore
+.env
+.env.*
+service-account*.json
+*-service-account.json
+
+# Настройки конкретного издателя (ключи, зеркало, учётки) — только локально
+.release.local

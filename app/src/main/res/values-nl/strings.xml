@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Begrepen</string>
+    <string name="cancel">Annuleren</string>
+    <string name="back">Terug</string>
+    <string name="close">Sluiten</string>
+    <string name="delete">Verwijderen</string>
+    <string name="selected">Geselecteerd: %1$d</string>
+    <string name="loading">Laden…</string>
+    <string name="updated">Bijgewerkt %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Netwerkfout</string>
+    <string name="clear">WISSEN</string>
+    <string name="add_currency">＋ Valuta toevoegen</string>
+    <string name="mid_market">Mid-market koersen ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Basisvaluta</string>
+    <string name="delete_currency_title">Valuta verwijderen?</string>
+    <string name="delete_currency_msg">%1$s — %2$s uit de lijst verwijderen?</string>
+    <string name="add_currency_title">Kies uit %1$d beschikbare valuta\'s</string>
+    <string name="search_hint">Code of naam…</string>
+    <string name="settings">Instellingen</string>
+    <string name="setting_precision">Weergavenauwkeurigheid:  %1$s</string>
+    <string name="setting_source">Koersbron:  %1$s</string>
+    <string name="setting_language">🌐 Taal:  %1$s</string>
+    <string name="precision_title">Weergavenauwkeurigheid</string>
+    <string name="prec_0">0 — gehele getallen</string>
+    <string name="prec_1">1 decimaal</string>
+    <string name="prec_2">2 decimalen</string>
+    <string name="prec_4">4 decimalen</string>
+    <string name="precision_value_int">gehele getallen</string>
+    <string name="precision_value_n">%1$d dec.</string>
+    <string name="source_title">Koersbron</string>
+    <string name="source_auto">Automatisch (met fallback)</string>
+    <string name="language_title">Taal</string>
+    <string name="language_system">Systeemstandaard</string>
+    <string name="source_info_title">Koersbron</string>
+    <string name="source_info_message">Mid-market koers — het middelpunt tussen koop en verkoop op de wereldmarkt.\n\nBasisvaluta: EUR, andere paren worden berekend via de euro.\n\nBronnen (automatische fallback):\n1. ExchangeRate-API — primair\n2. F.A. — als de primaire bron niet beschikbaar is\n3. Frankfurter (ECB) — tweede fallback\n\nAls de primaire bron niet reageert tijdens de automatische update of bij ↻, haalt de app automatisch gegevens op van de volgende. De huidige bron wordt bovenaan getoond naast de updatetijd.\n\nIn Instellingen (⚙) kun je een specifieke bron forceren — de andere blijven als fallback beschikbaar.\n\nWordt eenmaal per dag bijgewerkt. Het verschil met andere referentiediensten is meestal minder dan 0.5% — dit zijn referentiekoersen, geen realtime noteringen.\n\nLicenties en attributie:\n• ExchangeRate-API — vereist de “Rates By Exchange Rate API” link (in de voettekst, klikbaar).\n• F.A. — CC0 (publiek domein), geen attributie vereist.\n• Frankfurter — MIT, gegevens van de European Central Bank (ECB).</string>
+    <string name="filter_all">Alle</string>
+    <string name="switch_source_title">Bron wisselen?</string>
+    <string name="switch_source_msg">%1$s is beschikbaar via %2$s, niet via de huidige bron. Wisselen en toevoegen?</string>
+    <string name="switch_and_add">Wisselen en toevoegen</string>
+    <string name="already_added">Al in de lijst</string>
+    <string name="reorder">Volgorde wijzigen</string>
+    <string name="rates_offline">Offline · koersen van %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Koersen zijn verouderd — van %1$s · %2$s</string>
+    <string name="clear_confirm_title">Alle bedragen wissen?</string>
+    <string name="clear_confirm_msg">Alle bedragen worden op nul gezet.</string>
+    <string name="refresh">Koersen vernieuwen</string>
+    <string name="setting_theme">Weergave:  %1$s</string>
+    <string name="theme_title">Weergave</string>
+    <string name="theme_system">Systeeminstelling</string>
+    <string name="theme_light">Licht</string>
+    <string name="theme_dark">Donker</string>
+    <string name="setting_grouping">Duizendtalscheiding:  %1$s</string>
+    <string name="grouping_title">Duizendtalscheiding</string>
+    <string name="group_none">Geen — 1234.56</string>
+    <string name="group_space">Spatie — 1 234.56</string>
+    <string name="group_comma">Komma — 1,234.56</string>
+</resources>

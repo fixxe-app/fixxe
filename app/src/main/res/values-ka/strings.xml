@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">გასაგებია</string>
+    <string name="cancel">გაუქმება</string>
+    <string name="back">უკან</string>
+    <string name="close">დახურვა</string>
+    <string name="delete">წაშლა</string>
+    <string name="selected">არჩეული: %1$d</string>
+    <string name="loading">იტვირთება…</string>
+    <string name="updated">განახლდა %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">ქსელის შეცდომა</string>
+    <string name="clear">გასუფთავება</string>
+    <string name="add_currency">＋ ვალუტის დამატება</string>
+    <string name="mid_market">საშუალო საბაზრო კურსები ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ვერს. %1$s</string>
+    <string name="base_currency">საბაზისო ვალუტა</string>
+    <string name="delete_currency_title">ვალუტის ამოშლა?</string>
+    <string name="delete_currency_msg">ამოვშალოთ %1$s — %2$s სიიდან?</string>
+    <string name="add_currency_title">აირჩიეთ %1$d ხელმისაწვდომ ვალუტიდან</string>
+    <string name="search_hint">კოდი ან სახელი…</string>
+    <string name="settings">პარამეტრები</string>
+    <string name="setting_precision">ჩვენების სიზუსტე:  %1$s</string>
+    <string name="setting_source">კურსების წყარო:  %1$s</string>
+    <string name="setting_language">🌐 ენა:  %1$s</string>
+    <string name="precision_title">ჩვენების სიზუსტე</string>
+    <string name="prec_0">0 — მთელი რიცხვები</string>
+    <string name="prec_1">1 ათწილადი</string>
+    <string name="prec_2">2 ათწილადი</string>
+    <string name="prec_4">4 ათწილადი</string>
+    <string name="precision_value_int">მთელი რიცხვები</string>
+    <string name="precision_value_n">%1$d ათწ.</string>
+    <string name="source_title">კურსების წყარო</string>
+    <string name="source_auto">ავტო (სარეზერვოთი)</string>
+    <string name="language_title">ენა</string>
+    <string name="language_system">სისტემის ნაგულისხმევი</string>
+    <string name="source_info_title">კურსების წყარო</string>
+    <string name="source_info_message">საშუალო საბაზრო კურსი — შუა წერტილი ყიდვასა და გაყიდვას შორის მსოფლიო ბაზარზე.\n\nსაბაზისო ვალუტა: EUR, დანარჩენი წყვილები გამოითვლება ევროს გავლით.\n\nწყაროები (ავტომატური სარეზერვო):\n1. ExchangeRate-API — ძირითადი\n2. F.A. — თუ ძირითადი მიუწვდომელია\n3. Frankfurter (ECB) — მეორე სარეზერვო\n\nთუ ძირითადი წყარო არ პასუხობს ავტოგანახლებისას ან ↻-ზე, აპლიკაცია ავტომატურად იღებს მონაცემებს შემდეგიდან. მიმდინარე წყარო ნაჩვენებია ზემოთ, განახლების დროის გვერდით.\n\nპარამეტრებში (⚙) შეგიძლიათ იძულებით აირჩიოთ კონკრეტული წყარო — დანარჩენები მაინც დარჩება სარეზერვოდ.\n\nახლდება დღეში ერთხელ. სხვაობა სხვა საცნობარო სერვისებთან ჩვეულებრივ 0.5%-ზე ნაკლებია — ეს საცნობარო კურსებია, არა რეალურ დროში კოტირებები.\n\nლიცენზიები და მითითება:\n• ExchangeRate-API — მოითხოვს ბმულს “Rates By Exchange Rate API” (ქვედა კოლონტიტულში, დაწკაპუნებადი).\n• F.A. — CC0 (საზოგადოებრივი საკუთრება), მითითება არ არის საჭირო.\n• Frankfurter — MIT, მონაცემები ევროპის ცენტრალური ბანკიდან (ECB).</string>
+    <string name="filter_all">ყველა</string>
+    <string name="switch_source_title">წყაროს შეცვლა?</string>
+    <string name="switch_source_msg">%1$s ხელმისაწვდომია %2$s-ის მეშვეობით და არა მიმდინარე წყაროდან. გადავრთოთ და დავამატოთ?</string>
+    <string name="switch_and_add">გადართვა და დამატება</string>
+    <string name="already_added">უკვე სიაშია</string>
+    <string name="reorder">თანმიმდევრობის შეცვლა</string>
+    <string name="rates_offline">ოფლაინ · კურსები %1$s · %2$s</string>
+    <string name="rates_stale">⚠ კურსები მოძველებულია — %1$s · %2$s</string>
+    <string name="clear_confirm_title">ყველა თანხის გასუფთავება?</string>
+    <string name="clear_confirm_msg">ყველა თანხა განულდება.</string>
+    <string name="refresh">კურსების განახლება</string>
+    <string name="setting_theme">გარეგნობა:  %1$s</string>
+    <string name="theme_title">გარეგნობა</string>
+    <string name="theme_system">სისტემის მიხედვით</string>
+    <string name="theme_light">ნათელი</string>
+    <string name="theme_dark">მუქი</string>
+    <string name="setting_grouping">ათასეულების გამყოფი:  %1$s</string>
+    <string name="grouping_title">ათასეულების გამყოფი</string>
+    <string name="group_none">არცერთი — 1234.56</string>
+    <string name="group_space">ჰარე — 1 234.56</string>
+    <string name="group_comma">მძიმე — 1,234.56</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+
+    <!-- Common -->
+    <string name="ok">Got it</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+
+    <!-- Header -->
+    <string name="selected">Selected: %1$d</string>
+    <string name="loading">Loading…</string>
+    <string name="updated">Updated %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Network error</string>
+
+    <!-- Buttons / footer -->
+    <string name="clear">CLEAR</string>
+    <string name="add_currency">＋ Add currency</string>
+    <string name="mid_market">Mid-market rates ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+
+    <!-- Rate line -->
+    <string name="base_currency">Base currency</string>
+
+    <!-- Delete confirmation -->
+    <string name="clear_confirm_title">Clear all amounts?</string>
+    <string name="clear_confirm_msg">Every amount will be reset to zero.</string>
+    <string name="delete_currency_title">Remove currency?</string>
+    <string name="delete_currency_msg">Remove %1$s — %2$s from the list?</string>
+
+    <!-- Add currency dialog -->
+    <string name="add_currency_title">Choose from %1$d available currencies</string>
+    <string name="search_hint">Code or name…</string>
+    <string name="already_added">Already in list</string>
+    <string name="filter_all">All</string>
+    <string name="switch_source_title">Switch source?</string>
+    <string name="switch_source_msg">%1$s is available via %2$s, not the current source. Switch and add it?</string>
+    <string name="switch_and_add">Switch &amp; add</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="refresh">Refresh rates</string>
+    <string name="setting_precision">Display precision:  %1$s</string>
+    <string name="setting_source">Rate source:  %1$s</string>
+    <string name="setting_language">🌐 Language:  %1$s</string>
+
+    <string name="setting_theme">Appearance:  %1$s</string>
+    <string name="theme_title">Appearance</string>
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="setting_grouping">Digit grouping:  %1$s</string>
+    <string name="grouping_title">Digit grouping</string>
+    <string name="group_none">None — 1234.56</string>
+    <string name="group_space">Space — 1 234.56</string>
+    <string name="group_comma">Comma — 1,234.56</string>
+    <string name="precision_title">Display precision</string>
+    <string name="prec_0">0 — integers</string>
+    <string name="prec_1">1 decimal</string>
+    <string name="prec_2">2 decimals</string>
+    <string name="prec_4">4 decimals</string>
+    <string name="precision_value_int">integers</string>
+    <string name="precision_value_n">%1$d dec.</string>
+
+    <string name="source_title">Rate source</string>
+    <string name="source_auto">Auto (with fallback)</string>
+
+    <string name="language_title">Language</string>
+    <string name="language_system">System default</string>
+
+    <!-- Source info -->
+    <string name="source_info_title">Rate source</string>
+    <string name="source_info_message">Mid-market rate — the midpoint between buy and sell on the global market.\n\nBase currency: EUR, other pairs are computed through the euro.\n\nSources (automatic fallback):\n1. ExchangeRate-API — primary\n2. F.A. — if the primary is down\n3. Frankfurter (ECB) — second fallback\n\nIf the primary source does not respond during auto-update or on ↻, the app automatically takes data from the next one. The current source is shown at the top next to the update time.\n\nIn Settings (⚙) you can force a specific source — the others still remain as fallback.\n\nUpdates once a day. The difference from other reference services is usually under 0.5% — these are reference rates, not real-time quotes.\n\nLicenses and attribution:\n• ExchangeRate-API — requires the “Rates By Exchange Rate API” link (in the footer, clickable).\n• F.A. — CC0 (public domain), no attribution required.\n• Frankfurter — MIT, data from the European Central Bank (ECB).</string>
+    <string name="reorder">Reorder</string>
+    <string name="rates_offline">Offline · rates from %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Rates are out of date — from %1$s · %2$s</string>
+</resources>

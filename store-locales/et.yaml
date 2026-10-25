@@ -1,0 +1,80 @@
+title: "FIXXE – Valuutakalkulaator"
+subtitle: Kursid kolmest allikast
+short_description: Keskkursid 3 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
+keywords: valuuta,kalkulaator,kurss,vahetus,raha,reisimine,forex,krüpto,rahandus,euro
+promotional_text: Kolm kursiallikat automaatse vahetusega, võrguta kursid koos vananemishoiatusega ja nutikas ümardamine, mis väikseid summasid ei riku.
+description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssidega — see on neutraalne keskpunkt maailma ostu- ja müügihindade vahel, ilma pangamarginaalita.
+
+
+  MIS TEEB FIXXE TEISTSUGUSEKS
+
+
+  • Kolm kursiallikat automaatse vahetusega — ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+
+
+  • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
+
+
+  • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli.
+
+
+  • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
+
+
+  • Reklaamivaba. Kontota. Jälgimiseta. Ainus luba on internetiühendus; teie loend, selle järjekord ja seaded ei lahku kunagi seadmest.
+
+
+  VALUUTAD
+
+
+  • 300+ valuutat riigilippudega
+
+  • Piirkondlikud valuutad, mille kalkulaatorid sageli vahele jätavad: Vene rubla, Serbia dinaar, Gruusia lari, Tadžikistani somoni, Kõrgõzstani somm
+
+  • Krüpto — Bitcoin, Ethereum ja 150+ muud — ning väärismetallid
+
+
+  IGAPÄEVASED PISIASJAD
+
+
+  • Kirjutage ükskõik millisesse lahtrisse ja kõik teised valuutad uuenevad kohe
+
+  • Lohistage ridu käepidemest, et järjekorda muuta, eemaldage üks ühe puudutusega
+
+  • Allikat tundev otsing: filtreerige valuutasid pakkuja järgi, vaadake, kus igaüks saadaval on, vahetage allikat ühe puudutusega
+
+  • Täpsus: täisarvud, 1, 2 või 4 kohta pärast koma
+
+  • 40 keelt, vaikimisi inglise keel, võimalusega järgida seadme keelt — koos paremalt vasakule paigutustega
+
+  • Telefon, tahvel ja veeb: sama rakendus iPhone''is, iPadis, Androidis ja veebirakendusena, mille saab avakuvale panna
+
+
+  Näidatud kursid on orienteerivad keskväärtused, mitte reaalajas kauplemisnoteeringud.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "„Vaheta allikas ja lisa“ lisab nüüd tõesti valuuta ja vahetab kursside allika. Kui sulgete klaviatuuri, naaseb loend iga kord täpselt endisele kohale."
+landing:
+  page_title: FIXXE — valuutakalkulaator
+  install_title: Paigaldusviisid
+  about_title: Rakendusest
+  lang_label: Keel
+  play_title: Google Play
+  play_desc: Android-telefonid ja -tahvlid.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad ja Apple'i kiibiga Mac.
+  apk_title: APK-fail
+  apk_desc: 'Android ilma Google Playta: Huawei, oma püsivara, AOSP.'
+  web_title: Veebiversioon
+  web_desc: Avaneb brauseris. Midagi pole vaja paigaldada.
+  pwa_title: Lisa avakuvale
+  pwa_desc: Veebiversioonist saab rakenduse ikoon ja see töötab ka võrguta.
+  pwa_ios: 'iPhone, iPad: „Jaga“ → „Lisa avakuvale“'
+  pwa_android: 'Android: brauseri menüü → „Paigalda rakendus“'
+  btn_open: Ava
+  btn_download: Laadi alla
+  btn_store: Ava poes
+  privacy: Privaatsus
+  terms: Tingimused

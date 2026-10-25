@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Supratau</string>
+    <string name="cancel">Atšaukti</string>
+    <string name="back">Atgal</string>
+    <string name="close">Uždaryti</string>
+    <string name="delete">Ištrinti</string>
+    <string name="selected">Pasirinkta: %1$d</string>
+    <string name="loading">Įkeliama…</string>
+    <string name="updated">Atnaujinta %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Tinklo klaida</string>
+    <string name="clear">IŠVALYTI</string>
+    <string name="add_currency">＋ Pridėti valiutą</string>
+    <string name="mid_market">Vidurinės rinkos kursai ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">ver. %1$s</string>
+    <string name="base_currency">Bazinė valiuta</string>
+    <string name="delete_currency_title">Pašalinti valiutą?</string>
+    <string name="delete_currency_msg">Pašalinti %1$s — %2$s iš sąrašo?</string>
+    <string name="add_currency_title">Pasirinkite iš %1$d galimų valiutų</string>
+    <string name="search_hint">Kodas arba pavadinimas…</string>
+    <string name="settings">Nustatymai</string>
+    <string name="setting_precision">Rodymo tikslumas:  %1$s</string>
+    <string name="setting_source">Kursų šaltinis:  %1$s</string>
+    <string name="setting_language">🌐 Kalba:  %1$s</string>
+    <string name="precision_title">Rodymo tikslumas</string>
+    <string name="prec_0">0 — sveikieji skaičiai</string>
+    <string name="prec_1">1 skaitmuo po kablelio</string>
+    <string name="prec_2">2 skaitmenys po kablelio</string>
+    <string name="prec_4">4 skaitmenys po kablelio</string>
+    <string name="precision_value_int">sveikieji skaičiai</string>
+    <string name="precision_value_n">%1$d skaitm.</string>
+    <string name="source_title">Kursų šaltinis</string>
+    <string name="source_auto">Automatinis (su atsargine)</string>
+    <string name="language_title">Kalba</string>
+    <string name="language_system">Sistemos numatytoji</string>
+    <string name="source_info_title">Kursų šaltinis</string>
+    <string name="source_info_message">Vidurinės rinkos kursas — vidurio taškas tarp pirkimo ir pardavimo pasaulinėje rinkoje.\n\nBazinė valiuta: EUR, kitos poros skaičiuojamos per eurą.\n\nŠaltiniai (automatinis perjungimas):\n1. ExchangeRate-API — pirminis\n2. F.A. — jei pirminis neveikia\n3. Frankfurter (ECB) — antras atsarginis\n\nJei pirminis šaltinis neatsako automatinio atnaujinimo metu arba paspaudus ↻, programa automatiškai paima duomenis iš kito. Dabartinis šaltinis rodomas viršuje šalia atnaujinimo laiko.\n\nNustatymuose (⚙) galite priverstinai nustatyti konkretų šaltinį — kiti vis tiek lieka kaip atsarginiai.\n\nAtnaujinama kartą per dieną. Skirtumas nuo kitų orientacinių paslaugų paprastai yra mažesnis nei 0.5% — tai orientaciniai kursai, o ne realaus laiko kotiruotės.\n\nLicencijos ir priskyrimas:\n• ExchangeRate-API — reikalauja nuorodos “Rates By Exchange Rate API” (poraštėje, spustelimos).\n• F.A. — CC0 (public domain), priskyrimo nereikia.\n• Frankfurter — MIT, duomenys iš European Central Bank (ECB).</string>
+    <string name="filter_all">Visi</string>
+    <string name="switch_source_title">Keisti šaltinį?</string>
+    <string name="switch_source_msg">%1$s pasiekiamas per %2$s, o ne per dabartinį šaltinį. Perjungti ir pridėti?</string>
+    <string name="switch_and_add">Perjungti ir pridėti</string>
+    <string name="already_added">Jau sąraše</string>
+    <string name="reorder">Pertvarkyti</string>
+    <string name="rates_offline">Neprisijungus · kursai nuo %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kursai pasenę — nuo %1$s · %2$s</string>
+    <string name="clear_confirm_title">Išvalyti visas sumas?</string>
+    <string name="clear_confirm_msg">Visos sumos bus nunulintos.</string>
+    <string name="refresh">Atnaujinti kursus</string>
+    <string name="setting_theme">Išvaizda:  %1$s</string>
+    <string name="theme_title">Išvaizda</string>
+    <string name="theme_system">Kaip sistemoje</string>
+    <string name="theme_light">Šviesi</string>
+    <string name="theme_dark">Tamsi</string>
+    <string name="setting_grouping">Tūkstančių skirtukas:  %1$s</string>
+    <string name="grouping_title">Tūkstančių skirtukas</string>
+    <string name="group_none">Nėra — 1234.56</string>
+    <string name="group_space">Tarpas — 1 234.56</string>
+    <string name="group_comma">Kablelis — 1,234.56</string>
+</resources>

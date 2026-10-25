@@ -1,0 +1,80 @@
+title: "FIXXE – Valutaváltó"
+subtitle: Árfolyam három forrásból
+short_description: Középárfolyamok 3 forrásból, 300+ pénznem, offline is, reklám nélkül.
+keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró
+promotional_text: Három árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
+description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokkal — ez a világpiaci vételi és eladási ár közötti semleges középpont, banki felárak nélkül.
+
+
+  MIBEN MÁS A FIXXE
+
+
+  • Három árfolyamforrás automatikus váltással — ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+
+
+  • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
+
+
+  • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára.
+
+
+  • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
+
+
+  • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
+
+
+  PÉNZNEMEK
+
+
+  • 300+ pénznem országzászlókkal
+
+  • Regionális pénznemek, amelyeket a váltók gyakran kihagynak: orosz rubel, szerb dinár, grúz lari, tádzsik szomoni, kirgiz szom
+
+  • Kripto — Bitcoin, Ethereum és további 150+ — valamint nemesfémek
+
+
+  MINDENNAPI RÉSZLETEK
+
+
+  • Írj bármelyik mezőbe, és az összes többi pénznem azonnal frissül
+
+  • A sorokat a fogantyújuknál húzva rendezheted át, egyet egyetlen koppintással törölhetsz
+
+  • Forrástudatos keresés: szűrd a pénznemeket szolgáltató szerint, lásd, hol érhető el mindegyik, és válts forrást egy koppintással
+
+  • Pontosság: egész számok, 1, 2 vagy 4 tizedesjegy
+
+  • 40 nyelv, alapértelmezetten angol, a készülék nyelvének követésével is — a jobbról balra írt elrendezésekkel együtt
+
+  • Telefon, táblagép és web: ugyanaz az alkalmazás iPhone-on, iPaden, Androidon és webalkalmazásként, amelyet a kezdőképernyőre tehetsz
+
+
+  A megjelenített árfolyamok tájékoztató középárfolyamok, nem valós idejű tőzsdei jegyzések.
+
+  Rates By Exchange Rate API.
+
+  '
+whats_new: "A „Forrásváltás és hozzáadás” most tényleg hozzáadja a pénznemet és átvált az árfolyamforrásra. A billentyűzet bezárása után a lista minden alkalommal pontosan a korábbi helyére áll vissza."
+landing:
+  page_title: FIXXE — valutaváltó
+  install_title: Telepítési módok
+  about_title: Az alkalmazásról
+  lang_label: Nyelv
+  play_title: Google Play
+  play_desc: Android telefonok és táblagépek.
+  ios_title: Apple App Store
+  ios_desc: iPhone, iPad és Apple chipes Mac.
+  apk_title: APK-fájl
+  apk_desc: 'Android a Google Play nélkül: Huawei, egyedi firmware, AOSP.'
+  web_title: Webes változat
+  web_desc: A böngészőben nyílik meg. Semmit sem kell telepíteni.
+  pwa_title: Hozzáadás a kezdőképernyőhöz
+  pwa_desc: A webes változat alkalmazásikonná válik, és offline is működik tovább.
+  pwa_ios: 'iPhone, iPad: „Megosztás” → „Főképernyőhöz adás”'
+  pwa_android: 'Android: böngészőmenü → „Alkalmazás telepítése”'
+  btn_open: Megnyitás
+  btn_download: Letöltés
+  btn_store: Megnyitás az áruházban
+  privacy: Adatvédelem
+  terms: Feltételek

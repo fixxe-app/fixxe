@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FIXXE — currency converter</title>
+<meta name="description" content="FIXXE is a fast, clean currency converter with live mid-market rates from three sources, 300+ currencies, offline support and no ads.">
+<link rel="icon" href="../icons/favicon.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta property="og:title" content="FIXXE — currency converter">
+<meta property="og:description" content="Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.">
+<meta property="og:image" content="../icons/icon-512.png">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --bg:#F2F3F5; --card:#FFFFFF; --blue:#1565C0; --ink:#1A1A1A;
+  --gray:#666; --line:#E4E6E9; --green:#2E7D32; --badge:#E8EEF9;
+  --shadow:0 1px 3px #0000000f, 0 1px 2px #00000008;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121212; --card:#1E1E1E; --blue:#64B5F6; --ink:#ECECEC;
+    --gray:#A8A8A8; --line:#2C2C2C; --green:#81C784; --badge:#1B2A3A;
+    --shadow:0 1px 3px #00000040;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121212; --card:#1E1E1E; --blue:#64B5F6; --ink:#ECECEC;
+  --gray:#A8A8A8; --line:#2C2C2C; --green:#81C784; --badge:#1B2A3A;
+  --shadow:0 1px 3px #00000040;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  line-height:1.55; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:720px; margin:0 auto; padding:0 16px 56px}
+
+/* шапка */
+header{padding:28px 0 8px; display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+.logo{width:56px; height:56px; border-radius:13px; flex:none}
+.name{font-size:26px; font-weight:700; letter-spacing:1.5px; color:var(--green); margin:0}
+.tagline{color:var(--gray); margin:2px 0 0; font-size:15px}
+.langbox{margin-inline-start:auto}
+select{
+  font:inherit; font-size:15px; color:var(--ink); background:var(--card);
+  border:1px solid var(--line); border-radius:9px; padding:8px 10px; min-width:148px;
+}
+
+h2{font-size:17px; margin:30px 0 12px; font-weight:650}
+
+/* способы установки */
+.ways{display:grid; gap:10px}
+.way{
+  display:flex; align-items:center; gap:14px; background:var(--card);
+  border:1px solid var(--line); border-radius:13px; padding:14px 15px;
+  box-shadow:var(--shadow); text-decoration:none; color:inherit;
+}
+.way:hover{border-color:var(--blue)}
+.way .ico{width:30px; height:30px; flex:none; color:var(--blue)}
+.way .txt{min-width:0; flex:1}
+.way .t,.way .d,.way .hint{display:block}
+.way .t{font-weight:620; font-size:15.5px}
+.way .d{color:var(--gray); font-size:13.5px; margin-top:1px; line-height:1.4}
+.way .go{color:var(--blue); font-size:14px; font-weight:600; white-space:nowrap}
+/* подсказка «как добавить на экран» — не ссылка, а пояснение */
+.way.static{cursor:default}
+.way.static:hover{border-color:var(--line)}
+.hint{color:var(--gray); font-size:13px; margin-top:7px}
+.hint code{
+  background:var(--badge); color:var(--blue); border-radius:5px;
+  padding:1px 6px; font:inherit; font-size:12.5px; white-space:normal;
+  display:inline-block; line-height:1.45;
+}
+
+/* описание */
+.about{
+  background:var(--card); border:1px solid var(--line); border-radius:13px;
+  padding:4px 18px 18px; box-shadow:var(--shadow);
+}
+.about p{margin:13px 0; font-size:15px}
+.about p.head{font-weight:650; margin-top:22px; font-size:13px; letter-spacing:.6px; color:var(--gray)}
+.about p.bullet{padding-inline-start:16px; position:relative}
+.about p.bullet::before{content:"•"; position:absolute; inset-inline-start:0; color:var(--blue)}
+
+footer{margin-top:28px; color:var(--gray); font-size:13px; text-align:center}
+footer a{color:var(--blue)}
+/* номер версии — без перевода, одинаков во всех языках */
+footer .ver{margin-top:6px; font-size:11px}
+/* в RTL разворачиваем только стрелку: зеркальная надпись нечитаема */
+[dir="rtl"] .way .arr{display:inline-block; transform:scaleX(-1)}
+@media (max-width:420px){
+  .name{font-size:23px} .logo{width:48px;height:48px}
+  .langbox{margin-inline-start:0; width:100%} select{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="../icons/icon-192.png" alt="FIXXE">
+    <div>
+      <h1 class="name">FIXXE</h1>
+      <p class="tagline" id="tagline">Live rates from three sources</p>
+    </div>
+    <div class="langbox">
+      <select id="lang" aria-label="Language"></select>
+    </div>
+  </header>
+
+  <h2 id="about-title">About the app</h2>
+  <div class="about" id="about"></div>
+
+  <h2 id="install-title">Ways to install</h2>
+  <div class="ways" id="ways"></div>
+
+  <footer>
+    <p>Rates By <a href="https://www.exchangerate-api.com">Exchange Rate API</a><br>
+    <a href="../privacy.html" id="privacy-link">Privacy</a> · <a href="../terms.html" id="terms-link">Terms</a></p>
+    <p class="ver" id="app-version">FIXXE 1.64</p>
+  </footer>
+</div>
+
+<script>
+const LINKS = {
+  play: "https://play.google.com/store/apps/details?id=com.karpinity.fixxe",
+  ios:  "https://apps.apple.com/app/id6815242016",
+  apk:  "../FIXXE.apk",
+  web:  "../",
+};
+// Иконки рисуем сами: сторонние логотипы магазинов тянуть неоткуда, а эти
+// читаются одинаково в светлой и тёмной теме.
+const ICONS = {
+  play: '<svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.2a1 1 0 0 0-.5.9v17.8a1 1 0 0 0 .5.9l9.3-9.8zM14.2 13.3l2.6 2.7-9.4 5.3zM17.9 15.3l2.9-1.6a1 1 0 0 0 0-1.8l-2.9-1.6-3 3zM16.8 8l-2.6 2.7-7-7.9z"/></svg>',
+  ios:  '<svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.9-1.4-.1-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 2.9-.7s1.7.7 2.9.7 2-1.1 2.7-2.1c.9-1.2 1.2-2.4 1.2-2.4s-2.3-.9-2.3-3.5zM14.2 5.8c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-.9 2.8 1 .1 2-.5 2.7-1.3z"/></svg>',
+  apk:  '<svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1zM4 19a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>',
+  web:  '<svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.9a15.6 15.6 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8zM12 4c.7 1 1.3 2.4 1.7 4h-3.4C10.7 6.4 11.3 5 12 4zM4.3 14a8 8 0 0 1 0-4h3.3a17.6 17.6 0 0 0 0 4zm.8 2H8c.3 1.3.7 2.5 1.3 3.6A8 8 0 0 1 5.1 16zM8 8H5.1a8 8 0 0 1 4.2-3.6C8.7 5.5 8.3 6.7 8 8zm4 12c-.7-1-1.3-2.4-1.7-4h3.4c-.4 1.6-1 3-1.7 4zm2.1-6H9.9a15.6 15.6 0 0 1 0-4h4.2a15.6 15.6 0 0 1 0 4zm.6 5.6c.6-1.1 1-2.3 1.3-3.6h2.9a8 8 0 0 1-4.2 3.6zm1.7-5.6a17.6 17.6 0 0 0 0-4h3.3a8 8 0 0 1 0 4z"/></svg>',
+  pwa:  '<svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm5 2.6a1 1 0 0 1 1 1v3.2h1.8a1 1 0 0 1 .7 1.7l-2.8 2.9a1 1 0 0 1-1.4 0l-2.8-2.9a1 1 0 0 1 .7-1.7H11V7.6a1 1 0 0 1 1-1z"/></svg>',
+};
+
+const $ = s => document.querySelector(s);
+
+function render(t){
+  document.documentElement.lang = t.lang;
+  document.documentElement.dir = t.rtl ? "rtl" : "ltr";
+  document.title = t.page_title;
+  $("#tagline").textContent = t.subtitle;
+  $("#install-title").textContent = t.install_title;
+  $("#about-title").textContent = t.about_title;
+  $("#lang").setAttribute("aria-label", t.lang_label);
+  $("#privacy-link").textContent = t.privacy;
+  $("#terms-link").textContent = t.terms;
+
+  const ways = [
+    ["play", t.play_title, t.play_desc, LINKS.play, t.btn_store],
+    ["ios",  t.ios_title,  t.ios_desc,  LINKS.ios,  t.btn_store],
+    ["apk",  t.apk_title,  t.apk_desc,  LINKS.apk,  t.btn_download],
+    ["web",  t.web_title,  t.web_desc,  LINKS.web,  t.btn_open],
+  ];
+  let html = ways.map(([k, title, desc, href, go]) => `
+    <a class="way" href="${href}"${k === "apk" ? " download" : k === "web" ? "" : ' target="_blank" rel="noopener"'}>
+      ${ICONS[k]}
+      <span class="txt"><span class="t">${esc(title)}</span><span class="d">${esc(desc)}</span></span>
+      <span class="go">${esc(go)} <span class="arr">→</span></span>
+    </a>`).join("");
+  // Пятый способ — не ссылка: установку на домашний экран делает сам браузер
+  html += `
+    <div class="way static">
+      ${ICONS.pwa}
+      <span class="txt">
+        <span class="t">${esc(t.pwa_title)}</span>
+        <span class="d">${esc(t.pwa_desc)}</span>
+        <span class="hint"><code>${esc(t.pwa_ios)}</code></span>
+        <span class="hint"><code>${esc(t.pwa_android)}</code></span>
+      </span>
+    </div>`;
+  $("#ways").innerHTML = html;
+
+  // Разметка описания приходит готовой (заголовок / пункт / абзац): угадывать
+  // заголовки по заглавным буквам нельзя — во многих письменностях их нет.
+  $("#about").innerHTML = t.blocks.map(([kind, text]) =>
+    kind === "h"  ? `<p class="head">${esc(text)}</p>` :
+    kind === "li" ? `<p class="bullet">${esc(text)}</p>` :
+                    `<p>${esc(text)}</p>`).join("");
+}
+
+function esc(s){
+  return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+}
+
+async function load(code, chosen){
+  const t = await fetch(`i18n/${code}.json`).then(r => r.json());
+  render(t);
+  // Запоминаем только явный выбор: иначе первое автоопределение навсегда
+  // перебивало бы язык браузера, даже если человек его потом сменил.
+  if (chosen) { try { localStorage.setItem("fixxe-about-lang", code); } catch {} }
+  $("#lang").value = code;
+}
+
+function pick(codes){
+  try {
+    const saved = localStorage.getItem("fixxe-about-lang");
+    if (saved && codes.includes(saved)) return saved;
+  } catch {}
+  for (const nav of navigator.languages || [navigator.language || "en"]) {
+    const base = nav.toLowerCase().split("-")[0];
+    if (codes.includes(base)) return base;
+    if (base === "no" && codes.includes("nb")) return "nb";   // норвежский
+    if (base === "iw" && codes.includes("he")) return "he";   // старый код иврита
+  }
+  return "en";
+}
+
+(async () => {
+  const langs = await fetch("i18n/languages.json").then(r => r.json());
+  $("#lang").innerHTML = langs.map(l => `<option value="${l.code}">${esc(l.native)}</option>`).join("");
+  $("#lang").onchange = e => load(e.target.value, true);
+  await load(pick(langs.map(l => l.code)));
+})();
+</script>
+</body>
+</html>

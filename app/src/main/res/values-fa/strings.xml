@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">متوجه شدم</string>
+    <string name="cancel">لغو</string>
+    <string name="back">بازگشت</string>
+    <string name="close">بستن</string>
+    <string name="delete">حذف</string>
+    <string name="selected">انتخاب‌شده: %1$d</string>
+    <string name="loading">در حال بارگذاری…</string>
+    <string name="updated">به‌روزرسانی شد %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">خطای شبکه</string>
+    <string name="clear">پاک کردن</string>
+    <string name="add_currency">＋ افزودن ارز</string>
+    <string name="mid_market">نرخ‌های میانهٔ بازار ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">نسخهٔ %1$s</string>
+    <string name="base_currency">ارز پایه</string>
+    <string name="delete_currency_title">حذف ارز؟</string>
+    <string name="delete_currency_msg">حذف %1$s — %2$s از فهرست؟</string>
+    <string name="add_currency_title">از میان %1$d ارز موجود انتخاب کنید</string>
+    <string name="search_hint">کد یا نام…</string>
+    <string name="settings">تنظیمات</string>
+    <string name="setting_precision">دقت نمایش:  %1$s</string>
+    <string name="setting_source">منبع نرخ:  %1$s</string>
+    <string name="setting_language">🌐 زبان:  %1$s</string>
+    <string name="precision_title">دقت نمایش</string>
+    <string name="prec_0">۰ — اعداد صحیح</string>
+    <string name="prec_1">۱ رقم اعشار</string>
+    <string name="prec_2">۲ رقم اعشار</string>
+    <string name="prec_4">۴ رقم اعشار</string>
+    <string name="precision_value_int">اعداد صحیح</string>
+    <string name="precision_value_n">%1$d رقم اعشار</string>
+    <string name="source_title">منبع نرخ</string>
+    <string name="source_auto">خودکار (با منبع پشتیبان)</string>
+    <string name="language_title">زبان</string>
+    <string name="language_system">پیش‌فرض سیستم</string>
+    <string name="source_info_title">منبع نرخ</string>
+    <string name="source_info_message">نرخ میانهٔ بازار — نقطهٔ میانی بین خرید و فروش در بازار جهانی.\n\nارز پایه: EUR، سایر جفت‌ها از طریق یورو محاسبه می‌شوند.\n\nمنابع (پشتیبان خودکار):\n1. ExchangeRate-API — اصلی\n2. F.A. — اگر منبع اصلی از دسترس خارج شود\n3. Frankfurter (ECB) — پشتیبان دوم\n\nاگر منبع اصلی هنگام به‌روزرسانی خودکار یا با فشردن ↻ پاسخ ندهد، برنامه به‌طور خودکار داده‌ها را از منبع بعدی می‌گیرد. منبع فعلی در بالا کنار زمان به‌روزرسانی نمایش داده می‌شود.\n\nدر تنظیمات (⚙) می‌توانید یک منبع مشخص را اجباری کنید — بقیه همچنان به‌عنوان پشتیبان باقی می‌مانند.\n\nروزی یک‌بار به‌روزرسانی می‌شود. تفاوت با سایر سرویس‌های مرجع معمولاً کمتر از 0.5% است — این‌ها نرخ‌های مرجع‌اند، نه قیمت‌های لحظه‌ای.\n\nمجوزها و اِسناد:\n• ExchangeRate-API — نیازمند پیوند “Rates By Exchange Rate API” (در پاورقی، قابل کلیک).\n• F.A. — CC0 (مالکیت عمومی)، بدون نیاز به اِسناد.\n• Frankfurter — MIT، داده‌ها از بانک مرکزی اروپا (ECB).</string>
+    <string name="filter_all">همه</string>
+    <string name="switch_source_title">تغییر منبع؟</string>
+    <string name="switch_source_msg">%1$s از طریق %2$s در دسترس است، نه منبع فعلی. تغییر داده و اضافه شود؟</string>
+    <string name="switch_and_add">تغییر و افزودن</string>
+    <string name="already_added">از قبل در فهرست است</string>
+    <string name="reorder">تغییر ترتیب</string>
+    <string name="rates_offline">آفلاین · نرخ‌ها از %1$s · %2$s</string>
+    <string name="rates_stale">⚠ نرخ‌ها قدیمی‌اند — از %1$s · %2$s</string>
+    <string name="clear_confirm_title">همه مبالغ پاک شوند؟</string>
+    <string name="clear_confirm_msg">همه مبالغ صفر می‌شوند.</string>
+    <string name="refresh">به‌روزرسانی نرخ‌ها</string>
+    <string name="setting_theme">ظاهر:  %1$s</string>
+    <string name="theme_title">ظاهر</string>
+    <string name="theme_system">مانند سیستم</string>
+    <string name="theme_light">روشن</string>
+    <string name="theme_dark">تیره</string>
+    <string name="setting_grouping">جداکننده هزارگان:  %1$s</string>
+    <string name="grouping_title">جداکننده هزارگان</string>
+    <string name="group_none">بدون — 1234.56</string>
+    <string name="group_space">فاصله — 1 234.56</string>
+    <string name="group_comma">ویرگول — 1,234.56</string>
+</resources>

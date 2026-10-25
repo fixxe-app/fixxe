@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">FIXXE</string>
+    <string name="ok">Verstanden</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="back">Zurück</string>
+    <string name="close">Schließen</string>
+    <string name="delete">Löschen</string>
+    <string name="selected">Ausgewählt: %1$d</string>
+    <string name="loading">Lädt…</string>
+    <string name="updated">Aktualisiert %1$s · %2$s</string>
+    <string name="error_prefix">⚠ %1$s</string>
+    <string name="network_error">Netzwerkfehler</string>
+    <string name="clear">LÖSCHEN</string>
+    <string name="add_currency">＋ Währung hinzufügen</string>
+    <string name="mid_market">Mittelkurse ⓘ</string>
+    <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
+    <string name="version">Ver. %1$s</string>
+    <string name="base_currency">Basiswährung</string>
+    <string name="delete_currency_title">Währung entfernen?</string>
+    <string name="delete_currency_msg">%1$s — %2$s aus der Liste entfernen?</string>
+    <string name="add_currency_title">Aus %1$d verfügbaren Währungen wählen</string>
+    <string name="search_hint">Code oder Name…</string>
+    <string name="settings">Einstellungen</string>
+    <string name="setting_precision">Anzeigegenauigkeit:  %1$s</string>
+    <string name="setting_source">Kursquelle:  %1$s</string>
+    <string name="setting_language">🌐 Sprache:  %1$s</string>
+    <string name="precision_title">Anzeigegenauigkeit</string>
+    <string name="prec_0">0 — Ganzzahlen</string>
+    <string name="prec_1">1 Dezimalstelle</string>
+    <string name="prec_2">2 Dezimalstellen</string>
+    <string name="prec_4">4 Dezimalstellen</string>
+    <string name="precision_value_int">Ganzzahlen</string>
+    <string name="precision_value_n">%1$d Dez.</string>
+    <string name="source_title">Kursquelle</string>
+    <string name="source_auto">Automatisch (mit Fallback)</string>
+    <string name="language_title">Sprache</string>
+    <string name="language_system">Systemstandard</string>
+    <string name="source_info_title">Kursquelle</string>
+    <string name="source_info_message">Mittelkurs — der Mittelwert zwischen An- und Verkauf am globalen Markt.\n\nBasiswährung: EUR, andere Paare werden über den Euro berechnet.\n\nQuellen (automatischer Fallback):\n1. ExchangeRate-API — primär\n2. F.A. — falls die primäre Quelle ausfällt\n3. Frankfurter (ECB) — zweiter Fallback\n\nWenn die primäre Quelle bei der automatischen Aktualisierung oder bei ↻ nicht antwortet, bezieht die App die Daten automatisch von der nächsten. Die aktuelle Quelle wird oben neben der Aktualisierungszeit angezeigt.\n\nIn den Einstellungen (⚙) kannst du eine bestimmte Quelle erzwingen — die anderen bleiben weiterhin als Fallback.\n\nAktualisiert einmal täglich. Der Unterschied zu anderen Referenzdiensten liegt meist unter 0.5% — dies sind Referenzkurse, keine Echtzeitnotierungen.\n\nLizenzen und Namensnennung:\n• ExchangeRate-API — erfordert den Link „Rates By Exchange Rate API“ (in der Fußzeile, anklickbar).\n• F.A. — CC0 (gemeinfrei), keine Namensnennung erforderlich.\n• Frankfurter — MIT, Daten der European Central Bank (ECB).</string>
+    <string name="filter_all">Alle</string>
+    <string name="switch_source_title">Quelle wechseln?</string>
+    <string name="switch_source_msg">%1$s ist über %2$s verfügbar, nicht über die aktuelle Quelle. Wechseln und hinzufügen?</string>
+    <string name="switch_and_add">Wechseln &amp; hinzufügen</string>
+    <string name="already_added">Bereits in der Liste</string>
+    <string name="reorder">Reihenfolge ändern</string>
+    <string name="rates_offline">Offline · Kurse vom %1$s · %2$s</string>
+    <string name="rates_stale">⚠ Kurse sind veraltet — vom %1$s · %2$s</string>
+    <string name="clear_confirm_title">Alle Beträge löschen?</string>
+    <string name="clear_confirm_msg">Alle Beträge werden auf null gesetzt.</string>
+    <string name="refresh">Kurse aktualisieren</string>
+    <string name="setting_theme">Darstellung:  %1$s</string>
+    <string name="theme_title">Darstellung</string>
+    <string name="theme_system">Wie System</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="setting_grouping">Tausendertrennzeichen:  %1$s</string>
+    <string name="grouping_title">Tausendertrennzeichen</string>
+    <string name="group_none">Keine — 1234.56</string>
+    <string name="group_space">Leerzeichen — 1 234.56</string>
+    <string name="group_comma">Komma — 1,234.56</string>
+</resources>
