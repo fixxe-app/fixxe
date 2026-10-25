@@ -85,14 +85,18 @@ if [ "${1:-}" = "--push" ]; then
     echo "⚠ релиз на GitHub не создан: web/FIXXE.apk — версия ${APK_N:-?}, а нужна $N (собери release.sh)"
   else
     NOTES="$MAIN/store-release-notes.txt"
+    # имя файла в релизе — с версией: gh берёт имя файла как есть
+    # («путь#подпись» меняет только подпись), поэтому копия под нужным именем
+    TMPD=$(mktemp -d -t fixxe-apk); cp "$APK" "$TMPD/FIXXE-1.$N.apk"
     if GH_TOKEN="$TOKEN" gh release view "v$N" -R "$REPO" >/dev/null 2>&1; then
-      GH_TOKEN="$TOKEN" gh release upload "v$N" "$APK#FIXXE-1.$N.apk" -R "$REPO" --clobber >/dev/null
+      GH_TOKEN="$TOKEN" gh release upload "v$N" "$TMPD/FIXXE-1.$N.apk" -R "$REPO" --clobber >/dev/null
       echo "✓ релиз v$N уже был — APK обновлён"
     else
-      GH_TOKEN="$TOKEN" gh release create "v$N" "$APK#FIXXE-1.$N.apk" -R "$REPO" \
+      GH_TOKEN="$TOKEN" gh release create "v$N" "$TMPD/FIXXE-1.$N.apk" -R "$REPO" \
         -t "FIXXE 1.$N" -F "$NOTES" --latest >/dev/null
       echo "✓ релиз FIXXE 1.$N с APK: https://github.com/$REPO/releases/tag/v$N"
     fi
+    rm -rf "$TMPD"
   fi
 else
   echo "  push не делался (добавь --push, когда репозиторий на GitHub создан)"
