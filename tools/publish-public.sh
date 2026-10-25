@@ -67,7 +67,10 @@ git tag -f "v$N" >/dev/null
 if [ "${1:-}" = "--push" ]; then
   [ -n "$REMOTE" ] || { echo "✗ FIXXE_PUBLIC_REMOTE не задан в .release.local"; exit 1; }
   git remote get-url origin >/dev/null 2>&1 || git remote add origin "$REMOTE"
-  git push -q -u origin main --tags
+  git push -q -u origin main
+  # тег текущей версии указывает на её последний снимок (внутри одной версии
+  # снимок может пересобираться); теги прошлых версий не двигаются
+  git push -q -f origin "refs/tags/v$N"
   echo "✓ отправлено в $REMOTE"
 
   # 5. Релиз на GitHub с APK этой версии
