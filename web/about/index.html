@@ -195,8 +195,19 @@ function esc(s){
   return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 }
 
+// Тексты — с номером версии в адресе. Service worker веб-версии отдаёт файлы
+// из кэша и обновляет их в фоне: после выпуска новая страница приходила со
+// старыми текстами, и новые надписи показывались как «undefined». Номер
+// версии ставит release.sh (в #app-version), так что новая страница всегда
+// запрашивает новые тексты. Английский — основа: ключ, которого в переводе
+// ещё нет, показывается по-английски, а не пустым.
+const VER = ($("#app-version").textContent.match(/[\d.]+/) || ["0"])[0];
+const texts = code => fetch(`i18n/${code}.json?v=${VER}`).then(r => r.json());
+let EN = null;
+
 async function load(code, chosen){
-  const t = await fetch(`i18n/${code}.json`).then(r => r.json());
+  EN = EN || await texts("en");
+  const t = code === "en" ? EN : { ...EN, ...await texts(code) };
   render(t);
   // Запоминаем только явный выбор: иначе первое автоопределение навсегда
   // перебивало бы язык браузера, даже если человек его потом сменил.
@@ -219,7 +230,7 @@ function pick(codes){
 }
 
 (async () => {
-  const langs = await fetch("i18n/languages.json").then(r => r.json());
+  const langs = await fetch(`i18n/languages.json?v=${VER}`).then(r => r.json());
   $("#lang").innerHTML = langs.map(l => `<option value="${l.code}">${esc(l.native)}</option>`).join("");
   $("#lang").onchange = e => load(e.target.value, true);
   await load(pick(langs.map(l => l.code)));
