@@ -1,15 +1,15 @@
 title: "FIXXE – Valiutų skaičiuoklė"
-subtitle: Kursai iš trijų šaltinių
-short_description: Vidutiniai kursai iš 3 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
+subtitle: Kursai iš penkių šaltinių
+short_description: Vidutiniai kursai iš 5 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
 keywords: valiuta,keitiklis,kursas,keitykla,pinigai,kelionė,forex,kripto,finansai,euras
-promotional_text: Trys kursų šaltiniai su automatiniu perjungimu, kursai neprisijungus su įspėjimu dėl senumo ir protingas apvalinimas, nesugadinantis mažų sumų.
+promotional_text: Penki kursų šaltiniai su automatiniu perjungimu, kursai neprisijungus su įspėjimu dėl senumo ir protingas apvalinimas, nesugadinantis mažų sumų.
 description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiais vidutiniais rinkos kursais. Tai neutralus taškas tarp pasaulinių pirkimo ir pardavimo kainų, be bankų antkainių.
 
 
   KUO FIXXE SKIRIASI
 
 
-  • Trys kursų šaltiniai su automatiniu perjungimu — ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+  • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
 
 
   • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
@@ -55,7 +55,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Keisti šaltinį ir pridėti“ dabar tikrai prideda valiutą ir perjungia kursų šaltinį. Uždarius klaviatūrą, sąrašas kaskart grįžta tiksliai į ankstesnę vietą."
+whats_new: "Kursai dabar gyvi: FIXXE juos ima iš „Coinbase“, kur jie atnaujinami kas minutę, todėl skaičiai dieną seka rinką, o ne keičiasi kartą per parą. Kiti šaltiniai lieka atsargai."
 landing:
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai

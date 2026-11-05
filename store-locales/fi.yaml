@@ -1,15 +1,15 @@
 title: "FIXXE – Valuuttalaskuri"
-subtitle: Kurssit kolmesta lähteestä
-short_description: Keskikurssit 3 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
+subtitle: Kurssit viidestä lähteestä
+short_description: Keskikurssit 5 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
 keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro
-promotional_text: Kolme kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
+promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
 description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset keskikurssit — puolueeton keskikohta maailman osto- ja myyntihintojen välissä, ilman pankkien katteita.
 
 
   MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-  • Kolme kurssilähdettä automaattisella vaihdolla — ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
+  • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
 
 
   • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
@@ -55,7 +55,7 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   Rates By Exchange Rate API.
 
   '
-whats_new: "”Vaihda lähde ja lisää” nyt todella lisää valuutan ja vaihtaa kurssilähteen. Kun suljet näppäimistön, luettelo palaa joka kerta täsmälleen entiselle paikalleen."
+whats_new: "Kurssit ovat nyt reaaliaikaisia: FIXXE hakee ne Coinbasesta, jossa ne päivittyvät minuutin välein, joten luvut seuraavat markkinaa pitkin päivää eivätkä muutu vain kerran päivässä. Muut lähteet jäävät varalle."
 landing:
   page_title: FIXXE — valuuttamuunnin
   install_title: Asennustavat

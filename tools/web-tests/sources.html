@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+  Источники курсов веб-версии. Открывается безголовым Chrome из
+  tools/smoke-web.sh; результат — в <pre id="result">: PASS или FAIL с причиной.
+
+  1. Разбор ответов Coinbase и FXRatesAPI: курсы приходят строками; нули,
+     отрицательные и нечисловые значения отбрасываются; отказ FXRatesAPI
+     (success=false) — ошибка, а не пустой набор курсов.
+  2. Порядок: в «Авто» первым идёт Coinbase, при его отказе — FXRatesAPI;
+     при ручном выборе выбранный источник идёт первым.
+  3. Перенос сохранённого выбора: до 1.65 «2» значило F.A., теперь F.A. — «4».
+  4. Подпись в подвале — чьи курсы на экране; у ExchangeRate-API она
+     обязана остаться дословной.
+
+  Сеть подменяется: тест не зависит от того, какой источник сегодня жив.
+-->
+<meta charset="utf-8">
+<title>sources</title>
+<iframe id="app" src="/web/index.html" style="width:420px;height:900px"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const eq = (a, b, what) => { if (JSON.stringify(a) !== JSON.stringify(b)) throw new Error(`${what}: ждали ${JSON.stringify(b)}, получили ${JSON.stringify(a)}`); };
+
+frame.addEventListener('load', async () => {
+  try {
+    const w = frame.contentWindow, d = frame.contentDocument;
+    const ev = code => w.eval(code);           // const/let приложения видны только так
+    for (let i = 0; i < 60 && !d.querySelector('.card'); i++) await wait(250);
+    if (!d.querySelector('.card')) throw new Error('приложение не запустилось');
+    for (let i = 0; i < 40 && ev('refreshing'); i++) await wait(250);
+
+    // 1. разбор ответов
+    eq(ev(`numRates({EUR:"1", rsd:"117.6", BAD:"x", ZERO:"0", NEG:"-2", INF:"Infinity"})`), {EUR:1, RSD:117.6}, 'numRates');
+    eq(ev(`SOURCES[0].name`), 'Coinbase', 'первый источник');
+    eq(ev(`SOURCES[0].parse({data:{currency:"EUR",rates:{EUR:"1",USD:"1.1237",BTC:"0.0000098"}}})`), {EUR:1, USD:1.1237, BTC:0.0000098}, 'разбор Coinbase');
+    eq(ev(`SOURCES[1].name`), 'FXRatesAPI', 'второй источник');
+    eq(ev(`SOURCES[1].parse({success:true,base:"EUR",rates:{EUR:1,USD:1.1237}})`), {EUR:1, USD:1.1237}, 'разбор FXRatesAPI');
+    let threw = false;
+    try { ev(`SOURCES[1].parse({success:false,error:"limit"})`); } catch (e) { threw = true; }
+    if (!threw) throw new Error('отказ FXRatesAPI (success=false) принят за успешный ответ');
+
+    // 2. порядок и резерв — с подменённой сетью
+    const calls = [];
+    const answers = {
+      'api.coinbase.com':  () => { throw new Error('down'); },
+      'api.fxratesapi.com': () => ({success:true, rates:{EUR:1, USD:1.5}}),
+      'open.er-api.com':   () => ({result:'success', rates:{EUR:1, USD:1.4}}),
+      'jsdelivr.net':      () => ({eur:{eur:1, usd:1.3}}),
+      'pages.dev':         () => ({eur:{eur:1, usd:1.3}}),
+      'frankfurter.dev':   () => ({rates:{USD:1.2}}),
+    };
+    w.fetch = async url => {
+      const host = Object.keys(answers).find(h => String(url).includes(h));
+      calls.push(host || String(url));
+      const body = answers[host]();            // бросит — как недоступный источник
+      return { ok: true, status: 200, json: async () => body };
+    };
+    ev('sourceMode = 0');
+    let r = await ev('fetchRates()');
+    eq(calls, ['api.coinbase.com', 'api.fxratesapi.com'], '«Авто»: порядок запросов');
+    eq(r.source, 'FXRatesAPI', '«Авто»: резерв при отказе Coinbase');
+    eq(r.rates.USD, 1.5, '«Авто»: курсы взяты у резерва');
+
+    calls.length = 0; ev('sourceMode = 4');    // F.A.
+    r = await ev('fetchRates()');
+    eq(calls[0], 'jsdelivr.net', 'ручной выбор: выбранный источник первым');
+    eq(r.source, 'F.A.', 'ручной выбор: источник');
+
+    calls.length = 0; ev('sourceMode = 1');    // Coinbase выбран, но недоступен
+    r = await ev('fetchRates()');
+    eq(r.source, 'FXRatesAPI', 'ручной выбор: остальные остаются резервом');
+
+    // 3. перенос сохранённого выбора
+    eq([0,1,2,3].map(m => w.migrateSource(m, 1)), [0,3,4,5], 'перенос выбора со старой нумерации');
+    eq([1,2,3,5].map(m => w.migrateSource(m, 2)), [1,2,3,5], 'повторный перенос ничего не сдвигает');
+
+    // 4. подпись в подвале
+    ev(`currentSource = 'ExchangeRate-API'`);
+    eq(w.attribution().text, 'Rates By Exchange Rate API', 'подпись ExchangeRate-API');
+    ev(`currentSource = 'Coinbase'`);
+    eq([w.attribution().text, w.attribution().href], ['Source: Coinbase', 'https://www.coinbase.com'], 'подпись Coinbase');
+
+    out.textContent = 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL: ' + (e && e.message || e);
+  }
+});
+</script>

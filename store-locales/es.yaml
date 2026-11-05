@@ -1,15 +1,15 @@
 title: "FIXXE – Conversor de divisas"
-subtitle: Tipos de tres fuentes
-short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+subtitle: Tipos de cinco fuentes
+short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
 keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas
-promotional_text: Tres fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
+promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
 description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
   QUÉ HACE DISTINTO A FIXXE
 
 
-  • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+  • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
 
 
   • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -55,7 +55,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   Rates By Exchange Rate API.
 
   '
-whats_new: "«Cambiar de fuente y añadir» ahora sí añade la divisa y cambia la fuente de los tipos. Al cerrar el teclado, la lista vuelve siempre exactamente a donde estaba."
+whats_new: "Los tipos ahora son en vivo: FIXXE los toma de Coinbase, donde se actualizan cada minuto, así que las cifras siguen al mercado durante el día en lugar de cambiar una vez al día. Las demás fuentes quedan como respaldo."
 landing:
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar

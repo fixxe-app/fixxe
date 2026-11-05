@@ -1,15 +1,15 @@
 title: "FIXXE – Pretvornik valut"
-subtitle: Tečaji iz treh virov
-short_description: Srednji tečaji iz 3 virov, 300+ valut, deluje brez povezave, brez oglasov.
+subtitle: Tečaji iz petih virov
+short_description: Srednji tečaji iz 5 virov, 300+ valut, deluje brez povezave, brez oglasov.
 keywords: valuta,pretvornik,tečaj,menjava,denar,potovanje,forex,kripto,finance,evro
-promotional_text: Trije viri tečajev s samodejnim preklopom, tečaji brez povezave z opozorilom o starosti in zaokroževanje, ki ne pokvari majhnih zneskov.
+promotional_text: Pet virov tečajev s samodejnim preklopom, tečaji brez povezave z opozorilom o starosti in zaokroževanje, ki ne pokvari majhnih zneskov.
 description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi tečaji — nevtralno sredino med svetovnimi nakupnimi in prodajnimi cenami, brez bančnih pribitkov.
 
 
   V ČEM JE FIXXE DRUGAČEN
 
 
-  • Trije viri tečajev s samodejnim preklopom — ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
+  • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
 
 
   • Deluje brez povezave — zadnji tečaji ostanejo v napravi, zato aplikacija računa tudi brez omrežja. Če pa so ti tečaji starejši od dneva, to pove naravnost, namesto da bi jih prikazovala kot sveže.
@@ -55,7 +55,7 @@ description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi t
   Rates By Exchange Rate API.
 
   '
-whats_new: "»Zamenjaj vir in dodaj« zdaj res doda valuto in zamenja vir tečajev. Ko zaprete tipkovnico, se seznam vsakič vrne natanko na prejšnje mesto."
+whats_new: "Tečaji so zdaj živi: FIXXE jih jemlje pri Coinbase, kjer se posodabljajo vsako minuto, zato številke čez dan sledijo trgu, namesto da bi se spremenile enkrat na dan. Drugi viri ostajajo kot rezerva."
 landing:
   page_title: FIXXE — pretvornik valut
   install_title: Načini namestitve

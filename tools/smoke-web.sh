@@ -23,11 +23,11 @@ cleanup() { [ -n "${SRV:-}" ] && kill "$SRV" 2>/dev/null || true; rm -rf "$WORK"
 trap cleanup EXIT
 fail() { echo "✗ $*" >&2; exit 1; }
 
-echo "→ 1/4 синтаксис скриптов"
+echo "→ 1/5 синтаксис скриптов"
 for f in web/*.js; do node --check "$f" >/dev/null || fail "синтаксическая ошибка в $f"; done
 echo "  ✓ $(ls web/*.js | wc -l | tr -d ' ') файлов разобраны"
 
-echo "→ 2/4 страница в безголовом Chrome"
+echo "→ 2/5 страница в безголовом Chrome"
 # корень сервера — репозиторий: так рядом с сайтом доступны и тестовые страницы
 python3 -m http.server "$PORT" --directory . >/dev/null 2>&1 &
 SRV=$!
@@ -41,12 +41,12 @@ grep -q "1 EUR = " "$WORK/dom.html" || {
 }
 echo "  ✓ курсы отрисованы"
 
-echo "→ 3/4 обработчик кнопки «обновить»"
+echo "→ 3/5 обработчик кнопки «обновить»"
 grep -q "btnRefresh').onclick = () => refresh()" web/app.js \
   || fail "кнопка «обновить» должна вызывать refresh() без аргумента, иначе событие попадёт в параметр force и отключит тротлинг"
 echo "  ✓ refresh() вызывается без аргумента"
 
-echo "→ 4/4 переключение строк, удаление валюты, разбор сумм"
+echo "→ 4/5 переключение строк, удаление валюты, разбор сумм"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/switch-rows.html" > "$WORK/switch.html" 2>/dev/null || true
 RES=$(sed -n 's/.*<pre id="result">\([^<]*\)<\/pre>.*/\1/p' "$WORK/switch.html" | head -1)
@@ -56,5 +56,15 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/switch.html"; then
   fail "сценарии ввода сумм не прошли"
 fi
 echo "  ✓ переключение строк ничего не сбрасывает и не сдвигает; удаление активной валюты переводит сумму; разбор сумм как на Android и iOS"
+
+echo "→ 5/5 источники курсов: разбор ответов, порядок, резерв, перенос выбора"
+"$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
+  --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/sources.html" > "$WORK/sources.html" 2>/dev/null || true
+if ! grep -q '<pre id="result">PASS</pre>' "$WORK/sources.html"; then
+  echo "  результат:" >&2
+  sed -n '/<pre id="result">/,/<\/pre>/p' "$WORK/sources.html" | sed 's/<[^>]*>//g; s/^/    /' >&2
+  fail "источники курсов не прошли проверку"
+fi
+echo "  ✓ Coinbase первый, FXRatesAPI резерв; ответы разбираются; сохранённый выбор переносится"
 
 echo "✓ Web smoke пройден"

@@ -1,15 +1,15 @@
 title: "FIXXE – Währungsrechner"
-subtitle: Kurse aus drei Quellen
-short_description: Mittelkurse aus 3 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
+subtitle: Kurse aus fünf Quellen
+short_description: Mittelkurse aus 5 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
 keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro
-promotional_text: Drei Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
+promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
 description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
 
   WAS FIXXE ANDERS MACHT
 
 
-  • Drei Kursquellen mit automatischem Wechsel — ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
+  • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
 
 
   • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
@@ -55,7 +55,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Quelle wechseln und hinzufügen“ fügt die Währung jetzt wirklich hinzu und wechselt die Kursquelle. Nach dem Schließen der Tastatur steht die Liste jedes Mal genau wieder dort, wo sie war."
+whats_new: "Die Kurse sind jetzt live: FIXXE bezieht sie von Coinbase, wo sie jede Minute aktualisiert werden. Die Zahlen folgen dem Markt über den Tag, statt nur einmal täglich zu wechseln. Die übrigen Quellen bleiben als Reserve."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

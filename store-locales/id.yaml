@@ -1,15 +1,15 @@
 title: "FIXXE – Konversi Mata Uang"
-subtitle: Kurs dari tiga sumber
-short_description: Kurs tengah dari 3 sumber, 300+ mata uang, jalan offline, tanpa iklan.
+subtitle: Kurs dari lima sumber
+short_description: Kurs tengah dari 5 sumber, 300+ mata uang, jalan offline, tanpa iklan.
 keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah
-promotional_text: Tiga sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
+promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
 description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs tengah pasar secara langsung — titik netral antara harga beli dan harga jual dunia, tanpa marjin bank.
 
 
   APA YANG MEMBUAT FIXXE BERBEDA
 
 
-  • Tiga sumber kurs dengan pergantian otomatis — ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
+  • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
 
 
   • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
@@ -55,7 +55,7 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   Rates By Exchange Rate API.
 
   '
-whats_new: "“Ganti sumber dan tambahkan” kini benar-benar menambahkan mata uang dan mengganti sumber kurs. Setelah keyboard ditutup, daftar selalu kembali tepat ke posisi semula."
+whats_new: "Kurs kini langsung: FIXXE mengambilnya dari Coinbase yang diperbarui setiap menit, sehingga angka mengikuti pasar sepanjang hari, bukan berubah sekali sehari. Sumber lainnya tetap menjadi cadangan."
 landing:
   page_title: FIXXE — konverter mata uang
   install_title: Cara memasang

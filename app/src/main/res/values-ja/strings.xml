@@ -37,7 +37,7 @@
     <string name="language_title">言語</string>
     <string name="language_system">システムのデフォルト</string>
     <string name="source_info_title">レートソース</string>
-    <string name="source_info_message">仲値レート — 世界市場での買値と売値の中間値です。\n\n基準通貨: EUR、その他のペアはユーロを介して計算されます。\n\nソース（自動フォールバック）:\n1. ExchangeRate-API — 主要\n2. F.A. — 主要ソースが停止した場合\n3. Frankfurter (ECB) — 第2フォールバック\n\n自動更新時または ↻ 押下時に主要ソースが応答しない場合、アプリは自動的に次のソースからデータを取得します。現在のソースは更新時刻の隣に上部に表示されます。\n\n設定（⚙）で特定のソースを強制指定できます — 他のソースは引き続きフォールバックとして残ります。\n\n更新は1日1回です。他の参考レートサービスとの差は通常 0.5% 未満です — これはリアルタイムの相場ではなく参考レートです。\n\nライセンスと表記:\n• ExchangeRate-API —「Rates By Exchange Rate API」リンクが必要です（フッター内、クリック可能）。\n• F.A. — CC0（パブリックドメイン）、表記は不要です。\n• Frankfurter — MIT、データは欧州中央銀行 (ECB) から提供されています。</string>
+    <string name="source_info_message">仲値レート — 世界市場での買値と売値の中間値です。\n\n基準通貨: EUR、その他のペアはユーロを介して計算されます。\n\nソース（自動フォールバック）:\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\n自動更新時または ↻ 押下時に主要ソースが応答しない場合、アプリは自動的に次のソースからデータを取得します。現在のソースは更新時刻の隣に上部に表示されます。\n\n設定（⚙）で特定のソースを強制指定できます — 他のソースは引き続きフォールバックとして残ります。\n\nCoinbase と FXRatesAPI は 1 分ごとに、その他のソースは 1 日 1 回更新されます。これらは参考レートであり、取引レートではありません。\n\nライセンスと表記:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API —「Rates By Exchange Rate API」リンクが必要です（フッター内、クリック可能）。\n• F.A. — CC0（パブリックドメイン）、表記は不要です。\n• Frankfurter — MIT、データは欧州中央銀行 (ECB) から提供されています。</string>
     <string name="filter_all">すべて</string>
     <string name="switch_source_title">ソースを切り替えますか？</string>
     <string name="switch_source_msg">%1$s は現在のソースではなく %2$s から利用できます。切り替えて追加しますか？</string>

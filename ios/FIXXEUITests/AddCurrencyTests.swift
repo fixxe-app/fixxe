@@ -9,7 +9,7 @@ final class AddCurrencyTests: XCTestCase {
     func testSwitchSourceAndAddActuallyAdds() {
         let app = XCUIApplication()
         app.launchArguments += ["-screen-currencies", "EUR,USD,RSD",
-                                "-screen-source", "1",            // ExchangeRate-API: ETH там нет
+                                "-screen-source", "3",            // ExchangeRate-API: ETH там нет
                                 "-screen-add", "-screen-query", "ETH"]
         app.launch()
 
@@ -26,7 +26,10 @@ final class AddCurrencyTests: XCTestCase {
         let row = app.descendants(matching: .any).matching(identifier: "amount-ETH").firstMatch
         XCTAssertTrue(row.waitForExistence(timeout: 20),
                       "после «\(confirm.label)» ETH так и не появилась в списке")
-        let status = app.staticTexts.containing(NSPredicate(format: "label CONTAINS 'F.A.'")).firstMatch
-        XCTAssertTrue(status.waitForExistence(timeout: 20), "источник не переключился на F.A.")
+        // переключается на первый источник, где ETH есть: обычно Coinbase,
+        // а если его список не загрузился — FXRatesAPI или F.A.
+        let status = app.staticTexts.containing(NSPredicate(format:
+            "label CONTAINS 'Coinbase' OR label CONTAINS 'FXR' OR label CONTAINS 'F.A.'")).firstMatch
+        XCTAssertTrue(status.waitForExistence(timeout: 20), "источник не переключился с ExchangeRate-API")
     }
 }

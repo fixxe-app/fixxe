@@ -38,14 +38,14 @@ pricing:
 locales:
   ar:
     title: FIXXE – محول العملات
-    short_description: أسعار وسطية من 3 مصادر، 300+ عملة، تعمل دون اتصال، بلا إعلانات.
+    short_description: أسعار وسطية من 5 مصادر، 300+ عملة، تعمل دون اتصال، بلا إعلانات.
     full_description: '‏FIXXE محوّل عملات سريع وأنيق بأسعار السوق الوسطية الحية — النقطة المحايدة بين أسعار الشراء والبيع العالمية، بلا هوامش مصرفية.
 
 
       ما الذي يميز FIXXE
 
 
-      • ثلاثة مصادر للأسعار مع تبديل تلقائي — ExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها.
+      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها.
 
 
       • يعمل دون اتصال — تبقى آخر الأسعار على جهازك، فيواصل التطبيق الحساب بلا شبكة. وإذا مضى على تلك الأسعار أكثر من يوم، يقولها صراحةً بدل أن يُظهرها وكأنها حديثة.
@@ -93,14 +93,14 @@ locales:
       '
   bg:
     title: FIXXE – Валутен конвертор
-    short_description: Средни курсове от 3 източника, 300+ валути, работи офлайн, без реклами.
+    short_description: Средни курсове от 5 източника, 300+ валути, работи офлайн, без реклами.
     full_description: 'FIXXE е бърз и изчистен валутен конвертор с актуални средни пазарни курсове — неутралната среда между световните цени купува и продава, без банкови надбавки.
 
 
       С КАКВО FIXXE Е РАЗЛИЧЕН
 
 
-      • Три източника на курсове с автоматично превключване — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже.
+      • Пет източника на курсове с автоматично превключване — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже.
 
 
       • Работи офлайн — последните курсове остават на устройството, така че приложението смята и без връзка. А ако тези курсове са по-стари от денонощие, го казва направо, вместо да ги представя за актуални.
@@ -148,14 +148,14 @@ locales:
       '
   cs-CZ:
     title: FIXXE – Převodník měn
-    short_description: Střední kurzy ze 3 zdrojů, 300+ měn, funguje offline, bez reklam.
+    short_description: Střední kurzy z 5 zdrojů, 300+ měn, funguje offline, bez reklam.
     full_description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními středními kurzy — neutrálním středem mezi světovými nákupními a prodejními cenami, bez bankovních přirážek.
 
 
       ČÍM SE FIXXE LIŠÍ
 
 
-      • Tři zdroje kurzů s automatickým přepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
 
 
       • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
@@ -203,14 +203,14 @@ locales:
       '
   da-DK:
     title: FIXXE – Valutaomregner
-    short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uden reklamer.
+    short_description: Middelkurser fra 5 kilder, 300+ valutaer, virker offline, uden reklamer.
     full_description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser — det neutrale midtpunkt mellem verdens købs- og salgspriser, uden banktillæg.
 
 
       DET HER GØR FIXXE ANDERLEDES
 
 
-      • Tre kurskilder med automatisk skift — ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
+      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
 
 
       • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
@@ -258,14 +258,14 @@ locales:
       '
   de-DE:
     title: FIXXE – Währungsrechner
-    short_description: Mittelkurse aus 3 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
+    short_description: Mittelkurse aus 5 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
     full_description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
 
       WAS FIXXE ANDERS MACHT
 
 
-      • Drei Kursquellen mit automatischem Wechsel — ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
+      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
 
 
       • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
@@ -313,14 +313,14 @@ locales:
       '
   el-GR:
     title: FIXXE – Μετατροπέας νομισμάτων
-    short_description: Μέσες ισοτιμίες από 3 πηγές, 300+ νομίσματα, εκτός σύνδεσης, χωρίς διαφημίσεις.
+    short_description: Μέσες ισοτιμίες από 5 πηγές, 300+ νομίσματα, εκτός σύνδεσης, χωρίς διαφημίσεις.
     full_description: 'Το FIXXE είναι ένας γρήγορος και καθαρός μετατροπέας νομισμάτων με ζωντανές μέσες ισοτιμίες αγοράς — το ουδέτερο μέσο ανάμεσα στις παγκόσμιες τιμές αγοράς και πώλησης, χωρίς τραπεζικά περιθώρια.
 
 
       ΤΙ ΚΑΝΕΙ ΤΟ FIXXE ΔΙΑΦΟΡΕΤΙΚΟ
 
 
-      • Τρεις πηγές ισοτιμιών με αυτόματη εναλλαγή — ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα.
+      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα.
 
 
       • Λειτουργεί εκτός σύνδεσης — οι τελευταίες ισοτιμίες μένουν στη συσκευή, οπότε η εφαρμογή συνεχίζει να υπολογίζει χωρίς δίκτυο. Κι αν αυτές οι ισοτιμίες είναι πάνω από μία ημέρα παλιές, το λέει καθαρά αντί να τις παρουσιάζει ως τρέχουσες.
@@ -368,14 +368,14 @@ locales:
       '
   en-US:
     title: FIXXE – Currency Converter
-    short_description: Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.
+    short_description: Live mid-market rates from 5 sources, 300+ currencies, offline, no ads.
     full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
 
 
-      • Three rate sources with automatic fallback — ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -423,14 +423,14 @@ locales:
       '
   en-GB:
     title: FIXXE – Currency Converter
-    short_description: Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.
+    short_description: Live mid-market rates from 5 sources, 300+ currencies, offline, no ads.
     full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
 
 
-      • Three rate sources with automatic fallback — ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -478,14 +478,14 @@ locales:
       '
   es-ES:
     title: FIXXE – Conversor de divisas
-    short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
     full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -533,14 +533,14 @@ locales:
       '
   es-419:
     title: FIXXE – Conversor de divisas
-    short_description: Tipos medios de 3 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
     full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Tres fuentes de tipos con relevo automático: ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -588,14 +588,14 @@ locales:
       '
   et:
     title: FIXXE – Valuutakalkulaator
-    short_description: Keskkursid 3 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
+    short_description: Keskkursid 5 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
     full_description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssidega — see on neutraalne keskpunkt maailma ostu- ja müügihindade vahel, ilma pangamarginaalita.
 
 
       MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-      • Kolm kursiallikat automaatse vahetusega — ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+      • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
 
 
       • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
@@ -643,14 +643,14 @@ locales:
       '
   fa:
     title: FIXXE – مبدل ارز
-    short_description: نرخ میانهٔ بازار از ۳ منبع، بیش از ۳۰۰ ارز، کار بدون اینترنت، بدون تبلیغ.
+    short_description: نرخ میانهٔ بازار از ۵ منبع، بیش از ۳۰۰ ارز، کار بدون اینترنت، بدون تبلیغ.
     full_description: '‏FIXXE یک مبدل ارز سریع و تمیز با نرخ‌های میانهٔ بازار است — نقطهٔ بی‌طرف میان قیمت‌های خرید و فروش جهانی، بدون حاشیهٔ سود بانک‌ها.
 
 
       چه چیزی FIXXE را متفاوت می‌کند
 
 
-      • سه منبع نرخ با جابه‌جایی خودکار — ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند.
+      • پنج منبع نرخ با جابه‌جایی خودکار — Coinbase، FXRatesAPI، ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند.
 
 
       • بدون اینترنت کار می‌کند — آخرین نرخ‌ها روی دستگاه می‌مانند، پس برنامه بدون اتصال هم محاسبه می‌کند. و اگر آن نرخ‌ها بیش از یک روز قدیمی باشند، همین را صریح می‌گوید، نه اینکه آن‌ها را تازه جلوه دهد.
@@ -698,14 +698,14 @@ locales:
       '
   fi-FI:
     title: FIXXE – Valuuttalaskuri
-    short_description: Keskikurssit 3 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
+    short_description: Keskikurssit 5 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
     full_description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset keskikurssit — puolueeton keskikohta maailman osto- ja myyntihintojen välissä, ilman pankkien katteita.
 
 
       MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-      • Kolme kurssilähdettä automaattisella vaihdolla — ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
+      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
 
 
       • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
@@ -753,14 +753,14 @@ locales:
       '
   fr-FR:
     title: FIXXE – Convertisseur devises
-    short_description: Taux interbancaires de 3 sources, 300+ devises, hors ligne, sans publicité.
+    short_description: Taux interbancaires de 5 sources, 300+ devises, hors ligne, sans publicité.
     full_description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des taux interbancaires en direct — le point médian neutre entre les prix mondiaux d''achat et de vente, sans marge bancaire.
 
 
       CE QUI DISTINGUE FIXXE
 
 
-      • Trois sources de taux avec bascule automatique — ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -808,14 +808,14 @@ locales:
       '
   fr-CA:
     title: FIXXE – Convertisseur devises
-    short_description: Taux interbancaires de 3 sources, 300+ devises, hors ligne, sans publicité.
+    short_description: Taux interbancaires de 5 sources, 300+ devises, hors ligne, sans publicité.
     full_description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des taux interbancaires en direct — le point médian neutre entre les prix mondiaux d''achat et de vente, sans marge bancaire.
 
 
       CE QUI DISTINGUE FIXXE
 
 
-      • Trois sources de taux avec bascule automatique — ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -863,14 +863,14 @@ locales:
       '
   iw-IL:
     title: FIXXE – ממיר מטבעות
-    short_description: שערים ממוצעים מ-3 מקורות, 300+ מטבעות, עובד לא מקוון, בלי פרסומות.
+    short_description: שערים ממוצעים מ-5 מקורות, 300+ מטבעות, עובד לא מקוון, בלי פרסומות.
     full_description: '‏FIXXE הוא ממיר מטבעות מהיר ונקי עם שערי אמצע חיים — נקודת האמצע הניטרלית בין מחירי הקנייה והמכירה בעולם, בלי מרווחי בנק.
 
 
       מה שונה ב-FIXXE
 
 
-      • שלושה מקורות שערים עם מעבר אוטומטי — ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום.
+      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום.
 
 
       • עובד לא מקוון — השערים האחרונים נשמרים במכשיר, כך שהאפליקציה ממשיכה לחשב גם בלי חיבור. ואם השערים האלה בני יותר מיממה, היא אומרת זאת במפורש במקום להציג אותם כעדכניים.
@@ -918,14 +918,14 @@ locales:
       '
   hi-IN:
     title: FIXXE – मुद्रा परिवर्तक
-    short_description: 3 स्रोतों से मध्य-बाज़ार दरें, 300+ मुद्राएँ, ऑफ़लाइन चलता है, विज्ञापन नहीं।
+    short_description: 5 स्रोतों से मध्य-बाज़ार दरें, 300+ मुद्राएँ, ऑफ़लाइन चलता है, विज्ञापन नहीं।
     full_description: 'FIXXE एक तेज़ और साफ़-सुथरा मुद्रा कनवर्टर है, जिसमें सजीव मध्य-बाज़ार दरें हैं — दुनिया भर के खरीद और बिक्री भावों के बीच का तटस्थ बिंदु, बैंक मार्जिन के बिना।
 
 
       FIXXE अलग कैसे है
 
 
-      • स्वतः बदलने वाले तीन दर-स्रोत — ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते।
+      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते।
 
 
       • ऑफ़लाइन काम करता है — पिछली दरें आपके उपकरण पर रहती हैं, इसलिए बिना कनेक्शन भी ऐप गणना करता रहता है। और अगर वे दरें एक दिन से पुरानी हों, तो वह साफ़ कह देता है, उन्हें ताज़ा बताकर नहीं चलाता।
@@ -973,14 +973,14 @@ locales:
       '
   hr:
     title: FIXXE – Pretvarač valuta
-    short_description: Srednji tečajevi iz 3 izvora, 300+ valuta, radi offline, bez oglasa.
+    short_description: Srednji tečajevi iz 5 izvora, 300+ valuta, radi offline, bez oglasa.
     full_description: 'FIXXE je brz i pregledan pretvarač valuta sa živim srednjim tečajevima — neutralnom sredinom između svjetskih kupovnih i prodajnih cijena, bez bankovnih marži.
 
 
       PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Tri izvora tečaja s automatskom zamjenom — ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
 
 
       • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
@@ -1028,14 +1028,14 @@ locales:
       '
   hu-HU:
     title: FIXXE – Valutaváltó
-    short_description: Középárfolyamok 3 forrásból, 300+ pénznem, offline is, reklám nélkül.
+    short_description: Középárfolyamok 5 forrásból, 300+ pénznem, offline is, reklám nélkül.
     full_description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokkal — ez a világpiaci vételi és eladási ár közötti semleges középpont, banki felárak nélkül.
 
 
       MIBEN MÁS A FIXXE
 
 
-      • Három árfolyamforrás automatikus váltással — ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
 
 
       • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
@@ -1083,14 +1083,14 @@ locales:
       '
   id:
     title: FIXXE – Konversi Mata Uang
-    short_description: Kurs tengah dari 3 sumber, 300+ mata uang, jalan offline, tanpa iklan.
+    short_description: Kurs tengah dari 5 sumber, 300+ mata uang, jalan offline, tanpa iklan.
     full_description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs tengah pasar secara langsung — titik netral antara harga beli dan harga jual dunia, tanpa marjin bank.
 
 
       APA YANG MEMBUAT FIXXE BERBEDA
 
 
-      • Tiga sumber kurs dengan pergantian otomatis — ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
+      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
 
 
       • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
@@ -1138,14 +1138,14 @@ locales:
       '
   it-IT:
     title: FIXXE – Convertitore valute
-    short_description: Tassi medi da 3 fonti, 300+ valute, funziona offline, senza pubblicità.
+    short_description: Tassi medi da 5 fonti, 300+ valute, funziona offline, senza pubblicità.
     full_description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi di mercato in tempo reale: il punto neutro fra i prezzi mondiali di acquisto e di vendita, senza ricarichi bancari.
 
 
       COSA RENDE FIXXE DIVERSO
 
 
-      • Tre fonti di tassi con passaggio automatico — ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
+      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
 
 
       • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
@@ -1193,14 +1193,14 @@ locales:
       '
   ja-JP:
     title: FIXXE – 通貨換算・為替レート
-    short_description: 3つの情報源の仲値レート、300以上の通貨、オフライン対応、広告なし。
+    short_description: 5つの情報源の仲値レート、300以上の通貨、オフライン対応、広告なし。
     full_description: 'FIXXEは、実勢の仲値レートで動く速くて見やすい通貨換算アプリです。仲値とは世界の買値と売値のちょうど中間で、銀行の上乗せを含みません。
 
 
       FIXXEが違うところ
 
 
-      • 自動で切り替わる3つのレート情報源 — ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。
+      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。
 
 
       • オフラインでも動く — 最後のレートは端末に残るので、通信がなくても計算を続けられます。そのレートが1日以上前のものなら、新しいふりをせずにはっきりそう伝えます。
@@ -1248,14 +1248,14 @@ locales:
       '
   ka-GE:
     title: FIXXE – ვალუტის კონვერტორი
-    short_description: საშუალო კურსები 3 წყაროდან, 300+ ვალუტა, მუშაობს ოფლაინ, რეკლამის გარეშე.
+    short_description: საშუალო კურსები 5 წყაროდან, 300+ ვალუტა, მუშაობს ოფლაინ, რეკლამის გარეშე.
     full_description: 'FIXXE არის სწრაფი და მოწესრიგებული ვალუტის კონვერტორი ბაზრის საშუალო კურსებით — ეს არის ნეიტრალური შუაწერტილი მსოფლიო ყიდვისა და გაყიდვის ფასებს შორის, საბანკო ზედნადების გარეშე.
 
 
       რით განსხვავდება FIXXE
 
 
-      • კურსის სამი წყარო ავტომატური გადართვით — ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს.
+      • კურსის ხუთი წყარო ავტომატური გადართვით — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს.
 
 
       • მუშაობს ოფლაინ — ბოლო კურსები რჩება მოწყობილობაზე, ამიტომ აპლიკაცია კავშირის გარეშეც ითვლის. და თუ ეს კურსები ერთ დღეზე ძველია, ამას პირდაპირ ამბობს, ნაცვლად იმისა, რომ ახალივით წარმოაჩინოს.
@@ -1303,14 +1303,14 @@ locales:
       '
   ko-KR:
     title: FIXXE – 환율 계산기
-    short_description: 3개 출처의 중간환율, 300개 이상 통화, 오프라인 사용, 광고 없음.
+    short_description: 5개 출처의 중간환율, 300개 이상 통화, 오프라인 사용, 광고 없음.
     full_description: 'FIXXE는 실시간 중간환율로 동작하는 빠르고 깔끔한 환율 계산기입니다. 중간환율은 전 세계 매수가와 매도가의 중립적인 중간값으로, 은행 마진이 섞이지 않습니다.
 
 
       FIXXE가 다른 점
 
 
-      • 자동으로 전환되는 세 곳의 환율 출처 — ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다.
+      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다.
 
 
       • 오프라인에서도 동작 — 마지막 환율이 기기에 남아 있어 연결이 없어도 계산이 이어집니다. 그 환율이 하루보다 오래됐다면 최신인 척하지 않고 분명히 알려줍니다.
@@ -1358,14 +1358,14 @@ locales:
       '
   lt:
     title: FIXXE – Valiutų skaičiuoklė
-    short_description: Vidutiniai kursai iš 3 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
+    short_description: Vidutiniai kursai iš 5 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
     full_description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiais vidutiniais rinkos kursais. Tai neutralus taškas tarp pasaulinių pirkimo ir pardavimo kainų, be bankų antkainių.
 
 
       KUO FIXXE SKIRIASI
 
 
-      • Trys kursų šaltiniai su automatiniu perjungimu — ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+      • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
 
 
       • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
@@ -1413,14 +1413,14 @@ locales:
       '
   lv:
     title: FIXXE – Valūtas kalkulators
-    short_description: Vidējie kursi no 3 avotiem, 300+ valūtu, darbojas bezsaistē, bez reklāmām.
+    short_description: Vidējie kursi no 5 avotiem, 300+ valūtu, darbojas bezsaistē, bez reklāmām.
     full_description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika vidējiem tirgus kursiem — neitrālo viduspunktu starp pasaules pirkšanas un pārdošanas cenām, bez banku uzcenojuma.
 
 
       AR KO FIXXE ATŠĶIRAS
 
 
-      • Trīs kursu avoti ar automātisku pāreju — ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
+      • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
 
 
       • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
@@ -1468,14 +1468,14 @@ locales:
       '
   mk-MK:
     title: FIXXE – Конвертор на валути
-    short_description: Средни курсеви од 3 извори, 300+ валути, работи офлајн, без реклами.
+    short_description: Средни курсеви од 5 извори, 300+ валути, работи офлајн, без реклами.
     full_description: 'FIXXE е брз и прегледен конвертор на валути со живи средни курсеви — неутралната средина меѓу светските куповни и продажни цени, без банкарски маржи.
 
 
       ПО ШТО СЕ РАЗЛИКУВА FIXXE
 
 
-      • Три извори на курсеви со автоматска замена — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо.
+      • Пет извори на курсеви со автоматска замена — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо.
 
 
       • Работи офлајн — последните курсеви остануваат на уредот, па апликацијата пресметува и без врска. А ако тие курсеви се постари од еден ден, тоа го кажува отворено наместо да ги претставува како свежи.
@@ -1523,14 +1523,14 @@ locales:
       '
   no-NO:
     title: FIXXE – Valutakalkulator
-    short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uten reklame.
+    short_description: Middelkurser fra 5 kilder, 300+ valutaer, virker offline, uten reklame.
     full_description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurser — det nøytrale midtpunktet mellom verdens kjøps- og salgspriser, uten bankpåslag.
 
 
       DETTE GJØR FIXXE ANNERLEDES
 
 
-      • Tre kurskilder med automatisk bytte — ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter.
+      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter.
 
 
       • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
@@ -1578,14 +1578,14 @@ locales:
       '
   nl-NL:
     title: FIXXE – Valutacalculator
-    short_description: Middenkoersen uit 3 bronnen, 300+ valuta's, werkt offline, geen reclame.
+    short_description: Middenkoersen uit 5 bronnen, 300+ valuta's, werkt offline, geen reclame.
     full_description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele middenkoersen — het neutrale midden tussen wereldwijde koop- en verkoopprijzen, zonder bankmarges.
 
 
       WAT FIXXE ANDERS MAAKT
 
 
-      • Drie koersbronnen met automatische wissel — ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
 
 
       • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
@@ -1633,14 +1633,14 @@ locales:
       '
   pl-PL:
     title: FIXXE – Przelicznik walut
-    short_description: Kursy średnie z 3 źródeł, 300+ walut, działa offline, bez reklam.
+    short_description: Kursy średnie z 5 źródeł, 300+ walut, działa offline, bez reklam.
     full_description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursami średnimi — neutralnym środkiem między światowymi cenami kupna i sprzedaży, bez marż bankowych.
 
 
       CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-      • Trzy źródła kursów z automatycznym przełączaniem — ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje.
+      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje.
 
 
       • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
@@ -1688,14 +1688,14 @@ locales:
       '
   pt-PT:
     title: FIXXE – Conversor de moedas
-    short_description: Taxas médias de 3 fontes, 300+ moedas, funciona offline, sem anúncios.
+    short_description: Taxas médias de 5 fontes, 300+ moedas, funciona offline, sem anúncios.
     full_description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
 
 
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Três fontes de taxas com troca automática — ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -1743,14 +1743,14 @@ locales:
       '
   pt-BR:
     title: FIXXE – Conversor de moedas
-    short_description: Taxas médias de 3 fontes, 300+ moedas, funciona offline, sem anúncios.
+    short_description: Taxas médias de 5 fontes, 300+ moedas, funciona offline, sem anúncios.
     full_description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
 
 
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Três fontes de taxas com troca automática — ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -1798,14 +1798,14 @@ locales:
       '
   ro:
     title: FIXXE – Convertor valutar
-    short_description: Cursuri medii din 3 surse, 300+ valute, funcționează offline, fără reclame.
+    short_description: Cursuri medii din 5 surse, 300+ valute, funcționează offline, fără reclame.
     full_description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii de piață în timp real — punctul neutru dintre prețurile mondiale de cumpărare și de vânzare, fără adaosuri bancare.
 
 
       CE ÎL FACE PE FIXXE DIFERIT
 
 
-      • Trei surse de curs cu trecere automată — ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
+      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
 
 
       • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
@@ -1853,14 +1853,14 @@ locales:
       '
   ru-RU:
     title: FIXXE – Конвертер валют
-    short_description: Среднерыночные курсы из 3 источников, 300+ валют, офлайн, без рекламы.
+    short_description: Среднерыночные курсы из 5 источников, 300+ валют, офлайн, без рекламы.
     full_description: 'FIXXE — быстрый и чистый конвертер валют со среднерыночными курсами: это нейтральная середина между мировыми ценами покупки и продажи, без банковских наценок.
 
 
       ЧЕМ FIXXE ОТЛИЧАЕТСЯ
 
 
-      • Три источника курсов с автоматическим резервом — ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает.
+      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает.
 
 
       • Работает офлайн — последние курсы хранятся на устройстве, так что приложение считает и без связи. А если этим курсам больше суток, оно честно об этом говорит, а не делает вид, что они свежие.
@@ -1908,14 +1908,14 @@ locales:
       '
   sk:
     title: FIXXE – Prevodník mien
-    short_description: Stredné kurzy z 3 zdrojov, 300+ mien, funguje offline, bez reklám.
+    short_description: Stredné kurzy z 5 zdrojov, 300+ mien, funguje offline, bez reklám.
     full_description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi strednými kurzami — neutrálnym stredom medzi svetovými nákupnými a predajnými cenami, bez bankových prirážok.
 
 
       ČÍM SA FIXXE LÍŠI
 
 
-      • Tri zdroje kurzov s automatickým prepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
+      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
 
 
       • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
@@ -1963,14 +1963,14 @@ locales:
       '
   sl:
     title: FIXXE – Pretvornik valut
-    short_description: Srednji tečaji iz 3 virov, 300+ valut, deluje brez povezave, brez oglasov.
+    short_description: Srednji tečaji iz 5 virov, 300+ valut, deluje brez povezave, brez oglasov.
     full_description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi tečaji — nevtralno sredino med svetovnimi nakupnimi in prodajnimi cenami, brez bančnih pribitkov.
 
 
       V ČEM JE FIXXE DRUGAČEN
 
 
-      • Trije viri tečajev s samodejnim preklopom — ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
+      • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
 
 
       • Deluje brez povezave — zadnji tečaji ostanejo v napravi, zato aplikacija računa tudi brez omrežja. Če pa so ti tečaji starejši od dneva, to pove naravnost, namesto da bi jih prikazovala kot sveže.
@@ -2018,14 +2018,14 @@ locales:
       '
   sr:
     title: FIXXE – Конвертор валута
-    short_description: Средњи курсеви из 3 извора, 300+ валута, ради офлајн, без реклама.
+    short_description: Средњи курсеви из 5 извора, 300+ валута, ради офлајн, без реклама.
     full_description: 'FIXXE је брз и прегледан конвертор валута са живим средњим курсевима — неутралном средином између светских куповних и продајних цена, без банкарских маржи.
 
 
       ПО ЧЕМУ СЕ FIXXE РАЗЛИКУЈЕ
 
 
-      • Три извора курса са аутоматском заменом — ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа.
+      • Пет извора курса са аутоматском заменом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа.
 
 
       • Ради без интернета — последњи курсеви остају на уређају, па апликација рачуна и без везе. А ако су ти курсеви старији од једног дана, то отворено каже уместо да их приказује као свеже.
@@ -2073,14 +2073,14 @@ locales:
       '
   sv-SE:
     title: FIXXE – Valutaomvandlare
-    short_description: Mittkurser från 3 källor, 300+ valutor, fungerar offline, utan reklam.
+    short_description: Mittkurser från 5 källor, 300+ valutor, fungerar offline, utan reklam.
     full_description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurser — den neutrala mittpunkten mellan världens köp- och säljpriser, utan bankpåslag.
 
 
       DET HÄR SKILJER FIXXE
 
 
-      • Tre kurskällor med automatiskt byte — ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
+      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
 
 
       • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
@@ -2128,14 +2128,14 @@ locales:
       '
   th:
     title: FIXXE – แปลงสกุลเงิน
-    short_description: อัตรากลางตลาดจาก 3 แหล่ง 300+ สกุลเงิน ใช้ออฟไลน์ได้ ไม่มีโฆษณา
+    short_description: อัตรากลางตลาดจาก 5 แหล่ง 300+ สกุลเงิน ใช้ออฟไลน์ได้ ไม่มีโฆษณา
     full_description: 'FIXXE คือเครื่องแปลงสกุลเงินที่เร็วและสะอาดตา พร้อมอัตรากลางตลาดแบบสด — จุดกึ่งกลางที่เป็นกลางระหว่างราคาซื้อและราคาขายทั่วโลก ไม่มีส่วนต่างของธนาคาร
 
 
       FIXXE ต่างออกไปอย่างไร
 
 
-      • สามแหล่งอัตราที่สลับให้อัตโนมัติ — ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย
+      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย
 
 
       • ใช้งานออฟไลน์ได้ — อัตราล่าสุดถูกเก็บไว้ในเครื่อง แอปจึงคำนวณต่อได้แม้ไม่มีสัญญาณ และถ้าอัตราเหล่านั้นเก่ากว่าหนึ่งวัน แอปจะบอกตรง ๆ แทนที่จะทำเป็นว่ายังใหม่อยู่
@@ -2183,14 +2183,14 @@ locales:
       '
   tr-TR:
     title: FIXXE – Döviz Çevirici
-    short_description: 3 kaynaktan piyasa ortalaması kurlar, 300+ para birimi, çevrimdışı, reklamsız.
+    short_description: 5 kaynaktan piyasa ortalaması kurlar, 300+ para birimi, çevrimdışı, reklamsız.
     full_description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sade bir döviz çeviricisidir — dünya alış ve satış fiyatlarının tarafsız ortası, banka farkları olmadan.
 
 
       FIXXE''Yİ FARKLI KILAN NE
 
 
-      • Otomatik yedekli üç kur kaynağı — ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
+      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
 
 
       • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
@@ -2238,14 +2238,14 @@ locales:
       '
   vi:
     title: FIXXE – Chuyển đổi tiền tệ
-    short_description: Tỷ giá trung bình từ 3 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
+    short_description: Tỷ giá trung bình từ 5 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
     full_description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàng với tỷ giá trung bình thị trường theo thời gian thực — điểm trung lập giữa giá mua và giá bán toàn cầu, không có chênh lệch của ngân hàng.
 
 
       ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-      • Ba nguồn tỷ giá tự động chuyển đổi — ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
 
 
       • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
@@ -2293,14 +2293,14 @@ locales:
       '
   zh-CN:
     title: FIXXE – 汇率换算·货币转换
-    short_description: 三个来源的中间汇率，300+ 种货币，离线可用，没有广告。
+    short_description: 五个来源的中间汇率，300+ 种货币，离线可用，没有广告。
     full_description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实时中间汇率——全球买价与卖价之间的中立中点，不含银行加价。
 
 
       FIXXE 的不同之处
 
 
-      • 三个汇率来源自动接替——ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
+      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
 
 
       • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。

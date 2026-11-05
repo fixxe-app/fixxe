@@ -67,10 +67,21 @@ struct ContentView: View {
     /// короткое имя не переносилось по нему на две строки.
     private func shortSource(_ s: String) -> String {
         switch s {
+        case "FXRatesAPI":        return "FXR\u{2011}API"
         case "ExchangeRate-API":  return "ER\u{2011}API"
         case "Frankfurter (ECB)": return "Fra.ECB"
-        default:                  return s      // «F.A.» уже короткое
+        default:                  return s      // «F.A.», «Coinbase», «Wise» уже короткие
         }
+    }
+
+    /// Подпись в подвале — чьи курсы сейчас на экране. У ExchangeRate-API
+    /// она дословная и со ссылкой: это условие их бесплатного тарифа.
+    private var attribution: (text: String, url: URL) {
+        if let src = RatesService.sources.first(where: { $0.name == vm.currentSource }),
+           src.name != "ExchangeRate-API", let url = URL(string: src.site) {
+            return ("Source: \(src.name)", url)
+        }
+        return (L10n.t("attribution"), URL(string: "https://www.exchangerate-api.com")!)
     }
 
     /// Строка не должна начинаться с разделителя «·» — привязываем его к слову слева.
@@ -237,9 +248,9 @@ struct ContentView: View {
                     .font(.caption).foregroundColor(.brandBlue)
             }
             HStack {
-                Link(L10n.t("attribution"),
-                     destination: URL(string: "https://www.exchangerate-api.com")!)
+                Link(attribution.text, destination: attribution.url)
                     .font(.caption2).foregroundColor(Color.muted)
+                    .accessibilityIdentifier("attribution")
                 Spacer()
                 Text(L10n.t("version", AppInfo.version))
                     .font(.caption2).foregroundColor(Color.textDim)

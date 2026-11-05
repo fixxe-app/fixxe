@@ -1,15 +1,15 @@
 title: "FIXXE – Prevodník mien"
-subtitle: Kurzy z troch zdrojov
-short_description: Stredné kurzy z 3 zdrojov, 300+ mien, funguje offline, bez reklám.
+subtitle: Kurzy z piatich zdrojov
+short_description: Stredné kurzy z 5 zdrojov, 300+ mien, funguje offline, bez reklám.
 keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro
-promotional_text: Tri zdroje kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
+promotional_text: Päť zdrojov kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
 description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi strednými kurzami — neutrálnym stredom medzi svetovými nákupnými a predajnými cenami, bez bankových prirážok.
 
 
   ČÍM SA FIXXE LÍŠI
 
 
-  • Tri zdroje kurzov s automatickým prepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
+  • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
 
 
   • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
@@ -55,7 +55,7 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Zmeniť zdroj a pridať“ teraz menu naozaj pridá a prepne zdroj kurzov. Po zatvorení klávesnice sa zoznam zakaždým vráti presne tam, kde bol."
+whats_new: "Kurzy sú teraz živé: FIXXE ich berie z Coinbase, kde sa aktualizujú každú minútu, takže čísla sledujú trh počas dňa namiesto jednej zmeny denne. Ostatné zdroje zostávajú ako záloha."
 landing:
   page_title: FIXXE — prevodník mien
   install_title: Spôsoby inštalácie

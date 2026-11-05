@@ -1,15 +1,15 @@
 title: "FIXXE – Currency Converter"
-subtitle: Live rates from three sources
-short_description: Live mid-market rates from 3 sources, 300+ currencies, offline, no ads.
+subtitle: Live rates from five sources
+short_description: Live mid-market rates from 5 sources, 300+ currencies, offline, no ads.
 keywords: currency,converter,exchange,rate,money,travel,forex,crypto,finance,ruble
-promotional_text: Three rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
+promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
 description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
   WHY FIXXE IS DIFFERENT
 
 
-  • Three rate sources with automatic fallback — ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+  • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
 
 
   • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -55,7 +55,7 @@ description: 'FIXXE is a fast, clean currency converter with live mid-market exc
   Rates By Exchange Rate API.
 
   '
-whats_new: "“Switch source and add” now really adds the currency and switches the rate source. After you close the keyboard, the list returns to exactly where it was — every time."
+whats_new: "Rates are now live: FIXXE takes them from Coinbase, refreshed every minute, so the numbers follow the market through the day instead of updating once a day. The other sources remain as fallbacks."
 landing:
   page_title: FIXXE — currency converter
   install_title: Ways to install

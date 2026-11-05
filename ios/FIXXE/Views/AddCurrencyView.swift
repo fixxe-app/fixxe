@@ -59,7 +59,8 @@ struct AddCurrencyView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 6) {
                 chip(L10n.t("filter_all"), idx: -1, color: Color.chipOn)
-                ForEach(Array(RatesService.sources.enumerated()), id: \.offset) { i, s in
+                // источники «только вручную» в фильтре не показываем
+                ForEach(Array(RatesService.sources.enumerated()).filter { !$0.element.manualOnly }, id: \.offset) { i, s in
                     chip(s.short, idx: i, color: Color(hex: s.colorHex))
                 }
             }
@@ -86,7 +87,7 @@ struct AddCurrencyView: View {
 
     private func row(_ code: String) -> some View {
         let added = vm.currencies.contains(code)
-        let inActive = vm.rates[code] != nil
+        let inActive = vm.isAvailableNow(code)
         return HStack(spacing: 10) {
             FlagView(code: code, size: 21)
             Text(code).font(.subheadline.bold()).frame(width: 54, alignment: .leading)

@@ -1,15 +1,15 @@
 title: "FIXXE – Konverter valuta"
-subtitle: Kursevi iz tri izvora
-short_description: Srednji kursevi iz 3 izvora, 300+ valuta, radi offline, bez reklama.
+subtitle: Kursevi iz pet izvora
+short_description: Srednji kursevi iz 5 izvora, 300+ valuta, radi offline, bez reklama.
 keywords: valuta,konvertor,kurs,mjenjačnica,novac,putovanje,forex,kripto,finansije,euro
-promotional_text: Tri izvora kursa sa automatskom zamjenom, offline kursevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
+promotional_text: Pet izvora kursa sa automatskom zamjenom, offline kursevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
 description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kursevima — neutralnom sredinom između svjetskih kupovnih i prodajnih cijena, bez bankarskih marži.
 
 
   PO ČEMU SE FIXXE RAZLIKUJE
 
 
-  • Tri izvora kursa sa automatskom zamjenom — ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina konvertora ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+  • Pet izvora kursa sa automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina konvertora ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
 
 
   • Radi bez interneta — posljednji kursevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti kursevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
@@ -55,7 +55,7 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Promijeni izvor i dodaj” sada zaista dodaje valutu i mijenja izvor kurseva. Nakon zatvaranja tastature lista se svaki put vraća tačno na prijašnje mjesto."
+whats_new: "Kursevi su sada uživo: FIXXE ih uzima sa Coinbasea, gdje se ažuriraju svake minute, pa brojke prate tržište tokom dana umjesto da se mijenjaju jednom dnevno. Ostali izvori ostaju kao rezerva."
 landing:
   page_title: FIXXE — konvertor valuta
   install_title: Načini instalacije

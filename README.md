@@ -103,8 +103,8 @@ Things that behave differently on the oldest supported release, and how they are
 
 ## Features
 
-- **Live mid-market rates** with a 3-source fallback chain (see [Rate sources](#rate-sources))
-- **335 currencies** in the add dialog — the union of all three sources (fiat, crypto, metals);
+- **Live mid-market rates** with a 5-source fallback chain, two of them live (see [Rate sources](#rate-sources))
+- **335 currencies** in the add dialog — the union of the source lists (fiat, crypto, metals);
   picking one that the active source lacks offers a one-tap switch to a source that has it
 - **Real-time conversion** — type in any field, all others update instantly
 - **Dynamic base** — the rate line is computed relative to the currency you're editing, not a fixed one
@@ -127,17 +127,33 @@ Things that behave differently on the oldest supported release, and how they are
 ## Rate sources
 
 Multi-source fallback chain (all normalized to EUR base), tried in order; the current source is
-shown in the header:
+shown in the header and credited in the footer:
 
-1. **ExchangeRate-API** (`open.er-api.com`) — primary. Open Access tier **requires attribution**:
-   the "Rates By Exchange Rate API" link back to [exchangerate-api.com](https://www.exchangerate-api.com)
-   shown in the footer.
-2. **F.A.** — Fawaz Ahmed currency-api (jsDelivr + `currency-api.pages.dev` mirror). CC0 public
-   domain, no attribution. 300+ currencies incl. crypto/metals.
-3. **Frankfurter** (`api.frankfurter.dev`) — MIT-licensed API, data from the European Central Bank (ECB).
+1. **Coinbase** (`api.coinbase.com/v2/exchange-rates`) — live, refreshed about once a minute.
+   Public endpoint, no authentication.
+2. **FXRatesAPI** (`api.fxratesapi.com/latest`) — live. Used without a key (about 60 requests an
+   hour per device); a link back to [fxratesapi.com](https://fxratesapi.com) is appreciated by
+   their terms and shown in the footer while their data is on screen.
+3. **ExchangeRate-API** (`open.er-api.com`) — daily. Open Access tier **requires attribution**:
+   the "Rates By Exchange Rate API" link back to [exchangerate-api.com](https://www.exchangerate-api.com),
+   shown in the footer while their data is on screen.
+4. **F.A.** — Fawaz Ahmed currency-api (jsDelivr + `currency-api.pages.dev` mirror), daily. CC0
+   public domain, no attribution. 300+ currencies incl. crypto/metals.
+5. **Frankfurter** (`api.frankfurter.dev`) — daily. MIT-licensed API, data from the European
+   Central Bank (ECB).
 
-All are free, no API key, CORS-enabled. Rates update roughly once a day; the difference from other
-reference services is usually under 0.5% — these are mid-market reference rates, not real-time quotes.
+The two live sources track the mid-market rate shown by services like XE to within a few
+hundredths of a percent; the three daily ones can drift by up to ~0.5% on a volatile day and exist
+as fallbacks. All are free and keyless. These are reference rates, not trading quotes.
+
+**Wise (beta)** is a sixth, manual-only source in the Android and iOS apps: it is used only when
+picked in Settings, never in Auto and never as a fallback. It reads the undocumented endpoint
+behind wise.com's own rate pages, one request per currency on screen, and may stop working
+without notice. It is absent from the web app — the endpoint does not allow cross-origin requests.
+
+The add-currency list is the union of the three daily sources (their code lists are stable);
+Coinbase returns 600+ codes, mostly small crypto tokens, and contributes only the ones the others
+already know.
 
 ## Repository layout
 
@@ -239,32 +255,41 @@ service-worker cache all stay in sync:
 ./release.sh 28 "note"  # with a custom release note
 ```
 
-It builds the app, bumps the PWA version + SW cache, commits & pushes, tags GitHub release `vN`
-(no APK attached), and **auto-deploys the PWA** to the VM (best-effort). It also refuses to run if
-it finds Cyrillic in the store copy — everything a store shows must be English.
+What it does, in order:
 
-Shipping to the stores is separate.
+1. Refuses to run if it finds Cyrillic in the English store copy.
+2. Sets version `1.N` everywhere: Android, iOS (`ios/project.yml`), the PWA and the about page.
+3. Works out whether Android changed since the previous tag. If only the version numbers differ,
+   it skips the Android smoke test and the APK, and says not to ship to Google Play — otherwise
+   Play users would get an update with nothing in it.
+4. Runs the gate: colour contrast, web smoke, Android unit tests, Android smoke (needs a running
+   emulator), iOS tests. Any failure stops the release.
+5. Builds the standalone APK into `web/FIXXE.apk` with `web/latest.json` next to it.
+6. Commits, pushes, tags `vN`.
+7. Publishes a clean snapshot to the public repository and a GitHub release `vN` with
+   `FIXXE-1.N.apk` attached (`tools/publish-public.sh --push`).
+8. Deploys the PWA mirror (best-effort).
 
-**Google Play** (one command builds, signs, uploads and assigns):
+Shipping to the stores is separate — two commands:
 
 ```bash
+# Google Play: builds, signs, uploads and assigns. Skip it when release.sh says Android is unchanged.
 play-ops ship --track production --yes --notes-file store-release-notes.txt
+play-ops metadata push --yes        # only when the listing texts changed
 play-ops graphics upload --yes      # only when screenshots changed
+
+# App Store: build → version → texts in every language → review, released on approval
+./tools/ship-ios.sh
 ```
 
-Release notes come from `store-release-notes.txt` on purpose: `play-ops` otherwise defaults to the
-last commit subject, and our commits are in Russian.
+`store-release-notes.txt` holds the English Play notes on purpose: `play-ops` otherwise defaults to
+the last commit subject, and our commits are in Russian. The App Store "What's New" comes from
+`whats_new` in `store-locales/<lang>.yaml` (40 languages).
 
-**App Store** — build first, wait for Apple to finish processing it, then fill the version:
-
-```bash
-cd ios
-testflight-ops ship --upload-only --yes --notes-file ../store-release-notes.txt   # build + upload
-appstore-ops version create        # create 1.N, attach the latest build
-appstore-ops metadata push         # description, keywords, what's new, categories
-appstore-ops screenshots upload    # from ios/appstore/screenshots/<locale>/<display type>/
-appstore-ops submit --yes          # send for review
-```
+`tools/ship-ios.sh` is safe to re-run: finished steps are skipped. It uploads the build with
+`testflight-ops ship --upload-only` (no tester group, no beta review — the build goes straight to
+the App Store), creates the version, pushes the texts and re-pushes them if any locale is left
+without "What's New", then submits for review through the App Store Connect API.
 
 Caveats learned the hard way:
 

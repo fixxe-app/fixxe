@@ -1,15 +1,15 @@
 title: "FIXXE – Valutaváltó"
-subtitle: Árfolyam három forrásból
-short_description: Középárfolyamok 3 forrásból, 300+ pénznem, offline is, reklám nélkül.
+subtitle: Árfolyam öt forrásból
+short_description: Középárfolyamok 5 forrásból, 300+ pénznem, offline is, reklám nélkül.
 keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró
-promotional_text: Három árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
+promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
 description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokkal — ez a világpiaci vételi és eladási ár közötti semleges középpont, banki felárak nélkül.
 
 
   MIBEN MÁS A FIXXE
 
 
-  • Három árfolyamforrás automatikus váltással — ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+  • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
 
 
   • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
@@ -55,7 +55,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   Rates By Exchange Rate API.
 
   '
-whats_new: "A „Forrásváltás és hozzáadás” most tényleg hozzáadja a pénznemet és átvált az árfolyamforrásra. A billentyűzet bezárása után a lista minden alkalommal pontosan a korábbi helyére áll vissza."
+whats_new: "Az árfolyamok mostantól élők: a FIXXE a Coinbase-től veszi őket, ahol percenként frissülnek, így a számok napközben követik a piacot, nem csak naponta egyszer változnak. A többi forrás tartalékként megmarad."
 landing:
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok

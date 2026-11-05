@@ -37,7 +37,7 @@
     <string name="language_title">语言</string>
     <string name="language_system">系统默认</string>
     <string name="source_info_title">汇率来源</string>
-    <string name="source_info_message">中间市场汇率 — 全球市场买入与卖出的中点。\n\n基准货币：EUR，其他货币对通过欧元换算。\n\n来源（自动备用）：\n1. ExchangeRate-API — 主要\n2. F.A. — 主要来源不可用时\n3. Frankfurter (ECB) — 第二备用\n\n如果在自动更新或点击 ↻ 时主要来源无响应，应用会自动从下一个来源获取数据。当前来源显示在顶部更新时间旁边。\n\n在设置（⚙）中，你可以强制指定某个来源 — 其他来源仍作为备用。\n\n每天更新一次。与其他参考服务的差异通常小于 0.5% — 这些是参考汇率，而非实时报价。\n\n许可与署名：\n• ExchangeRate-API — 需要“Rates By Exchange Rate API”链接（位于页脚，可点击）。\n• F.A. — CC0（公共领域），无需署名。\n• Frankfurter — MIT，数据来自欧洲中央银行 (ECB)。</string>
+    <string name="source_info_message">中间市场汇率 — 全球市场买入与卖出的中点。\n\n基准货币：EUR，其他货币对通过欧元换算。\n\n来源（自动备用）：\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\n如果在自动更新或点击 ↻ 时主要来源无响应，应用会自动从下一个来源获取数据。当前来源显示在顶部更新时间旁边。\n\n在设置（⚙）中，你可以强制指定某个来源 — 其他来源仍作为备用。\n\nCoinbase 和 FXRatesAPI 每分钟更新一次，其他来源每天更新一次。这些是参考汇率，并非交易报价。\n\n许可与署名：\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — 需要“Rates By Exchange Rate API”链接（位于页脚，可点击）。\n• F.A. — CC0（公共领域），无需署名。\n• Frankfurter — MIT，数据来自欧洲中央银行 (ECB)。</string>
     <string name="filter_all">全部</string>
     <string name="switch_source_title">切换来源？</string>
     <string name="switch_source_msg">%1$s 可通过 %2$s 获取，而非当前来源。切换并添加吗？</string>

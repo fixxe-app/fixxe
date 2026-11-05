@@ -1,15 +1,15 @@
 title: "FIXXE – Convertisseur devises"
-subtitle: Taux de trois sources
-short_description: Taux interbancaires de 3 sources, 300+ devises, hors ligne, sans publicité.
+subtitle: Taux de cinq sources
+short_description: Taux interbancaires de 5 sources, 300+ devises, hors ligne, sans publicité.
 keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro
-promotional_text: Trois sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
+promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
 description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des taux interbancaires en direct — le point médian neutre entre les prix mondiaux d''achat et de vente, sans marge bancaire.
 
 
   CE QUI DISTINGUE FIXXE
 
 
-  • Trois sources de taux avec bascule automatique — ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+  • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
 
 
   • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -55,7 +55,7 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   Rates By Exchange Rate API.
 
   '
-whats_new: "« Changer de source et ajouter » ajoute désormais vraiment la devise et change la source des taux. Après la fermeture du clavier, la liste revient à chaque fois exactement à sa place."
+whats_new: "Les taux sont désormais en direct : FIXXE les prend chez Coinbase, où ils sont actualisés chaque minute. Les chiffres suivent le marché au fil de la journée au lieu de changer une fois par jour. Les autres sources restent en secours."
 landing:
   page_title: FIXXE — convertisseur de devises
   install_title: Façons d'installer

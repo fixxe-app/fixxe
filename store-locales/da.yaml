@@ -1,15 +1,15 @@
 title: "FIXXE – Valutaomregner"
-subtitle: Kurser fra tre kilder
-short_description: Middelkurser fra 3 kilder, 300+ valutaer, virker offline, uden reklamer.
+subtitle: Kurser fra fem kilder
+short_description: Middelkurser fra 5 kilder, 300+ valutaer, virker offline, uden reklamer.
 keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro
-promotional_text: Tre kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
+promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
 description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser — det neutrale midtpunkt mellem verdens købs- og salgspriser, uden banktillæg.
 
 
   DET HER GØR FIXXE ANDERLEDES
 
 
-  • Tre kurskilder med automatisk skift — ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
+  • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
 
 
   • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
@@ -55,7 +55,7 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
   Rates By Exchange Rate API.
 
   '
-whats_new: "“Skift kilde og tilføj” tilføjer nu faktisk valutaen og skifter kurskilde. Når du lukker tastaturet, vender listen hver gang tilbage præcis dertil, hvor den var."
+whats_new: "Kurserne er nu live: FIXXE henter dem fra Coinbase, hvor de opdateres hvert minut, så tallene følger markedet i løbet af dagen i stedet for at skifte én gang om dagen. De øvrige kilder er fortsat reserve."
 landing:
   page_title: FIXXE — valutaomregner
   install_title: Måder at installere på

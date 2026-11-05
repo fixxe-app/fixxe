@@ -1,15 +1,15 @@
 title: "FIXXE – Konvertues monedhash"
-subtitle: Kurse nga tre burime
-short_description: Kurse mesatare nga 3 burime, 300+ monedha, pa internet, pa reklama.
+subtitle: Kurse nga pesë burime
+short_description: Kurse mesatare nga 5 burime, 300+ monedha, pa internet, pa reklama.
 keywords: monedhe,konvertues,kurs,kembim,para,udhetim,forex,kripto,financa,euro
-promotional_text: Tre burime kursesh me kalim automatik, kurse pa internet me paralajmërim kur vjetrohen dhe rrumbullakim që nuk i prish shumat e vogla.
+promotional_text: Pesë burime kursesh me kalim automatik, kurse pa internet me paralajmërim kur vjetrohen dhe rrumbullakim që nuk i prish shumat e vogla.
 description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër me kurse mesatare tregu në kohë reale — pika neutrale mes çmimeve botërore të blerjes dhe të shitjes, pa marzhe bankare.
 
 
   ÇFARË E BËN FIXXE-NË TË NDRYSHËM
 
 
-  • Tre burime kursesh me kalim automatik — ExchangeRate-API, F.A. dhe Frankfurter (BQE). Nëse një ofrues bie, aplikacioni kalon në heshtje te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë.
+  • Pesë burime kursesh me kalim automatik — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. dhe Frankfurter (BQE). Nëse një ofrues bie, aplikacioni kalon në heshtje te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë.
 
 
   • Punon pa internet — kurset e fundit ruhen në pajisje, kështu që aplikacioni vazhdon të llogarisë edhe pa lidhje. Dhe nëse ato kurse janë më të vjetra se një ditë, e thotë hapur në vend që t''i paraqesë si të freskëta.
@@ -55,7 +55,7 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   Rates By Exchange Rate API.
 
   '
-whats_new: "“Ndrysho burimin dhe shto” tani e shton vërtet monedhën dhe ndryshon burimin e kurseve. Pasi mbyllni tastierën, lista kthehet çdo herë saktësisht aty ku ishte."
+whats_new: "Kurset tani janë drejtpërdrejt: FIXXE i merr nga Coinbase, ku përditësohen çdo minutë, ndaj shifrat ndjekin tregun gjatë ditës në vend që të ndryshojnë një herë në ditë. Burimet e tjera mbeten si rezervë."
 landing:
   page_title: FIXXE — konvertues monedhash
   install_title: Mënyrat e instalimit

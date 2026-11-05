@@ -79,7 +79,7 @@ enum ScreenshotArgs {
         guard let i = args.firstIndex(of: "-screen-theme"), i + 1 < args.count else { return -1 }
         return Int(args[i + 1]) ?? -1
     }
-    /// источник курсов: 0 — авто, 1..3 — конкретный (-1 = не трогать)
+    /// источник курсов: 0 — авто, 1…N — номер в RatesService.sources (-1 = не трогать)
     static var sourceMode: Int {
         guard let i = args.firstIndex(of: "-screen-source"), i + 1 < args.count else { return -1 }
         return Int(args[i + 1]) ?? -1

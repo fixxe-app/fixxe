@@ -52,8 +52,15 @@ final class ConverterViewModel: ObservableObject {
         grouping = UserDefaults.standard.integer(forKey: "grouping")
         theme = ScreenshotArgs.theme >= 0 ? ScreenshotArgs.theme
                                          : UserDefaults.standard.integer(forKey: "theme")
-        sourceMode = ScreenshotArgs.sourceMode >= 0 ? ScreenshotArgs.sourceMode
-                                                    : UserDefaults.standard.integer(forKey: "source")
+        // сохранённый выбор источника — один раз переносим на новую нумерацию
+        var storedSource = UserDefaults.standard.integer(forKey: "source")
+        let sourceVersion = UserDefaults.standard.integer(forKey: "source_v")   // 0 — до 1.65
+        if sourceVersion < 2 {
+            storedSource = RatesService.migrateSource(storedSource, version: sourceVersion)
+            UserDefaults.standard.set(storedSource, forKey: "source")
+            UserDefaults.standard.set(2, forKey: "source_v")
+        }
+        sourceMode = ScreenshotArgs.sourceMode >= 0 ? ScreenshotArgs.sourceMode : storedSource
         activeCode = list.first ?? "EUR"
         if ScreenshotArgs.staleCache {
             UserDefaults.standard.set(Date().timeIntervalSince1970 - 3 * 24 * 60 * 60, forKey: "cached_at")
@@ -122,7 +129,7 @@ final class ConverterViewModel: ObservableObject {
             if pendingForce { pendingForce = false; Task { await refresh(force: true) } }
         }
         do {
-            let r = try await RatesService.fetchRates(preferred: sourceMode)
+            let r = try await RatesService.fetchRates(preferred: sourceMode, codes: currencies)
             rates = r.rates; currentSource = r.source
             lastUpdated = Self.format(Date())
             fromCache = false; stale = false
@@ -182,7 +189,24 @@ final class ConverterViewModel: ObservableObject {
         inputText = "0"
     }
 
-    func add(_ code: String) { if !currencies.contains(code) { currencies.append(code) } }
+    /// Выбран источник, который отдаёт курсы только для валют на экране (Wise).
+    private var activeIsOnDemand: Bool {
+        (1...RatesService.sources.count).contains(sourceMode) && RatesService.sources[sourceMode - 1].fetch != nil
+    }
+
+    /// Можно ли добавить валюту, не меняя источник. У источника «по запросу»
+    /// курса новой валюты ещё нет — он появится после добавления; такие
+    /// источники знают обычные валюты (список — как у ExchangeRate-API).
+    func isAvailableNow(_ code: String) -> Bool {
+        rates[code] != nil || (activeIsOnDemand && (sourceCodes["ExchangeRate-API"]?.contains(code) ?? false))
+    }
+
+    func add(_ code: String) {
+        guard !currencies.contains(code) else { return }
+        currencies.append(code)
+        // источник «по запросу» курса этой валюты ещё не спрашивал
+        if activeIsOnDemand, rates[code] == nil { Task { await refresh(force: true) } }
+    }
 
     func remove(_ code: String) {
         guard currencies.count > 2 else { return }
@@ -210,17 +234,21 @@ final class ConverterViewModel: ObservableObject {
         }
     }
 
-    // Какие источники (индексы 0..2) содержат код
+    // Какие источники (номера в RatesService.sources) содержат код.
+    // Источники «только вручную» сюда не входят: ни значка, ни предложения
+    // переключиться на них в списке валют нет.
     func sourcesWith(_ code: String) -> [Int] {
         RatesService.sources.enumerated().compactMap { i, s in
-            (sourceCodes[s.name]?.contains(code) ?? false) ? i : nil
+            (!s.manualOnly && (sourceCodes[s.name]?.contains(code) ?? false)) ? i : nil
         }
     }
 
+    /// Что можно добавить. Курсы живых источников содержат сотни кодов сверх
+    /// списков (Coinbase — 600+ крипто-токенов), поэтому в перечень идут сами
+    /// списки; пока они не загрузились — то, что есть в текущих курсах.
     var allCodesUnion: [String] {
-        var u = Set(rates.keys)
-        for s in sourceCodes.values { u.formUnion(s) }
-        return u.sorted()
+        if sourceCodes.isEmpty { return rates.keys.sorted() }
+        return sourceCodes.values.reduce(into: Set<String>()) { $0.formUnion($1) }.sorted()
     }
 
     func switchSourceAndAdd(_ code: String, sourceIdx: Int) async {

@@ -1,15 +1,15 @@
 title: "FIXXE – Valutaomvandlare"
-subtitle: Kurser från tre källor
-short_description: Mittkurser från 3 källor, 300+ valutor, fungerar offline, utan reklam.
+subtitle: Kurser från fem källor
+short_description: Mittkurser från 5 källor, 300+ valutor, fungerar offline, utan reklam.
 keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro
-promotional_text: Tre kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
+promotional_text: Fem kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
 description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurser — den neutrala mittpunkten mellan världens köp- och säljpriser, utan bankpåslag.
 
 
   DET HÄR SKILJER FIXXE
 
 
-  • Tre kurskällor med automatiskt byte — ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
+  • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
 
 
   • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
@@ -55,7 +55,7 @@ description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "”Byt källa och lägg till” lägger nu verkligen till valutan och byter kurskälla. När du stänger tangentbordet hamnar listan varje gång exakt där den var."
+whats_new: "Kurserna är nu live: FIXXE hämtar dem från Coinbase, där de uppdateras varje minut, så siffrorna följer marknaden under dagen i stället för att ändras en gång om dagen. Övriga källor finns kvar som reserv."
 landing:
   page_title: FIXXE — valutaomvandlare
   install_title: Sätt att installera

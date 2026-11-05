@@ -137,6 +137,9 @@ else
   echo "▶ Smoke-тесты перед выпуском"
   python3 tools/check-contrast.py || { echo "✗ выпуск остановлен: цвета не проходят норму контраста"; exit 1; }
   ./tools/smoke-web.sh     || { echo "✗ выпуск остановлен: PWA не прошла проверку"; exit 1; }
+  # юнит-тесты Android: разбор сумм, источники курсов (быстро, без эмулятора)
+  ./gradlew -q testDebugUnitTest || { echo "✗ выпуск остановлен: юнит-тесты Android не прошли"; exit 1; }
+  echo "  ✓ юнит-тесты Android"
   if [ "$ANDROID_CHANGED" = "1" ]; then
     ./tools/smoke-android.sh || { echo "✗ выпуск остановлен: Android не прошёл проверку"; exit 1; }
     # Эмулятор больше не нужен, а рядом с ним iOS-симулятор не успевает:

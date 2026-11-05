@@ -1,15 +1,15 @@
 title: "FIXXE – Chuyển đổi tiền tệ"
-subtitle: Tỷ giá từ ba nguồn
-short_description: Tỷ giá trung bình từ 3 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
+subtitle: Tỷ giá từ năm nguồn
+short_description: Tỷ giá trung bình từ 5 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
 keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro
-promotional_text: Ba nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
+promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
 description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàng với tỷ giá trung bình thị trường theo thời gian thực — điểm trung lập giữa giá mua và giá bán toàn cầu, không có chênh lệch của ngân hàng.
 
 
   ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-  • Ba nguồn tỷ giá tự động chuyển đổi — ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+  • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
 
 
   • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
@@ -55,7 +55,7 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   Rates By Exchange Rate API.
 
   '
-whats_new: "“Đổi nguồn và thêm” giờ đã thực sự thêm tiền tệ và đổi nguồn tỷ giá. Sau khi đóng bàn phím, danh sách luôn trở về đúng vị trí cũ."
+whats_new: "Tỷ giá giờ là trực tiếp: FIXXE lấy từ Coinbase, nơi tỷ giá được cập nhật mỗi phút, nên con số bám theo thị trường suốt cả ngày thay vì chỉ đổi mỗi ngày một lần. Các nguồn khác vẫn là dự phòng."
 landing:
   page_title: FIXXE — ứng dụng quy đổi tiền tệ
   install_title: Cách cài đặt

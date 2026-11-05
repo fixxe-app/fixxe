@@ -27,6 +27,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.currencyconverter.data.CurrencyRepository
 import com.example.currencyconverter.databinding.ActivityMainBinding
 import com.example.currencyconverter.ui.CurrencyAdapter
 import com.example.currencyconverter.ui.CurrencyInfo
@@ -160,6 +161,11 @@ class MainActivity : AppCompatActivity() {
                 // и не должен начинать строку с разделителя «·»: дефис внутри
                 // названия и пробел перед точкой делаем неразрывными.
                 val src = shortSource(s.source)
+                // Подпись в подвале — чьи курсы на экране. У ExchangeRate-API она
+                // дословная и со ссылкой: это условие их бесплатного тарифа.
+                val credit = CurrencyRepository.SOURCES.firstOrNull { it.name == s.source && it.name != "ExchangeRate-API" }
+                binding.btnAttribution.text = credit?.let { "Source: ${it.name}" } ?: getString(R.string.attribution)
+                attributionUrl = credit?.site ?: "https://www.exchangerate-api.com"
                 fun tidy(t: String) = t.replace(" · ", "\u00A0· ")
                 binding.tvStatus.text = tidy(when {
                     s.error != null         -> getString(R.string.error_prefix, s.error)
@@ -186,7 +192,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvVersion.text = getString(R.string.version, BuildConfig.VERSION_NAME)
         binding.btnSourceInfo.setOnClickListener { showSourceInfoDialog() }
-        binding.btnAttribution.setOnClickListener { openUrl("https://www.exchangerate-api.com") }
+        binding.btnAttribution.setOnClickListener { openUrl(attributionUrl) }
 
         binding.btnRefresh.setOnClickListener { vm.refresh() }
         binding.btnClear.setOnClickListener {
@@ -268,15 +274,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Названия источников: индекс 0 = Авто (локализуется), дальше — бренды (не переводятся)
-    private fun sourceOptions() = arrayOf(
-        getString(R.string.source_auto), "ExchangeRate-API", "F.A.", "Frankfurter (ECB)"
-    )
+    private var attributionUrl = "https://www.exchangerate-api.com"
+
+    private fun sourceOptions(): Array<String> =
+        arrayOf(getString(R.string.source_auto)) + CurrencyRepository.SOURCES.map { it.title }
 
     private fun showSettingsDialog() {
         val decimals = vm.getDecimalPlaces()
         val decimalLabel = if (decimals == 0) getString(R.string.precision_value_int)
                            else getString(R.string.precision_value_n, decimals)
-        val srcName = sourceOptions()[vm.getSourceMode().coerceIn(0, 3)]
+        val srcName = sourceOptions()[vm.getSourceMode().coerceIn(0, CurrencyRepository.SOURCES.size)]
 
         val groupingLabel = groupingOptions()[vm.getGrouping().coerceIn(0, 2)]
 
@@ -340,7 +347,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSourceDialog() {
-        val checked = vm.getSourceMode().coerceIn(0, 3)
+        val checked = vm.getSourceMode().coerceIn(0, CurrencyRepository.SOURCES.size)
 
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.source_title))
@@ -394,9 +401,10 @@ class MainActivity : AppCompatActivity() {
      *  где источник выбирают, имена остаются полными. Дефис неразрывный, чтобы
      *  короткое имя не переносилось по нему на две строки. */
     private fun shortSource(name: String) = when (name) {
+        "FXRatesAPI"        -> "FXR\u2011API"
         "ExchangeRate-API"  -> "ER\u2011API"
         "Frankfurter (ECB)" -> "Fra.ECB"
-        else                -> name           // «F.A.» уже короткое
+        else                -> name           // «F.A.», «Coinbase», «Wise» уже короткие
     }
 
     /** Вращение значка «обновить» на время запроса — вместо отдельной крутилки. */
@@ -496,8 +504,6 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private val SRC_SHORT  = arrayOf("er-api", "F.A.", "ECB")
-    private val SRC_COLORS = intArrayOf(0xFF1565C0.toInt(), 0xFF43A047.toInt(), 0xFFFB8C00.toInt())
 
     private fun showAddDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_add_currency, null)
@@ -548,7 +554,7 @@ class MainActivity : AppCompatActivity() {
                     lp.marginStart = (4 * density).toInt()
                     d.layoutParams = lp
                     d.background = androidx.core.content.ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_dot)
-                    d.backgroundTintList = android.content.res.ColorStateList.valueOf(SRC_COLORS[i])
+                    d.backgroundTintList = android.content.res.ColorStateList.valueOf(CurrencyRepository.SOURCES[i].color)
                     dots.addView(d)
                 }
                 return view
@@ -584,7 +590,10 @@ class MainActivity : AppCompatActivity() {
                 chipRow.addView(tv)
             }
             addChip(getString(R.string.filter_all), -1, 0xFF455A64.toInt(), filter == -1)
-            SRC_SHORT.forEachIndexed { i, s -> addChip(s, i, SRC_COLORS[i], filter == i) }
+            // источники «только вручную» в фильтре не показываем
+            CurrencyRepository.SOURCES.forEachIndexed { i, s ->
+                if (!s.manualOnly) addChip(s.short, i, s.color, filter == i)
+            }
         }
 
         listView.setOnItemClickListener { _, _, pos, _ ->
@@ -623,7 +632,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun confirmSwitch(code: String, srcIdx: Int) {
-        val srcName = sourceOptions()[srcIdx + 1]   // 0=Авто, 1..3 = источники
+        val srcName = sourceOptions()[srcIdx + 1]   // 0=Авто, дальше источники
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.switch_source_title))
             .setMessage(getString(R.string.switch_source_msg, code, srcName))

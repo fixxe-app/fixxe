@@ -24,8 +24,8 @@ android {
         applicationId = "com.karpinity.fixxe"
         minSdk = 24
         targetSdk = 36
-        versionCode = 64
-        versionName = "1.64"
+        versionCode = 65
+        versionName = "1.65"
     }
 
     signingConfigs {

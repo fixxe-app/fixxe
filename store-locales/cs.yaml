@@ -1,15 +1,15 @@
 title: "FIXXE – Převodník měn"
-subtitle: Kurzy ze tří zdrojů
-short_description: Střední kurzy ze 3 zdrojů, 300+ měn, funguje offline, bez reklam.
+subtitle: Kurzy z pěti zdrojů
+short_description: Střední kurzy z 5 zdrojů, 300+ měn, funguje offline, bez reklam.
 keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro
-promotional_text: Tři zdroje kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
+promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
 description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními středními kurzy — neutrálním středem mezi světovými nákupními a prodejními cenami, bez bankovních přirážek.
 
 
   ČÍM SE FIXXE LIŠÍ
 
 
-  • Tři zdroje kurzů s automatickým přepnutím — ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+  • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
 
 
   • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
@@ -55,7 +55,7 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Změnit zdroj a přidat“ nyní měnu opravdu přidá a přepne zdroj kurzů. Po zavření klávesnice se seznam pokaždé vrátí přesně tam, kde byl."
+whats_new: "Kurzy jsou teď živé: FIXXE je bere z Coinbase, kde se aktualizují každou minutu, takže čísla sledují trh během dne místo jedné změny denně. Ostatní zdroje zůstávají jako záloha."
 landing:
   page_title: FIXXE — převodník měn
   install_title: Způsoby instalace

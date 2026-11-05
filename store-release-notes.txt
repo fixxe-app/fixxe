@@ -1,1 +1,1 @@
-Small fixes and improvements.
+Rates are now live: taken from Coinbase and refreshed every minute, they follow the market through the day instead of updating once a day. The other sources remain as fallbacks.

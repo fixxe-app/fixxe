@@ -69,7 +69,7 @@ struct SettingsView: View {
                                     Circle().fill(Color(hex: RatesService.sources[i].colorHex))
                                         .frame(width: 10, height: 10)
                                 }
-                                Text(i < 0 ? L10n.t("source_auto") : RatesService.sources[i].name)
+                                Text(i < 0 ? L10n.t("source_auto") : RatesService.sources[i].title)
                                     .foregroundColor(.primary)
                                 Spacer()
                                 if vm.sourceMode == i + 1 { Image(systemName: "checkmark").foregroundColor(.brandBlue) }

@@ -1,15 +1,15 @@
 title: "FIXXE – Valuutakalkulaator"
-subtitle: Kursid kolmest allikast
-short_description: Keskkursid 3 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
+subtitle: Kursid viiest allikast
+short_description: Keskkursid 5 allikast, 300+ valuutat, töötab võrguta, reklaamivaba.
 keywords: valuuta,kalkulaator,kurss,vahetus,raha,reisimine,forex,krüpto,rahandus,euro
-promotional_text: Kolm kursiallikat automaatse vahetusega, võrguta kursid koos vananemishoiatusega ja nutikas ümardamine, mis väikseid summasid ei riku.
+promotional_text: Viis kursiallikat automaatse vahetusega, võrguta kursid koos vananemishoiatusega ja nutikas ümardamine, mis väikseid summasid ei riku.
 description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssidega — see on neutraalne keskpunkt maailma ostu- ja müügihindade vahel, ilma pangamarginaalita.
 
 
   MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-  • Kolm kursiallikat automaatse vahetusega — ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+  • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
 
 
   • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
@@ -55,7 +55,7 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Vaheta allikas ja lisa“ lisab nüüd tõesti valuuta ja vahetab kursside allika. Kui sulgete klaviatuuri, naaseb loend iga kord täpselt endisele kohale."
+whats_new: "Kursid on nüüd reaalajas: FIXXE võtab need Coinbase’ist, kus neid uuendatakse iga minut, nii et numbrid järgivad turgu kogu päeva, mitte ei muutu kord päevas. Teised allikad jäävad varuks."
 landing:
   page_title: FIXXE — valuutakalkulaator
   install_title: Paigaldusviisid

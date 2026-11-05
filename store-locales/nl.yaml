@@ -1,15 +1,15 @@
 title: "FIXXE – Valutacalculator"
-subtitle: Koersen uit drie bronnen
-short_description: Middenkoersen uit 3 bronnen, 300+ valuta's, werkt offline, geen reclame.
+subtitle: Koersen uit vijf bronnen
+short_description: Middenkoersen uit 5 bronnen, 300+ valuta's, werkt offline, geen reclame.
 keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro
-promotional_text: Drie koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
+promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
 description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele middenkoersen — het neutrale midden tussen wereldwijde koop- en verkoopprijzen, zonder bankmarges.
 
 
   WAT FIXXE ANDERS MAAKT
 
 
-  • Drie koersbronnen met automatische wissel — ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+  • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
 
 
   • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
@@ -55,7 +55,7 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   Rates By Exchange Rate API.
 
   '
-whats_new: "‘Bron wisselen en toevoegen’ voegt de valuta nu echt toe en wisselt de koersbron. Na het sluiten van het toetsenbord staat de lijst elke keer weer precies waar hij stond."
+whats_new: "De koersen zijn nu live: FIXXE haalt ze bij Coinbase, waar ze elke minuut worden bijgewerkt. De cijfers volgen de markt gedurende de dag in plaats van één keer per dag te veranderen. De andere bronnen blijven als reserve."
 landing:
   page_title: FIXXE — valutaomrekener
   install_title: Manieren om te installeren

@@ -1,15 +1,15 @@
 title: "FIXXE – Conversor de moedas"
-subtitle: Taxas de três fontes
-short_description: Taxas médias de 3 fontes, 300+ moedas, funciona offline, sem anúncios.
+subtitle: Taxas de cinco fontes
+short_description: Taxas médias de 5 fontes, 300+ moedas, funciona offline, sem anúncios.
 keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro
-promotional_text: Três fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
+promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
 description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
 
 
   O QUE TORNA O FIXXE DIFERENTE
 
 
-  • Três fontes de taxas com troca automática — ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+  • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
 
 
   • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -55,7 +55,7 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
   Rates By Exchange Rate API.
 
   '
-whats_new: "«Mudar de fonte e adicionar» agora adiciona mesmo a moeda e muda a fonte das taxas. Ao fechar o teclado, a lista volta sempre exatamente para onde estava."
+whats_new: "As taxas agora são em tempo real: o FIXXE vai buscá-las à Coinbase, onde são atualizadas a cada minuto, por isso os valores acompanham o mercado ao longo do dia em vez de mudarem uma vez por dia. As outras fontes ficam como reserva."
 landing:
   page_title: FIXXE — conversor de moedas
   install_title: Formas de instalar

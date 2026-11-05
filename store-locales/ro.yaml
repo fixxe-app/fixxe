@@ -1,15 +1,15 @@
 title: "FIXXE – Convertor valutar"
-subtitle: Cursuri din trei surse
-short_description: Cursuri medii din 3 surse, 300+ valute, funcționează offline, fără reclame.
+subtitle: Cursuri din cinci surse
+short_description: Cursuri medii din 5 surse, 300+ valute, funcționează offline, fără reclame.
 keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro
-promotional_text: Trei surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
+promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
 description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii de piață în timp real — punctul neutru dintre prețurile mondiale de cumpărare și de vânzare, fără adaosuri bancare.
 
 
   CE ÎL FACE PE FIXXE DIFERIT
 
 
-  • Trei surse de curs cu trecere automată — ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
+  • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
 
 
   • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
@@ -55,7 +55,7 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
   Rates By Exchange Rate API.
 
   '
-whats_new: "„Schimbă sursa și adaugă” adaugă acum cu adevărat moneda și schimbă sursa cursurilor. După ce închizi tastatura, lista revine de fiecare dată exact unde era."
+whats_new: "Cursurile sunt acum în timp real: FIXXE le ia de la Coinbase, unde se actualizează în fiecare minut, așa că cifrele urmează piața pe parcursul zilei în loc să se schimbe o dată pe zi. Celelalte surse rămân ca rezervă."
 landing:
   page_title: FIXXE — convertor valutar
   install_title: Moduri de instalare

@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.64';
+const APP_VERSION = '1.65';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -19,7 +19,15 @@ let decimalPlaces = store.get('decimals', 0);
 let grouping = store.get('grouping', 0);
 // оформление: 0 — как в системе, 1 — светлое, 2 — тёмное
 let theme = store.get('theme', 0);
-let sourceMode = store.get('source', 0);          // 0=auto, 1..3 forced
+let sourceMode = store.get('source', 0);          // 0=auto, 1..N — номер в SOURCES
+// До 1.65 источников было три: 1 — ExchangeRate-API, 2 — F.A., 3 — Frankfurter.
+// Теперь перед ними встали Coinbase и FXRatesAPI, и сохранённый выбор сдвигается
+// на два — один раз, иначе у выбравшего «F.A.» молча включился бы FXRatesAPI.
+function migrateSource(mode, ver){ return (ver < 2 && mode >= 1 && mode <= 3) ? mode + 2 : mode; }
+{
+  const ver = store.get('source_v', 1);
+  if (ver < 2){ sourceMode = migrateSource(sourceMode, ver); store.set('source', sourceMode); store.set('source_v', 2); }
+}
 // null = ничего не выбрано → английский (дефолт всех платформ);
 // 'system' = автоопределение по языку устройства
 const SYSTEM_LANG = 'system';
@@ -109,6 +117,7 @@ const nbHyphen = s => String(s).replace(/-/g, '\u2011');
 // «ExchangeRate-API» вытесняет дату — строка обрывается многоточием. В
 // настройках, где источник выбирают, имена остаются полными.
 const shortSource = s => nbHyphen(({
+  'FXRatesAPI':        'FXR-API',
   'ExchangeRate-API':  'ER-API',
   'Frankfurter (ECB)': 'Fra.ECB',
 }[s]) || s);
@@ -151,7 +160,22 @@ function parseAmount(s){
 }
 
 /* ---------- Rate sources (fallback chain) ---------- */
+// Coinbase и FXRatesAPI отдают курсы строками и вперемешку с мусором: «0.8899»
+// → число; нули, отрицательные и нечисловые значения отбрасываем.
+const numRates = o => {
+  const out = {};
+  for (const k in o){ const v = +o[k]; if (v > 0 && Number.isFinite(v)) out[k.toUpperCase()] = v; }
+  return out;
+};
+// Порядок = приоритет в режиме «Авто». Первые два — живые (обновляются раз в
+// минуту и идут вплотную к среднерыночному курсу), остальные три обновляются
+// раз в сутки и остаются запасными. Wise здесь нет: его адрес не разрешает
+// запросы из браузера (CORS), он есть только в приложениях Android и iOS.
 const SOURCES = [
+  { name:'Coinbase', urls:['https://api.coinbase.com/v2/exchange-rates?currency=EUR'],
+    parse:j => numRates(j.data.rates) },
+  { name:'FXRatesAPI', urls:['https://api.fxratesapi.com/latest?base=EUR'],
+    parse:j => { if(j.success!==true) throw 0; return numRates(j.rates); } },
   { name:'ExchangeRate-API', urls:['https://open.er-api.com/v6/latest/EUR'],
     parse:j => { if(j.result!=='success') throw 0; return j.rates; } },
   { name:'F.A.', urls:[
@@ -164,12 +188,20 @@ const SOURCES = [
 
 // Метаданные источников для UI (индекс+1 = sourceMode при принудительном выборе)
 const SOURCE_META = [
-  { name:'ExchangeRate-API', short:'er-api', color:'#1565C0' },
-  { name:'F.A.',             short:'F.A.',   color:'#43A047' },
-  { name:'Frankfurter (ECB)',short:'ECB',    color:'#FB8C00' },
+  { name:'Coinbase',         short:'Coinbase', color:'#5E35B1', site:'https://www.coinbase.com' },
+  { name:'FXRatesAPI',       short:'FXRates',  color:'#00796B', site:'https://fxratesapi.com' },
+  // подпись со ссылкой — условие бесплатного тарифа ExchangeRate-API
+  { name:'ExchangeRate-API', short:'er-api', color:'#1565C0', site:'https://www.exchangerate-api.com', credit:true },
+  { name:'F.A.',             short:'F.A.',   color:'#43A047', site:'https://github.com/fawazahmed0/exchange-api' },
+  { name:'Frankfurter (ECB)',short:'ECB',    color:'#FB8C00', site:'https://frankfurter.dev' },
 ];
+// Подпись в подвале — чьи курсы сейчас на экране. Пока курсов нет — прежняя.
+function attribution(){
+  const m = SOURCE_META.find(s => s.name === currentSource) || SOURCE_META.find(s => s.credit);
+  return { text: m.credit ? t('attribution') : 'Source: ' + m.name, href: m.site };
+}
 // Наборы кодов валют по каждому источнику (какая валюта где есть)
-let sourceCodes = { 'ExchangeRate-API':null, 'F.A.':null, 'Frankfurter (ECB)':null };
+let sourceCodes = { 'Coinbase':null, 'FXRatesAPI':null, 'ExchangeRate-API':null, 'F.A.':null, 'Frankfurter (ECB)':null };
 
 async function loadSourceCodes(){
   // с таймаутом: без него зависший источник держал бы загрузку списка валют бесконечно
@@ -180,7 +212,10 @@ async function loadSourceCodes(){
     catch(e){ return null; }
     finally{ clearTimeout(to); }
   };
-  const [a,b,c] = await Promise.all([
+  const up = d => Object.keys(d).map(k=>k.toUpperCase());
+  const [cb,fx,a,b,c] = await Promise.all([
+    j('https://api.coinbase.com/v2/exchange-rates?currency=EUR', d=> up(d.data.rates)),
+    j('https://api.fxratesapi.com/latest?base=EUR', d=> d.success===true ? up(d.rates) : null),
     j('https://open.er-api.com/v6/latest/EUR', d=> d.result==='success'? Object.keys(d.rates):null),
     j('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json', d=> Object.keys(d).map(k=>k.toUpperCase()))
       .then(x=> x || j('https://latest.currency-api.pages.dev/v1/currencies.json', d=> Object.keys(d).map(k=>k.toUpperCase()))),
@@ -189,6 +224,14 @@ async function loadSourceCodes(){
   if (a) sourceCodes['ExchangeRate-API'] = new Set(a);
   if (b) sourceCodes['F.A.'] = new Set(b);
   if (c) sourceCodes['Frankfurter (ECB)'] = new Set(c);
+  // Coinbase отдаёт 600+ кодов, большей частью мелкие крипто-токены, для
+  // которых у нас нет ни названий, ни значков. В списке «Добавить валюту» от
+  // живых источников остаётся только то, что знают справочные: список не
+  // разбухает безымянными строками.
+  const known = new Set([...(a||[]), ...(b||[]), ...(c||[])]);
+  const keep = arr => known.size ? arr.filter(x => known.has(x)) : arr;
+  if (cb) sourceCodes['Coinbase'] = new Set(keep(cb));
+  if (fx) sourceCodes['FXRatesAPI'] = new Set(keep(fx));
 }
 
 // В каких источниках есть код (массив индексов SOURCE_META)
@@ -308,7 +351,7 @@ function render(){
   $('#btnClear').textContent = t('clear');
   $('#btnAdd').textContent = t('add_currency');
   $('#btnInfo').textContent = t('mid_market');
-  $('#attribution').textContent = t('attribution');
+  { const a = attribution(); $('#attribution').textContent = a.text; $('#attribution').href = a.href; }
   $('#version').textContent = t('version', APP_VERSION);
   $('#badge').textContent = t('selected', displayCurrencies.length);
   if (lastUpdated){
@@ -606,11 +649,11 @@ function showInfo(){
   $('#modal-root [data-x]').onclick = closeModal;
 }
 
-function sourceOptions(){ return [t('source_auto'),'ExchangeRate-API','F.A.','Frankfurter (ECB)']; }
+function sourceOptions(){ return [t('source_auto'), ...SOURCE_META.map(s => s.name)]; }
 
 function showSettings(){
   const dec = decimalPlaces===0 ? t('precision_value_int') : t('precision_value_n', decimalPlaces);
-  const src = sourceOptions()[Math.min(Math.max(sourceMode,0),3)];
+  const src = sourceOptions()[Math.min(Math.max(sourceMode,0),SOURCES.length)];
   const grp = groupingOptions()[Math.min(Math.max(grouping,0),2)];
   const thm = themeOptions()[Math.min(Math.max(theme,0),2)];
   const langLabel = (lang && lang !== SYSTEM_LANG)

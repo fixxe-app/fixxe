@@ -37,6 +37,14 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
     private val prefs = app.getSharedPreferences("axe_prefs", Context.MODE_PRIVATE)
     private val repository = CurrencyRepository()
 
+    init {
+        // сохранённый выбор источника — один раз переносим на новую нумерацию
+        val ver = prefs.getInt("rate_source_v", 1)
+        if (ver < 2) prefs.edit()
+            .putInt("rate_source", CurrencyRepository.migrateSource(prefs.getInt("rate_source", 0), ver))
+            .putInt("rate_source_v", 2).apply()
+    }
+
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
 
@@ -71,7 +79,7 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         _state.value = _state.value.copy(grouping = mode)
     }
 
-    // 0 = Авто (цепочка с резервом), 1..3 = принудительно конкретный источник
+    // 0 = Авто (цепочка с резервом), 1..N = номер в CurrencyRepository.SOURCES
     fun getSourceMode(): Int = prefs.getInt("rate_source", 0)
 
     fun setSourceMode(mode: Int) {
@@ -160,7 +168,7 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
             android.util.Log.d(FETCH_TAG, "rates fetch")
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
-            repository.getRates(getSourceMode()).fold(
+            repository.getRates(getSourceMode(), displayCurrencies.toList()).fold(
                 onSuccess = { snap ->
                     allRates = snap.rates
                     cacheRates(snap.rates, snap.source)
@@ -235,6 +243,8 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
             displayCurrencies.add(code)
             saveCurrencies()
             _state.value = _state.value.copy(currencyItems = buildItems())
+            // источник «по запросу» курса этой валюты ещё не спрашивал
+            if (activeIsOnDemand() && !allRates.containsKey(code)) refresh(force = true)
         }
     }
 
@@ -276,7 +286,7 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
 
     // --- Источники: какая валюта где доступна ---
     private var sourceCodes: Map<String, Set<String>> = emptyMap()
-    private val sourceNames = listOf("ExchangeRate-API", "F.A.", "Frankfurter (ECB)")
+    private val sourceNames = CurrencyRepository.SOURCES.map { it.name }
 
     fun sourceCodesLoaded() = sourceCodes.isNotEmpty()
 
@@ -290,20 +300,35 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
-    // Индексы источников (0=er-api,1=F.A.,2=Frankfurter), где есть код
+    // Номера источников (в CurrencyRepository.SOURCES), где есть код. Источники
+    // «только вручную» сюда не входят: ни значка, ни предложения переключиться
+    // на них в списке валют нет.
     fun sourcesWith(code: String): List<Int> =
-        sourceNames.mapIndexedNotNull { i, n -> if (sourceCodes[n]?.contains(code) == true) i else null }
+        CurrencyRepository.SOURCES.mapIndexedNotNull { i, s ->
+            if (!s.manualOnly && sourceCodes[s.name]?.contains(code) == true) i else null
+        }
 
     fun codesForSource(idx: Int): Set<String> = sourceCodes[sourceNames.getOrNull(idx)] ?: emptySet()
 
-    // Объединение всех валют (активный источник + все списки)
+    // Что можно добавить. Курсы живых источников содержат сотни кодов сверх
+    // списков (Coinbase — 600+ крипто-токенов), поэтому в перечень идут сами
+    // списки; пока они не загрузились — то, что есть в текущих курсах.
     fun allCurrencyCodesUnion(): List<String> {
-        val u = HashSet(allRates.keys)
+        if (sourceCodes.isEmpty()) return allRates.keys.sorted()
+        val u = HashSet<String>()
         sourceCodes.values.forEach { u.addAll(it) }
-        return u.sorted().map { it }
+        return u.sorted()
     }
 
-    fun isInActiveSource(code: String) = allRates.containsKey(code)
+    /** Выбран источник, который отдаёт курсы только для валют на экране (Wise). */
+    private fun activeIsOnDemand(): Boolean =
+        CurrencyRepository.SOURCES.getOrNull(getSourceMode() - 1)?.manualOnly == true
+
+    /** Можно ли добавить валюту, не меняя источник. У источника «по запросу»
+     *  курса новой валюты ещё нет — он появится после добавления; такие
+     *  источники знают обычные валюты (список — как у ExchangeRate-API). */
+    fun isInActiveSource(code: String) = allRates.containsKey(code) ||
+        (activeIsOnDemand() && sourceCodes["ExchangeRate-API"]?.contains(code) == true)
 
     /** Сколько валют можно добавить: объединение всех источников минус уже добавленные. */
     fun addableCount(): Int =

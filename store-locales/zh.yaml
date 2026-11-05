@@ -1,15 +1,15 @@
 title: "FIXXE – 汇率换算·货币转换"
-subtitle: 三个来源的汇率
-short_description: 三个来源的中间汇率，300+ 种货币，离线可用，没有广告。
+subtitle: 五个来源的汇率
+short_description: 五个来源的中间汇率，300+ 种货币，离线可用，没有广告。
 keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币
-promotional_text: 三个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
+promotional_text: 五个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
 description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实时中间汇率——全球买价与卖价之间的中立中点，不含银行加价。
 
 
   FIXXE 的不同之处
 
 
-  • 三个汇率来源自动接替——ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
+  • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
 
 
   • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
@@ -55,7 +55,7 @@ description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实
   Rates By Exchange Rate API.
 
   '
-whats_new: "“切换来源并添加”现在会真正添加该货币并切换汇率来源。关闭键盘后，列表每次都会准确回到原来的位置。"
+whats_new: "汇率现在是实时的：FIXXE 从每分钟更新的 Coinbase 获取汇率，数字会在一天中跟随市场变化，而不是每天只更新一次。其他来源保留作为备用。"
 landing:
   page_title: FIXXE — 货币换算
   install_title: 安装方式

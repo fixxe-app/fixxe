@@ -37,7 +37,7 @@
     <string name="language_title">언어</string>
     <string name="language_system">시스템 기본값</string>
     <string name="source_info_title">환율 출처</string>
-    <string name="source_info_message">중간 시장 환율 — 글로벌 시장의 매수와 매도 사이의 중간값입니다.\n\n기준 통화: EUR, 다른 통화쌍은 유로를 통해 계산됩니다.\n\n출처(자동 대체):\n1. ExchangeRate-API — 기본\n2. F.A. — 기본 출처가 다운된 경우\n3. Frankfurter (ECB) — 두 번째 대체\n\n자동 업데이트 시 또는 ↻ 를 누를 때 기본 출처가 응답하지 않으면 앱이 자동으로 다음 출처에서 데이터를 가져옵니다. 현재 출처는 업데이트 시간 옆 상단에 표시됩니다.\n\n설정(⚙)에서 특정 출처를 강제로 지정할 수 있습니다 — 나머지는 여전히 대체로 남아 있습니다.\n\n하루에 한 번 업데이트됩니다. 다른 참고 환율 서비스와의 차이는 보통 0.5% 미만입니다 — 이는 실시간 시세가 아닌 참고 환율입니다.\n\n라이선스 및 출처 표기:\n• ExchangeRate-API —“Rates By Exchange Rate API” 링크가 필요합니다(하단 바닥글, 클릭 가능).\n• F.A. — CC0(퍼블릭 도메인), 표기 불필요.\n• Frankfurter — MIT, 데이터는 유럽 중앙은행(ECB)에서 제공됩니다.</string>
+    <string name="source_info_message">중간 시장 환율 — 글로벌 시장의 매수와 매도 사이의 중간값입니다.\n\n기준 통화: EUR, 다른 통화쌍은 유로를 통해 계산됩니다.\n\n출처(자동 대체):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\n자동 업데이트 시 또는 ↻ 를 누를 때 기본 출처가 응답하지 않으면 앱이 자동으로 다음 출처에서 데이터를 가져옵니다. 현재 출처는 업데이트 시간 옆 상단에 표시됩니다.\n\n설정(⚙)에서 특정 출처를 강제로 지정할 수 있습니다 — 나머지는 여전히 대체로 남아 있습니다.\n\nCoinbase와 FXRatesAPI는 1분마다, 나머지 소스는 하루에 한 번 업데이트됩니다. 참고 환율이며 거래 시세가 아닙니다.\n\n라이선스 및 출처 표기:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API —“Rates By Exchange Rate API” 링크가 필요합니다(하단 바닥글, 클릭 가능).\n• F.A. — CC0(퍼블릭 도메인), 표기 불필요.\n• Frankfurter — MIT, 데이터는 유럽 중앙은행(ECB)에서 제공됩니다.</string>
     <string name="filter_all">전체</string>
     <string name="switch_source_title">소스를 전환할까요?</string>
     <string name="switch_source_msg">%1$s은(는) 현재 소스가 아닌 %2$s을(를) 통해 사용할 수 있습니다. 전환하고 추가할까요?</string>
