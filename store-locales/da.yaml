@@ -1,7 +1,7 @@
 title: "FIXXE – Valutaomregner"
 subtitle: Kurser fra fem kilder
 short_description: Middelkurser fra 5 kilder, 300+ valutaer, virker offline, uden reklamer.
-keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro
+keywords: "valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro,fixer,fixe"
 promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
 description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser — det neutrale midtpunkt mellem verdens købs- og salgspriser, uden banktillæg.
 
@@ -19,6 +19,9 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
 
 
   • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+  • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen.
 
 
   • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
@@ -55,7 +58,7 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurserne er nu live: FIXXE henter dem fra Coinbase, hvor de opdateres hvert minut, så tallene følger markedet i løbet af dagen i stedet for at skifte én gang om dagen. De øvrige kilder er fortsat reserve."
+whats_new: "Nyt: kursjustering. Angiv en procentsats for bankens gebyr eller margin (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret. Findes i Indstillinger."
 landing:
   page_title: FIXXE — valutaomregner
   install_title: Måder at installere på

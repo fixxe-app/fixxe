@@ -32,6 +32,7 @@ import com.example.currencyconverter.databinding.ActivityMainBinding
 import com.example.currencyconverter.ui.CurrencyAdapter
 import com.example.currencyconverter.ui.CurrencyInfo
 import com.example.currencyconverter.ui.CurrencyViewModel
+import com.example.currencyconverter.ui.RateAdjust
 import com.example.currencyconverter.ui.CurrencyViewModel.Companion.currencyFlag
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Dispatchers
@@ -94,6 +95,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter = CurrencyAdapter(
             onAmountChanged = { code, amount -> vm.setActiveAmount(code, amount) },
+            onFocused       = { code -> vm.focusRow(code) },
             onDeleteClick   = { code -> confirmDelete(code) },
             onDone          = { dismissKeyboard() }
         )
@@ -184,6 +186,17 @@ class MainActivity : AppCompatActivity() {
                         else        -> getColor(R.color.text_secondary)
                     }
                 )
+                // Поправка к курсу: полоса под шапкой и подпись в подвале говорят,
+                // что курсы пересчитаны; сразу после сброса по сроку — сообщение
+                binding.adjustBanner.visibility = if (s.adjusted) View.VISIBLE else View.GONE
+                binding.adjustNotice.visibility =
+                    if (!s.adjusted && s.adjustResetFrom != null) View.VISIBLE else View.GONE
+                binding.btnAdjustUndo.setOnClickListener { s.adjustResetFrom?.let { vm.setAdjust(it) } }
+                binding.btnSourceInfo.text =
+                    if (s.adjusted) getString(R.string.adjusted_rates) + " ⓘ" else getString(R.string.mid_market)
+                binding.btnSourceInfo.setTextColor(getColor(if (s.adjusted) R.color.adjusted else R.color.accent))
+                binding.btnSourceInfo.setTypeface(null,
+                    if (s.adjusted) android.graphics.Typeface.BOLD else android.graphics.Typeface.NORMAL)
                 adapter.decimalPlaces = s.decimalPlaces
                 adapter.grouping = s.grouping
                 adapter.submitList(s.currencyItems, s.activeCurrency)
@@ -192,6 +205,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvVersion.text = getString(R.string.version, BuildConfig.VERSION_NAME)
         binding.btnSourceInfo.setOnClickListener { showSourceInfoDialog() }
+        binding.adjustBanner.setOnClickListener { showAdjustDialog() }
         binding.btnAttribution.setOnClickListener { openUrl(attributionUrl) }
 
         binding.btnRefresh.setOnClickListener { vm.refresh() }
@@ -219,6 +233,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        vm.resetAdjustIfExpired()   // давно не открывали — курсы снова рыночные
         vm.resumeAutoRefresh()
     }
 
@@ -230,6 +245,7 @@ class MainActivity : AppCompatActivity() {
     // приложение ушло с экрана — свёрнуто, заблокирован телефон, открыто другое
     override fun onStop() {
         super.onStop()
+        vm.markUsed()               // отсюда считаются 4 часа до сброса поправки
         vm.pauseAutoRefresh()
     }
 
@@ -263,13 +279,133 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSourceInfoDialog() {
-        AlertDialog.Builder(this)
+        val b = AlertDialog.Builder(this)
             .setTitle(getString(R.string.source_info_title))
-            .setMessage(getString(R.string.source_info_message))
             .setNeutralButton("exchangerate-api.com") { _, _ ->
                 openUrl("https://www.exchangerate-api.com")
             }
             .setPositiveButton(getString(R.string.ok), null)
+        val pct = vm.getAdjustPct()
+        if (pct == 0.0) {
+            b.setMessage(getString(R.string.source_info_message))
+        } else {
+            // С поправкой справка начинается с предупреждения — здесь процент
+            // уместен — и кнопки, которая ведёт к его настройке.
+            val warn = getString(R.string.adjust_info, pctLabel(pct))
+            val text = android.text.SpannableString(warn + "\n\n" + getString(R.string.source_info_message))
+            text.setSpan(android.text.style.ForegroundColorSpan(getColor(R.color.adjusted)), 0, warn.length, 0)
+            text.setSpan(android.text.style.StyleSpan(android.graphics.Typeface.BOLD), 0, warn.length, 0)
+            b.setMessage(text)
+            b.setNegativeButton(getString(R.string.adjust_title)) { _, _ -> showAdjustDialog() }
+        }
+        b.show()
+    }
+
+    /** «+1.5%» для показа в тексте. В арабском, иврите и персидском знак без
+     *  этой обёртки уезжает за число: «+» и «%» там не имеют своего направления. */
+    private fun pctLabel(pct: Double): String =
+        androidx.core.text.BidiFormatter
+            .getInstance(resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL)
+            .unicodeWrap(RateAdjust.label(pct), androidx.core.text.TextDirectionHeuristicsCompat.LTR)
+
+    /** Поправка к курсу. В отличие от остальных настроек окно не закрывается
+     *  по выбору строки: иначе до галочки «Действует постоянно» было бы
+     *  не добраться. */
+    private fun showAdjustDialog() {
+        dismissKeyboard()   // курсор уйдёт на базовую строку — поле ввода отпускаем
+        val view = layoutInflater.inflate(R.layout.dialog_adjust, null)
+        val plus = view.findViewById<TextView>(R.id.btnSignPlus)
+        val minus = view.findViewById<TextView>(R.id.btnSignMinus)
+        val group = view.findViewById<android.widget.RadioGroup>(R.id.adjustGroup)
+        val custom = view.findViewById<EditText>(R.id.etAdjustCustom)
+        val keep = view.findViewById<android.widget.CheckBox>(R.id.cbAdjustKeep)
+        val density = resources.displayMetrics.density
+
+        var negative = vm.getAdjustPct() < 0
+        var drawing = false     // строки отмечает код, а не человек
+
+        // «Выкл.» и готовые значения
+        val radios = (listOf(0.0) + RateAdjust.PRESETS.toList()).map { p ->
+            val rb = android.widget.RadioButton(this)
+            rb.id = View.generateViewId()
+            rb.textSize = 16f
+            rb.minHeight = (48 * density).toInt()
+            rb.layoutParams = android.widget.RadioGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            group.addView(rb)
+            p to rb
+        }
+
+        fun styleSign(tv: TextView, on: Boolean) {
+            val bg = android.graphics.drawable.GradientDrawable()
+            bg.cornerRadius = 8 * density
+            if (on) {
+                bg.setColor(getColor(R.color.adjusted))
+                tv.setTextColor(getColor(R.color.on_adjusted))
+            } else {
+                bg.setColor(getColor(R.color.surface))
+                bg.setStroke((1 * density).toInt(), getColor(R.color.icon_faint))
+                tv.setTextColor(getColor(R.color.text_primary))
+            }
+            tv.background = bg
+            tv.isSelected = on
+        }
+
+        // syncCustom = false — когда значение только что набрали в самом поле:
+        // переписывать его под пальцами незачем
+        fun draw(syncCustom: Boolean = true) {
+            drawing = true
+            val a = kotlin.math.abs(vm.getAdjustPct())
+            styleSign(plus, !negative); styleSign(minus, negative)
+            for ((p, rb) in radios)
+                rb.text = if (p == 0.0) getString(R.string.adjust_off) else pctLabel(if (negative) -p else p)
+            val hit = radios.firstOrNull { it.first == a }
+            if (hit != null) group.check(hit.second.id) else group.clearCheck()
+            // своё значение показываем в поле, готовое — нет
+            val own = if (hit == null) RateAdjust.label(a).drop(1).dropLast(1) else ""
+            if (syncCustom && custom.text.toString() != own) custom.setText(own)
+            drawing = false
+        }
+
+        fun applyCustom() {
+            val v = com.example.currencyconverter.ui.AmountParser.parse(custom.text.toString(), 0)
+            if (v > 0) { vm.setAdjust(if (negative) -v else v); draw(syncCustom = false) }
+        }
+
+        plus.setOnClickListener {
+            negative = false
+            if (vm.getAdjustPct() != 0.0) vm.setAdjust(kotlin.math.abs(vm.getAdjustPct()))
+            draw()
+        }
+        minus.setOnClickListener {
+            negative = true
+            if (vm.getAdjustPct() != 0.0) vm.setAdjust(-kotlin.math.abs(vm.getAdjustPct()))
+            draw()
+        }
+        group.setOnCheckedChangeListener { _, id ->
+            if (drawing || id == -1) return@setOnCheckedChangeListener
+            val p = radios.firstOrNull { it.second.id == id }?.first ?: return@setOnCheckedChangeListener
+            custom.clearFocus()
+            vm.setAdjust(if (negative) -p else p)
+            draw()
+        }
+        custom.setOnEditorActionListener { v, actionId, _ ->
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) {
+                applyCustom()
+                (getSystemService(INPUT_METHOD_SERVICE) as android.view.inputmethod.InputMethodManager)
+                    .hideSoftInputFromWindow(v.windowToken, 0)
+                true
+            } else false
+        }
+        keep.isChecked = vm.getAdjustKeep()
+        keep.setOnCheckedChangeListener { _, on -> vm.setAdjustKeep(on) }
+        draw()
+
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.adjust_title))
+            .setView(view)
+            // набранное своё значение не теряется, если клавиатуру не закрывали
+            .setPositiveButton(getString(R.string.close)) { _, _ -> if (custom.hasFocus()) applyCustom() }
             .show()
     }
 
@@ -290,11 +426,16 @@ class MainActivity : AppCompatActivity() {
         val themeLabel = themeOptions()[getSharedPreferences("axe_prefs", MODE_PRIVATE)
             .getInt("theme", 0).coerceIn(0, 2)]
 
+        val adjustLabel = vm.getAdjustPct().let {
+            if (it == 0.0) getString(R.string.adjust_off) else pctLabel(it)
+        }
+
         val items = arrayOf(
             getString(R.string.setting_theme, themeLabel),
             getString(R.string.setting_precision, decimalLabel),
             getString(R.string.setting_grouping, groupingLabel),
             getString(R.string.setting_source, srcName),
+            getString(R.string.setting_adjust, adjustLabel),
             getString(R.string.setting_language, currentLanguageLabel())
         )
 
@@ -306,7 +447,8 @@ class MainActivity : AppCompatActivity() {
                     1 -> showDecimalDialog()
                     2 -> showGroupingDialog()
                     3 -> showSourceDialog()
-                    4 -> showLanguageDialog()
+                    4 -> showAdjustDialog()
+                    5 -> showLanguageDialog()
                 }
             }
             .setNegativeButton(getString(R.string.close), null)

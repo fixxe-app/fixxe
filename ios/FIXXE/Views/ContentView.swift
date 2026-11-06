@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var showAdd = false
     @State private var showSettings = false
     @State private var showInfo = false
+    @State private var showAdjust = false
     @State private var deleteCandidate: String?
     /// Отдельный флаг для подтверждения удаления. Раньше алерт открывался
     /// вычисляемым Binding на deleteCandidate, которое тело экрана не читает, —
@@ -24,6 +25,7 @@ struct ContentView: View {
         VStack(spacing: 0) {
             header
             brandRow
+            adjustStrip
             currencyList
             footer
         }
@@ -41,7 +43,17 @@ struct ContentView: View {
         // и раз в 30 минут — как на Android. Без этого на Mac, где окно может
         // висеть сутками, курсы так и оставались от момента запуска.
         .onChange(of: scenePhase) { phase in
-            if phase == .active { Task { await vm.refresh() } }
+            if phase == .active {
+                vm.resetAdjustIfExpired()      // давно не открывали — поправка снята
+                Task { await vm.refresh() }
+            } else {
+                vm.markUsed()                  // отсюда считаются 4 часа до сброса поправки
+            }
+        }
+        // включение и сброс поправки экранный диктор произносит вслух
+        .onChange(of: vm.adjusted) { on in
+            UIAccessibility.post(notification: .announcement,
+                                 argument: L10n.t(on ? "adjusted_rates" : "mid_market"))
         }
         .task {
             while !Task.isCancelled {
@@ -51,7 +63,16 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showAdd) { AddCurrencyView(vm: vm) }
         .sheet(isPresented: $showSettings) { SettingsView(vm: vm) }
-        .sheet(isPresented: $showInfo) { SourceInfoView() }
+        .sheet(isPresented: $showInfo) {
+            // процент в тексте справки изолирован слева направо (U+2066…U+2069): в арабском
+            // и иврите знак «+» иначе уезжает за число
+            SourceInfoView(adjustLabel: vm.adjusted ? "\u{2066}" + RateAdjust.label(vm.adjustPct) + "\u{2069}" : nil) {
+                showInfo = false
+                // второй лист можно открыть, только когда первый закрылся
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { showAdjust = true }
+            }
+        }
+        .sheet(isPresented: $showAdjust) { AdjustSheet(vm: vm) }
         .alert(L10n.t("clear_confirm_title"), isPresented: $showClearConfirm) {
             Button(L10n.t("clear"), role: .destructive) { vm.clearAll() }
             Button(L10n.t("cancel"), role: .cancel) { }
@@ -154,6 +175,55 @@ struct ContentView: View {
         .background(Color.surface)
     }
 
+    /// Полоса под строкой бренда. Пока поправка включена, закрыть её нельзя:
+    /// человек не должен принять пересчитанный курс за рыночный — ни сразу,
+    /// ни вернувшись через час. Сам процент здесь не показывается. После
+    /// автоматического сброса на этом месте — сообщение с «Вернуть»: менять
+    /// цифры молча нельзя.
+    @ViewBuilder private var adjustStrip: some View {
+        if vm.adjusted {
+            Button { focusedCode = nil; showAdjust = true } label: {
+                HStack(spacing: 8) {
+                    PercentBadge(size: 18)
+                    Text(L10n.t("adjusted_rates"))
+                        .font(.footnote.weight(.semibold))
+                        .lineLimit(1).minimumScaleFactor(0.85)
+                    Spacer(minLength: 4)
+                    Image(systemName: "chevron.forward").font(.footnote.weight(.semibold))
+                }
+                .foregroundColor(.adjusted)
+                .padding(.horizontal, 14)
+                .frame(minHeight: 40)
+                .readableWidth()
+                .background(Color.adjustedBg)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(L10n.t("adjusted_rates"))
+            .accessibilityHint(L10n.t("adjust_title"))
+            .accessibilityIdentifier("adjust-banner")
+        } else if let old = vm.adjustResetFrom {
+            HStack(spacing: 8) {
+                Text(L10n.t("adjust_reset_notice"))
+                    .font(.footnote).foregroundColor(.primary)
+                    .lineLimit(2).minimumScaleFactor(0.85)
+                Spacer(minLength: 4)
+                Button(L10n.t("adjust_undo")) { vm.setAdjust(old) }
+                    .font(.footnote.weight(.semibold)).foregroundColor(.brandBlue)
+                    .accessibilityIdentifier("adjust-undo")
+            }
+            .padding(.horizontal, 14)
+            .frame(minHeight: 40)
+            .readableWidth()
+            .background(Color.surface)
+            .accessibilityIdentifier("adjust-reset-notice")
+            .task(id: old) {
+                try? await Task.sleep(nanoseconds: 8_000_000_000)
+                if vm.adjustResetFrom == old { vm.adjustResetFrom = nil }
+            }
+        }
+    }
+
     private var brandRow: some View {
         ZStack {
             Image("LogoMini").resizable().scaledToFit().frame(height: 34)
@@ -244,8 +314,11 @@ struct ContentView: View {
                 }
                 .font(.subheadline).foregroundColor(.brandBlue)
                 Spacer()
-                Button(L10n.t("mid_market")) { showInfo = true }
-                    .font(.caption).foregroundColor(.brandBlue)
+                // с поправкой курсы уже не среднерыночные — подпись говорит правду
+                Button(vm.adjusted ? L10n.t("adjusted_rates") + " ⓘ" : L10n.t("mid_market")) { showInfo = true }
+                    .font(.caption.weight(vm.adjusted ? .semibold : .regular))
+                    .foregroundColor(vm.adjusted ? .adjusted : .brandBlue)
+                    .accessibilityIdentifier("rates-info")
             }
             HStack {
                 Link(attribution.text, destination: attribution.url)

@@ -59,4 +59,15 @@
     <string name="group_none">არცერთი — 1234.56</string>
     <string name="group_space">ჰარე — 1 234.56</string>
     <string name="group_comma">მძიმე — 1,234.56</string>
+    <string name="adjust_title">კურსის შესწორება</string>
+    <string name="setting_adjust">კურსის შესწორება:  %1$s</string>
+    <string name="adjust_off">გამორთ.</string>
+    <string name="adjusted_rates">შესწორებული კურსები</string>
+    <string name="adjusted_short">შესწორებული</string>
+    <string name="adjust_info">ეკრანზე თანხები და კურსები შეცვლილია თქვენი შესწორებით (%1$s) და არ არის საშუალო საბაზრო. საფუძველია წყაროს საშუალო კურსი.</string>
+    <string name="adjust_custom">საკუთარი მნიშვნელობა</string>
+    <string name="adjust_keep">ყოველთვის ჩართული</string>
+    <string name="adjust_keep_hint">სხვა შემთხვევაში 4 საათის გამოუყენებლობის შემდეგ განულდება.</string>
+    <string name="adjust_reset_notice">შესწორება განულდა, კურსები ისევ საბაზროა</string>
+    <string name="adjust_undo">დაბრუნება</string>
 </resources>

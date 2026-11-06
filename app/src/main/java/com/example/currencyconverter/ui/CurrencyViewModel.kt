@@ -29,7 +29,11 @@ data class UiState(
     val stale: Boolean = false,
     val decimalPlaces: Int = 0,
     /** разделитель разрядов: 0 — нет, 1 — пробел, 2 — запятая */
-    val grouping: Int = 0
+    val grouping: Int = 0,
+    /** включена поправка к курсу: суммы и курсы на экране не рыночные */
+    val adjusted: Boolean = false,
+    /** поправку только что сбросили по сроку: прежний процент — для «Вернуть» */
+    val adjustResetFrom: Double? = null
 )
 
 class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
@@ -50,8 +54,8 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
 
     private var allRates: Map<String, Double> = emptyMap()
     private val displayCurrencies = loadCurrencies()
-    private var activeCurrency = displayCurrencies.firstOrNull() ?: "EUR"
-    private var activeAmount = 1.0
+    /** Что введено, где курсор и от какой строки считаются остальные. */
+    private val calc = AmountModel(displayCurrencies.firstOrNull() ?: "EUR")
     private var refreshJob: Job? = null
 
     private fun loadCurrencies(): MutableList<String> {
@@ -87,8 +91,54 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         refresh(force = true)  // сразу перезапрашиваем с новым источником
     }
 
+    // --- Поправка к курсу ---
+    fun getAdjustPct(): Double = calc.adjustPct
+
+    /** «Действует постоянно»: не сбрасывать после перерыва. */
+    fun getAdjustKeep(): Boolean = prefs.getBoolean("adjust_keep", false)
+
+    fun setAdjustKeep(keep: Boolean) {
+        prefs.edit().putBoolean("adjust_keep", keep).apply()
+    }
+
+    fun setAdjust(pct: Double) {
+        resetNoticeJob?.cancel()
+        if (calc.setAdjust(pct)) {
+            // процент храним в сотых долях: дробное число в настройках теряло бы точность
+            prefs.edit().putInt("adjust_pct_x100", Math.round(calc.adjustPct * 100).toInt()).apply()
+            markUsed()                 // 4 часа считаются от последнего использования
+        }
+        _state.value = _state.value.copy(
+            activeCurrency = calc.active, adjusted = calc.adjusted, adjustResetFrom = null,
+            currencyItems = buildItems()
+        )
+    }
+
+    /** Приложение уходит с экрана — отсюда считается срок до сброса поправки. */
+    fun markUsed() {
+        prefs.edit().putLong("adjust_left_at", System.currentTimeMillis()).apply()
+    }
+
+    private var resetNoticeJob: Job? = null
+
+    /** Давно не пользовались — курсы снова рыночные. Не молча: экран покажет
+     *  сообщение с «Вернуть», оно само уберётся через несколько секунд. */
+    fun resetAdjustIfExpired(now: Long = System.currentTimeMillis()) {
+        val was = calc.adjustPct
+        if (!RateAdjust.shouldReset(was, getAdjustKeep(), prefs.getLong("adjust_left_at", 0L), now)) return
+        setAdjust(0.0)
+        _state.value = _state.value.copy(adjustResetFrom = was)
+        resetNoticeJob = viewModelScope.launch {
+            delay(RESET_NOTICE_MS)
+            _state.value = _state.value.copy(adjustResetFrom = null)
+        }
+    }
+
     init {
         _state.value = _state.value.copy(decimalPlaces = getDecimalPlaces(), grouping = getGrouping())
+        calc.setAdjust(prefs.getInt("adjust_pct_x100", 0) / 100.0)
+        _state.value = _state.value.copy(adjusted = calc.adjusted)
+        resetAdjustIfExpired()
         showCached()   // мгновенный старт с последними известными курсами
         refresh()
         // автообновление включает и выключает экран: см. resumeAutoRefresh()
@@ -217,25 +267,36 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /** Курсор встал в строку, но ничего ещё не введено. Без поправки строка
+     *  сразу становится базой — как было всегда. С поправкой база остаётся
+     *  прежней, пока здесь не наберут число: суммы при переходах не меняются. */
+    fun focusRow(currency: String) {
+        calc.focus(currency, allRates)
+        emitAmounts()
+    }
+
+    /** В строке набрали число. */
     fun setActiveAmount(currency: String, amount: Double) {
-        activeCurrency = currency
-        activeAmount = amount
+        calc.type(currency, amount)
+        emitAmounts()
+    }
+
+    private fun emitAmounts() {
         if (allRates.isEmpty()) return
         _state.value = _state.value.copy(
-            activeCurrency = currency,
+            activeCurrency = calc.active,
             currencyItems = buildItems()
         )
     }
 
     fun clearAll() {
-        activeAmount = 0.0
-        // Пустой activeCurrency → адаптер вызовет notifyDataSetChanged() → все EditText обнулятся
+        calc.clear()
+        // Пустой activeCurrency → адаптер вызовет notifyDataSetChanged() → все EditText обнулятся;
+        // строку для ввода пользователь выберет сам
         _state.value = _state.value.copy(
             activeCurrency = "",
             currencyItems = buildItems()
         )
-        // Восстанавливаем activeCurrency без emit — пользователь выберет поле сам
-        activeCurrency = displayCurrencies.firstOrNull() ?: "EUR"
     }
 
     fun addCurrency(code: String) {
@@ -251,16 +312,9 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
     fun removeCurrency(code: String) {
         if (displayCurrencies.size <= 2) return
         displayCurrencies.remove(code)
-        if (activeCurrency == code) {
-            // Сумму переводим в новую валюту, а не переносим как есть:
-            // иначе 5000 RSD после удаления RSD становились 5000 EUR.
-            val next = displayCurrencies.first()
-            val from = allRates[code]; val to = allRates[next]
-            if (from != null && to != null && from != 0.0) activeAmount = activeAmount / from * to
-            activeCurrency = next
-        }
+        calc.remove(code, displayCurrencies.first(), allRates)
         saveCurrencies()
-        _state.value = _state.value.copy(activeCurrency = activeCurrency, currencyItems = buildItems())
+        _state.value = _state.value.copy(activeCurrency = calc.active, currencyItems = buildItems())
     }
 
     fun reorderCurrencies(newOrder: List<String>) {
@@ -343,30 +397,26 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun buildItems(): List<CurrencyItem> {
         if (allRates.isEmpty()) return emptyList()
-        val activeRateInEur = allRates[activeCurrency] ?: 1.0
-        val amountInEur = if (activeRateInEur != 0.0) activeAmount / activeRateInEur else 0.0
-
-        // Динамическая база отображения = активная валюта (та, что вводишь/меняешь).
-        // Если активной нет в таблице (напр. кадр во время CLEAR) — показываем от EUR.
-        val pivot = if (allRates.containsKey(activeCurrency)) activeCurrency else "EUR"
-        val pivotRate = allRates[pivot] ?: 1.0
+        // Динамическая база отображения = строка, где последний раз вводили число.
+        // Если её нет в таблице — показываем от EUR.
+        val pivot = calc.pivot(allRates)
 
         return displayCurrencies.mapNotNull { code ->
-            val rateInEur = allRates[code] ?: return@mapNotNull null
-            val converted = amountInEur * rateInEur
-            // Кросс-курс относительно активной валюты: rate[code] / rate[pivot].
-            // У самой активной строки подписи нет: курс валюты к себе самой
-            // равен единице и ничего не сообщает, а что в ней вводят — видно
-            // по рамке и клавиатуре.
-            val rateText = if (code == pivot) ""
-                          else "1 $pivot = ${fmtRate(rateInEur / pivotRate)} $code"
+            // валюты нет у текущего источника — строки нет, даже если она базовая
+            if (!allRates.containsKey(code)) return@mapNotNull null
+            val converted = calc.converted(code, allRates) ?: return@mapNotNull null
+            // Кросс-курс относительно базовой валюты: rate[code] / rate[pivot],
+            // с поправкой, если она включена. У самой базовой строки подписи
+            // нет: курс валюты к себе самой равен единице и ничего не сообщает.
+            val rateText = calc.rate(code, allRates)?.let { "1 $pivot = ${fmtRate(it)} $code" } ?: ""
             CurrencyItem(
                 code = code,
                 name = currencyDisplayName(code),
                 flag = currencyFlag(code),
                 symbol = currencySymbol(code),
                 amount = converted,
-                rateText = rateText
+                rateText = rateText,
+                adjusted = calc.isAdjusted(code)
             )
         }
     }
@@ -418,6 +468,8 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
     companion object {
         /** Курсы обновляются раз в сутки, чаще раза в 10 секунд дёргать API незачем. */
         private const val MIN_FETCH_INTERVAL_MS = 10_000L
+        /** Сколько висит сообщение «поправка сброшена». */
+        private const val RESET_NOTICE_MS = 8_000L
         /** Тег строки в logcat, по которой smoke-тест считает запросы к источникам. */
         const val FETCH_TAG = "FIXXE_FETCH"
         fun currencyName(code: String) = NAMES[code] ?: code

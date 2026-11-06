@@ -59,4 +59,15 @@
     <string name="group_none">कोई नहीं — 1234.56</string>
     <string name="group_space">स्पेस — 1 234.56</string>
     <string name="group_comma">अल्पविराम — 1,234.56</string>
+    <string name="adjust_title">दर समायोजन</string>
+    <string name="setting_adjust">दर समायोजन:  %1$s</string>
+    <string name="adjust_off">बंद</string>
+    <string name="adjusted_rates">समायोजित दरें</string>
+    <string name="adjusted_short">समायोजित</string>
+    <string name="adjust_info">स्क्रीन पर राशियाँ और दरें आपके समायोजन (%1$s) से बदली गई हैं और मध्य-बाज़ार दरें नहीं हैं। इनका आधार स्रोत की मध्य-बाज़ार दर है।</string>
+    <string name="adjust_custom">अपना मान</string>
+    <string name="adjust_keep">हमेशा चालू</string>
+    <string name="adjust_keep_hint">वरना 4 घंटे उपयोग न होने पर यह रीसेट हो जाता है।</string>
+    <string name="adjust_reset_notice">समायोजन रीसेट हुआ, दरें फिर से बाज़ार दरें हैं</string>
+    <string name="adjust_undo">वापस लाएँ</string>
 </resources>

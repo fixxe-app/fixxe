@@ -37,6 +37,22 @@ final class ConverterViewModel: ObservableObject {
     @Published var activeCode: String
     @Published var activeAmount: Double = 1
     @Published var inputText: String = "1"
+    /// Базовая строка — та, в которой последний раз ввели число. Её сумма
+    /// (`activeAmount`) ровно введённая, все остальные считаются от неё.
+    /// Без поправки база и строка с курсором (`activeCode`) — одно и то же.
+    /// С поправкой переход на другую строку базу не меняет: иначе процент
+    /// прибавлялся бы при каждом переходе и числа уползали бы сами.
+    @Published private(set) var baseCode: String = "EUR"
+
+    // Поправка к курсу (см. RateAdjust)
+    @Published private(set) var adjustPct: Double = 0
+    /// «Действует постоянно»: иначе сбрасывается после 4 часов без использования
+    @Published var adjustKeep: Bool = false { didSet { UserDefaults.standard.set(adjustKeep, forKey: "adjust_keep") } }
+    /// Поправку только что сбросили автоматически: прежний процент — для «Вернуть»
+    @Published var adjustResetFrom: Double?
+    var adjusted: Bool { adjustPct != 0 }
+    /// Сумма и курс этой строки пересчитаны с поправкой (все, кроме базовой)
+    func isAdjusted(_ code: String) -> Bool { adjusted && code != baseCode }
 
     // Доступность валют по источникам
     @Published var sourceCodes: [String: Set<String>] = [:]
@@ -62,6 +78,10 @@ final class ConverterViewModel: ObservableObject {
         }
         sourceMode = ScreenshotArgs.sourceMode >= 0 ? ScreenshotArgs.sourceMode : storedSource
         activeCode = list.first ?? "EUR"
+        baseCode = activeCode
+        adjustKeep = UserDefaults.standard.bool(forKey: "adjust_keep")
+        adjustPct = ScreenshotArgs.adjust ?? RateAdjust.clamp(UserDefaults.standard.double(forKey: "adjust_pct"))
+        resetAdjustIfExpired()   // давно не открывали — курсы снова рыночные
         if ScreenshotArgs.staleCache {
             UserDefaults.standard.set(Date().timeIntervalSince1970 - 3 * 24 * 60 * 60, forKey: "cached_at")
         }
@@ -148,29 +168,38 @@ final class ConverterViewModel: ObservableObject {
     // MARK: расчёты (кросс-курс через EUR, динамическая база)
 
     var amountInEur: Double {
-        let r = rates[activeCode] ?? 1
+        let r = rates[baseCode] ?? 1
         return r != 0 ? activeAmount / r : 0
     }
 
-    func converted(_ code: String) -> Double { amountInEur * (rates[code] ?? 0) }
+    /// Сумма в строке: у базовой — ровно введённая, у остальных — пересчёт
+    /// по курсу, умноженный на поправку.
+    func converted(_ code: String) -> Double {
+        if code == baseCode { return activeAmount }
+        return amountInEur * (rates[code] ?? 0) * RateAdjust.factor(adjustPct)
+    }
 
-    var pivot: String { rates[activeCode] != nil ? activeCode : "EUR" }
+    var pivot: String { rates[baseCode] != nil ? baseCode : "EUR" }
 
     func rateLine(_ code: String) -> String {
         // У активной строки подписи нет: курс валюты к себе самой равен
         // единице и ничего не сообщает, а что в ней вводят — видно по рамке.
         if code == pivot { return "" }
         guard let r = rates[code], let p = rates[pivot], p != 0 else { return "" }
-        return "1 \(pivot) = \(SmartFormat.rate(r / p)) \(code)"
+        return "1 \(pivot) = \(SmartFormat.rate(r / p * RateAdjust.factor(adjustPct))) \(code)"
     }
 
     // MARK: действия
 
     func setActive(_ code: String) {
         guard code != activeCode else { return }
-        activeAmount = converted(code)
+        let shown = converted(code)
         activeCode = code
-        inputText = SmartFormat.amount(activeAmount, decimals: decimals)   // в поле ввода без группировки
+        // Без поправки строка с курсором сразу становится базой — как было
+        // всегда. С поправкой база остаётся прежней, пока в новой строке не
+        // наберут число: суммы при переходах не меняются.
+        if !adjusted { activeAmount = shown; baseCode = code }
+        inputText = SmartFormat.amount(shown, decimals: decimals)   // в поле ввода без группировки
     }
 
     func inputChanged(_ text: String) {
@@ -181,12 +210,50 @@ final class ConverterViewModel: ObservableObject {
         // и числа уползли, хотя ничего не вводили.
         guard text != inputText else { return }
         inputText = text
+        baseCode = activeCode             // настоящий ввод: эта строка теперь база
         activeAmount = SmartFormat.parse(text, grouping: grouping)
     }
 
     func clearAll() {
+        baseCode = activeCode
         activeAmount = 0
         inputText = "0"
+    }
+
+    // MARK: поправка к курсу
+
+    func setAdjust(_ pct: Double) {
+        let v = RateAdjust.clamp(pct)
+        adjustResetFrom = nil
+        guard v != adjustPct else { return }
+        returnCursorToBase()
+        adjustPct = v
+        UserDefaults.standard.set(v, forKey: "adjust_pct")
+        markUsed()        // 4 часа считаются от последнего использования, включая саму настройку
+    }
+
+    /// Курсор — на базовую строку: её число не пересчитано, и смена процента
+    /// не должна менять то, что человек сейчас редактирует.
+    private func returnCursorToBase() {
+        guard activeCode != baseCode else { return }
+        activeCode = baseCode
+        inputText = SmartFormat.amount(activeAmount, decimals: decimals)
+    }
+
+    /// Приложение ушло с экрана (или им только что пользовались)
+    func markUsed() { UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "adjust_left_at") }
+
+    /// Вызывается при запуске и при возврате на экран
+    func resetAdjustIfExpired(now: TimeInterval = Date().timeIntervalSince1970) {
+        // поправка, заданная параметром запуска (тесты, кадры), отметки времени не имеет
+        guard ScreenshotArgs.adjust == nil else { return }
+        let left = UserDefaults.standard.double(forKey: "adjust_left_at")
+        guard RateAdjust.shouldReset(pct: adjustPct, keep: adjustKeep, leftAt: left, now: now) else { return }
+        let old = adjustPct
+        returnCursorToBase()
+        adjustPct = 0
+        UserDefaults.standard.set(0.0, forKey: "adjust_pct")
+        adjustResetFrom = old             // сброс не молчаливый: сообщение с «Вернуть»
     }
 
     /// Выбран источник, который отдаёт курсы только для валют на экране (Wise).
@@ -211,14 +278,19 @@ final class ConverterViewModel: ObservableObject {
     func remove(_ code: String) {
         guard currencies.count > 2 else { return }
         currencies.removeAll { $0 == code }
-        if activeCode == code, let f = currencies.first {
-            // Сначала перевод, потом смена активной: converted() считает от
-            // activeCode, и в обратном порядке пересчёт превращался в пустой —
-            // 100 USD после удаления USD становились 100 EUR.
+        if baseCode == code, let f = currencies.first {
+            // Удалили базовую строку: базой становится первая — с той суммой,
+            // что в ней показана. Сначала перевод, потом смена базы:
+            // converted() считает от baseCode, и в обратном порядке пересчёт
+            // превращался в пустой — 100 USD после удаления USD становились 100 EUR.
             let amount = converted(f)
+            baseCode = f
             activeCode = f
             activeAmount = amount
             inputText = SmartFormat.amount(amount, decimals: decimals)
+        } else if activeCode == code {
+            // удалили строку с курсором, база цела — курсор возвращается на неё
+            returnCursorToBase()
         }
     }
 

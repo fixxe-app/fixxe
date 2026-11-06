@@ -1,7 +1,7 @@
 title: "FIXXE – Konverter valuta"
 subtitle: Kursevi iz pet izvora
 short_description: Srednji kursevi iz 5 izvora, 300+ valuta, radi offline, bez reklama.
-keywords: valuta,konvertor,kurs,mjenjačnica,novac,putovanje,forex,kripto,finansije,euro
+keywords: "valuta,konvertor,kurs,mjenjačnica,novac,putovanje,forex,kripto,finansije,euro,fixer,fixe"
 promotional_text: Pet izvora kursa sa automatskom zamjenom, offline kursevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
 description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kursevima — neutralnom sredinom između svjetskih kupovnih i prodajnih cijena, bez bankarskih marži.
 
@@ -19,6 +19,9 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
 
 
   • Dinamična osnovica — kursevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-nazad.
+
+
+  • Prilagodba kursa — zadajte procenat za bankovnu proviziju, maržu ili gubitke pri prijenosu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene, pa ih nećete pomiješati s tržišnim kursom.
 
 
   • Bez reklama. Bez računa. Bez praćenja. Jedina dozvola je pristup internetu; vaš spisak, njegov redoslijed i postavke nikada ne napuštaju uređaj.
@@ -55,7 +58,7 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kursevi su sada uživo: FIXXE ih uzima sa Coinbasea, gdje se ažuriraju svake minute, pa brojke prate tržište tokom dana umjesto da se mijenjaju jednom dnevno. Ostali izvori ostaju kao rezerva."
+whats_new: "Novo: prilagodba kursa. Zadajte procenat za bankovnu proviziju ili maržu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene. Nalazi se u postavkama."
 landing:
   page_title: FIXXE — konvertor valuta
   install_title: Načini instalacije

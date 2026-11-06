@@ -59,4 +59,15 @@
     <string name="group_none">Žiadny — 1234.56</string>
     <string name="group_space">Medzera — 1 234.56</string>
     <string name="group_comma">Čiarka — 1,234.56</string>
+    <string name="adjust_title">Úprava kurzu</string>
+    <string name="setting_adjust">Úprava kurzu:  %1$s</string>
+    <string name="adjust_off">Vyp.</string>
+    <string name="adjusted_rates">Upravené kurzy</string>
+    <string name="adjusted_short">Upravené</string>
+    <string name="adjust_info">Sumy a kurzy na obrazovke sú zmenené o vašu úpravu (%1$s) a nie sú stredné trhové. Vychádzajú zo stredného kurzu zdroja.</string>
+    <string name="adjust_custom">Vlastná hodnota</string>
+    <string name="adjust_keep">Trvalo zapnuté</string>
+    <string name="adjust_keep_hint">Inak sa po 4 hodinách bez použitia vynuluje.</string>
+    <string name="adjust_reset_notice">Úprava vynulovaná, kurzy sú opäť trhové</string>
+    <string name="adjust_undo">Obnoviť</string>
 </resources>

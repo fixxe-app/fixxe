@@ -59,4 +59,15 @@
     <string name="group_none">Ingen — 1234.56</string>
     <string name="group_space">Mellanslag — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
+    <string name="adjust_title">Kursjustering</string>
+    <string name="setting_adjust">Kursjustering:  %1$s</string>
+    <string name="adjust_off">Av</string>
+    <string name="adjusted_rates">Justerade kurser</string>
+    <string name="adjusted_short">Justerad</string>
+    <string name="adjust_info">Belopp och kurser på skärmen är ändrade med din justering (%1$s) och är inte mittkurser. De bygger på källans mittkurs.</string>
+    <string name="adjust_custom">Eget värde</string>
+    <string name="adjust_keep">Alltid på</string>
+    <string name="adjust_keep_hint">Annars återställs den efter 4 timmar utan användning.</string>
+    <string name="adjust_reset_notice">Justeringen återställd, kurserna är mittkurser igen</string>
+    <string name="adjust_undo">Återställ</string>
 </resources>

@@ -59,4 +59,15 @@
     <string name="group_none">Nincs — 1234.56</string>
     <string name="group_space">Szóköz — 1 234.56</string>
     <string name="group_comma">Vessző — 1,234.56</string>
+    <string name="adjust_title">Árfolyam-korrekció</string>
+    <string name="setting_adjust">Árfolyam-korrekció:  %1$s</string>
+    <string name="adjust_off">Ki</string>
+    <string name="adjusted_rates">Korrigált árfolyamok</string>
+    <string name="adjusted_short">Korrigált</string>
+    <string name="adjust_info">A képernyőn látható összegek és árfolyamok a korrekcióddal (%1$s) módosítva szerepelnek, és nem középárfolyamok. Alapjuk a forrás középárfolyama.</string>
+    <string name="adjust_custom">Egyéni érték</string>
+    <string name="adjust_keep">Mindig bekapcsolva</string>
+    <string name="adjust_keep_hint">Különben 4 óra használat nélkül visszaáll.</string>
+    <string name="adjust_reset_notice">Korrekció visszaállítva, az árfolyamok újra középárfolyamok</string>
+    <string name="adjust_undo">Visszaállítás</string>
 </resources>

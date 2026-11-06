@@ -59,4 +59,15 @@
     <string name="group_none">Brez — 1234.56</string>
     <string name="group_space">Presledek — 1 234.56</string>
     <string name="group_comma">Vejica — 1,234.56</string>
+    <string name="adjust_title">Prilagoditev tečaja</string>
+    <string name="setting_adjust">Prilagoditev tečaja:  %1$s</string>
+    <string name="adjust_off">Izklopljeno</string>
+    <string name="adjusted_rates">Prilagojeni tečaji</string>
+    <string name="adjusted_short">Prilagojeno</string>
+    <string name="adjust_info">Zneski in tečaji na zaslonu so spremenjeni za vašo prilagoditev (%1$s) in niso srednji tržni. Temeljijo na srednjem tečaju vira.</string>
+    <string name="adjust_custom">Lastna vrednost</string>
+    <string name="adjust_keep">Vedno vklopljeno</string>
+    <string name="adjust_keep_hint">Sicer se po 4 urah brez uporabe ponastavi.</string>
+    <string name="adjust_reset_notice">Prilagoditev ponastavljena, tečaji so spet tržni</string>
+    <string name="adjust_undo">Obnovi</string>
 </resources>

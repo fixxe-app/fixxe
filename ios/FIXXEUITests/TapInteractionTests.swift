@@ -11,7 +11,10 @@ import UIKit
 /// Состав списка задаётся аргументом `-screen-currencies` (только DEBUG), чтобы
 /// тесты не зависели от того, что сохранили прошлые запуски: при запуске
 /// активна первая валюта (EUR), остальные — неактивные строки.
-final class TapInteractionTests: XCTestCase {
+class TapInteractionTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
 
     private let list = "EUR,USD,RSD,GEL,ILS,TJS,CHF"
 
@@ -21,8 +24,9 @@ final class TapInteractionTests: XCTestCase {
 
     private func launch() -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-screen-currencies", list]
+        app.launchArguments += ["-screen-currencies", list] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
         return app
     }
 
@@ -202,6 +206,9 @@ final class TapInteractionTests: XCTestCase {
         // «1» в начале даст «1234», в конце — «2341».
         let del = String(repeating: XCUIKeyboardKey.delete.rawValue, count: 15)
         field.typeText(del + "234")
+        // под нагрузкой последний символ доходит до поля с задержкой: без
+        // ожидания длина текста — а с ней и точка тапа — считалась по «23»
+        _ = wait(3) { self.value(field) == "234" }
         let base = value(field)
         let w = textWidth(base)
         let firstChar = textWidth(String(base.prefix(1)))

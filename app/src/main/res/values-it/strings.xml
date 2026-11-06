@@ -59,4 +59,15 @@
     <string name="group_none">Nessuno — 1234.56</string>
     <string name="group_space">Spazio — 1 234.56</string>
     <string name="group_comma">Virgola — 1,234.56</string>
+    <string name="adjust_title">Correzione del tasso</string>
+    <string name="setting_adjust">Correzione del tasso:  %1$s</string>
+    <string name="adjust_off">Disattivata</string>
+    <string name="adjusted_rates">Tassi corretti</string>
+    <string name="adjusted_short">Corretto</string>
+    <string name="adjust_info">Gli importi e i tassi sullo schermo sono modificati dalla tua correzione (%1$s) e non sono tassi medi di mercato. Si basano sul tasso medio della fonte.</string>
+    <string name="adjust_custom">Valore personalizzato</string>
+    <string name="adjust_keep">Sempre attiva</string>
+    <string name="adjust_keep_hint">Altrimenti si azzera dopo 4 ore senza utilizzo.</string>
+    <string name="adjust_reset_notice">Correzione azzerata, i tassi sono di nuovo di mercato</string>
+    <string name="adjust_undo">Ripristina</string>
 </resources>

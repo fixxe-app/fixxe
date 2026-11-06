@@ -59,4 +59,15 @@
     <string name="group_none">Nav — 1234.56</string>
     <string name="group_space">Atstarpe — 1 234.56</string>
     <string name="group_comma">Komats — 1,234.56</string>
+    <string name="adjust_title">Kursa korekcija</string>
+    <string name="setting_adjust">Kursa korekcija:  %1$s</string>
+    <string name="adjust_off">Izsl.</string>
+    <string name="adjusted_rates">Koriģētie kursi</string>
+    <string name="adjusted_short">Koriģēts</string>
+    <string name="adjust_info">Summas un kursi ekrānā ir mainīti par jūsu korekciju (%1$s) un nav vidējie tirgus kursi. To pamatā ir avota vidējais kurss.</string>
+    <string name="adjust_custom">Sava vērtība</string>
+    <string name="adjust_keep">Vienmēr ieslēgta</string>
+    <string name="adjust_keep_hint">Citādi tā tiek atiestatīta pēc 4 stundām bez lietošanas.</string>
+    <string name="adjust_reset_notice">Korekcija atiestatīta, kursi atkal ir tirgus kursi</string>
+    <string name="adjust_undo">Atjaunot</string>
 </resources>

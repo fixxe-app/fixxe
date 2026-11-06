@@ -59,4 +59,15 @@
     <string name="group_none">ללא — 1234.56</string>
     <string name="group_space">רווח — 1 234.56</string>
     <string name="group_comma">פסיק — 1,234.56</string>
+    <string name="adjust_title">התאמת שער</string>
+    <string name="setting_adjust">התאמת שער:  %1$s</string>
+    <string name="adjust_off">כבוי</string>
+    <string name="adjusted_rates">שערים מותאמים</string>
+    <string name="adjusted_short">מותאם</string>
+    <string name="adjust_info">הסכומים והשערים במסך שונו לפי ההתאמה שלך (%1$s) ואינם שערי אמצע-שוק. הם מבוססים על שער האמצע של המקור.</string>
+    <string name="adjust_custom">ערך מותאם אישית</string>
+    <string name="adjust_keep">פעיל תמיד</string>
+    <string name="adjust_keep_hint">אחרת היא מתאפסת אחרי 4 שעות ללא שימוש.</string>
+    <string name="adjust_reset_notice">ההתאמה אופסה, השערים שוב שערי שוק</string>
+    <string name="adjust_undo">שחזור</string>
 </resources>

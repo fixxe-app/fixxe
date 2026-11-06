@@ -1,7 +1,7 @@
 title: "FIXXE – Valutacalculator"
 subtitle: Koersen uit vijf bronnen
 short_description: Middenkoersen uit 5 bronnen, 300+ valuta's, werkt offline, geen reclame.
-keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro
+keywords: "valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro,fixer,fixe"
 promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
 description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele middenkoersen — het neutrale midden tussen wereldwijde koop- en verkoopprijzen, zonder bankmarges.
 
@@ -19,6 +19,9 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
 
 
   • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
+
+
+  • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers.
 
 
   • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
@@ -55,7 +58,7 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   Rates By Exchange Rate API.
 
   '
-whats_new: "De koersen zijn nu live: FIXXE haalt ze bij Coinbase, waar ze elke minuut worden bijgewerkt. De cijfers volgen de markt gedurende de dag in plaats van één keer per dag te veranderen. De andere bronnen blijven als reserve."
+whats_new: "Nieuw: koerscorrectie. Stel een percentage in voor bankkosten of marge (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd. Te vinden in Instellingen."
 landing:
   page_title: FIXXE — valutaomrekener
   install_title: Manieren om te installeren

@@ -143,6 +143,26 @@
                 android:maxLines="1"
                 android:ellipsize="end" />
 
+            <!-- Метка «пересчитано с поправкой». Отдельный блок, а не символ
+                 в тексте курса: иначе в арабском и иврите её переставил бы
+                 двунаправленный алгоритм. Размер в dp — плашка не растёт
+                 вместе со шрифтом. -->
+            <TextView
+                android:id="@+id/tvAdjustBadge"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_adjust_badge"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="no"
+                android:text="%"
+                android:textColor="@color/on_adjusted"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
             <TextView
                 android:id="@+id/tvRate"
                 android:layout_width="wrap_content"

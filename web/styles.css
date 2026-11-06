@@ -8,6 +8,10 @@
   --gray3:#666; --gray4:#6F6F6F; --gray5:#555; --gray6:#333;
   --press:#0000000d; --hover:#f2f2f2; --chip-border:#ddd; --chip-on:#455A64;
   --on-accent:#fff;
+  /* «с поправкой»: один цвет — одно значение. Оранжевый и коричневый заняты
+     статусами, синий — активной строкой, зелёный — логотипом. */
+  --adjusted:#6A1B9A; --adjusted-bg:#EBD9F0; --on-adjusted:#FFFFFF;
+  --stale:#C93E14; --offline:#86685E;
 }
 
 /* Тёмная тема. Фон не чёрный, а тёмно-серый: на OLED чистый чёрный даёт резкие
@@ -23,6 +27,8 @@
     --gray3:#B4B4B4; --gray4:#9A9A9A; --gray5:#B4B4B4; --gray6:#D0D0D0;
     --press:#ffffff14; --hover:#2A2A2A; --chip-border:#3A3A3A; --chip-on:#37474F;
     --on-accent:#0B0B0B;
+    --adjusted:#CE93D8; --adjusted-bg:#3A2348; --on-adjusted:#0B0B0B;
+    --stale:#FF8A65; --offline:#BCAAA4;
   }
 }
 :root[data-theme="dark"]{
@@ -33,6 +39,8 @@
   --gray3:#B4B4B4; --gray4:#9A9A9A; --gray5:#B4B4B4; --gray6:#D0D0D0;
   --press:#ffffff14; --hover:#2A2A2A; --chip-border:#3A3A3A; --chip-on:#37474F;
   --on-accent:#0B0B0B;
+  --adjusted:#CE93D8; --adjusted-bg:#3A2348; --on-adjusted:#0B0B0B;
+  --stale:#FF8A65; --offline:#BCAAA4;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%;overflow:hidden}
@@ -183,3 +191,39 @@ body{
   .icon-btn.loading, .icon-btn.loading *{animation:none !important}
   .icon-btn.loading{opacity:.4}
 }
+
+/* ---------- Поправка к курсу ---------- */
+/* Значок «%» дублирует цвет: при дальтонизме фиолетовый близок к синему. */
+.pct{display:inline-flex; align-items:center; justify-content:center; flex:none; width:18px; height:18px; border-radius:5px;
+  background:var(--adjusted); color:var(--on-adjusted); font-size:12px; font-weight:800; line-height:1}
+.adjust-banner{display:flex; align-items:center; gap:8px; width:100%; min-height:40px; padding:0 14px; border:0; flex-shrink:0;
+  background:var(--adjusted-bg); color:var(--adjusted); font:inherit; font-size:13px; font-weight:700; text-align:start; cursor:pointer}
+.adjust-banner #adjustBannerText{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.adjust-banner .chev{font-size:20px; line-height:1}
+[dir="rtl"] .adjust-banner .chev{display:inline-block; transform:scaleX(-1)}
+.adjust-notice{display:flex; align-items:center; gap:8px; min-height:40px; padding:0 14px; flex-shrink:0;
+  background:var(--card); color:var(--ink); font-size:13px}
+.adjust-notice span{flex:1; min-width:0}
+.adjust-notice button{border:0; background:none; color:var(--blue); font:inherit; font-weight:700; min-height:40px; cursor:pointer}
+.adjust-banner[hidden], .adjust-notice[hidden]{display:none}
+/* Пересчитанные строки: сумма и курс другим цветом, перед курсом метка. Метка —
+   отдельный блок, а не символ в тексте: иначе в арабском и иврите её
+   переставил бы двунаправленный алгоритм. */
+.card.adj .amount{color:var(--adjusted)}
+.card.adj .rate{color:var(--adjusted); font-weight:600}
+.card.adj .rate:not(:empty)::before{content:"%"; display:inline-block; width:12px; height:12px; line-height:12px; margin-inline-end:4px;
+  border-radius:3px; background:var(--adjusted); color:var(--on-adjusted); font-size:9px; font-weight:800; text-align:center; vertical-align:1px}
+.info-btn.adj{color:var(--adjusted); font-weight:700}
+.adjust-info{display:flex; gap:8px; margin:4px 20px 8px; padding:10px 12px; border-radius:10px; flex-shrink:0;
+  background:var(--adjusted-bg); color:var(--adjusted); font-size:13px; line-height:1.4}
+.adjust-info .link{border:0; background:none; padding:6px 0 0; color:inherit; font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}
+.adj-value{color:var(--adjusted)}
+.adjust-modal .sign{display:flex; gap:6px; padding:4px 20px 8px; flex-shrink:0}
+.adjust-modal .sign button{flex:1; min-height:40px; border:1px solid var(--chip-border); border-radius:8px;
+  background:var(--card); color:var(--ink); font-size:18px; cursor:pointer}
+.adjust-modal .sign button.on{background:var(--adjusted); color:var(--on-adjusted); border-color:transparent; font-weight:700}
+.adjust-modal .custom input{width:72px; margin-inline-start:auto; padding:6px 8px; border:1px solid var(--chip-border); border-radius:8px;
+  background:var(--card); color:var(--ink); font:inherit; text-align:end}
+.adjust-modal .keep{display:flex; align-items:center; gap:10px; min-height:44px; padding:6px 20px 0; font-size:14px; color:var(--ink); flex-shrink:0}
+.adjust-modal .keep input{width:20px; height:20px}
+.adjust-modal .hint{padding:0 20px 4px; font-size:12px; color:var(--gray4); flex-shrink:0}

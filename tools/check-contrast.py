@@ -46,6 +46,12 @@ for k, purpose, need in [("text_primary","основной текст",TEXT),("t
                          ("status_offline","статус «офлайн»",TEXT),("status_stale","статус «устарели»",TEXT),
                          ("icon_faint","крестик и ручка",ICON)]:
     check("Android", k, purpose, need, day.get(k), n(k), *A_BG)
+# «с поправкой»: суммы и курсы на карточке, текст на полосе, знак «%» на плашке
+check("Android", "adjusted", "суммы и курсы с поправкой", TEXT, day.get("adjusted"), n("adjusted"), *A_BG)
+check("Android", "adjusted на adjusted_bg", "текст полосы «Курсы с поправкой»", TEXT,
+      day.get("adjusted"), n("adjusted"), [day.get("adjusted_bg", "#000")], [n("adjusted_bg") or "#000"])
+check("Android", "on_adjusted на adjusted", "знак «%» на плашке", TEXT,
+      day.get("on_adjusted"), n("on_adjusted"), [day.get("adjusted", "#000")], [n("adjusted") or "#000"])
 # цвет текста, зашитый в код, не меняется вместе с темой — его быть не должно
 for f in (ROOT/"app/src/main/java").rglob("*.kt"):
     for i, line in enumerate(f.read_text().splitlines(), 1):
@@ -60,6 +66,12 @@ for k, purpose, need in [("brandBlue","ссылки и кнопки",TEXT),("tex
                          ("muted","«Rates By…»",TEXT),("staleRed","статус «устарели»",TEXT),("staleBrown","статус «офлайн»",TEXT),
                          ("chipText","текст чипа",TEXT),("faint","крестик и ручка",ICON)]:
     check("iOS", k, purpose, need, *pal.get(k, (None, None)), *I_BG)
+ip = lambda k: pal.get(k, (None, None))
+check("iOS", "adjusted", "суммы и курсы с поправкой", TEXT, *ip("adjusted"), *I_BG)
+check("iOS", "adjusted на adjustedBg", "текст полосы «Курсы с поправкой»", TEXT, *ip("adjusted"),
+      [ip("adjustedBg")[0] or "000000"], [ip("adjustedBg")[1] or "000000"])
+check("iOS", "onAdjusted на adjusted", "знак «%» на плашке", TEXT, *ip("onAdjusted"),
+      [ip("adjusted")[0] or "000000"], [ip("adjusted")[1] or "000000"])
 
 # ── веб ───────────────────────────────────────────────────────────────────
 css = (ROOT/"web/styles.css").read_text()
@@ -70,8 +82,19 @@ W_BG = ([wl["card"], wl["bg"]], [wd["card"], wd["bg"]])
 for k, purpose, need in [("ink","основной текст",TEXT),("gray","символ валюты",TEXT),("gray2","строка курса, название",TEXT),
                          ("gray3","статус",TEXT),("gray4","текст в списках",TEXT),("muted","«Rates By…»",TEXT),
                          ("dim","версия",TEXT),("faint2","плейсхолдер",TEXT),("blue","ссылки и кнопки",TEXT),
+                         ("stale","статус «устарели»",TEXT),("offline","статус «офлайн»",TEXT),
+                         ("adjusted","суммы и курсы с поправкой",TEXT),
                          ("faint","крестик и ручка",ICON)]:
     check("веб", k, purpose, need, wl.get(k), wd.get(k), *W_BG)
+check("веб", "adjusted на adjusted-bg", "текст полосы «Курсы с поправкой»", TEXT, wl.get("adjusted"), wd.get("adjusted"),
+      [wl.get("adjusted-bg", "#000")], [wd.get("adjusted-bg", "#000")])
+check("веб", "on-adjusted на adjusted", "знак «%» на плашке", TEXT, wl.get("on-adjusted"), wd.get("on-adjusted"),
+      [wl.get("adjusted", "#000")], [wd.get("adjusted", "#000")])
+# статус в веб-версии раньше красился цветами, зашитыми в код, — одними на обе темы
+js = (ROOT/"web/app.js").read_text()
+for i, line in enumerate(js.splitlines(), 1):
+    if re.search(r"style\.color\s*=\s*'#", line):
+        problems.append(f"веб: цвет зашит в код (одинаков в обеих темах) — web/app.js:{i}")
 
 if problems:
     print("✗ контраст не проходит норму:"); print("\n".join("  " + p for p in problems)); sys.exit(1)

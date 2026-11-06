@@ -1,7 +1,7 @@
 title: "FIXXE – Pretvornik valut"
 subtitle: Tečaji iz petih virov
 short_description: Srednji tečaji iz 5 virov, 300+ valut, deluje brez povezave, brez oglasov.
-keywords: valuta,pretvornik,tečaj,menjava,denar,potovanje,forex,kripto,finance,evro
+keywords: "valuta,pretvornik,tečaj,menjava,denar,potovanje,forex,kripto,finance,evro,fixer,fixe"
 promotional_text: Pet virov tečajev s samodejnim preklopom, tečaji brez povezave z opozorilom o starosti in zaokroževanje, ki ne pokvari majhnih zneskov.
 description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi tečaji — nevtralno sredino med svetovnimi nakupnimi in prodajnimi cenami, brez bančnih pribitkov.
 
@@ -19,6 +19,9 @@ description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi t
 
 
   • Dinamična osnova — tečaji se preračunajo glede na valuto, ki jo urejate, ne glede na stalno. Brez preklapljanja sem in tja.
+
+
+  • Prilagoditev tečaja — nastavite odstotek za bančno provizijo, maržo ali izgube pri nakazilu (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene, zato jih ne boste zamenjali s tržnim tečajem.
 
 
   • Brez oglasov. Brez računov. Brez sledenja. Edino dovoljenje je dostop do interneta; vaš seznam, njegov vrstni red in nastavitve nikoli ne zapustijo naprave.
@@ -55,7 +58,7 @@ description: 'FIXXE je hiter in pregleden pretvornik valut z živimi srednjimi t
   Rates By Exchange Rate API.
 
   '
-whats_new: "Tečaji so zdaj živi: FIXXE jih jemlje pri Coinbase, kjer se posodabljajo vsako minuto, zato številke čez dan sledijo trgu, namesto da bi se spremenile enkrat na dan. Drugi viri ostajajo kot rezerva."
+whats_new: "Novo: prilagoditev tečaja. Nastavite odstotek za bančno provizijo ali maržo (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene. Najdete jo v nastavitvah."
 landing:
   page_title: FIXXE — pretvornik valut
   install_title: Načini namestitve

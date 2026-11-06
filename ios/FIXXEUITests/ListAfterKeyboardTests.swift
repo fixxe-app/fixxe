@@ -2,13 +2,17 @@ import XCTest
 
 /// Клавиатура поднимает список к строке ввода. После того как её убрали,
 /// список обязан стоять как до клавиатуры — на Android он оставался сдвинутым.
-final class ListAfterKeyboardTests: XCTestCase {
+class ListAfterKeyboardTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
     private let codes = ["EUR","USD","RSD","GBP","CHF","JPY","CNY","TRY","GEL","ILS","PLN","CZK"]
 
     private func launch() -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-screen-currencies", codes.joined(separator: ",")]
+        app.launchArguments += ["-screen-currencies", codes.joined(separator: ",")] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
         XCTAssertTrue(app.descendants(matching: .any)["amount-EUR"].waitForExistence(timeout: 20),
                       "список не появился")
         return app

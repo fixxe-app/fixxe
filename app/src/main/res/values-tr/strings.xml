@@ -59,4 +59,15 @@
     <string name="group_none">Yok — 1234.56</string>
     <string name="group_space">Boşluk — 1 234.56</string>
     <string name="group_comma">Virgül — 1,234.56</string>
+    <string name="adjust_title">Kur düzeltmesi</string>
+    <string name="setting_adjust">Kur düzeltmesi:  %1$s</string>
+    <string name="adjust_off">Kapalı</string>
+    <string name="adjusted_rates">Düzeltilmiş kurlar</string>
+    <string name="adjusted_short">Düzeltilmiş</string>
+    <string name="adjust_info">Ekrandaki tutarlar ve kurlar düzeltmeniz (%1$s) kadar değiştirilmiştir ve piyasa ortalaması değildir. Kaynağın piyasa ortalaması kuruna dayanır.</string>
+    <string name="adjust_custom">Özel değer</string>
+    <string name="adjust_keep">Her zaman açık</string>
+    <string name="adjust_keep_hint">Aksi halde 4 saat kullanılmazsa sıfırlanır.</string>
+    <string name="adjust_reset_notice">Düzeltme sıfırlandı, kurlar yeniden piyasa ortalaması</string>
+    <string name="adjust_undo">Geri al</string>
 </resources>

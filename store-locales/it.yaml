@@ -1,7 +1,7 @@
 title: "FIXXE – Convertitore valute"
 subtitle: Tassi da cinque fonti
 short_description: Tassi medi da 5 fonti, 300+ valute, funziona offline, senza pubblicità.
-keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro
+keywords: "valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro,fixer,fixe"
 promotional_text: Cinque fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
 description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi di mercato in tempo reale: il punto neutro fra i prezzi mondiali di acquisto e di vendita, senza ricarichi bancari.
 
@@ -19,6 +19,9 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
 
 
   • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
+
+
+  • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato.
 
 
   • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
@@ -55,7 +58,7 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
   Rates By Exchange Rate API.
 
   '
-whats_new: "I tassi ora sono in tempo reale: FIXXE li prende da Coinbase, dove si aggiornano ogni minuto, così i numeri seguono il mercato durante la giornata invece di cambiare una volta al giorno. Le altre fonti restano di riserva."
+whats_new: "Novità: correzione del tasso. Imposta una percentuale per la commissione della banca o il margine (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente. La trovi nelle Impostazioni."
 landing:
   page_title: FIXXE — convertitore di valute
   install_title: Modi per installare

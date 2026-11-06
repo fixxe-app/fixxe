@@ -59,4 +59,15 @@
     <string name="group_none">Ninguno — 1234.56</string>
     <string name="group_space">Espacio — 1 234.56</string>
     <string name="group_comma">Coma — 1,234.56</string>
+    <string name="adjust_title">Ajuste del tipo</string>
+    <string name="setting_adjust">Ajuste del tipo:  %1$s</string>
+    <string name="adjust_off">Desactivado</string>
+    <string name="adjusted_rates">Tipos ajustados</string>
+    <string name="adjusted_short">Ajustado</string>
+    <string name="adjust_info">Los importes y tipos en pantalla están modificados por tu ajuste (%1$s) y no son tipos medios de mercado. Se basan en el tipo medio de la fuente.</string>
+    <string name="adjust_custom">Valor personalizado</string>
+    <string name="adjust_keep">Siempre activo</string>
+    <string name="adjust_keep_hint">Si no, se restablece tras 4 horas sin uso.</string>
+    <string name="adjust_reset_notice">Ajuste restablecido; los tipos vuelven a ser de mercado</string>
+    <string name="adjust_undo">Restaurar</string>
 </resources>

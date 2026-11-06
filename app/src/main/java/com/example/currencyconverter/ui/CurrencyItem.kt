@@ -6,7 +6,9 @@ data class CurrencyItem(
     val flag: String,
     val symbol: String,
     val amount: Double,
-    val rateText: String
+    val rateText: String,
+    /** сумма и курс пересчитаны с поправкой — строка помечается */
+    val adjusted: Boolean = false
 )
 
 data class CurrencyInfo(val code: String, val name: String)

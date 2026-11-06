@@ -59,7 +59,18 @@ const I18N = {
 "source_info_message": "Mid-market rate — the midpoint between buy and sell on the global market.\n\nBase currency: EUR, other pairs are computed through the euro.\n\nSources (automatic fallback):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nIf the primary source does not respond during auto-update or on ↻, the app automatically takes data from the next one. The current source is shown at the top next to the update time.\n\nIn Settings (⚙) you can force a specific source — the others still remain as fallback.\n\nCoinbase and FXRatesAPI update every minute, the other sources once a day. These are reference rates, not trading quotes.\n\nLicenses and attribution:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — requires the “Rates By Exchange Rate API” link (in the footer, clickable).\n• F.A. — CC0 (public domain), no attribution required.\n• Frankfurter — MIT, data from the European Central Bank (ECB).",
 "reorder": "Reorder",
 "rates_offline": "Offline · rates from %1$s · %2$s",
-"rates_stale": "⚠ Rates are out of date — from %1$s · %2$s"
+"rates_stale": "⚠ Rates are out of date — from %1$s · %2$s",
+"adjust_title": "Rate adjustment",
+"setting_adjust": "Rate adjustment:  %1$s",
+"adjust_off": "Off",
+"adjusted_rates": "Adjusted rates",
+"adjusted_short": "Adjusted",
+"adjust_info": "Amounts and rates on screen are changed by your adjustment (%1$s) and are not mid-market. They are based on the source's mid-market rate.",
+"adjust_custom": "Custom value",
+"adjust_keep": "Always on",
+"adjust_keep_hint": "Otherwise it resets after 4 hours without use.",
+"adjust_reset_notice": "Adjustment reset, rates are mid-market again",
+"adjust_undo": "Restore"
 },
 "ar": {
 "app_name": "FIXXE",
@@ -120,7 +131,18 @@ const I18N = {
 "grouping_title": "فاصل الآلاف",
 "group_none": "بلا — 1234.56",
 "group_space": "مسافة — 1 234.56",
-"group_comma": "فاصلة — 1,234.56"
+"group_comma": "فاصلة — 1,234.56",
+"adjust_title": "تعديل السعر",
+"setting_adjust": "تعديل السعر:  %1$s",
+"adjust_off": "إيقاف",
+"adjusted_rates": "أسعار معدَّلة",
+"adjusted_short": "معدَّل",
+"adjust_info": "المبالغ والأسعار على الشاشة معدَّلة بنسبة تعديلك (%1$s) وليست أسعار السوق الوسطية. وهي مبنية على السعر الوسطي للمصدر.",
+"adjust_custom": "قيمة مخصصة",
+"adjust_keep": "مفعَّل دائمًا",
+"adjust_keep_hint": "وإلا يُعاد ضبطه بعد 4 ساعات من عدم الاستخدام.",
+"adjust_reset_notice": "أُعيد ضبط التعديل، والأسعار عادت أسعار السوق",
+"adjust_undo": "استرجاع"
 },
 "he": {
 "app_name": "FIXXE",
@@ -181,7 +203,18 @@ const I18N = {
 "grouping_title": "הפרדת אלפים",
 "group_none": "ללא — 1234.56",
 "group_space": "רווח — 1 234.56",
-"group_comma": "פסיק — 1,234.56"
+"group_comma": "פסיק — 1,234.56",
+"adjust_title": "התאמת שער",
+"setting_adjust": "התאמת שער:  %1$s",
+"adjust_off": "כבוי",
+"adjusted_rates": "שערים מותאמים",
+"adjusted_short": "מותאם",
+"adjust_info": "הסכומים והשערים במסך שונו לפי ההתאמה שלך (%1$s) ואינם שערי אמצע-שוק. הם מבוססים על שער האמצע של המקור.",
+"adjust_custom": "ערך מותאם אישית",
+"adjust_keep": "פעיל תמיד",
+"adjust_keep_hint": "אחרת היא מתאפסת אחרי 4 שעות ללא שימוש.",
+"adjust_reset_notice": "ההתאמה אופסה, השערים שוב שערי שוק",
+"adjust_undo": "שחזור"
 },
 "id": {
 "app_name": "FIXXE",
@@ -242,7 +275,18 @@ const I18N = {
 "grouping_title": "Pemisah ribuan",
 "group_none": "Tanpa — 1234.56",
 "group_space": "Spasi — 1 234.56",
-"group_comma": "Koma — 1,234.56"
+"group_comma": "Koma — 1,234.56",
+"adjust_title": "Penyesuaian kurs",
+"setting_adjust": "Penyesuaian kurs:  %1$s",
+"adjust_off": "Mati",
+"adjusted_rates": "Kurs disesuaikan",
+"adjusted_short": "Disesuaikan",
+"adjust_info": "Jumlah dan kurs di layar diubah sesuai penyesuaian Anda (%1$s) dan bukan kurs tengah pasar. Dasarnya adalah kurs tengah dari sumber.",
+"adjust_custom": "Nilai khusus",
+"adjust_keep": "Selalu aktif",
+"adjust_keep_hint": "Jika tidak, akan direset setelah 4 jam tidak digunakan.",
+"adjust_reset_notice": "Penyesuaian direset, kurs kembali ke kurs pasar",
+"adjust_undo": "Pulihkan"
 },
 "bg": {
 "app_name": "FIXXE",
@@ -303,7 +347,18 @@ const I18N = {
 "grouping_title": "Разделител на хилядите",
 "group_none": "Без — 1234.56",
 "group_space": "Интервал — 1 234.56",
-"group_comma": "Запетая — 1,234.56"
+"group_comma": "Запетая — 1,234.56",
+"adjust_title": "Корекция на курса",
+"setting_adjust": "Корекция на курса:  %1$s",
+"adjust_off": "Изкл.",
+"adjusted_rates": "Курсове с корекция",
+"adjusted_short": "С корекция",
+"adjust_info": "Сумите и курсовете на екрана са променени с вашата корекция (%1$s) и не са средни пазарни. Основата е средният курс на източника.",
+"adjust_custom": "Собствена стойност",
+"adjust_keep": "Винаги включена",
+"adjust_keep_hint": "Иначе се нулира след 4 часа без използване.",
+"adjust_reset_notice": "Корекцията е нулирана, курсовете отново са пазарни",
+"adjust_undo": "Върни"
 },
 "bs": {
 "app_name": "FIXXE",
@@ -364,7 +419,18 @@ const I18N = {
 "grouping_title": "Razdvajanje hiljada",
 "group_none": "Bez — 1234.56",
 "group_space": "Razmak — 1 234.56",
-"group_comma": "Zarez — 1,234.56"
+"group_comma": "Zarez — 1,234.56",
+"adjust_title": "Prilagodba kursa",
+"setting_adjust": "Prilagodba kursa:  %1$s",
+"adjust_off": "Isključeno",
+"adjusted_rates": "Prilagođeni kursevi",
+"adjusted_short": "Prilagođeno",
+"adjust_info": "Iznosi i kursevi na ekranu promijenjeni su za vašu prilagodbu (%1$s) i nisu srednji tržišni. Zasnovani su na srednjem kursu izvora.",
+"adjust_custom": "Vlastita vrijednost",
+"adjust_keep": "Uvijek uključeno",
+"adjust_keep_hint": "Inače se poništava nakon 4 sata bez korištenja.",
+"adjust_reset_notice": "Prilagodba poništena, kursevi su opet tržišni",
+"adjust_undo": "Vrati"
 },
 "cs": {
 "app_name": "FIXXE",
@@ -425,7 +491,18 @@ const I18N = {
 "grouping_title": "Oddělovač tisíců",
 "group_none": "Žádný — 1234.56",
 "group_space": "Mezera — 1 234.56",
-"group_comma": "Čárka — 1,234.56"
+"group_comma": "Čárka — 1,234.56",
+"adjust_title": "Úprava kurzu",
+"setting_adjust": "Úprava kurzu:  %1$s",
+"adjust_off": "Vyp.",
+"adjusted_rates": "Upravené kurzy",
+"adjusted_short": "Upraveno",
+"adjust_info": "Částky a kurzy na obrazovce jsou změněny o vaši úpravu (%1$s) a nejsou střední tržní. Vycházejí ze středního kurzu zdroje.",
+"adjust_custom": "Vlastní hodnota",
+"adjust_keep": "Trvale zapnuto",
+"adjust_keep_hint": "Jinak se po 4 hodinách bez použití vynuluje.",
+"adjust_reset_notice": "Úprava vynulována, kurzy jsou opět tržní",
+"adjust_undo": "Obnovit"
 },
 "da": {
 "app_name": "FIXXE",
@@ -486,7 +563,18 @@ const I18N = {
 "grouping_title": "Tusindtalsseparator",
 "group_none": "Ingen — 1234.56",
 "group_space": "Mellemrum — 1 234.56",
-"group_comma": "Komma — 1,234.56"
+"group_comma": "Komma — 1,234.56",
+"adjust_title": "Kursjustering",
+"setting_adjust": "Kursjustering:  %1$s",
+"adjust_off": "Fra",
+"adjusted_rates": "Justerede kurser",
+"adjusted_short": "Justeret",
+"adjust_info": "Beløb og kurser på skærmen er ændret med din justering (%1$s) og er ikke middelkurser. De bygger på kildens middelkurs.",
+"adjust_custom": "Egen værdi",
+"adjust_keep": "Altid slået til",
+"adjust_keep_hint": "Ellers nulstilles den efter 4 timer uden brug.",
+"adjust_reset_notice": "Justering nulstillet, kurserne er igen middelkurser",
+"adjust_undo": "Gendan"
 },
 "de": {
 "app_name": "FIXXE",
@@ -547,7 +635,18 @@ const I18N = {
 "grouping_title": "Tausendertrennzeichen",
 "group_none": "Keine — 1234.56",
 "group_space": "Leerzeichen — 1 234.56",
-"group_comma": "Komma — 1,234.56"
+"group_comma": "Komma — 1,234.56",
+"adjust_title": "Kursanpassung",
+"setting_adjust": "Kursanpassung:  %1$s",
+"adjust_off": "Aus",
+"adjusted_rates": "Angepasste Kurse",
+"adjusted_short": "Angepasst",
+"adjust_info": "Beträge und Kurse auf dem Bildschirm sind um Ihre Anpassung (%1$s) verändert und keine Mittelkurse. Grundlage ist der Mittelkurs der Quelle.",
+"adjust_custom": "Eigener Wert",
+"adjust_keep": "Dauerhaft aktiv",
+"adjust_keep_hint": "Sonst wird sie nach 4 Stunden ohne Nutzung zurückgesetzt.",
+"adjust_reset_notice": "Anpassung zurückgesetzt, Kurse sind wieder Mittelkurse",
+"adjust_undo": "Wiederherstellen"
 },
 "el": {
 "app_name": "FIXXE",
@@ -608,7 +707,18 @@ const I18N = {
 "grouping_title": "Διαχωριστικό χιλιάδων",
 "group_none": "Κανένα — 1234.56",
 "group_space": "Κενό — 1 234.56",
-"group_comma": "Κόμμα — 1,234.56"
+"group_comma": "Κόμμα — 1,234.56",
+"adjust_title": "Προσαρμογή ισοτιμίας",
+"setting_adjust": "Προσαρμογή ισοτιμίας:  %1$s",
+"adjust_off": "Ανενεργή",
+"adjusted_rates": "Προσαρμοσμένες ισοτιμίες",
+"adjusted_short": "Προσαρμοσμένη",
+"adjust_info": "Τα ποσά και οι ισοτιμίες στην οθόνη έχουν αλλάξει κατά την προσαρμογή σας (%1$s) και δεν είναι μέσες ισοτιμίες αγοράς. Βασίζονται στη μέση ισοτιμία της πηγής.",
+"adjust_custom": "Προσαρμοσμένη τιμή",
+"adjust_keep": "Πάντα ενεργή",
+"adjust_keep_hint": "Διαφορετικά μηδενίζεται μετά από 4 ώρες χωρίς χρήση.",
+"adjust_reset_notice": "Η προσαρμογή μηδενίστηκε, οι ισοτιμίες είναι ξανά της αγοράς",
+"adjust_undo": "Επαναφορά"
 },
 "es": {
 "app_name": "FIXXE",
@@ -669,7 +779,18 @@ const I18N = {
 "grouping_title": "Separador de miles",
 "group_none": "Ninguno — 1234.56",
 "group_space": "Espacio — 1 234.56",
-"group_comma": "Coma — 1,234.56"
+"group_comma": "Coma — 1,234.56",
+"adjust_title": "Ajuste del tipo",
+"setting_adjust": "Ajuste del tipo:  %1$s",
+"adjust_off": "Desactivado",
+"adjusted_rates": "Tipos ajustados",
+"adjusted_short": "Ajustado",
+"adjust_info": "Los importes y tipos en pantalla están modificados por tu ajuste (%1$s) y no son tipos medios de mercado. Se basan en el tipo medio de la fuente.",
+"adjust_custom": "Valor personalizado",
+"adjust_keep": "Siempre activo",
+"adjust_keep_hint": "Si no, se restablece tras 4 horas sin uso.",
+"adjust_reset_notice": "Ajuste restablecido; los tipos vuelven a ser de mercado",
+"adjust_undo": "Restaurar"
 },
 "et": {
 "app_name": "FIXXE",
@@ -730,7 +851,18 @@ const I18N = {
 "grouping_title": "Tuhandeliste eraldaja",
 "group_none": "Puudub — 1234.56",
 "group_space": "Tühik — 1 234.56",
-"group_comma": "Koma — 1,234.56"
+"group_comma": "Koma — 1,234.56",
+"adjust_title": "Kursi korrektsioon",
+"setting_adjust": "Kursi korrektsioon:  %1$s",
+"adjust_off": "Väljas",
+"adjusted_rates": "Korrigeeritud kursid",
+"adjusted_short": "Korrigeeritud",
+"adjust_info": "Ekraanil olevaid summasid ja kursse on muudetud teie korrektsiooni (%1$s) võrra ning need ei ole keskkursid. Aluseks on allika keskkurss.",
+"adjust_custom": "Oma väärtus",
+"adjust_keep": "Alati sees",
+"adjust_keep_hint": "Muidu lähtestatakse see pärast 4 tundi kasutamata olekut.",
+"adjust_reset_notice": "Korrektsioon lähtestatud, kursid on taas keskkursid",
+"adjust_undo": "Taasta"
 },
 "fa": {
 "app_name": "FIXXE",
@@ -791,7 +923,18 @@ const I18N = {
 "grouping_title": "جداکننده هزارگان",
 "group_none": "بدون — 1234.56",
 "group_space": "فاصله — 1 234.56",
-"group_comma": "ویرگول — 1,234.56"
+"group_comma": "ویرگول — 1,234.56",
+"adjust_title": "تعدیل نرخ",
+"setting_adjust": "تعدیل نرخ:  %1$s",
+"adjust_off": "خاموش",
+"adjusted_rates": "نرخ‌های تعدیل‌شده",
+"adjusted_short": "تعدیل‌شده",
+"adjust_info": "مبالغ و نرخ‌های روی صفحه با تعدیل شما (%1$s) تغییر کرده‌اند و نرخ میانهٔ بازار نیستند. مبنای آن‌ها نرخ میانهٔ منبع است.",
+"adjust_custom": "مقدار دلخواه",
+"adjust_keep": "همیشه فعال",
+"adjust_keep_hint": "در غیر این صورت پس از ۴ ساعت بدون استفاده بازنشانی می‌شود.",
+"adjust_reset_notice": "تعدیل بازنشانی شد، نرخ‌ها دوباره نرخ بازارند",
+"adjust_undo": "بازگردانی"
 },
 "fi": {
 "app_name": "FIXXE",
@@ -852,7 +995,18 @@ const I18N = {
 "grouping_title": "Tuhaterotin",
 "group_none": "Ei mitään — 1234.56",
 "group_space": "Välilyönti — 1 234.56",
-"group_comma": "Pilkku — 1,234.56"
+"group_comma": "Pilkku — 1,234.56",
+"adjust_title": "Kurssin korjaus",
+"setting_adjust": "Kurssin korjaus:  %1$s",
+"adjust_off": "Pois",
+"adjusted_rates": "Korjatut kurssit",
+"adjusted_short": "Korjattu",
+"adjust_info": "Näytön summia ja kursseja on muutettu korjauksellasi (%1$s), eivätkä ne ole keskikursseja. Ne perustuvat lähteen keskikurssiin.",
+"adjust_custom": "Oma arvo",
+"adjust_keep": "Aina käytössä",
+"adjust_keep_hint": "Muuten se nollautuu 4 tunnin käyttämättömyyden jälkeen.",
+"adjust_reset_notice": "Korjaus nollattu, kurssit ovat taas keskikursseja",
+"adjust_undo": "Palauta"
 },
 "fr": {
 "app_name": "FIXXE",
@@ -913,7 +1067,18 @@ const I18N = {
 "grouping_title": "Séparateur de milliers",
 "group_none": "Aucun — 1234.56",
 "group_space": "Espace — 1 234.56",
-"group_comma": "Virgule — 1,234.56"
+"group_comma": "Virgule — 1,234.56",
+"adjust_title": "Ajustement du taux",
+"setting_adjust": "Ajustement du taux :  %1$s",
+"adjust_off": "Désactivé",
+"adjusted_rates": "Taux ajustés",
+"adjusted_short": "Ajusté",
+"adjust_info": "Les montants et les taux à l'écran sont modifiés par votre ajustement (%1$s) et ne sont pas des taux interbancaires. Ils reposent sur le taux interbancaire de la source.",
+"adjust_custom": "Valeur personnalisée",
+"adjust_keep": "Toujours actif",
+"adjust_keep_hint": "Sinon, il est réinitialisé après 4 heures sans utilisation.",
+"adjust_reset_notice": "Ajustement réinitialisé, les taux sont de nouveau interbancaires",
+"adjust_undo": "Rétablir"
 },
 "hi": {
 "app_name": "FIXXE",
@@ -974,7 +1139,18 @@ const I18N = {
 "grouping_title": "हज़ार विभाजक",
 "group_none": "कोई नहीं — 1234.56",
 "group_space": "स्पेस — 1 234.56",
-"group_comma": "अल्पविराम — 1,234.56"
+"group_comma": "अल्पविराम — 1,234.56",
+"adjust_title": "दर समायोजन",
+"setting_adjust": "दर समायोजन:  %1$s",
+"adjust_off": "बंद",
+"adjusted_rates": "समायोजित दरें",
+"adjusted_short": "समायोजित",
+"adjust_info": "स्क्रीन पर राशियाँ और दरें आपके समायोजन (%1$s) से बदली गई हैं और मध्य-बाज़ार दरें नहीं हैं। इनका आधार स्रोत की मध्य-बाज़ार दर है।",
+"adjust_custom": "अपना मान",
+"adjust_keep": "हमेशा चालू",
+"adjust_keep_hint": "वरना 4 घंटे उपयोग न होने पर यह रीसेट हो जाता है।",
+"adjust_reset_notice": "समायोजन रीसेट हुआ, दरें फिर से बाज़ार दरें हैं",
+"adjust_undo": "वापस लाएँ"
 },
 "hr": {
 "app_name": "FIXXE",
@@ -1035,7 +1211,18 @@ const I18N = {
 "grouping_title": "Razdvajanje tisućica",
 "group_none": "Bez — 1234.56",
 "group_space": "Razmak — 1 234.56",
-"group_comma": "Zarez — 1,234.56"
+"group_comma": "Zarez — 1,234.56",
+"adjust_title": "Prilagodba tečaja",
+"setting_adjust": "Prilagodba tečaja:  %1$s",
+"adjust_off": "Isključeno",
+"adjusted_rates": "Prilagođeni tečajevi",
+"adjusted_short": "Prilagođeno",
+"adjust_info": "Iznosi i tečajevi na zaslonu promijenjeni su za vašu prilagodbu (%1$s) i nisu srednji tržišni. Temelje se na srednjem tečaju izvora.",
+"adjust_custom": "Vlastita vrijednost",
+"adjust_keep": "Uvijek uključeno",
+"adjust_keep_hint": "Inače se poništava nakon 4 sata bez korištenja.",
+"adjust_reset_notice": "Prilagodba poništena, tečajevi su opet tržišni",
+"adjust_undo": "Vrati"
 },
 "hu": {
 "app_name": "FIXXE",
@@ -1096,7 +1283,18 @@ const I18N = {
 "grouping_title": "Ezres elválasztó",
 "group_none": "Nincs — 1234.56",
 "group_space": "Szóköz — 1 234.56",
-"group_comma": "Vessző — 1,234.56"
+"group_comma": "Vessző — 1,234.56",
+"adjust_title": "Árfolyam-korrekció",
+"setting_adjust": "Árfolyam-korrekció:  %1$s",
+"adjust_off": "Ki",
+"adjusted_rates": "Korrigált árfolyamok",
+"adjusted_short": "Korrigált",
+"adjust_info": "A képernyőn látható összegek és árfolyamok a korrekcióddal (%1$s) módosítva szerepelnek, és nem középárfolyamok. Alapjuk a forrás középárfolyama.",
+"adjust_custom": "Egyéni érték",
+"adjust_keep": "Mindig bekapcsolva",
+"adjust_keep_hint": "Különben 4 óra használat nélkül visszaáll.",
+"adjust_reset_notice": "Korrekció visszaállítva, az árfolyamok újra középárfolyamok",
+"adjust_undo": "Visszaállítás"
 },
 "it": {
 "app_name": "FIXXE",
@@ -1157,7 +1355,18 @@ const I18N = {
 "grouping_title": "Separatore delle migliaia",
 "group_none": "Nessuno — 1234.56",
 "group_space": "Spazio — 1 234.56",
-"group_comma": "Virgola — 1,234.56"
+"group_comma": "Virgola — 1,234.56",
+"adjust_title": "Correzione del tasso",
+"setting_adjust": "Correzione del tasso:  %1$s",
+"adjust_off": "Disattivata",
+"adjusted_rates": "Tassi corretti",
+"adjusted_short": "Corretto",
+"adjust_info": "Gli importi e i tassi sullo schermo sono modificati dalla tua correzione (%1$s) e non sono tassi medi di mercato. Si basano sul tasso medio della fonte.",
+"adjust_custom": "Valore personalizzato",
+"adjust_keep": "Sempre attiva",
+"adjust_keep_hint": "Altrimenti si azzera dopo 4 ore senza utilizzo.",
+"adjust_reset_notice": "Correzione azzerata, i tassi sono di nuovo di mercato",
+"adjust_undo": "Ripristina"
 },
 "ja": {
 "app_name": "FIXXE",
@@ -1218,7 +1427,18 @@ const I18N = {
 "grouping_title": "桁区切り",
 "group_none": "なし — 1234.56",
 "group_space": "スペース — 1 234.56",
-"group_comma": "カンマ — 1,234.56"
+"group_comma": "カンマ — 1,234.56",
+"adjust_title": "レート調整",
+"setting_adjust": "レート調整:  %1$s",
+"adjust_off": "オフ",
+"adjusted_rates": "調整済みレート",
+"adjusted_short": "調整済み",
+"adjust_info": "画面の金額とレートは調整（%1$s）を加えた値で、仲値ではありません。元になるのは情報源の仲値レートです。",
+"adjust_custom": "カスタム値",
+"adjust_keep": "常にオン",
+"adjust_keep_hint": "オフの場合、4時間使用しないとリセットされます。",
+"adjust_reset_notice": "調整をリセットしました。レートは仲値に戻りました",
+"adjust_undo": "元に戻す"
 },
 "ka": {
 "app_name": "FIXXE",
@@ -1279,7 +1499,18 @@ const I18N = {
 "grouping_title": "ათასეულების გამყოფი",
 "group_none": "არცერთი — 1234.56",
 "group_space": "ჰარე — 1 234.56",
-"group_comma": "მძიმე — 1,234.56"
+"group_comma": "მძიმე — 1,234.56",
+"adjust_title": "კურსის შესწორება",
+"setting_adjust": "კურსის შესწორება:  %1$s",
+"adjust_off": "გამორთ.",
+"adjusted_rates": "შესწორებული კურსები",
+"adjusted_short": "შესწორებული",
+"adjust_info": "ეკრანზე თანხები და კურსები შეცვლილია თქვენი შესწორებით (%1$s) და არ არის საშუალო საბაზრო. საფუძველია წყაროს საშუალო კურსი.",
+"adjust_custom": "საკუთარი მნიშვნელობა",
+"adjust_keep": "ყოველთვის ჩართული",
+"adjust_keep_hint": "სხვა შემთხვევაში 4 საათის გამოუყენებლობის შემდეგ განულდება.",
+"adjust_reset_notice": "შესწორება განულდა, კურსები ისევ საბაზროა",
+"adjust_undo": "დაბრუნება"
 },
 "ko": {
 "app_name": "FIXXE",
@@ -1340,7 +1571,18 @@ const I18N = {
 "grouping_title": "천 단위 구분",
 "group_none": "없음 — 1234.56",
 "group_space": "공백 — 1 234.56",
-"group_comma": "쉼표 — 1,234.56"
+"group_comma": "쉼표 — 1,234.56",
+"adjust_title": "환율 조정",
+"setting_adjust": "환율 조정:  %1$s",
+"adjust_off": "끔",
+"adjusted_rates": "조정된 환율",
+"adjusted_short": "조정됨",
+"adjust_info": "화면의 금액과 환율은 설정한 조정(%1$s)이 반영된 값이며 중간 시장 환율이 아닙니다. 기준은 소스의 중간 시장 환율입니다.",
+"adjust_custom": "직접 입력",
+"adjust_keep": "항상 켜기",
+"adjust_keep_hint": "그렇지 않으면 4시간 동안 사용하지 않을 때 초기화됩니다.",
+"adjust_reset_notice": "조정이 초기화되어 환율이 시장 환율로 돌아왔습니다",
+"adjust_undo": "되돌리기"
 },
 "lt": {
 "app_name": "FIXXE",
@@ -1401,7 +1643,18 @@ const I18N = {
 "grouping_title": "Tūkstančių skirtukas",
 "group_none": "Nėra — 1234.56",
 "group_space": "Tarpas — 1 234.56",
-"group_comma": "Kablelis — 1,234.56"
+"group_comma": "Kablelis — 1,234.56",
+"adjust_title": "Kurso pataisa",
+"setting_adjust": "Kurso pataisa:  %1$s",
+"adjust_off": "Išj.",
+"adjusted_rates": "Kursai su pataisa",
+"adjusted_short": "Su pataisa",
+"adjust_info": "Ekrane rodomos sumos ir kursai pakeisti jūsų pataisa (%1$s) ir nėra vidutiniai rinkos kursai. Jų pagrindas – šaltinio vidutinis kursas.",
+"adjust_custom": "Sava reikšmė",
+"adjust_keep": "Visada įjungta",
+"adjust_keep_hint": "Kitaip ji atstatoma po 4 valandų nenaudojimo.",
+"adjust_reset_notice": "Pataisa atstatyta, kursai vėl rinkos",
+"adjust_undo": "Grąžinti"
 },
 "lv": {
 "app_name": "FIXXE",
@@ -1462,7 +1715,18 @@ const I18N = {
 "grouping_title": "Tūkstošu atdalītājs",
 "group_none": "Nav — 1234.56",
 "group_space": "Atstarpe — 1 234.56",
-"group_comma": "Komats — 1,234.56"
+"group_comma": "Komats — 1,234.56",
+"adjust_title": "Kursa korekcija",
+"setting_adjust": "Kursa korekcija:  %1$s",
+"adjust_off": "Izsl.",
+"adjusted_rates": "Koriģētie kursi",
+"adjusted_short": "Koriģēts",
+"adjust_info": "Summas un kursi ekrānā ir mainīti par jūsu korekciju (%1$s) un nav vidējie tirgus kursi. To pamatā ir avota vidējais kurss.",
+"adjust_custom": "Sava vērtība",
+"adjust_keep": "Vienmēr ieslēgta",
+"adjust_keep_hint": "Citādi tā tiek atiestatīta pēc 4 stundām bez lietošanas.",
+"adjust_reset_notice": "Korekcija atiestatīta, kursi atkal ir tirgus kursi",
+"adjust_undo": "Atjaunot"
 },
 "mk": {
 "app_name": "FIXXE",
@@ -1523,7 +1787,18 @@ const I18N = {
 "grouping_title": "Одделувач на илјади",
 "group_none": "Без — 1234.56",
 "group_space": "Празно место — 1 234.56",
-"group_comma": "Запирка — 1,234.56"
+"group_comma": "Запирка — 1,234.56",
+"adjust_title": "Корекција на курсот",
+"setting_adjust": "Корекција на курсот:  %1$s",
+"adjust_off": "Исклучено",
+"adjusted_rates": "Курсеви со корекција",
+"adjusted_short": "Со корекција",
+"adjust_info": "Износите и курсевите на екранот се променети за вашата корекција (%1$s) и не се средни пазарни. Се темелат на средниот курс на изворот.",
+"adjust_custom": "Сопствена вредност",
+"adjust_keep": "Секогаш вклучено",
+"adjust_keep_hint": "Инаку се ресетира по 4 часа без користење.",
+"adjust_reset_notice": "Корекцијата е ресетирана, курсевите се повторно пазарни",
+"adjust_undo": "Врати"
 },
 "nb": {
 "app_name": "FIXXE",
@@ -1584,7 +1859,18 @@ const I18N = {
 "grouping_title": "Tusenskille",
 "group_none": "Ingen — 1234.56",
 "group_space": "Mellomrom — 1 234.56",
-"group_comma": "Komma — 1,234.56"
+"group_comma": "Komma — 1,234.56",
+"adjust_title": "Kursjustering",
+"setting_adjust": "Kursjustering:  %1$s",
+"adjust_off": "Av",
+"adjusted_rates": "Justerte kurser",
+"adjusted_short": "Justert",
+"adjust_info": "Beløp og kurser på skjermen er endret med justeringen din (%1$s) og er ikke middelkurser. De bygger på kildens middelkurs.",
+"adjust_custom": "Egen verdi",
+"adjust_keep": "Alltid på",
+"adjust_keep_hint": "Ellers tilbakestilles den etter 4 timer uten bruk.",
+"adjust_reset_notice": "Justering tilbakestilt, kursene er igjen middelkurser",
+"adjust_undo": "Gjenopprett"
 },
 "nl": {
 "app_name": "FIXXE",
@@ -1645,7 +1931,18 @@ const I18N = {
 "grouping_title": "Duizendtalscheiding",
 "group_none": "Geen — 1234.56",
 "group_space": "Spatie — 1 234.56",
-"group_comma": "Komma — 1,234.56"
+"group_comma": "Komma — 1,234.56",
+"adjust_title": "Koerscorrectie",
+"setting_adjust": "Koerscorrectie:  %1$s",
+"adjust_off": "Uit",
+"adjusted_rates": "Gecorrigeerde koersen",
+"adjusted_short": "Gecorrigeerd",
+"adjust_info": "Bedragen en koersen op het scherm zijn aangepast met je correctie (%1$s) en zijn geen middenkoersen. Ze zijn gebaseerd op de middenkoers van de bron.",
+"adjust_custom": "Eigen waarde",
+"adjust_keep": "Altijd aan",
+"adjust_keep_hint": "Anders wordt hij gereset na 4 uur zonder gebruik.",
+"adjust_reset_notice": "Correctie gereset, koersen zijn weer middenkoersen",
+"adjust_undo": "Herstellen"
 },
 "pl": {
 "app_name": "FIXXE",
@@ -1706,7 +2003,18 @@ const I18N = {
 "grouping_title": "Separator tysięcy",
 "group_none": "Brak — 1234.56",
 "group_space": "Spacja — 1 234.56",
-"group_comma": "Przecinek — 1,234.56"
+"group_comma": "Przecinek — 1,234.56",
+"adjust_title": "Korekta kursu",
+"setting_adjust": "Korekta kursu:  %1$s",
+"adjust_off": "Wył.",
+"adjusted_rates": "Kursy z korektą",
+"adjusted_short": "Z korektą",
+"adjust_info": "Kwoty i kursy na ekranie są zmienione o Twoją korektę (%1$s) i nie są kursami średnimi. Podstawą jest średni kurs źródła.",
+"adjust_custom": "Własna wartość",
+"adjust_keep": "Zawsze włączona",
+"adjust_keep_hint": "W przeciwnym razie zresetuje się po 4 godzinach bez użycia.",
+"adjust_reset_notice": "Korekta zresetowana, kursy znów są średnie",
+"adjust_undo": "Przywróć"
 },
 "pt": {
 "app_name": "FIXXE",
@@ -1767,7 +2075,18 @@ const I18N = {
 "grouping_title": "Separador de milhares",
 "group_none": "Nenhum — 1234.56",
 "group_space": "Espaço — 1 234.56",
-"group_comma": "Vírgula — 1,234.56"
+"group_comma": "Vírgula — 1,234.56",
+"adjust_title": "Ajuste da taxa",
+"setting_adjust": "Ajuste da taxa:  %1$s",
+"adjust_off": "Desativado",
+"adjusted_rates": "Taxas ajustadas",
+"adjusted_short": "Ajustada",
+"adjust_info": "Os valores e as taxas no ecrã estão alterados pelo seu ajuste (%1$s) e não são taxas médias de mercado. Baseiam-se na taxa média da fonte.",
+"adjust_custom": "Valor personalizado",
+"adjust_keep": "Sempre ativo",
+"adjust_keep_hint": "Caso contrário, é reposto após 4 horas sem utilização.",
+"adjust_reset_notice": "Ajuste reposto; as taxas voltam a ser de mercado",
+"adjust_undo": "Repor"
 },
 "ro": {
 "app_name": "FIXXE",
@@ -1828,7 +2147,18 @@ const I18N = {
 "grouping_title": "Separator de mii",
 "group_none": "Fără — 1234.56",
 "group_space": "Spațiu — 1 234.56",
-"group_comma": "Virgulă — 1,234.56"
+"group_comma": "Virgulă — 1,234.56",
+"adjust_title": "Ajustarea cursului",
+"setting_adjust": "Ajustarea cursului:  %1$s",
+"adjust_off": "Dezactivat",
+"adjusted_rates": "Cursuri ajustate",
+"adjusted_short": "Ajustat",
+"adjust_info": "Sumele și cursurile de pe ecran sunt modificate cu ajustarea ta (%1$s) și nu sunt cursuri medii de piață. Se bazează pe cursul mediu al sursei.",
+"adjust_custom": "Valoare personalizată",
+"adjust_keep": "Mereu activă",
+"adjust_keep_hint": "Altfel se resetează după 4 ore fără utilizare.",
+"adjust_reset_notice": "Ajustare resetată, cursurile sunt din nou de piață",
+"adjust_undo": "Restabilește"
 },
 "ru": {
 "app_name": "FIXXE",
@@ -1889,7 +2219,18 @@ const I18N = {
 "grouping_title": "Разделитель разрядов",
 "group_none": "Нет — 1234.56",
 "group_space": "Пробел — 1 234.56",
-"group_comma": "Запятая — 1,234.56"
+"group_comma": "Запятая — 1,234.56",
+"adjust_title": "Поправка к курсу",
+"setting_adjust": "Поправка к курсу:  %1$s",
+"adjust_off": "Выкл.",
+"adjusted_rates": "Курсы с поправкой",
+"adjusted_short": "С поправкой",
+"adjust_info": "Суммы и курсы на экране изменены на вашу поправку (%1$s) и не являются среднерыночными. Основа — среднерыночный курс источника.",
+"adjust_custom": "Своё значение",
+"adjust_keep": "Действует постоянно",
+"adjust_keep_hint": "Иначе сбросится через 4 часа без использования.",
+"adjust_reset_notice": "Поправка сброшена, курсы снова рыночные",
+"adjust_undo": "Вернуть"
 },
 "sk": {
 "app_name": "FIXXE",
@@ -1950,7 +2291,18 @@ const I18N = {
 "grouping_title": "Oddeľovač tisícov",
 "group_none": "Žiadny — 1234.56",
 "group_space": "Medzera — 1 234.56",
-"group_comma": "Čiarka — 1,234.56"
+"group_comma": "Čiarka — 1,234.56",
+"adjust_title": "Úprava kurzu",
+"setting_adjust": "Úprava kurzu:  %1$s",
+"adjust_off": "Vyp.",
+"adjusted_rates": "Upravené kurzy",
+"adjusted_short": "Upravené",
+"adjust_info": "Sumy a kurzy na obrazovke sú zmenené o vašu úpravu (%1$s) a nie sú stredné trhové. Vychádzajú zo stredného kurzu zdroja.",
+"adjust_custom": "Vlastná hodnota",
+"adjust_keep": "Trvalo zapnuté",
+"adjust_keep_hint": "Inak sa po 4 hodinách bez použitia vynuluje.",
+"adjust_reset_notice": "Úprava vynulovaná, kurzy sú opäť trhové",
+"adjust_undo": "Obnoviť"
 },
 "sl": {
 "app_name": "FIXXE",
@@ -2011,7 +2363,18 @@ const I18N = {
 "grouping_title": "Ločilo tisočic",
 "group_none": "Brez — 1234.56",
 "group_space": "Presledek — 1 234.56",
-"group_comma": "Vejica — 1,234.56"
+"group_comma": "Vejica — 1,234.56",
+"adjust_title": "Prilagoditev tečaja",
+"setting_adjust": "Prilagoditev tečaja:  %1$s",
+"adjust_off": "Izklopljeno",
+"adjusted_rates": "Prilagojeni tečaji",
+"adjusted_short": "Prilagojeno",
+"adjust_info": "Zneski in tečaji na zaslonu so spremenjeni za vašo prilagoditev (%1$s) in niso srednji tržni. Temeljijo na srednjem tečaju vira.",
+"adjust_custom": "Lastna vrednost",
+"adjust_keep": "Vedno vklopljeno",
+"adjust_keep_hint": "Sicer se po 4 urah brez uporabe ponastavi.",
+"adjust_reset_notice": "Prilagoditev ponastavljena, tečaji so spet tržni",
+"adjust_undo": "Obnovi"
 },
 "sq": {
 "app_name": "FIXXE",
@@ -2072,7 +2435,18 @@ const I18N = {
 "grouping_title": "Ndarësi i mijësheve",
 "group_none": "Asnjë — 1234.56",
 "group_space": "Hapësirë — 1 234.56",
-"group_comma": "Presje — 1,234.56"
+"group_comma": "Presje — 1,234.56",
+"adjust_title": "Rregullimi i kursit",
+"setting_adjust": "Rregullimi i kursit:  %1$s",
+"adjust_off": "Fikur",
+"adjusted_rates": "Kurse të rregulluara",
+"adjusted_short": "I rregulluar",
+"adjust_info": "Shumat dhe kurset në ekran janë ndryshuar me rregullimin tuaj (%1$s) dhe nuk janë kurse mesatare të tregut. Bazohen në kursin mesatar të burimit.",
+"adjust_custom": "Vlerë e personalizuar",
+"adjust_keep": "Gjithmonë aktiv",
+"adjust_keep_hint": "Përndryshe rivendoset pas 4 orësh pa përdorim.",
+"adjust_reset_notice": "Rregullimi u rivendos, kurset janë sërish të tregut",
+"adjust_undo": "Rikthe"
 },
 "sr": {
 "app_name": "FIXXE",
@@ -2133,7 +2507,18 @@ const I18N = {
 "grouping_title": "Одвајање хиљада",
 "group_none": "Без — 1234.56",
 "group_space": "Размак — 1 234.56",
-"group_comma": "Зарез — 1,234.56"
+"group_comma": "Зарез — 1,234.56",
+"adjust_title": "Корекција курса",
+"setting_adjust": "Корекција курса:  %1$s",
+"adjust_off": "Искључено",
+"adjusted_rates": "Курсеви са корекцијом",
+"adjusted_short": "Са корекцијом",
+"adjust_info": "Износи и курсеви на екрану промењени су за вашу корекцију (%1$s) и нису средњи тржишни. Заснивају се на средњем курсу извора.",
+"adjust_custom": "Сопствена вредност",
+"adjust_keep": "Увек укључено",
+"adjust_keep_hint": "Иначе се поништава после 4 сата без коришћења.",
+"adjust_reset_notice": "Корекција поништена, курсеви су поново тржишни",
+"adjust_undo": "Врати"
 },
 "sv": {
 "app_name": "FIXXE",
@@ -2194,7 +2579,18 @@ const I18N = {
 "grouping_title": "Tusentalsavgränsare",
 "group_none": "Ingen — 1234.56",
 "group_space": "Mellanslag — 1 234.56",
-"group_comma": "Komma — 1,234.56"
+"group_comma": "Komma — 1,234.56",
+"adjust_title": "Kursjustering",
+"setting_adjust": "Kursjustering:  %1$s",
+"adjust_off": "Av",
+"adjusted_rates": "Justerade kurser",
+"adjusted_short": "Justerad",
+"adjust_info": "Belopp och kurser på skärmen är ändrade med din justering (%1$s) och är inte mittkurser. De bygger på källans mittkurs.",
+"adjust_custom": "Eget värde",
+"adjust_keep": "Alltid på",
+"adjust_keep_hint": "Annars återställs den efter 4 timmar utan användning.",
+"adjust_reset_notice": "Justeringen återställd, kurserna är mittkurser igen",
+"adjust_undo": "Återställ"
 },
 "th": {
 "app_name": "FIXXE",
@@ -2255,7 +2651,18 @@ const I18N = {
 "grouping_title": "ตัวคั่นหลักพัน",
 "group_none": "ไม่มี — 1234.56",
 "group_space": "เว้นวรรค — 1 234.56",
-"group_comma": "จุลภาค — 1,234.56"
+"group_comma": "จุลภาค — 1,234.56",
+"adjust_title": "การปรับอัตรา",
+"setting_adjust": "การปรับอัตรา:  %1$s",
+"adjust_off": "ปิด",
+"adjusted_rates": "อัตราที่ปรับแล้ว",
+"adjusted_short": "ปรับแล้ว",
+"adjust_info": "จำนวนเงินและอัตราบนหน้าจอถูกเปลี่ยนตามการปรับของคุณ (%1$s) และไม่ใช่อัตรากลางตลาด โดยอิงจากอัตรากลางของแหล่งข้อมูล",
+"adjust_custom": "ค่ากำหนดเอง",
+"adjust_keep": "เปิดตลอด",
+"adjust_keep_hint": "มิฉะนั้นจะรีเซ็ตเมื่อไม่ได้ใช้งาน 4 ชั่วโมง",
+"adjust_reset_notice": "รีเซ็ตการปรับแล้ว อัตรากลับเป็นอัตราตลาด",
+"adjust_undo": "เรียกคืน"
 },
 "tr": {
 "app_name": "FIXXE",
@@ -2316,7 +2723,18 @@ const I18N = {
 "grouping_title": "Binlik ayırıcı",
 "group_none": "Yok — 1234.56",
 "group_space": "Boşluk — 1 234.56",
-"group_comma": "Virgül — 1,234.56"
+"group_comma": "Virgül — 1,234.56",
+"adjust_title": "Kur düzeltmesi",
+"setting_adjust": "Kur düzeltmesi:  %1$s",
+"adjust_off": "Kapalı",
+"adjusted_rates": "Düzeltilmiş kurlar",
+"adjusted_short": "Düzeltilmiş",
+"adjust_info": "Ekrandaki tutarlar ve kurlar düzeltmeniz (%1$s) kadar değiştirilmiştir ve piyasa ortalaması değildir. Kaynağın piyasa ortalaması kuruna dayanır.",
+"adjust_custom": "Özel değer",
+"adjust_keep": "Her zaman açık",
+"adjust_keep_hint": "Aksi halde 4 saat kullanılmazsa sıfırlanır.",
+"adjust_reset_notice": "Düzeltme sıfırlandı, kurlar yeniden piyasa ortalaması",
+"adjust_undo": "Geri al"
 },
 "vi": {
 "app_name": "FIXXE",
@@ -2377,7 +2795,18 @@ const I18N = {
 "grouping_title": "Dấu phân cách hàng nghìn",
 "group_none": "Không — 1234.56",
 "group_space": "Dấu cách — 1 234.56",
-"group_comma": "Dấu phẩy — 1,234.56"
+"group_comma": "Dấu phẩy — 1,234.56",
+"adjust_title": "Điều chỉnh tỷ giá",
+"setting_adjust": "Điều chỉnh tỷ giá:  %1$s",
+"adjust_off": "Tắt",
+"adjusted_rates": "Tỷ giá đã điều chỉnh",
+"adjusted_short": "Đã điều chỉnh",
+"adjust_info": "Số tiền và tỷ giá trên màn hình đã được thay đổi theo mức điều chỉnh của bạn (%1$s) và không phải tỷ giá trung bình thị trường. Chúng dựa trên tỷ giá trung bình của nguồn.",
+"adjust_custom": "Giá trị tùy chỉnh",
+"adjust_keep": "Luôn bật",
+"adjust_keep_hint": "Nếu không, sẽ đặt lại sau 4 giờ không sử dụng.",
+"adjust_reset_notice": "Đã đặt lại điều chỉnh, tỷ giá trở lại tỷ giá thị trường",
+"adjust_undo": "Khôi phục"
 },
 "zh": {
 "app_name": "FIXXE",
@@ -2438,6 +2867,17 @@ const I18N = {
 "grouping_title": "千位分隔符",
 "group_none": "无 — 1234.56",
 "group_space": "空格 — 1 234.56",
-"group_comma": "逗号 — 1,234.56"
+"group_comma": "逗号 — 1,234.56",
+"adjust_title": "汇率调整",
+"setting_adjust": "汇率调整：  %1$s",
+"adjust_off": "关闭",
+"adjusted_rates": "已调整汇率",
+"adjusted_short": "已调整",
+"adjust_info": "屏幕上的金额和汇率已按您的调整（%1$s）更改，不是中间市场汇率。其基础是来源的中间市场汇率。",
+"adjust_custom": "自定义值",
+"adjust_keep": "始终开启",
+"adjust_keep_hint": "否则在 4 小时未使用后重置。",
+"adjust_reset_notice": "调整已重置，汇率恢复为市场汇率",
+"adjust_undo": "恢复"
 }
 };

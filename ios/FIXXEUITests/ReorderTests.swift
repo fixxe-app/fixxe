@@ -3,7 +3,10 @@ import XCTest
 /// Порядок валют меняется перетаскиванием за ручку справа, без режима
 /// редактирования. Тест не зависит от того, в каком порядке строки лежат
 /// сейчас: порядок сохраняется между запусками.
-final class ReorderTests: XCTestCase {
+class ReorderTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
 
     private func handle(_ app: XCUIApplication, _ code: String) -> XCUIElement {
         app.descendants(matching: .any).matching(identifier: "drag-\(code)").firstMatch
@@ -22,8 +25,9 @@ final class ReorderTests: XCTestCase {
         let app = XCUIApplication()
         // свой список: тест удаления в TapInteractionTests убирает USD, и это
         // сохраняется — без него тест зависел бы от прошлого прогона
-        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"]
+        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
 
         let usd = handle(app, "USD")
         let rsd = handle(app, "RSD")

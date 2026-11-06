@@ -59,4 +59,15 @@
     <string name="group_none">Ei mitään — 1234.56</string>
     <string name="group_space">Välilyönti — 1 234.56</string>
     <string name="group_comma">Pilkku — 1,234.56</string>
+    <string name="adjust_title">Kurssin korjaus</string>
+    <string name="setting_adjust">Kurssin korjaus:  %1$s</string>
+    <string name="adjust_off">Pois</string>
+    <string name="adjusted_rates">Korjatut kurssit</string>
+    <string name="adjusted_short">Korjattu</string>
+    <string name="adjust_info">Näytön summia ja kursseja on muutettu korjauksellasi (%1$s), eivätkä ne ole keskikursseja. Ne perustuvat lähteen keskikurssiin.</string>
+    <string name="adjust_custom">Oma arvo</string>
+    <string name="adjust_keep">Aina käytössä</string>
+    <string name="adjust_keep_hint">Muuten se nollautuu 4 tunnin käyttämättömyyden jälkeen.</string>
+    <string name="adjust_reset_notice">Korjaus nollattu, kurssit ovat taas keskikursseja</string>
+    <string name="adjust_undo">Palauta</string>
 </resources>

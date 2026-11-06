@@ -59,4 +59,15 @@
     <string name="group_none">Geen — 1234.56</string>
     <string name="group_space">Spatie — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
+    <string name="adjust_title">Koerscorrectie</string>
+    <string name="setting_adjust">Koerscorrectie:  %1$s</string>
+    <string name="adjust_off">Uit</string>
+    <string name="adjusted_rates">Gecorrigeerde koersen</string>
+    <string name="adjusted_short">Gecorrigeerd</string>
+    <string name="adjust_info">Bedragen en koersen op het scherm zijn aangepast met je correctie (%1$s) en zijn geen middenkoersen. Ze zijn gebaseerd op de middenkoers van de bron.</string>
+    <string name="adjust_custom">Eigen waarde</string>
+    <string name="adjust_keep">Altijd aan</string>
+    <string name="adjust_keep_hint">Anders wordt hij gereset na 4 uur zonder gebruik.</string>
+    <string name="adjust_reset_notice">Correctie gereset, koersen zijn weer middenkoersen</string>
+    <string name="adjust_undo">Herstellen</string>
 </resources>

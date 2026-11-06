@@ -59,4 +59,15 @@
     <string name="group_none">Nėra — 1234.56</string>
     <string name="group_space">Tarpas — 1 234.56</string>
     <string name="group_comma">Kablelis — 1,234.56</string>
+    <string name="adjust_title">Kurso pataisa</string>
+    <string name="setting_adjust">Kurso pataisa:  %1$s</string>
+    <string name="adjust_off">Išj.</string>
+    <string name="adjusted_rates">Kursai su pataisa</string>
+    <string name="adjusted_short">Su pataisa</string>
+    <string name="adjust_info">Ekrane rodomos sumos ir kursai pakeisti jūsų pataisa (%1$s) ir nėra vidutiniai rinkos kursai. Jų pagrindas – šaltinio vidutinis kursas.</string>
+    <string name="adjust_custom">Sava reikšmė</string>
+    <string name="adjust_keep">Visada įjungta</string>
+    <string name="adjust_keep_hint">Kitaip ji atstatoma po 4 valandų nenaudojimo.</string>
+    <string name="adjust_reset_notice">Pataisa atstatyta, kursai vėl rinkos</string>
+    <string name="adjust_undo">Grąžinti</string>
 </resources>

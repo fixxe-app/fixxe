@@ -1,7 +1,7 @@
 title: "FIXXE – Konvertues monedhash"
 subtitle: Kurse nga pesë burime
 short_description: Kurse mesatare nga 5 burime, 300+ monedha, pa internet, pa reklama.
-keywords: monedhe,konvertues,kurs,kembim,para,udhetim,forex,kripto,financa,euro
+keywords: "monedhe,konvertues,kurs,kembim,para,udhetim,forex,kripto,financa,euro,fixer,fixe"
 promotional_text: Pesë burime kursesh me kalim automatik, kurse pa internet me paralajmërim kur vjetrohen dhe rrumbullakim që nuk i prish shumat e vogla.
 description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër me kurse mesatare tregu në kohë reale — pika neutrale mes çmimeve botërore të blerjes dhe të shitjes, pa marzhe bankare.
 
@@ -19,6 +19,9 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
 
 
   • Bazë dinamike — kurset rillogariten kundrejt monedhës që po redaktoni, jo kundrejt një të fiksuari. Pa kaluar sa andej-këtej.
+
+
+  • Rregullimi i kursit — vendosni një përqindje për komisionin e bankës, marzhin ose humbjet gjatë transfertës (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë, që të mos i ngatërroni me kursin e tregut.
 
 
   • Pa reklama. Pa llogari. Pa gjurmim. Leja e vetme është qasja në internet; lista juaj, radha e saj dhe cilësimet nuk e lënë kurrë pajisjen.
@@ -55,7 +58,7 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurset tani janë drejtpërdrejt: FIXXE i merr nga Coinbase, ku përditësohen çdo minutë, ndaj shifrat ndjekin tregun gjatë ditës në vend që të ndryshojnë një herë në ditë. Burimet e tjera mbeten si rezervë."
+whats_new: "E re: rregullimi i kursit. Vendosni një përqindje për komisionin e bankës ose marzhin (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë. E gjeni te cilësimet."
 landing:
   page_title: FIXXE — konvertues monedhash
   install_title: Mënyrat e instalimit

@@ -59,4 +59,15 @@
     <string name="group_none">Nenhum — 1234.56</string>
     <string name="group_space">Espaço — 1 234.56</string>
     <string name="group_comma">Vírgula — 1,234.56</string>
+    <string name="adjust_title">Ajuste da taxa</string>
+    <string name="setting_adjust">Ajuste da taxa:  %1$s</string>
+    <string name="adjust_off">Desativado</string>
+    <string name="adjusted_rates">Taxas ajustadas</string>
+    <string name="adjusted_short">Ajustada</string>
+    <string name="adjust_info">Os valores e as taxas no ecrã estão alterados pelo seu ajuste (%1$s) e não são taxas médias de mercado. Baseiam-se na taxa média da fonte.</string>
+    <string name="adjust_custom">Valor personalizado</string>
+    <string name="adjust_keep">Sempre ativo</string>
+    <string name="adjust_keep_hint">Caso contrário, é reposto após 4 horas sem utilização.</string>
+    <string name="adjust_reset_notice">Ajuste reposto; as taxas voltam a ser de mercado</string>
+    <string name="adjust_undo">Repor</string>
 </resources>

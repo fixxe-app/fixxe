@@ -59,4 +59,15 @@
     <string name="group_none">Без — 1234.56</string>
     <string name="group_space">Размак — 1 234.56</string>
     <string name="group_comma">Зарез — 1,234.56</string>
+    <string name="adjust_title">Корекција курса</string>
+    <string name="setting_adjust">Корекција курса:  %1$s</string>
+    <string name="adjust_off">Искључено</string>
+    <string name="adjusted_rates">Курсеви са корекцијом</string>
+    <string name="adjusted_short">Са корекцијом</string>
+    <string name="adjust_info">Износи и курсеви на екрану промењени су за вашу корекцију (%1$s) и нису средњи тржишни. Заснивају се на средњем курсу извора.</string>
+    <string name="adjust_custom">Сопствена вредност</string>
+    <string name="adjust_keep">Увек укључено</string>
+    <string name="adjust_keep_hint">Иначе се поништава после 4 сата без коришћења.</string>
+    <string name="adjust_reset_notice">Корекција поништена, курсеви су поново тржишни</string>
+    <string name="adjust_undo">Врати</string>
 </resources>

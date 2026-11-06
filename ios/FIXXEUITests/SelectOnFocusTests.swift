@@ -3,14 +3,18 @@ import XCTest
 /// Поле суммы при получении фокуса выделяет число целиком — как на Android
 /// (`android:selectAllOnFocus`). Это значит, что новую сумму можно набрать
 /// сразу, не стирая старую: первая же цифра заменяет всё содержимое.
-final class SelectOnFocusTests: XCTestCase {
+class SelectOnFocusTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
 
     func testTypingReplacesWholeAmountAfterFocus() {
         let app = XCUIApplication()
         // свой список: тест удаления в TapInteractionTests убирает USD, и это
         // сохраняется — без него тест зависел бы от прошлого прогона
-        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"]
+        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
 
         let usd = app.descendants(matching: .any)["amount-USD"]
         XCTAssertTrue(usd.waitForExistence(timeout: 20), "строка USD не появилась")

@@ -59,4 +59,15 @@
     <string name="group_none">Κανένα — 1234.56</string>
     <string name="group_space">Κενό — 1 234.56</string>
     <string name="group_comma">Κόμμα — 1,234.56</string>
+    <string name="adjust_title">Προσαρμογή ισοτιμίας</string>
+    <string name="setting_adjust">Προσαρμογή ισοτιμίας:  %1$s</string>
+    <string name="adjust_off">Ανενεργή</string>
+    <string name="adjusted_rates">Προσαρμοσμένες ισοτιμίες</string>
+    <string name="adjusted_short">Προσαρμοσμένη</string>
+    <string name="adjust_info">Τα ποσά και οι ισοτιμίες στην οθόνη έχουν αλλάξει κατά την προσαρμογή σας (%1$s) και δεν είναι μέσες ισοτιμίες αγοράς. Βασίζονται στη μέση ισοτιμία της πηγής.</string>
+    <string name="adjust_custom">Προσαρμοσμένη τιμή</string>
+    <string name="adjust_keep">Πάντα ενεργή</string>
+    <string name="adjust_keep_hint">Διαφορετικά μηδενίζεται μετά από 4 ώρες χωρίς χρήση.</string>
+    <string name="adjust_reset_notice">Η προσαρμογή μηδενίστηκε, οι ισοτιμίες είναι ξανά της αγοράς</string>
+    <string name="adjust_undo">Επαναφορά</string>
 </resources>

@@ -59,4 +59,15 @@
     <string name="group_none">Без — 1234.56</string>
     <string name="group_space">Интервал — 1 234.56</string>
     <string name="group_comma">Запетая — 1,234.56</string>
+    <string name="adjust_title">Корекция на курса</string>
+    <string name="setting_adjust">Корекция на курса:  %1$s</string>
+    <string name="adjust_off">Изкл.</string>
+    <string name="adjusted_rates">Курсове с корекция</string>
+    <string name="adjusted_short">С корекция</string>
+    <string name="adjust_info">Сумите и курсовете на екрана са променени с вашата корекция (%1$s) и не са средни пазарни. Основата е средният курс на източника.</string>
+    <string name="adjust_custom">Собствена стойност</string>
+    <string name="adjust_keep">Винаги включена</string>
+    <string name="adjust_keep_hint">Иначе се нулира след 4 часа без използване.</string>
+    <string name="adjust_reset_notice">Корекцията е нулирана, курсовете отново са пазарни</string>
+    <string name="adjust_undo">Върни</string>
 </resources>

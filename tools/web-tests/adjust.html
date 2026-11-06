@@ -1,0 +1,230 @@
+<!doctype html>
+<!--
+  Поправка к курсу в веб-версии. Открывается безголовым Chrome из
+  tools/smoke-web.sh; результат пишется в <pre id="result"> как PASS/FAIL.
+  Лежит вне web/, на сайт не попадает.
+
+  1. Без поправки на экране нет ни полосы, ни меток — всё как раньше.
+  2. С поправкой: полоса видна, базовая строка — ровно введённое число и без
+     метки, остальные пересчитаны на процент и помечены; строки курса тоже;
+     подпись внизу — «Курсы с поправкой»; самого процента на экране нет.
+  3. Переходы между строками без ввода не меняют ни одного числа —
+     иначе процент прибавлялся бы при каждом переходе.
+  4. Ввод в другой строке делает базой её.
+  5. Отрицательная поправка уменьшает суммы.
+  6. Удаление базовой строки и строки с курсором.
+  7. «Очистить» и смена процента.
+  8. Правило сброса: 4 часа без использования, «Действует постоянно»,
+     часы назад; сообщение о сбросе с «Вернуть» и его исчезновение.
+  9. Окно настройки: выбор не закрывает окно, знак, своё значение, галочка.
+ 10. Запись процента и его границы.
+
+  Фокус отправляется событием явно — см. пояснение в switch-rows.html.
+-->
+<meta charset="utf-8">
+<title>adjust</title>
+<iframe id="app" src="/web/index.html" style="width:420px;height:900px"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+frame.addEventListener('load', async () => {
+  const w = frame.contentWindow;
+  const forget = () => ['adjust_pct', 'adjust_keep', 'adjust_left_at'].forEach(k => w.localStorage.removeItem('fixe.' + k));
+  try {
+    const d = frame.contentDocument;
+    for (let i = 0; i < 60 && !d.querySelector('.card[data-code="USD"]'); i++) await wait(250);
+    if (!d.querySelector('.card[data-code="USD"]')) throw new Error('курсы не загрузились');
+    await wait(400);
+    // состояние от прошлого прогона не должно влиять на этот
+    w.eval('adjustKeep = false; adjustResetFrom = null; setAdjust(0)'); forget();
+
+    const card = c => d.querySelector(`.card[data-code="${c}"]`);
+    const inp = c => card(c).querySelector('.amount');
+    const rate = c => card(c).querySelector('.rate');
+    const vals = () => Object.fromEntries([...d.querySelectorAll('.card')]
+                        .map(c => [c.dataset.code, c.querySelector('.amount').value]));
+    const focus = async c => { inp(c).focus(); inp(c).dispatchEvent(new FocusEvent('focus')); await wait(120); };
+    const type = async (c, v) => { await focus(c); inp(c).value = v;
+                                   inp(c).dispatchEvent(new Event('input', {bubbles: true})); await wait(200); };
+    const diff = (a, b) => Object.keys(a).filter(k => a[k] !== b[k]).map(k => `${k}: ${a[k]} → ${b[k]}`);
+    const num = c => w.parseAmount(inp(c).value);
+    // сравниваем в том виде, что на экране: суммы округляются до нужной точности
+    const near = (a, b) => w.fmtAmount(a) === w.fmtAmount(b);
+    const shown = el => !el.hidden && w.getComputedStyle(el).display !== 'none';
+    const marked = () => [...d.querySelectorAll('.card.adj')].map(c => c.dataset.code);
+    const rates = w.eval('allRates');
+    const cross = (from, to) => rates[to] / rates[from];
+    const codes = () => [...d.querySelectorAll('.card')].map(c => c.dataset.code);
+    const problems = [];
+    const check = (ok, msg) => { if (!ok) problems.push(msg); };
+    const banner = d.getElementById('adjustBanner'), notice = d.getElementById('adjustNotice');
+    const info = d.getElementById('btnInfo');
+
+    const [A, B, C] = codes();
+
+    // 1. без поправки
+    await type(A, '100');
+    check(!shown(banner), 'без поправки видна полоса «Курсы с поправкой»');
+    check(marked().length === 0, 'без поправки строки помечены: ' + marked());
+    check(!info.classList.contains('adj'), 'без поправки подпись внизу помечена');
+    check(near(num(B), 100 * cross(A, B)), `без поправки ${B} = ${num(B)}, ожидалось ${100 * cross(A, B)}`);
+    const plainInfo = info.textContent;
+
+    // 2. с поправкой
+    w.eval('setAdjust(1.5)'); await wait(150);
+    check(shown(banner), 'с поправкой полосы нет');
+    check(banner.textContent.includes(w.t('adjusted_rates')), 'в полосе не тот текст: ' + banner.textContent);
+    check(inp(A).value === w.eval('fmtAmount(100)'), `базовая ${A} изменилась: ${inp(A).value}`);
+    check(!card(A).classList.contains('adj'), `базовая ${A} помечена как пересчитанная`);
+    check(rate(A).textContent === '', `у базовой ${A} есть строка курса`);
+    for (const c of codes().filter(c => c !== A)) {
+      check(card(c).classList.contains('adj'), `${c} не помечена`);
+      check(near(num(c), 100 * cross(A, c) * 1.015), `${c} = ${num(c)}, ожидалось ${100 * cross(A, c) * 1.015}`);
+      check(rate(c).textContent === `1 ${A} = ${w.eval('fmtRate')(cross(A, c) * 1.015)} ${c}`, `строка курса ${c}: ${rate(c).textContent}`);
+      check((rate(c).getAttribute('aria-label') || '').startsWith(w.t('adjusted_short')), `строка курса ${c} без подписи для диктора`);
+      check(w.getComputedStyle(rate(c), '::before').content === '"%"', `перед курсом ${c} нет метки %`);
+      check(w.getComputedStyle(inp(c)).color === w.getComputedStyle(banner).color, `сумма ${c} не цветом поправки`);
+    }
+    check(w.getComputedStyle(inp(A)).color !== w.getComputedStyle(banner).color, `базовая ${A} цветом поправки`);
+    check(info.classList.contains('adj') && info.textContent.includes(w.t('adjusted_rates')) && info.textContent !== plainInfo,
+          'подпись внизу не сменилась: ' + info.textContent);
+    check(!/1[.,]5\s*%|\+\s*1[.,]5/.test(d.getElementById('app').textContent), 'процент показан на главном экране');
+
+    // 3. переходы без ввода
+    const a3 = vals();
+    for (let i = 0; i < 6; i++) { await focus(B); await focus(C); await focus(A); }
+    await wait(300);
+    const d3 = diff(a3, vals());
+    check(!d3.length, `18 переходов между строками сдвинули числа: ${d3.join(', ')}`);
+    await focus(B);
+    check(w.eval('activeCurrency') === B && w.eval('baseCurrency') === A, 'переход на строку сменил базу без ввода');
+    check(card(B).classList.contains('active') && card(B).classList.contains('adj'), `строка с курсором ${B} потеряла метку`);
+    check(!diff(a3, vals()).length, 'числа сдвинулись при переходе на ' + B);
+
+    // 4. ввод в другой строке
+    await type(B, '50');
+    check(w.eval('baseCurrency') === B && w.eval('activeAmount') === 50, 'ввод не сделал строку базой');
+    check(!card(B).classList.contains('adj') && card(A).classList.contains('adj'), 'метки после ввода: ' + marked());
+    check(near(num(A), 50 * cross(B, A) * 1.015), `${A} = ${num(A)}, ожидалось ${50 * cross(B, A) * 1.015}`);
+    check(rate(B).textContent === '' && rate(A).textContent.startsWith(`1 ${B} = `), 'строки курса после ввода не от новой базы');
+
+    // 5. отрицательная
+    w.eval('setAdjust(-2)'); await wait(150);
+    check(near(num(A), 50 * cross(B, A) * 0.98), `−2%: ${A} = ${num(A)}, ожидалось ${50 * cross(B, A) * 0.98}`);
+    check(inp(B).value === w.eval('fmtAmount(50)'), `−2%: базовая ${B} изменилась`);
+    check(shown(banner), '−2%: полосы нет');
+
+    // 6. удаление: сначала строки с курсором (база цела), потом базовой
+    w.eval('setAdjust(1.5)'); await wait(100);
+    await focus(C);
+    const before6 = vals();
+    w.eval(`confirmDelete(${JSON.stringify(C)})`); await wait(100);
+    d.querySelector('#modal-root [data-ok]').click(); await wait(250);
+    check(w.eval('baseCurrency') === B && w.eval('activeCurrency') === B, 'удаление строки с курсором сбило базу');
+    const after6 = vals(); delete before6[C];
+    check(!diff(before6, after6).length, 'удаление строки с курсором сдвинуло числа: ' + diff(before6, after6));
+    const heir = codes().find(c => c !== B), heirShown = w.eval(`amountIn(${JSON.stringify(heir)})`);
+    w.eval(`confirmDelete(${JSON.stringify(B)})`); await wait(100);
+    d.querySelector('#modal-root [data-ok]').click(); await wait(250);
+    check(w.eval('baseCurrency') === heir && Math.abs(w.eval('activeAmount') - heirShown) < 1e-9,
+          `удаление базовой: база ${w.eval('baseCurrency')} ${w.eval('activeAmount')}, ожидалось ${heir} ${heirShown}`);
+    check(!card(heir).classList.contains('adj') && marked().length === codes().length - 1, 'метки после удаления базовой: ' + marked());
+
+    // 7. «Очистить» и смена процента
+    await focus(codes()[1]);
+    w.eval('clearAll()'); await wait(150);
+    check(Object.values(vals()).every(v => w.parseAmount(v) === 0), 'после «Очистить» не нули');
+    check(marked().length === codes().length - 1 && !card(w.eval('baseCurrency')).classList.contains('adj'),
+          'метки после «Очистить»: ' + marked());
+    const X = codes()[0], Y = codes()[1];
+    await type(X, '200'); await focus(Y);
+    w.eval('setAdjust(3)'); await wait(150);
+    check(w.eval('activeCurrency') === X, 'смена процента не вернула курсор на базовую строку');
+    check(inp(X).value === w.eval('fmtAmount(200)') && near(num(Y), 200 * cross(X, Y) * 1.03), 'смена процента: суммы не от базы');
+    w.eval('setAdjust(0)'); await wait(150);
+    check(!shown(banner) && !marked().length && info.textContent === plainInfo, 'выключение поправки оставило следы');
+    check(near(num(Y), 200 * cross(X, Y)), 'после выключения сумма не рыночная');
+
+    // 8. сброс
+    const H = 3600e3, now = Date.now();
+    const rule = [[1.5, false, now, now + 5 * H, true], [1.5, false, now, now + 3 * H, false],
+                  [1.5, true, now, now + 500 * H, false], [0, false, now, now + 500 * H, false],
+                  [-2, false, now, now + 4 * H + 1, true], [1.5, false, now, now - 60e3, true],
+                  [1.5, false, 0, now, true]];
+    for (const [p, keep, left, at, exp] of rule)
+      check(w.shouldResetAdjust(p, keep, left, at) === exp, `правило сброса (${p}, ${keep}, ${(at - left) / H} ч): не ${exp}`);
+    w.eval('setAdjust(1.5)'); await wait(100);
+    check(w.eval('resetAdjustIfExpired(Date.now() + 3*3600e3)') === false && w.eval('adjustPct') === 1.5, 'поправка сброшена раньше срока');
+    w.eval('adjustKeep = true');
+    check(w.eval('resetAdjustIfExpired(Date.now() + 500*3600e3)') === false && w.eval('adjustPct') === 1.5, '«Действует постоянно» не удержало поправку');
+    w.eval('adjustKeep = false');
+    check(w.eval('resetAdjustIfExpired(Date.now() + 5*3600e3)') === true && w.eval('adjustPct') === 0, 'поправка не сброшена через 5 часов');
+    check(w.localStorage.getItem('fixe.adjust_pct') === '0', 'сброс не сохранён');
+    w.eval('noticeAdjustReset()'); await wait(150);
+    check(!shown(banner) && shown(notice) && notice.textContent.includes(w.t('adjust_reset_notice')), 'нет сообщения о сбросе');
+    check(!marked().length && near(num(Y), 200 * cross(X, Y)), 'после сброса суммы не рыночные');
+    d.getElementById('adjustUndo').click(); await wait(150);
+    check(w.eval('adjustPct') === 1.5 && shown(banner) && !shown(notice), '«Вернуть» не вернуло поправку');
+    w.eval('resetAdjustIfExpired(Date.now() + 5*3600e3); noticeAdjustReset()'); await wait(300);
+    check(shown(notice), 'сообщение о сбросе пропало сразу');
+    await wait(8500);
+    check(!shown(notice) && w.eval('adjustResetFrom') === null, 'сообщение о сбросе не убралось само');
+    // свёрнутая вкладка запоминает время, от которого считается срок
+    w.localStorage.removeItem('fixe.adjust_left_at'); w.eval('markUsed()');
+    check(Math.abs(+w.localStorage.getItem('fixe.adjust_left_at') - Date.now()) < 5000, 'время ухода не записано');
+
+    // 9. окно настройки
+    banner.hidden = false; w.eval('setAdjust(1)'); await wait(100);
+    banner.click(); await wait(150);
+    const m = () => d.querySelector('#modal-root .adjust-modal');
+    check(!!m(), 'нажатие на полосу не открыло настройку поправки');
+    m().querySelector('[data-p="2"]').click(); await wait(150);
+    check(w.eval('adjustPct') === 2 && !!m(), 'выбор 2% не применился или закрыл окно');
+    check(m().querySelector('[data-p="2"]').classList.contains('sel'), 'выбранная строка не отмечена');
+    m().querySelector('[data-sign="-"]').click(); await wait(150);
+    check(w.eval('adjustPct') === -2 && !!m(), 'знак «−» не применился');
+    m().querySelector('[data-p="0.5"]').click(); await wait(150);
+    check(w.eval('adjustPct') === -0.5, 'при знаке «−» выбор 0,5 дал ' + w.eval('adjustPct'));
+    m().querySelector('[data-sign="+"]').click(); await wait(150);
+    const ci = m().querySelector('#adjustCustom'); ci.value = '1,25';
+    ci.dispatchEvent(new Event('change', {bubbles: true})); await wait(150);
+    check(w.eval('adjustPct') === 1.25, 'своё значение 1,25 дало ' + w.eval('adjustPct'));
+    check(m().querySelector('.custom').classList.contains('sel'), 'своё значение не отмечено');
+    const keep = m().querySelector('#adjustKeep'); keep.click(); await wait(100);
+    check(w.eval('adjustKeep') === true && w.localStorage.getItem('fixe.adjust_keep') === 'true', 'галочка «Действует постоянно» не сохранилась');
+    keep.click(); await wait(100);
+    m().querySelector('[data-p="0"]').click(); await wait(150);
+    check(w.eval('adjustPct') === 0 && !shown(banner), '«Выкл.» не выключило поправку');
+    m().querySelector('[data-x]').click(); await wait(100);
+    check(!m(), 'окно не закрылось');
+    // строка в настройках — сразу после источника курсов
+    w.eval('showSettings()'); await wait(150);
+    const rows = [...d.querySelectorAll('#modal-root .choice')].map(b => b.dataset.i);
+    check(rows.indexOf('5') === rows.indexOf('3') + 1, 'пункт поправки не сразу после источника: ' + rows);
+    w.eval('closeModal()');
+    // справка о курсах: с поправкой — предупреждение с процентом
+    w.eval('setAdjust(1.5); showInfo()'); await wait(150);
+    const warn = d.querySelector('#modal-root .adjust-info');
+    check(!!warn && warn.textContent.includes('+1.5%'), 'в справке нет предупреждения с процентом');
+    w.eval('closeModal(); setAdjust(0); showInfo()'); await wait(150);
+    check(!d.querySelector('#modal-root .adjust-info'), 'без поправки в справке есть предупреждение');
+    w.eval('closeModal()');
+
+    // 10. запись и границы
+    const labels = [[1.5, '+1.5%'], [-2, '−2%'], [0.25, '+0.25%'], [5, '+5%'], [-0.5, '−0.5%'], [10, '+10%']];
+    for (const [p, exp] of labels) check(w.adjustLabel(p) === exp, `запись ${p}: ${w.adjustLabel(p)}, ожидалось ${exp}`);
+    const clamps = [[1.234, 1.23], [1.235, 1.24], [500, 99.99], [-500, -99.99], ['x', 0], [NaN, 0], [Infinity, 0], ['1.5', 1.5]];
+    for (const [p, exp] of clamps) check(w.clampAdjust(p) === exp, `границы ${p}: ${w.clampAdjust(p)}, ожидалось ${exp}`);
+
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + (e.stack || e.message);
+  } finally {
+    try { w.eval('adjustKeep = false; adjustResetFrom = null; setAdjust(0)'); } catch (e) {}
+    forget();
+  }
+});
+</script>

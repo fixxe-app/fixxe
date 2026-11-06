@@ -59,4 +59,15 @@
     <string name="group_none">Aucun — 1234.56</string>
     <string name="group_space">Espace — 1 234.56</string>
     <string name="group_comma">Virgule — 1,234.56</string>
+    <string name="adjust_title">Ajustement du taux</string>
+    <string name="setting_adjust">Ajustement du taux :  %1$s</string>
+    <string name="adjust_off">Désactivé</string>
+    <string name="adjusted_rates">Taux ajustés</string>
+    <string name="adjusted_short">Ajusté</string>
+    <string name="adjust_info">Les montants et les taux à l\'écran sont modifiés par votre ajustement (%1$s) et ne sont pas des taux interbancaires. Ils reposent sur le taux interbancaire de la source.</string>
+    <string name="adjust_custom">Valeur personnalisée</string>
+    <string name="adjust_keep">Toujours actif</string>
+    <string name="adjust_keep_hint">Sinon, il est réinitialisé après 4 heures sans utilisation.</string>
+    <string name="adjust_reset_notice">Ajustement réinitialisé, les taux sont de nouveau interbancaires</string>
+    <string name="adjust_undo">Rétablir</string>
 </resources>

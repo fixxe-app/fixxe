@@ -59,4 +59,15 @@
     <string name="group_none">Fără — 1234.56</string>
     <string name="group_space">Spațiu — 1 234.56</string>
     <string name="group_comma">Virgulă — 1,234.56</string>
+    <string name="adjust_title">Ajustarea cursului</string>
+    <string name="setting_adjust">Ajustarea cursului:  %1$s</string>
+    <string name="adjust_off">Dezactivat</string>
+    <string name="adjusted_rates">Cursuri ajustate</string>
+    <string name="adjusted_short">Ajustat</string>
+    <string name="adjust_info">Sumele și cursurile de pe ecran sunt modificate cu ajustarea ta (%1$s) și nu sunt cursuri medii de piață. Se bazează pe cursul mediu al sursei.</string>
+    <string name="adjust_custom">Valoare personalizată</string>
+    <string name="adjust_keep">Mereu activă</string>
+    <string name="adjust_keep_hint">Altfel se resetează după 4 ore fără utilizare.</string>
+    <string name="adjust_reset_notice">Ajustare resetată, cursurile sunt din nou de piață</string>
+    <string name="adjust_undo">Restabilește</string>
 </resources>

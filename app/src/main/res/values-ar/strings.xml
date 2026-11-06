@@ -59,4 +59,15 @@
     <string name="group_none">بلا — 1234.56</string>
     <string name="group_space">مسافة — 1 234.56</string>
     <string name="group_comma">فاصلة — 1,234.56</string>
+    <string name="adjust_title">تعديل السعر</string>
+    <string name="setting_adjust">تعديل السعر:  %1$s</string>
+    <string name="adjust_off">إيقاف</string>
+    <string name="adjusted_rates">أسعار معدَّلة</string>
+    <string name="adjusted_short">معدَّل</string>
+    <string name="adjust_info">المبالغ والأسعار على الشاشة معدَّلة بنسبة تعديلك (%1$s) وليست أسعار السوق الوسطية. وهي مبنية على السعر الوسطي للمصدر.</string>
+    <string name="adjust_custom">قيمة مخصصة</string>
+    <string name="adjust_keep">مفعَّل دائمًا</string>
+    <string name="adjust_keep_hint">وإلا يُعاد ضبطه بعد 4 ساعات من عدم الاستخدام.</string>
+    <string name="adjust_reset_notice">أُعيد ضبط التعديل، والأسعار عادت أسعار السوق</string>
+    <string name="adjust_undo">استرجاع</string>
 </resources>

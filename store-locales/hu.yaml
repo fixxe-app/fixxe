@@ -1,7 +1,7 @@
 title: "FIXXE – Valutaváltó"
 subtitle: Árfolyam öt forrásból
 short_description: Középárfolyamok 5 forrásból, 300+ pénznem, offline is, reklám nélkül.
-keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró
+keywords: "valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró,fixer,fixe"
 promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
 description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokkal — ez a világpiaci vételi és eladási ár közötti semleges középpont, banki felárak nélkül.
 
@@ -19,6 +19,9 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
 
 
   • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
+
+
+  • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal.
 
 
   • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
@@ -55,7 +58,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   Rates By Exchange Rate API.
 
   '
-whats_new: "Az árfolyamok mostantól élők: a FIXXE a Coinbase-től veszi őket, ahol percenként frissülnek, így a számok napközben követik a piacot, nem csak naponta egyszer változnak. A többi forrás tartalékként megmarad."
+whats_new: "Újdonság: árfolyam-korrekció. Adjon meg egy százalékot a banki díjra vagy árrésre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve. A Beállításokban található."
 landing:
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok

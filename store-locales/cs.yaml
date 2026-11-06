@@ -1,7 +1,7 @@
 title: "FIXXE – Převodník měn"
 subtitle: Kurzy z pěti zdrojů
 short_description: Střední kurzy z 5 zdrojů, 300+ měn, funguje offline, bez reklam.
-keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro
+keywords: "měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro,fixer,fixe"
 promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
 description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními středními kurzy — neutrálním středem mezi světovými nákupními a prodejními cenami, bez bankovních přirážek.
 
@@ -19,6 +19,9 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
 
 
   • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
+
+
+  • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem.
 
 
   • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
@@ -55,7 +58,7 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurzy jsou teď živé: FIXXE je bere z Coinbase, kde se aktualizují každou minutu, takže čísla sledují trh během dne místo jedné změny denně. Ostatní zdroje zůstávají jako záloha."
+whats_new: "Novinka: úprava kurzu. Nastavte procento za bankovní poplatek nebo marži (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena. Najdete ji v Nastavení."
 landing:
   page_title: FIXXE — převodník měn
   install_title: Způsoby instalace

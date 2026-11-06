@@ -59,4 +59,15 @@
     <string name="group_none">Bez — 1234.56</string>
     <string name="group_space">Razmak — 1 234.56</string>
     <string name="group_comma">Zarez — 1,234.56</string>
+    <string name="adjust_title">Prilagodba tečaja</string>
+    <string name="setting_adjust">Prilagodba tečaja:  %1$s</string>
+    <string name="adjust_off">Isključeno</string>
+    <string name="adjusted_rates">Prilagođeni tečajevi</string>
+    <string name="adjusted_short">Prilagođeno</string>
+    <string name="adjust_info">Iznosi i tečajevi na zaslonu promijenjeni su za vašu prilagodbu (%1$s) i nisu srednji tržišni. Temelje se na srednjem tečaju izvora.</string>
+    <string name="adjust_custom">Vlastita vrijednost</string>
+    <string name="adjust_keep">Uvijek uključeno</string>
+    <string name="adjust_keep_hint">Inače se poništava nakon 4 sata bez korištenja.</string>
+    <string name="adjust_reset_notice">Prilagodba poništena, tečajevi su opet tržišni</string>
+    <string name="adjust_undo">Vrati</string>
 </resources>

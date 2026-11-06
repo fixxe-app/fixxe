@@ -1,7 +1,7 @@
 title: "FIXXE – Przelicznik walut"
 subtitle: Kursy z pięciu źródeł
 short_description: Kursy średnie z 5 źródeł, 300+ walut, działa offline, bez reklam.
-keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro
+keywords: "waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro,fixer,fixe"
 promotional_text: Pięć źródeł kursów z automatycznym przełączaniem, kursy offline z ostrzeżeniem o nieaktualności i zaokrąglanie, które nie psuje małych kwot.
 description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursami średnimi — neutralnym środkiem między światowymi cenami kupna i sprzedaży, bez marż bankowych.
 
@@ -19,6 +19,9 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
 
 
   • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
+
+
+  • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym.
 
 
   • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
@@ -55,7 +58,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kursy są teraz na żywo: FIXXE pobiera je z Coinbase, gdzie aktualizują się co minutę, więc liczby podążają za rynkiem w ciągu dnia, zamiast zmieniać się raz na dobę. Pozostałe źródła zostają jako rezerwa."
+whats_new: "Nowość: korekta kursu. Ustaw procent prowizji banku lub marży (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone. Znajdziesz ją w Ustawieniach."
 landing:
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji

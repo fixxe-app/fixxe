@@ -57,6 +57,9 @@ locales:
       • أساس متغيّر — تُحتسب الأسعار مقابل العملة التي تحرّرها، لا مقابل عملة ثابتة. بلا تنقّل ذهابًا وإيابًا.
 
 
+      • تعديل السعر — حدّد نسبة مئوية لعمولة البنك أو الهامش أو خسائر التحويل (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح، فلا تخلط بينها وبين سعر السوق.
+
+
       • بلا إعلانات. بلا حسابات. بلا تتبّع. الإذن الوحيد هو الوصول إلى الإنترنت؛ وقائمتك وترتيبها وإعداداتك لا تغادر جهازك أبدًا.
 
 
@@ -110,6 +113,9 @@ locales:
 
 
       • Динамична база — курсовете се преизчисляват спрямо валутата, която редактирате, а не спрямо фиксирана. Без превключване напред-назад.
+
+
+      • Корекция на курса — задайте процент за банкова комисиона, марж или загуби при превод (например +1,5%) и всички суми веднага показват реалния резултат. Преизчислените числа са ясно обозначени, за да не ги сбъркате с пазарния курс.
 
 
       • Без реклами. Без профили. Без проследяване. Единственото разрешение е достъп до интернет; вашият списък, неговата подредба и настройките никога не напускат устройството.
@@ -167,6 +173,9 @@ locales:
       • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
 
 
+      • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem.
+
+
       • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
 
 
@@ -220,6 +229,9 @@ locales:
 
 
       • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+      • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen.
 
 
       • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
@@ -277,6 +289,9 @@ locales:
       • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
 
 
+      • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln.
+
+
       • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
 
 
@@ -332,6 +347,9 @@ locales:
       • Δυναμική βάση — οι ισοτιμίες υπολογίζονται ως προς το νόμισμα που επεξεργάζεστε, όχι ως προς ένα σταθερό. Χωρίς συνεχείς εναλλαγές.
 
 
+      • Προσαρμογή ισοτιμίας — ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά, ώστε να μην τα μπερδέψετε με την ισοτιμία της αγοράς.
+
+
       • Χωρίς διαφημίσεις. Χωρίς λογαριασμούς. Χωρίς παρακολούθηση. Η μόνη άδεια είναι η πρόσβαση στο διαδίκτυο· η λίστα σας, η σειρά της και οι ρυθμίσεις δεν φεύγουν ποτέ από τη συσκευή.
 
 
@@ -368,8 +386,8 @@ locales:
       '
   en-US:
     title: FIXXE – Currency Converter
-    short_description: Live mid-market rates from 5 sources, 300+ currencies, offline, no ads.
-    full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    short_description: 'Currency calculator: live rates from 5 sources, 300+ currencies, offline, no ads'
+    full_description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -385,6 +403,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -423,8 +444,8 @@ locales:
       '
   en-GB:
     title: FIXXE – Currency Converter
-    short_description: Live mid-market rates from 5 sources, 300+ currencies, offline, no ads.
-    full_description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    short_description: 'Currency calculator: live rates from 5 sources, 300+ currencies, offline, no ads'
+    full_description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -440,6 +461,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -497,6 +521,9 @@ locales:
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+
+
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
 
 
@@ -550,6 +577,9 @@ locales:
 
 
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
 
 
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
@@ -607,6 +637,9 @@ locales:
       • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
 
 
+      • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi.
+
+
       • Reklaamivaba. Kontota. Jälgimiseta. Ainus luba on internetiühendus; teie loend, selle järjekord ja seaded ei lahku kunagi seadmest.
 
 
@@ -660,6 +693,9 @@ locales:
 
 
       • پایهٔ پویا — نرخ‌ها نسبت به ارزی که در حال ویرایش آن هستید دوباره حساب می‌شوند، نه نسبت به ارزی ثابت. بی‌نیاز از رفت‌وبرگشت.
+
+
+      • تعدیل نرخ — درصدی برای کارمزد بانک، حاشیهٔ سود یا افت انتقال تعیین کنید (مثلاً ‎+1.5%‎) تا همهٔ مبلغ‌ها بی‌درنگ نتیجهٔ واقعی را نشان دهند. ارقام تعدیل‌شده به‌روشنی علامت‌گذاری می‌شوند تا با نرخ بازار اشتباه نشوند.
 
 
       • بدون تبلیغ. بدون حساب کاربری. بدون ردیابی. تنها اجازهٔ لازم دسترسی به اینترنت است؛ فهرست شما، ترتیب آن و تنظیماتتان هرگز از دستگاه بیرون نمی‌روند.
@@ -717,6 +753,9 @@ locales:
       • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
 
 
+      • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin.
+
+
       • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
 
 
@@ -770,6 +809,9 @@ locales:
 
 
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
+
+
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
 
 
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
@@ -827,6 +869,9 @@ locales:
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+
+
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
 
 
@@ -880,6 +925,9 @@ locales:
 
 
       • בסיס דינמי — השערים מחושבים מחדש מול המטבע שאתם עורכים, לא מול מטבע קבוע. בלי מעבר הלוך ושוב.
+
+
+      • התאמת שער — הגדירו אחוז עבור עמלת הבנק, המרווח או הפסדי ההעברה (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור, כך שלא תתבלבלו בינם לבין שער השוק.
 
 
       • בלי פרסומות. בלי חשבונות. בלי מעקב. ההרשאה היחידה היא גישה לאינטרנט; הרשימה שלכם, סדרה וההגדרות לא עוזבות את המכשיר.
@@ -937,6 +985,9 @@ locales:
       • गतिशील आधार — दरें उसी मुद्रा के सापेक्ष फिर से निकाली जाती हैं जिसे आप लिख रहे हैं, किसी तय मुद्रा के नहीं। बार-बार अदल-बदल की ज़रूरत नहीं।
 
 
+      • दर समायोजन — बैंक शुल्क, मार्जिन या ट्रांसफ़र में होने वाले नुकसान के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं, इसलिए आप उन्हें बाज़ार दर नहीं समझ बैठेंगे।
+
+
       • कोई विज्ञापन नहीं। कोई खाता नहीं। कोई ट्रैकिंग नहीं। एकमात्र अनुमति इंटरनेट की है; आपकी सूची, उसका क्रम और सेटिंग्स कभी उपकरण से बाहर नहीं जातीं।
 
 
@@ -990,6 +1041,9 @@ locales:
 
 
       • Dinamična osnovica — tečajevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-natrag.
+
+
+      • Prilagodba tečaja — zadajte postotak za bankovnu naknadu, maržu ili gubitke pri prijenosu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene pa ih nećete zamijeniti s tržišnim tečajem.
 
 
       • Bez oglasa. Bez računa. Bez praćenja. Jedino dopuštenje je pristup internetu; vaš popis, njegov redoslijed i postavke nikada ne napuštaju uređaj.
@@ -1047,6 +1101,9 @@ locales:
       • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
 
 
+      • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal.
+
+
       • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
 
 
@@ -1100,6 +1157,9 @@ locales:
 
 
       • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
+
+
+      • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar.
 
 
       • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
@@ -1157,6 +1217,9 @@ locales:
       • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
 
 
+      • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato.
+
+
       • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
 
 
@@ -1210,6 +1273,9 @@ locales:
 
 
       • 動く基準通貨 — レートは固定通貨ではなく、いま入力している通貨を基準に計算し直されます。行ったり来たりの切り替えは不要です。
+
+
+      • レート調整 — 銀行手数料やマージン、送金時の目減り分をパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されるので、市場レートと取り違えることはありません。
 
 
       • 広告なし。アカウントなし。追跡なし。必要な権限はインターネット接続だけで、通貨の一覧も並び順も設定も端末から出ません。
@@ -1267,6 +1333,9 @@ locales:
       • დინამიური ბაზისი — კურსები გადაითვლება იმ ვალუტასთან, რომელსაც ამჟამად ასწორებთ, და არა ფიქსირებულთან. აღარ არის საჭირო წინ-უკან გადართვა.
 
 
+      • კურსის შესწორება — მიუთითეთ პროცენტი ბანკის საკომისიოს, მარჟის ან გადარიცხვის დანაკარგისთვის (მაგალითად, +1,5%) და ყველა თანხა მაშინვე რეალურ შედეგს აჩვენებს. გადათვლილი რიცხვები მკაფიოდ არის მონიშნული, ასე რომ მათ საბაზრო კურსში არ აგერევათ.
+
+
       • რეკლამის გარეშე. ანგარიშის გარეშე. თვალყურის დევნების გარეშე. ერთადერთი ნებართვა ინტერნეტზე წვდომაა; თქვენი სია, მისი თანმიმდევრობა და პარამეტრები მოწყობილობას არასოდეს ტოვებს.
 
 
@@ -1320,6 +1389,9 @@ locales:
 
 
       • 바뀌는 기준 통화 — 환율은 고정된 통화가 아니라 지금 입력 중인 통화를 기준으로 다시 계산됩니다. 앞뒤로 전환할 필요가 없습니다.
+
+
+      • 환율 조정 — 은행 수수료, 마진 또는 송금 손실을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시되어 시장 환율과 혼동할 일이 없습니다.
 
 
       • 광고 없음. 계정 없음. 추적 없음. 요구하는 권한은 인터넷 접속 하나뿐이며, 통화 목록과 순서, 설정은 기기를 벗어나지 않습니다.
@@ -1377,6 +1449,9 @@ locales:
       • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
 
 
+      • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu.
+
+
       • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
 
 
@@ -1430,6 +1505,9 @@ locales:
 
 
       • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
+
+
+      • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu.
 
 
       • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
@@ -1487,6 +1565,9 @@ locales:
       • Динамична основа — курсевите се пресметуваат спрема валутата што ја уредувате, а не спрема фиксна. Без префрлање напред-назад.
 
 
+      • Корекција на курсот — задајте процент за банкарска провизија, маржа или загуби при пренос (на пример +1,5%) и сите износи веднаш го покажуваат вистинскиот резултат. Пресметаните бројки се јасно означени, па нема да ги помешате со пазарниот курс.
+
+
       • Без реклами. Без сметки. Без следење. Единствената дозвола е пристап до интернет; вашиот список, неговиот редослед и поставките никогаш не го напуштаат уредот.
 
 
@@ -1540,6 +1621,9 @@ locales:
 
 
       • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
+
+
+      • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen.
 
 
       • Ingen reklame. Ingen kontoer. Ingen sporing. Eneste tillatelse er internettilgang; listen din, rekkefølgen og innstillingene forlater aldri enheten.
@@ -1597,6 +1681,9 @@ locales:
       • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
 
 
+      • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers.
+
+
       • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
 
 
@@ -1650,6 +1737,9 @@ locales:
 
 
       • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
+
+
+      • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym.
 
 
       • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
@@ -1707,6 +1797,9 @@ locales:
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
+
+
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
 
 
@@ -1760,6 +1853,9 @@ locales:
 
 
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
+
+
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
 
 
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
@@ -1817,6 +1913,9 @@ locales:
       • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
 
 
+      • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței.
+
+
       • Fără reclame. Fără conturi. Fără urmărire. Singura permisiune este accesul la internet; lista ta, ordinea ei și setările nu părăsesc niciodată dispozitivul.
 
 
@@ -1870,6 +1969,9 @@ locales:
 
 
       • Динамическая база — курсы пересчитываются относительно той валюты, которую вы редактируете, а не фиксированной. Не нужно переключаться туда-сюда.
+
+
+      • Поправка к курсу — задайте процент комиссии банка, маржи или потерь на переводе (например, +1,5%), и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены — их не спутать с рыночным курсом.
 
 
       • Без рекламы. Без аккаунтов. Без слежки. Единственное разрешение — доступ в интернет; ваш список, порядок и настройки не покидают устройство.
@@ -1927,6 +2029,9 @@ locales:
       • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
 
 
+      • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom.
+
+
       • Žiadne reklamy. Žiadne účty. Žiadne sledovanie. Jediné oprávnenie je prístup na internet; váš zoznam, jeho poradie a nastavenia zariadenie nikdy neopustia.
 
 
@@ -1980,6 +2085,9 @@ locales:
 
 
       • Dinamična osnova — tečaji se preračunajo glede na valuto, ki jo urejate, ne glede na stalno. Brez preklapljanja sem in tja.
+
+
+      • Prilagoditev tečaja — nastavite odstotek za bančno provizijo, maržo ali izgube pri nakazilu (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene, zato jih ne boste zamenjali s tržnim tečajem.
 
 
       • Brez oglasov. Brez računov. Brez sledenja. Edino dovoljenje je dostop do interneta; vaš seznam, njegov vrstni red in nastavitve nikoli ne zapustijo naprave.
@@ -2037,6 +2145,9 @@ locales:
       • Динамична основица — курсеви се прерачунавају према валути коју управо уређујете, а не према непроменљивој. Без пребацивања напред-назад.
 
 
+      • Корекција курса — задајте проценат за провизију банке, маржу или губитке при преносу (на пример +1,5%) и сви износи одмах показују стварни резултат. Прерачунате бројке су јасно означене, па их нећете помешати са тржишним курсом.
+
+
       • Без реклама. Без налога. Без праћења. Једина дозвола је приступ интернету; ваш списак, његов редослед и подешавања никада не напуштају уређај.
 
 
@@ -2090,6 +2201,9 @@ locales:
 
 
       • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
+
+
+      • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen.
 
 
       • Ingen reklam. Inga konton. Ingen spårning. Enda behörigheten är internetåtkomst; din lista, dess ordning och dina inställningar lämnar aldrig enheten.
@@ -2147,6 +2261,9 @@ locales:
       • ฐานยืดหยุ่น — อัตราคำนวณใหม่เทียบกับสกุลเงินที่คุณกำลังพิมพ์ ไม่ใช่สกุลที่ตายตัว ไม่ต้องสลับไปมา
 
 
+      • การปรับอัตรา — กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน จึงไม่สับสนกับอัตราตลาด
+
+
       • ไม่มีโฆษณา ไม่มีบัญชี ไม่มีการติดตาม สิทธิ์เดียวที่ขอคือการเข้าถึงอินเทอร์เน็ต รายการของคุณ ลำดับ และการตั้งค่าไม่เคยออกจากเครื่อง
 
 
@@ -2200,6 +2317,9 @@ locales:
 
 
       • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+      • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız.
 
 
       • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
@@ -2257,6 +2377,9 @@ locales:
       • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
 
 
+      • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường.
+
+
       • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
 
 
@@ -2310,6 +2433,9 @@ locales:
 
 
       • 动态基准——汇率按你正在输入的那种货币重新计算，而不是某个固定货币。不必来回切换。
+
+
+      • 汇率调整——设置一个百分比来计入银行手续费、差价或转账损耗（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记，不会与市场汇率混淆。
 
 
       • 没有广告。不用账号。不做追踪。唯一需要的权限是联网；你的货币列表、排列顺序和设置从不离开设备。

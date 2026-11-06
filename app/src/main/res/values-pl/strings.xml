@@ -59,4 +59,15 @@
     <string name="group_none">Brak — 1234.56</string>
     <string name="group_space">Spacja — 1 234.56</string>
     <string name="group_comma">Przecinek — 1,234.56</string>
+    <string name="adjust_title">Korekta kursu</string>
+    <string name="setting_adjust">Korekta kursu:  %1$s</string>
+    <string name="adjust_off">Wył.</string>
+    <string name="adjusted_rates">Kursy z korektą</string>
+    <string name="adjusted_short">Z korektą</string>
+    <string name="adjust_info">Kwoty i kursy na ekranie są zmienione o Twoją korektę (%1$s) i nie są kursami średnimi. Podstawą jest średni kurs źródła.</string>
+    <string name="adjust_custom">Własna wartość</string>
+    <string name="adjust_keep">Zawsze włączona</string>
+    <string name="adjust_keep_hint">W przeciwnym razie zresetuje się po 4 godzinach bez użycia.</string>
+    <string name="adjust_reset_notice">Korekta zresetowana, kursy znów są średnie</string>
+    <string name="adjust_undo">Przywróć</string>
 </resources>

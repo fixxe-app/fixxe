@@ -1,7 +1,7 @@
 title: "FIXXE – Conversor de moedas"
 subtitle: Taxas de cinco fontes
 short_description: Taxas médias de 5 fontes, 300+ moedas, funciona offline, sem anúncios.
-keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro
+keywords: "moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe"
 promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
 description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médias de mercado em tempo real — o ponto neutro entre os preços mundiais de compra e de venda, sem margens bancárias.
 
@@ -19,6 +19,9 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
 
 
   • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
+
+
+  • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
 
 
   • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
@@ -55,7 +58,7 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
   Rates By Exchange Rate API.
 
   '
-whats_new: "As taxas agora são em tempo real: o FIXXE vai buscá-las à Coinbase, onde são atualizadas a cada minuto, por isso os valores acompanham o mercado ao longo do dia em vez de mudarem uma vez por dia. As outras fontes ficam como reserva."
+whats_new: "Novidade: ajuste da taxa. Defina uma percentagem para a comissão do banco ou a margem (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados. Encontra-se nas Configurações."
 landing:
   page_title: FIXXE — conversor de moedas
   install_title: Formas de instalar

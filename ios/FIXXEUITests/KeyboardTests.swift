@@ -2,14 +2,18 @@ import XCTest
 
 /// На цифровой клавиатуре iOS нет кнопки «Готово», поэтому у поля суммы
 /// есть своя кнопка в панели над клавиатурой. Без неё клавиатуру нечем убрать.
-final class KeyboardTests: XCTestCase {
+class KeyboardTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
 
     func testNumericKeyboardCanBeDismissed() {
         let app = XCUIApplication()
         // свой список: тест удаления в TapInteractionTests убирает USD, и это
         // сохраняется — без него тест зависел бы от прошлого прогона
-        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"]
+        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
 
         // ждём, пока подгрузятся курсы и появится список
         let amount = app.descendants(matching: .any)["amount-USD"]

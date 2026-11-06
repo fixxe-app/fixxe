@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Плашка метки «%»: суммы и курсы пересчитаны с поправкой -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/adjusted" />
+    <corners android:radius="4dp" />
+</shape>

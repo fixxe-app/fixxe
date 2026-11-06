@@ -59,4 +59,15 @@
     <string name="group_none">Tanpa — 1234.56</string>
     <string name="group_space">Spasi — 1 234.56</string>
     <string name="group_comma">Koma — 1,234.56</string>
+    <string name="adjust_title">Penyesuaian kurs</string>
+    <string name="setting_adjust">Penyesuaian kurs:  %1$s</string>
+    <string name="adjust_off">Mati</string>
+    <string name="adjusted_rates">Kurs disesuaikan</string>
+    <string name="adjusted_short">Disesuaikan</string>
+    <string name="adjust_info">Jumlah dan kurs di layar diubah sesuai penyesuaian Anda (%1$s) dan bukan kurs tengah pasar. Dasarnya adalah kurs tengah dari sumber.</string>
+    <string name="adjust_custom">Nilai khusus</string>
+    <string name="adjust_keep">Selalu aktif</string>
+    <string name="adjust_keep_hint">Jika tidak, akan direset setelah 4 jam tidak digunakan.</string>
+    <string name="adjust_reset_notice">Penyesuaian direset, kurs kembali ke kurs pasar</string>
+    <string name="adjust_undo">Pulihkan</string>
 </resources>

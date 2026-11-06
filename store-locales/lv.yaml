@@ -1,7 +1,7 @@
 title: "FIXXE – Valūtas kalkulators"
 subtitle: Kursi no pieciem avotiem
 short_description: Vidējie kursi no 5 avotiem, 300+ valūtu, darbojas bezsaistē, bez reklāmām.
-keywords: valūta,konvertors,kurss,maiņa,nauda,ceļojums,forex,kripto,finanses,eiro
+keywords: "valūta,konvertors,kurss,maiņa,nauda,ceļojums,forex,kripto,finanses,eiro,fixer,fixe"
 promotional_text: Pieci kursu avoti ar automātisku pāreju, bezsaistes kursi ar brīdinājumu par novecošanu un gudra noapaļošana, kas nesabojā mazas summas.
 description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika vidējiem tirgus kursiem — neitrālo viduspunktu starp pasaules pirkšanas un pārdošanas cenām, bez banku uzcenojuma.
 
@@ -19,6 +19,9 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
 
 
   • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
+
+
+  • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu.
 
 
   • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
@@ -55,7 +58,7 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kursi tagad ir tiešsaistē: FIXXE tos ņem no Coinbase, kur tie atjaunojas katru minūti, tāpēc skaitļi dienas gaitā seko tirgum, nevis mainās reizi dienā. Pārējie avoti paliek rezervē."
+whats_new: "Jaunums: kursa korekcija. Iestatiet procentu bankas komisijai vai maržai (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti. Atrodama iestatījumos."
 landing:
   page_title: FIXXE — valūtas konvertors
   install_title: Instalēšanas veidi

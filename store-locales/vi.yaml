@@ -1,7 +1,7 @@
 title: "FIXXE – Chuyển đổi tiền tệ"
 subtitle: Tỷ giá từ năm nguồn
 short_description: Tỷ giá trung bình từ 5 nguồn, 300+ tiền tệ, dùng ngoại tuyến, không quảng cáo.
-keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro
+keywords: "tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro,fixer,fixe"
 promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
 description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàng với tỷ giá trung bình thị trường theo thời gian thực — điểm trung lập giữa giá mua và giá bán toàn cầu, không có chênh lệch của ngân hàng.
 
@@ -19,6 +19,9 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
 
 
   • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
+
+
+  • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường.
 
 
   • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
@@ -55,7 +58,7 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   Rates By Exchange Rate API.
 
   '
-whats_new: "Tỷ giá giờ là trực tiếp: FIXXE lấy từ Coinbase, nơi tỷ giá được cập nhật mỗi phút, nên con số bám theo thị trường suốt cả ngày thay vì chỉ đổi mỗi ngày một lần. Các nguồn khác vẫn là dự phòng."
+whats_new: "Mới: điều chỉnh tỷ giá. Đặt một tỷ lệ phần trăm cho phí ngân hàng hoặc biên lợi nhuận (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng. Có trong phần Cài đặt."
 landing:
   page_title: FIXXE — ứng dụng quy đổi tiền tệ
   install_title: Cách cài đặt

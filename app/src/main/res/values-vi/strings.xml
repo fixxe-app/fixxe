@@ -59,4 +59,15 @@
     <string name="group_none">Không — 1234.56</string>
     <string name="group_space">Dấu cách — 1 234.56</string>
     <string name="group_comma">Dấu phẩy — 1,234.56</string>
+    <string name="adjust_title">Điều chỉnh tỷ giá</string>
+    <string name="setting_adjust">Điều chỉnh tỷ giá:  %1$s</string>
+    <string name="adjust_off">Tắt</string>
+    <string name="adjusted_rates">Tỷ giá đã điều chỉnh</string>
+    <string name="adjusted_short">Đã điều chỉnh</string>
+    <string name="adjust_info">Số tiền và tỷ giá trên màn hình đã được thay đổi theo mức điều chỉnh của bạn (%1$s) và không phải tỷ giá trung bình thị trường. Chúng dựa trên tỷ giá trung bình của nguồn.</string>
+    <string name="adjust_custom">Giá trị tùy chỉnh</string>
+    <string name="adjust_keep">Luôn bật</string>
+    <string name="adjust_keep_hint">Nếu không, sẽ đặt lại sau 4 giờ không sử dụng.</string>
+    <string name="adjust_reset_notice">Đã đặt lại điều chỉnh, tỷ giá trở lại tỷ giá thị trường</string>
+    <string name="adjust_undo">Khôi phục</string>
 </resources>

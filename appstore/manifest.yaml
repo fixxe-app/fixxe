@@ -41,6 +41,9 @@ locales:
       • أساس متغيّر — تُحتسب الأسعار مقابل العملة التي تحرّرها، لا مقابل عملة ثابتة. بلا تنقّل ذهابًا وإيابًا.
 
 
+      • تعديل السعر — حدّد نسبة مئوية لعمولة البنك أو الهامش أو خسائر التحويل (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح، فلا تخلط بينها وبين سعر السوق.
+
+
       • بلا إعلانات. بلا حسابات. بلا تتبّع. الإذن الوحيد هو الوصول إلى الإنترنت؛ وقائمتك وترتيبها وإعداداتك لا تغادر جهازك أبدًا.
 
 
@@ -76,8 +79,8 @@ locales:
 
       '
     promotional_text: خمسة مصادر للأسعار مع تبديل تلقائي، أسعار دون اتصال مع تنبيه عند تقادمها، وتقريب ذكي يحفظ المبالغ الصغيرة.
-    keywords: عملة,محول,صرف,سعر,مال,سفر,فوركس,عملات رقمية,مالية,يورو
-    whats_new: '‏الأسعار أصبحت مباشرة: يأخذها FIXXE من Coinbase حيث تُحدَّث كل دقيقة، فتتابع الأرقام حركة السوق على مدار اليوم بدل أن تتغير مرة واحدة يوميًا. وتبقى المصادر الأخرى احتياطية.'
+    keywords: عملة,محول,صرف,سعر,مال,سفر,فوركس,عملات رقمية,مالية,يورو,fixer,fixe
+    whats_new: '‏جديد: تعديل السعر. حدّد نسبة مئوية لعمولة البنك أو الهامش (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح. تجده في الإعدادات.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   cs:
@@ -99,6 +102,9 @@ locales:
 
 
       • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
+
+
+      • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem.
 
 
       • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
@@ -136,8 +142,8 @@ locales:
 
       '
     promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
-    keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro
-    whats_new: 'Kurzy jsou teď živé: FIXXE je bere z Coinbase, kde se aktualizují každou minutu, takže čísla sledují trh během dne místo jedné změny denně. Ostatní zdroje zůstávají jako záloha.'
+    keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro,fixer,fixe
+    whats_new: 'Novinka: úprava kurzu. Nastavte procento za bankovní poplatek nebo marži (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena. Najdete ji v Nastavení.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   da:
@@ -159,6 +165,9 @@ locales:
 
 
       • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+      • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen.
 
 
       • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
@@ -196,8 +205,8 @@ locales:
 
       '
     promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
-    keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro
-    whats_new: 'Kurserne er nu live: FIXXE henter dem fra Coinbase, hvor de opdateres hvert minut, så tallene følger markedet i løbet af dagen i stedet for at skifte én gang om dagen. De øvrige kilder er fortsat reserve.'
+    keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro,fixer,fixe
+    whats_new: 'Nyt: kursjustering. Angiv en procentsats for bankens gebyr eller margin (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret. Findes i Indstillinger.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   de-DE:
@@ -219,6 +228,9 @@ locales:
 
 
       • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
+
+
+      • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln.
 
 
       • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
@@ -256,8 +268,8 @@ locales:
 
       '
     promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
-    keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro
-    whats_new: 'Die Kurse sind jetzt live: FIXXE bezieht sie von Coinbase, wo sie jede Minute aktualisiert werden. Die Zahlen folgen dem Markt über den Tag, statt nur einmal täglich zu wechseln. Die übrigen Quellen bleiben als Reserve.'
+    keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro,fixer,fixe
+    whats_new: 'Neu: Kursanpassung. Legen Sie einen Prozentsatz für Bankgebühr oder Marge fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert. Zu finden in den Einstellungen.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   el:
@@ -279,6 +291,9 @@ locales:
 
 
       • Δυναμική βάση — οι ισοτιμίες υπολογίζονται ως προς το νόμισμα που επεξεργάζεστε, όχι ως προς ένα σταθερό. Χωρίς συνεχείς εναλλαγές.
+
+
+      • Προσαρμογή ισοτιμίας — ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά, ώστε να μην τα μπερδέψετε με την ισοτιμία της αγοράς.
 
 
       • Χωρίς διαφημίσεις. Χωρίς λογαριασμούς. Χωρίς παρακολούθηση. Η μόνη άδεια είναι η πρόσβαση στο διαδίκτυο· η λίστα σας, η σειρά της και οι ρυθμίσεις δεν φεύγουν ποτέ από τη συσκευή.
@@ -316,14 +331,14 @@ locales:
 
       '
     promotional_text: Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή, ισοτιμίες εκτός σύνδεσης με προειδοποίηση παλαιότητας και στρογγυλοποίηση που δεν χαλάει τα μικρά ποσά.
-    keywords: νόμισμα,μετατροπέας,ισοτιμία,συνάλλαγμα,χρήματα,ταξίδι,forex,κρυπτο,ευρώ
-    whats_new: 'Οι ισοτιμίες είναι πλέον ζωντανές: το FIXXE τις παίρνει από το Coinbase, όπου ενημερώνονται κάθε λεπτό, ώστε τα νούμερα να ακολουθούν την αγορά μέσα στη μέρα αντί να αλλάζουν μία φορά την ημέρα. Οι άλλες πηγές παραμένουν ως εφεδρικές.'
+    keywords: νόμισμα,μετατροπέας,ισοτιμία,συνάλλαγμα,χρήματα,ταξίδι,forex,κρυπτο,ευρώ,fixer,fixe
+    whats_new: 'Νέο: προσαρμογή ισοτιμίας. Ορίστε ένα ποσοστό για την προμήθεια της τράπεζας ή το περιθώριο (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά. Θα τη βρείτε στις Ρυθμίσεις.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-US:
     name: FIXXE – Currency Converter
     subtitle: Live rates from five sources
-    description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -339,6 +354,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -376,14 +394,14 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: currency,converter,exchange,rate,money,travel,forex,crypto,finance,ruble
-    whats_new: 'Rates are now live: FIXXE takes them from Coinbase, refreshed every minute, so the numbers follow the market through the day instead of updating once a day. The other sources remain as fallbacks.'
+    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
+    whats_new: 'New: rate adjustment. Set a percentage for your bank''s fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You''ll find it in Settings.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-GB:
     name: FIXXE – Currency Converter
     subtitle: Live rates from five sources
-    description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -399,6 +417,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -436,14 +457,14 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: currency,converter,exchange,rate,money,travel,forex,crypto,finance,ruble
-    whats_new: 'Rates are now live: FIXXE takes them from Coinbase, refreshed every minute, so the numbers follow the market through the day instead of updating once a day. The other sources remain as fallbacks.'
+    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
+    whats_new: 'New: rate adjustment. Set a percentage for your bank''s fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You''ll find it in Settings.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-AU:
     name: FIXXE – Currency Converter
     subtitle: Live rates from five sources
-    description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -459,6 +480,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -496,14 +520,14 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: currency,converter,exchange,rate,money,travel,forex,crypto,finance,ruble
-    whats_new: 'Rates are now live: FIXXE takes them from Coinbase, refreshed every minute, so the numbers follow the market through the day instead of updating once a day. The other sources remain as fallbacks.'
+    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
+    whats_new: 'New: rate adjustment. Set a percentage for your bank''s fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You''ll find it in Settings.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-CA:
     name: FIXXE – Currency Converter
     subtitle: Live rates from five sources
-    description: 'FIXXE is a fast, clean currency converter with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
+    description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
       WHY FIXXE IS DIFFERENT
@@ -519,6 +543,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -556,8 +583,8 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: currency,converter,exchange,rate,money,travel,forex,crypto,finance,ruble
-    whats_new: 'Rates are now live: FIXXE takes them from Coinbase, refreshed every minute, so the numbers follow the market through the day instead of updating once a day. The other sources remain as fallbacks.'
+    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
+    whats_new: 'New: rate adjustment. Set a percentage for your bank''s fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You''ll find it in Settings.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-ES:
@@ -581,6 +608,9 @@ locales:
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+
+
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
 
 
@@ -616,8 +646,8 @@ locales:
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
-    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas
-    whats_new: 'Los tipos ahora son en vivo: FIXXE los toma de Coinbase, donde se actualizan cada minuto, así que las cifras siguen al mercado durante el día en lugar de cambiar una vez al día. Las demás fuentes quedan como respaldo.'
+    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
+    whats_new: 'Novedad: ajuste del tipo. Indica un porcentaje para la comisión del banco o el margen (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente. Lo encontrarás en Ajustes.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-MX:
@@ -641,6 +671,9 @@ locales:
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+
+
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
 
 
@@ -676,8 +709,8 @@ locales:
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
-    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas
-    whats_new: 'Los tipos ahora son en vivo: FIXXE los toma de Coinbase, donde se actualizan cada minuto, así que las cifras siguen al mercado durante el día en lugar de cambiar una vez al día. Las demás fuentes quedan como respaldo.'
+    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
+    whats_new: 'Novedad: ajuste del tipo. Indica un porcentaje para la comisión del banco o el margen (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente. Lo encontrarás en Ajustes.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fi:
@@ -699,6 +732,9 @@ locales:
 
 
       • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
+
+
+      • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin.
 
 
       • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
@@ -736,8 +772,8 @@ locales:
 
       '
     promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
-    keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro
-    whats_new: 'Kurssit ovat nyt reaaliaikaisia: FIXXE hakee ne Coinbasesta, jossa ne päivittyvät minuutin välein, joten luvut seuraavat markkinaa pitkin päivää eivätkä muutu vain kerran päivässä. Muut lähteet jäävät varalle.'
+    keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro,fixer,fixe
+    whats_new: 'Uutta: kurssin korjaus. Aseta prosentti pankin palkkiolle tai marginaalille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi. Löytyy asetuksista.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-FR:
@@ -761,6 +797,9 @@ locales:
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+
+
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
 
 
@@ -796,8 +835,8 @@ locales:
 
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
-    keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro
-    whats_new: 'Les taux sont désormais en direct : FIXXE les prend chez Coinbase, où ils sont actualisés chaque minute. Les chiffres suivent le marché au fil de la journée au lieu de changer une fois par jour. Les autres sources restent en secours.'
+    keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
+    whats_new: 'Nouveau : ajustement du taux. Indiquez un pourcentage pour les frais bancaires ou la marge (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés. À retrouver dans les Paramètres.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-CA:
@@ -821,6 +860,9 @@ locales:
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+
+
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
 
 
@@ -856,8 +898,8 @@ locales:
 
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
-    keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro
-    whats_new: 'Les taux sont désormais en direct : FIXXE les prend chez Coinbase, où ils sont actualisés chaque minute. Les chiffres suivent le marché au fil de la journée au lieu de changer une fois par jour. Les autres sources restent en secours.'
+    keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
+    whats_new: 'Nouveau : ajustement du taux. Indiquez un pourcentage pour les frais bancaires ou la marge (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés. À retrouver dans les Paramètres.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   he:
@@ -879,6 +921,9 @@ locales:
 
 
       • בסיס דינמי — השערים מחושבים מחדש מול המטבע שאתם עורכים, לא מול מטבע קבוע. בלי מעבר הלוך ושוב.
+
+
+      • התאמת שער — הגדירו אחוז עבור עמלת הבנק, המרווח או הפסדי ההעברה (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור, כך שלא תתבלבלו בינם לבין שער השוק.
 
 
       • בלי פרסומות. בלי חשבונות. בלי מעקב. ההרשאה היחידה היא גישה לאינטרנט; הרשימה שלכם, סדרה וההגדרות לא עוזבות את המכשיר.
@@ -916,8 +961,8 @@ locales:
 
       '
     promotional_text: חמישה מקורות שערים עם מעבר אוטומטי, שערים לא מקוונים עם אזהרה כשהם מתיישנים, ועיגול חכם ששומר על סכומים קטנים.
-    keywords: מטבע,ממיר,שער,חליפין,כסף,טיולים,פורקס,קריפטו,פיננסים,שקל
-    whats_new: '‏השערים עכשיו חיים: FIXXE לוקח אותם מ-Coinbase, שם הם מתעדכנים בכל דקה, כך שהמספרים עוקבים אחרי השוק לאורך היום במקום להשתנות פעם ביום. שאר המקורות נשארים כגיבוי.'
+    keywords: מטבע,ממיר,שער,חליפין,כסף,טיולים,פורקס,קריפטו,פיננסים,שקל,fixer,fixe
+    whats_new: '‏חדש: התאמת שער. הגדירו אחוז עבור עמלת הבנק או המרווח (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור. נמצא בהגדרות.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hi:
@@ -939,6 +984,9 @@ locales:
 
 
       • गतिशील आधार — दरें उसी मुद्रा के सापेक्ष फिर से निकाली जाती हैं जिसे आप लिख रहे हैं, किसी तय मुद्रा के नहीं। बार-बार अदल-बदल की ज़रूरत नहीं।
+
+
+      • दर समायोजन — बैंक शुल्क, मार्जिन या ट्रांसफ़र में होने वाले नुकसान के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं, इसलिए आप उन्हें बाज़ार दर नहीं समझ बैठेंगे।
 
 
       • कोई विज्ञापन नहीं। कोई खाता नहीं। कोई ट्रैकिंग नहीं। एकमात्र अनुमति इंटरनेट की है; आपकी सूची, उसका क्रम और सेटिंग्स कभी उपकरण से बाहर नहीं जातीं।
@@ -976,8 +1024,8 @@ locales:
 
       '
     promotional_text: स्वतः बदलने वाले पाँच दर-स्रोत, पुरानी पड़ने पर चेतावनी देती ऑफ़लाइन दरें, और छोटी रकम बचाने वाला समझदार पूर्णांकन।
-    keywords: मुद्रा,कनवर्टर,विनिमय,दर,पैसा,यात्रा,फॉरेक्स,क्रिप्टो,वित्त,रुपया
-    whats_new: 'दरें अब लाइव हैं: FIXXE इन्हें Coinbase से लेता है, जहाँ ये हर मिनट अपडेट होती हैं, इसलिए आँकड़े दिन में एक बार बदलने के बजाय पूरे दिन बाज़ार के साथ चलते हैं। बाकी स्रोत बैकअप के रूप में बने रहते हैं।'
+    keywords: मुद्रा,कनवर्टर,विनिमय,दर,पैसा,यात्रा,फॉरेक्स,क्रिप्टो,वित्त,रुपया,fixer,fixe
+    whats_new: 'नया: दर समायोजन। बैंक शुल्क या मार्जिन के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं। यह सेटिंग्स में मिलेगा।'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hr:
@@ -999,6 +1047,9 @@ locales:
 
 
       • Dinamična osnovica — tečajevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-natrag.
+
+
+      • Prilagodba tečaja — zadajte postotak za bankovnu naknadu, maržu ili gubitke pri prijenosu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene pa ih nećete zamijeniti s tržišnim tečajem.
 
 
       • Bez oglasa. Bez računa. Bez praćenja. Jedino dopuštenje je pristup internetu; vaš popis, njegov redoslijed i postavke nikada ne napuštaju uređaj.
@@ -1036,8 +1087,8 @@ locales:
 
       '
     promotional_text: Pet izvora tečaja s automatskom zamjenom, offline tečajevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
-    keywords: valuta,pretvarač,tečaj,mjenjačnica,novac,putovanje,forex,kripto,financije,euro
-    whats_new: 'Tečajevi su sada uživo: FIXXE ih uzima s Coinbasea, gdje se ažuriraju svake minute, pa brojke prate tržište tijekom dana umjesto da se mijenjaju jednom dnevno. Ostali izvori ostaju kao rezerva.'
+    keywords: valuta,pretvarač,tečaj,mjenjačnica,novac,putovanje,forex,kripto,financije,euro,fixer,fixe
+    whats_new: 'Novo: prilagodba tečaja. Zadajte postotak za bankovnu naknadu ili maržu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene. Nalazi se u postavkama.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hu:
@@ -1059,6 +1110,9 @@ locales:
 
 
       • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
+
+
+      • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal.
 
 
       • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
@@ -1096,8 +1150,8 @@ locales:
 
       '
     promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
-    keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró
-    whats_new: 'Az árfolyamok mostantól élők: a FIXXE a Coinbase-től veszi őket, ahol percenként frissülnek, így a számok napközben követik a piacot, nem csak naponta egyszer változnak. A többi forrás tartalékként megmarad.'
+    keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró,fixer,fixe
+    whats_new: 'Újdonság: árfolyam-korrekció. Adjon meg egy százalékot a banki díjra vagy árrésre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve. A Beállításokban található.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   id:
@@ -1119,6 +1173,9 @@ locales:
 
 
       • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
+
+
+      • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar.
 
 
       • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
@@ -1156,8 +1213,8 @@ locales:
 
       '
     promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
-    keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah
-    whats_new: 'Kurs kini langsung: FIXXE mengambilnya dari Coinbase yang diperbarui setiap menit, sehingga angka mengikuti pasar sepanjang hari, bukan berubah sekali sehari. Sumber lainnya tetap menjadi cadangan.'
+    keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah,fixer,fixe
+    whats_new: 'Baru: penyesuaian kurs. Atur persentase untuk biaya bank atau margin (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas. Ada di Pengaturan.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   it:
@@ -1179,6 +1236,9 @@ locales:
 
 
       • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
+
+
+      • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato.
 
 
       • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
@@ -1216,8 +1276,8 @@ locales:
 
       '
     promotional_text: Cinque fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
-    keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro
-    whats_new: 'I tassi ora sono in tempo reale: FIXXE li prende da Coinbase, dove si aggiornano ogni minuto, così i numeri seguono il mercato durante la giornata invece di cambiare una volta al giorno. Le altre fonti restano di riserva.'
+    keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro,fixer,fixe
+    whats_new: 'Novità: correzione del tasso. Imposta una percentuale per la commissione della banca o il margine (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente. La trovi nelle Impostazioni.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ja:
@@ -1239,6 +1299,9 @@ locales:
 
 
       • 動く基準通貨 — レートは固定通貨ではなく、いま入力している通貨を基準に計算し直されます。行ったり来たりの切り替えは不要です。
+
+
+      • レート調整 — 銀行手数料やマージン、送金時の目減り分をパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されるので、市場レートと取り違えることはありません。
 
 
       • 広告なし。アカウントなし。追跡なし。必要な権限はインターネット接続だけで、通貨の一覧も並び順も設定も端末から出ません。
@@ -1276,8 +1339,8 @@ locales:
 
       '
     promotional_text: 自動で切り替わる5つのレート情報源、古くなると知らせるオフラインレート、そして少額を崩さない賢い丸め。
-    keywords: 通貨,換算,為替,レート,両替,旅行,外国為替,暗号資産,金融,円
-    whats_new: レートがライブになりました。FIXXE は 1 分ごとに更新される Coinbase からレートを取得するため、1 日 1 回の更新ではなく、日中の相場の動きに追従します。その他のソースは予備として残ります。
+    keywords: 通貨,換算,為替,レート,両替,旅行,外国為替,暗号資産,金融,円,fixer,fixe
+    whats_new: 新機能：レート調整。銀行手数料やマージンをパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されます。設定から利用できます。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ko:
@@ -1299,6 +1362,9 @@ locales:
 
 
       • 바뀌는 기준 통화 — 환율은 고정된 통화가 아니라 지금 입력 중인 통화를 기준으로 다시 계산됩니다. 앞뒤로 전환할 필요가 없습니다.
+
+
+      • 환율 조정 — 은행 수수료, 마진 또는 송금 손실을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시되어 시장 환율과 혼동할 일이 없습니다.
 
 
       • 광고 없음. 계정 없음. 추적 없음. 요구하는 권한은 인터넷 접속 하나뿐이며, 통화 목록과 순서, 설정은 기기를 벗어나지 않습니다.
@@ -1336,8 +1402,8 @@ locales:
 
       '
     promotional_text: 자동으로 전환되는 다섯 곳의 환율 출처, 오래되면 알려주는 오프라인 환율, 작은 금액을 망치지 않는 똑똑한 반올림.
-    keywords: 환율,환전,통화,변환,계산기,여행,외환,암호화폐,금융,원화
-    whats_new: 환율이 이제 실시간입니다. FIXXE는 1분마다 갱신되는 Coinbase에서 환율을 가져오므로, 하루에 한 번 바뀌는 대신 하루 종일 시장을 따라갑니다. 다른 소스는 예비로 남아 있습니다.
+    keywords: 환율,환전,통화,변환,계산기,여행,외환,암호화폐,금융,원화,fixer,fixe
+    whats_new: '새 기능: 환율 조정. 은행 수수료나 마진을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시됩니다. 설정에서 찾을 수 있습니다.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   'no':
@@ -1359,6 +1425,9 @@ locales:
 
 
       • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
+
+
+      • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen.
 
 
       • Ingen reklame. Ingen kontoer. Ingen sporing. Eneste tillatelse er internettilgang; listen din, rekkefølgen og innstillingene forlater aldri enheten.
@@ -1396,8 +1465,8 @@ locales:
 
       '
     promotional_text: Fem kurskilder med automatisk bytte, offlinekurser som varsler når de blir gamle, og avrunding som ikke ødelegger små beløp.
-    keywords: valuta,omregner,vekslingskurs,kurs,penger,reise,forex,krypto,økonomi,euro
-    whats_new: 'Kursene er nå direkte: FIXXE henter dem fra Coinbase, der de oppdateres hvert minutt, så tallene følger markedet gjennom dagen i stedet for å endres én gang om dagen. De andre kildene er fortsatt reserve.'
+    keywords: valuta,omregner,vekslingskurs,kurs,penger,reise,forex,krypto,økonomi,euro,fixer,fixe
+    whats_new: 'Nytt: kursjustering. Angi en prosentsats for bankens gebyr eller margin (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket. Finnes i Innstillinger.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   nl-NL:
@@ -1419,6 +1488,9 @@ locales:
 
 
       • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
+
+
+      • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers.
 
 
       • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
@@ -1456,8 +1528,8 @@ locales:
 
       '
     promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
-    keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro
-    whats_new: 'De koersen zijn nu live: FIXXE haalt ze bij Coinbase, waar ze elke minuut worden bijgewerkt. De cijfers volgen de markt gedurende de dag in plaats van één keer per dag te veranderen. De andere bronnen blijven als reserve.'
+    keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro,fixer,fixe
+    whats_new: 'Nieuw: koerscorrectie. Stel een percentage in voor bankkosten of marge (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd. Te vinden in Instellingen.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pl:
@@ -1479,6 +1551,9 @@ locales:
 
 
       • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
+
+
+      • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym.
 
 
       • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
@@ -1516,8 +1591,8 @@ locales:
 
       '
     promotional_text: Pięć źródeł kursów z automatycznym przełączaniem, kursy offline z ostrzeżeniem o nieaktualności i zaokrąglanie, które nie psuje małych kwot.
-    keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro
-    whats_new: 'Kursy są teraz na żywo: FIXXE pobiera je z Coinbase, gdzie aktualizują się co minutę, więc liczby podążają za rynkiem w ciągu dnia, zamiast zmieniać się raz na dobę. Pozostałe źródła zostają jako rezerwa.'
+    keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro,fixer,fixe
+    whats_new: 'Nowość: korekta kursu. Ustaw procent prowizji banku lub marży (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone. Znajdziesz ją w Ustawieniach.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-PT:
@@ -1541,6 +1616,9 @@ locales:
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
+
+
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
 
 
@@ -1576,8 +1654,8 @@ locales:
 
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
-    keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro
-    whats_new: 'As taxas agora são em tempo real: o FIXXE vai buscá-las à Coinbase, onde são atualizadas a cada minuto, por isso os valores acompanham o mercado ao longo do dia em vez de mudarem uma vez por dia. As outras fontes ficam como reserva.'
+    keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
+    whats_new: 'Novidade: ajuste da taxa. Defina uma percentagem para a comissão do banco ou a margem (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados. Encontra-se nas Configurações.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-BR:
@@ -1601,6 +1679,9 @@ locales:
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
+
+
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
 
 
@@ -1636,8 +1717,8 @@ locales:
 
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
-    keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro
-    whats_new: 'As taxas agora são em tempo real: o FIXXE vai buscá-las à Coinbase, onde são atualizadas a cada minuto, por isso os valores acompanham o mercado ao longo do dia em vez de mudarem uma vez por dia. As outras fontes ficam como reserva.'
+    keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
+    whats_new: 'Novidade: ajuste da taxa. Defina uma percentagem para a comissão do banco ou a margem (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados. Encontra-se nas Configurações.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ro:
@@ -1659,6 +1740,9 @@ locales:
 
 
       • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
+
+
+      • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței.
 
 
       • Fără reclame. Fără conturi. Fără urmărire. Singura permisiune este accesul la internet; lista ta, ordinea ei și setările nu părăsesc niciodată dispozitivul.
@@ -1696,8 +1780,8 @@ locales:
 
       '
     promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
-    keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro
-    whats_new: 'Cursurile sunt acum în timp real: FIXXE le ia de la Coinbase, unde se actualizează în fiecare minut, așa că cifrele urmează piața pe parcursul zilei în loc să se schimbe o dată pe zi. Celelalte surse rămân ca rezervă.'
+    keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro,fixer,fixe
+    whats_new: 'Nou: ajustarea cursului. Setați un procent pentru comisionul băncii sau marjă (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar. O găsiți în Setări.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ru:
@@ -1719,6 +1803,9 @@ locales:
 
 
       • Динамическая база — курсы пересчитываются относительно той валюты, которую вы редактируете, а не фиксированной. Не нужно переключаться туда-сюда.
+
+
+      • Поправка к курсу — задайте процент комиссии банка, маржи или потерь на переводе (например, +1,5%), и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены — их не спутать с рыночным курсом.
 
 
       • Без рекламы. Без аккаунтов. Без слежки. Единственное разрешение — доступ в интернет; ваш список, порядок и настройки не покидают устройство.
@@ -1756,8 +1843,8 @@ locales:
 
       '
     promotional_text: Пять источников курсов с автоматическим резервом, работа офлайн с предупреждением об устаревании и умное округление, которое бережёт малые суммы.
-    keywords: валюта,конвертер,курс,обмен,деньги,путешествия,форекс,криптовалюта,финансы,рубль
-    whats_new: 'Курсы теперь живые: FIXXE берёт их у Coinbase, где они обновляются каждую минуту, и цифры следуют за рынком в течение дня, а не обновляются раз в сутки. Остальные источники остаются запасными.'
+    keywords: валюта,конвертер,курс,обмен,деньги,путешествия,форекс,криптовалюта,финансы,рубль,fixer,fixe
+    whats_new: 'Новое: поправка к курсу. Задайте процент комиссии банка или маржи (например, +1,5%) — и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены. Ищите в настройках.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sk:
@@ -1779,6 +1866,9 @@ locales:
 
 
       • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
+
+
+      • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom.
 
 
       • Žiadne reklamy. Žiadne účty. Žiadne sledovanie. Jediné oprávnenie je prístup na internet; váš zoznam, jeho poradie a nastavenia zariadenie nikdy neopustia.
@@ -1816,8 +1906,8 @@ locales:
 
       '
     promotional_text: Päť zdrojov kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
-    keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro
-    whats_new: 'Kurzy sú teraz živé: FIXXE ich berie z Coinbase, kde sa aktualizujú každú minútu, takže čísla sledujú trh počas dňa namiesto jednej zmeny denne. Ostatné zdroje zostávajú ako záloha.'
+    keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro,fixer,fixe
+    whats_new: 'Novinka: úprava kurzu. Nastavte percento za bankový poplatok alebo maržu (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené. Nájdete ju v Nastaveniach.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sv:
@@ -1839,6 +1929,9 @@ locales:
 
 
       • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
+
+
+      • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen.
 
 
       • Ingen reklam. Inga konton. Ingen spårning. Enda behörigheten är internetåtkomst; din lista, dess ordning och dina inställningar lämnar aldrig enheten.
@@ -1876,8 +1969,8 @@ locales:
 
       '
     promotional_text: Fem kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
-    keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro
-    whats_new: 'Kurserna är nu live: FIXXE hämtar dem från Coinbase, där de uppdateras varje minut, så siffrorna följer marknaden under dagen i stället för att ändras en gång om dagen. Övriga källor finns kvar som reserv.'
+    keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro,fixer,fixe
+    whats_new: 'Nytt: kursjustering. Ange en procentsats för bankens avgift eller marginal (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade. Finns i Inställningar.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   th:
@@ -1899,6 +1992,9 @@ locales:
 
 
       • ฐานยืดหยุ่น — อัตราคำนวณใหม่เทียบกับสกุลเงินที่คุณกำลังพิมพ์ ไม่ใช่สกุลที่ตายตัว ไม่ต้องสลับไปมา
+
+
+      • การปรับอัตรา — กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน จึงไม่สับสนกับอัตราตลาด
 
 
       • ไม่มีโฆษณา ไม่มีบัญชี ไม่มีการติดตาม สิทธิ์เดียวที่ขอคือการเข้าถึงอินเทอร์เน็ต รายการของคุณ ลำดับ และการตั้งค่าไม่เคยออกจากเครื่อง
@@ -1936,8 +2032,8 @@ locales:
 
       '
     promotional_text: ห้าแหล่งอัตราที่สลับให้อัตโนมัติ อัตราออฟไลน์ที่เตือนเมื่อเก่าเกินไป และการปัดเศษที่ไม่ทำให้จำนวนเล็ก ๆ เพี้ยน
-    keywords: สกุลเงิน,แปลงค่า,อัตราแลกเปลี่ยน,เงิน,ท่องเที่ยว,ฟอเร็กซ์,คริปโต,การเงิน,บาท
-    whats_new: 'อัตราแลกเปลี่ยนเป็นแบบสดแล้ว: FIXXE ดึงข้อมูลจาก Coinbase ซึ่งอัปเดตทุกนาที ตัวเลขจึงเคลื่อนตามตลาดตลอดวัน แทนที่จะเปลี่ยนวันละครั้ง ส่วนแหล่งอื่นยังคงเป็นแหล่งสำรอง'
+    keywords: สกุลเงิน,แปลงค่า,อัตราแลกเปลี่ยน,เงิน,ท่องเที่ยว,ฟอเร็กซ์,คริปโต,การเงิน,บาท,fixer,fixe
+    whats_new: 'ใหม่: การปรับอัตรา กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคารหรือส่วนต่าง (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน อยู่ในการตั้งค่า'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   tr:
@@ -1959,6 +2055,9 @@ locales:
 
 
       • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+      • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız.
 
 
       • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
@@ -1996,8 +2095,8 @@ locales:
 
       '
     promotional_text: Otomatik yedekli beş kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
-    keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro
-    whats_new: 'Kurlar artık canlı: FIXXE bunları her dakika güncellenen Coinbase’ten alıyor; rakamlar günde bir kez değişmek yerine gün boyu piyasayı izliyor. Diğer kaynaklar yedek olarak duruyor.'
+    keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro,fixer,fixe
+    whats_new: 'Yeni: kur düzeltmesi. Banka komisyonu veya marj için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir. Ayarlar''da bulabilirsiniz.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   vi:
@@ -2019,6 +2118,9 @@ locales:
 
 
       • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
+
+
+      • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường.
 
 
       • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
@@ -2056,8 +2158,8 @@ locales:
 
       '
     promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
-    keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro
-    whats_new: 'Tỷ giá giờ là trực tiếp: FIXXE lấy từ Coinbase, nơi tỷ giá được cập nhật mỗi phút, nên con số bám theo thị trường suốt cả ngày thay vì chỉ đổi mỗi ngày một lần. Các nguồn khác vẫn là dự phòng.'
+    keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro,fixer,fixe
+    whats_new: 'Mới: điều chỉnh tỷ giá. Đặt một tỷ lệ phần trăm cho phí ngân hàng hoặc biên lợi nhuận (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng. Có trong phần Cài đặt.'
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   zh-Hans:
@@ -2079,6 +2181,9 @@ locales:
 
 
       • 动态基准——汇率按你正在输入的那种货币重新计算，而不是某个固定货币。不必来回切换。
+
+
+      • 汇率调整——设置一个百分比来计入银行手续费、差价或转账损耗（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记，不会与市场汇率混淆。
 
 
       • 没有广告。不用账号。不做追踪。唯一需要的权限是联网；你的货币列表、排列顺序和设置从不离开设备。
@@ -2116,7 +2221,7 @@ locales:
 
       '
     promotional_text: 五个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
-    keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币
-    whats_new: 汇率现在是实时的：FIXXE 从每分钟更新的 Coinbase 获取汇率，数字会在一天中跟随市场变化，而不是每天只更新一次。其他来源保留作为备用。
+    keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币,fixer,fixe
+    whats_new: 新功能：汇率调整。设置一个百分比计入银行手续费或差价（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记。可在设置中找到。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html

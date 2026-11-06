@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00BAE5DFE7FB59C0603C99DA /* i18n.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BB6DBB2EF7C08A8B04EBA9 /* i18n.json */; };
+		038FD2E09713D66C0264A4A9 /* RateAdjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3197D60F238EA67679E36 /* RateAdjust.swift */; };
 		03908585D112F8D26A44D113 /* SwitchRowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7966DADB7A2BF6843B45DD3 /* SwitchRowsTests.swift */; };
 		0A92B8F83040587BE49D5DA0 /* OrientationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5993802983544C36948747 /* OrientationTests.swift */; };
 		16C40C7884F134B526BBFFBC /* currency-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0196D5A38670EB6B1B06A2C1 /* currency-data.json */; };
@@ -15,6 +16,8 @@
 		24F57ED949D747129341764F /* AddCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E520FED5DE3CA99EDDA3C /* AddCurrencyTests.swift */; };
 		26156AA96B8CF040F1010702 /* CaretTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1AE2DFE66B9DF951C9FF0 /* CaretTap.swift */; };
 		298E55A3B962BB9B2912CC15 /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267E45A50BF97C2CA766F46 /* FlagView.swift */; };
+		41AB2CCD186F76257AC2DDA2 /* AdjustViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85AF3E0CA612F0946CE6BF4 /* AdjustViews.swift */; };
+		44BFB3295F0681A8318C9C0F /* RateAdjustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7090ED0E933D13F31A8E67 /* RateAdjustTests.swift */; };
 		4C3E6F0DFC68FEEDAFAF0807 /* ReorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E25FC99B6B5EA41C3F6D4C /* ReorderTests.swift */; };
 		5228B0E3040BEC0E30B95690 /* RatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5A70E6477BB43FD4D59D2 /* RatesService.swift */; };
 		524EE471F8451BB1C6E4D45C /* SmartFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311FA3D94D8506F03C29956 /* SmartFormat.swift */; };
@@ -29,6 +32,7 @@
 		8B81426290499D00E8A67428 /* SelectOnFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F04B640E8EE74B03AD5104 /* SelectOnFocusTests.swift */; };
 		952EB819D1D3119E48EC7524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D604946C3A5A771C49B396 /* Assets.xcassets */; };
 		A4644BAC9D8305B3D117FD14 /* RowDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AE730FAD8CAD8576907366 /* RowDropDelegate.swift */; };
+		AD2E66F31CE06E8E3FB9CC05 /* AdjustmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */; };
 		AD53D43B2FA5EA24FA49BF61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F191BE26C83A3E86B94DFB87 /* ContentView.swift */; };
 		C1C4801A84BC5B850311F521 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5EE0A4AEF75010731DE0ED /* L10n.swift */; };
 		C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F86173051CB4DCF18630E /* RatesSourcesTests.swift */; };
@@ -67,6 +71,7 @@
 		603B72B1ECB700C2621B94EE /* FIXXE.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FIXXE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62226A2CEBCEFBC634494829 /* FIXXEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIXXEApp.swift; sourceTree = "<group>"; };
 		633F0813B564E37AAF56E162 /* CurrencyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRowView.swift; sourceTree = "<group>"; };
+		64B3197D60F238EA67679E36 /* RateAdjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAdjust.swift; sourceTree = "<group>"; };
 		68D604946C3A5A771C49B396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7311FA3D94D8506F03C29956 /* SmartFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFormat.swift; sourceTree = "<group>"; };
 		78CCE8ABB75B2FDDF802BEB6 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		7E0CDC4F07CFC6D685D38F31 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		86E25FC99B6B5EA41C3F6D4C /* ReorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderTests.swift; sourceTree = "<group>"; };
 		8AC905DA39A7FC24568DEEBE /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
+		8D7090ED0E933D13F31A8E67 /* RateAdjustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAdjustTests.swift; sourceTree = "<group>"; };
 		8E6CD2E09A979B0707F1666C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		933F86173051CB4DCF18630E /* RatesSourcesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesSourcesTests.swift; sourceTree = "<group>"; };
 		95A1AE2DFE66B9DF951C9FF0 /* CaretTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaretTap.swift; sourceTree = "<group>"; };
@@ -84,7 +90,9 @@
 		A0BB6DBB2EF7C08A8B04EBA9 /* i18n.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = i18n.json; sourceTree = "<group>"; };
 		A267E45A50BF97C2CA766F46 /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
 		A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardScrollRestore.swift; sourceTree = "<group>"; };
+		A85AF3E0CA612F0946CE6BF4 /* AdjustViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustViews.swift; sourceTree = "<group>"; };
 		B9065B63391283795556FA83 /* AddCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrencyView.swift; sourceTree = "<group>"; };
+		B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentTests.swift; sourceTree = "<group>"; };
 		CF7133CCCB4E17D72E1EA442 /* TapInteractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInteractionTests.swift; sourceTree = "<group>"; };
 		E522B41204AA2122AC64BF93 /* KeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTests.swift; sourceTree = "<group>"; };
 		F191BE26C83A3E86B94DFB87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 				95A1AE2DFE66B9DF951C9FF0 /* CaretTap.swift */,
 				A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */,
 				9D5EE0A4AEF75010731DE0ED /* L10n.swift */,
+				64B3197D60F238EA67679E36 /* RateAdjust.swift */,
 				7311FA3D94D8506F03C29956 /* SmartFormat.swift */,
 				78CCE8ABB75B2FDDF802BEB6 /* UIHelpers.swift */,
 			);
@@ -136,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B9065B63391283795556FA83 /* AddCurrencyView.swift */,
+				A85AF3E0CA612F0946CE6BF4 /* AdjustViews.swift */,
 				F191BE26C83A3E86B94DFB87 /* ContentView.swift */,
 				633F0813B564E37AAF56E162 /* CurrencyRowView.swift */,
 				A267E45A50BF97C2CA766F46 /* FlagView.swift */,
@@ -164,6 +174,7 @@
 		BB41EA2BD3D78679835A4242 /* FIXXETests */ = {
 			isa = PBXGroup;
 			children = (
+				8D7090ED0E933D13F31A8E67 /* RateAdjustTests.swift */,
 				933F86173051CB4DCF18630E /* RatesSourcesTests.swift */,
 				F7966DADB7A2BF6843B45DD3 /* SwitchRowsTests.swift */,
 			);
@@ -208,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				7A9E520FED5DE3CA99EDDA3C /* AddCurrencyTests.swift */,
+				B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */,
 				E522B41204AA2122AC64BF93 /* KeyboardTests.swift */,
 				3DF378A4C6A36231768A881B /* ListAfterKeyboardTests.swift */,
 				5C5993802983544C36948747 /* OrientationTests.swift */,
@@ -334,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F57ED949D747129341764F /* AddCurrencyTests.swift in Sources */,
+				AD2E66F31CE06E8E3FB9CC05 /* AdjustmentTests.swift in Sources */,
 				65D600C3FBF26028B8B98A8D /* KeyboardTests.swift in Sources */,
 				1FBA9B39F850BC2AA279CFD2 /* ListAfterKeyboardTests.swift in Sources */,
 				0A92B8F83040587BE49D5DA0 /* OrientationTests.swift in Sources */,
@@ -349,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E87FB7549406A57E1DBC87D /* AddCurrencyView.swift in Sources */,
+				41AB2CCD186F76257AC2DDA2 /* AdjustViews.swift in Sources */,
 				26156AA96B8CF040F1010702 /* CaretTap.swift in Sources */,
 				AD53D43B2FA5EA24FA49BF61 /* ContentView.swift in Sources */,
 				6592C86165FC60B94FD64A29 /* ConverterViewModel.swift in Sources */,
@@ -358,6 +372,7 @@
 				298E55A3B962BB9B2912CC15 /* FlagView.swift in Sources */,
 				542C16F5402571A8C4D4D84C /* KeyboardScrollRestore.swift in Sources */,
 				C1C4801A84BC5B850311F521 /* L10n.swift in Sources */,
+				038FD2E09713D66C0264A4A9 /* RateAdjust.swift in Sources */,
 				5228B0E3040BEC0E30B95690 /* RatesService.swift in Sources */,
 				A4644BAC9D8305B3D117FD14 /* RowDropDelegate.swift in Sources */,
 				E5D87D9076E22FE36EB8715B /* SettingsView.swift in Sources */,
@@ -370,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BFB3295F0681A8318C9C0F /* RateAdjustTests.swift in Sources */,
 				C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */,
 				03908585D112F8D26A44D113 /* SwitchRowsTests.swift in Sources */,
 			);
@@ -397,7 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -409,7 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.65;
+				MARKETING_VERSION = 1.66;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
@@ -614,7 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -626,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.65;
+				MARKETING_VERSION = 1.66;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;

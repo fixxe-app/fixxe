@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Поправка к курсу: знак, готовые значения, своё значение, «Действует постоянно».
+     Строки с готовыми значениями добавляет код (MainActivity.showAdjustDialog). -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Фокус при открытии берёт сам контейнер: иначе его получало бы поле
+         «своё значение», и на части устройств сразу выезжала бы клавиатура. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp">
+
+        <!-- Знак: «+» — заплачу больше, «−» — получу меньше -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnSignPlus"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="20sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/btnSignMinus"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="−"
+                android:textSize="20sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/adjustGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:labelFor="@+id/etAdjustCustom"
+                android:text="@string/adjust_custom"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary" />
+
+            <EditText
+                android:id="@id/etAdjustCustom"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
+                android:imeOptions="actionDone"
+                android:maxLength="5"
+                android:gravity="end"
+                android:hint="0.00"
+                android:textColorHint="@color/hint"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="%"
+                android:textSize="16sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbAdjustKeep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/adjust_keep"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/adjust_keep_hint"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+</ScrollView>

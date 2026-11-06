@@ -78,4 +78,15 @@
     <string name="reorder">Reorder</string>
     <string name="rates_offline">Offline · rates from %1$s · %2$s</string>
     <string name="rates_stale">⚠ Rates are out of date — from %1$s · %2$s</string>
+    <string name="adjust_title">Rate adjustment</string>
+    <string name="setting_adjust">Rate adjustment:  %1$s</string>
+    <string name="adjust_off">Off</string>
+    <string name="adjusted_rates">Adjusted rates</string>
+    <string name="adjusted_short">Adjusted</string>
+    <string name="adjust_info">Amounts and rates on screen are changed by your adjustment (%1$s) and are not mid-market. They are based on the source\'s mid-market rate.</string>
+    <string name="adjust_custom">Custom value</string>
+    <string name="adjust_keep">Always on</string>
+    <string name="adjust_keep_hint">Otherwise it resets after 4 hours without use.</string>
+    <string name="adjust_reset_notice">Adjustment reset, rates are mid-market again</string>
+    <string name="adjust_undo">Restore</string>
 </resources>

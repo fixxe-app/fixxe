@@ -1,7 +1,7 @@
 title: "FIXXE – Konversi Mata Uang"
 subtitle: Kurs dari lima sumber
 short_description: Kurs tengah dari 5 sumber, 300+ mata uang, jalan offline, tanpa iklan.
-keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah
+keywords: "mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah,fixer,fixe"
 promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
 description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs tengah pasar secara langsung — titik netral antara harga beli dan harga jual dunia, tanpa marjin bank.
 
@@ -19,6 +19,9 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
 
 
   • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
+
+
+  • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar.
 
 
   • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
@@ -55,7 +58,7 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurs kini langsung: FIXXE mengambilnya dari Coinbase yang diperbarui setiap menit, sehingga angka mengikuti pasar sepanjang hari, bukan berubah sekali sehari. Sumber lainnya tetap menjadi cadangan."
+whats_new: "Baru: penyesuaian kurs. Atur persentase untuk biaya bank atau margin (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas. Ada di Pengaturan."
 landing:
   page_title: FIXXE — konverter mata uang
   install_title: Cara memasang

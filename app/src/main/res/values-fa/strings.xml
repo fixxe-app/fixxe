@@ -59,4 +59,15 @@
     <string name="group_none">بدون — 1234.56</string>
     <string name="group_space">فاصله — 1 234.56</string>
     <string name="group_comma">ویرگول — 1,234.56</string>
+    <string name="adjust_title">تعدیل نرخ</string>
+    <string name="setting_adjust">تعدیل نرخ:  %1$s</string>
+    <string name="adjust_off">خاموش</string>
+    <string name="adjusted_rates">نرخ‌های تعدیل‌شده</string>
+    <string name="adjusted_short">تعدیل‌شده</string>
+    <string name="adjust_info">مبالغ و نرخ‌های روی صفحه با تعدیل شما (%1$s) تغییر کرده‌اند و نرخ میانهٔ بازار نیستند. مبنای آن‌ها نرخ میانهٔ منبع است.</string>
+    <string name="adjust_custom">مقدار دلخواه</string>
+    <string name="adjust_keep">همیشه فعال</string>
+    <string name="adjust_keep_hint">در غیر این صورت پس از ۴ ساعت بدون استفاده بازنشانی می‌شود.</string>
+    <string name="adjust_reset_notice">تعدیل بازنشانی شد، نرخ‌ها دوباره نرخ بازارند</string>
+    <string name="adjust_undo">بازگردانی</string>
 </resources>

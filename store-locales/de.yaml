@@ -1,7 +1,7 @@
 title: "FIXXE – Währungsrechner"
 subtitle: Kurse aus fünf Quellen
 short_description: Mittelkurse aus 5 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
-keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro
+keywords: "währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro,fixer,fixe"
 promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
 description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
@@ -19,6 +19,9 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
 
 
   • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
+
+
+  • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln.
 
 
   • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
@@ -55,7 +58,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "Die Kurse sind jetzt live: FIXXE bezieht sie von Coinbase, wo sie jede Minute aktualisiert werden. Die Zahlen folgen dem Markt über den Tag, statt nur einmal täglich zu wechseln. Die übrigen Quellen bleiben als Reserve."
+whats_new: "Neu: Kursanpassung. Legen Sie einen Prozentsatz für Bankgebühr oder Marge fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert. Zu finden in den Einstellungen."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

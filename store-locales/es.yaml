@@ -1,7 +1,7 @@
 title: "FIXXE – Conversor de divisas"
 subtitle: Tipos de cinco fuentes
 short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
-keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas
+keywords: "moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe"
 promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
 description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
@@ -19,6 +19,9 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
 
 
   • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+  • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
 
 
   • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
@@ -55,7 +58,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   Rates By Exchange Rate API.
 
   '
-whats_new: "Los tipos ahora son en vivo: FIXXE los toma de Coinbase, donde se actualizan cada minuto, así que las cifras siguen al mercado durante el día en lugar de cambiar una vez al día. Las demás fuentes quedan como respaldo."
+whats_new: "Novedad: ajuste del tipo. Indica un porcentaje para la comisión del banco o el margen (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente. Lo encontrarás en Ajustes."
 landing:
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar

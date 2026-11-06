@@ -31,6 +31,10 @@
     <button id="btnClear" class="clear-btn">CLEAR</button>
   </div>
 
+  <!-- Поправка к курсу включена: полоса не закрывается, пока процент не ноль -->
+  <button id="adjustBanner" class="adjust-banner" hidden><span class="pct" aria-hidden="true">%</span><span id="adjustBannerText"></span><span class="chev" aria-hidden="true">›</span></button>
+  <div id="adjustNotice" class="adjust-notice" role="status" hidden><span id="adjustNoticeText"></span><button id="adjustUndo"></button></div>
+
   <!-- List -->
   <main id="list" class="list"></main>
 

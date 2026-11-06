@@ -1,7 +1,7 @@
 title: "FIXXE – Döviz Çevirici"
 subtitle: Beş kaynaktan kurlar
 short_description: 5 kaynaktan piyasa ortalaması kurlar, 300+ para birimi, çevrimdışı, reklamsız.
-keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro
+keywords: "döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro,fixer,fixe"
 promotional_text: Otomatik yedekli beş kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
 description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sade bir döviz çeviricisidir — dünya alış ve satış fiyatlarının tarafsız ortası, banka farkları olmadan.
 
@@ -19,6 +19,9 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
 
 
   • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+  • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız.
 
 
   • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
@@ -55,7 +58,7 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurlar artık canlı: FIXXE bunları her dakika güncellenen Coinbase’ten alıyor; rakamlar günde bir kez değişmek yerine gün boyu piyasayı izliyor. Diğer kaynaklar yedek olarak duruyor."
+whats_new: "Yeni: kur düzeltmesi. Banka komisyonu veya marj için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir. Ayarlar'da bulabilirsiniz."
 landing:
   page_title: FIXXE — döviz çevirici
   install_title: Kurulum yolları

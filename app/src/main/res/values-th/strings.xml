@@ -59,4 +59,15 @@
     <string name="group_none">ไม่มี — 1234.56</string>
     <string name="group_space">เว้นวรรค — 1 234.56</string>
     <string name="group_comma">จุลภาค — 1,234.56</string>
+    <string name="adjust_title">การปรับอัตรา</string>
+    <string name="setting_adjust">การปรับอัตรา:  %1$s</string>
+    <string name="adjust_off">ปิด</string>
+    <string name="adjusted_rates">อัตราที่ปรับแล้ว</string>
+    <string name="adjusted_short">ปรับแล้ว</string>
+    <string name="adjust_info">จำนวนเงินและอัตราบนหน้าจอถูกเปลี่ยนตามการปรับของคุณ (%1$s) และไม่ใช่อัตรากลางตลาด โดยอิงจากอัตรากลางของแหล่งข้อมูล</string>
+    <string name="adjust_custom">ค่ากำหนดเอง</string>
+    <string name="adjust_keep">เปิดตลอด</string>
+    <string name="adjust_keep_hint">มิฉะนั้นจะรีเซ็ตเมื่อไม่ได้ใช้งาน 4 ชั่วโมง</string>
+    <string name="adjust_reset_notice">รีเซ็ตการปรับแล้ว อัตรากลับเป็นอัตราตลาด</string>
+    <string name="adjust_undo">เรียกคืน</string>
 </resources>

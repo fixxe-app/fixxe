@@ -1,7 +1,7 @@
 title: "FIXXE – Valuuttalaskuri"
 subtitle: Kurssit viidestä lähteestä
 short_description: Keskikurssit 5 lähteestä, 300+ valuuttaa, toimii offline, ei mainoksia.
-keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro
+keywords: "valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro,fixer,fixe"
 promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
 description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset keskikurssit — puolueeton keskikohta maailman osto- ja myyntihintojen välissä, ilman pankkien katteita.
 
@@ -19,6 +19,9 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
 
 
   • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
+
+
+  • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin.
 
 
   • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
@@ -55,7 +58,7 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kurssit ovat nyt reaaliaikaisia: FIXXE hakee ne Coinbasesta, jossa ne päivittyvät minuutin välein, joten luvut seuraavat markkinaa pitkin päivää eivätkä muutu vain kerran päivässä. Muut lähteet jäävät varalle."
+whats_new: "Uutta: kurssin korjaus. Aseta prosentti pankin palkkiolle tai marginaalille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi. Löytyy asetuksista."
 landing:
   page_title: FIXXE — valuuttamuunnin
   install_title: Asennustavat

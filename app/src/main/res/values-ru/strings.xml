@@ -59,4 +59,15 @@
     <string name="group_none">Нет — 1234.56</string>
     <string name="group_space">Пробел — 1 234.56</string>
     <string name="group_comma">Запятая — 1,234.56</string>
+    <string name="adjust_title">Поправка к курсу</string>
+    <string name="setting_adjust">Поправка к курсу:  %1$s</string>
+    <string name="adjust_off">Выкл.</string>
+    <string name="adjusted_rates">Курсы с поправкой</string>
+    <string name="adjusted_short">С поправкой</string>
+    <string name="adjust_info">Суммы и курсы на экране изменены на вашу поправку (%1$s) и не являются среднерыночными. Основа — среднерыночный курс источника.</string>
+    <string name="adjust_custom">Своё значение</string>
+    <string name="adjust_keep">Действует постоянно</string>
+    <string name="adjust_keep_hint">Иначе сбросится через 4 часа без использования.</string>
+    <string name="adjust_reset_notice">Поправка сброшена, курсы снова рыночные</string>
+    <string name="adjust_undo">Вернуть</string>
 </resources>

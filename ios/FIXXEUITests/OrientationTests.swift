@@ -3,14 +3,18 @@ import XCTest
 /// Проверка вёрстки в ландшафте: для iPad Apple ожидает поддержку всех
 /// ориентаций, а повернуть симулятор из командной строки нечем — simctl
 /// этого не умеет. XCUIDevice умеет.
-final class OrientationTests: XCTestCase {
+class OrientationTests: XCTestCase {
+
+    /// Дополнительные аргументы запуска: подкласс «…WithAdjustment» включает поправку к курсу
+    class var extraArgs: [String] { [] }
 
     func testLandscapeKeepsHeaderAndFooterVisible() {
         let app = XCUIApplication()
         // свой список: тест удаления в TapInteractionTests убирает USD, и это
         // сохраняется — без него тест зависел бы от прошлого прогона
-        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"]
+        app.launchArguments += ["-screen-currencies", "EUR,USD,RSD,GEL,ILS,TJS,CHF"] + Self.extraArgs
         app.launch()
+        requireAdjustment(app, Self.extraArgs)
         XCUIDevice.shared.orientation = .landscapeLeft
         defer { XCUIDevice.shared.orientation = .portrait }
 

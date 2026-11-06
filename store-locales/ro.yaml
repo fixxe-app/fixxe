@@ -1,7 +1,7 @@
 title: "FIXXE – Convertor valutar"
 subtitle: Cursuri din cinci surse
 short_description: Cursuri medii din 5 surse, 300+ valute, funcționează offline, fără reclame.
-keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro
+keywords: "valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro,fixer,fixe"
 promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
 description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii de piață în timp real — punctul neutru dintre prețurile mondiale de cumpărare și de vânzare, fără adaosuri bancare.
 
@@ -19,6 +19,9 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
 
 
   • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
+
+
+  • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței.
 
 
   • Fără reclame. Fără conturi. Fără urmărire. Singura permisiune este accesul la internet; lista ta, ordinea ei și setările nu părăsesc niciodată dispozitivul.
@@ -55,7 +58,7 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
   Rates By Exchange Rate API.
 
   '
-whats_new: "Cursurile sunt acum în timp real: FIXXE le ia de la Coinbase, unde se actualizează în fiecare minut, așa că cifrele urmează piața pe parcursul zilei în loc să se schimbe o dată pe zi. Celelalte surse rămân ca rezervă."
+whats_new: "Nou: ajustarea cursului. Setați un procent pentru comisionul băncii sau marjă (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar. O găsiți în Setări."
 landing:
   page_title: FIXXE — convertor valutar
   install_title: Moduri de instalare

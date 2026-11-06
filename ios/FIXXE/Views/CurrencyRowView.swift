@@ -90,9 +90,7 @@ struct CurrencyRowView: View {
                     .accessibilityIdentifier("name-\(code)")
                     .onTapGesture { activate() }
                 Spacer()
-                Text(vm.rateLine(code))
-                    .font(.caption2).foregroundColor(Color.textFaint)
-                    .onTapGesture { activate() }
+                rateLine
             }
         }
         .padding(.horizontal, 12).padding(.vertical, 10)
@@ -108,6 +106,23 @@ struct CurrencyRowView: View {
         // для пустых мест между ними.
         .onTapGesture { activate() }
         .onDrop(of: [UTType.text], delegate: RowDropDelegate(target: code, dragged: $dragged, vm: vm))
+    }
+
+    /// Строка курса. С поправкой — фиолетовая и со значком «%»: даже по
+    /// обрезанному снимку одного списка должно быть видно, что курс пересчитан.
+    private var rateLine: some View {
+        let line = vm.rateLine(code)
+        let adj = vm.isAdjusted(code) && !line.isEmpty
+        return HStack(spacing: 4) {
+            if adj { PercentBadge(size: 12) }
+            Text(line)
+                .font(adj ? .caption2.weight(.medium) : .caption2)
+                .foregroundColor(adj ? Color.adjusted : Color.textFaint)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(adj ? "\(L10n.t("adjusted_short")): \(line)" : line)
+        .accessibilityIdentifier("rate-\(code)")
+        .onTapGesture { activate() }
     }
 
     /// Ручка перетаскивания — отдельная зона, как в Android-версии.
@@ -141,6 +156,7 @@ struct CurrencyRowView: View {
                 .keyboardType(.decimalPad)
                 .multilineTextAlignment(.trailing)
                 .font(.title3.bold())
+                .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
                 .frame(width: 130)
                 .focused(focusedCode, equals: code)
                 .accessibilityIdentifier("amount-\(code)")
@@ -176,6 +192,7 @@ struct CurrencyRowView: View {
         } else {
             Text(SmartFormat.amount(vm.converted(code), decimals: vm.decimals, grouping: vm.grouping))
                 .font(.title3.bold())
+                .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
                 .lineLimit(1).minimumScaleFactor(0.5)   // длинная сумма ужимается, а не обрезается
                 .frame(width: 130, alignment: .trailing)
                 .accessibilityIdentifier("amount-\(code)")

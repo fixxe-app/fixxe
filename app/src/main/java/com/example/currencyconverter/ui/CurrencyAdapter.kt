@@ -10,10 +10,13 @@ import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.currencyconverter.R
 import com.example.currencyconverter.databinding.ItemCurrencyBinding
 
 class CurrencyAdapter(
     private val onAmountChanged: (currency: String, amount: Double) -> Unit,
+    /** Курсор встал в строку — ввода ещё не было. */
+    private val onFocused: (currency: String) -> Unit,
     private val onDeleteClick: (currency: String) -> Unit,
     /** Нажали «Готово» на клавиатуре — экран её закрывает. */
     private val onDone: () -> Unit = {}
@@ -77,7 +80,6 @@ class CurrencyAdapter(
     inner class ViewHolder(private val b: ItemCurrencyBinding) : RecyclerView.ViewHolder(b.root) {
 
         private var currentCode = ""
-        private var currentAmount = 0.0
         private var textWatcher: TextWatcher? = null
 
         init {
@@ -89,11 +91,9 @@ class CurrencyAdapter(
                 if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) { onDone(); true } else false
             }
             b.etAmount.setOnFocusChangeListener { _, hasFocus ->
-                if (hasFocus && currentCode.isNotEmpty()) {
-                    // Используем точное значение из модели, а не отображаемый текст
-                    // (ceil-округление отображения иначе накапливает ошибку при смене поля)
-                    onAmountChanged(currentCode, currentAmount)
-                }
+                // Сумму модель берёт у себя, а не из отображаемого текста
+                // (ceil-округление отображения иначе накапливает ошибку при смене поля)
+                if (hasFocus && currentCode.isNotEmpty()) onFocused(currentCode)
             }
 
             // Двойной клик по сумме → выделить ВСЁ число (в т.ч. дробную часть),
@@ -138,7 +138,6 @@ class CurrencyAdapter(
 
         fun bind(item: CurrencyItem, isActive: Boolean) {
             currentCode = item.code
-            currentAmount = item.amount
 
             b.tvFlag.text   = item.flag
             b.tvCode.text   = item.code
@@ -146,14 +145,29 @@ class CurrencyAdapter(
             b.tvSymbol.text = item.symbol
             b.tvRate.text   = item.rateText
 
+            // Пересчитано с поправкой: сумма и курс другим цветом, перед курсом
+            // метка «%» — она дублирует цвет (при дальтонизме фиолетовый близок
+            // к синему).
+            val ctx = b.root.context
+            val marked = item.adjusted && item.rateText.isNotEmpty()
+            b.etAmount.setTextColor(ctx.getColor(if (item.adjusted) R.color.adjusted else R.color.text_primary))
+            b.tvRate.setTextColor(ctx.getColor(if (marked) R.color.adjusted else R.color.text_tertiary))
+            b.tvAdjustBadge.visibility = if (marked) android.view.View.VISIBLE else android.view.View.GONE
+            b.tvRate.contentDescription =
+                if (marked) ctx.getString(R.string.adjusted_short) + ": " + item.rateText else null
+
             b.card.strokeWidth = if (isActive) 3 else 0
             // цвет акцента из темы: зашитый светло-синий не менялся в тёмной теме
-            b.card.strokeColor = if (isActive) b.root.context.getColor(com.example.currencyconverter.R.color.accent) else 0x00000000
+            b.card.strokeColor = if (isActive) b.root.context.getColor(R.color.accent) else 0x00000000
 
             // Не перезаписываем только поле, которое СЕЙЧАС в фокусе (живой ввод).
             // Активную валюту без фокуса тоже переформатируем — иначе при смене
             // точности её строка не обновляется.
+            // Исключение — строка с курсором при включённой поправке: пока в ней
+            // ничего не набрали, она не база, и её число пересчитывается вместе
+            // с остальными (сменили процент, пришли свежие курсы).
             if (!b.etAmount.hasFocus()) setAmountSilently(fmtAmount(item.amount))
+            else if (item.adjusted && setAmountSilently(fmtAmount(item.amount))) b.etAmount.selectAll()
 
             textWatcher?.let { b.etAmount.removeTextChangedListener(it) }
             textWatcher = object : TextWatcher {
@@ -168,10 +182,13 @@ class CurrencyAdapter(
             b.btnDelete.setOnClickListener { onDeleteClick(item.code) }
         }
 
-        private fun setAmountSilently(text: String) {
+        /** true — текст в поле действительно сменился. */
+        private fun setAmountSilently(text: String): Boolean {
+            val changed = b.etAmount.text.toString() != text
             textWatcher?.let { b.etAmount.removeTextChangedListener(it) }
-            if (b.etAmount.text.toString() != text) b.etAmount.setText(text)
+            if (changed) b.etAmount.setText(text)
             textWatcher?.let { b.etAmount.addTextChangedListener(it) }
+            return changed
         }
 
         // Умное округление вверх: выбранная точность — минимум, но если она

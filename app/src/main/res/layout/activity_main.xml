@@ -141,6 +141,96 @@
             android:visibility="gone" />
     </RelativeLayout>
 
+    <!-- Поправка к курсу включена. Полосу нельзя закрыть, пока процент не ноль:
+         пересчитанный курс не должны принять за рыночный. Самого процента здесь
+         нет. Нажатие открывает настройку поправки. -->
+    <LinearLayout
+        android:id="@+id/adjustBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:background="@color/adjusted_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/bg_adjust_badge"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:importantForAccessibility="no"
+            android:text="%"
+            android:textColor="@color/on_adjusted"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAdjustBanner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:accessibilityLiveRegion="polite"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/adjusted_rates"
+            android:textColor="@color/adjusted"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:text="›"
+            android:textColor="@color/adjusted"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Поправку сбросили по сроку — об этом сообщаем, цифры молча не меняем -->
+    <LinearLayout
+        android:id="@+id/adjustNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:background="@color/surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/adjust_reset_notice"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btnAdjustUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="@string/adjust_undo"
+            android:textColor="@color/accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground" />
+    </LinearLayout>
+
     <!-- Список валют -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

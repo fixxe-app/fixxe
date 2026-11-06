@@ -19,4 +19,8 @@
     <!-- строка статуса: офлайн и устаревшие курсы -->
     <color name="status_offline">#BCAAA4</color>
     <color name="status_stale">#FF8A65</color>
+    <!-- «с поправкой» -->
+    <color name="adjusted">#CE93D8</color>
+    <color name="adjusted_bg">#3A2348</color>
+    <color name="on_adjusted">#0B0B0B</color>
 </resources>

@@ -59,4 +59,15 @@
     <string name="group_none">Ingen — 1234.56</string>
     <string name="group_space">Mellomrom — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
+    <string name="adjust_title">Kursjustering</string>
+    <string name="setting_adjust">Kursjustering:  %1$s</string>
+    <string name="adjust_off">Av</string>
+    <string name="adjusted_rates">Justerte kurser</string>
+    <string name="adjusted_short">Justert</string>
+    <string name="adjust_info">Beløp og kurser på skjermen er endret med justeringen din (%1$s) og er ikke middelkurser. De bygger på kildens middelkurs.</string>
+    <string name="adjust_custom">Egen verdi</string>
+    <string name="adjust_keep">Alltid på</string>
+    <string name="adjust_keep_hint">Ellers tilbakestilles den etter 4 timer uten bruk.</string>
+    <string name="adjust_reset_notice">Justering tilbakestilt, kursene er igjen middelkurser</string>
+    <string name="adjust_undo">Gjenopprett</string>
 </resources>

@@ -59,4 +59,15 @@
     <string name="group_none">无 — 1234.56</string>
     <string name="group_space">空格 — 1 234.56</string>
     <string name="group_comma">逗号 — 1,234.56</string>
+    <string name="adjust_title">汇率调整</string>
+    <string name="setting_adjust">汇率调整：  %1$s</string>
+    <string name="adjust_off">关闭</string>
+    <string name="adjusted_rates">已调整汇率</string>
+    <string name="adjusted_short">已调整</string>
+    <string name="adjust_info">屏幕上的金额和汇率已按您的调整（%1$s）更改，不是中间市场汇率。其基础是来源的中间市场汇率。</string>
+    <string name="adjust_custom">自定义值</string>
+    <string name="adjust_keep">始终开启</string>
+    <string name="adjust_keep_hint">否则在 4 小时未使用后重置。</string>
+    <string name="adjust_reset_notice">调整已重置，汇率恢复为市场汇率</string>
+    <string name="adjust_undo">恢复</string>
 </resources>

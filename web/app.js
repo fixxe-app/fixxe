@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.65';
+const APP_VERSION = '1.66';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -35,6 +35,48 @@ let lang = store.get('lang', null);
 let allRates = {};
 let activeCurrency = displayCurrencies[0] || 'EUR';
 let activeAmount = 1;
+// Базовая строка — та, в которой последний раз ввели число; activeAmount — её
+// сумма, все остальные считаются от неё. Без поправки это всегда строка с
+// курсором (activeCurrency). С поправкой переход на другую строку базу не
+// меняет: иначе процент прибавлялся бы при каждом переходе и числа уползали бы сами.
+let baseCurrency = activeCurrency;
+
+/* ---------- Поправка к курсу ---------- */
+// Процент со знаком, на который изменены все пересчитанные суммы и строки
+// курса: +1.5 — «заплачу больше», −1.5 — «получу меньше», 0 — выключено.
+// Так сразу виден результат с учётом комиссии банка, маржи или потерь на переводе.
+const ADJUST_RESET_MS = 4*60*60*1000;   // столько поправка живёт без использования
+function clampAdjust(p){
+  p = +p;
+  return Number.isFinite(p) ? Math.min(99.99, Math.max(-99.99, Math.round(p*100)/100)) : 0;
+}
+// «+1.5%», «−2%»: знак всегда явный, минус настоящий (U+2212), разделитель — точка
+function adjustLabel(p){
+  p = clampAdjust(p);
+  return (p < 0 ? '\u2212' : '+') + Math.abs(p).toFixed(2).replace(/\.?0+$/, '') + '%';
+}
+// Пора ли сбросить: не закреплена и приложением не пользовались дольше срока.
+// Привязка ко времени, а не к «следующему запуску»: вкладка и установленное
+// приложение живут неделями. Часы ушли назад — тоже сбрасываем: безопасное
+// состояние — рыночный курс.
+function shouldResetAdjust(pct, keep, leftAt, now){
+  if (!pct || keep) return false;
+  return now - leftAt > ADJUST_RESET_MS || now < leftAt;
+}
+let adjustPct = clampAdjust(store.get('adjust_pct', 0));
+let adjustKeep = !!store.get('adjust_keep', false);
+let adjustResetFrom = null;       // поправку только что сбросили: прежний процент — для «Вернуть»
+const adjusted = () => adjustPct !== 0;
+const adjustFactor = () => 1 + adjustPct/100;
+const isAdjusted = code => adjusted() && code !== baseCurrency;   // все строки, кроме базовой
+function markUsed(){ store.set('adjust_left_at', Date.now()); }
+function resetAdjustIfExpired(now){
+  if (!shouldResetAdjust(adjustPct, adjustKeep, store.get('adjust_left_at', 0), now ?? Date.now())) return false;
+  adjustResetFrom = adjustPct; adjustPct = 0; store.set('adjust_pct', 0);
+  activeCurrency = baseCurrency;
+  return true;
+}
+const adjustResetAtStart = resetAdjustIfExpired();   // давно не открывали — курсы снова рыночные
 let currentSource = '';
 let lastUpdated = '';
 let fromCache = false;   // данные из кэша (сеть недоступна)
@@ -350,7 +392,10 @@ function render(){
   // static labels
   $('#btnClear').textContent = t('clear');
   $('#btnAdd').textContent = t('add_currency');
-  $('#btnInfo').textContent = t('mid_market');
+  // с поправкой курсы уже не среднерыночные — подпись говорит правду
+  $('#btnInfo').textContent = adjusted() ? t('adjusted_rates') + ' ⓘ' : t('mid_market');
+  $('#btnInfo').classList.toggle('adj', adjusted());
+  drawAdjustStrip();
   { const a = attribution(); $('#attribution').textContent = a.text; $('#attribution').href = a.href; }
   $('#version').textContent = t('version', APP_VERSION);
   $('#badge').textContent = t('selected', displayCurrencies.length);
@@ -358,10 +403,10 @@ function render(){
     const el = $('#status');
     if (stale){
       setStatus(tidy(t('rates_stale', lastUpdated, shortSource(currentSource))));
-      el.style.color = '#D84315';           // устаревшие курсы — заметно
+      el.style.color = 'var(--stale)';      // устаревшие курсы — заметно
     } else if (fromCache){
       setStatus(tidy(t('rates_offline', lastUpdated, shortSource(currentSource))));
-      el.style.color = '#8D6E63';
+      el.style.color = 'var(--offline)';
     } else {
       setStatus(tidy(t('updated', lastUpdated, shortSource(currentSource))));
       el.style.color = '';
@@ -372,15 +417,13 @@ function render(){
   list.innerHTML = '';
   if (Object.keys(allRates).length === 0) return;
 
-  const activeRate = allRates[activeCurrency] || 1;
-  const amountInEur = activeRate ? activeAmount/activeRate : 0;
-  const pivot = allRates[activeCurrency] ? activeCurrency : 'EUR';
+  const pivot = allRates[baseCurrency] ? baseCurrency : 'EUR';
   const pivotRate = allRates[pivot] || 1;
 
   displayCurrencies.forEach(code => {
     const rInEur = allRates[code];
     if (rInEur === undefined) return;
-    const converted = amountInEur * rInEur;
+    const converted = amountIn(code);
     const isActive = code === activeCurrency;
 
     const card = document.createElement('div');
@@ -389,9 +432,7 @@ function render(){
 
     // У активной строки подписи нет: курс валюты к себе самой равен единице
     // и ничего не сообщает, а что в ней вводят — видно по рамке.
-    const rateText = (code === pivot)
-      ? ''
-      : `1 ${pivot} = ${fmtRate(rInEur/pivotRate)} ${code}`;
+    const rateText = rateTextFor(code, pivot, pivotRate);
 
     const r1 = document.createElement('div'); r1.className='row1';
     r1.innerHTML =
@@ -407,6 +448,7 @@ function render(){
     r2.innerHTML = `<span class="name">${cDisplayName(code)}</span><span class="rate">${rateText}</span>`;
 
     card.appendChild(r1); card.appendChild(r2);
+    markRate(card, r2.querySelector('.rate'), code, rateText);
 
     const input = r1.querySelector('.amount');
     if (!isActive) input.value = fmtAmount(converted);
@@ -415,7 +457,13 @@ function render(){
       // посчитан при создании строки и с тех пор мог устареть — recompute()
       // обновляет только показанное значение. Из-за этого клик по строке
       // пересчитывал всё от давно неактуального числа.
-      activeAmount = amountIn(code);   // считаем ДО смены активной валюты
+      // Без поправки строка с курсором сразу становится базой — как было
+      // всегда. С поправкой база остаётся прежней, пока в этой строке не
+      // наберут число: суммы при переходах не меняются.
+      if (!adjusted()){
+        activeAmount = amountIn(code);   // считаем ДО смены базы
+        baseCurrency = code;
+      }
       activeCurrency = code; input.select();
       markActive(code);
       // Клавиатура выезжает не мгновенно: подтягиваем строку, когда список
@@ -423,7 +471,8 @@ function render(){
       setTimeout(()=>card.scrollIntoView({block:'center', behavior:'smooth'}), 320);
     });
     input.addEventListener('input', ()=>{
-      activeCurrency = code; activeAmount = parseAmount(input.value);
+      activeCurrency = code; baseCurrency = code;      // настоящий ввод: эта строка теперь база
+      activeAmount = parseAmount(input.value);
       recompute();
     });
     r1.querySelector('.del').addEventListener('click', e=>{ e.stopPropagation(); confirmDelete(code); });
@@ -462,25 +511,36 @@ if (window.visualViewport){
 // значение округлено, и перенос его в расчёт сдвигал бы суммы при каждом
 // переключении строк.
 function amountIn(code){
-  const rate = allRates[activeCurrency] || 1;
+  if (code === baseCurrency) return activeAmount;       // у базовой — ровно то, что ввели
+  const rate = allRates[baseCurrency] || 1;
   const inEur = rate ? activeAmount / rate : 0;
-  return inEur * (allRates[code] ?? 0);
+  return inEur * (allRates[code] ?? 0) * adjustFactor();
+}
+// Строка курса под суммой. С поправкой — помечается и для экранного диктора.
+function rateTextFor(code, pivot, pivotRate){
+  return (code === pivot) ? '' : `1 ${pivot} = ${fmtRate(allRates[code]/pivotRate*adjustFactor())} ${code}`;
+}
+function markRate(card, rate, code, text){
+  const adj = isAdjusted(code);
+  card.classList.toggle('adj', adj);
+  if (adj && text) rate.setAttribute('aria-label', `${t('adjusted_short')}: ${text}`);
+  else rate.removeAttribute('aria-label');
 }
 
 // Update only amounts (не трогаем поле в фокусе) — при вводе
 function recompute(){
-  const activeRate = allRates[activeCurrency] || 1;
-  const amountInEur = activeRate ? activeAmount/activeRate : 0;
-  const pivot = allRates[activeCurrency] ? activeCurrency : 'EUR';
+  const pivot = allRates[baseCurrency] ? baseCurrency : 'EUR';
   const pivotRate = allRates[pivot] || 1;
   document.querySelectorAll('.card').forEach(card=>{
     const code = card.dataset.code;
     const rInEur = allRates[code]; if(rInEur===undefined) return;
-    const conv = amountInEur * rInEur;
+    const conv = amountIn(code);
     const input = card.querySelector('.amount');
     if (document.activeElement !== input) input.value = fmtAmount(conv);
     const rate = card.querySelector('.rate');
-    rate.textContent = (code===pivot) ? '' : `1 ${pivot} = ${fmtRate(rInEur/pivotRate)} ${code}`;
+    const text = rateTextFor(code, pivot, pivotRate);
+    rate.textContent = text;
+    markRate(card, rate, code, text);
     card.classList.toggle('active', code===activeCurrency);
   });
 }
@@ -534,12 +594,15 @@ function confirmDelete(code){
   $('#modal-root [data-x]').onclick = closeModal;
   $('#modal-root [data-ok]').onclick = ()=>{
     displayCurrencies = displayCurrencies.filter(c=>c!==code);
-    if (activeCurrency===code){
-      // Сумму переводим в новую валюту, а не переносим как есть:
-      // иначе 1000 JPY после удаления JPY становились 1000 EUR.
+    if (baseCurrency===code){
+      // Удалили базовую строку: базой становится первая — с той суммой, что
+      // в ней показана. Сумму переводим, а не переносим как есть: иначе
+      // 1000 JPY после удаления JPY становились 1000 EUR.
       const next = displayCurrencies[0];
       activeAmount = amountIn(next);
-      activeCurrency = next;
+      baseCurrency = next; activeCurrency = next;
+    } else if (activeCurrency===code){
+      activeCurrency = baseCurrency;     // удалили строку с курсором, база цела
     }
     store.set('currencies', displayCurrencies); closeModal(); render();
   };
@@ -556,9 +619,10 @@ function confirmClear(){
 }
 
 function clearAll(){
+  baseCurrency = activeCurrency;
   activeAmount = 0;
   if(document.activeElement) document.activeElement.blur();
-  document.querySelectorAll('.card .amount').forEach(i=> i.value = fmtAmount(0));
+  recompute();      // нули во всех строках и метки поправки — от новой базы
   document.querySelectorAll('.card').forEach(c=> c.classList.remove('active'));
 }
 
@@ -641,12 +705,19 @@ function confirmSwitch(code, srcIdx){
 }
 
 function showInfo(){
+  // с поправкой справка начинается с предупреждения; здесь процент уместен
+  const adj = adjusted()
+    ? `<div class="adjust-info"><span class="pct" aria-hidden="true">%</span><div>${t('adjust_info', `<span dir="ltr">${adjustLabel(adjustPct)}</span>`)}`+
+      `<br><button class="link" data-adj>${t('adjust_title')}</button></div></div>`
+    : '';
   modal(`<div class="modal">
     <h3>${t('source_info_title')}</h3>
+    ${adj}
     <div class="msg">${t('source_info_message')}</div>
     <div class="actions"><button data-x>${t('ok')}</button></div>
   </div>`);
   $('#modal-root [data-x]').onclick = closeModal;
+  const change = $('#modal-root [data-adj]'); if (change) change.onclick = showAdjust;
 }
 
 function sourceOptions(){ return [t('source_auto'), ...SOURCE_META.map(s => s.name)]; }
@@ -666,6 +737,7 @@ function showSettings(){
       <button class="choice" data-i="1">${t('setting_precision', dec)}</button>
       <button class="choice" data-i="2">${t('setting_grouping', grp)}</button>
       <button class="choice" data-i="3">${t('setting_source', src)}</button>
+      <button class="choice" data-i="5">${t('setting_adjust', adjusted() ? `<span dir="ltr">${adjustLabel(adjustPct)}</span>` : t('adjust_off'))}</button>
       <button class="choice" data-i="4">${t('setting_language', langLabel)}</button>
     </div>
     <div class="actions"><button data-x>${t('close')}</button></div>
@@ -676,6 +748,69 @@ function showSettings(){
   m.querySelector('[data-i="2"]').onclick = showGrouping;
   m.querySelector('[data-i="3"]').onclick = showSource;
   m.querySelector('[data-i="4"]').onclick = showLanguage;
+  m.querySelector('[data-i="5"]').onclick = showAdjust;
+}
+
+/* ---------- Поправка к курсу: полоса, окно настройки, сброс ---------- */
+// Полоса под строкой бренда. Пока поправка включена, закрыть её нельзя:
+// человек не должен принять пересчитанный курс за рыночный. Сам процент здесь
+// не показывается. После автоматического сброса на этом месте — сообщение
+// с «Вернуть»: менять цифры молча нельзя.
+function drawAdjustStrip(){
+  const b = $('#adjustBanner'), n = $('#adjustNotice');
+  b.hidden = !adjusted();
+  $('#adjustBannerText').textContent = t('adjusted_rates');
+  n.hidden = adjusted() || adjustResetFrom === null;
+  $('#adjustNoticeText').textContent = t('adjust_reset_notice');
+  $('#adjustUndo').textContent = t('adjust_undo');
+}
+function setAdjust(p){
+  p = clampAdjust(p); adjustResetFrom = null;
+  if (p !== adjustPct){
+    activeCurrency = baseCurrency;     // курсор — на базовую строку: её число не пересчитано
+    adjustPct = p; store.set('adjust_pct', p);
+    markUsed();                        // 4 часа считаются от последнего использования
+  }
+  render();
+}
+function noticeAdjustReset(){
+  const from = adjustResetFrom; render();
+  setTimeout(()=>{ if (adjustResetFrom === from){ adjustResetFrom = null; drawAdjustStrip(); } }, 8000);
+}
+const ADJUST_PRESETS = [0.5, 1, 1.5, 2, 3, 5];
+// Окно не закрывается по выбору строки, как остальные: иначе до галочки
+// «Действует постоянно» было бы не добраться.
+function showAdjust(){
+  let neg = adjustPct < 0;
+  const draw = ()=>{
+    const a = Math.abs(adjustPct), custom = a !== 0 && !ADJUST_PRESETS.includes(a);
+    const radio = on => `<span class="radio">${on?'◉':'○'}</span>`;
+    const m = modal(`<div class="modal adjust-modal">
+      <h3>${t('adjust_title')}${adjusted()?` <span class="adj-value" dir="ltr">${adjustLabel(adjustPct)}</span>`:''}</h3>
+      <div class="sign" role="group"><button data-sign="+" class="${neg?'':'on'}" aria-pressed="${!neg}">+</button>`+
+      `<button data-sign="-" class="${neg?'on':''}" aria-pressed="${neg}">\u2212</button></div>
+      <div class="list-choice">
+        <button class="choice ${!adjusted()?'sel':''}" data-p="0">${radio(!adjusted())}${t('adjust_off')}</button>
+        ${ADJUST_PRESETS.map(p=>`<button class="choice ${a===p?'sel':''}" data-p="${p}">${radio(a===p)}<span dir="ltr">${adjustLabel(neg?-p:p)}</span></button>`).join('')}
+        <label class="choice custom ${custom?'sel':''}">${radio(custom)}<span>${t('adjust_custom')}</span>`+
+        `<input id="adjustCustom" inputmode="decimal" placeholder="0.00" value="${custom?a:''}" aria-label="${t('adjust_custom')}"><span>%</span></label>
+      </div>
+      <label class="keep"><input type="checkbox" id="adjustKeep" ${adjustKeep?'checked':''}><span>${t('adjust_keep')}</span></label>
+      <div class="hint">${t('adjust_keep_hint')}</div>
+      <div class="actions"><button data-x>${t('close')}</button></div>
+    </div>`);
+    m.querySelector('[data-x]').onclick = closeModal;
+    m.querySelectorAll('[data-sign]').forEach(b=> b.onclick = ()=>{
+      neg = b.dataset.sign === '-';
+      if (adjusted()) setAdjust(neg ? -Math.abs(adjustPct) : Math.abs(adjustPct));
+      draw();
+    });
+    m.querySelectorAll('[data-p]').forEach(b=> b.onclick = ()=>{ const p = +b.dataset.p; setAdjust(neg ? -p : p); draw(); });
+    const inp = m.querySelector('#adjustCustom');
+    inp.addEventListener('change', ()=>{ const v = parseAmount(inp.value); if (v > 0){ setAdjust(neg ? -v : v); draw(); } });
+    m.querySelector('#adjustKeep').onchange = e=>{ adjustKeep = e.target.checked; store.set('adjust_keep', adjustKeep); };
+  };
+  draw();
 }
 
 function choiceList(title, items, checkedIdx, onPick){
@@ -729,6 +864,8 @@ $('#btnRefresh').onclick = () => refresh();
 $('#btnClear').onclick = confirmClear;
 $('#btnAdd').onclick = showAdd;
 $('#btnInfo').onclick = showInfo;
+$('#adjustBanner').onclick = showAdjust;
+$('#adjustUndo').onclick = ()=>{ if (adjustResetFrom !== null) setAdjust(adjustResetFrom); };
 $('#btnSettings').onclick = showSettings;
 
 applyTheme();
@@ -740,7 +877,13 @@ showCached() && render();   // мгновенный старт с последн
 refresh();
 loadSourceCodes();   // подтягиваем списки валют всех источников (для значков в поиске)
 setInterval(() => refresh(), 30*60*1000);
-document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) refresh(); });
+document.addEventListener('visibilitychange', ()=>{
+  if (document.hidden){ markUsed(); return; }      // отсюда считаются 4 часа до сброса поправки
+  if (resetAdjustIfExpired()) noticeAdjustReset();
+  refresh();
+});
+window.addEventListener('pagehide', markUsed);
+if (adjustResetAtStart) noticeAdjustReset();
 
 /* ---------- PWA ---------- */
 if ('serviceWorker' in navigator){

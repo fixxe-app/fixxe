@@ -59,4 +59,15 @@
     <string name="group_none">Asnjë — 1234.56</string>
     <string name="group_space">Hapësirë — 1 234.56</string>
     <string name="group_comma">Presje — 1,234.56</string>
+    <string name="adjust_title">Rregullimi i kursit</string>
+    <string name="setting_adjust">Rregullimi i kursit:  %1$s</string>
+    <string name="adjust_off">Fikur</string>
+    <string name="adjusted_rates">Kurse të rregulluara</string>
+    <string name="adjusted_short">I rregulluar</string>
+    <string name="adjust_info">Shumat dhe kurset në ekran janë ndryshuar me rregullimin tuaj (%1$s) dhe nuk janë kurse mesatare të tregut. Bazohen në kursin mesatar të burimit.</string>
+    <string name="adjust_custom">Vlerë e personalizuar</string>
+    <string name="adjust_keep">Gjithmonë aktiv</string>
+    <string name="adjust_keep_hint">Përndryshe rivendoset pas 4 orësh pa përdorim.</string>
+    <string name="adjust_reset_notice">Rregullimi u rivendos, kurset janë sërish të tregut</string>
+    <string name="adjust_undo">Rikthe</string>
 </resources>

@@ -59,4 +59,15 @@
     <string name="group_none">Puudub — 1234.56</string>
     <string name="group_space">Tühik — 1 234.56</string>
     <string name="group_comma">Koma — 1,234.56</string>
+    <string name="adjust_title">Kursi korrektsioon</string>
+    <string name="setting_adjust">Kursi korrektsioon:  %1$s</string>
+    <string name="adjust_off">Väljas</string>
+    <string name="adjusted_rates">Korrigeeritud kursid</string>
+    <string name="adjusted_short">Korrigeeritud</string>
+    <string name="adjust_info">Ekraanil olevaid summasid ja kursse on muudetud teie korrektsiooni (%1$s) võrra ning need ei ole keskkursid. Aluseks on allika keskkurss.</string>
+    <string name="adjust_custom">Oma väärtus</string>
+    <string name="adjust_keep">Alati sees</string>
+    <string name="adjust_keep_hint">Muidu lähtestatakse see pärast 4 tundi kasutamata olekut.</string>
+    <string name="adjust_reset_notice">Korrektsioon lähtestatud, kursid on taas keskkursid</string>
+    <string name="adjust_undo">Taasta</string>
 </resources>

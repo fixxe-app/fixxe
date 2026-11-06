@@ -21,6 +21,11 @@ extension Color {
 
     // Вспомогательный текст не бледнее 4.5:1 к фону, значки — 3:1 (WCAG AA;
     // проверка — tools/check-contrast.py). Раньше строка курса была 2.3:1.
+    // «С поправкой»: один цвет — одно значение. Оранжевый и коричневый заняты
+    // статусами «устарело» и «офлайн», синий — активной строкой, зелёный — логотипом.
+    static let adjusted   = adaptive("6A1B9A", "CE93D8")   // пересчитанные суммы, строка курса, значок «%»
+    static let adjustedBg = adaptive("EBD9F0", "3A2348")   // полоса «Курсы с поправкой»
+    static let onAdjusted = adaptive("FFFFFF", "0B0B0B")   // знак «%» на значке
     static let brandBlue  = adaptive("1565C0", "64B5F6")
     static let brandGreen = adaptive("2E7D32", "81C784")
     static let bgGray     = adaptive("F2F3F5", "121212")   // фон экрана
@@ -84,6 +89,11 @@ enum ScreenshotArgs {
         guard let i = args.firstIndex(of: "-screen-source"), i + 1 < args.count else { return -1 }
         return Int(args[i + 1]) ?? -1
     }
+    /// поправка к курсу в процентах для тестов и кадров (nil = как сохранено)
+    static var adjust: Double? {
+        guard let i = args.firstIndex(of: "-screen-adjust"), i + 1 < args.count else { return nil }
+        return Double(args[i + 1])
+    }
 #else
     static var openAdd: Bool { false }
     static var openSettings: Bool { false }
@@ -93,6 +103,7 @@ enum ScreenshotArgs {
     static var initialFilter: Int { -1 }
     static var currencies: [String] { [] }
     static var sourceMode: Int { -1 }
+    static var adjust: Double? { nil }
     static var theme: Int { -1 }
     static var lang: String { "" }
 #endif

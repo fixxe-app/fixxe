@@ -59,4 +59,15 @@
     <string name="group_none">Keine — 1234.56</string>
     <string name="group_space">Leerzeichen — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
+    <string name="adjust_title">Kursanpassung</string>
+    <string name="setting_adjust">Kursanpassung:  %1$s</string>
+    <string name="adjust_off">Aus</string>
+    <string name="adjusted_rates">Angepasste Kurse</string>
+    <string name="adjusted_short">Angepasst</string>
+    <string name="adjust_info">Beträge und Kurse auf dem Bildschirm sind um Ihre Anpassung (%1$s) verändert und keine Mittelkurse. Grundlage ist der Mittelkurs der Quelle.</string>
+    <string name="adjust_custom">Eigener Wert</string>
+    <string name="adjust_keep">Dauerhaft aktiv</string>
+    <string name="adjust_keep_hint">Sonst wird sie nach 4 Stunden ohne Nutzung zurückgesetzt.</string>
+    <string name="adjust_reset_notice">Anpassung zurückgesetzt, Kurse sind wieder Mittelkurse</string>
+    <string name="adjust_undo">Wiederherstellen</string>
 </resources>

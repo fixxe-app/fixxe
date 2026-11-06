@@ -1,7 +1,7 @@
 title: "FIXXE – Valiutų skaičiuoklė"
 subtitle: Kursai iš penkių šaltinių
 short_description: Vidutiniai kursai iš 5 šaltinių, 300+ valiutų, veikia neprisijungus, be reklamų.
-keywords: valiuta,keitiklis,kursas,keitykla,pinigai,kelionė,forex,kripto,finansai,euras
+keywords: "valiuta,keitiklis,kursas,keitykla,pinigai,kelionė,forex,kripto,finansai,euras,fixer,fixe"
 promotional_text: Penki kursų šaltiniai su automatiniu perjungimu, kursai neprisijungus su įspėjimu dėl senumo ir protingas apvalinimas, nesugadinantis mažų sumų.
 description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiais vidutiniais rinkos kursais. Tai neutralus taškas tarp pasaulinių pirkimo ir pardavimo kainų, be bankų antkainių.
 
@@ -19,6 +19,9 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
 
 
   • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
+
+
+  • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu.
 
 
   • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
@@ -55,7 +58,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   Rates By Exchange Rate API.
 
   '
-whats_new: "Kursai dabar gyvi: FIXXE juos ima iš „Coinbase“, kur jie atnaujinami kas minutę, todėl skaičiai dieną seka rinką, o ne keičiasi kartą per parą. Kiti šaltiniai lieka atsargai."
+whats_new: "Nauja: kurso pataisa. Nustatykite procentą banko mokesčiui ar maržai (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti. Rasite nustatymuose."
 landing:
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai

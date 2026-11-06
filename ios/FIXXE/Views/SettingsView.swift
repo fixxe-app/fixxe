@@ -77,6 +77,9 @@ struct SettingsView: View {
                         }
                     }
                 }
+                // Поправка к курсу — сразу после источника, а не в конце: ниже
+                // идут сорок строк языков, до последнего пункта пришлось бы листать
+                AdjustSection(vm: vm)
                 // Язык
                 Section(L10n.t("language_title")) {
                     Button {
@@ -125,11 +128,32 @@ struct SettingsView: View {
 
 struct SourceInfoView: View {
     @Environment(\.dismiss) private var dismiss
+    /// «+1.5%», если включена поправка: справка тогда начинается с предупреждения
+    var adjustLabel: String? = nil
+    var onChangeAdjust: (() -> Void)? = nil
 
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if let adjustLabel = adjustLabel {
+                        VStack(alignment: .leading, spacing: 10) {
+                            HStack(alignment: .top, spacing: 8) {
+                                PercentBadge(size: 18)
+                                Text(L10n.t("adjust_info", adjustLabel))
+                                    .font(.callout).foregroundColor(.adjusted)
+                            }
+                            if let change = onChangeAdjust {
+                                Button(L10n.t("adjust_title")) { change() }
+                                    .font(.callout.weight(.semibold))
+                                    .accessibilityIdentifier("info-change-adjust")
+                            }
+                        }
+                        .padding(12)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.adjustedBg)
+                        .cornerRadius(10)
+                    }
                     Text(L10n.t("source_info_message"))
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)

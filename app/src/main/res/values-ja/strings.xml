@@ -59,4 +59,15 @@
     <string name="group_none">なし — 1234.56</string>
     <string name="group_space">スペース — 1 234.56</string>
     <string name="group_comma">カンマ — 1,234.56</string>
+    <string name="adjust_title">レート調整</string>
+    <string name="setting_adjust">レート調整:  %1$s</string>
+    <string name="adjust_off">オフ</string>
+    <string name="adjusted_rates">調整済みレート</string>
+    <string name="adjusted_short">調整済み</string>
+    <string name="adjust_info">画面の金額とレートは調整（%1$s）を加えた値で、仲値ではありません。元になるのは情報源の仲値レートです。</string>
+    <string name="adjust_custom">カスタム値</string>
+    <string name="adjust_keep">常にオン</string>
+    <string name="adjust_keep_hint">オフの場合、4時間使用しないとリセットされます。</string>
+    <string name="adjust_reset_notice">調整をリセットしました。レートは仲値に戻りました</string>
+    <string name="adjust_undo">元に戻す</string>
 </resources>
