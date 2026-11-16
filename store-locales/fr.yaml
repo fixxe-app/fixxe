@@ -9,19 +9,19 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   CE QUI DISTINGUE FIXXE
 
 
-  • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+  • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
   • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
 
 
-  • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro.
+  • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro. C''est vous qui choisissez l''arrondi : vers le haut, pour que le montant affiché ne soit jamais inférieur au montant réel et que l''argent suffise toujours, ou au plus proche.
 
 
   • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
-  • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+  • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
 
 
   • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
@@ -48,6 +48,10 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
 
   • Précision : nombres entiers, 1, 2 ou 4 décimales
 
+  • Séparateur de milliers : espace ou virgule, 1 234.56 ou 1,234.56
+
+  • Thème clair ou sombre, ou comme le système
+
   • 40 langues, anglais par défaut, avec une option pour suivre la langue de l''appareil — mises en page de droite à gauche comprises
 
   • Téléphone, tablette et web : la même application sur iPhone, iPad, Android et en application web à installer sur l''écran d''accueil
@@ -58,7 +62,7 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nouveau : ajustement du taux. Indiquez un pourcentage pour les frais bancaires ou la marge (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés. À retrouver dans les Paramètres."
+whats_new: "Nouveau look : un style unique pour toutes les icônes et tous les libellés. L'heure et la source du taux sont désormais en haut — touchez la ligne pour les détails. Nouveau dans les Paramètres : arrondir les montants vers le haut ou au plus proche. Les Paramètres tiennent dans une seule fenêtre claire, avec le numéro de version en bas."
 landing:
   page_title: FIXXE — convertisseur de devises
   install_title: Façons d'installer

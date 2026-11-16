@@ -9,19 +9,19 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
   MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-  • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+  • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
 
 
   • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
 
 
-  • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli.
+  • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli. Ümardamise viisi valite ise: üles, et näidatud summa poleks kunagi tegelikust väiksem ja raha jätkuks alati, või lähimale.
 
 
   • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
 
 
-  • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi.
+  • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi. Kui te ei hoia seda alati sees, lülitub see pärast nelja tundi kasutamata olekut ise välja, nii et unustatud teenustasu ei moonuta kunagi homseid numbreid.
 
 
   • Reklaamivaba. Kontota. Jälgimiseta. Ainus luba on internetiühendus; teie loend, selle järjekord ja seaded ei lahku kunagi seadmest.
@@ -48,6 +48,10 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
 
   • Täpsus: täisarvud, 1, 2 või 4 kohta pärast koma
 
+  • Tuhandeliste eraldaja: tühik või koma, 1 234.56 või 1,234.56
+
+  • Hele või tume teema või nagu süsteemis
+
   • 40 keelt, vaikimisi inglise keel, võimalusega järgida seadme keelt — koos paremalt vasakule paigutustega
 
   • Telefon, tahvel ja veeb: sama rakendus iPhone''is, iPadis, Androidis ja veebirakendusena, mille saab avakuvale panna
@@ -58,7 +62,7 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
   Rates By Exchange Rate API.
 
   '
-whats_new: "Uus: kursi korrektsioon. Määrake protsent panga teenustasu või marginaali jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud. Leiate selle seadetest."
+whats_new: "Uus välimus: kõik ikoonid ja sildid ühes stiilis. Kursi aeg ja allikas on nüüd üleval — puudutage rida üksikasjade nägemiseks. Seadetes uus: summade ümardamine üles või lähimale. Seaded on üks selge aken, versiooninumber on all."
 landing:
   page_title: FIXXE — valuutakalkulaator
   install_title: Paigaldusviisid

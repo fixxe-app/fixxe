@@ -81,7 +81,7 @@ frame.addEventListener('load', async () => {
     ev(`currentSource = 'ExchangeRate-API'`);
     eq(w.attribution().text, 'Rates By Exchange Rate API', 'подпись ExchangeRate-API');
     ev(`currentSource = 'Coinbase'`);
-    eq([w.attribution().text, w.attribution().href], ['Source: Coinbase', 'https://www.coinbase.com'], 'подпись Coinbase');
+    eq(w.attribution(), null, 'у Coinbase подписи внизу нет');
 
     out.textContent = 'PASS';
   } catch (e) {

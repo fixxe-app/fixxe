@@ -9,19 +9,19 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   MIBEN MÁS A FIXXE
 
 
-  • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+  • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
 
 
   • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
 
 
-  • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára.
+  • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára. Ön választja meg, hogyan kerekedjenek az összegek: felfelé, így a kijelzett összeg sosem kevesebb a valósnál, és a pénz mindig elég lesz, vagy a legközelebbire.
 
 
   • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
 
 
-  • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal.
+  • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal. Ha nem hagyja mindig bekapcsolva, négy óra használat nélkül magától kikapcsol, így egy elfelejtett díj sosem torzítja a holnapi számokat.
 
 
   • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
@@ -48,6 +48,10 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
 
   • Pontosság: egész számok, 1, 2 vagy 4 tizedesjegy
 
+  • Ezres tagolás szóközzel vagy vesszővel: 1 234.56 vagy 1,234.56
+
+  • Világos vagy sötét téma, illetve a rendszer szerint
+
   • 40 nyelv, alapértelmezetten angol, a készülék nyelvének követésével is — a jobbról balra írt elrendezésekkel együtt
 
   • Telefon, táblagép és web: ugyanaz az alkalmazás iPhone-on, iPaden, Androidon és webalkalmazásként, amelyet a kezdőképernyőre tehetsz
@@ -58,7 +62,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   Rates By Exchange Rate API.
 
   '
-whats_new: "Újdonság: árfolyam-korrekció. Adjon meg egy százalékot a banki díjra vagy árrésre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve. A Beállításokban található."
+whats_new: "Új megjelenés: egységes stílus minden ikonon és feliraton. Az árfolyam ideje és forrása mostantól felül látható — a részletekért koppintson a sorra. Újdonság a Beállításokban: összegek kerekítése felfelé vagy a legközelebbire. A Beállítások egyetlen áttekinthető ablak, alul a verziószámmal."
 landing:
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok

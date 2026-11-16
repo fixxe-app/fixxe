@@ -9,19 +9,19 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   WHY FIXXE IS DIFFERENT
 
 
-  • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+  • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
   • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
 
 
-  • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero.
+  • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero. You choose how amounts are rounded: up, so the shown amount is never less than the real one and the money is always enough, or to the nearest.
 
 
   • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
 
 
-  • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
+  • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
 
 
   • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -48,6 +48,10 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
 
   • Precision: whole numbers, 1, 2 or 4 decimals
 
+  • Digit grouping with a space or a comma: 1 234.56 or 1,234.56
+
+  • Light or dark theme, or follow the system
+
   • 40 languages, English by default, with an option to follow your device language — right-to-left layouts included
 
   • Phone, tablet and web: the same app on iPhone, iPad, Android and as a web app you can install to the home screen
@@ -58,7 +62,7 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   Rates By Exchange Rate API.
 
   '
-whats_new: "New: rate adjustment. Set a percentage for your bank's fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You'll find it in Settings."
+whats_new: "New look: one style for all icons and labels. The rate time and source are now at the top — tap the line for details. New in Settings: round amounts up or to the nearest. Settings are one clear window, with the version number at the bottom."
 landing:
   page_title: FIXXE — currency converter
   install_title: Ways to install

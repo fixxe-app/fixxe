@@ -45,19 +45,19 @@ locales:
       ما الذي يميز FIXXE
 
 
-      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها.
+      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها. تفضّل مصدرًا واحدًا؟ اختره في الإعدادات — وتبقى المصادر الأخرى احتياطًا.
 
 
       • يعمل دون اتصال — تبقى آخر الأسعار على جهازك، فيواصل التطبيق الحساب بلا شبكة. وإذا مضى على تلك الأسعار أكثر من يوم، يقولها صراحةً بدل أن يُظهرها وكأنها حديثة.
 
 
-      • تقريب ذكي — الدقة التي تختارها حدّ أدنى لا قيد: إذا كان التقريب سيشوّه المبلغ بأكثر من 2%، تُضاف خانات عشرية تلقائيًا. لا يتحول 0.94 فرنك سويسري إلى «1»، ولا تهبط المبالغ الصغيرة من العملات الرقمية إلى الصفر.
+      • تقريب ذكي — الدقة التي تختارها حدّ أدنى لا قيد: إذا كان التقريب سيشوّه المبلغ بأكثر من 2%، تُضاف خانات عشرية تلقائيًا. لا يتحول 0.94 فرنك سويسري إلى «1»، ولا تهبط المبالغ الصغيرة من العملات الرقمية إلى الصفر. وأنت تختار طريقة تقريب المبالغ: للأعلى، فلا يقلّ المبلغ المعروض أبدًا عن الحقيقي ويكفيك المال دائمًا، أو إلى الأقرب.
 
 
       • أساس متغيّر — تُحتسب الأسعار مقابل العملة التي تحرّرها، لا مقابل عملة ثابتة. بلا تنقّل ذهابًا وإيابًا.
 
 
-      • تعديل السعر — حدّد نسبة مئوية لعمولة البنك أو الهامش أو خسائر التحويل (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح، فلا تخلط بينها وبين سعر السوق.
+      • تعديل السعر — حدّد نسبة مئوية لعمولة البنك أو الهامش أو خسائر التحويل (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح، فلا تخلط بينها وبين سعر السوق. وما لم تجعله مفعَّلًا دائمًا، يتوقف تلقائيًا بعد أربع ساعات من عدم الاستخدام، فلا تشوّه عمولةٌ منسية أرقام الغد.
 
 
       • بلا إعلانات. بلا حسابات. بلا تتبّع. الإذن الوحيد هو الوصول إلى الإنترنت؛ وقائمتك وترتيبها وإعداداتك لا تغادر جهازك أبدًا.
@@ -84,6 +84,10 @@ locales:
 
       • الدقة: أعداد صحيحة أو 1 أو 2 أو 4 خانات عشرية
 
+      • فاصل الآلاف: مسافة أو فاصلة — ‎1 234.56‎ أو ‎1,234.56‎
+
+      • سمة فاتحة أو داكنة، أو حسب النظام
+
       • 40 لغة، الإنجليزية افتراضيًا، مع خيار اتباع لغة الجهاز — وتخطيطات من اليمين إلى اليسار
 
       • هاتف ولوحي وويب: التطبيق نفسه على iPhone وiPad وAndroid، وكتطبيق ويب تثبّته على الشاشة الرئيسية
@@ -103,19 +107,19 @@ locales:
       С КАКВО FIXXE Е РАЗЛИЧЕН
 
 
-      • Пет източника на курсове с автоматично превключване — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже.
+      • Пет източника на курсове с автоматично превключване — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже. Предпочитате един източник? Изберете го в настройките — останалите остават като резерв.
 
 
       • Работи офлайн — последните курсове остават на устройството, така че приложението смята и без връзка. А ако тези курсове са по-стари от денонощие, го казва направо, вместо да ги представя за актуални.
 
 
-      • Умно закръгляне — избраната точност е минимум, а не усмирителна риза: ако закръглянето би изкривило сумата с повече от 2%, знаците след десетичната запетая се добавят сами. 0,94 CHF никога не става „1", а малките суми в криптовалути никога не падат до нула.
+      • Умно закръгляне — избраната точност е минимум, а не усмирителна риза: ако закръглянето би изкривило сумата с повече от 2%, знаците след десетичната запетая се добавят сами. 0,94 CHF никога не става „1", а малките суми в криптовалути никога не падат до нула. Вие избирате как да се закръглят сумите: нагоре, за да не е показаната сума никога по-малка от реалната и парите винаги да стигат, или до най-близкото.
 
 
       • Динамична база — курсовете се преизчисляват спрямо валутата, която редактирате, а не спрямо фиксирана. Без превключване напред-назад.
 
 
-      • Корекция на курса — задайте процент за банкова комисиона, марж или загуби при превод (например +1,5%) и всички суми веднага показват реалния резултат. Преизчислените числа са ясно обозначени, за да не ги сбъркате с пазарния курс.
+      • Корекция на курса — задайте процент за банкова комисиона, марж или загуби при превод (например +1,5%) и всички суми веднага показват реалния резултат. Преизчислените числа са ясно обозначени, за да не ги сбъркате с пазарния курс. Ако не я оставите винаги включена, тя се изключва сама след четири часа без използване, така че забравена комисиона никога не изкривява утрешните числа.
 
 
       • Без реклами. Без профили. Без проследяване. Единственото разрешение е достъп до интернет; вашият списък, неговата подредба и настройките никога не напускат устройството.
@@ -142,6 +146,10 @@ locales:
 
       • Точност: цели числа, 1, 2 или 4 знака след запетаята
 
+      • Разделител на хилядите — интервал или запетая: 1 234.56 или 1,234.56
+
+      • Светла или тъмна тема, или като системата
+
       • 40 езика, английски по подразбиране, с опция да следва езика на устройството — включително подредби отдясно наляво
 
       • Телефон, таблет и уеб: същото приложение на iPhone, iPad, Android и като уеб приложение, което слагате на началния екран
@@ -161,19 +169,19 @@ locales:
       ČÍM SE FIXXE LIŠÍ
 
 
-      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
 
 
       • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
 
 
-      • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu.
+      • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu. Způsob zaokrouhlení volíte vy: nahoru, aby zobrazená částka nikdy nebyla nižší než skutečná a peníze vždy vystačily, nebo k nejbližšímu.
 
 
       • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
 
 
-      • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem.
+      • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem. Pokud ji nenecháte trvale zapnutou, po čtyřech hodinách bez použití se sama vypne, takže zapomenutý poplatek nikdy nezkreslí zítřejší čísla.
 
 
       • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
@@ -200,6 +208,10 @@ locales:
 
       • Přesnost: celá čísla, 1, 2 nebo 4 desetinná místa
 
+      • Oddělování tisíců mezerou nebo čárkou: 1 234.56 nebo 1,234.56
+
+      • Světlý nebo tmavý motiv, případně podle systému
+
       • 40 jazyků, výchozí angličtina, s možností řídit se jazykem zařízení — včetně rozložení zprava doleva
 
       • Telefon, tablet i web: stejná aplikace na iPhonu, iPadu, Androidu a jako webová aplikace, kterou si přidáte na plochu
@@ -219,19 +231,19 @@ locales:
       DET HER GØR FIXXE ANDERLEDES
 
 
-      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter.
+      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
 
 
       • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
 
 
-      • Smart afrunding — den præcision, du vælger, er et minimum, ikke en spændetrøje: ville afrundingen forvride beløbet med mere end 2%, kommer der decimaler til af sig selv. 0,94 CHF bliver aldrig til „1", og små kryptobeløb falder aldrig til nul.
+      • Smart afrunding — den præcision, du vælger, er et minimum, ikke en spændetrøje: ville afrundingen forvride beløbet med mere end 2%, kommer der decimaler til af sig selv. 0,94 CHF bliver aldrig til „1", og små kryptobeløb falder aldrig til nul. Du vælger selv, hvordan beløb afrundes: op, så det viste beløb aldrig er mindre end det reelle og pengene altid rækker, eller til nærmeste.
 
 
       • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
 
 
-      • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen.
+      • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen. Medmindre du har den slået altid til, slår den sig selv fra efter fire timer uden brug, så et glemt gebyr aldrig forvrider morgendagens tal.
 
 
       • Ingen reklamer. Ingen konti. Ingen sporing. Den eneste tilladelse er internetadgang; din liste, dens rækkefølge og dine indstillinger forlader aldrig enheden.
@@ -258,6 +270,10 @@ locales:
 
       • Præcision: hele tal, 1, 2 eller 4 decimaler
 
+      • Tusindtalsseparator med mellemrum eller komma: 1 234.56 eller 1,234.56
+
+      • Lyst eller mørkt tema, eller følg systemet
+
       • 40 sprog, engelsk som standard, med mulighed for at følge enhedens sprog — layout fra højre mod venstre inkluderet
 
       • Telefon, tablet og web: den samme app på iPhone, iPad, Android og som webapp, du kan lægge på hjemmeskærmen
@@ -277,19 +293,19 @@ locales:
       WAS FIXXE ANDERS MACHT
 
 
-      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
+      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
 
 
       • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
 
 
-      • Kluges Runden — die gewählte Genauigkeit ist ein Minimum, keine Zwangsjacke: Würde das Runden den Betrag um mehr als 2% verzerren, kommen automatisch weitere Nachkommastellen dazu. Aus 0,94 CHF wird nie „1“, und kleine Kryptobeträge fallen nie auf null.
+      • Kluges Runden — die gewählte Genauigkeit ist ein Minimum, keine Zwangsjacke: Würde das Runden den Betrag um mehr als 2% verzerren, kommen automatisch weitere Nachkommastellen dazu. Aus 0,94 CHF wird nie „1“, und kleine Kryptobeträge fallen nie auf null. Wie gerundet wird, bestimmen Sie: aufrunden, damit der angezeigte Betrag nie unter dem echten liegt und das Geld immer reicht, oder kaufmännisch runden.
 
 
       • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
 
 
-      • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln.
+      • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln. Sofern Sie sie nicht dauerhaft aktiv lassen, schaltet sie sich nach vier Stunden ohne Nutzung selbst ab, damit eine vergessene Gebühr nie die Zahlen von morgen verfälscht.
 
 
       • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
@@ -316,6 +332,10 @@ locales:
 
       • Genauigkeit: ganze Zahlen, 1, 2 oder 4 Nachkommastellen
 
+      • Tausendertrennzeichen: Leerzeichen oder Komma, 1 234.56 oder 1,234.56
+
+      • Helles oder dunkles Design oder wie das System
+
       • 40 Sprachen, Englisch als Standard, auf Wunsch der Gerätesprache folgend — auch mit Rechts-nach-links-Layouts
 
       • Telefon, Tablet und Web: dieselbe App auf iPhone, iPad, Android und als Web-App für den Startbildschirm
@@ -335,19 +355,19 @@ locales:
       ΤΙ ΚΑΝΕΙ ΤΟ FIXXE ΔΙΑΦΟΡΕΤΙΚΟ
 
 
-      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα.
+      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα. Προτιμάτε μία πηγή; Επιλέξτε τη στις Ρυθμίσεις — οι υπόλοιπες μένουν ως εφεδρεία.
 
 
       • Λειτουργεί εκτός σύνδεσης — οι τελευταίες ισοτιμίες μένουν στη συσκευή, οπότε η εφαρμογή συνεχίζει να υπολογίζει χωρίς δίκτυο. Κι αν αυτές οι ισοτιμίες είναι πάνω από μία ημέρα παλιές, το λέει καθαρά αντί να τις παρουσιάζει ως τρέχουσες.
 
 
-      • Έξυπνη στρογγυλοποίηση — η ακρίβεια που επιλέγετε είναι ελάχιστο όριο, όχι ζουρλομανδύας: αν η στρογγυλοποίηση αλλοίωνε το ποσό πάνω από 2%, τα δεκαδικά προστίθενται μόνα τους. Το 0,94 CHF δεν γίνεται ποτέ «1» και τα μικρά ποσά σε κρυπτονομίσματα δεν μηδενίζονται ποτέ.
+      • Έξυπνη στρογγυλοποίηση — η ακρίβεια που επιλέγετε είναι ελάχιστο όριο, όχι ζουρλομανδύας: αν η στρογγυλοποίηση αλλοίωνε το ποσό πάνω από 2%, τα δεκαδικά προστίθενται μόνα τους. Το 0,94 CHF δεν γίνεται ποτέ «1» και τα μικρά ποσά σε κρυπτονομίσματα δεν μηδενίζονται ποτέ. Εσείς επιλέγετε πώς στρογγυλοποιούνται τα ποσά: προς τα πάνω, ώστε το ποσό που εμφανίζεται να μην είναι ποτέ μικρότερο από το πραγματικό και τα χρήματα να φτάνουν πάντα, ή στο πλησιέστερο.
 
 
       • Δυναμική βάση — οι ισοτιμίες υπολογίζονται ως προς το νόμισμα που επεξεργάζεστε, όχι ως προς ένα σταθερό. Χωρίς συνεχείς εναλλαγές.
 
 
-      • Προσαρμογή ισοτιμίας — ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά, ώστε να μην τα μπερδέψετε με την ισοτιμία της αγοράς.
+      • Προσαρμογή ισοτιμίας — ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά, ώστε να μην τα μπερδέψετε με την ισοτιμία της αγοράς. Αν δεν την κρατήσετε πάντα ενεργή, απενεργοποιείται μόνη της μετά από τέσσερις ώρες χωρίς χρήση, ώστε μια ξεχασμένη προμήθεια να μην αλλοιώνει ποτέ τα αυριανά νούμερα.
 
 
       • Χωρίς διαφημίσεις. Χωρίς λογαριασμούς. Χωρίς παρακολούθηση. Η μόνη άδεια είναι η πρόσβαση στο διαδίκτυο· η λίστα σας, η σειρά της και οι ρυθμίσεις δεν φεύγουν ποτέ από τη συσκευή.
@@ -374,6 +394,10 @@ locales:
 
       • Ακρίβεια: ακέραιοι, 1, 2 ή 4 δεκαδικά
 
+      • Διαχωριστικό χιλιάδων με κενό ή κόμμα: 1 234.56 ή 1,234.56
+
+      • Φωτεινό ή σκοτεινό θέμα ή όπως το σύστημα
+
       • 40 γλώσσες, αγγλικά από προεπιλογή, με δυνατότητα να ακολουθεί τη γλώσσα της συσκευής — μαζί με διατάξεις από δεξιά προς τα αριστερά
 
       • Τηλέφωνο, tablet και web: η ίδια εφαρμογή σε iPhone, iPad, Android και ως web εφαρμογή που εγκαθιστάτε στην αρχική οθόνη
@@ -393,19 +417,19 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
 
 
-      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero.
+      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero. You choose how amounts are rounded: up, so the shown amount is never less than the real one and the money is always enough, or to the nearest.
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
 
 
-      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -431,6 +455,10 @@ locales:
       • Source-aware search: filter currencies by provider, see where each one is available, switch source in one tap
 
       • Precision: whole numbers, 1, 2 or 4 decimals
+
+      • Digit grouping with a space or a comma: 1 234.56 or 1,234.56
+
+      • Light or dark theme, or follow the system
 
       • 40 languages, English by default, with an option to follow your device language — right-to-left layouts included
 
@@ -451,19 +479,19 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
 
 
-      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero.
+      • Smart rounding — your chosen precision is a minimum, not a straitjacket: if rounding would distort the amount by more than 2%, extra decimals are added automatically. 0.94 CHF never becomes "1", and small crypto amounts never collapse to zero. You choose how amounts are rounded: up, so the shown amount is never less than the real one and the money is always enough, or to the nearest.
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
 
 
-      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates.
+      • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
 
 
       • No ads. No accounts. No tracking. The only permission is internet access; your list, order and settings never leave your device.
@@ -490,6 +518,10 @@ locales:
 
       • Precision: whole numbers, 1, 2 or 4 decimals
 
+      • Digit grouping with a space or a comma: 1 234.56 or 1,234.56
+
+      • Light or dark theme, or follow the system
+
       • 40 languages, English by default, with an option to follow your device language — right-to-left layouts included
 
       • Phone, tablet and web: the same app on iPhone, iPad, Android and as a web app you can install to the home screen
@@ -509,19 +541,19 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
 
 
-      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero. Tú eliges cómo se redondean los importes: hacia arriba, para que la cantidad mostrada nunca sea menor que la real y el dinero siempre alcance, o al más cercano.
 
 
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
-      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
 
 
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
@@ -547,6 +579,10 @@ locales:
       • Búsqueda consciente de la fuente: filtra monedas por proveedor, mira dónde está cada una y cambia de fuente con un toque
 
       • Precisión: números enteros, 1, 2 o 4 decimales
+
+      • Separador de miles con espacio o coma: 1 234.56 o 1,234.56
+
+      • Tema claro u oscuro, o según el sistema
 
       • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
 
@@ -567,19 +603,19 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
 
 
-      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+      • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero. Tú eliges cómo se redondean los importes: hacia arriba, para que la cantidad mostrada nunca sea menor que la real y el dinero siempre alcance, o al más cercano.
 
 
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
-      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+      • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
 
 
       • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
@@ -606,6 +642,10 @@ locales:
 
       • Precisión: números enteros, 1, 2 o 4 decimales
 
+      • Separador de miles con espacio o coma: 1 234.56 o 1,234.56
+
+      • Tema claro u oscuro, o según el sistema
+
       • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
 
       • Teléfono, tableta y web: la misma aplicación en iPhone, iPad, Android y como aplicación web que puedes instalar en la pantalla de inicio
@@ -625,19 +665,19 @@ locales:
       MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-      • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi.
+      • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
 
 
       • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
 
 
-      • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli.
+      • Nutikas ümardamine — valitud täpsus on alampiir, mitte sundsärk: kui ümardamine moonutaks summat üle 2%, lisanduvad kohad pärast koma ise. 0,94 CHF ei muutu kunagi üheks ja väikesed krüptosummad ei kuku kunagi nulli. Ümardamise viisi valite ise: üles, et näidatud summa poleks kunagi tegelikust väiksem ja raha jätkuks alati, või lähimale.
 
 
       • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
 
 
-      • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi.
+      • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi. Kui te ei hoia seda alati sees, lülitub see pärast nelja tundi kasutamata olekut ise välja, nii et unustatud teenustasu ei moonuta kunagi homseid numbreid.
 
 
       • Reklaamivaba. Kontota. Jälgimiseta. Ainus luba on internetiühendus; teie loend, selle järjekord ja seaded ei lahku kunagi seadmest.
@@ -664,6 +704,10 @@ locales:
 
       • Täpsus: täisarvud, 1, 2 või 4 kohta pärast koma
 
+      • Tuhandeliste eraldaja: tühik või koma, 1 234.56 või 1,234.56
+
+      • Hele või tume teema või nagu süsteemis
+
       • 40 keelt, vaikimisi inglise keel, võimalusega järgida seadme keelt — koos paremalt vasakule paigutustega
 
       • Telefon, tahvel ja veeb: sama rakendus iPhone''is, iPadis, Androidis ja veebirakendusena, mille saab avakuvale panna
@@ -683,19 +727,19 @@ locales:
       چه چیزی FIXXE را متفاوت می‌کند
 
 
-      • پنج منبع نرخ با جابه‌جایی خودکار — Coinbase، FXRatesAPI، ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند.
+      • پنج منبع نرخ با جابه‌جایی خودکار — Coinbase، FXRatesAPI، ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند. یک منبع را ترجیح می‌دهید؟ آن را در تنظیمات انتخاب کنید — بقیه به‌عنوان پشتیبان می‌مانند.
 
 
       • بدون اینترنت کار می‌کند — آخرین نرخ‌ها روی دستگاه می‌مانند، پس برنامه بدون اتصال هم محاسبه می‌کند. و اگر آن نرخ‌ها بیش از یک روز قدیمی باشند، همین را صریح می‌گوید، نه اینکه آن‌ها را تازه جلوه دهد.
 
 
-      • گِرد کردن هوشمند — دقتی که انتخاب می‌کنید کف است، نه قید: اگر گِرد کردن مبلغ را بیش از ۲٪ منحرف کند، رقم‌های اعشاری خودبه‌خود اضافه می‌شوند. ‏۰٫۹۴ فرانک سوئیس هرگز «۱» نمی‌شود و مبالغ کوچک رمزارز هرگز به صفر نمی‌رسند.
+      • گِرد کردن هوشمند — دقتی که انتخاب می‌کنید کف است، نه قید: اگر گِرد کردن مبلغ را بیش از ۲٪ منحرف کند، رقم‌های اعشاری خودبه‌خود اضافه می‌شوند. ‏۰٫۹۴ فرانک سوئیس هرگز «۱» نمی‌شود و مبالغ کوچک رمزارز هرگز به صفر نمی‌رسند. شیوهٔ گِرد کردن مبالغ را خودتان انتخاب می‌کنید: رو به بالا، تا مبلغ نمایش‌داده‌شده هرگز کمتر از مبلغ واقعی نباشد و پول همیشه کافی باشد، یا به نزدیک‌ترین.
 
 
       • پایهٔ پویا — نرخ‌ها نسبت به ارزی که در حال ویرایش آن هستید دوباره حساب می‌شوند، نه نسبت به ارزی ثابت. بی‌نیاز از رفت‌وبرگشت.
 
 
-      • تعدیل نرخ — درصدی برای کارمزد بانک، حاشیهٔ سود یا افت انتقال تعیین کنید (مثلاً ‎+1.5%‎) تا همهٔ مبلغ‌ها بی‌درنگ نتیجهٔ واقعی را نشان دهند. ارقام تعدیل‌شده به‌روشنی علامت‌گذاری می‌شوند تا با نرخ بازار اشتباه نشوند.
+      • تعدیل نرخ — درصدی برای کارمزد بانک، حاشیهٔ سود یا افت انتقال تعیین کنید (مثلاً ‎+1.5%‎) تا همهٔ مبلغ‌ها بی‌درنگ نتیجهٔ واقعی را نشان دهند. ارقام تعدیل‌شده به‌روشنی علامت‌گذاری می‌شوند تا با نرخ بازار اشتباه نشوند. اگر آن را همیشه فعال نگذارید، پس از چهار ساعت بدون استفاده خودبه‌خود خاموش می‌شود تا کارمزدی فراموش‌شده هرگز ارقام فردا را منحرف نکند.
 
 
       • بدون تبلیغ. بدون حساب کاربری. بدون ردیابی. تنها اجازهٔ لازم دسترسی به اینترنت است؛ فهرست شما، ترتیب آن و تنظیماتتان هرگز از دستگاه بیرون نمی‌روند.
@@ -722,6 +766,10 @@ locales:
 
       • دقت: عدد درست، یک، دو یا چهار رقم اعشار
 
+      • جداکنندهٔ هزارگان با فاصله یا ویرگول: ‎1 234.56‎ یا ‎1,234.56‎
+
+      • پوستهٔ روشن یا تیره، یا مانند سیستم
+
       • ۴۰ زبان، به‌طور پیش‌فرض انگلیسی، با گزینهٔ پیروی از زبان دستگاه — همراه با چیدمان راست‌به‌چپ
 
       • گوشی، تبلت و وب: همان برنامه روی iPhone و iPad و Android، و به‌صورت برنامهٔ وب که روی صفحهٔ خانه نصب می‌شود
@@ -741,19 +789,19 @@ locales:
       MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
+      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
 
 
       • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
 
 
-      • Älykäs pyöristys — valitsemasi tarkkuus on vähimmäismäärä, ei pakkopaita: jos pyöristys vääristäisi summaa yli 2 %, desimaaleja lisätään itsestään. 0,94 CHF ei muutu koskaan ykköseksi eivätkä pienet kryptosummat katoa nollaan.
+      • Älykäs pyöristys — valitsemasi tarkkuus on vähimmäismäärä, ei pakkopaita: jos pyöristys vääristäisi summaa yli 2 %, desimaaleja lisätään itsestään. 0,94 CHF ei muutu koskaan ykköseksi eivätkä pienet kryptosummat katoa nollaan. Pyöristystavan valitset itse: ylöspäin, jolloin näytetty summa ei ole koskaan todellista pienempi ja rahat riittävät aina, tai lähimpään.
 
 
       • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
 
 
-      • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin.
+      • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin. Ellet pidä sitä aina käytössä, se kytkeytyy itsestään pois neljän tunnin käyttämättömyyden jälkeen, joten unohtunut palkkio ei koskaan vääristä huomisen lukuja.
 
 
       • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
@@ -780,6 +828,10 @@ locales:
 
       • Tarkkuus: kokonaisluvut, 1, 2 tai 4 desimaalia
 
+      • Tuhaterotin välilyönnillä tai pilkulla: 1 234.56 tai 1,234.56
+
+      • Vaalea tai tumma teema tai järjestelmän mukaan
+
       • 40 kieltä, oletuksena englanti, halutessasi laitteen kielen mukaan — myös oikealta vasemmalle luettavat asettelut
 
       • Puhelin, tabletti ja web: sama sovellus iPhonessa, iPadissa, Androidissa ja verkkosovelluksena, jonka voit asentaa aloitusnäytölle
@@ -799,19 +851,19 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
 
 
-      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro.
+      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro. C''est vous qui choisissez l''arrondi : vers le haut, pour que le montant affiché ne soit jamais inférieur au montant réel et que l''argent suffise toujours, ou au plus proche.
 
 
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
-      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
 
 
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
@@ -837,6 +889,10 @@ locales:
       • Recherche consciente des sources : filtrez les devises par fournisseur, voyez où chacune existe, changez de source d''une touche
 
       • Précision : nombres entiers, 1, 2 ou 4 décimales
+
+      • Séparateur de milliers : espace ou virgule, 1 234.56 ou 1,234.56
+
+      • Thème clair ou sombre, ou comme le système
 
       • 40 langues, anglais par défaut, avec une option pour suivre la langue de l''appareil — mises en page de droite à gauche comprises
 
@@ -857,19 +913,19 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
 
 
-      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro.
+      • Arrondi intelligent — la précision choisie est un minimum, pas un carcan : si l''arrondi déformait le montant de plus de 2 %, des décimales s''ajoutent d''elles-mêmes. 0,94 CHF ne devient jamais « 1 », et les petits montants en crypto ne tombent jamais à zéro. C''est vous qui choisissez l''arrondi : vers le haut, pour que le montant affiché ne soit jamais inférieur au montant réel et que l''argent suffise toujours, ou au plus proche.
 
 
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
-      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché.
+      • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
 
 
       • Pas de publicité. Pas de compte. Pas de pistage. La seule autorisation demandée est l''accès à Internet ; votre liste, son ordre et vos réglages ne quittent jamais l''appareil.
@@ -896,6 +952,10 @@ locales:
 
       • Précision : nombres entiers, 1, 2 ou 4 décimales
 
+      • Séparateur de milliers : espace ou virgule, 1 234.56 ou 1,234.56
+
+      • Thème clair ou sombre, ou comme le système
+
       • 40 langues, anglais par défaut, avec une option pour suivre la langue de l''appareil — mises en page de droite à gauche comprises
 
       • Téléphone, tablette et web : la même application sur iPhone, iPad, Android et en application web à installer sur l''écran d''accueil
@@ -915,19 +975,19 @@ locales:
       מה שונה ב-FIXXE
 
 
-      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום.
+      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום. מעדיפים מקור אחד? בחרו אותו בהגדרות — האחרים נשארים כגיבוי.
 
 
       • עובד לא מקוון — השערים האחרונים נשמרים במכשיר, כך שהאפליקציה ממשיכה לחשב גם בלי חיבור. ואם השערים האלה בני יותר מיממה, היא אומרת זאת במפורש במקום להציג אותם כעדכניים.
 
 
-      • עיגול חכם — הדיוק שבחרת הוא מינימום, לא כבלים: אם העיגול יעוות את הסכום ביותר מ-2%, נוספות ספרות עשרוניות מעצמן. ‏0.94 פרנק שווייצרי לא הופך ל„1", וסכומי קריפטו קטנים לא צונחים לאפס.
+      • עיגול חכם — הדיוק שבחרת הוא מינימום, לא כבלים: אם העיגול יעוות את הסכום ביותר מ-2%, נוספות ספרות עשרוניות מעצמן. ‏0.94 פרנק שווייצרי לא הופך ל„1", וסכומי קריפטו קטנים לא צונחים לאפס. אתם בוחרים איך לעגל סכומים: כלפי מעלה, כך שהסכום המוצג לעולם לא נמוך מהאמיתי והכסף תמיד יספיק, או לקרוב ביותר.
 
 
       • בסיס דינמי — השערים מחושבים מחדש מול המטבע שאתם עורכים, לא מול מטבע קבוע. בלי מעבר הלוך ושוב.
 
 
-      • התאמת שער — הגדירו אחוז עבור עמלת הבנק, המרווח או הפסדי ההעברה (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור, כך שלא תתבלבלו בינם לבין שער השוק.
+      • התאמת שער — הגדירו אחוז עבור עמלת הבנק, המרווח או הפסדי ההעברה (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור, כך שלא תתבלבלו בינם לבין שער השוק. אם לא תשאירו אותה פעילה תמיד, היא נכבית מעצמה אחרי ארבע שעות ללא שימוש, כך שעמלה שנשכחה לעולם לא תעוות את המספרים של מחר.
 
 
       • בלי פרסומות. בלי חשבונות. בלי מעקב. ההרשאה היחידה היא גישה לאינטרנט; הרשימה שלכם, סדרה וההגדרות לא עוזבות את המכשיר.
@@ -954,6 +1014,10 @@ locales:
 
       • דיוק: מספרים שלמים, 1, 2 או 4 ספרות אחרי הנקודה
 
+      • הפרדת אלפים ברווח או בפסיק: ‎1 234.56‎ או ‎1,234.56‎
+
+      • ערכת נושא בהירה או כהה, או לפי המערכת
+
       • 40 שפות, אנגלית כברירת מחדל, עם אפשרות לעקוב אחר שפת המכשיר — כולל פריסות מימין לשמאל
 
       • טלפון, טאבלט ואינטרנט: אותה אפליקציה ב-iPhone, ב-iPad, ב-Android וכאפליקציית רשת שאפשר להתקין במסך הבית
@@ -973,19 +1037,19 @@ locales:
       FIXXE अलग कैसे है
 
 
-      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते।
+      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते। कोई एक स्रोत पसंद है? उसे सेटिंग्स में चुनें — बाक़ी बैकअप के रूप में बने रहते हैं।
 
 
       • ऑफ़लाइन काम करता है — पिछली दरें आपके उपकरण पर रहती हैं, इसलिए बिना कनेक्शन भी ऐप गणना करता रहता है। और अगर वे दरें एक दिन से पुरानी हों, तो वह साफ़ कह देता है, उन्हें ताज़ा बताकर नहीं चलाता।
 
 
-      • समझदार पूर्णांकन — आपकी चुनी हुई सटीकता न्यूनतम है, बंधन नहीं: अगर पूर्णांकन से रकम 2% से ज़्यादा बिगड़े तो दशमलव अपने आप बढ़ जाते हैं। 0.94 CHF कभी „1" नहीं बनता, और क्रिप्टो की छोटी रकम कभी शून्य नहीं होती।
+      • समझदार पूर्णांकन — आपकी चुनी हुई सटीकता न्यूनतम है, बंधन नहीं: अगर पूर्णांकन से रकम 2% से ज़्यादा बिगड़े तो दशमलव अपने आप बढ़ जाते हैं। 0.94 CHF कभी „1" नहीं बनता, और क्रिप्टो की छोटी रकम कभी शून्य नहीं होती। राशि कैसे पूर्णांकित हो, यह आप चुनते हैं: ऊपर की ओर, ताकि दिखाई गई राशि असली से कभी कम न हो और पैसे हमेशा पूरे पड़ें, या निकटतम तक।
 
 
       • गतिशील आधार — दरें उसी मुद्रा के सापेक्ष फिर से निकाली जाती हैं जिसे आप लिख रहे हैं, किसी तय मुद्रा के नहीं। बार-बार अदल-बदल की ज़रूरत नहीं।
 
 
-      • दर समायोजन — बैंक शुल्क, मार्जिन या ट्रांसफ़र में होने वाले नुकसान के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं, इसलिए आप उन्हें बाज़ार दर नहीं समझ बैठेंगे।
+      • दर समायोजन — बैंक शुल्क, मार्जिन या ट्रांसफ़र में होने वाले नुकसान के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं, इसलिए आप उन्हें बाज़ार दर नहीं समझ बैठेंगे। अगर आप इसे हमेशा चालू नहीं रखते, तो चार घंटे उपयोग न होने पर यह अपने आप बंद हो जाता है, ताकि भूला हुआ शुल्क कभी कल के आँकड़े न बिगाड़े।
 
 
       • कोई विज्ञापन नहीं। कोई खाता नहीं। कोई ट्रैकिंग नहीं। एकमात्र अनुमति इंटरनेट की है; आपकी सूची, उसका क्रम और सेटिंग्स कभी उपकरण से बाहर नहीं जातीं।
@@ -1012,6 +1076,10 @@ locales:
 
       • सटीकता: पूर्ण संख्याएँ, 1, 2 या 4 दशमलव
 
+      • हज़ार विभाजक के रूप में स्पेस या कॉमा: 1 234.56 या 1,234.56
+
+      • हल्की या गहरी थीम, या सिस्टम के अनुसार
+
       • 40 भाषाएँ, डिफ़ॉल्ट अंग्रेज़ी, उपकरण की भाषा अपनाने के विकल्प के साथ — दाएँ-से-बाएँ लेआउट समेत
 
       • फ़ोन, टैबलेट और वेब: वही ऐप iPhone, iPad, Android पर और वेब ऐप के रूप में जिसे होम स्क्रीन पर लगाया जा सकता है
@@ -1031,19 +1099,19 @@ locales:
       PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
 
 
       • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
 
 
-      • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2 %, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu.
+      • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2 %, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu. Vi birate kako se iznosi zaokružuju: prema gore, pa prikazani iznos nikad nije manji od stvarnog i novca je uvijek dovoljno, ili na najbliže.
 
 
       • Dinamična osnovica — tečajevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-natrag.
 
 
-      • Prilagodba tečaja — zadajte postotak za bankovnu naknadu, maržu ili gubitke pri prijenosu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene pa ih nećete zamijeniti s tržišnim tečajem.
+      • Prilagodba tečaja — zadajte postotak za bankovnu naknadu, maržu ili gubitke pri prijenosu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene pa ih nećete zamijeniti s tržišnim tečajem. Ako je ne ostavite uvijek uključenu, sama se isključuje nakon četiri sata bez korištenja, pa zaboravljena naknada nikad ne iskrivljuje sutrašnje brojke.
 
 
       • Bez oglasa. Bez računa. Bez praćenja. Jedino dopuštenje je pristup internetu; vaš popis, njegov redoslijed i postavke nikada ne napuštaju uređaj.
@@ -1070,6 +1138,10 @@ locales:
 
       • Preciznost: cijeli brojevi, 1, 2 ili 4 decimale
 
+      • Razdvajanje tisućica razmakom ili zarezom: 1 234.56 ili 1,234.56
+
+      • Svijetla ili tamna tema, ili kao sustav
+
       • 40 jezika, engleski kao zadani, uz mogućnost praćenja jezika uređaja — uključujući rasporede zdesna nalijevo
 
       • Telefon, tablet i web: ista aplikacija na iPhoneu, iPadu, Androidu i kao web-aplikacija koju možete postaviti na početni zaslon
@@ -1089,19 +1161,19 @@ locales:
       MIBEN MÁS A FIXXE
 
 
-      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat.
+      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
 
 
       • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
 
 
-      • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára.
+      • Okos kerekítés — a választott pontosság alsó határ, nem kényszerzubbony: ha a kerekítés 2%-nál jobban torzítaná az összeget, a tizedesjegyek maguktól bővülnek. A 0,94 CHF sosem lesz „1", és a kis kriptoösszegek sosem esnek nullára. Ön választja meg, hogyan kerekedjenek az összegek: felfelé, így a kijelzett összeg sosem kevesebb a valósnál, és a pénz mindig elég lesz, vagy a legközelebbire.
 
 
       • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
 
 
-      • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal.
+      • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal. Ha nem hagyja mindig bekapcsolva, négy óra használat nélkül magától kikapcsol, így egy elfelejtett díj sosem torzítja a holnapi számokat.
 
 
       • Nincs reklám. Nincs fiók. Nincs követés. Az egyetlen engedély az internet-hozzáférés; a listád, annak sorrendje és a beállításaid soha nem hagyják el a készüléket.
@@ -1128,6 +1200,10 @@ locales:
 
       • Pontosság: egész számok, 1, 2 vagy 4 tizedesjegy
 
+      • Ezres tagolás szóközzel vagy vesszővel: 1 234.56 vagy 1,234.56
+
+      • Világos vagy sötét téma, illetve a rendszer szerint
+
       • 40 nyelv, alapértelmezetten angol, a készülék nyelvének követésével is — a jobbról balra írt elrendezésekkel együtt
 
       • Telefon, táblagép és web: ugyanaz az alkalmazás iPhone-on, iPaden, Androidon és webalkalmazásként, amelyet a kezdőképernyőre tehetsz
@@ -1147,19 +1223,19 @@ locales:
       APA YANG MEMBUAT FIXXE BERBEDA
 
 
-      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
+      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
 
 
       • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
 
 
-      • Pembulatan cerdas — ketelitian yang Anda pilih adalah batas bawah, bukan belenggu: bila pembulatan akan menyimpangkan jumlah lebih dari 2%, angka di belakang koma bertambah sendiri. 0,94 CHF tidak pernah menjadi „1", dan jumlah kripto yang kecil tidak pernah jatuh ke nol.
+      • Pembulatan cerdas — ketelitian yang Anda pilih adalah batas bawah, bukan belenggu: bila pembulatan akan menyimpangkan jumlah lebih dari 2%, angka di belakang koma bertambah sendiri. 0,94 CHF tidak pernah menjadi „1", dan jumlah kripto yang kecil tidak pernah jatuh ke nol. Anda yang memilih cara jumlah dibulatkan: ke atas, agar jumlah yang ditampilkan tidak pernah kurang dari yang sebenarnya dan uang selalu cukup, atau ke terdekat.
 
 
       • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
 
 
-      • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar.
+      • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar. Kecuali Anda membiarkannya selalu aktif, fitur ini mati sendiri setelah empat jam tidak digunakan, sehingga biaya yang terlupa tidak pernah mengacaukan angka esok hari.
 
 
       • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
@@ -1186,6 +1262,10 @@ locales:
 
       • Ketelitian: bilangan bulat, 1, 2, atau 4 angka di belakang koma
 
+      • Pemisah ribuan berupa spasi atau koma: 1 234.56 atau 1,234.56
+
+      • Tema terang atau gelap, atau ikuti sistem
+
       • 40 bahasa, bawaan bahasa Inggris, dengan pilihan mengikuti bahasa perangkat — termasuk tata letak dari kanan ke kiri
 
       • Ponsel, tablet, dan web: aplikasi yang sama di iPhone, iPad, Android, dan sebagai aplikasi web yang bisa dipasang di layar beranda
@@ -1205,19 +1285,19 @@ locales:
       COSA RENDE FIXXE DIVERSO
 
 
-      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
+      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
 
 
       • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
 
 
-      • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano.
+      • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano. Sei tu a scegliere come arrotondare gli importi: per eccesso, così l''importo mostrato non è mai inferiore a quello reale e i soldi bastano sempre, oppure al più vicino.
 
 
       • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
 
 
-      • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato.
+      • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato. Se non la lasci sempre attiva, si disattiva da sola dopo quattro ore senza utilizzo, così una commissione dimenticata non falsa mai i numeri del giorno dopo.
 
 
       • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
@@ -1244,6 +1324,10 @@ locales:
 
       • Precisione: numeri interi, 1, 2 o 4 decimali
 
+      • Separatore delle migliaia: spazio o virgola, 1 234.56 o 1,234.56
+
+      • Tema chiaro o scuro, oppure come il sistema
+
       • 40 lingue, inglese come impostazione iniziale, con l''opzione di seguire la lingua del dispositivo — layout da destra a sinistra compresi
 
       • Telefono, tablet e web: la stessa app su iPhone, iPad, Android e come app web da installare nella schermata Home
@@ -1263,19 +1347,19 @@ locales:
       FIXXEが違うところ
 
 
-      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。
+      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。特定の情報源を使いたいなら設定で選べます — ほかは予備として残ります。
 
 
       • オフラインでも動く — 最後のレートは端末に残るので、通信がなくても計算を続けられます。そのレートが1日以上前のものなら、新しいふりをせずにはっきりそう伝えます。
 
 
-      • 賢い丸め — 選んだ桁数は下限であって拘束ではありません。丸めによって金額が2%以上ずれる場合は、小数点以下が自動で増えます。0.94 CHFが「1」になることはなく、少額の暗号資産がゼロに潰れることもありません。
+      • 賢い丸め — 選んだ桁数は下限であって拘束ではありません。丸めによって金額が2%以上ずれる場合は、小数点以下が自動で増えます。0.94 CHFが「1」になることはなく、少額の暗号資産がゼロに潰れることもありません。金額の丸め方は、切り上げ（表示額が実際の金額を下回らないので、お金が足りなくなりません）と四捨五入から選べます。
 
 
       • 動く基準通貨 — レートは固定通貨ではなく、いま入力している通貨を基準に計算し直されます。行ったり来たりの切り替えは不要です。
 
 
-      • レート調整 — 銀行手数料やマージン、送金時の目減り分をパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されるので、市場レートと取り違えることはありません。
+      • レート調整 — 銀行手数料やマージン、送金時の目減り分をパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されるので、市場レートと取り違えることはありません。「常にオン」にしない限り、4時間使わないと自動でオフになるので、消し忘れた手数料が翌日の数字を狂わせることはありません。
 
 
       • 広告なし。アカウントなし。追跡なし。必要な権限はインターネット接続だけで、通貨の一覧も並び順も設定も端末から出ません。
@@ -1302,6 +1386,10 @@ locales:
 
       • 精度は整数、小数1桁、2桁、4桁から
 
+      • 桁区切りはスペースまたはカンマ：1 234.56 または 1,234.56
+
+      • ライトまたはダークテーマ、もしくはシステムに合わせる
+
       • 40言語に対応、既定は英語、端末の言語に合わせる設定も — 右から左に書く言語のレイアウトも含みます
 
       • スマートフォン、タブレット、ウェブ — iPhone、iPad、Androidで同じアプリ、ホーム画面に追加できるウェブアプリとしても
@@ -1321,19 +1409,19 @@ locales:
       რით განსხვავდება FIXXE
 
 
-      • კურსის ხუთი წყარო ავტომატური გადართვით — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს.
+      • კურსის ხუთი წყარო ავტომატური გადართვით — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს. ერთი წყარო გირჩევნიათ? აირჩიეთ ის პარამეტრებში — დანარჩენები სარეზერვოდ დარჩება.
 
 
       • მუშაობს ოფლაინ — ბოლო კურსები რჩება მოწყობილობაზე, ამიტომ აპლიკაცია კავშირის გარეშეც ითვლის. და თუ ეს კურსები ერთ დღეზე ძველია, ამას პირდაპირ ამბობს, ნაცვლად იმისა, რომ ახალივით წარმოაჩინოს.
 
 
-      • ჭკვიანი დამრგვალება — არჩეული სიზუსტე მინიმუმია და არა სავალდებულო ჩარჩო: თუ დამრგვალება თანხას 2%-ზე მეტად დაამახინჯებს, ათწილადები თავისით ემატება. 0,94 CHF არასოდეს ხდება „1", და კრიპტოვალუტის მცირე თანხები არასოდეს ნულდება.
+      • ჭკვიანი დამრგვალება — არჩეული სიზუსტე მინიმუმია და არა სავალდებულო ჩარჩო: თუ დამრგვალება თანხას 2%-ზე მეტად დაამახინჯებს, ათწილადები თავისით ემატება. 0,94 CHF არასოდეს ხდება „1", და კრიპტოვალუტის მცირე თანხები არასოდეს ნულდება. თანხების დამრგვალების წესს თქვენ ირჩევთ: ზემოთ, რომ ნაჩვენები თანხა არასოდეს იყოს რეალურზე ნაკლები და ფული ყოველთვის გეყოთ, ან უახლოესამდე.
 
 
       • დინამიური ბაზისი — კურსები გადაითვლება იმ ვალუტასთან, რომელსაც ამჟამად ასწორებთ, და არა ფიქსირებულთან. აღარ არის საჭირო წინ-უკან გადართვა.
 
 
-      • კურსის შესწორება — მიუთითეთ პროცენტი ბანკის საკომისიოს, მარჟის ან გადარიცხვის დანაკარგისთვის (მაგალითად, +1,5%) და ყველა თანხა მაშინვე რეალურ შედეგს აჩვენებს. გადათვლილი რიცხვები მკაფიოდ არის მონიშნული, ასე რომ მათ საბაზრო კურსში არ აგერევათ.
+      • კურსის შესწორება — მიუთითეთ პროცენტი ბანკის საკომისიოს, მარჟის ან გადარიცხვის დანაკარგისთვის (მაგალითად, +1,5%) და ყველა თანხა მაშინვე რეალურ შედეგს აჩვენებს. გადათვლილი რიცხვები მკაფიოდ არის მონიშნული, ასე რომ მათ საბაზრო კურსში არ აგერევათ. თუ მას ყოველთვის ჩართულს არ დატოვებთ, ოთხი საათის გამოუყენებლობის შემდეგ თავისით გაითიშება, ასე რომ დავიწყებული საკომისიო ხვალინდელ ციფრებს ვერასოდეს დაამახინჯებს.
 
 
       • რეკლამის გარეშე. ანგარიშის გარეშე. თვალყურის დევნების გარეშე. ერთადერთი ნებართვა ინტერნეტზე წვდომაა; თქვენი სია, მისი თანმიმდევრობა და პარამეტრები მოწყობილობას არასოდეს ტოვებს.
@@ -1360,6 +1448,10 @@ locales:
 
       • სიზუსტე: მთელი რიცხვები, 1, 2 ან 4 ათწილადი
 
+      • ათასეულების გამყოფი — ჰარე ან მძიმე: 1 234.56 ან 1,234.56
+
+      • ნათელი ან მუქი თემა, ან სისტემის მიხედვით
+
       • 40 ენა, ნაგულისხმევად ინგლისური, მოწყობილობის ენის მიყოლის შესაძლებლობით — მათ შორის მარჯვნიდან მარცხნივ განლაგებები
 
       • ტელეფონი, ტაბლეტი და ვები: იგივე აპლიკაცია iPhone-ზე, iPad-ზე, Android-ზე და ვებაპლიკაციად, რომელიც მთავარ ეკრანზე დაგყავთ
@@ -1379,19 +1471,19 @@ locales:
       FIXXE가 다른 점
 
 
-      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다.
+      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다. 한 출처만 쓰고 싶다면 설정에서 고르세요 — 나머지는 예비로 남습니다.
 
 
       • 오프라인에서도 동작 — 마지막 환율이 기기에 남아 있어 연결이 없어도 계산이 이어집니다. 그 환율이 하루보다 오래됐다면 최신인 척하지 않고 분명히 알려줍니다.
 
 
-      • 똑똑한 반올림 — 선택한 자릿수는 하한이지 족쇄가 아닙니다. 반올림으로 금액이 2% 넘게 틀어질 상황이면 소수 자릿수가 저절로 늘어납니다. 0.94 CHF가 „1"이 되는 일은 없고, 소액 암호화폐가 0으로 사라지지도 않습니다.
+      • 똑똑한 반올림 — 선택한 자릿수는 하한이지 족쇄가 아닙니다. 반올림으로 금액이 2% 넘게 틀어질 상황이면 소수 자릿수가 저절로 늘어납니다. 0.94 CHF가 „1"이 되는 일은 없고, 소액 암호화폐가 0으로 사라지지도 않습니다. 금액은 올림(표시 금액이 실제보다 적지 않아 돈이 늘 넉넉합니다)과 반올림 중 원하는 방식으로 처리할 수 있습니다.
 
 
       • 바뀌는 기준 통화 — 환율은 고정된 통화가 아니라 지금 입력 중인 통화를 기준으로 다시 계산됩니다. 앞뒤로 전환할 필요가 없습니다.
 
 
-      • 환율 조정 — 은행 수수료, 마진 또는 송금 손실을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시되어 시장 환율과 혼동할 일이 없습니다.
+      • 환율 조정 — 은행 수수료, 마진 또는 송금 손실을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시되어 시장 환율과 혼동할 일이 없습니다. 항상 켜 두지 않으면 4시간 동안 사용하지 않을 때 저절로 꺼지므로, 잊어버린 수수료가 다음 날 숫자를 왜곡할 일이 없습니다.
 
 
       • 광고 없음. 계정 없음. 추적 없음. 요구하는 권한은 인터넷 접속 하나뿐이며, 통화 목록과 순서, 설정은 기기를 벗어나지 않습니다.
@@ -1418,6 +1510,10 @@ locales:
 
       • 정밀도: 정수, 소수점 1자리, 2자리, 4자리
 
+      • 천 단위 구분: 공백 또는 쉼표, 1 234.56 또는 1,234.56
+
+      • 밝은 테마나 어두운 테마, 또는 시스템 설정
+
       • 40개 언어, 기본은 영어, 기기 언어를 따르는 설정도 — 오른쪽에서 왼쪽으로 쓰는 배치까지
 
       • 휴대폰, 태블릿, 웹 — iPhone, iPad, Android에서 같은 앱, 홈 화면에 설치하는 웹 앱으로도
@@ -1437,19 +1533,19 @@ locales:
       KUO FIXXE SKIRIASI
 
 
-      • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+      • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
 
 
       • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
 
 
-      • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio.
+      • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio. Kaip apvalinti sumas, renkatės jūs: į didesnę pusę, kad rodoma suma niekada nebūtų mažesnė už tikrąją ir pinigų visada užtektų, arba iki artimiausio.
 
 
       • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
 
 
-      • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu.
+      • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu. Jei nepaliksite jos visada įjungtos, po keturių valandų nenaudojimo ji išsijungs pati, todėl pamirštas mokestis niekada neiškreips rytdienos skaičių.
 
 
       • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
@@ -1476,6 +1572,10 @@ locales:
 
       • Tikslumas: sveikieji skaičiai, 1, 2 arba 4 skaitmenys po kablelio
 
+      • Tūkstančių skirtukas — tarpas arba kablelis: 1 234.56 arba 1,234.56
+
+      • Šviesi arba tamsi tema arba kaip sistemoje
+
       • 40 kalbų, numatytoji anglų, su galimybe sekti įrenginio kalbą — įskaitant išdėstymus iš dešinės į kairę
 
       • Telefonas, planšetė ir internetas: ta pati programėlė iPhone, iPad, Android ir kaip žiniatinklio programėlė, kurią galima įsidėti į pradžios ekraną
@@ -1495,19 +1595,19 @@ locales:
       AR KO FIXXE ATŠĶIRAS
 
 
-      • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
+      • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
 
 
       • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
 
 
-      • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei.
+      • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei. Kā noapaļot summas, izvēlaties jūs: uz augšu, lai parādītā summa nekad nebūtu mazāka par īsto un naudas vienmēr pietiktu, vai līdz tuvākajam.
 
 
       • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
 
 
-      • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu.
+      • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu. Ja neatstājat to vienmēr ieslēgtu, tā pati izslēdzas pēc četrām stundām bez lietošanas, tāpēc aizmirsta komisija nekad neizkropļos rītdienas skaitļus.
 
 
       • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
@@ -1534,6 +1634,10 @@ locales:
 
       • Precizitāte: veseli skaitļi, 1, 2 vai 4 cipari aiz komata
 
+      • Tūkstošu atdalītājs — atstarpe vai komats: 1 234.56 vai 1,234.56
+
+      • Gaišs vai tumšs motīvs vai kā sistēmā
+
       • 40 valodas, pēc noklusējuma angļu, ar iespēju sekot ierīces valodai — tostarp izkārtojumi no labās uz kreiso
 
       • Telefons, planšete un tīmeklis: tā pati lietotne iPhone, iPad, Android un kā tīmekļa lietotne, ko var ielikt sākuma ekrānā
@@ -1553,19 +1657,19 @@ locales:
       ПО ШТО СЕ РАЗЛИКУВА FIXXE
 
 
-      • Пет извори на курсеви со автоматска замена — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо.
+      • Пет извори на курсеви со автоматска замена — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо. Претпочитате еден извор? Изберете го во поставките — другите остануваат како резерва.
 
 
       • Работи офлајн — последните курсеви остануваат на уредот, па апликацијата пресметува и без врска. А ако тие курсеви се постари од еден ден, тоа го кажува отворено наместо да ги претставува како свежи.
 
 
-      • Паметно заокружување — избраната прецизност е минимум, а не лудачка кошула: ако заокружувањето би го искривило износот за повеќе од 2%, децималите се додаваат сами. 0,94 CHF никогаш не станува „1", а малите износи во криптовалути никогаш не паѓаат на нула.
+      • Паметно заокружување — избраната прецизност е минимум, а не лудачка кошула: ако заокружувањето би го искривило износот за повеќе од 2%, децималите се додаваат сами. 0,94 CHF никогаш не станува „1", а малите износи во криптовалути никогаш не паѓаат на нула. Вие избирате како да се заокружуваат износите: нагоре, за прикажаниот износ никогаш да не биде помал од вистинскиот и парите секогаш да бидат доволни, или до најблиското.
 
 
       • Динамична основа — курсевите се пресметуваат спрема валутата што ја уредувате, а не спрема фиксна. Без префрлање напред-назад.
 
 
-      • Корекција на курсот — задајте процент за банкарска провизија, маржа или загуби при пренос (на пример +1,5%) и сите износи веднаш го покажуваат вистинскиот резултат. Пресметаните бројки се јасно означени, па нема да ги помешате со пазарниот курс.
+      • Корекција на курсот — задајте процент за банкарска провизија, маржа или загуби при пренос (на пример +1,5%) и сите износи веднаш го покажуваат вистинскиот резултат. Пресметаните бројки се јасно означени, па нема да ги помешате со пазарниот курс. Ако не ја оставите секогаш вклучена, таа сама се исклучува по четири часа без користење, па заборавена провизија никогаш нема да ги искриви утрешните бројки.
 
 
       • Без реклами. Без сметки. Без следење. Единствената дозвола е пристап до интернет; вашиот список, неговиот редослед и поставките никогаш не го напуштаат уредот.
@@ -1592,6 +1696,10 @@ locales:
 
       • Прецизност: цели броеви, 1, 2 или 4 децимали
 
+      • Одделувач на илјади — празно место или запирка: 1 234.56 или 1,234.56
+
+      • Светла или темна тема, или како системот
+
       • 40 јазици, англиски како стандарден, со можност да го следи јазикот на уредот — вклучувајќи распореди оддесна налево
 
       • Телефон, таблет и веб: истата апликација на iPhone, iPad, Android и како веб апликација што ја ставате на почетниот екран
@@ -1611,19 +1719,19 @@ locales:
       DETTE GJØR FIXXE ANNERLEDES
 
 
-      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter.
+      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
 
 
       • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
 
 
-      • Smart avrunding — presisjonen du velger er et minimum, ikke en tvangstrøye: ville avrundingen forvrenge beløpet med mer enn 2 %, legges desimaler til av seg selv. 0,94 CHF blir aldri «1», og små kryptobeløp faller aldri til null.
+      • Smart avrunding — presisjonen du velger er et minimum, ikke en tvangstrøye: ville avrundingen forvrenge beløpet med mer enn 2 %, legges desimaler til av seg selv. 0,94 CHF blir aldri «1», og små kryptobeløp faller aldri til null. Du velger selv hvordan beløp avrundes: opp, så det viste beløpet aldri er mindre enn det faktiske og pengene alltid strekker til, eller til nærmeste.
 
 
       • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
 
 
-      • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen.
+      • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen. Med mindre du har den alltid på, slår den seg av selv etter fire timer uten bruk, så et glemt gebyr aldri forvrenger morgendagens tall.
 
 
       • Ingen reklame. Ingen kontoer. Ingen sporing. Eneste tillatelse er internettilgang; listen din, rekkefølgen og innstillingene forlater aldri enheten.
@@ -1650,6 +1758,10 @@ locales:
 
       • Presisjon: hele tall, 1, 2 eller 4 desimaler
 
+      • Tusenskille med mellomrom eller komma: 1 234.56 eller 1,234.56
+
+      • Lyst eller mørkt tema, eller følg systemet
+
       • 40 språk, engelsk som standard, med mulighet for å følge språket på enheten — også oppsett fra høyre mot venstre
 
       • Telefon, nettbrett og web: den samme appen på iPhone, iPad, Android og som nettapp du kan legge på startskjermen
@@ -1669,19 +1781,19 @@ locales:
       WAT FIXXE ANDERS MAAKT
 
 
-      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
 
 
       • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
 
 
-      • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul.
+      • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul. Je kiest zelf hoe bedragen worden afgerond: naar boven, zodat het getoonde bedrag nooit lager is dan het echte en je altijd genoeg geld hebt, of naar het dichtstbijzijnde.
 
 
       • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
 
 
-      • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers.
+      • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers. Tenzij je hem altijd aan laat staan, schakelt hij zichzelf uit na vier uur zonder gebruik, zodat vergeten kosten nooit de cijfers van morgen vertekenen.
 
 
       • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
@@ -1708,6 +1820,10 @@ locales:
 
       • Precisie: hele getallen, 1, 2 of 4 decimalen
 
+      • Duizendtalscheiding met een spatie of een komma: 1 234.56 of 1,234.56
+
+      • Licht of donker thema, of volg het systeem
+
       • 40 talen, standaard Engels, met de optie de taal van je toestel te volgen — inclusief indelingen van rechts naar links
 
       • Telefoon, tablet en web: dezelfde app op iPhone, iPad, Android en als web-app die je op je beginscherm zet
@@ -1727,19 +1843,19 @@ locales:
       CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje.
+      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
 
 
       • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
 
 
-      • Mądre zaokrąglanie — wybrana dokładność to minimum, a nie kaftan bezpieczeństwa: jeśli zaokrąglenie zniekształciłoby kwotę o ponad 2%, miejsca po przecinku dopisują się same. 0,94 CHF nigdy nie zamieni się w „1", a małe kwoty w kryptowalutach nie spadną do zera.
+      • Mądre zaokrąglanie — wybrana dokładność to minimum, a nie kaftan bezpieczeństwa: jeśli zaokrąglenie zniekształciłoby kwotę o ponad 2%, miejsca po przecinku dopisują się same. 0,94 CHF nigdy nie zamieni się w „1", a małe kwoty w kryptowalutach nie spadną do zera. To ty wybierasz sposób zaokrąglania: w górę, by pokazana kwota nigdy nie była mniejsza od rzeczywistej i pieniędzy zawsze wystarczyło, albo do najbliższej.
 
 
       • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
 
 
-      • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym.
+      • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym. Jeśli nie zostawisz jej zawsze włączonej, wyłączy się sama po czterech godzinach bez użycia, więc zapomniana prowizja nigdy nie zniekształci jutrzejszych liczb.
 
 
       • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
@@ -1766,6 +1882,10 @@ locales:
 
       • Dokładność: liczby całkowite, 1, 2 lub 4 miejsca po przecinku
 
+      • Separator tysięcy: spacja lub przecinek, 1 234.56 albo 1,234.56
+
+      • Jasny lub ciemny motyw albo jak w systemie
+
       • 40 języków, domyślnie angielski, z opcją podążania za językiem urządzenia — łącznie z układami od prawej do lewej
 
       • Telefon, tablet i sieć: ta sama aplikacja na iPhonie, iPadzie, Androidzie i jako aplikacja internetowa, którą zainstalujesz na ekranie głównym
@@ -1785,19 +1905,19 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
 
 
-      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero.
+      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero. É você que escolhe como os valores são arredondados: para cima, para que o valor mostrado nunca seja inferior ao real e o dinheiro chegue sempre, ou para o mais próximo.
 
 
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
-      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado. A menos que o mantenha sempre ativo, desliga-se sozinho após quatro horas sem utilização, para que uma comissão esquecida nunca distorça os números do dia seguinte.
 
 
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
@@ -1823,6 +1943,10 @@ locales:
       • Pesquisa atenta à fonte: filtre moedas por fornecedor, veja onde existe cada uma, mude de fonte com um toque
 
       • Precisão: números inteiros, 1, 2 ou 4 casas decimais
+
+      • Separador de milhares com espaço ou vírgula: 1 234.56 ou 1,234.56
+
+      • Tema claro ou escuro, ou seguir o sistema
 
       • 40 idiomas, inglês por omissão, com a opção de seguir o idioma do dispositivo — esquemas da direita para a esquerda incluídos
 
@@ -1843,19 +1967,19 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
 
 
-      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero.
+      • Arredondamento inteligente — a precisão que escolher é um mínimo, não uma camisa de forças: se o arredondamento distorcer o valor em mais de 2%, somam-se casas decimais sozinhas. 0,94 CHF nunca vira «1» e pequenos valores em cripto nunca caem para zero. É você que escolhe como os valores são arredondados: para cima, para que o valor mostrado nunca seja inferior ao real e o dinheiro chegue sempre, ou para o mais próximo.
 
 
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
-      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado.
+      • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado. A menos que o mantenha sempre ativo, desliga-se sozinho após quatro horas sem utilização, para que uma comissão esquecida nunca distorça os números do dia seguinte.
 
 
       • Sem anúncios. Sem contas. Sem rastreio. A única permissão é o acesso à internet; a sua lista, a ordem dela e as definições nunca saem do dispositivo.
@@ -1882,6 +2006,10 @@ locales:
 
       • Precisão: números inteiros, 1, 2 ou 4 casas decimais
 
+      • Separador de milhares com espaço ou vírgula: 1 234.56 ou 1,234.56
+
+      • Tema claro ou escuro, ou seguir o sistema
+
       • 40 idiomas, inglês por omissão, com a opção de seguir o idioma do dispositivo — esquemas da direita para a esquerda incluídos
 
       • Telemóvel, tablet e web: a mesma aplicação no iPhone, iPad, Android e como aplicação web para instalar no ecrã principal
@@ -1901,19 +2029,19 @@ locales:
       CE ÎL FACE PE FIXXE DIFERIT
 
 
-      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic.
+      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
 
 
       • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
 
 
-      • Rotunjire inteligentă — precizia aleasă este un minim, nu o cămașă de forță: dacă rotunjirea ar denatura suma cu peste 2%, zecimalele se adaugă singure. 0,94 CHF nu devine niciodată „1", iar sumele mici în cripto nu cad niciodată la zero.
+      • Rotunjire inteligentă — precizia aleasă este un minim, nu o cămașă de forță: dacă rotunjirea ar denatura suma cu peste 2%, zecimalele se adaugă singure. 0,94 CHF nu devine niciodată „1", iar sumele mici în cripto nu cad niciodată la zero. Dumneavoastră alegeți cum se rotunjesc sumele: în sus, ca suma afișată să nu fie niciodată mai mică decât cea reală și banii să ajungă mereu, sau la cel mai apropiat.
 
 
       • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
 
 
-      • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței.
+      • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței. Dacă nu o lăsați mereu activă, se dezactivează singură după patru ore fără utilizare, așa că un comision uitat nu denaturează niciodată cifrele de mâine.
 
 
       • Fără reclame. Fără conturi. Fără urmărire. Singura permisiune este accesul la internet; lista ta, ordinea ei și setările nu părăsesc niciodată dispozitivul.
@@ -1940,6 +2068,10 @@ locales:
 
       • Precizie: numere întregi, 1, 2 sau 4 zecimale
 
+      • Separator de mii: spațiu sau virgulă, 1 234.56 sau 1,234.56
+
+      • Temă luminoasă sau întunecată ori ca sistemul
+
       • 40 de limbi, engleză implicit, cu opțiunea de a urma limba dispozitivului — inclusiv aranjări de la dreapta la stânga
 
       • Telefon, tabletă și web: aceeași aplicație pe iPhone, iPad, Android și ca aplicație web pe care o instalezi pe ecranul principal
@@ -1959,19 +2091,19 @@ locales:
       ЧЕМ FIXXE ОТЛИЧАЕТСЯ
 
 
-      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает.
+      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает. Предпочитаете один источник? Выберите его в настройках — остальные останутся в резерве.
 
 
       • Работает офлайн — последние курсы хранятся на устройстве, так что приложение считает и без связи. А если этим курсам больше суток, оно честно об этом говорит, а не делает вид, что они свежие.
 
 
-      • Умное округление — выбранная точность это минимум, а не смирительная рубашка: если округление исказит сумму больше чем на 2%, знаки после запятой добавляются сами. 0,94 CHF никогда не превратится в «1», а малые суммы криптовалют не схлопнутся в ноль.
+      • Умное округление — выбранная точность это минимум, а не смирительная рубашка: если округление исказит сумму больше чем на 2%, знаки после запятой добавляются сами. 0,94 CHF никогда не превратится в «1», а малые суммы криптовалют не схлопнутся в ноль. Способ округления выбираете вы: вверх — тогда показанная сумма никогда не меньше настоящей и денег точно хватит — или к ближайшему.
 
 
       • Динамическая база — курсы пересчитываются относительно той валюты, которую вы редактируете, а не фиксированной. Не нужно переключаться туда-сюда.
 
 
-      • Поправка к курсу — задайте процент комиссии банка, маржи или потерь на переводе (например, +1,5%), и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены — их не спутать с рыночным курсом.
+      • Поправка к курсу — задайте процент комиссии банка, маржи или потерь на переводе (например, +1,5%), и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены — их не спутать с рыночным курсом. Если не сделать её постоянной, поправка сама отключается через четыре часа без использования, так что забытая комиссия не исказит завтрашние цифры.
 
 
       • Без рекламы. Без аккаунтов. Без слежки. Единственное разрешение — доступ в интернет; ваш список, порядок и настройки не покидают устройство.
@@ -1998,6 +2130,10 @@ locales:
 
       • Точность: целые числа, 1, 2 или 4 знака после запятой
 
+      • Разделитель разрядов — пробел или запятая: 1 234.56 или 1,234.56
+
+      • Светлая или тёмная тема — или как в системе
+
       • 40 языков, по умолчанию английский, с опцией следовать языку устройства — включая раскладки справа налево
 
       • Телефон, планшет и веб: одно и то же приложение на iPhone, iPad, Android и как веб-приложение, которое ставится на домашний экран
@@ -2017,19 +2153,19 @@ locales:
       ČÍM SA FIXXE LÍŠI
 
 
-      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič.
+      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
 
 
       • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
 
 
-      • Chytré zaokrúhľovanie — zvolená presnosť je minimum, nie zvieracia kazajka: ak by zaokrúhlenie skreslilo sumu o viac než 2 %, desatinné miesta sa pridajú samy. Z 0,94 CHF sa nikdy nestane „1“ a malé sumy v kryptomenách nikdy neklesnú na nulu.
+      • Chytré zaokrúhľovanie — zvolená presnosť je minimum, nie zvieracia kazajka: ak by zaokrúhlenie skreslilo sumu o viac než 2 %, desatinné miesta sa pridajú samy. Z 0,94 CHF sa nikdy nestane „1“ a malé sumy v kryptomenách nikdy neklesnú na nulu. Spôsob zaokrúhľovania si volíte vy: nahor, aby zobrazená suma nikdy nebola nižšia než skutočná a peniaze vždy vystačili, alebo k najbližšiemu.
 
 
       • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
 
 
-      • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom.
+      • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom. Ak ju nenecháte trvalo zapnutú, po štyroch hodinách bez použitia sa sama vypne, takže zabudnutý poplatok nikdy neskreslí zajtrajšie čísla.
 
 
       • Žiadne reklamy. Žiadne účty. Žiadne sledovanie. Jediné oprávnenie je prístup na internet; váš zoznam, jeho poradie a nastavenia zariadenie nikdy neopustia.
@@ -2056,6 +2192,10 @@ locales:
 
       • Presnosť: celé čísla, 1, 2 alebo 4 desatinné miesta
 
+      • Oddeľovanie tisícov medzerou alebo čiarkou: 1 234.56 alebo 1,234.56
+
+      • Svetlý alebo tmavý motív, prípadne podľa systému
+
       • 40 jazykov, predvolená angličtina, s možnosťou riadiť sa jazykom zariadenia — vrátane rozložení sprava doľava
 
       • Telefón, tablet aj web: tá istá aplikácia na iPhone, iPade, Androide a ako webová aplikácia, ktorú si pridáte na plochu
@@ -2075,19 +2215,19 @@ locales:
       V ČEM JE FIXXE DRUGAČEN
 
 
-      • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar.
+      • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar. Vam je ljubši en vir? Izberite ga v nastavitvah — drugi ostanejo kot rezerva.
 
 
       • Deluje brez povezave — zadnji tečaji ostanejo v napravi, zato aplikacija računa tudi brez omrežja. Če pa so ti tečaji starejši od dneva, to pove naravnost, namesto da bi jih prikazovala kot sveže.
 
 
-      • Pametno zaokroževanje — izbrana natančnost je najmanjša možna, ne prisilni jopič: če bi zaokroževanje popačilo znesek za več kot 2 %, se decimalke dodajo same. 0,94 CHF nikoli ne postane „1", majhni zneski v kriptovalutah pa nikoli ne padejo na nič.
+      • Pametno zaokroževanje — izbrana natančnost je najmanjša možna, ne prisilni jopič: če bi zaokroževanje popačilo znesek za več kot 2 %, se decimalke dodajo same. 0,94 CHF nikoli ne postane „1", majhni zneski v kriptovalutah pa nikoli ne padejo na nič. Način zaokroževanja izberete sami: navzgor, da prikazani znesek nikoli ni manjši od dejanskega in denarja vedno zadošča, ali na najbližje.
 
 
       • Dinamična osnova — tečaji se preračunajo glede na valuto, ki jo urejate, ne glede na stalno. Brez preklapljanja sem in tja.
 
 
-      • Prilagoditev tečaja — nastavite odstotek za bančno provizijo, maržo ali izgube pri nakazilu (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene, zato jih ne boste zamenjali s tržnim tečajem.
+      • Prilagoditev tečaja — nastavite odstotek za bančno provizijo, maržo ali izgube pri nakazilu (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene, zato jih ne boste zamenjali s tržnim tečajem. Če je ne pustite vedno vklopljene, se po štirih urah brez uporabe sama izklopi, zato pozabljena provizija nikoli ne popači jutrišnjih številk.
 
 
       • Brez oglasov. Brez računov. Brez sledenja. Edino dovoljenje je dostop do interneta; vaš seznam, njegov vrstni red in nastavitve nikoli ne zapustijo naprave.
@@ -2114,6 +2254,10 @@ locales:
 
       • Natančnost: cela števila, 1, 2 ali 4 decimalke
 
+      • Ločilo tisočic s presledkom ali vejico: 1 234.56 ali 1,234.56
+
+      • Svetla ali temna tema ali kot sistem
+
       • 40 jezikov, privzeto angleščina, z možnostjo sledenja jeziku naprave — vključno s postavitvami od desne proti levi
 
       • Telefon, tablica in splet: ista aplikacija na iPhonu, iPadu, Androidu in kot spletna aplikacija, ki jo postavite na začetni zaslon
@@ -2133,19 +2277,19 @@ locales:
       ПО ЧЕМУ СЕ FIXXE РАЗЛИКУЈЕ
 
 
-      • Пет извора курса са аутоматском заменом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа.
+      • Пет извора курса са аутоматском заменом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа. Више волите један извор? Изаберите га у подешавањима — остали остају као резерва.
 
 
       • Ради без интернета — последњи курсеви остају на уређају, па апликација рачуна и без везе. А ако су ти курсеви старији од једног дана, то отворено каже уместо да их приказује као свеже.
 
 
-      • Паметно заокруживање — изабрана прецизност је минимум, а не лудачка кошуља: ако би заокруживање искривило износ за више од 2%, децимале се додају саме. 0,94 CHF никада не постаје „1", а мали износи у криптовалутама никада не падну на нулу.
+      • Паметно заокруживање — изабрана прецизност је минимум, а не лудачка кошуља: ако би заокруживање искривило износ за више од 2%, децимале се додају саме. 0,94 CHF никада не постаје „1", а мали износи у криптовалутама никада не падну на нулу. Ви бирате како се износи заокружују: навише, па приказани износ никад није мањи од стварног и новца је увек довољно, или на најближе.
 
 
       • Динамична основица — курсеви се прерачунавају према валути коју управо уређујете, а не према непроменљивој. Без пребацивања напред-назад.
 
 
-      • Корекција курса — задајте проценат за провизију банке, маржу или губитке при преносу (на пример +1,5%) и сви износи одмах показују стварни резултат. Прерачунате бројке су јасно означене, па их нећете помешати са тржишним курсом.
+      • Корекција курса — задајте проценат за провизију банке, маржу или губитке при преносу (на пример +1,5%) и сви износи одмах показују стварни резултат. Прерачунате бројке су јасно означене, па их нећете помешати са тржишним курсом. Ако је не оставите увек укључену, сама се искључује после четири сата без коришћења, па заборављена провизија никад не искривљује сутрашње бројке.
 
 
       • Без реклама. Без налога. Без праћења. Једина дозвола је приступ интернету; ваш списак, његов редослед и подешавања никада не напуштају уређај.
@@ -2172,6 +2316,10 @@ locales:
 
       • Прецизност: цели бројеви, 1, 2 или 4 децимале
 
+      • Одвајање хиљада размаком или зарезом: 1 234.56 или 1,234.56
+
+      • Светла или тамна тема, или као систем
+
       • 40 језика, енглески као подразумевани, уз могућност праћења језика уређаја — укључујући распореде здесна налево
 
       • Телефон, таблет и веб: иста апликација на iPhone-у, iPad-у, Android-у и као веб апликација коју можете поставити на почетни екран
@@ -2191,19 +2339,19 @@ locales:
       DET HÄR SKILJER FIXXE
 
 
-      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar.
+      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
 
 
       • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
 
 
-      • Smart avrundning — den precision du väljer är ett minimum, inte en tvångströja: skulle avrundningen snedvrida beloppet med mer än 2% läggs decimaler till av sig själva. 0,94 CHF blir aldrig ”1”, och små kryptobelopp faller aldrig till noll.
+      • Smart avrundning — den precision du väljer är ett minimum, inte en tvångströja: skulle avrundningen snedvrida beloppet med mer än 2% läggs decimaler till av sig själva. 0,94 CHF blir aldrig ”1”, och små kryptobelopp faller aldrig till noll. Du väljer själv hur belopp avrundas: uppåt, så att det visade beloppet aldrig är lägre än det verkliga och pengarna alltid räcker, eller till närmaste.
 
 
       • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
 
 
-      • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen.
+      • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen. Om du inte har den alltid på stänger den av sig själv efter fyra timmar utan användning, så att en bortglömd avgift aldrig snedvrider morgondagens siffror.
 
 
       • Ingen reklam. Inga konton. Ingen spårning. Enda behörigheten är internetåtkomst; din lista, dess ordning och dina inställningar lämnar aldrig enheten.
@@ -2230,6 +2378,10 @@ locales:
 
       • Precision: heltal, 1, 2 eller 4 decimaler
 
+      • Tusentalsavgränsare med mellanslag eller komma: 1 234.56 eller 1,234.56
+
+      • Ljust eller mörkt tema, eller följ systemet
+
       • 40 språk, engelska som standard, med möjlighet att följa enhetens språk — layouter från höger till vänster inkluderade
 
       • Telefon, surfplatta och webb: samma app på iPhone, iPad, Android och som webbapp du kan lägga på hemskärmen
@@ -2249,19 +2401,19 @@ locales:
       FIXXE ต่างออกไปอย่างไร
 
 
-      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย
+      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย อยากใช้แหล่งเดียว? เลือกได้ในการตั้งค่า — แหล่งอื่นยังคงเป็นตัวสำรอง
 
 
       • ใช้งานออฟไลน์ได้ — อัตราล่าสุดถูกเก็บไว้ในเครื่อง แอปจึงคำนวณต่อได้แม้ไม่มีสัญญาณ และถ้าอัตราเหล่านั้นเก่ากว่าหนึ่งวัน แอปจะบอกตรง ๆ แทนที่จะทำเป็นว่ายังใหม่อยู่
 
 
-      • ปัดเศษอย่างฉลาด — ความละเอียดที่คุณเลือกเป็นขั้นต่ำ ไม่ใช่กรอบบังคับ ถ้าการปัดเศษจะทำให้จำนวนคลาดเคลื่อนเกิน 2% ทศนิยมจะเพิ่มให้เอง 0.94 CHF ไม่มีวันกลายเป็น „1" และจำนวนคริปโตเล็ก ๆ ไม่มีวันเหลือศูนย์
+      • ปัดเศษอย่างฉลาด — ความละเอียดที่คุณเลือกเป็นขั้นต่ำ ไม่ใช่กรอบบังคับ ถ้าการปัดเศษจะทำให้จำนวนคลาดเคลื่อนเกิน 2% ทศนิยมจะเพิ่มให้เอง 0.94 CHF ไม่มีวันกลายเป็น „1" และจำนวนคริปโตเล็ก ๆ ไม่มีวันเหลือศูนย์ คุณเลือกวิธีปัดเศษได้เอง: ปัดขึ้น เพื่อให้ยอดที่แสดงไม่น้อยกว่ายอดจริงและเงินพอเสมอ หรือปัดเป็นค่าที่ใกล้ที่สุด
 
 
       • ฐานยืดหยุ่น — อัตราคำนวณใหม่เทียบกับสกุลเงินที่คุณกำลังพิมพ์ ไม่ใช่สกุลที่ตายตัว ไม่ต้องสลับไปมา
 
 
-      • การปรับอัตรา — กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน จึงไม่สับสนกับอัตราตลาด
+      • การปรับอัตรา — กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน จึงไม่สับสนกับอัตราตลาด หากไม่ได้ตั้งให้เปิดตลอด การปรับจะปิดเองเมื่อไม่ได้ใช้งานสี่ชั่วโมง ค่าธรรมเนียมที่ลืมไว้จึงไม่ทำให้ตัวเลขของวันพรุ่งนี้คลาดเคลื่อน
 
 
       • ไม่มีโฆษณา ไม่มีบัญชี ไม่มีการติดตาม สิทธิ์เดียวที่ขอคือการเข้าถึงอินเทอร์เน็ต รายการของคุณ ลำดับ และการตั้งค่าไม่เคยออกจากเครื่อง
@@ -2288,6 +2440,10 @@ locales:
 
       • ความละเอียด: จำนวนเต็ม 1, 2 หรือ 4 ตำแหน่งทศนิยม
 
+      • ตัวคั่นหลักพันเป็นเว้นวรรคหรือจุลภาค: 1 234.56 หรือ 1,234.56
+
+      • ธีมสว่างหรือมืด หรือตามระบบ
+
       • 40 ภาษา ค่าเริ่มต้นเป็นอังกฤษ พร้อมตัวเลือกให้ตามภาษาของเครื่อง — รวมถึงการจัดวางจากขวาไปซ้าย
 
       • โทรศัพท์ แท็บเล็ต และเว็บ: แอปเดียวกันบน iPhone, iPad, Android และเป็นเว็บแอปที่ติดตั้งลงหน้าจอหลักได้
@@ -2307,19 +2463,19 @@ locales:
       FIXXE''Yİ FARKLI KILAN NE
 
 
-      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
+      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
 
 
       • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
 
 
-      • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez.
+      • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez. Tutarların nasıl yuvarlanacağını siz seçersiniz: yukarı, böylece gösterilen tutar asla gerçekten az olmaz ve para hep yeter, ya da en yakına.
 
 
       • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
 
 
-      • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız.
+      • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız. Her zaman açık tutmadığınız sürece dört saat kullanılmadığında kendiliğinden kapanır; böylece unutulan bir komisyon yarının rakamlarını asla bozmaz.
 
 
       • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
@@ -2346,6 +2502,10 @@ locales:
 
       • Hassasiyet: tam sayılar, 1, 2 veya 4 ondalık basamak
 
+      • Binlik ayırıcı olarak boşluk veya virgül: 1 234.56 ya da 1,234.56
+
+      • Açık veya koyu tema ya da sistemle aynı
+
       • 40 dil, varsayılan İngilizce, cihaz dilini izleme seçeneğiyle — sağdan sola yerleşimler dahil
 
       • Telefon, tablet ve web: iPhone, iPad, Android''de ve ana ekrana kurabileceğiniz bir web uygulaması olarak aynı uygulama
@@ -2365,19 +2525,19 @@ locales:
       ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
 
 
       • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
 
 
-      • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không.
+      • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không. Bạn chọn cách làm tròn số tiền: làm tròn lên, để số tiền hiển thị không bao giờ ít hơn số thật và bạn luôn đủ tiền, hoặc làm tròn đến giá trị gần nhất.
 
 
       • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
 
 
-      • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường.
+      • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường. Trừ khi bạn để luôn bật, tính năng này sẽ tự tắt sau bốn giờ không sử dụng, nên một khoản phí bị quên sẽ không bao giờ làm sai lệch các con số của ngày mai.
 
 
       • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
@@ -2404,6 +2564,10 @@ locales:
 
       • Độ chính xác: số nguyên, 1, 2 hoặc 4 chữ số thập phân
 
+      • Phân cách hàng nghìn bằng dấu cách hoặc dấu phẩy: 1 234.56 hoặc 1,234.56
+
+      • Giao diện sáng hoặc tối, hoặc theo hệ thống
+
       • 40 ngôn ngữ, mặc định tiếng Anh, có tùy chọn theo ngôn ngữ của máy — kể cả bố cục từ phải sang trái
 
       • Điện thoại, máy tính bảng và web: cùng một ứng dụng trên iPhone, iPad, Android và dưới dạng ứng dụng web cài lên màn hình chính
@@ -2423,19 +2587,19 @@ locales:
       FIXXE 的不同之处
 
 
-      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。
+      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
 
 
       • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
 
 
-      • 智能取整——你选的小数位是下限，不是枷锁：若取整会让金额偏差超过 2%，小数位会自动增加。0.94 瑞士法郎不会变成「1」，小额加密货币也不会归零。
+      • 智能取整——你选的小数位是下限，不是枷锁：若取整会让金额偏差超过 2%，小数位会自动增加。0.94 瑞士法郎不会变成「1」，小额加密货币也不会归零。取整方式由你选择：向上取整，显示金额绝不低于实际金额，钱总是够用；或四舍五入。
 
 
       • 动态基准——汇率按你正在输入的那种货币重新计算，而不是某个固定货币。不必来回切换。
 
 
-      • 汇率调整——设置一个百分比来计入银行手续费、差价或转账损耗（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记，不会与市场汇率混淆。
+      • 汇率调整——设置一个百分比来计入银行手续费、差价或转账损耗（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记，不会与市场汇率混淆。除非设为始终开启，否则闲置 4 小时后会自动关闭，忘记关掉的手续费不会扭曲第二天的数字。
 
 
       • 没有广告。不用账号。不做追踪。唯一需要的权限是联网；你的货币列表、排列顺序和设置从不离开设备。
@@ -2461,6 +2625,10 @@ locales:
       • 知道来源的搜索：按供应方筛选货币，看看每种在哪里能查到，一点即可切换来源
 
       • 精度：整数，1 位、2 位或 4 位小数
+
+      • 千位分隔符可选空格或逗号：1 234.56 或 1,234.56
+
+      • 浅色或深色主题，或跟随系统
 
       • 40 种语言，默认英语，也可跟随设备语言——包括从右到左的版式
 

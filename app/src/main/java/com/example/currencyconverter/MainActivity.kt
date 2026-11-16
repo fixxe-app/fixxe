@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.currencyconverter.data.CurrencyRepository
 import com.example.currencyconverter.databinding.ActivityMainBinding
+import com.example.currencyconverter.ui.AmountFormat
 import com.example.currencyconverter.ui.CurrencyAdapter
 import com.example.currencyconverter.ui.CurrencyInfo
 import com.example.currencyconverter.ui.CurrencyViewModel
@@ -158,55 +159,52 @@ class MainActivity : AppCompatActivity() {
             vm.state.collect { s ->
                 // идёт запрос — крутим сам значок, отдельного индикатора нет
                 setRefreshSpinning(s.isLoading)
-                binding.tvCount.text = getString(R.string.selected, s.currencyItems.size)
-                // Перенос не должен рвать название источника («ExchangeRate-» / «API»)
-                // и не должен начинать строку с разделителя «·»: дефис внутри
-                // названия и пробел перед точкой делаем неразрывными.
-                val src = shortSource(s.source)
-                // Подпись в подвале — чьи курсы на экране. У ExchangeRate-API она
-                // дословная и со ссылкой: это условие их бесплатного тарифа.
-                val credit = CurrencyRepository.SOURCES.firstOrNull { it.name == s.source && it.name != "ExchangeRate-API" }
-                binding.btnAttribution.text = credit?.let { "Source: ${it.name}" } ?: getString(R.string.attribution)
-                attributionUrl = credit?.site ?: "https://www.exchangerate-api.com"
+                // ExchangeRate-API вверху не называем никогда: у него своя дословная
+                // подпись внизу, она нужна по условиям их бесплатного тарифа.
+                // Остальные источники — коротким именем рядом со временем.
+                val erApi = s.source == "ExchangeRate-API"
+                val src = if (erApi) "" else shortSource(s.source)
+                binding.btnAttribution.visibility = if (erApi) View.VISIBLE else View.GONE
+                // Перенос не должен начинать строку с разделителя «·»
                 fun tidy(t: String) = t.replace(" · ", "\u00A0· ")
-                binding.tvStatus.text = tidy(when {
+                // у строк «офлайн» и «устарели» источник — последним, после « · »
+                fun noSrc(t: String) = if (src.isEmpty()) t.trimEnd().removeSuffix("·").trimEnd() else t
+                val ready = s.error == null && s.lastUpdated.isNotEmpty()
+                val status = when {
                     s.error != null         -> getString(R.string.error_prefix, s.error)
                     s.lastUpdated.isEmpty() -> getString(R.string.loading)
                     // кэшу больше суток — предупреждаем заметно
-                    s.stale                 -> getString(R.string.rates_stale, s.lastUpdated, src)
-                    s.fromCache             -> getString(R.string.rates_offline, s.lastUpdated, src)
-                    else                    -> getString(R.string.updated, s.lastUpdated, src)
+                    s.stale                 -> noSrc(getString(R.string.rates_stale, s.lastUpdated, src))
+                    s.fromCache             -> noSrc(getString(R.string.rates_offline, s.lastUpdated, src))
+                    // с поправкой курсы уже не рыночные — строка говорит правду
+                    else -> listOf(getString(if (s.adjusted) R.string.adjusted_rates else R.string.market_rate),
+                                   s.lastUpdated, src).filter { it.isNotEmpty() }.joinToString(" · ")
+                }
+                // цвета из ресурсов, у каждой темы свой
+                val statusColor = getColor(when {
+                    s.stale     -> R.color.status_stale      // устаревшие курсы
+                    s.fromCache -> R.color.status_offline    // офлайн, но свежие
+                    s.adjusted && ready -> R.color.adjusted
+                    else        -> R.color.text_secondary
                 })
-                binding.tvStatus.setTextColor(
-                    when {
-                        // цвета из ресурсов, у каждой темы свой: зашитый #666666 в тёмной
-                        // теме давал 2.9:1 — строку статуса было почти не видно
-                        s.stale     -> getColor(R.color.status_stale)     // устаревшие курсы
-                        s.fromCache -> getColor(R.color.status_offline)   // офлайн, но свежие
-                        else        -> getColor(R.color.text_secondary)
-                    }
-                )
-                // Поправка к курсу: полоса под шапкой и подпись в подвале говорят,
-                // что курсы пересчитаны; сразу после сброса по сроку — сообщение
+                binding.tvStatus.setTextColor(statusColor)
+                binding.tvStatus.text = if (ready) withInfoIcon(tidy(status), statusColor) else tidy(status)
+                // Поправка к курсу: полоса под шапкой говорит, что курсы пересчитаны;
+                // сразу после сброса по сроку — сообщение с «Вернуть»
                 binding.adjustBanner.visibility = if (s.adjusted) View.VISIBLE else View.GONE
                 binding.adjustNotice.visibility =
                     if (!s.adjusted && s.adjustResetFrom != null) View.VISIBLE else View.GONE
                 binding.btnAdjustUndo.setOnClickListener { s.adjustResetFrom?.let { vm.setAdjust(it) } }
-                binding.btnSourceInfo.text =
-                    if (s.adjusted) getString(R.string.adjusted_rates) + " ⓘ" else getString(R.string.mid_market)
-                binding.btnSourceInfo.setTextColor(getColor(if (s.adjusted) R.color.adjusted else R.color.accent))
-                binding.btnSourceInfo.setTypeface(null,
-                    if (s.adjusted) android.graphics.Typeface.BOLD else android.graphics.Typeface.NORMAL)
+                adapter.roundUp = s.roundUp
                 adapter.decimalPlaces = s.decimalPlaces
                 adapter.grouping = s.grouping
                 adapter.submitList(s.currencyItems, s.activeCurrency)
             }
         }
 
-        binding.tvVersion.text = getString(R.string.version, BuildConfig.VERSION_NAME)
-        binding.btnSourceInfo.setOnClickListener { showSourceInfoDialog() }
+        binding.tvStatus.setOnClickListener { showSourceInfoDialog() }
         binding.adjustBanner.setOnClickListener { showAdjustDialog() }
-        binding.btnAttribution.setOnClickListener { openUrl(attributionUrl) }
+        binding.btnAttribution.setOnClickListener { openUrl("https://www.exchangerate-api.com") }
 
         binding.btnRefresh.setOnClickListener { vm.refresh() }
         binding.btnClear.setOnClickListener {
@@ -311,7 +309,7 @@ class MainActivity : AppCompatActivity() {
     /** Поправка к курсу. В отличие от остальных настроек окно не закрывается
      *  по выбору строки: иначе до галочки «Действует постоянно» было бы
      *  не добраться. */
-    private fun showAdjustDialog() {
+    private fun showAdjustDialog(fromSettings: Boolean = false) {
         dismissKeyboard()   // курсор уйдёт на базовую строку — поле ввода отпускаем
         val view = layoutInflater.inflate(R.layout.dialog_adjust, null)
         val plus = view.findViewById<TextView>(R.id.btnSignPlus)
@@ -406,56 +404,161 @@ class MainActivity : AppCompatActivity() {
             .setView(view)
             // набранное своё значение не теряется, если клавиатуру не закрывали
             .setPositiveButton(getString(R.string.close)) { _, _ -> if (custom.hasFocus()) applyCustom() }
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
     // Названия источников: индекс 0 = Авто (локализуется), дальше — бренды (не переводятся)
-    private var attributionUrl = "https://www.exchangerate-api.com"
 
     private fun sourceOptions(): Array<String> =
         arrayOf(getString(R.string.source_auto)) + CurrencyRepository.SOURCES.map { it.title }
 
+    /** Значок «i» в конце строки статуса: она нажимается и открывает пояснение. */
+    private fun withInfoIcon(text: String, color: Int): CharSequence {
+        val d = androidx.appcompat.content.res.AppCompatResources.getDrawable(this, R.drawable.ic_info)
+            ?.mutate() ?: return text
+        val size = (binding.tvStatus.textSize * 1.1f).toInt()
+        d.setBounds(0, 0, size, size)
+        d.setTint(color)
+        val sb = android.text.SpannableStringBuilder(text).append("\u00A0 ")
+        sb.setSpan(android.text.style.ImageSpan(d, android.text.style.ImageSpan.ALIGN_BOTTOM),
+            sb.length - 1, sb.length, android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        return sb
+    }
+
+    /** Настройки — одно окно на всех платформах: название слева, значение справа.
+     *  Поправка к курсу — отдельно, под линией, последней и фиолетовым цветом:
+     *  тем же, каким помечены суммы с поправкой. Внизу мелко — номер версии. */
     private fun showSettingsDialog() {
         val decimals = vm.getDecimalPlaces()
         val decimalLabel = if (decimals == 0) getString(R.string.precision_value_int)
                            else getString(R.string.precision_value_n, decimals)
         val srcName = sourceOptions()[vm.getSourceMode().coerceIn(0, CurrencyRepository.SOURCES.size)]
-
         val groupingLabel = groupingOptions()[vm.getGrouping().coerceIn(0, 2)]
-
         val themeLabel = themeOptions()[getSharedPreferences("axe_prefs", MODE_PRIVATE)
             .getInt("theme", 0).coerceIn(0, 2)]
-
         val adjustLabel = vm.getAdjustPct().let {
             if (it == 0.0) getString(R.string.adjust_off) else pctLabel(it)
         }
+        val roundLabel = getString(if (vm.getRoundUp()) R.string.rounding_up else R.string.rounding_nearest)
 
-        val items = arrayOf(
-            getString(R.string.setting_theme, themeLabel),
-            getString(R.string.setting_precision, decimalLabel),
-            getString(R.string.setting_grouping, groupingLabel),
-            getString(R.string.setting_source, srcName),
-            getString(R.string.setting_adjust, adjustLabel),
-            getString(R.string.setting_language, currentLanguageLabel())
-        )
-
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.settings))
-            .setItems(items) { _, which ->
-                when (which) {
-                    0 -> showThemeDialog()
-                    1 -> showDecimalDialog()
-                    2 -> showGroupingDialog()
-                    3 -> showSourceDialog()
-                    4 -> showAdjustDialog()
-                    5 -> showLanguageDialog()
-                }
+        val density = resources.displayMetrics.density
+        val box = android.widget.LinearLayout(this).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            setPadding(0, (4 * density).toInt(), 0, 0)
+        }
+        var dialog: AlertDialog? = null
+        fun row(label: String, value: String, tag: String, adjusted: Boolean = false, open: () -> Unit) {
+            val v = layoutInflater.inflate(R.layout.item_setting_row, box, false)
+            val tvLabel = v.findViewById<TextView>(R.id.tvLabel)
+            val tvValue = v.findViewById<TextView>(R.id.tvValue)
+            tvLabel.text = label
+            tvValue.text = value
+            if (adjusted) {
+                tvLabel.setTextColor(getColor(R.color.adjusted))
+                tvValue.setTextColor(getColor(R.color.adjusted))
+                v.findViewById<android.widget.ImageView>(R.id.ivChevron)
+                    .setColorFilter(getColor(R.color.adjusted))
             }
+            v.tag = tag        // по нему находят строку тесты
+            v.setOnClickListener { dialog?.dismiss(); open() }
+            box.addView(v)
+        }
+        row(getString(R.string.theme_title), themeLabel, "set-theme") { showThemeDialog(true) }
+        row(getString(R.string.precision_title), decimalLabel, "set-precision") { showDecimalDialog(true) }
+        row(getString(R.string.rounding_title), roundLabel, "set-rounding") { showRoundingDialog(true) }
+        row(getString(R.string.grouping_title), groupingLabel, "set-grouping") { showGroupingDialog(true) }
+        row(getString(R.string.source_title), srcName, "set-source") { showSourceDialog(true) }
+        row(getString(R.string.language_title), currentLanguageLabel(), "set-language") { showLanguageDialog(true) }
+        box.addView(View(this).apply {
+            layoutParams = android.widget.LinearLayout.LayoutParams(
+                android.widget.LinearLayout.LayoutParams.MATCH_PARENT, (1 * density).toInt()
+            ).apply { setMargins((24 * density).toInt(), (6 * density).toInt(), (16 * density).toInt(), (6 * density).toInt()) }
+            setBackgroundColor(getColor(R.color.divider))
+        })
+        row(getString(R.string.adjust_title), adjustLabel, "set-adjust", adjusted = true) { showAdjustDialog(true) }
+        // номер версии — мелко; нажатие копирует его для сообщения об ошибке
+        val version = getString(R.string.version_label, BuildConfig.VERSION_NAME)
+        box.addView(TextView(this).apply {
+            text = version
+            textSize = 11f
+            setTextColor(getColor(R.color.hint))
+            gravity = android.view.Gravity.CENTER
+            minHeight = (44 * density).toInt()
+            setPadding(0, (8 * density).toInt(), 0, 0)
+            tag = "set-version"
+            setOnClickListener {
+                (getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager)
+                    .setPrimaryClip(android.content.ClipData.newPlainText("FIXXE", "FIXXE " + BuildConfig.VERSION_NAME))
+                android.widget.Toast.makeText(this@MainActivity, R.string.copied, android.widget.Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        dialog = AlertDialog.Builder(this)
+            .setTitle(getString(R.string.settings))
+            .setView(android.widget.ScrollView(this).apply { addView(box) })
             .setNegativeButton(getString(R.string.close), null)
             .show()
     }
 
-    private fun showDecimalDialog() {
+    /** Экран сейчас пересоздаётся (сменили тему или язык) — окно настроек
+     *  поверх уходящего экрана не открываем. */
+    private var leavingScreen = false
+
+    /** Окно выбора, открытое из настроек: «Назад», выбор значения, системная
+     *  «Назад» и тап мимо окна возвращают в настройки, а не на главный экран.
+     *  Раньше окно настроек закрывалось при переходе, и возвращаться было некуда. */
+    private fun AlertDialog.backToSettings(fromSettings: Boolean): AlertDialog {
+        if (fromSettings) setOnDismissListener {
+            if (!isFinishing && !isDestroyed && !leavingScreen) showSettingsDialog()
+        }
+        return this
+    }
+
+    /** Округление сумм: вверх (как было всегда) или к ближайшему. Под каждым
+     *  вариантом — пример на текущем курсе двух первых валют списка. */
+    private fun showRoundingDialog(fromSettings: Boolean = false) {
+        val codes = vm.shownCodes()
+        val from = codes.getOrNull(0) ?: "EUR"
+        val to = codes.getOrNull(1) ?: "USD"
+        // Пример — первая сумма от 100, на которой способы дают разное: при
+        // «круглом» курсе на 100 оба показали бы одно и то же число.
+        fun fmt(v: Double, up: Boolean) = AmountFormat.format(v, vm.getDecimalPlaces(), vm.getGrouping(), up)
+        val base = (100..199).firstOrNull { a ->
+            vm.convertPlain(a.toDouble(), from, to)?.let { fmt(it, true) != fmt(it, false) } == true
+        } ?: 100
+        val exact = vm.convertPlain(base.toDouble(), from, to)
+        val ltr = androidx.core.text.BidiFormatter.getInstance(
+            resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL)
+        val items = listOf(true to R.string.rounding_up, false to R.string.rounding_nearest).map { (up, res) ->
+            val sb = android.text.SpannableStringBuilder(getString(res))
+            if (exact != null) {
+                val ex = "$base $from → " + fmt(exact, up) + " $to"
+                val start = sb.length + 1
+                sb.append("\n").append(ltr.unicodeWrap(ex, androidx.core.text.TextDirectionHeuristicsCompat.LTR))
+                sb.setSpan(android.text.style.RelativeSizeSpan(0.85f), start, sb.length, 0)
+                sb.setSpan(android.text.style.ForegroundColorSpan(getColor(R.color.text_secondary)), start, sb.length, 0)
+            }
+            sb as CharSequence
+        }.toTypedArray()
+        val density = resources.displayMetrics.density
+        val hint = TextView(this).apply {
+            text = getString(R.string.rounding_hint)
+            textSize = 13f
+            setTextColor(getColor(R.color.text_secondary))
+            setPadding((24 * density).toInt(), (4 * density).toInt(), (24 * density).toInt(), 0)
+        }
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.rounding_title))
+            .setSingleChoiceItems(items, if (vm.getRoundUp()) 0 else 1) { dialog, which ->
+                vm.setRoundUp(which == 0)
+                dialog.dismiss()
+            }
+            .setView(hint)
+            .setNegativeButton(getString(R.string.back), null)
+            .show().backToSettings(fromSettings)
+    }
+
+    private fun showDecimalDialog(fromSettings: Boolean = false) {
         val options = arrayOf(
             getString(R.string.prec_0), getString(R.string.prec_1),
             getString(R.string.prec_2), getString(R.string.prec_4)
@@ -470,14 +573,14 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             .setNegativeButton(getString(R.string.back), null)
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
     private fun groupingOptions() = arrayOf(
         getString(R.string.group_none), getString(R.string.group_space), getString(R.string.group_comma)
     )
 
-    private fun showGroupingDialog() {
+    private fun showGroupingDialog(fromSettings: Boolean = false) {
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.grouping_title))
             .setSingleChoiceItems(groupingOptions(), vm.getGrouping().coerceIn(0, 2)) { dialog, which ->
@@ -485,10 +588,10 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             .setNegativeButton(getString(R.string.back), null)
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
-    private fun showSourceDialog() {
+    private fun showSourceDialog(fromSettings: Boolean = false) {
         val checked = vm.getSourceMode().coerceIn(0, CurrencyRepository.SOURCES.size)
 
         AlertDialog.Builder(this)
@@ -498,7 +601,7 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             .setNegativeButton(getString(R.string.back), null)
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
     /** По умолчанию приложение на английском, а не на языке устройства
@@ -592,17 +695,18 @@ class MainActivity : AppCompatActivity() {
         getString(R.string.theme_system), getString(R.string.theme_light), getString(R.string.theme_dark)
     )
 
-    private fun showThemeDialog() {
+    private fun showThemeDialog(fromSettings: Boolean = false) {
         val prefs = getSharedPreferences("axe_prefs", MODE_PRIVATE)
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.theme_title))
             .setSingleChoiceItems(themeOptions(), prefs.getInt("theme", 0).coerceIn(0, 2)) { dialog, which ->
+                if (which != prefs.getInt("theme", 0)) leavingScreen = true   // экран пересоздастся
                 prefs.edit().putInt("theme", which).apply()
                 dialog.dismiss()
                 applyTheme()      // setDefaultNightMode сам пересоздаст экран
             }
             .setNegativeButton(getString(R.string.back), null)
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
     private fun applyDefaultLanguage() {
@@ -625,7 +729,7 @@ class MainActivity : AppCompatActivity() {
         return LANGUAGES.firstOrNull { it.first == tag }?.second ?: tag
     }
 
-    private fun showLanguageDialog() {
+    private fun showLanguageDialog(fromSettings: Boolean = false) {
         // Первый пункт — «системный», далее 40 языков в их родном написании
         val labels = arrayOf(getString(R.string.language_system)) + LANGUAGES.map { it.second }
         val current = AppCompatDelegate.getApplicationLocales()
@@ -639,11 +743,12 @@ class MainActivity : AppCompatActivity() {
                 val tag = if (which == 0) null else LANGUAGES[which - 1].first
                 val locales = if (tag == null) LocaleListCompat.getEmptyLocaleList()
                               else LocaleListCompat.forLanguageTags(tag)
+                if (which != checked) leavingScreen = true   // экран пересоздастся на новом языке
                 AppCompatDelegate.setApplicationLocales(locales)  // применяется + сохраняется автоматически
                 dialog.dismiss()
             }
             .setNegativeButton(getString(R.string.back), null)
-            .show()
+            .show().backToSettings(fromSettings)
     }
 
 

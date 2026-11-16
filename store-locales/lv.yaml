@@ -9,19 +9,19 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   AR KO FIXXE ATŠĶIRAS
 
 
-  • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko.
+  • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
 
 
   • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
 
 
-  • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei.
+  • Gudra noapaļošana — izvēlētā precizitāte ir minimums, nevis važas: ja noapaļošana izkropļotu summu vairāk nekā par 2%, cipari aiz komata pievienojas paši. 0,94 CHF nekad nekļūst par „1", un nelielas kriptovalūtas summas nekad nenokrīt līdz nullei. Kā noapaļot summas, izvēlaties jūs: uz augšu, lai parādītā summa nekad nebūtu mazāka par īsto un naudas vienmēr pietiktu, vai līdz tuvākajam.
 
 
   • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
 
 
-  • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu.
+  • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu. Ja neatstājat to vienmēr ieslēgtu, tā pati izslēdzas pēc četrām stundām bez lietošanas, tāpēc aizmirsta komisija nekad neizkropļos rītdienas skaitļus.
 
 
   • Bez reklāmām. Bez kontiem. Bez izsekošanas. Vienīgā atļauja ir piekļuve internetam; jūsu saraksts, tā secība un iestatījumi nekad nepamet ierīci.
@@ -48,6 +48,10 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
 
   • Precizitāte: veseli skaitļi, 1, 2 vai 4 cipari aiz komata
 
+  • Tūkstošu atdalītājs — atstarpe vai komats: 1 234.56 vai 1,234.56
+
+  • Gaišs vai tumšs motīvs vai kā sistēmā
+
   • 40 valodas, pēc noklusējuma angļu, ar iespēju sekot ierīces valodai — tostarp izkārtojumi no labās uz kreiso
 
   • Telefons, planšete un tīmeklis: tā pati lietotne iPhone, iPad, Android un kā tīmekļa lietotne, ko var ielikt sākuma ekrānā
@@ -58,7 +62,7 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   Rates By Exchange Rate API.
 
   '
-whats_new: "Jaunums: kursa korekcija. Iestatiet procentu bankas komisijai vai maržai (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti. Atrodama iestatījumos."
+whats_new: "Jauns izskats: vienots stils visām ikonām un uzrakstiem. Kursa laiks un avots tagad ir augšā — pieskarieties rindai, lai redzētu sīkāk. Jaunums iestatījumos: summu noapaļošana uz augšu vai līdz tuvākajam. Iestatījumi ir viens pārskatāms logs, versijas numurs ir apakšā."
 landing:
   page_title: FIXXE — valūtas konvertors
   install_title: Instalēšanas veidi

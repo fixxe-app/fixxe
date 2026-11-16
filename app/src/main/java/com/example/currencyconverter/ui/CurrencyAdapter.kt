@@ -1,7 +1,6 @@
 package com.example.currencyconverter.ui
 
 import android.annotation.SuppressLint
-import java.util.Locale
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.GestureDetector
@@ -26,12 +25,15 @@ class CurrencyAdapter(
     var onOrderChanged: ((List<String>) -> Unit)? = null
     var decimalPlaces: Int = 0
     var grouping: Int = 0
+    /** Округление сумм: true — вверх, false — к ближайшему. */
+    var roundUp: Boolean = true
 
     private var items: MutableList<CurrencyItem> = mutableListOf()
     private var activeCurrency: String = ""
     private var isDragging = false
     private var renderedDecimalPlaces: Int = 0
     private var renderedGrouping: Int = 0
+    private var renderedRoundUp: Boolean = true
 
     init { setHasStableIds(true) }
 
@@ -46,10 +48,12 @@ class CurrencyAdapter(
             override fun areContentsTheSame(o: Int, n: Int) = items[o] == newItems[n]
         })
         val prevActive = activeCurrency
-        val decimalsChanged = renderedDecimalPlaces != decimalPlaces || renderedGrouping != grouping
+        val decimalsChanged = renderedDecimalPlaces != decimalPlaces || renderedGrouping != grouping ||
+            renderedRoundUp != roundUp
         activeCurrency = newActive
         renderedDecimalPlaces = decimalPlaces
         renderedGrouping = grouping
+        renderedRoundUp = roundUp
         items = newItems.toMutableList()
         // Смена точности не меняет amount → DiffUtil не видит разницы.
         // Форсируем полный ребинд, чтобы все строки переформатировались.
@@ -191,43 +195,7 @@ class CurrencyAdapter(
             return changed
         }
 
-        // Умное округление вверх: выбранная точность — минимум, но если она
-        // искажает абсолютное значение больше чем на TOL (2%), добавляем знаки,
-        // чтобы у мелких валют не терялся финансовый смысл (0.0067 не станет «1»).
-        private fun fmtAmount(v: Double): String {
-            val n = decimalPlaces
-            if (v <= 0.0) return if (n == 0) "0" else String.format(Locale.ROOT, "%.${n}f", 0.0)
-            val tol = 0.02
-            var d = n
-            while (d < 8) {
-                val f = Math.pow(10.0, d.toDouble())
-                val ceiled = Math.ceil(v * f - 1e-9) / f
-                if (ceiled - v <= tol * v) break
-                d++
-            }
-            val f = Math.pow(10.0, d.toDouble())
-            val ceiled = Math.ceil(v * f - 1e-9) / f
-            // Locale.ROOT: иначе на русском, сербском, немецком десятичный знак —
-            // запятая, и она сталкивается с запятой-разделителем разрядов
-            // («1,,17»), а на арабском и персидском цифры выходят восточные
-            // (۱٫۱۷) — такое поле при правке разбиралось в 0, и обнулялись все строки.
-            val text = if (d == 0) ceiled.toLong().toString() else String.format(Locale.ROOT, "%.${d}f", ceiled)
-            return groupDigits(text)
-        }
-
-        /** Разделитель разрядов из настроек. Применяется только к целой части;
-         *  в поле, которое сейчас редактируют, группировки нет — она мешала бы
-         *  набору и прыгала бы под курсором. */
-        private fun groupDigits(text: String): String {
-            if (grouping == 0) return text
-            val sep = if (grouping == 1) "\u00A0" else ","   // неразрывный пробел, чтобы число не рвалось
-            val dot = text.indexOf('.')
-            val intPart = if (dot >= 0) text.substring(0, dot) else text
-            val rest = if (dot >= 0) text.substring(dot) else ""
-            if (intPart.length <= 3) return text
-            val grouped = intPart.reversed().chunked(3).joinToString(sep).reversed()
-            return grouped + rest
-        }
+        private fun fmtAmount(v: Double) = AmountFormat.format(v, decimalPlaces, grouping, roundUp)
 
         private fun String.parseAmount(): Double = AmountParser.parse(this, grouping)
     }

@@ -30,6 +30,8 @@ data class UiState(
     val decimalPlaces: Int = 0,
     /** разделитель разрядов: 0 — нет, 1 — пробел, 2 — запятая */
     val grouping: Int = 0,
+    /** округление сумм: true — вверх, false — к ближайшему */
+    val roundUp: Boolean = true,
     /** включена поправка к курсу: суммы и курсы на экране не рыночные */
     val adjusted: Boolean = false,
     /** поправку только что сбросили по сроку: прежний процент — для «Вернуть» */
@@ -83,6 +85,25 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         _state.value = _state.value.copy(grouping = mode)
     }
 
+    /** Округление сумм: вверх (по умолчанию — показанной суммы точно хватит) или к ближайшему. */
+    fun getRoundUp(): Boolean = prefs.getBoolean("round_up", true)
+
+    fun setRoundUp(up: Boolean) {
+        prefs.edit().putBoolean("round_up", up).apply()
+        _state.value = _state.value.copy(roundUp = up)
+    }
+
+    /** Сколько будет [amount] валюты [from] в валюте [to] по рыночному курсу — для примера
+     *  в окне округления. null, если курсов ещё нет. */
+    fun convertPlain(amount: Double, from: String, to: String): Double? {
+        val a = allRates[from] ?: return null
+        val b = allRates[to] ?: return null
+        return amount * b / a
+    }
+
+    /** Валюты в том порядке, в каком они стоят на экране. */
+    fun shownCodes(): List<String> = _state.value.currencyItems.map { it.code }
+
     // 0 = Авто (цепочка с резервом), 1..N = номер в CurrencyRepository.SOURCES
     fun getSourceMode(): Int = prefs.getInt("rate_source", 0)
 
@@ -135,7 +156,8 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     init {
-        _state.value = _state.value.copy(decimalPlaces = getDecimalPlaces(), grouping = getGrouping())
+        _state.value = _state.value.copy(decimalPlaces = getDecimalPlaces(), grouping = getGrouping(),
+            roundUp = getRoundUp())
         calc.setAdjust(prefs.getInt("adjust_pct_x100", 0) / 100.0)
         _state.value = _state.value.copy(adjusted = calc.adjusted)
         resetAdjustIfExpired()
@@ -170,8 +192,18 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun isStale(at: Long) = System.currentTimeMillis() - at > 24 * 60 * 60 * 1000L
 
-    private fun formatTime(at: Long) =
-        SimpleDateFormat("dd MMM yyyy HH:mm", Locale.getDefault()).format(Date(at))
+    /** Время курса для строки вверху: сегодня — только часы и минуты, иначе ещё
+     *  день и месяц. Год не нужен: курсам старше суток строка всё равно
+     *  предупреждает, что они устарели. */
+    private fun formatTime(at: Long): String {
+        val now = java.util.Calendar.getInstance()
+        val then = java.util.Calendar.getInstance().apply { timeInMillis = at }
+        val today = now.get(java.util.Calendar.YEAR) == then.get(java.util.Calendar.YEAR) &&
+            now.get(java.util.Calendar.DAY_OF_YEAR) == then.get(java.util.Calendar.DAY_OF_YEAR)
+        val pattern = if (today) "HH:mm"
+            else android.text.format.DateFormat.getBestDateTimePattern(Locale.getDefault(), "dMMM") + " HH:mm"
+        return SimpleDateFormat(pattern, Locale.getDefault()).format(Date(at))
+    }
 
     /** Показать кэш, пока идёт (или не удался) сетевой запрос. */
     private fun showCached() {
@@ -223,8 +255,7 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
                     allRates = snap.rates
                     cacheRates(snap.rates, snap.source)
                     // Показываем ВРЕМЯ НАШЕГО запроса — чтобы refresh был виден
-                    val fetchTime = SimpleDateFormat("dd MMM yyyy HH:mm", Locale.getDefault())
-                        .format(Date())
+                    val fetchTime = formatTime(System.currentTimeMillis())
                     _state.value = _state.value.copy(
                         isLoading = false,
                         lastUpdated = fetchTime,

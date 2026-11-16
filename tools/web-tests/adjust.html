@@ -61,7 +61,7 @@ frame.addEventListener('load', async () => {
     const problems = [];
     const check = (ok, msg) => { if (!ok) problems.push(msg); };
     const banner = d.getElementById('adjustBanner'), notice = d.getElementById('adjustNotice');
-    const info = d.getElementById('btnInfo');
+    const info = d.getElementById('status');
 
     const [A, B, C] = codes();
 
@@ -69,7 +69,8 @@ frame.addEventListener('load', async () => {
     await type(A, '100');
     check(!shown(banner), 'без поправки видна полоса «Курсы с поправкой»');
     check(marked().length === 0, 'без поправки строки помечены: ' + marked());
-    check(!info.classList.contains('adj'), 'без поправки подпись внизу помечена');
+    check(!info.classList.contains('adj'), 'без поправки строка статуса помечена');
+    check(info.textContent.startsWith(w.t('market_rate')), 'без поправки строка статуса не «' + w.t('market_rate') + '»: ' + info.textContent);
     check(near(num(B), 100 * cross(A, B)), `без поправки ${B} = ${num(B)}, ожидалось ${100 * cross(A, B)}`);
     const plainInfo = info.textContent;
 
@@ -89,8 +90,8 @@ frame.addEventListener('load', async () => {
       check(w.getComputedStyle(inp(c)).color === w.getComputedStyle(banner).color, `сумма ${c} не цветом поправки`);
     }
     check(w.getComputedStyle(inp(A)).color !== w.getComputedStyle(banner).color, `базовая ${A} цветом поправки`);
-    check(info.classList.contains('adj') && info.textContent.includes(w.t('adjusted_rates')) && info.textContent !== plainInfo,
-          'подпись внизу не сменилась: ' + info.textContent);
+    check(info.classList.contains('adj') && info.textContent.startsWith(w.t('adjusted_rates')) && info.textContent !== plainInfo,
+          'строка статуса не сменилась на «' + w.t('adjusted_rates') + '»: ' + info.textContent);
     check(!/1[.,]5\s*%|\+\s*1[.,]5/.test(d.getElementById('app').textContent), 'процент показан на главном экране');
 
     // 3. переходы без ввода
@@ -200,11 +201,38 @@ frame.addEventListener('load', async () => {
     check(w.eval('adjustPct') === 0 && !shown(banner), '«Выкл.» не выключило поправку');
     m().querySelector('[data-x]').click(); await wait(100);
     check(!m(), 'окно не закрылось');
-    // строка в настройках — сразу после источника курсов
+    // пункт поправки в настройках — последний, под линией, цветом сумм с поправкой
     w.eval('showSettings()'); await wait(150);
-    const rows = [...d.querySelectorAll('#modal-root .choice')].map(b => b.dataset.i);
-    check(rows.indexOf('5') === rows.indexOf('3') + 1, 'пункт поправки не сразу после источника: ' + rows);
+    const rows = [...d.querySelectorAll('#modal-root .set-row')].map(b => b.dataset.k);
+    check(rows.join() === 'theme,precision,rounding,grouping,source,language,adjust', 'порядок пунктов настроек: ' + rows);
+    const adjRow = d.querySelector('#modal-root .set-row[data-k="adjust"]');
+    check(adjRow && adjRow.previousElementSibling && adjRow.previousElementSibling.tagName === 'HR', 'перед пунктом поправки нет линии');
+    check(adjRow && w.getComputedStyle(adjRow).color === w.getComputedStyle(banner).color, 'пункт поправки не цветом сумм с поправкой');
+    check(!!d.querySelector('#modal-root .set-ver') && d.querySelector('#modal-root .set-ver').textContent === w.t('version_label', w.eval('APP_VERSION')),
+          'внизу настроек нет номера версии');
     w.eval('closeModal()');
+    // округление: вверх и к ближайшему, пункт настроек меняет суммы на экране
+    check(w.fmtAmount(112.06, true) === '113' && w.fmtAmount(112.06, false) === '112', 'fmtAmount: вверх/к ближайшему');
+    check(w.fmtAmount(0.0067, false) === '0.0067' && w.fmtAmount(11.01, true) === '11.1', 'fmtAmount: мелкие суммы и правило 2%');
+    const [P, Q] = codes();     // строки, что на экране сейчас
+    await type(P, '100'); await wait(100);
+    const exactQ = 100 * cross(P, Q);
+    w.eval('showSettings()'); await wait(150);
+    d.querySelector('#modal-root .set-row[data-k="rounding"]').click(); await wait(150);
+    const two = [...d.querySelectorAll('#modal-root .choice')];
+    check(two.length === 2, 'в окне округления не два варианта');
+    two[1].click(); await wait(150);
+    check(w.eval('roundUp') === false && w.localStorage.getItem('fixe.round_up') === 'false', 'выбор «к ближайшему» не сохранился');
+    check(!!d.querySelector('#modal-root .set-row'), 'выбор округления не вернул в настройки');
+    // «Назад» в окне выбора — тоже в настройки, а не на главный экран
+    d.querySelector('#modal-root .set-row[data-k="theme"]').click(); await wait(100);
+    d.querySelector('#modal-root [data-x]').click(); await wait(100);
+    check(!!d.querySelector('#modal-root .set-row'), '«Назад» в окне выбора закрыло настройки');
+    d.querySelector('#modal-root [data-x]').click(); await wait(100);
+    check(!d.querySelector('#modal-root .modal'), '«Закрыть» не закрыло настройки');
+    check(inp(Q).value === w.fmtAmount(exactQ, false), `к ближайшему: ${Q} = ${inp(Q).value}, ожидалось ${w.fmtAmount(exactQ, false)}`);
+    w.eval("roundUp = true; store.set('round_up', true); render()"); await wait(100);
+    check(inp(Q).value === w.fmtAmount(exactQ, true), `вверх: ${Q} = ${inp(Q).value}`);
     // справка о курсах: с поправкой — предупреждение с процентом
     w.eval('setAdjust(1.5); showInfo()'); await wait(150);
     const warn = d.querySelector('#modal-root .adjust-info');

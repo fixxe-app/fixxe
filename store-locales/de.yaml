@@ -9,19 +9,19 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   WAS FIXXE ANDERS MACHT
 
 
-  • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an.
+  • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
 
 
   • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
 
 
-  • Kluges Runden — die gewählte Genauigkeit ist ein Minimum, keine Zwangsjacke: Würde das Runden den Betrag um mehr als 2% verzerren, kommen automatisch weitere Nachkommastellen dazu. Aus 0,94 CHF wird nie „1“, und kleine Kryptobeträge fallen nie auf null.
+  • Kluges Runden — die gewählte Genauigkeit ist ein Minimum, keine Zwangsjacke: Würde das Runden den Betrag um mehr als 2% verzerren, kommen automatisch weitere Nachkommastellen dazu. Aus 0,94 CHF wird nie „1“, und kleine Kryptobeträge fallen nie auf null. Wie gerundet wird, bestimmen Sie: aufrunden, damit der angezeigte Betrag nie unter dem echten liegt und das Geld immer reicht, oder kaufmännisch runden.
 
 
   • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
 
 
-  • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln.
+  • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln. Sofern Sie sie nicht dauerhaft aktiv lassen, schaltet sie sich nach vier Stunden ohne Nutzung selbst ab, damit eine vergessene Gebühr nie die Zahlen von morgen verfälscht.
 
 
   • Keine Werbung. Keine Konten. Kein Tracking. Die einzige Berechtigung ist der Internetzugang; Ihre Liste, deren Reihenfolge und Ihre Einstellungen verlassen das Gerät nie.
@@ -48,6 +48,10 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
 
   • Genauigkeit: ganze Zahlen, 1, 2 oder 4 Nachkommastellen
 
+  • Tausendertrennzeichen: Leerzeichen oder Komma, 1 234.56 oder 1,234.56
+
+  • Helles oder dunkles Design oder wie das System
+
   • 40 Sprachen, Englisch als Standard, auf Wunsch der Gerätesprache folgend — auch mit Rechts-nach-links-Layouts
 
   • Telefon, Tablet und Web: dieselbe App auf iPhone, iPad, Android und als Web-App für den Startbildschirm
@@ -58,7 +62,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "Neu: Kursanpassung. Legen Sie einen Prozentsatz für Bankgebühr oder Marge fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert. Zu finden in den Einstellungen."
+whats_new: "Neuer Look: ein einheitlicher Stil für alle Symbole und Beschriftungen. Uhrzeit und Quelle des Kurses stehen jetzt oben — tippen Sie auf die Zeile für Details. Neu in den Einstellungen: Beträge aufrunden oder kaufmännisch runden. Die Einstellungen sind ein übersichtliches Fenster, die Versionsnummer steht unten."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

@@ -65,13 +65,17 @@ body{
   box-shadow:0 1px 3px rgba(0,0,0,.08);
   padding-top:calc(6px + env(safe-area-inset-top));
 }
-.badge{
-  background:var(--badge); color:var(--blue); font-weight:700; font-size:12px;
-  padding:3px 8px; border-radius:6px; white-space:nowrap;
-}
-.status{flex:1; margin-left:24px; font-size:12px; color:var(--gray3); white-space:normal; line-height:1.25; overflow-wrap:break-word}
+/* «Рыночный курс · 13:11 · источник ⓘ» — кнопка: открывает пояснение о курсах */
+.status{flex:1; min-width:0; margin-left:14px; min-height:44px; border:0; background:transparent; border-radius:6px; padding:2px 4px;
+  font:inherit; font-size:12px; color:var(--gray3); text-align:start; cursor:pointer;
+  white-space:normal; line-height:1.25; overflow-wrap:break-word}
+.status:active{background:var(--press)}
+.status.adj{color:var(--adjusted); font-weight:600}
+/* Значки — один стиль: контур линией 1.8, цвет от текста */
+svg.line{fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex:none}
+svg.info{width:1.15em; height:1.15em; vertical-align:-.22em}
 .icon-btn{
-  border:0; background:transparent; color:var(--blue);
+  border:0; background:transparent; color:var(--gray3);
   font-size:22px; width:44px; height:44px; border-radius:50%;
   cursor:pointer; display:flex; align-items:center; justify-content:center;
 }
@@ -79,7 +83,7 @@ body{
 /* идёт запрос — крутим сам значок, отдельного индикатора нет */
 @keyframes fixxe-spin{to{transform:rotate(360deg)}}
 #btnRefresh.loading svg{animation:fixxe-spin .9s linear infinite}
-.icon-btn.gear{color:var(--gray); font-size:20px; margin-right:9px}
+#btnSettings{margin-right:4px}
 
 /* Clear */
 .clear-row{background:var(--card); display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:2px 14px 2px 16px}
@@ -88,7 +92,7 @@ body{
 .clear-btn{justify-self:end}
 .clear-btn{
   border:0; background:transparent; color:var(--blue);
-  font-size:12px; letter-spacing:.08em; padding:6px 16px; cursor:pointer; border-radius:6px;
+  font-size:14px; padding:6px 16px; cursor:pointer; border-radius:6px;
 }
 .clear-btn:active{background:var(--press)}
 
@@ -107,7 +111,7 @@ body{
   width:44px; height:44px; margin:-4px; border:0; background:transparent; color:var(--faint);
   cursor:pointer; border-radius:50%; flex:none; display:flex; align-items:center; justify-content:center;
 }
-.del svg,.handle svg{width:18px; height:18px; fill:currentColor}
+.del svg,.handle svg{width:15px; height:15px; fill:currentColor}
 .del:active{background:var(--press)}
 .flag{width:36px; text-align:center; font-size:22px; flex:none; margin-left:4px}
 .code{font-weight:700; font-size:15px; margin-left:8px; letter-spacing:.02em}
@@ -116,27 +120,26 @@ body{
 .amount{
   width:130px; border:0; background:transparent; text-align:right;
   font-size:22px; font-weight:700; color:var(--ink); outline:none;
-  font-family:inherit; padding:0;
+  font-family:inherit; padding:0; font-variant-numeric:tabular-nums;
 }
 .amount::placeholder{color:var(--faint2)}
 .handle{
   width:44px; height:44px; margin:-4px -6px -4px -2px; border:0; background:transparent; color:var(--faint);
   cursor:grab; touch-action:none; flex:none; display:flex; align-items:center; justify-content:center;
 }
-.handle svg{width:22px; height:22px}
+.handle svg{width:18px; height:18px}
 .row2{display:flex; padding:0 12px 10px 90px}
 .name{flex:1; font-size:11px; color:var(--gray2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 .rate{font-size:10px; color:var(--gray2); text-align:right; white-space:nowrap; padding-left:8px}
 
 /* Footer */
 .footer{background:var(--card); box-shadow:0 -2px 8px rgba(0,0,0,.06); padding-bottom:env(safe-area-inset-bottom)}
-.footer-top{display:flex; align-items:center; height:48px; padding:0 16px 0 12px}
-.add-btn{border:0; background:transparent; color:var(--blue); font-size:14px; padding:6px; cursor:pointer; border-radius:6px}
-.info-btn{border:0; background:transparent; color:var(--blue); font-size:11px; padding:6px; margin-left:auto; cursor:pointer; border-radius:6px}
-.footer-bottom{display:flex; align-items:center; padding:0 12px 4px; gap:8px}
-.copyright{font-size:11px; color:var(--dim)}
-.attribution{flex:1; text-align:center; font-size:10px; color:var(--muted); text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
-.version{font-size:11px; color:var(--dim); white-space:nowrap}
+.footer-top{display:flex; align-items:center; gap:8px; min-height:52px; padding:0 12px}
+.add-btn{display:flex; align-items:center; gap:4px; border:0; background:transparent; color:var(--blue); font-size:14px; padding:6px; min-height:44px; cursor:pointer; border-radius:6px}
+/* подпись ExchangeRate-API — в той же строке, мелко; зона нажатия по высоте строки */
+.attribution{margin-inline-start:auto; display:flex; align-items:center; min-height:44px; padding:0 4px; font-size:10px; color:var(--muted);
+  text-decoration:none; white-space:nowrap}
+.attribution[hidden]{display:none}
 
 /* Modal */
 .overlay{
@@ -213,7 +216,21 @@ body{
 .card.adj .rate{color:var(--adjusted); font-weight:600}
 .card.adj .rate:not(:empty)::before{content:"%"; display:inline-block; width:12px; height:12px; line-height:12px; margin-inline-end:4px;
   border-radius:3px; background:var(--adjusted); color:var(--on-adjusted); font-size:9px; font-weight:800; text-align:center; vertical-align:1px}
-.info-btn.adj{color:var(--adjusted); font-weight:700}
+/* Окно настроек: название слева, значение справа, шеврон; поправка — под линией */
+.set-row{display:flex; align-items:center; gap:10px; width:100%; min-height:48px; border:0; background:transparent;
+  padding:6px 14px 6px 20px; font:inherit; font-size:15px; color:var(--ink); text-align:start; cursor:pointer}
+.set-row:active{background:var(--hover)}
+.set-row .k{flex:1; min-width:0}
+.set-row .v{max-width:50%; color:var(--gray3); font-size:13px; text-align:end}
+.set-row .chev{width:16px; height:16px; color:var(--faint)}
+[dir="rtl"] .set-row .chev{transform:scaleX(-1)}
+.set-row.adj, .set-row.adj .v, .set-row.adj .chev{color:var(--adjusted)}
+.set-sep{border:0; border-top:1px solid var(--divider, rgba(127,127,127,.25)); margin:6px 14px 6px 20px}
+.set-foot{display:flex; justify-content:center; align-items:center; gap:14px; padding:8px 0 2px}
+.set-ver, .set-apk{border:0; background:transparent; font:inherit; font-size:11px; color:var(--dim); min-height:36px; cursor:pointer; text-decoration:none; display:flex; align-items:center}
+.choice.two{align-items:flex-start}
+.choice.two small{display:block; font-size:12px; color:var(--gray3); font-weight:400; margin-top:2px}
+.modal .hint{margin:6px 20px 4px; font-size:12.5px; color:var(--gray3); line-height:1.4}
 .adjust-info{display:flex; gap:8px; margin:4px 20px 8px; padding:10px 12px; border-radius:10px; flex-shrink:0;
   background:var(--adjusted-bg); color:var(--adjusted); font-size:13px; line-height:1.4}
 .adjust-info .link{border:0; background:none; padding:6px 0 0; color:inherit; font:inherit; font-weight:700; text-decoration:underline; cursor:pointer}

@@ -53,7 +53,7 @@ struct ContentView: View {
         // включение и сброс поправки экранный диктор произносит вслух
         .onChange(of: vm.adjusted) { on in
             UIAccessibility.post(notification: .announcement,
-                                 argument: L10n.t(on ? "adjusted_rates" : "mid_market"))
+                                 argument: L10n.t(on ? "adjusted_rates" : "market_rate"))
         }
         .task {
             while !Task.isCancelled {
@@ -95,14 +95,21 @@ struct ContentView: View {
         }
     }
 
-    /// Подпись в подвале — чьи курсы сейчас на экране. У ExchangeRate-API
-    /// она дословная и со ссылкой: это условие их бесплатного тарифа.
-    private var attribution: (text: String, url: URL) {
-        if let src = RatesService.sources.first(where: { $0.name == vm.currentSource }),
-           src.name != "ExchangeRate-API", let url = URL(string: src.site) {
-            return ("Source: \(src.name)", url)
-        }
-        return (L10n.t("attribution"), URL(string: "https://www.exchangerate-api.com")!)
+    /// Подпись внизу — только у ExchangeRate-API: дословная и со ссылкой, это
+    /// условие их бесплатного тарифа. Остальные источники названы вверху.
+    private var showsAttribution: Bool { vm.currentSource == "ExchangeRate-API" }
+
+    /// Источник для строки вверху. ExchangeRate-API там не называем никогда:
+    /// у него своя подпись внизу.
+    private var statusSource: String { showsAttribution ? "" : shortSource(vm.currentSource) }
+
+    /// Строки «офлайн» и «устарели» кончаются на « · источник» — без источника
+    /// хвост убираем.
+    private func noSrc(_ s: String) -> String {
+        guard statusSource.isEmpty else { return s }
+        var t = s.trimmingCharacters(in: .whitespaces)
+        if t.hasSuffix("·") { t.removeLast() }
+        return t.trimmingCharacters(in: .whitespaces)
     }
 
     /// Строка не должна начинаться с разделителя «·» — привязываем его к слову слева.
@@ -110,21 +117,25 @@ struct ContentView: View {
         s.replacingOccurrences(of: " · ", with: "\u{00A0}· ")
     }
 
+    /// Значок «i» в конце строки статуса: она нажимается.
+    private var infoMark: Text { Text("\u{00A0}") + Text(Image(systemName: "info.circle")) }
+
     private var header: some View {
         HStack(spacing: 8) {
             Button { showSettings = true } label: {
                 Image(systemName: "gearshape")
-                    .font(.system(size: 22))
-                    .foregroundColor(.gray)
+                    .font(.system(size: 21, weight: .regular))
+                    .foregroundColor(.secondary)
                     .frame(width: 44, height: 44)   // зона нажатия под палец
                     .contentShape(Rectangle())
             }
             .accessibilityLabel(L10n.t("settings"))   // без подписи VoiceOver читал имя символа
+            .accessibilityIdentifier("settings")
             .padding(.trailing, 4)       // иначе значки стоят вплотную
             Button { Task { await vm.refresh() } } label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
-                    .font(.system(size: 22))
-                    .foregroundColor(.brandBlue)
+                    .font(.system(size: 21, weight: .regular))
+                    .foregroundColor(.secondary)
                     // идёт запрос — крутим сам значок, отдельного индикатора нет
                     .rotationEffect(.degrees(reduceMotion ? 0 : spin))
                     .opacity(reduceMotion && vm.isLoading ? 0.4 : 1)
@@ -144,31 +155,36 @@ struct ContentView: View {
                 }
             }
             .padding(.trailing, 4)
-            Group {
-                if let e = vm.errorText { Text("⚠ \(e)").foregroundColor(.secondary) }
-                else if vm.lastUpdated.isEmpty { Text(L10n.t("loading")).foregroundColor(.secondary) }
-                else if vm.stale {
-                    // кэшу больше суток — предупреждаем заметно
-                    Text(tidy(L10n.t("rates_stale", vm.lastUpdated, shortSource(vm.currentSource))))
-                        .foregroundColor(Color.staleRed)
-                } else if vm.fromCache {
-                    Text(tidy(L10n.t("rates_offline", vm.lastUpdated, shortSource(vm.currentSource))))
-                        .foregroundColor(Color.staleBrown)
-                } else {
-                    Text(tidy(L10n.t("updated", vm.lastUpdated, shortSource(vm.currentSource)))).foregroundColor(.secondary)
+            // «Рыночный курс · 13:11 · источник ⓘ». Нажатие — пояснение о курсах
+            // (раньше это была отдельная ссылка внизу). Счётчика валют больше нет.
+            Button { if !vm.lastUpdated.isEmpty { showInfo = true } } label: {
+                Group {
+                    if let e = vm.errorText { Text("⚠ \(e)").foregroundColor(.secondary) }
+                    else if vm.lastUpdated.isEmpty { Text(L10n.t("loading")).foregroundColor(.secondary) }
+                    else if vm.stale {
+                        // кэшу больше суток — предупреждаем заметно
+                        (Text(tidy(noSrc(L10n.t("rates_stale", vm.lastUpdated, statusSource)))) + infoMark)
+                            .foregroundColor(Color.staleRed)
+                    } else if vm.fromCache {
+                        (Text(tidy(noSrc(L10n.t("rates_offline", vm.lastUpdated, statusSource)))) + infoMark)
+                            .foregroundColor(Color.staleBrown)
+                    } else {
+                        // с поправкой курсы уже не рыночные — строка говорит правду
+                        (Text(tidy([L10n.t(vm.adjusted ? "adjusted_rates" : "market_rate"), vm.lastUpdated, statusSource]
+                                    .filter { !$0.isEmpty }.joined(separator: " · "))) + infoMark)
+                            .fontWeight(vm.adjusted ? .semibold : .regular)
+                            .foregroundColor(vm.adjusted ? Color.adjusted : .secondary)
+                    }
                 }
+                .font(.caption)
+                .multilineTextAlignment(.leading)
+                // при самом крупном шрифте статус не расползается на пять строк
+                .lineLimit(4).minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+                .contentShape(Rectangle())
             }
-            .font(.caption)
-            // при самом крупном шрифте статус не расползается на пять строк
-            .lineLimit(4).minimumScaleFactor(0.7)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            Text(L10n.t("selected", vm.currencies.count))
-                .font(.caption.bold())
-                .lineLimit(1).minimumScaleFactor(0.6)   // не «Selecte / d: 7»
-                .padding(.horizontal, 8).padding(.vertical, 3)
-                .background(Color.badgeBg)
-                .foregroundColor(.brandBlue)
-                .cornerRadius(6)
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("rates-info")
         }
         .padding(.horizontal, 14).padding(.vertical, 10)
         .readableWidth()
@@ -248,7 +264,7 @@ struct ContentView: View {
                     focusedCode = nil
                     showClearConfirm = true
                 }
-                .font(.caption).foregroundColor(.brandBlue)
+                .font(.subheadline).foregroundColor(.brandBlue)
             }
         }
         .padding(.horizontal, 16).padding(.vertical, 4)
@@ -306,30 +322,28 @@ struct ContentView: View {
         )
     }
 
+    /// Подвал — одна строка: «＋ Добавить валюту» и, только у ExchangeRate-API, их
+    /// подпись со ссылкой. Номер версии — в настройках.
     private var footer: some View {
-        VStack(spacing: 2) {
-            HStack {
-                Button("＋ " + L10n.t("add_currency").replacingOccurrences(of: "＋ ", with: "")) {
-                    showAdd = true
+        HStack(spacing: 8) {
+            Button { showAdd = true } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "plus").font(.subheadline)
+                    Text(L10n.t("add_currency"))
                 }
-                .font(.subheadline).foregroundColor(.brandBlue)
-                Spacer()
-                // с поправкой курсы уже не среднерыночные — подпись говорит правду
-                Button(vm.adjusted ? L10n.t("adjusted_rates") + " ⓘ" : L10n.t("mid_market")) { showInfo = true }
-                    .font(.caption.weight(vm.adjusted ? .semibold : .regular))
-                    .foregroundColor(vm.adjusted ? .adjusted : .brandBlue)
-                    .accessibilityIdentifier("rates-info")
+                .frame(minHeight: 44)
             }
-            HStack {
-                Link(attribution.text, destination: attribution.url)
+            .font(.subheadline).foregroundColor(.brandBlue)
+            Spacer(minLength: 4)
+            if showsAttribution {
+                Link(L10n.t("attribution"), destination: URL(string: "https://www.exchangerate-api.com")!)
                     .font(.caption2).foregroundColor(Color.muted)
+                    .lineLimit(1)
+                    .frame(minHeight: 44)
                     .accessibilityIdentifier("attribution")
-                Spacer()
-                Text(L10n.t("version", AppInfo.version))
-                    .font(.caption2).foregroundColor(Color.textDim)
             }
         }
-        .padding(.horizontal, 14).padding(.vertical, 8)
+        .padding(.horizontal, 14).padding(.vertical, 4)
         .readableWidth()
         .background(Color.surface)
     }

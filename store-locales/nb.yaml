@@ -9,19 +9,19 @@ description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurse
   DETTE GJØR FIXXE ANNERLEDES
 
 
-  • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter.
+  • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
 
 
   • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
 
 
-  • Smart avrunding — presisjonen du velger er et minimum, ikke en tvangstrøye: ville avrundingen forvrenge beløpet med mer enn 2 %, legges desimaler til av seg selv. 0,94 CHF blir aldri «1», og små kryptobeløp faller aldri til null.
+  • Smart avrunding — presisjonen du velger er et minimum, ikke en tvangstrøye: ville avrundingen forvrenge beløpet med mer enn 2 %, legges desimaler til av seg selv. 0,94 CHF blir aldri «1», og små kryptobeløp faller aldri til null. Du velger selv hvordan beløp avrundes: opp, så det viste beløpet aldri er mindre enn det faktiske og pengene alltid strekker til, eller til nærmeste.
 
 
   • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
 
 
-  • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen.
+  • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen. Med mindre du har den alltid på, slår den seg av selv etter fire timer uten bruk, så et glemt gebyr aldri forvrenger morgendagens tall.
 
 
   • Ingen reklame. Ingen kontoer. Ingen sporing. Eneste tillatelse er internettilgang; listen din, rekkefølgen og innstillingene forlater aldri enheten.
@@ -48,6 +48,10 @@ description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurse
 
   • Presisjon: hele tall, 1, 2 eller 4 desimaler
 
+  • Tusenskille med mellomrom eller komma: 1 234.56 eller 1,234.56
+
+  • Lyst eller mørkt tema, eller følg systemet
+
   • 40 språk, engelsk som standard, med mulighet for å følge språket på enheten — også oppsett fra høyre mot venstre
 
   • Telefon, nettbrett og web: den samme appen på iPhone, iPad, Android og som nettapp du kan legge på startskjermen
@@ -58,7 +62,7 @@ description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nytt: kursjustering. Angi en prosentsats for bankens gebyr eller margin (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket. Finnes i Innstillinger."
+whats_new: "Nytt utseende: én stil for alle ikoner og etiketter. Tidspunkt og kilde for kursen står nå øverst — trykk på linjen for detaljer. Nytt i Innstillinger: rund av beløp opp eller til nærmeste. Innstillinger er ett oversiktlig vindu, med versjonsnummeret nederst."
 landing:
   page_title: FIXXE — valutakalkulator
   install_title: Måter å installere på

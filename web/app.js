@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.66';
+const APP_VERSION = '1.67';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -15,6 +15,8 @@ let displayCurrencies = (()=>{
   return uniq;
 })();
 let decimalPlaces = store.get('decimals', 0);
+// округление сумм: true — вверх (показанной суммы точно хватит), false — к ближайшему
+let roundUp = store.get('round_up', true);
 // разделитель разрядов: 0 — нет, 1 — пробел, 2 — запятая
 let grouping = store.get('grouping', 0);
 // оформление: 0 — как в системе, 1 — светлое, 2 — тёмное
@@ -123,20 +125,17 @@ function fmtRate(r){
 // Умное округление вверх: выбранная точность — минимум, но если она искажает
 // абсолютное значение больше чем на TOL (2%), добавляем знаки (мелкие валюты
 // не превращаются в «1»).
-function fmtAmount(v){
+function fmtAmount(v, up = roundUp){
   const n = decimalPlaces;
   if (v <= 0) return n===0 ? '0' : (0).toFixed(n);
   const TOL = 0.02;
+  // вверх — показанная сумма не меньше настоящей; иначе к ближайшему.
+  // Если точность искажает сумму больше чем на 2%, добавляем знаки.
+  const rnd = d => { const f = Math.pow(10, d); return up ? Math.ceil(v*f - 1e-9)/f : Math.round(v*f)/f; };
   let d = n;
-  while (d < 8){
-    const f = Math.pow(10, d);
-    const ceiled = Math.ceil(v*f - 1e-9)/f;
-    if (ceiled - v <= TOL*v) break;
-    d++;
-  }
-  const f = Math.pow(10, d);
-  const ceiled = Math.ceil(v*f - 1e-9)/f;
-  return groupDigits(d===0 ? String(Math.round(ceiled)) : ceiled.toFixed(d));
+  while (d < 8 && Math.abs(rnd(d) - v) > TOL*v) d++;
+  const r = rnd(d);
+  return groupDigits(d===0 ? String(Math.round(r)) : r.toFixed(d));
 }
 // Группируем только целую часть. В поле, которое сейчас редактируют,
 // группировки нет — она мешала бы набору и прыгала бы под курсором.
@@ -238,9 +237,11 @@ const SOURCE_META = [
   { name:'Frankfurter (ECB)',short:'ECB',    color:'#FB8C00', site:'https://frankfurter.dev' },
 ];
 // Подпись в подвале — чьи курсы сейчас на экране. Пока курсов нет — прежняя.
+// Подпись внизу — только у ExchangeRate-API: дословная и со ссылкой, это условие
+// их бесплатного тарифа. У остальных источников подписи нет, их имя — вверху.
 function attribution(){
-  const m = SOURCE_META.find(s => s.name === currentSource) || SOURCE_META.find(s => s.credit);
-  return { text: m.credit ? t('attribution') : 'Source: ' + m.name, href: m.site };
+  const m = SOURCE_META.find(s => s.name === currentSource);
+  return m && m.credit ? { text: t('attribution'), href: m.site } : null;
 }
 // Наборы кодов валют по каждому источнику (какая валюта где есть)
 let sourceCodes = { 'Coinbase':null, 'FXRatesAPI':null, 'ExchangeRate-API':null, 'F.A.':null, 'Frankfurter (ECB)':null };
@@ -305,10 +306,16 @@ async function fetchRates(){
   throw lastErr || new Error('no sources');
 }
 
+// Время курса для строки вверху: сегодня — только часы и минуты, иначе ещё день
+// и месяц. Год не нужен: курсам старше суток строка всё равно говорит, что устарели.
 function fmtTime(d){
   const pad = n => String(n).padStart(2,'0');
-  const mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()];
-  return `${pad(d.getDate())} ${mon} ${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  const hm = `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  if (d.toDateString() === new Date().toDateString()) return hm;
+  let day;
+  try { day = new Intl.DateTimeFormat(resolveLang(), {day:'numeric', month:'short'}).format(d); }
+  catch(e){ day = `${d.getDate()} ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]}`; }
+  return `${day} ${hm}`;
 }
 
 // Курсы держим в кэше: без сети приложение всё равно считает,
@@ -377,7 +384,12 @@ async function refresh(force){
 const $ = s => document.querySelector(s);
 const listEl = () => $('#list');
 
-function setStatus(txt){ $('#status').textContent = txt; }
+const ICON_INFO = '<svg viewBox="0 0 24 24" class="line info" aria-hidden="true"><path d="M21 12A9 9 0 1 1 3 12A9 9 0 1 1 21 12ZM12 16.5V11M12 7.6V7.5"/></svg>';
+// текст статуса и значок «i»: строка нажимается и открывает пояснение о курсах
+function setStatus(txt){
+  const el = $('#status'); el.textContent = txt;
+  if (lastUpdated) el.insertAdjacentHTML('beforeend', '\u00A0' + ICON_INFO);
+}
 
 // Иконки Material вместо символов «✕» и «⠿»: экранный диктор читал их как
 // «знак умножения» и «шрифт Брайля», а рисовались они по-разному в каждом шрифте.
@@ -391,24 +403,26 @@ function render(){
   if (uniq.length !== displayCurrencies.length){ displayCurrencies = uniq; store.set('currencies', displayCurrencies); }
   // static labels
   $('#btnClear').textContent = t('clear');
-  $('#btnAdd').textContent = t('add_currency');
-  // с поправкой курсы уже не среднерыночные — подпись говорит правду
-  $('#btnInfo').textContent = adjusted() ? t('adjusted_rates') + ' ⓘ' : t('mid_market');
-  $('#btnInfo').classList.toggle('adj', adjusted());
+  $('#btnAddText').textContent = t('add_currency');
   drawAdjustStrip();
-  { const a = attribution(); $('#attribution').textContent = a.text; $('#attribution').href = a.href; }
-  $('#version').textContent = t('version', APP_VERSION);
-  $('#badge').textContent = t('selected', displayCurrencies.length);
+  { const a = attribution(), el = $('#attribution');
+    el.hidden = !a; if (a){ el.textContent = a.text; el.href = a.href; } }
   if (lastUpdated){
+    // ExchangeRate-API вверху не называем: у него своя подпись внизу
+    const src = currentSource === 'ExchangeRate-API' ? '' : shortSource(currentSource);
+    // у строк «офлайн» и «устарели» источник последний, после « · »
+    const noSrc = x => src ? x : x.replace(/\s*·\s*$/, '');
     const el = $('#status');
+    el.classList.toggle('adj', adjusted() && !stale && !fromCache);
     if (stale){
-      setStatus(tidy(t('rates_stale', lastUpdated, shortSource(currentSource))));
+      setStatus(tidy(noSrc(t('rates_stale', lastUpdated, src))));
       el.style.color = 'var(--stale)';      // устаревшие курсы — заметно
     } else if (fromCache){
-      setStatus(tidy(t('rates_offline', lastUpdated, shortSource(currentSource))));
+      setStatus(tidy(noSrc(t('rates_offline', lastUpdated, src))));
       el.style.color = 'var(--offline)';
     } else {
-      setStatus(tidy(t('updated', lastUpdated, shortSource(currentSource))));
+      // с поправкой курсы уже не рыночные — строка говорит правду
+      setStatus(tidy([t(adjusted() ? 'adjusted_rates' : 'market_rate'), lastUpdated, src].filter(Boolean).join(' · ')));
       el.style.color = '';
     }
   }
@@ -576,7 +590,13 @@ function attachDrag(handle, card){
 }
 
 /* ---------- Modals ---------- */
-function closeModal(){ $('#modal-root').innerHTML=''; }
+// Окно выбора, открытое из настроек: «Назад», выбор значения и тап мимо окна
+// возвращают в настройки, а не на главный экран.
+let backToSettings = false;
+function closeModal(){
+  if (backToSettings){ backToSettings = false; showSettings(); return; }
+  $('#modal-root').innerHTML='';
+}
 function modal(html){
   const root = $('#modal-root');
   root.innerHTML = `<div class="overlay">${html}</div>`;
@@ -722,6 +742,10 @@ function showInfo(){
 
 function sourceOptions(){ return [t('source_auto'), ...SOURCE_META.map(s => s.name)]; }
 
+const ICON_CHEV = '<svg viewBox="0 0 24 24" class="line chev" aria-hidden="true"><path d="M9.5 6L15.5 12L9.5 18"/></svg>';
+// Настройки — одно окно на всех платформах: название слева, значение справа.
+// Поправка к курсу — отдельно, под линией, последней и цветом сумм с поправкой.
+// Внизу мелко — номер версии (нажатие копирует) и APK для Android без Google Play.
 function showSettings(){
   const dec = decimalPlaces===0 ? t('precision_value_int') : t('precision_value_n', decimalPlaces);
   const src = sourceOptions()[Math.min(Math.max(sourceMode,0),SOURCES.length)];
@@ -730,25 +754,58 @@ function showSettings(){
   const langLabel = (lang && lang !== SYSTEM_LANG)
     ? (LANGUAGES.find(l=>l[0]===lang)?.[1]||lang)
     : (lang === SYSTEM_LANG ? t('language_system') : (LANGUAGES.find(l=>l[0]==='en')?.[1]||'English'));
-  const m = modal(`<div class="modal">
+  const adj = adjusted() ? `<span dir="ltr">${adjustLabel(adjustPct)}</span>` : t('adjust_off');
+  const row = (k, label, value, cls='') =>
+    `<button class="set-row ${cls}" data-k="${k}"><span class="k">${label}</span><span class="v">${value}</span>${ICON_CHEV}</button>`;
+  const m = modal(`<div class="modal settings">
     <h3>${t('settings')}</h3>
     <div class="list-choice">
-      <button class="choice" data-i="0">${t('setting_theme', thm)}</button>
-      <button class="choice" data-i="1">${t('setting_precision', dec)}</button>
-      <button class="choice" data-i="2">${t('setting_grouping', grp)}</button>
-      <button class="choice" data-i="3">${t('setting_source', src)}</button>
-      <button class="choice" data-i="5">${t('setting_adjust', adjusted() ? `<span dir="ltr">${adjustLabel(adjustPct)}</span>` : t('adjust_off'))}</button>
-      <button class="choice" data-i="4">${t('setting_language', langLabel)}</button>
+      ${row('theme', t('theme_title'), thm)}
+      ${row('precision', t('precision_title'), dec)}
+      ${row('rounding', t('rounding_title'), t(roundUp ? 'rounding_up' : 'rounding_nearest'))}
+      ${row('grouping', t('grouping_title'), grp)}
+      ${row('source', t('source_title'), src)}
+      ${row('language', t('language_title'), langLabel)}
+      <hr class="set-sep">
+      ${row('adjust', t('adjust_title'), adj, 'adj')}
+      <div class="set-foot"><button class="set-ver" data-ver>${t('version_label', APP_VERSION)}</button>
+        <a class="set-apk" href="FIXXE.apk" download>Android APK</a></div>
     </div>
     <div class="actions"><button data-x>${t('close')}</button></div>
   </div>`);
   m.querySelector('[data-x]').onclick = closeModal;
-  m.querySelector('[data-i="0"]').onclick = showTheme;
-  m.querySelector('[data-i="1"]').onclick = showPrecision;
-  m.querySelector('[data-i="2"]').onclick = showGrouping;
-  m.querySelector('[data-i="3"]').onclick = showSource;
-  m.querySelector('[data-i="4"]').onclick = showLanguage;
-  m.querySelector('[data-i="5"]').onclick = showAdjust;
+  const open = { theme:showTheme, precision:showPrecision, rounding:showRounding, grouping:showGrouping,
+                 source:showSource, language:showLanguage, adjust:showAdjust };
+  m.querySelectorAll('.set-row').forEach(b => b.onclick = () => { backToSettings = true; open[b.dataset.k](); });
+  const ver = m.querySelector('[data-ver]');
+  ver.onclick = () => {
+    const done = () => { ver.textContent = t('copied'); setTimeout(() => { ver.textContent = t('version_label', APP_VERSION); }, 1500); };
+    try { navigator.clipboard.writeText('FIXXE ' + APP_VERSION).then(done, () => {}); } catch(e){}
+  };
+}
+
+// Округление сумм: вверх (как было всегда) или к ближайшему. Под каждым
+// вариантом — пример на текущем курсе двух первых валют списка.
+function showRounding(){
+  const [a = 'EUR', b = 'USD'] = displayCurrencies.filter(c => allRates[c]);
+  // пример — первая сумма от 100, на которой способы дают разное: при «круглом»
+  // курсе на 100 оба показали бы одно и то же число
+  const conv = n => allRates[a] && allRates[b] ? n * allRates[b] / allRates[a] : null;
+  let base = 100;
+  for (let n = 100; n < 200; n++){ const v = conv(n); if (v !== null && fmtAmount(v, true) !== fmtAmount(v, false)){ base = n; break; } }
+  const exact = conv(base);
+  const ex = up => exact === null ? '' : `<small dir="ltr">${base} ${a} → ${fmtAmount(exact, up)} ${b}</small>`;
+  const opts = [[true, 'rounding_up'], [false, 'rounding_nearest']];
+  const m = modal(`<div class="modal">
+    <h3>${t('rounding_title')}</h3>
+    <div class="list-choice">${opts.map(([up, k], i) => `<button class="choice two ${up===roundUp?'sel':''}" data-i="${i}"><span class="radio">${up===roundUp?'◉':'○'}</span><span>${t(k)}${ex(up)}</span></button>`).join('')}
+      <p class="hint">${t('rounding_hint')}</p></div>
+    <div class="actions"><button data-x>${t('back')}</button></div>
+  </div>`);
+  m.querySelector('[data-x]').onclick = closeModal;
+  m.querySelectorAll('.choice').forEach(btn => btn.onclick = () => {
+    roundUp = opts[+btn.dataset.i][0]; store.set('round_up', roundUp); closeModal(); render();
+  });
 }
 
 /* ---------- Поправка к курсу: полоса, окно настройки, сброс ---------- */
@@ -863,7 +920,7 @@ function showLanguage(){
 $('#btnRefresh').onclick = () => refresh();
 $('#btnClear').onclick = confirmClear;
 $('#btnAdd').onclick = showAdd;
-$('#btnInfo').onclick = showInfo;
+$('#status').onclick = () => { if (lastUpdated) showInfo(); };
 $('#adjustBanner').onclick = showAdjust;
 $('#adjustUndo').onclick = ()=>{ if (adjustResetFrom !== null) setAdjust(adjustResetFrom); };
 $('#btnSettings').onclick = showSettings;

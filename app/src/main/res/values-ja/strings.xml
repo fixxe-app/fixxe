@@ -6,25 +6,18 @@
     <string name="back">戻る</string>
     <string name="close">閉じる</string>
     <string name="delete">削除</string>
-    <string name="selected">選択中: %1$d</string>
     <string name="loading">読み込み中…</string>
-    <string name="updated">更新 %1$s · %2$s</string>
     <string name="error_prefix">⚠ %1$s</string>
     <string name="network_error">ネットワークエラー</string>
     <string name="clear">クリア</string>
-    <string name="add_currency">＋ 通貨を追加</string>
-    <string name="mid_market">仲値レート ⓘ</string>
+    <string name="add_currency">通貨を追加</string>
     <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
-    <string name="version">ver. %1$s</string>
     <string name="base_currency">基準通貨</string>
     <string name="delete_currency_title">通貨を削除しますか？</string>
     <string name="delete_currency_msg">%1$s — %2$s をリストから削除しますか？</string>
     <string name="add_currency_title">%1$d 種類の利用可能な通貨から選択</string>
     <string name="search_hint">コードまたは名称…</string>
     <string name="settings">設定</string>
-    <string name="setting_precision">表示精度:  %1$s</string>
-    <string name="setting_source">レートソース:  %1$s</string>
-    <string name="setting_language">🌐 言語:  %1$s</string>
     <string name="precision_title">表示精度</string>
     <string name="prec_0">0 — 整数</string>
     <string name="prec_1">小数1桁</string>
@@ -49,18 +42,15 @@
     <string name="clear_confirm_title">すべての金額を消去しますか？</string>
     <string name="clear_confirm_msg">すべての金額がゼロになります。</string>
     <string name="refresh">レートを更新</string>
-    <string name="setting_theme">外観:  %1$s</string>
     <string name="theme_title">外観</string>
     <string name="theme_system">システムに合わせる</string>
     <string name="theme_light">ライト</string>
     <string name="theme_dark">ダーク</string>
-    <string name="setting_grouping">桁区切り:  %1$s</string>
     <string name="grouping_title">桁区切り</string>
     <string name="group_none">なし — 1234.56</string>
     <string name="group_space">スペース — 1 234.56</string>
     <string name="group_comma">カンマ — 1,234.56</string>
     <string name="adjust_title">レート調整</string>
-    <string name="setting_adjust">レート調整:  %1$s</string>
     <string name="adjust_off">オフ</string>
     <string name="adjusted_rates">調整済みレート</string>
     <string name="adjusted_short">調整済み</string>
@@ -70,4 +60,12 @@
     <string name="adjust_keep_hint">オフの場合、4時間使用しないとリセットされます。</string>
     <string name="adjust_reset_notice">調整をリセットしました。レートは仲値に戻りました</string>
     <string name="adjust_undo">元に戻す</string>
+    <!-- главный экран и настройки, ноябрь 2026 -->
+    <string name="market_rate">市場レート</string>
+    <string name="rounding_title">端数処理</string>
+    <string name="rounding_up">切り上げ</string>
+    <string name="rounding_nearest">四捨五入</string>
+    <string name="rounding_hint">「切り上げ」は実際の金額より少なく表示しないので、お金が足りなくなりません。</string>
+    <string name="version_label">バージョン %1$s</string>
+    <string name="copied">コピーしました</string>
 </resources>

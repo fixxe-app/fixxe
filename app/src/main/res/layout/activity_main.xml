@@ -26,6 +26,7 @@
             android:layout_marginEnd="9dp"
             android:padding="10dp"
             android:src="@drawable/ic_settings"
+            app:tint="@color/text_secondary"
             android:contentDescription="@string/settings"
             android:clickable="true"
             android:focusable="true"
@@ -41,6 +42,7 @@
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 android:src="@drawable/ic_sync"
+                app:tint="@color/text_secondary"
                 android:contentDescription="@string/refresh"
                 android:clickable="true"
                 android:focusable="true"
@@ -48,35 +50,27 @@
 
         </FrameLayout>
 
+        <!-- «Рыночный курс · 13:11 · источник ⓘ». Нажатие — пояснение о курсах
+             (раньше это была отдельная ссылка внизу). Счётчика валют больше нет. -->
         <TextView
             android:id="@+id/tvStatus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:minHeight="44dp"
+            android:gravity="center_vertical|start"
             android:maxLines="2"
             android:ellipsize="end"
             android:hyphenationFrequency="none"
             android:breakStrategy="simple"
-            android:layout_marginStart="14dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingHorizontal="4dp"
             android:text="Loading…"
             android:textSize="12sp"
-            android:textColor="@color/text_secondary" />
-
-        <TextView
-            android:id="@+id/tvCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_count_badge"
-            android:minWidth="28dp"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="3dp"
-            android:gravity="center"
-            android:text="—"
-            android:textColor="@color/accent"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp" />
+            android:textColor="@color/text_secondary"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground" />
     </LinearLayout>
 
     <!-- Слева FIXXE, по центру мини-лого, справа CLEAR -->
@@ -115,9 +109,8 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:text="@string/clear"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textColor="@color/accent"
-            android:letterSpacing="0.08"
             android:paddingHorizontal="16dp"
             android:paddingVertical="6dp"
             android:clickable="true"
@@ -241,85 +234,56 @@
         android:paddingBottom="4dp"
         android:clipToPadding="false" />
 
-    <!-- Футер -->
+    <!-- Подвал — одна строка: «＋ Добавить валюту» и, только у ExchangeRate-API,
+         их подпись со ссылкой (условие бесплатного тарифа). Номер версии — в настройках. -->
     <LinearLayout
         android:id="@+id/footerBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="52dp"
         android:background="@color/surface"
-        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:elevation="8dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+        <TextView
+            android:id="@+id/btnAddCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="44dp"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"
-            android:paddingEnd="16dp">
+            android:text="@string/add_currency"
+            android:textColor="@color/accent"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_add"
+            android:drawableTint="@color/accent"
+            android:drawablePadding="4dp"
+            android:paddingHorizontal="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground" />
 
-            <TextView
-                android:id="@+id/btnAddCurrency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/add_currency"
-                android:textColor="@color/accent"
-                android:textSize="14sp"
-                android:padding="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/btnSourceInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mid_market"
-                android:textSize="11sp"
-                android:textColor="@color/accent"
-                android:padding="6dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground" />
-        </LinearLayout>
-
-        <!-- Копирайт · атрибуция · версия — одной строкой -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:orientation="horizontal"
-            android:paddingHorizontal="12dp"
-            android:paddingBottom="4dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/btnAttribution"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="start|center_vertical"
-                android:text="@string/attribution"
-                android:textSize="10sp"
-                android:textColor="@color/icon_muted"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="?attr/selectableItemBackground" />
-
-            <TextView
-                android:id="@+id/tvVersion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:textColor="@color/hint" />
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/btnAttribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="44dp"
+            android:gravity="center_vertical|end"
+            android:paddingHorizontal="4dp"
+            android:text="@string/attribution"
+            android:textSize="10sp"
+            android:textColor="@color/icon_muted"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground" />
     </LinearLayout>
 
 </LinearLayout>

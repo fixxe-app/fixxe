@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Пояснение: «i» в круге. Контурный, линия 1.8 — один стиль для всех значков экрана.
+     Нарисован для FIXXE, без сторонних наборов. Цвет задаёт tint на месте. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:autoMirrored="false">
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M21,12 A9,9 0 1,1 3,12 A9,9 0 1,1 21,12 Z M12,16.5 L12,11 M12,7.6 L12,7.5" />
+</vector>

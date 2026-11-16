@@ -6,25 +6,18 @@
     <string name="back">Mbrapa</string>
     <string name="close">Mbyll</string>
     <string name="delete">Fshi</string>
-    <string name="selected">Të zgjedhura: %1$d</string>
     <string name="loading">Duke u ngarkuar…</string>
-    <string name="updated">Përditësuar %1$s · %2$s</string>
     <string name="error_prefix">⚠ %1$s</string>
     <string name="network_error">Gabim rrjeti</string>
-    <string name="clear">PASTRO</string>
-    <string name="add_currency">＋ Shto monedhë</string>
-    <string name="mid_market">Kurse mesatare të tregut ⓘ</string>
+    <string name="clear">Pastro</string>
+    <string name="add_currency">Shto monedhë</string>
     <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
-    <string name="version">ver. %1$s</string>
     <string name="base_currency">Monedha bazë</string>
     <string name="delete_currency_title">Të hiqet monedha?</string>
     <string name="delete_currency_msg">Të hiqet %1$s — %2$s nga lista?</string>
     <string name="add_currency_title">Zgjidhni nga %1$d monedha të disponueshme</string>
     <string name="search_hint">Kodi ose emri…</string>
     <string name="settings">Cilësimet</string>
-    <string name="setting_precision">Saktësia e shfaqjes:  %1$s</string>
-    <string name="setting_source">Burimi i kursit:  %1$s</string>
-    <string name="setting_language">🌐 Gjuha:  %1$s</string>
     <string name="precision_title">Saktësia e shfaqjes</string>
     <string name="prec_0">0 — numra të plotë</string>
     <string name="prec_1">1 dhjetore</string>
@@ -49,18 +42,15 @@
     <string name="clear_confirm_title">Të pastrohen të gjitha shumat?</string>
     <string name="clear_confirm_msg">Të gjitha shumat do të bëhen zero.</string>
     <string name="refresh">Rifresko kurset</string>
-    <string name="setting_theme">Pamja:  %1$s</string>
     <string name="theme_title">Pamja</string>
     <string name="theme_system">Si sistemi</string>
     <string name="theme_light">E çelët</string>
     <string name="theme_dark">E errët</string>
-    <string name="setting_grouping">Ndarësi i mijësheve:  %1$s</string>
     <string name="grouping_title">Ndarësi i mijësheve</string>
     <string name="group_none">Asnjë — 1234.56</string>
     <string name="group_space">Hapësirë — 1 234.56</string>
     <string name="group_comma">Presje — 1,234.56</string>
     <string name="adjust_title">Rregullimi i kursit</string>
-    <string name="setting_adjust">Rregullimi i kursit:  %1$s</string>
     <string name="adjust_off">Fikur</string>
     <string name="adjusted_rates">Kurse të rregulluara</string>
     <string name="adjusted_short">I rregulluar</string>
@@ -70,4 +60,12 @@
     <string name="adjust_keep_hint">Përndryshe rivendoset pas 4 orësh pa përdorim.</string>
     <string name="adjust_reset_notice">Rregullimi u rivendos, kurset janë sërish të tregut</string>
     <string name="adjust_undo">Rikthe</string>
+    <!-- главный экран и настройки, ноябрь 2026 -->
+    <string name="market_rate">Kursi i tregut</string>
+    <string name="rounding_title">Rrumbullakimi</string>
+    <string name="rounding_up">Lart</string>
+    <string name="rounding_nearest">Te më i afërti</string>
+    <string name="rounding_hint">«Lart» nuk tregon kurrë më pak se shuma e vërtetë, që paratë të mjaftojnë gjithmonë.</string>
+    <string name="version_label">Versioni %1$s</string>
+    <string name="copied">U kopjua</string>
 </resources>

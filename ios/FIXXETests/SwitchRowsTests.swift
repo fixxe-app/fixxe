@@ -109,6 +109,23 @@ final class SmartFormatTests: XCTestCase {
         XCTAssertEqual(SmartFormat.amount(.nan, decimals: 2), "0.00")
     }
 
+    /// Округление: вверх — показанная сумма не меньше настоящей; к ближайшему —
+    /// как в математике. Правило 2% для мелких сумм — в обоих режимах.
+    func testRoundingModes() {
+        XCTAssertEqual(SmartFormat.amount(112.06, decimals: 0, roundUp: true), "113")
+        XCTAssertEqual(SmartFormat.amount(112.06, decimals: 0, roundUp: false), "112")
+        XCTAssertEqual(SmartFormat.amount(112.5, decimals: 0, roundUp: false), "113")
+        XCTAssertEqual(SmartFormat.amount(1.1206, decimals: 2, roundUp: true), "1.13")
+        XCTAssertEqual(SmartFormat.amount(1.1206, decimals: 2, roundUp: false), "1.12")
+        XCTAssertEqual(SmartFormat.amount(11.01, decimals: 0, roundUp: true), "11.1")   // «12» — ошибка больше 2%
+        XCTAssertEqual(SmartFormat.amount(11.01, decimals: 0, roundUp: false), "11")
+        XCTAssertEqual(SmartFormat.amount(0.0067, decimals: 0, roundUp: false), "0.0067")
+        XCTAssertEqual(SmartFormat.amount(0.3412, decimals: 0, roundUp: true), "0.342")
+        XCTAssertEqual(SmartFormat.amount(0.3412, decimals: 0, roundUp: false), "0.34")
+        XCTAssertEqual(SmartFormat.amount(11741.2, decimals: 0, grouping: 1, roundUp: false), "11\u{00A0}741")
+        XCTAssertEqual(SmartFormat.amount(100, decimals: 0, roundUp: true), "100")
+    }
+
     func testParse() {
         // запятая как десятичный знак — при любой группировке
         XCTAssertEqual(SmartFormat.parse("1,5", grouping: 0), 1.5, accuracy: 1e-12)

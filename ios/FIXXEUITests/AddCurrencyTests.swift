@@ -28,7 +28,8 @@ final class AddCurrencyTests: XCTestCase {
                       "после «\(confirm.label)» ETH так и не появилась в списке")
         // переключается на первый источник, где ETH есть: обычно Coinbase,
         // а если его список не загрузился — FXRatesAPI или F.A.
-        let status = app.staticTexts.containing(NSPredicate(format:
+        // строка статуса вверху — кнопка (нажатие открывает пояснение о курсах)
+        let status = app.buttons.matching(identifier: "rates-info").matching(NSPredicate(format:
             "label CONTAINS 'Coinbase' OR label CONTAINS 'FXR' OR label CONTAINS 'F.A.'")).firstMatch
         XCTAssertTrue(status.waitForExistence(timeout: 20), "источник не переключился с ExchangeRate-API")
     }

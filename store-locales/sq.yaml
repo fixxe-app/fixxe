@@ -9,19 +9,19 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   ÇFARË E BËN FIXXE-NË TË NDRYSHËM
 
 
-  • Pesë burime kursesh me kalim automatik — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. dhe Frankfurter (BQE). Nëse një ofrues bie, aplikacioni kalon në heshtje te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë.
+  • Pesë burime kursesh me kalim automatik — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. dhe Frankfurter (BQE). Nëse një ofrues bie, aplikacioni kalon në heshtje te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë. Preferoni një burim? Zgjidheni te cilësimet — të tjerët mbeten si rezervë.
 
 
   • Punon pa internet — kurset e fundit ruhen në pajisje, kështu që aplikacioni vazhdon të llogarisë edhe pa lidhje. Dhe nëse ato kurse janë më të vjetra se një ditë, e thotë hapur në vend që t''i paraqesë si të freskëta.
 
 
-  • Rrumbullakim i zgjuar — saktësia që zgjidhni është minimum, jo kamizholë force: nëse rrumbullakimi do ta shtrembëronte shumën me më shumë se 2%, dhjetoret shtohen vetë. 0,94 CHF nuk bëhet kurrë „1", dhe shumat e vogla në kripto nuk bien kurrë në zero.
+  • Rrumbullakim i zgjuar — saktësia që zgjidhni është minimum, jo kamizholë force: nëse rrumbullakimi do ta shtrembëronte shumën me më shumë se 2%, dhjetoret shtohen vetë. 0,94 CHF nuk bëhet kurrë „1", dhe shumat e vogla në kripto nuk bien kurrë në zero. Ju zgjidhni si rrumbullakohen shumat: lart, që shuma e shfaqur të mos jetë kurrë më e vogël se ajo e vërteta dhe paratë të mjaftojnë gjithmonë, ose te më i afërti.
 
 
   • Bazë dinamike — kurset rillogariten kundrejt monedhës që po redaktoni, jo kundrejt një të fiksuari. Pa kaluar sa andej-këtej.
 
 
-  • Rregullimi i kursit — vendosni një përqindje për komisionin e bankës, marzhin ose humbjet gjatë transfertës (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë, që të mos i ngatërroni me kursin e tregut.
+  • Rregullimi i kursit — vendosni një përqindje për komisionin e bankës, marzhin ose humbjet gjatë transfertës (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë, që të mos i ngatërroni me kursin e tregut. Nëse nuk e mbani gjithmonë aktiv, çaktivizohet vetë pas katër orësh pa përdorim, që një komision i harruar të mos i shtrembërojë kurrë shifrat e nesërme.
 
 
   • Pa reklama. Pa llogari. Pa gjurmim. Leja e vetme është qasja në internet; lista juaj, radha e saj dhe cilësimet nuk e lënë kurrë pajisjen.
@@ -48,6 +48,10 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
 
   • Saktësia: numra të plotë, 1, 2 ose 4 dhjetore
 
+  • Ndarësi i mijësheve me hapësirë ose presje: 1 234.56 ose 1,234.56
+
+  • Temë e çelët ose e errët, ose si sistemi
+
   • 40 gjuhë, anglishtja si parazgjedhje, me mundësinë të ndjekë gjuhën e pajisjes — përfshirë skemat nga e djathta në të majtë
 
   • Telefon, tablet dhe web: i njëjti aplikacion në iPhone, iPad, Android dhe si aplikacion uebi që e vendosni në ekranin bazë
@@ -58,7 +62,7 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   Rates By Exchange Rate API.
 
   '
-whats_new: "E re: rregullimi i kursit. Vendosni një përqindje për komisionin e bankës ose marzhin (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë. E gjeni te cilësimet."
+whats_new: "Pamje e re: një stil i vetëm për të gjitha ikonat dhe etiketat. Ora dhe burimi i kursit tani janë lart — prekni rreshtin për detaje. E re te cilësimet: rrumbullakimi i shumave lart ose te më i afërti. Cilësimet janë një dritare e vetme e qartë, me numrin e versionit poshtë."
 landing:
   page_title: FIXXE — konvertues monedhash
   install_title: Mënyrat e instalimit

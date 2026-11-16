@@ -56,7 +56,7 @@ struct CurrencyRowView: View {
                 // удаление. У жеста такого притяжения нет — крестик срабатывает
                 // только в своей зоне, остальная карточка — ввод суммы.
                 Image(systemName: "xmark")
-                    .font(.system(size: 13, weight: .medium))
+                    .font(.system(size: 11, weight: .regular))
                     .foregroundColor(Color.faint)
                     // зона нажатия 44 pt (норма HIG), а место в строке прежнее:
                     // лишнее съедают отрицательные отступы. Зона сдвинута вверх,
@@ -131,7 +131,7 @@ struct CurrencyRowView: View {
     /// не мешал ни вводу суммы, ни прокрутке списка.
     private var dragHandle: some View {
         Image(systemName: "line.3.horizontal")
-            .font(.system(size: 15, weight: .regular))
+            .font(.system(size: 13, weight: .light))
             .foregroundColor(Color.faint)
             .frame(width: 44, height: 44)               // зона нажатия 44 pt
             .contentShape(Rectangle().offset(y: -5))    // вверх: снизу строка курса
@@ -155,7 +155,7 @@ struct CurrencyRowView: View {
                 set: { if vm.activeCode == code { vm.inputChanged($0) } }))
                 .keyboardType(.decimalPad)
                 .multilineTextAlignment(.trailing)
-                .font(.title3.bold())
+                .font(.title3.bold().monospacedDigit())
                 .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
                 .frame(width: 130)
                 .focused(focusedCode, equals: code)
@@ -190,8 +190,8 @@ struct CurrencyRowView: View {
                     }
                 }
         } else {
-            Text(SmartFormat.amount(vm.converted(code), decimals: vm.decimals, grouping: vm.grouping))
-                .font(.title3.bold())
+            Text(SmartFormat.amount(vm.converted(code), decimals: vm.decimals, grouping: vm.grouping, roundUp: vm.roundUp))
+                .font(.title3.bold().monospacedDigit())
                 .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
                 .lineLimit(1).minimumScaleFactor(0.5)   // длинная сумма ужимается, а не обрезается
                 .frame(width: 130, alignment: .trailing)

@@ -9,19 +9,19 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   FIXXE''Yİ FARKLI KILAN NE
 
 
-  • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez.
+  • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
 
 
   • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
 
 
-  • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez.
+  • Akıllı yuvarlama — seçtiğiniz hassasiyet bir alt sınırdır, deli gömleği değil: yuvarlama tutarı %2''den fazla saptıracaksa ondalık basamaklar kendiliğinden eklenir. 0,94 CHF asla "1" olmaz, küçük kripto tutarları asla sıfıra inmez. Tutarların nasıl yuvarlanacağını siz seçersiniz: yukarı, böylece gösterilen tutar asla gerçekten az olmaz ve para hep yeter, ya da en yakına.
 
 
   • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
 
 
-  • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız.
+  • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız. Her zaman açık tutmadığınız sürece dört saat kullanılmadığında kendiliğinden kapanır; böylece unutulan bir komisyon yarının rakamlarını asla bozmaz.
 
 
   • Reklam yok. Hesap yok. Takip yok. Tek izin internet erişimi; listeniz, sırası ve ayarlarınız cihazdan asla çıkmaz.
@@ -48,6 +48,10 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
 
   • Hassasiyet: tam sayılar, 1, 2 veya 4 ondalık basamak
 
+  • Binlik ayırıcı olarak boşluk veya virgül: 1 234.56 ya da 1,234.56
+
+  • Açık veya koyu tema ya da sistemle aynı
+
   • 40 dil, varsayılan İngilizce, cihaz dilini izleme seçeneğiyle — sağdan sola yerleşimler dahil
 
   • Telefon, tablet ve web: iPhone, iPad, Android''de ve ana ekrana kurabileceğiniz bir web uygulaması olarak aynı uygulama
@@ -58,7 +62,7 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   Rates By Exchange Rate API.
 
   '
-whats_new: "Yeni: kur düzeltmesi. Banka komisyonu veya marj için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir. Ayarlar'da bulabilirsiniz."
+whats_new: "Yeni görünüm: tüm simgeler ve etiketler için tek bir stil. Kurun saati ve kaynağı artık en üstte — ayrıntılar için satıra dokunun. Ayarlar'da yeni: tutarları yukarı veya en yakına yuvarlama. Ayarlar tek ve anlaşılır bir pencere, sürüm numarası en altta."
 landing:
   page_title: FIXXE — döviz çevirici
   install_title: Kurulum yolları

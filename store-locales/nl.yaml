@@ -9,19 +9,19 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   WAT FIXXE ANDERS MAAKT
 
 
-  • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets.
+  • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
 
 
   • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
 
 
-  • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul.
+  • Slim afronden — de precisie die je kiest is een minimum, geen keurslijf: zou afronden het bedrag met meer dan 2% vertekenen, dan komen er vanzelf decimalen bij. 0,94 CHF wordt nooit „1" en kleine cryptobedragen vallen nooit terug naar nul. Je kiest zelf hoe bedragen worden afgerond: naar boven, zodat het getoonde bedrag nooit lager is dan het echte en je altijd genoeg geld hebt, of naar het dichtstbijzijnde.
 
 
   • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
 
 
-  • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers.
+  • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers. Tenzij je hem altijd aan laat staan, schakelt hij zichzelf uit na vier uur zonder gebruik, zodat vergeten kosten nooit de cijfers van morgen vertekenen.
 
 
   • Geen reclame. Geen accounts. Geen tracking. De enige toestemming is internettoegang; je lijst, de volgorde ervan en je instellingen verlaten het toestel nooit.
@@ -48,6 +48,10 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
 
   • Precisie: hele getallen, 1, 2 of 4 decimalen
 
+  • Duizendtalscheiding met een spatie of een komma: 1 234.56 of 1,234.56
+
+  • Licht of donker thema, of volg het systeem
+
   • 40 talen, standaard Engels, met de optie de taal van je toestel te volgen — inclusief indelingen van rechts naar links
 
   • Telefoon, tablet en web: dezelfde app op iPhone, iPad, Android en als web-app die je op je beginscherm zet
@@ -58,7 +62,7 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nieuw: koerscorrectie. Stel een percentage in voor bankkosten of marge (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd. Te vinden in Instellingen."
+whats_new: "Nieuwe look: één stijl voor alle pictogrammen en labels. Tijd en bron van de koers staan nu bovenaan — tik op de regel voor details. Nieuw in Instellingen: bedragen naar boven of naar het dichtstbijzijnde afronden. Instellingen is één overzichtelijk venster, met het versienummer onderaan."
 landing:
   page_title: FIXXE — valutaomrekener
   install_title: Manieren om te installeren

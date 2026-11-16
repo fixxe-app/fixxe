@@ -9,19 +9,19 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   APA YANG MEMBUAT FIXXE BERBEDA
 
 
-  • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati.
+  • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
 
 
   • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
 
 
-  • Pembulatan cerdas — ketelitian yang Anda pilih adalah batas bawah, bukan belenggu: bila pembulatan akan menyimpangkan jumlah lebih dari 2%, angka di belakang koma bertambah sendiri. 0,94 CHF tidak pernah menjadi „1", dan jumlah kripto yang kecil tidak pernah jatuh ke nol.
+  • Pembulatan cerdas — ketelitian yang Anda pilih adalah batas bawah, bukan belenggu: bila pembulatan akan menyimpangkan jumlah lebih dari 2%, angka di belakang koma bertambah sendiri. 0,94 CHF tidak pernah menjadi „1", dan jumlah kripto yang kecil tidak pernah jatuh ke nol. Anda yang memilih cara jumlah dibulatkan: ke atas, agar jumlah yang ditampilkan tidak pernah kurang dari yang sebenarnya dan uang selalu cukup, atau ke terdekat.
 
 
   • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
 
 
-  • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar.
+  • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar. Kecuali Anda membiarkannya selalu aktif, fitur ini mati sendiri setelah empat jam tidak digunakan, sehingga biaya yang terlupa tidak pernah mengacaukan angka esok hari.
 
 
   • Tanpa iklan. Tanpa akun. Tanpa pelacakan. Satu-satunya izin adalah akses internet; daftar Anda, urutannya, dan pengaturannya tidak pernah meninggalkan perangkat.
@@ -48,6 +48,10 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
 
   • Ketelitian: bilangan bulat, 1, 2, atau 4 angka di belakang koma
 
+  • Pemisah ribuan berupa spasi atau koma: 1 234.56 atau 1,234.56
+
+  • Tema terang atau gelap, atau ikuti sistem
+
   • 40 bahasa, bawaan bahasa Inggris, dengan pilihan mengikuti bahasa perangkat — termasuk tata letak dari kanan ke kiri
 
   • Ponsel, tablet, dan web: aplikasi yang sama di iPhone, iPad, Android, dan sebagai aplikasi web yang bisa dipasang di layar beranda
@@ -58,7 +62,7 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   Rates By Exchange Rate API.
 
   '
-whats_new: "Baru: penyesuaian kurs. Atur persentase untuk biaya bank atau margin (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas. Ada di Pengaturan."
+whats_new: "Tampilan baru: satu gaya untuk semua ikon dan label. Waktu dan sumber kurs kini ada di atas — ketuk barisnya untuk melihat detail. Baru di Pengaturan: bulatkan jumlah ke atas atau ke terdekat. Pengaturan kini satu jendela yang jelas, dengan nomor versi di bagian bawah."
 landing:
   page_title: FIXXE — konverter mata uang
   install_title: Cara memasang

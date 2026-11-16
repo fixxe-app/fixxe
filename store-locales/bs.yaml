@@ -9,19 +9,19 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   PO ČEMU SE FIXXE RAZLIKUJE
 
 
-  • Pet izvora kursa sa automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina konvertora ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa.
+  • Pet izvora kursa sa automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina konvertora ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više volite jedan izvor? Odaberite ga u postavkama — ostali ostaju kao rezerva.
 
 
   • Radi bez interneta — posljednji kursevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti kursevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
 
 
-  • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2%, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu.
+  • Pametno zaokruživanje — odabrana preciznost je minimum, a ne luđačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2%, decimale se dodaju same. 0,94 CHF nikad ne postaje „1", a mali iznosi u kriptovalutama nikad ne padnu na nulu. Vi birate kako se iznosi zaokružuju: naviše, pa prikazani iznos nikad nije manji od stvarnog i novca je uvijek dovoljno, ili na najbliže.
 
 
   • Dinamična osnovica — kursevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-nazad.
 
 
-  • Prilagodba kursa — zadajte procenat za bankovnu proviziju, maržu ili gubitke pri prijenosu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene, pa ih nećete pomiješati s tržišnim kursom.
+  • Prilagodba kursa — zadajte procenat za bankovnu proviziju, maržu ili gubitke pri prijenosu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene, pa ih nećete pomiješati s tržišnim kursom. Ako je ne ostavite uvijek uključenu, sama se isključuje nakon četiri sata bez korištenja, pa zaboravljena provizija nikad ne iskrivi sutrašnje brojke.
 
 
   • Bez reklama. Bez računa. Bez praćenja. Jedina dozvola je pristup internetu; vaš spisak, njegov redoslijed i postavke nikada ne napuštaju uređaj.
@@ -48,6 +48,10 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
 
   • Preciznost: cijeli brojevi, 1, 2 ili 4 decimale
 
+  • Razdvajanje hiljada razmakom ili zarezom: 1 234.56 ili 1,234.56
+
+  • Svijetla ili tamna tema, ili kao sistem
+
   • 40 jezika, engleski kao zadani, uz mogućnost praćenja jezika uređaja — uključujući rasporede zdesna nalijevo
 
   • Telefon, tablet i web: ista aplikacija na iPhoneu, iPadu, Androidu i kao web aplikacija koju možete staviti na početni ekran
@@ -58,7 +62,7 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novo: prilagodba kursa. Zadajte procenat za bankovnu proviziju ili maržu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene. Nalazi se u postavkama."
+whats_new: "Novi izgled: jedinstven stil za sve ikone i natpise. Vrijeme i izvor kursa sada su na vrhu — dodirnite red za detalje. Novo u postavkama: zaokruživanje iznosa naviše ili na najbliže. Postavke su jedan pregledan prozor, s brojem verzije na dnu."
 landing:
   page_title: FIXXE — konvertor valuta
   install_title: Načini instalacije

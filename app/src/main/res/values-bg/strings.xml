@@ -6,25 +6,18 @@
     <string name="back">Назад</string>
     <string name="close">Затвори</string>
     <string name="delete">Изтрий</string>
-    <string name="selected">Избрани: %1$d</string>
     <string name="loading">Зареждане…</string>
-    <string name="updated">Обновено %1$s · %2$s</string>
     <string name="error_prefix">⚠ %1$s</string>
     <string name="network_error">Мрежова грешка</string>
-    <string name="clear">ИЗЧИСТИ</string>
-    <string name="add_currency">＋ Добави валута</string>
-    <string name="mid_market">Средни пазарни курсове ⓘ</string>
+    <string name="clear">Изчисти</string>
+    <string name="add_currency">Добави валута</string>
     <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
-    <string name="version">вер. %1$s</string>
     <string name="base_currency">Основна валута</string>
     <string name="delete_currency_title">Премахване на валута?</string>
     <string name="delete_currency_msg">Да премахна ли %1$s — %2$s от списъка?</string>
     <string name="add_currency_title">Изберете от %1$d налични валути</string>
     <string name="search_hint">Код или име…</string>
     <string name="settings">Настройки</string>
-    <string name="setting_precision">Точност на показване:  %1$s</string>
-    <string name="setting_source">Източник на курсове:  %1$s</string>
-    <string name="setting_language">🌐 Език:  %1$s</string>
     <string name="precision_title">Точност на показване</string>
     <string name="prec_0">0 — цели числа</string>
     <string name="prec_1">1 знак</string>
@@ -49,18 +42,15 @@
     <string name="clear_confirm_title">Да се изчистят ли всички суми?</string>
     <string name="clear_confirm_msg">Всички суми ще станат нула.</string>
     <string name="refresh">Обнови курсовете</string>
-    <string name="setting_theme">Облик:  %1$s</string>
     <string name="theme_title">Облик</string>
     <string name="theme_system">Като системата</string>
     <string name="theme_light">Светло</string>
     <string name="theme_dark">Тъмно</string>
-    <string name="setting_grouping">Разделител на хилядите:  %1$s</string>
     <string name="grouping_title">Разделител на хилядите</string>
     <string name="group_none">Без — 1234.56</string>
     <string name="group_space">Интервал — 1 234.56</string>
     <string name="group_comma">Запетая — 1,234.56</string>
     <string name="adjust_title">Корекция на курса</string>
-    <string name="setting_adjust">Корекция на курса:  %1$s</string>
     <string name="adjust_off">Изкл.</string>
     <string name="adjusted_rates">Курсове с корекция</string>
     <string name="adjusted_short">С корекция</string>
@@ -70,4 +60,12 @@
     <string name="adjust_keep_hint">Иначе се нулира след 4 часа без използване.</string>
     <string name="adjust_reset_notice">Корекцията е нулирана, курсовете отново са пазарни</string>
     <string name="adjust_undo">Върни</string>
+    <!-- главный экран и настройки, ноябрь 2026 -->
+    <string name="market_rate">Пазарен курс</string>
+    <string name="rounding_title">Закръгляне</string>
+    <string name="rounding_up">Нагоре</string>
+    <string name="rounding_nearest">До най-близкото</string>
+    <string name="rounding_hint">„Нагоре“ никога не показва по-малко от реалната сума, така че парите винаги ще стигнат.</string>
+    <string name="version_label">Версия %1$s</string>
+    <string name="copied">Копирано</string>
 </resources>

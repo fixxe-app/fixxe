@@ -9,19 +9,19 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   KUO FIXXE SKIRIASI
 
 
-  • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo.
+  • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
 
 
   • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
 
 
-  • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio.
+  • Protingas apvalinimas — pasirinktas tikslumas yra apatinė riba, o ne pančiai: jei apvalinimas iškreiptų sumą daugiau nei 2%, skaitmenys po kablelio atsiranda savaime. 0,94 CHF niekada netampa „1", o mažos kriptovaliutų sumos niekada nenukrenta iki nulio. Kaip apvalinti sumas, renkatės jūs: į didesnę pusę, kad rodoma suma niekada nebūtų mažesnė už tikrąją ir pinigų visada užtektų, arba iki artimiausio.
 
 
   • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
 
 
-  • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu.
+  • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu. Jei nepaliksite jos visada įjungtos, po keturių valandų nenaudojimo ji išsijungs pati, todėl pamirštas mokestis niekada neiškreips rytdienos skaičių.
 
 
   • Be reklamų. Be paskyrų. Be sekimo. Vienintelis leidimas — prieiga prie interneto; jūsų sąrašas, jo tvarka ir nustatymai niekada nepalieka įrenginio.
@@ -48,6 +48,10 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
 
   • Tikslumas: sveikieji skaičiai, 1, 2 arba 4 skaitmenys po kablelio
 
+  • Tūkstančių skirtukas — tarpas arba kablelis: 1 234.56 arba 1,234.56
+
+  • Šviesi arba tamsi tema arba kaip sistemoje
+
   • 40 kalbų, numatytoji anglų, su galimybe sekti įrenginio kalbą — įskaitant išdėstymus iš dešinės į kairę
 
   • Telefonas, planšetė ir internetas: ta pati programėlė iPhone, iPad, Android ir kaip žiniatinklio programėlė, kurią galima įsidėti į pradžios ekraną
@@ -58,7 +62,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nauja: kurso pataisa. Nustatykite procentą banko mokesčiui ar maržai (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti. Rasite nustatymuose."
+whats_new: "Nauja išvaizda: vienas stilius visoms piktogramoms ir užrašams. Kurso laikas ir šaltinis dabar viršuje — bakstelėkite eilutę, kad pamatytumėte išsamiau. Nauja nustatymuose: sumų apvalinimas į didesnę pusę arba iki artimiausio. Nustatymai — vienas aiškus langas, versijos numeris apačioje."
 landing:
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai

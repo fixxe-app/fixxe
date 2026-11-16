@@ -8,6 +8,11 @@ cryptography). Ключ App Store Connect берётся из профиля tes
 
   asc_release.py state 1.65     — состояние версии в App Store (или NONE)
   asc_release.py finish 1.65    — проверить и отправить версию на ревью
+  asc_release.py clear-shots 1.65 — убрать из версии все скриншоты
+
+clear-shots: новая версия в App Store наследует скриншоты прошлой, а
+`appstore-ops screenshots upload` только добавляет кадры. Без очистки на
+витрине оказались бы и старые кадры, и новые.
 
 finish:
   1. версия есть и к ней прикреплена сборка этой же версии;
@@ -65,6 +70,24 @@ def version(ver):
 def cmd_state(ver):
     v = version(ver)
     print(v["attributes"]["appStoreState"] if v else "NONE")
+
+
+def cmd_clear_shots(ver):
+    v = version(ver) or sys.exit(f"✗ версии {ver} нет в App Store Connect")
+    state = v["attributes"]["appStoreState"]
+    if state not in ("PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED"):
+        sys.exit(f"✗ версия {ver} в состоянии {state} — скриншоты менять нельзя")
+    locs = req("GET", f"/v1/appStoreVersions/{v['id']}/appStoreVersionLocalizations?limit=50")["data"]
+    gone = 0
+    for loc in locs:
+        sets = req("GET", f"/v1/appStoreVersionLocalizations/{loc['id']}/appScreenshotSets?limit=50").get("data", [])
+        for st in sets:
+            shots = req("GET", f"/v1/appScreenshotSets/{st['id']}/appScreenshots?limit=50").get("data", [])
+            for sh in shots:
+                r = req("DELETE", f"/v1/appScreenshots/{sh['id']}")
+                if r.get("err"): sys.exit(f"✗ не удалось удалить скриншот: {r['err']} {r['body'][:200]}")
+                gone += 1
+    print(f"✓ из версии {ver} убрано старых скриншотов: {gone}")
 
 
 def cmd_finish(ver):
@@ -137,6 +160,6 @@ def cmd_finish(ver):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3 or sys.argv[1] not in ("state", "finish"):
+    if len(sys.argv) != 3 or sys.argv[1] not in ("state", "finish", "clear-shots"):
         sys.exit(__doc__)
-    {"state": cmd_state, "finish": cmd_finish}[sys.argv[1]](sys.argv[2])
+    {"state": cmd_state, "finish": cmd_finish, "clear-shots": cmd_clear_shots}[sys.argv[1]](sys.argv[2])

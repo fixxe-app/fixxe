@@ -113,10 +113,8 @@ start_with_theme 2;  shot 2
 start_with_theme 1
 tap_id btnAddCurrency; shot 3; close_dialog
 tap_id btnSettings;    shot 4; close_dialog
-screen
-INFO=$(grep -o 'text="Mid-market rates[^"]*"[^$]*bounds="\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]"' "$WORK/ui.txt" | grep -o 'bounds=.*' | grep -o '[0-9]\+' | paste -sd' ' - || true)
-[ -n "$INFO" ] || fail "нет ссылки «Mid-market rates»"
-read -r x1 y1 x2 y2 <<<"$INFO"; adb shell input tap $(( (x1+x2)/2 )) $(( (y1+y2)/2 )); sleep 1.5
+# пояснение о курсах открывает строка статуса вверху («Market rate · 09:41 · … ⓘ»)
+tap_id tvStatus
 shot 5
 adb shell input keyevent KEYCODE_BACK
 [ "$KIND" = tablet ] && adb shell settings put system user_rotation 0 >/dev/null 2>&1 || true

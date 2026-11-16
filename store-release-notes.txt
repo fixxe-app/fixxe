@@ -1,1 +1,1 @@
-New: rate adjustment. Set a percentage for your bank's fee or margin (for example +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked. You'll find it in Settings.
+New look: one style for all icons and labels. The rate time and source are now at the top — tap the line for details. New in Settings: round amounts up or to the nearest. Settings are one clear window, with the version number at the bottom.

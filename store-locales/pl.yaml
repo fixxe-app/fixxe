@@ -9,19 +9,19 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-  • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje.
+  • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
 
 
   • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
 
 
-  • Mądre zaokrąglanie — wybrana dokładność to minimum, a nie kaftan bezpieczeństwa: jeśli zaokrąglenie zniekształciłoby kwotę o ponad 2%, miejsca po przecinku dopisują się same. 0,94 CHF nigdy nie zamieni się w „1", a małe kwoty w kryptowalutach nie spadną do zera.
+  • Mądre zaokrąglanie — wybrana dokładność to minimum, a nie kaftan bezpieczeństwa: jeśli zaokrąglenie zniekształciłoby kwotę o ponad 2%, miejsca po przecinku dopisują się same. 0,94 CHF nigdy nie zamieni się w „1", a małe kwoty w kryptowalutach nie spadną do zera. To ty wybierasz sposób zaokrąglania: w górę, by pokazana kwota nigdy nie była mniejsza od rzeczywistej i pieniędzy zawsze wystarczyło, albo do najbliższej.
 
 
   • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
 
 
-  • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym.
+  • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym. Jeśli nie zostawisz jej zawsze włączonej, wyłączy się sama po czterech godzinach bez użycia, więc zapomniana prowizja nigdy nie zniekształci jutrzejszych liczb.
 
 
   • Bez reklam. Bez kont. Bez śledzenia. Jedyne uprawnienie to dostęp do internetu; twoja lista, jej kolejność i ustawienia nigdy nie opuszczają urządzenia.
@@ -48,6 +48,10 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
 
   • Dokładność: liczby całkowite, 1, 2 lub 4 miejsca po przecinku
 
+  • Separator tysięcy: spacja lub przecinek, 1 234.56 albo 1,234.56
+
+  • Jasny lub ciemny motyw albo jak w systemie
+
   • 40 języków, domyślnie angielski, z opcją podążania za językiem urządzenia — łącznie z układami od prawej do lewej
 
   • Telefon, tablet i sieć: ta sama aplikacja na iPhonie, iPadzie, Androidzie i jako aplikacja internetowa, którą zainstalujesz na ekranie głównym
@@ -58,7 +62,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nowość: korekta kursu. Ustaw procent prowizji banku lub marży (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone. Znajdziesz ją w Ustawieniach."
+whats_new: "Nowy wygląd: jeden styl wszystkich ikon i podpisów. Godzina i źródło kursu są teraz na górze — dotknij wiersza, aby zobaczyć szczegóły. Nowość w Ustawieniach: zaokrąglanie kwot w górę lub do najbliższej. Ustawienia to jedno przejrzyste okno z numerem wersji na dole."
 landing:
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji

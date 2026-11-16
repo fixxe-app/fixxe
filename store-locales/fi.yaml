@@ -9,19 +9,19 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-  • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään.
+  • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
 
 
   • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
 
 
-  • Älykäs pyöristys — valitsemasi tarkkuus on vähimmäismäärä, ei pakkopaita: jos pyöristys vääristäisi summaa yli 2 %, desimaaleja lisätään itsestään. 0,94 CHF ei muutu koskaan ykköseksi eivätkä pienet kryptosummat katoa nollaan.
+  • Älykäs pyöristys — valitsemasi tarkkuus on vähimmäismäärä, ei pakkopaita: jos pyöristys vääristäisi summaa yli 2 %, desimaaleja lisätään itsestään. 0,94 CHF ei muutu koskaan ykköseksi eivätkä pienet kryptosummat katoa nollaan. Pyöristystavan valitset itse: ylöspäin, jolloin näytetty summa ei ole koskaan todellista pienempi ja rahat riittävät aina, tai lähimpään.
 
 
   • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
 
 
-  • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin.
+  • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin. Ellet pidä sitä aina käytössä, se kytkeytyy itsestään pois neljän tunnin käyttämättömyyden jälkeen, joten unohtunut palkkio ei koskaan vääristä huomisen lukuja.
 
 
   • Ei mainoksia. Ei tilejä. Ei seurantaa. Ainoa käyttöoikeus on internetyhteys; listasi, sen järjestys ja asetuksesi eivät poistu laitteelta koskaan.
@@ -48,6 +48,10 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
 
   • Tarkkuus: kokonaisluvut, 1, 2 tai 4 desimaalia
 
+  • Tuhaterotin välilyönnillä tai pilkulla: 1 234.56 tai 1,234.56
+
+  • Vaalea tai tumma teema tai järjestelmän mukaan
+
   • 40 kieltä, oletuksena englanti, halutessasi laitteen kielen mukaan — myös oikealta vasemmalle luettavat asettelut
 
   • Puhelin, tabletti ja web: sama sovellus iPhonessa, iPadissa, Androidissa ja verkkosovelluksena, jonka voit asentaa aloitusnäytölle
@@ -58,7 +62,7 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   Rates By Exchange Rate API.
 
   '
-whats_new: "Uutta: kurssin korjaus. Aseta prosentti pankin palkkiolle tai marginaalille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi. Löytyy asetuksista."
+whats_new: "Uusi ilme: kaikki kuvakkeet ja tekstit samaa tyyliä. Kurssin aika ja lähde ovat nyt ylhäällä — napauta riviä nähdäksesi lisätiedot. Uutta asetuksissa: summien pyöristys ylöspäin tai lähimpään. Asetukset ovat yksi selkeä ikkuna, ja versionumero on alareunassa."
 landing:
   page_title: FIXXE — valuuttamuunnin
   install_title: Asennustavat

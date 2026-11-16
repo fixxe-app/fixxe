@@ -9,19 +9,19 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   ČÍM SE FIXXE LIŠÍ
 
 
-  • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic.
+  • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
 
 
   • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
 
 
-  • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu.
+  • Chytré zaokrouhlování — zvolená přesnost je minimum, ne svěrací kazajka: pokud by zaokrouhlení zkreslilo částku o více než 2 %, desetinná místa se přidají sama. Z 0,94 CHF se nikdy nestane „1“ a malé částky v kryptoměnách nikdy nespadnou na nulu. Způsob zaokrouhlení volíte vy: nahoru, aby zobrazená částka nikdy nebyla nižší než skutečná a peníze vždy vystačily, nebo k nejbližšímu.
 
 
   • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
 
 
-  • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem.
+  • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem. Pokud ji nenecháte trvale zapnutou, po čtyřech hodinách bez použití se sama vypne, takže zapomenutý poplatek nikdy nezkreslí zítřejší čísla.
 
 
   • Žádné reklamy. Žádné účty. Žádné sledování. Jediné oprávnění je přístup k internetu; váš seznam, jeho pořadí a nastavení zařízení nikdy neopustí.
@@ -48,6 +48,10 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
 
   • Přesnost: celá čísla, 1, 2 nebo 4 desetinná místa
 
+  • Oddělování tisíců mezerou nebo čárkou: 1 234.56 nebo 1,234.56
+
+  • Světlý nebo tmavý motiv, případně podle systému
+
   • 40 jazyků, výchozí angličtina, s možností řídit se jazykem zařízení — včetně rozložení zprava doleva
 
   • Telefon, tablet i web: stejná aplikace na iPhonu, iPadu, Androidu a jako webová aplikace, kterou si přidáte na plochu
@@ -58,7 +62,7 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novinka: úprava kurzu. Nastavte procento za bankovní poplatek nebo marži (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena. Najdete ji v Nastavení."
+whats_new: "Nový vzhled: jednotný styl všech ikon a popisků. Čas a zdroj kurzu jsou nyní nahoře — klepnutím na řádek zobrazíte podrobnosti. Novinka v Nastavení: zaokrouhlování částek nahoru nebo k nejbližšímu. Nastavení je jedno přehledné okno s číslem verze dole."
 landing:
   page_title: FIXXE — převodník měn
   install_title: Způsoby instalace

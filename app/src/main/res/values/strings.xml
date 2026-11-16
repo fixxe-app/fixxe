@@ -10,18 +10,14 @@
     <string name="delete">Delete</string>
 
     <!-- Header -->
-    <string name="selected">Selected: %1$d</string>
     <string name="loading">Loading…</string>
-    <string name="updated">Updated %1$s · %2$s</string>
     <string name="error_prefix">⚠ %1$s</string>
     <string name="network_error">Network error</string>
 
     <!-- Buttons / footer -->
-    <string name="clear">CLEAR</string>
-    <string name="add_currency">＋ Add currency</string>
-    <string name="mid_market">Mid-market rates ⓘ</string>
+    <string name="clear">Clear</string>
+    <string name="add_currency">Add currency</string>
     <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
-    <string name="version">ver. %1$s</string>
 
     <!-- Rate line -->
     <string name="base_currency">Base currency</string>
@@ -44,16 +40,11 @@
     <!-- Settings -->
     <string name="settings">Settings</string>
     <string name="refresh">Refresh rates</string>
-    <string name="setting_precision">Display precision:  %1$s</string>
-    <string name="setting_source">Rate source:  %1$s</string>
-    <string name="setting_language">🌐 Language:  %1$s</string>
 
-    <string name="setting_theme">Appearance:  %1$s</string>
     <string name="theme_title">Appearance</string>
     <string name="theme_system">Follow system</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
-    <string name="setting_grouping">Digit grouping:  %1$s</string>
     <string name="grouping_title">Digit grouping</string>
     <string name="group_none">None — 1234.56</string>
     <string name="group_space">Space — 1 234.56</string>
@@ -79,7 +70,6 @@
     <string name="rates_offline">Offline · rates from %1$s · %2$s</string>
     <string name="rates_stale">⚠ Rates are out of date — from %1$s · %2$s</string>
     <string name="adjust_title">Rate adjustment</string>
-    <string name="setting_adjust">Rate adjustment:  %1$s</string>
     <string name="adjust_off">Off</string>
     <string name="adjusted_rates">Adjusted rates</string>
     <string name="adjusted_short">Adjusted</string>
@@ -89,4 +79,12 @@
     <string name="adjust_keep_hint">Otherwise it resets after 4 hours without use.</string>
     <string name="adjust_reset_notice">Adjustment reset, rates are mid-market again</string>
     <string name="adjust_undo">Restore</string>
+    <!-- главный экран и настройки, ноябрь 2026 -->
+    <string name="market_rate">Market rate</string>
+    <string name="rounding_title">Rounding</string>
+    <string name="rounding_up">Up</string>
+    <string name="rounding_nearest">To nearest</string>
+    <string name="rounding_hint">“Up” never shows less than the real amount, so you always have enough money.</string>
+    <string name="version_label">Version %1$s</string>
+    <string name="copied">Copied</string>
 </resources>

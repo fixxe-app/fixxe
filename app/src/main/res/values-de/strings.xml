@@ -6,25 +6,18 @@
     <string name="back">Zurück</string>
     <string name="close">Schließen</string>
     <string name="delete">Löschen</string>
-    <string name="selected">Ausgewählt: %1$d</string>
     <string name="loading">Lädt…</string>
-    <string name="updated">Aktualisiert %1$s · %2$s</string>
     <string name="error_prefix">⚠ %1$s</string>
     <string name="network_error">Netzwerkfehler</string>
-    <string name="clear">LÖSCHEN</string>
-    <string name="add_currency">＋ Währung hinzufügen</string>
-    <string name="mid_market">Mittelkurse ⓘ</string>
+    <string name="clear">Löschen</string>
+    <string name="add_currency">Währung hinzufügen</string>
     <string name="attribution" translatable="false">Rates By Exchange Rate API</string>
-    <string name="version">Ver. %1$s</string>
     <string name="base_currency">Basiswährung</string>
     <string name="delete_currency_title">Währung entfernen?</string>
     <string name="delete_currency_msg">%1$s — %2$s aus der Liste entfernen?</string>
     <string name="add_currency_title">Aus %1$d verfügbaren Währungen wählen</string>
     <string name="search_hint">Code oder Name…</string>
     <string name="settings">Einstellungen</string>
-    <string name="setting_precision">Anzeigegenauigkeit:  %1$s</string>
-    <string name="setting_source">Kursquelle:  %1$s</string>
-    <string name="setting_language">🌐 Sprache:  %1$s</string>
     <string name="precision_title">Anzeigegenauigkeit</string>
     <string name="prec_0">0 — Ganzzahlen</string>
     <string name="prec_1">1 Dezimalstelle</string>
@@ -49,18 +42,15 @@
     <string name="clear_confirm_title">Alle Beträge löschen?</string>
     <string name="clear_confirm_msg">Alle Beträge werden auf null gesetzt.</string>
     <string name="refresh">Kurse aktualisieren</string>
-    <string name="setting_theme">Darstellung:  %1$s</string>
     <string name="theme_title">Darstellung</string>
     <string name="theme_system">Wie System</string>
     <string name="theme_light">Hell</string>
     <string name="theme_dark">Dunkel</string>
-    <string name="setting_grouping">Tausendertrennzeichen:  %1$s</string>
     <string name="grouping_title">Tausendertrennzeichen</string>
     <string name="group_none">Keine — 1234.56</string>
     <string name="group_space">Leerzeichen — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
     <string name="adjust_title">Kursanpassung</string>
-    <string name="setting_adjust">Kursanpassung:  %1$s</string>
     <string name="adjust_off">Aus</string>
     <string name="adjusted_rates">Angepasste Kurse</string>
     <string name="adjusted_short">Angepasst</string>
@@ -70,4 +60,12 @@
     <string name="adjust_keep_hint">Sonst wird sie nach 4 Stunden ohne Nutzung zurückgesetzt.</string>
     <string name="adjust_reset_notice">Anpassung zurückgesetzt, Kurse sind wieder Mittelkurse</string>
     <string name="adjust_undo">Wiederherstellen</string>
+    <!-- главный экран и настройки, ноябрь 2026 -->
+    <string name="market_rate">Marktkurs</string>
+    <string name="rounding_title">Rundung</string>
+    <string name="rounding_up">Aufrunden</string>
+    <string name="rounding_nearest">Kaufmännisch runden</string>
+    <string name="rounding_hint">„Aufrunden“ zeigt nie weniger als den echten Betrag – so reicht das Geld immer.</string>
+    <string name="version_label">Version %1$s</string>
+    <string name="copied">Kopiert</string>
 </resources>

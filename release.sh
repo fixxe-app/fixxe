@@ -186,7 +186,7 @@ elif [ -n "$PW" ] && [ -f "$KS" ]; then
   "apk": "https://telebimmer.com/fixxe/FIXXE.apk"
 }
 JSON
-  echo "✓ APK для раздачи вне Play: $APK_OUT → web/FIXXE.apk"
+  echo "✓ APK для раздачи вне Play: web/FIXXE.apk"
 else
   echo "⚠ нет ключа подписи — APK не собран: на сайте останется прежний FIXXE.apk"
   echo "  вместе со своим latest.json (оба вне git, так что пара не разъедется)"
@@ -237,3 +237,9 @@ elif tar czf /tmp/fixe-web.tgz -C web . 2>/dev/null && \
 else
   echo "⚠ PWA не задеплоена (VM недоступна) — задеплой вручную позже"
 fi
+
+# 7. Убираем за собой временные файлы выпуска. APK остаётся в web/FIXXE.apk
+#    (оттуда он уходит на зеркало, в архив для telebimmer и в релиз открытого
+#    репозитория), архив сайта уже распакован на зеркале.
+rm -f /tmp/fixe-web.tgz
+if [ -n "$APK_OUT" ]; then rm -f "$APK_OUT"; fi

@@ -8,9 +8,9 @@ final class AdjustmentTests: XCTestCase {
 
     override func setUp() { continueAfterFailure = false }
 
-    private func launch(adjust: String?) -> XCUIApplication {
+    private func launch(adjust: String?, extra: [String] = []) -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-screen-currencies", codes.joined(separator: ",")]
+        app.launchArguments += ["-screen-currencies", codes.joined(separator: ",")] + extra
         if let adjust { app.launchArguments += ["-screen-adjust", adjust] }
         app.launch()
         XCTAssertTrue(app.descendants(matching: .any)["amount-EUR"].waitForExistence(timeout: 25), "список не появился")
@@ -39,7 +39,7 @@ final class AdjustmentTests: XCTestCase {
         XCTAssertTrue(banner.waitForExistence(timeout: 5), "нет полосы «Курсы с поправкой»")
         XCTAssertEqual(banner.label, "Adjusted rates")
         XCTAssertFalse(banner.label.contains("1.5"), "на главном экране процент не показывается")
-        XCTAssertTrue(app.buttons["rates-info"].label.hasPrefix("Adjusted rates"), "подвал всё ещё говорит «Mid-market»")
+        XCTAssertTrue(app.buttons["rates-info"].label.hasPrefix("Adjusted rates"), "строка статуса всё ещё говорит «Market rate»")
         let usdRate = app.descendants(matching: .any)["rate-USD"]
         XCTAssertTrue(usdRate.label.hasPrefix("Adjusted: 1 EUR = "), "строка курса не помечена: «\(usdRate.label)»")
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.lifetime = .keepAlways; shot.name = "adjusted"; add(shot)
@@ -84,8 +84,54 @@ final class AdjustmentTests: XCTestCase {
         let gone = expectation(for: NSPredicate(format: "exists == false"),
                                evaluatedWith: app.descendants(matching: .any)["adjust-banner"])
         wait(for: [gone], timeout: 5)
-        XCTAssertTrue(app.buttons["rates-info"].label.hasPrefix("Mid-market"), "подвал не вернулся к «Mid-market»")
+        XCTAssertTrue(app.buttons["rates-info"].label.hasPrefix("Market rate"), "строка статуса не вернулась к «Market rate»: \(app.buttons["rates-info"].label)")
         XCTAssertNotEqual(shown(app, "USD"), adjustedUsd, "суммы не пересчитались после выключения")
+    }
+}
+
+extension AdjustmentTests {
+    /// Окно настроек: пункты в нужном порядке, поправка — последней, внизу версия.
+    /// Округление «к ближайшему» сразу меняет суммы на экране.
+    func testSettingsWindowAndRounding() {
+        let app = launch(adjust: nil, extra: ["-round_up", "YES"])
+        // курс со строки USD: «1 EUR = 1.1206 USD»
+        let rateText = app.descendants(matching: .any)["rate-USD"].label
+        let r = Double(rateText.split(separator: " ")[3]) ?? 0
+        XCTAssertGreaterThan(r, 0, "не прочитал курс: «\(rateText)»")
+        // сумма EUR подобрана так, чтобы в долларах вышло ≈100.3: вверх — 101,
+        // к ближайшему — 100. На «круглой» сумме оба способа могли совпасть.
+        let eur = String(format: "%.2f", 100.3 / r)
+        amount(app, "EUR").tap()
+        let field = app.textFields["amount-EUR"]
+        XCTAssertTrue(field.waitForExistence(timeout: 5))
+        Thread.sleep(forTimeInterval: 0.6)
+        field.typeText(eur)
+        app.buttons["dismiss-keyboard-header"].tap()
+        Thread.sleep(forTimeInterval: 0.6)
+        let up = "101", near = "100"
+        XCTAssertEqual(shown(app, "USD"), up, "вверх: \(eur) EUR по курсу \(r)")
+
+        app.buttons["settings"].tap()
+        let ids = ["set-theme", "set-precision", "set-rounding", "set-grouping", "set-source", "set-language", "set-adjust"]
+        for id in ids { XCTAssertTrue(app.buttons[id].waitForExistence(timeout: 5), "в настройках нет пункта \(id)") }
+        let ys = ids.map { app.buttons[$0].frame.minY }
+        XCTAssertEqual(ys, ys.sorted(), "пункты настроек не в том порядке")
+        XCTAssertTrue(app.buttons["set-version"].exists, "внизу настроек нет номера версии")
+        app.buttons["set-rounding"].tap()
+        XCTAssertTrue(app.buttons["rounding-1"].waitForExistence(timeout: 5), "не открылся выбор округления")
+        app.buttons["rounding-1"].tap()
+        XCTAssertTrue(app.buttons["set-rounding"].waitForExistence(timeout: 5), "после выбора не вернулись к настройкам")
+        app.buttons["settings-close"].tap()
+        XCTAssertTrue(amount(app, "USD").waitForExistence(timeout: 5))
+        XCTAssertEqual(shown(app, "USD"), near, "к ближайшему: \(eur) EUR по курсу \(r)")
+        // вернуть «вверх»: выбор сохраняется и иначе достался бы следующим тестам
+        app.buttons["settings"].tap()
+        XCTAssertTrue(app.buttons["set-rounding"].waitForExistence(timeout: 5))
+        app.buttons["set-rounding"].tap()
+        XCTAssertTrue(app.buttons["rounding-0"].waitForExistence(timeout: 5))
+        app.buttons["rounding-0"].tap()
+        XCTAssertTrue(app.buttons["set-rounding"].waitForExistence(timeout: 5))
+        app.buttons["settings-close"].tap()
     }
 }
 

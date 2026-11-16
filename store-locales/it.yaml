@@ -9,19 +9,19 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
   COSA RENDE FIXXE DIVERSO
 
 
-  • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla.
+  • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
 
 
   • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
 
 
-  • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano.
+  • Arrotondamento intelligente — la precisione scelta è un minimo, non una camicia di forza: se l''arrotondamento falsasse l''importo di oltre il 2%, i decimali si aggiungono da soli. 0,94 CHF non diventa mai «1» e i piccoli importi in cripto non si azzerano. Sei tu a scegliere come arrotondare gli importi: per eccesso, così l''importo mostrato non è mai inferiore a quello reale e i soldi bastano sempre, oppure al più vicino.
 
 
   • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
 
 
-  • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato.
+  • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato. Se non la lasci sempre attiva, si disattiva da sola dopo quattro ore senza utilizzo, così una commissione dimenticata non falsa mai i numeri del giorno dopo.
 
 
   • Niente pubblicità. Niente account. Nessun tracciamento. L''unico permesso richiesto è l''accesso a internet; il tuo elenco, il suo ordine e le impostazioni non lasciano mai il dispositivo.
@@ -48,6 +48,10 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
 
   • Precisione: numeri interi, 1, 2 o 4 decimali
 
+  • Separatore delle migliaia: spazio o virgola, 1 234.56 o 1,234.56
+
+  • Tema chiaro o scuro, oppure come il sistema
+
   • 40 lingue, inglese come impostazione iniziale, con l''opzione di seguire la lingua del dispositivo — layout da destra a sinistra compresi
 
   • Telefono, tablet e web: la stessa app su iPhone, iPad, Android e come app web da installare nella schermata Home
@@ -58,7 +62,7 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novità: correzione del tasso. Imposta una percentuale per la commissione della banca o il margine (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente. La trovi nelle Impostazioni."
+whats_new: "Nuovo look: un unico stile per tutte le icone e le etichette. L'ora e la fonte del tasso ora sono in alto — tocca la riga per i dettagli. Novità nelle Impostazioni: arrotonda gli importi per eccesso o al più vicino. Le Impostazioni sono un'unica finestra chiara, con il numero di versione in basso."
 landing:
   page_title: FIXXE — convertitore di valute
   install_title: Modi per installare

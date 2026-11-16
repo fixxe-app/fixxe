@@ -9,19 +9,19 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-  • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng.
+  • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
 
 
   • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
 
 
-  • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không.
+  • Làm tròn thông minh — độ chính xác bạn chọn là mức tối thiểu, không phải chiếc áo bó: nếu việc làm tròn làm sai lệch số tiền quá 2%, các chữ số thập phân sẽ tự thêm vào. 0,94 CHF không bao giờ thành „1", và số tiền nhỏ bằng tiền mã hóa không bao giờ về không. Bạn chọn cách làm tròn số tiền: làm tròn lên, để số tiền hiển thị không bao giờ ít hơn số thật và bạn luôn đủ tiền, hoặc làm tròn đến giá trị gần nhất.
 
 
   • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
 
 
-  • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường.
+  • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường. Trừ khi bạn để luôn bật, tính năng này sẽ tự tắt sau bốn giờ không sử dụng, nên một khoản phí bị quên sẽ không bao giờ làm sai lệch các con số của ngày mai.
 
 
   • Không quảng cáo. Không tài khoản. Không theo dõi. Quyền duy nhất là truy cập Internet; danh sách, thứ tự và thiết lập của bạn không bao giờ rời khỏi máy.
@@ -48,6 +48,10 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
 
   • Độ chính xác: số nguyên, 1, 2 hoặc 4 chữ số thập phân
 
+  • Phân cách hàng nghìn bằng dấu cách hoặc dấu phẩy: 1 234.56 hoặc 1,234.56
+
+  • Giao diện sáng hoặc tối, hoặc theo hệ thống
+
   • 40 ngôn ngữ, mặc định tiếng Anh, có tùy chọn theo ngôn ngữ của máy — kể cả bố cục từ phải sang trái
 
   • Điện thoại, máy tính bảng và web: cùng một ứng dụng trên iPhone, iPad, Android và dưới dạng ứng dụng web cài lên màn hình chính
@@ -58,7 +62,7 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   Rates By Exchange Rate API.
 
   '
-whats_new: "Mới: điều chỉnh tỷ giá. Đặt một tỷ lệ phần trăm cho phí ngân hàng hoặc biên lợi nhuận (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng. Có trong phần Cài đặt."
+whats_new: "Diện mạo mới: một phong cách thống nhất cho mọi biểu tượng và nhãn. Thời gian và nguồn tỷ giá giờ nằm ở trên cùng — chạm vào dòng đó để xem chi tiết. Mới trong Cài đặt: làm tròn số tiền lên hoặc đến giá trị gần nhất. Cài đặt gọn trong một cửa sổ rõ ràng, số phiên bản ở dưới cùng."
 landing:
   page_title: FIXXE — ứng dụng quy đổi tiền tệ
   install_title: Cách cài đặt

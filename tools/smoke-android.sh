@@ -44,12 +44,15 @@ fail() {
   exit 1
 }
 
+# Эмулятор запускать с -no-snapshot-save (или с «холодной загрузкой» в настройках
+# AVD): иначе при каждом выходе он пишет снимок памяти для быстрого старта —
+# 2,5 ГБ на диске, которые тестам не нужны: холодная загрузка занимает ~45 с.
 command -v adb >/dev/null || fail "adb не найден (ANDROID_HOME=$ANDROID_HOME)"
 # У каждой команды adb — предел времени. Если эмулятор закроется посреди
 # прогона, adb ждёт его вечно, и вместе с тестом навсегда повис бы release.sh.
 ADB_BIN=$(command -v adb)
 adb() { perl -e 'alarm shift; exec @ARGV' 90 "$ADB_BIN" "$@"; }
-adb devices | grep -q "device$" || fail "нет запущенного эмулятора/устройства: запусти, например, 'emulator -avd fixxe &'"
+adb devices | grep -q "device$" || fail "нет запущенного эмулятора/устройства: запусти, например, 'emulator -avd fixxe -no-snapshot-save &'"
 
 # Свежезагруженный эмулятор иногда показывает «не отвечает» от системного
 # Digital Wellbeing — окно перекрывает приложение, и тест падал не из-за нас
@@ -216,6 +219,8 @@ tap_on() {   # tap_on <что искать на экране> [какое по �
 # текст элемента: txt <что искать> [какое по счёту]
 # (нет такого элемента — пустая строка, а не молчаливый выход по set -e)
 txt() { grep "$1" "$WORK/ui.txt" | sed -n "${2:-1}p" | grep -o ' text="[^"]*"' | head -1 | sed 's/^ text="//; s/"$//' || true; }
+# первая часть строки статуса, до « · »: «Рыночный курс» или «Курсы с поправкой»
+status_label() { txt 'id/tvStatus' | perl -CS -Mutf8 -pe 's/[\s\x{00A0}]*·.*//' ; }
 amounts() { grep 'id/etAmount' "$WORK/ui.txt" | grep -o 'text="[^"]*"' | paste -sd' ' -; }
 # С поправкой: полоса на месте и ни одна сумма не сдвинулась
 adj_intact() {   # $1 — после чего
@@ -350,8 +355,8 @@ usd_rate() { grep -o 'text="1 EUR = [0-9.]* USD"' "$WORK/ui.txt" | grep -o '[0-9
 badges() { local n; n=$(grep -c 'id/tvAdjustBadge' "$WORK/ui.txt" || true); echo "${n:-0}"; }
 # как экран выглядит без поправки
 launch_with EUR,USD,RSD
-PLAIN_USD=$(usd_rate); PLAIN_INFO=$(txt 'id/btnSourceInfo')
-[ -n "$PLAIN_USD" ] && [ -n "$PLAIN_INFO" ] || fail "не прочитал курс и подпись в подвале без поправки"
+PLAIN_USD=$(usd_rate); PLAIN_INFO=$(status_label)
+[ -n "$PLAIN_USD" ] && [ -n "$PLAIN_INFO" ] || fail "не прочитал курс и строку статуса без поправки"
 onscreen 'id/adjustBanner' && fail "поправка выключена, а полоса «Курсы с поправкой» на экране"
 [ "$(badges)" -eq 0 ] || fail "поправка выключена, а метки «%» на экране"
 # Время берём с устройства: срок сброса приложение считает по своим часам.
@@ -364,7 +369,7 @@ launch_with EUR,USD,RSD "$ADJ_FRESH"
 onscreen 'id/adjustBanner' || fail "поправка включена, а полосы «Курсы с поправкой» нет"
 BANNER=$(txt 'id/tvAdjustBanner')
 [ -n "$BANNER" ] || fail "в полосе нет текста"
-[ "$(txt 'id/btnSourceInfo')" = "$BANNER ⓘ" ] || fail "подпись в подвале не сменилась на «$BANNER ⓘ»: $(txt 'id/btnSourceInfo')"
+[ "$(status_label)" = "$BANNER" ] || fail "строка статуса вверху не сменилась на «$BANNER»: $(txt 'id/tvStatus')"
 grep -q '1[.,]5 *%' "$WORK/ui.txt" && fail "процент поправки показан на главном экране"
 [ "$(badges)" -eq 2 ] || fail "метка «%» должна стоять у двух пересчитанных строк (кроме базовой), а их $(badges)"
 ADJ_USD=$(usd_rate)
@@ -393,29 +398,33 @@ onscreen 'id/cbAdjustKeep' || fail "нажатие на полосу не отк
 tap_on 'text="+3%"'; sleep 1; screen
 onscreen 'id/cbAdjustKeep' || fail "выбор значения закрыл окно — до «Действует постоянно» не добраться"
 tap_on 'id/button1'; sleep 1
-# пункт в настройках — пятый, сразу после источника курсов, с выбранным значением
+# пункт в настройках — последний, под линией, с выбранным значением
 screen; tap_on 'id/btnSettings'; sleep 1.5; screen
-case "$(txt 'android:id/text1' 5)" in
+[ "$(grep -c 'id/tvValue' "$WORK/ui.txt")" -eq 7 ] || fail "в окне настроек не 7 пунктов"
+case "$(txt 'id/tvValue' 7)" in
   *"+3%"*) ;;
-  *) fail "в настройках пункт поправки не стоит сразу после источника курсов со значением +3% (пятый пункт: $(txt 'android:id/text1' 5))" ;;
+  *) fail "в настройках пункт поправки не последний или без значения +3% (последний: $(txt 'id/tvValue' 7))" ;;
 esac
-tap_on 'android:id/text1' 5; sleep 1.5; screen
+tap_on 'id/tvLabel' 7; sleep 1.5; screen
 onscreen 'id/cbAdjustKeep' || fail "пункт настроек не открыл окно поправки"
 # своё значение: набрать и подтвердить клавишей «Готово»
 tap_on 'id/etAdjustCustom'; sleep 1.5
 adb shell input text 2.25; adb shell input keyevent KEYCODE_ENTER; sleep 1.5
-screen; tap_on 'id/button1'; sleep 1
-screen; tap_on 'id/btnSettings'; sleep 1.5; screen
-case "$(txt 'android:id/text1' 5)" in
+screen; tap_on 'id/button1'; sleep 1.5; screen
+# открывали из настроек — «Закрыть» в поправке возвращает в настройки
+onscreen 'id/tvValue' || fail "окно поправки, открытое из настроек, закрылось на главный экран, а не в настройки"
+case "$(txt 'id/tvValue' 7)" in
   *"+2.25%"*) ;;
-  *) fail "своё значение 2.25 не применилось (пункт настроек: $(txt 'android:id/text1' 5))" ;;
+  *) fail "своё значение 2.25 не применилось (пункт настроек: $(txt 'id/tvValue' 7))" ;;
 esac
-tap_on 'android:id/text1' 5; sleep 1.5; screen
+tap_on 'id/tvLabel' 7; sleep 1.5; screen
 [ "$(txt 'id/etAdjustCustom')" = "2.25" ] || fail "окно поправки не показывает своё значение 2.25: «$(txt 'id/etAdjustCustom')»"
 tap_on 'class="android.widget.RadioButton"' 1; sleep 1   # первая строка — «Выкл.»
-tap_on 'id/button1'; sleep 1; screen
+tap_on 'id/button1'; sleep 1.5; screen
+onscreen 'id/tvValue' || fail "после поправки не вернулись в настройки"
+tap_on 'android:id/button2'; sleep 1; screen   # «Закрыть» в настройках
 onscreen 'id/adjustBanner' && fail "поправку выключили, а полоса осталась"
-[ "$(txt 'id/btnSourceInfo')" = "$PLAIN_INFO" ] || fail "поправку выключили, а подпись в подвале не вернулась"
+[ "$(status_label)" = "$PLAIN_INFO" ] || fail "поправку выключили, а строка статуса не вернулась к «$PLAIN_INFO»: $(txt 'id/tvStatus')"
 [ "$(badges)" -eq 0 ] || fail "поправку выключили, а метки «%» остались"
 # «Действует постоянно»: и через 5 часов поправка на месте
 launch_with EUR,USD,RSD '    <int name="adjust_pct_x100" value="150" />' '    <boolean name="adjust_keep" value="true" />' \
@@ -441,6 +450,29 @@ tap_on 'id/btnAdjustUndo'; sleep 1; screen
 onscreen 'id/adjustBanner' || fail "«Вернуть» не вернуло поправку"
 onscreen 'id/btnAdjustUndo' && fail "после «Вернуть» сообщение о сбросе осталось"
 echo "  ✓ полоса и метки на экране, процент скрыт; курс +1.5%; переходы суммы не двигают, ввод меняет базу; настройка, «постоянно», сброс с «Вернуть»"
+# Округление сумм: третий пункт настроек. 100 EUR в долларах по курсу на экране —
+# вверх и к ближайшему; сравниваем с расчётом от того же курса.
+launch_with EUR,USD,RSD
+R=$(usd_rate)
+# сумма EUR подобрана так, чтобы в долларах вышло ≈100.3: вверх — 101, к ближайшему — 100.
+# На «круглой» сумме оба способа могли бы совпасть, и проверка ничего бы не ловила.
+EUR_IN=$(awk -v r="$R" 'BEGIN { printf "%.2f", 100.3 / r }')
+UP=101; NEAR=100
+tap_on 'id/etAmount' 1; sleep 1; adb shell input text "$EUR_IN"; adb shell input keyevent KEYCODE_BACK; sleep 1; screen
+[ "$(txt 'id/etAmount' 2)" = "$UP" ] || fail "округление вверх: $EUR_IN EUR по курсу $R — ждали $UP USD, на экране $(txt 'id/etAmount' 2)"
+tap_on 'id/btnSettings'; sleep 1.5; screen
+tap_on 'id/tvLabel' 3; sleep 1.5; screen
+onscreen 'class="android.widget.CheckedTextView"' || fail "третий пункт настроек не открыл выбор округления"
+tap_on 'android:id/text1' 2; sleep 1.5; screen
+onscreen 'id/tvValue' || fail "выбор округления не вернул в настройки"
+# «Назад» в окне выбора тоже возвращает в настройки, а не на главный экран
+tap_on 'id/tvLabel' 1; sleep 1.5; screen
+onscreen 'class="android.widget.CheckedTextView"' || fail "первый пункт настроек не открыл выбор оформления"
+tap_on 'android:id/button2'; sleep 1.5; screen
+onscreen 'id/tvValue' || fail "«Назад» в окне выбора закрыло настройки, а не вернуло в них"
+tap_on 'android:id/button2'; sleep 1; screen   # «Закрыть» в настройках
+[ "$(txt 'id/etAmount' 2)" = "$NEAR" ] || fail "округление к ближайшему: ждали $NEAR USD, на экране $(txt 'id/etAmount' 2)"
+echo "  ✓ округление: вверх — $UP, к ближайшему — $NEAR (курс $R); «Назад» и выбор возвращают в настройки"
 # всё, что проверено в шагах 6–8, — ещё раз с включённой поправкой
 ADJ=$ADJ_ON
 step_keyboard;     echo "  ✓ с поправкой: клавиатура убирается, суммы и полоса на месте"

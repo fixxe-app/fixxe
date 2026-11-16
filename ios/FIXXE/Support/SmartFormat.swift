@@ -1,6 +1,6 @@
 import Foundation
 
-/// Умное округление вверх (как в Android/PWA): выбранная точность — минимум,
+/// Умное округление (как в Android/PWA): выбранная точность — минимум,
 /// но если она искажает значение больше чем на 2%, добавляем знаки,
 /// чтобы мелкие суммы не превращались в «1».
 enum SmartFormat {
@@ -22,22 +22,21 @@ enum SmartFormat {
         return String(out.reversed()) + rest
     }
 
-    static func amount(_ v: Double, decimals n: Int, grouping g: Int = 0) -> String {
+    /// `roundUp` — округление вверх: показанная сумма не меньше настоящей, денег
+    /// точно хватит. Иначе — к ближайшему, как в математике.
+    static func amount(_ v: Double, decimals n: Int, grouping g: Int = 0, roundUp: Bool = true) -> String {
         // бесконечность и NaN (вставка «1e400») — не сумма
         if !v.isFinite || v <= 0 { return n == 0 ? "0" : String(format: "%.\(n)f", 0.0) }
         let tol = 0.02
-        var d = n
-        while d < 8 {
+        func rounded(_ d: Int) -> Double {
             let f = pow(10.0, Double(d))
-            let ceiled = (v * f - 1e-9).rounded(.up) / f
-            if ceiled - v <= tol * v { break }
-            d += 1
+            return roundUp ? (v * f - 1e-9).rounded(.up) / f : (v * f).rounded(.toNearestOrAwayFromZero) / f
         }
-        let f = pow(10.0, Double(d))
-        let ceiled = (v * f - 1e-9).rounded(.up) / f
+        var d = n
+        while d < 8 && abs(rounded(d) - v) > tol * v { d += 1 }
         // Не Int(…): преобразование в Int аварийно завершает приложение, если
         // число больше 9,2·10¹⁸. С донгом в списке хватало ввести 16 цифр в EUR.
-        let text = String(format: "%.\(d)f", ceiled)
+        let text = String(format: "%.\(d)f", rounded(d))
         return group(text, mode: g)
     }
 

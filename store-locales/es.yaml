@@ -9,19 +9,19 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   QUÉ HACE DISTINTO A FIXXE
 
 
-  • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada.
+  • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
   • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
 
 
-  • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero.
+  • Redondeo inteligente: la precisión que elijas es un mínimo, no una camisa de fuerza. Si el redondeo desviara la cantidad más de un 2%, se añaden decimales por su cuenta. 0,94 CHF nunca se convierte en «1», y las cantidades pequeñas de cripto nunca se quedan en cero. Tú eliges cómo se redondean los importes: hacia arriba, para que la cantidad mostrada nunca sea menor que la real y el dinero siempre alcance, o al más cercano.
 
 
   • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
-  • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado.
+  • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
 
 
   • Sin anuncios. Sin cuentas. Sin rastreo. El único permiso es el acceso a internet; tu lista, su orden y tus ajustes nunca salen del dispositivo.
@@ -48,6 +48,10 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
 
   • Precisión: números enteros, 1, 2 o 4 decimales
 
+  • Separador de miles con espacio o coma: 1 234.56 o 1,234.56
+
+  • Tema claro u oscuro, o según el sistema
+
   • 40 idiomas, inglés por defecto, con la opción de seguir el idioma del dispositivo, incluidos los diseños de derecha a izquierda
 
   • Teléfono, tableta y web: la misma aplicación en iPhone, iPad, Android y como aplicación web que puedes instalar en la pantalla de inicio
@@ -58,7 +62,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novedad: ajuste del tipo. Indica un porcentaje para la comisión del banco o el margen (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente. Lo encontrarás en Ajustes."
+whats_new: "Nuevo aspecto: un mismo estilo para todos los iconos y textos. La hora y la fuente del tipo ahora están arriba — toca la línea para ver los detalles. Novedad en Ajustes: redondear los importes hacia arriba o al más cercano. Los Ajustes son una sola ventana clara, con el número de versión abajo."
 landing:
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar

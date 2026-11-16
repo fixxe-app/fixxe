@@ -112,13 +112,16 @@ Things that behave differently on the oldest supported release, and how they are
   applied to every converted amount and rate line, so the screen shows what you will really pay
   or receive; adjusted figures are always visibly marked (see [Rate adjustment](#rate-adjustment))
 - **Smart rounding** — chosen precision (0/1/2/4) is a minimum; if it would distort a value by >2%,
-  that row automatically shows more decimals (e.g. small/strong currencies never collapse to `1`)
+  that row automatically shows more decimals (e.g. small/strong currencies never collapse to `1`).
+  **Settings → Rounding**: *Up* (default — a shown amount is never less than the real one, so the
+  money is always enough) or *To nearest*; the setting shows both on today's rate of your first two
+  currencies
 - **Source-aware currency picker** — search across all sources or filter by one; colored dots show
   which sources have each currency; find a coin even on a source that lacks it and get a one-tap
   prompt to switch source and add it
 - **Forced source** selection in Settings (Auto / ExchangeRate-API / F.A. / Frankfurter), others stay as fallback
 - **40 languages** with automatic device-language detection (RTL for Arabic/Hebrew/Persian)
-- **Drag to reorder**, delete-with-confirmation, CLEAR, searchable add dialog
+- **Drag to reorder**, delete-with-confirmation, Clear, searchable add dialog
 - **Persistent** currencies, order, precision, source and language across restarts
 - **Works offline** — the last rates are cached on-device, so conversion keeps working with no
   network; if the cache is older than 24 h the header says so instead of passing stale numbers
@@ -127,19 +130,29 @@ Things that behave differently on the oldest supported release, and how they are
 - **Android:** settings backed up via Google Backup
 - **PWA:** installable, app shell cached, settings stay in the browser
 
+## Settings
+
+One window on all three platforms: the name of each setting on the left, its value on the right,
+each opening its own choice — *Appearance, Display precision, Rounding, Digit grouping, Rate
+source, Language*, then below a line *Rate adjustment*. Back, a choice, or a tap outside a choice
+window return to Settings, not to the main screen. At the bottom, small, the version — tap to
+copy it for a bug report (the web version also links the Android APK there).
+
 ## Rate sources
 
-Multi-source fallback chain (all normalized to EUR base), tried in order; the current source is
-shown in the header and credited in the footer:
+Multi-source fallback chain (all normalized to EUR base), tried in order. The header line reads
+*Market rate · 13:11 · Coinbase ⓘ*: today only the time, otherwise day and month too; tapping it
+opens the explanation of the rates. ExchangeRate-API is never named there — while its data is on
+screen, its own credit sits small in the footer, on the *Add currency* line:
 
 1. **Coinbase** (`api.coinbase.com/v2/exchange-rates`) — live, refreshed about once a minute.
    Public endpoint, no authentication.
 2. **FXRatesAPI** (`api.fxratesapi.com/latest`) — live. Used without a key (about 60 requests an
-   hour per device); a link back to [fxratesapi.com](https://fxratesapi.com) is appreciated by
-   their terms and shown in the footer while their data is on screen.
+   hour per device); a link back to [fxratesapi.com](https://fxratesapi.com) is appreciated, not
+   required, by their terms — the site is in the rates explanation.
 3. **ExchangeRate-API** (`open.er-api.com`) — daily. Open Access tier **requires attribution**:
    the "Rates By Exchange Rate API" link back to [exchangerate-api.com](https://www.exchangerate-api.com),
-   shown in the footer while their data is on screen.
+   shown in the footer — and only there — while their data is on screen.
 4. **F.A.** — Fawaz Ahmed currency-api (jsDelivr + `currency-api.pages.dev` mirror), daily. CC0
    public domain, no attribution. 300+ currencies incl. crypto/metals.
 5. **Frankfurter** (`api.frankfurter.dev`) — daily. MIT-licensed API, data from the European
@@ -220,7 +233,8 @@ The pivot is an implementation detail; the displayed rate line uses the active c
 ## Rate adjustment
 
 Mid-market rates are not what a bank or an exchange office gives you. **Settings → Rate
-adjustment** (right after *Rate source*, the same place on all three platforms) lets you put the
+adjustment** (the last item, below a line and in the same purple as adjusted amounts, the same
+place on all three platforms) lets you put the
 difference into the numbers: a signed percentage, two decimals, anywhere from −99.99 to +99.99.
 
 - `+1.5%` — "I will pay more": every converted amount and every rate line is multiplied by `1.015`.
@@ -246,8 +260,8 @@ on the main screen, so the phone can be handed to someone else:
   (tapping it opens the setting);
 - recalculated amounts and rate lines in a dedicated purple with a `%` badge (the badge repeats
   the colour for colour-blind users; screen readers hear "Adjusted: …");
-- the footer link *Mid-market rates ⓘ* becomes *Adjusted rates ⓘ*, and the info dialog opens
-  with a warning that does state the percentage.
+- the header line *Market rate · 13:11 ⓘ* becomes *Adjusted rates · 13:11 ⓘ* in purple, and the
+  info dialog opens with a warning that does state the percentage.
 
 **Reset.** Unless *Always on* is ticked, the adjustment switches itself off when the app has not
 been used for more than 4 hours (or the clock went backwards) — a forgotten fee must not silently

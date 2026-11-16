@@ -7,7 +7,9 @@
 #      у Apple загрузка идёт только через TestFlight, но тестеры и бета-ревью
 #      не нужны: сборка сразу идёт в App Store);
 #   2. создаёт версию 1.N в App Store и прикрепляет сборку;
-#   3. заливает тексты и «Что нового» на всех языках (store-locales → appstore/);
+#   3. заменяет скриншоты витрины, если они менялись с прошлого выпуска
+#      (appstore/screenshots): старые убирает, новые заливает;
+#      заливает тексты и «Что нового» на всех языках (store-locales → appstore/);
 #      если какая-то локаль осталась пустой — заливает ещё раз;
 #   4. отправляет на ревью с выпуском сразу после одобрения.
 # Повторный запуск безопасен: готовые шаги пропускаются.
@@ -42,10 +44,21 @@ if [ "$STATE" = "NONE" ]; then
   $PY -c "import yaml;print(yaml.safe_load(open('store-locales/en.yaml'))['whats_new'])" > "$NOTES"
   echo "→ 1/4 сборка и загрузка"
   (cd ios && testflight-ops ship --upload-only --yes --notes-file "$NOTES") | tail -4
+  rm -f "$NOTES"
   echo "→ 2/4 версия $VER в App Store"
   (cd ios && appstore-ops version create) | tail -1
 else
   echo "→ 1-2/4 версия $VER уже есть ($STATE) — сборку не пересобираю"
+fi
+
+# 3а. Скриншоты — только если их пересняли с прошлого выпуска (снимают после
+#     release.sh, чтобы в кадре была новая версия, поэтому сравниваем с HEAD): новая версия
+#     наследует кадры прошлой, а заливка лишь добавляет к ним.
+PREV=$(git tag --list 'v*' --sort=-v:refname | grep -vx "$TAG" | head -1)
+if [ -n "$PREV" ] && ! git diff --quiet "$PREV" HEAD -- appstore/screenshots; then
+  echo "→ скриншоты пересняты с $PREV — заменяю"
+  $PY -I tools/asc_release.py clear-shots "$VER"
+  (cd ios && appstore-ops screenshots upload) | tail -3
 fi
 
 # 3. Тексты: из единого источника переводов в манифест, потом в App Store.

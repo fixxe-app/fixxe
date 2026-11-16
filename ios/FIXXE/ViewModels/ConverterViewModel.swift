@@ -9,6 +9,8 @@ final class ConverterViewModel: ObservableObject {
     @Published var sourceMode: Int { didSet { UserDefaults.standard.set(sourceMode, forKey: "source") } }
     /// разделитель разрядов: 0 — нет, 1 — пробел, 2 — запятая
     @Published var grouping: Int { didSet { UserDefaults.standard.set(grouping, forKey: "grouping") } }
+    /// округление сумм: true — вверх (показанной суммы точно хватит), false — к ближайшему
+    @Published var roundUp: Bool { didSet { UserDefaults.standard.set(roundUp, forKey: "round_up") } }
     /// оформление: 0 — как в системе, 1 — светлое, 2 — тёмное
     @Published var theme: Int { didSet { UserDefaults.standard.set(theme, forKey: "theme") } }
 
@@ -66,6 +68,7 @@ final class ConverterViewModel: ObservableObject {
         currencies = list
         decimals = UserDefaults.standard.integer(forKey: "decimals")
         grouping = UserDefaults.standard.integer(forKey: "grouping")
+        roundUp = UserDefaults.standard.object(forKey: "round_up") as? Bool ?? true
         theme = ScreenshotArgs.theme >= 0 ? ScreenshotArgs.theme
                                          : UserDefaults.standard.integer(forKey: "theme")
         // сохранённый выбор источника — один раз переносим на новую нумерацию
@@ -115,9 +118,14 @@ final class ConverterViewModel: ObservableObject {
         stale = Date().timeIntervalSince1970 - at > Self.cacheAge
     }
 
+    /// Время курса для строки вверху: сегодня — только часы и минуты, иначе ещё
+    /// день и месяц. Год не нужен: курсам старше суток строка всё равно говорит,
+    /// что они устарели.
     private static func format(_ date: Date) -> String {
         let df = DateFormatter()
-        df.dateFormat = "dd MMM yyyy HH:mm"
+        df.locale = Locale.current
+        df.dateFormat = Calendar.current.isDateInToday(date) ? "HH:mm"
+            : (DateFormatter.dateFormat(fromTemplate: "dMMM", options: 0, locale: Locale.current) ?? "d MMM") + " HH:mm"
         return df.string(from: date)
     }
 
@@ -199,7 +207,7 @@ final class ConverterViewModel: ObservableObject {
         // всегда. С поправкой база остаётся прежней, пока в новой строке не
         // наберут число: суммы при переходах не меняются.
         if !adjusted { activeAmount = shown; baseCode = code }
-        inputText = SmartFormat.amount(shown, decimals: decimals)   // в поле ввода без группировки
+        inputText = SmartFormat.amount(shown, decimals: decimals, roundUp: roundUp)   // в поле ввода без группировки
     }
 
     func inputChanged(_ text: String) {
@@ -237,7 +245,7 @@ final class ConverterViewModel: ObservableObject {
     private func returnCursorToBase() {
         guard activeCode != baseCode else { return }
         activeCode = baseCode
-        inputText = SmartFormat.amount(activeAmount, decimals: decimals)
+        inputText = SmartFormat.amount(activeAmount, decimals: decimals, roundUp: roundUp)
     }
 
     /// Приложение ушло с экрана (или им только что пользовались)
@@ -287,7 +295,7 @@ final class ConverterViewModel: ObservableObject {
             baseCode = f
             activeCode = f
             activeAmount = amount
-            inputText = SmartFormat.amount(amount, decimals: decimals)
+            inputText = SmartFormat.amount(amount, decimals: decimals, roundUp: roundUp)
         } else if activeCode == code {
             // удалили строку с курсором, база цела — курсор возвращается на неё
             returnCursorToBase()
