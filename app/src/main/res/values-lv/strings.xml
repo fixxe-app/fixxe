@@ -66,6 +66,12 @@
     <string name="rounding_up">Uz augšu</string>
     <string name="rounding_nearest">Līdz tuvākajam</string>
     <string name="rounding_hint">“Uz augšu” nekad nerāda mazāk par īsto summu, tāpēc naudas vienmēr pietiks.</string>
+    <string name="amount_memory_title">Atcerēties summu</string>
+    <string name="amount_memory_session">Līdz lietotnes aizvēršanai</string>
+    <string name="amount_memory_12h">12 stundas</string>
+    <string name="amount_memory_24h">24 stundas</string>
+    <string name="amount_memory_forever">Vienmēr</string>
+    <string name="amount_memory_hint">Cik ilgi ievadītā summa tiek saglabāta pēc iziešanas no lietotnes. Pēc tam tā atkal ir 1.</string>
     <string name="version_label">Versija %1$s</string>
     <string name="copied">Nokopēts</string>
 </resources>

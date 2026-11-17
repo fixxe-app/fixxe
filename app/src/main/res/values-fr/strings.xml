@@ -66,6 +66,12 @@
     <string name="rounding_up">Vers le haut</string>
     <string name="rounding_nearest">Au plus proche</string>
     <string name="rounding_hint">« Vers le haut » n’affiche jamais moins que le montant réel : l’argent suffit toujours.</string>
+    <string name="amount_memory_title">Mémoriser le montant</string>
+    <string name="amount_memory_session">Jusqu\'à la fermeture de l\'app</string>
+    <string name="amount_memory_12h">12 heures</string>
+    <string name="amount_memory_24h">24 heures</string>
+    <string name="amount_memory_forever">Toujours</string>
+    <string name="amount_memory_hint">Durée pendant laquelle le montant saisi est conservé après avoir quitté l\'app. Ensuite, il revient à 1.</string>
     <string name="version_label">Version %1$s</string>
     <string name="copied">Copié</string>
 </resources>

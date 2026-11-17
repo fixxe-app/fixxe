@@ -24,6 +24,7 @@
 		542C16F5402571A8C4D4D84C /* KeyboardScrollRestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */; };
 		6592C86165FC60B94FD64A29 /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC905DA39A7FC24568DEEBE /* ConverterViewModel.swift */; };
 		65D600C3FBF26028B8B98A8D /* KeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522B41204AA2122AC64BF93 /* KeyboardTests.swift */; };
+		6720062B99A75C9D99C13E72 /* AmountMemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46AD8F25CBEEF946A49471E /* AmountMemoryUITests.swift */; };
 		6D85E395868BB3590251A6FF /* CurrencyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F0813B564E37AAF56E162 /* CurrencyRowView.swift */; };
 		7DB6B5726FD5A4FDA2381486 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CCE8ABB75B2FDDF802BEB6 /* UIHelpers.swift */; };
 		7E87FB7549406A57E1DBC87D /* AddCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9065B63391283795556FA83 /* AddCurrencyView.swift */; };
@@ -31,10 +32,12 @@
 		84E62203AAAB528186124EBD /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226419E3D43E1EAEF8D4330C /* CurrencyData.swift */; };
 		8B81426290499D00E8A67428 /* SelectOnFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F04B640E8EE74B03AD5104 /* SelectOnFocusTests.swift */; };
 		952EB819D1D3119E48EC7524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D604946C3A5A771C49B396 /* Assets.xcassets */; };
+		9E9C3489775D2DEADDAE99C4 /* AmountMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49913A2918A7F81595A8568F /* AmountMemory.swift */; };
 		A4644BAC9D8305B3D117FD14 /* RowDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AE730FAD8CAD8576907366 /* RowDropDelegate.swift */; };
 		AD2E66F31CE06E8E3FB9CC05 /* AdjustmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */; };
 		AD53D43B2FA5EA24FA49BF61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F191BE26C83A3E86B94DFB87 /* ContentView.swift */; };
 		C1C4801A84BC5B850311F521 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5EE0A4AEF75010731DE0ED /* L10n.swift */; };
+		C8098087920DC8DE7A4BD778 /* AmountMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6671D126ECE080A64736DCD /* AmountMemoryTests.swift */; };
 		C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F86173051CB4DCF18630E /* RatesSourcesTests.swift */; };
 		D1D7EBE85C806C0137511631 /* RatesLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB061C5369A19F9AA1D56E /* RatesLoadTests.swift */; };
 		D8A363D4F4A3CD6D7B2E4B48 /* FIXXEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62226A2CEBCEFBC634494829 /* FIXXEApp.swift */; };
@@ -66,6 +69,7 @@
 		226419E3D43E1EAEF8D4330C /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		2D7AADCB29CC6B6160A445F9 /* FIXXETests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FIXXETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF378A4C6A36231768A881B /* ListAfterKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAfterKeyboardTests.swift; sourceTree = "<group>"; };
+		49913A2918A7F81595A8568F /* AmountMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountMemory.swift; sourceTree = "<group>"; };
 		4BCB061C5369A19F9AA1D56E /* RatesLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesLoadTests.swift; sourceTree = "<group>"; };
 		5C5993802983544C36948747 /* OrientationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationTests.swift; sourceTree = "<group>"; };
 		603B72B1ECB700C2621B94EE /* FIXXE.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FIXXE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,11 +93,13 @@
 		9EB5A70E6477BB43FD4D59D2 /* RatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesService.swift; sourceTree = "<group>"; };
 		A0BB6DBB2EF7C08A8B04EBA9 /* i18n.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = i18n.json; sourceTree = "<group>"; };
 		A267E45A50BF97C2CA766F46 /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
+		A46AD8F25CBEEF946A49471E /* AmountMemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountMemoryUITests.swift; sourceTree = "<group>"; };
 		A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardScrollRestore.swift; sourceTree = "<group>"; };
 		A85AF3E0CA612F0946CE6BF4 /* AdjustViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustViews.swift; sourceTree = "<group>"; };
 		B9065B63391283795556FA83 /* AddCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrencyView.swift; sourceTree = "<group>"; };
 		B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentTests.swift; sourceTree = "<group>"; };
 		CF7133CCCB4E17D72E1EA442 /* TapInteractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInteractionTests.swift; sourceTree = "<group>"; };
+		D6671D126ECE080A64736DCD /* AmountMemoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountMemoryTests.swift; sourceTree = "<group>"; };
 		E522B41204AA2122AC64BF93 /* KeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTests.swift; sourceTree = "<group>"; };
 		F191BE26C83A3E86B94DFB87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7966DADB7A2BF6843B45DD3 /* SwitchRowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchRowsTests.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		5AAC08019C78B6A3DD292A30 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				49913A2918A7F81595A8568F /* AmountMemory.swift */,
 				95A1AE2DFE66B9DF951C9FF0 /* CaretTap.swift */,
 				A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */,
 				9D5EE0A4AEF75010731DE0ED /* L10n.swift */,
@@ -174,6 +181,7 @@
 		BB41EA2BD3D78679835A4242 /* FIXXETests */ = {
 			isa = PBXGroup;
 			children = (
+				D6671D126ECE080A64736DCD /* AmountMemoryTests.swift */,
 				8D7090ED0E933D13F31A8E67 /* RateAdjustTests.swift */,
 				933F86173051CB4DCF18630E /* RatesSourcesTests.swift */,
 				F7966DADB7A2BF6843B45DD3 /* SwitchRowsTests.swift */,
@@ -220,6 +228,7 @@
 			children = (
 				7A9E520FED5DE3CA99EDDA3C /* AddCurrencyTests.swift */,
 				B9BE804E0EA2650EEB4A1258 /* AdjustmentTests.swift */,
+				A46AD8F25CBEEF946A49471E /* AmountMemoryUITests.swift */,
 				E522B41204AA2122AC64BF93 /* KeyboardTests.swift */,
 				3DF378A4C6A36231768A881B /* ListAfterKeyboardTests.swift */,
 				5C5993802983544C36948747 /* OrientationTests.swift */,
@@ -347,6 +356,7 @@
 			files = (
 				24F57ED949D747129341764F /* AddCurrencyTests.swift in Sources */,
 				AD2E66F31CE06E8E3FB9CC05 /* AdjustmentTests.swift in Sources */,
+				6720062B99A75C9D99C13E72 /* AmountMemoryUITests.swift in Sources */,
 				65D600C3FBF26028B8B98A8D /* KeyboardTests.swift in Sources */,
 				1FBA9B39F850BC2AA279CFD2 /* ListAfterKeyboardTests.swift in Sources */,
 				0A92B8F83040587BE49D5DA0 /* OrientationTests.swift in Sources */,
@@ -363,6 +373,7 @@
 			files = (
 				7E87FB7549406A57E1DBC87D /* AddCurrencyView.swift in Sources */,
 				41AB2CCD186F76257AC2DDA2 /* AdjustViews.swift in Sources */,
+				9E9C3489775D2DEADDAE99C4 /* AmountMemory.swift in Sources */,
 				26156AA96B8CF040F1010702 /* CaretTap.swift in Sources */,
 				AD53D43B2FA5EA24FA49BF61 /* ContentView.swift in Sources */,
 				6592C86165FC60B94FD64A29 /* ConverterViewModel.swift in Sources */,
@@ -385,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8098087920DC8DE7A4BD778 /* AmountMemoryTests.swift in Sources */,
 				44BFB3295F0681A8318C9C0F /* RateAdjustTests.swift in Sources */,
 				C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */,
 				03908585D112F8D26A44D113 /* SwitchRowsTests.swift in Sources */,
@@ -413,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 68;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -425,7 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.67;
+				MARKETING_VERSION = 1.68;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
@@ -630,7 +642,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 67;
+				CURRENT_PROJECT_VERSION = 68;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -642,7 +654,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.67;
+				MARKETING_VERSION = 1.68;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;

@@ -66,6 +66,12 @@
     <string name="rounding_up">Ke atas</string>
     <string name="rounding_nearest">Ke terdekat</string>
     <string name="rounding_hint">“Ke atas” tidak pernah menampilkan jumlah yang lebih kecil dari sebenarnya, jadi uang Anda selalu cukup.</string>
+    <string name="amount_memory_title">Ingat jumlah</string>
+    <string name="amount_memory_session">Sampai aplikasi ditutup</string>
+    <string name="amount_memory_12h">12 jam</string>
+    <string name="amount_memory_24h">24 jam</string>
+    <string name="amount_memory_forever">Selalu</string>
+    <string name="amount_memory_hint">Berapa lama jumlah yang dimasukkan disimpan setelah keluar dari aplikasi. Setelah itu kembali ke 1.</string>
     <string name="version_label">Versi %1$s</string>
     <string name="copied">Disalin</string>
 </resources>

@@ -66,6 +66,12 @@
     <string name="rounding_up">Προς τα πάνω</string>
     <string name="rounding_nearest">Στο πλησιέστερο</string>
     <string name="rounding_hint">Το «Προς τα πάνω» δεν δείχνει ποτέ λιγότερο από το πραγματικό ποσό, ώστε τα χρήματα να φτάνουν πάντα.</string>
+    <string name="amount_memory_title">Απομνημόνευση ποσού</string>
+    <string name="amount_memory_session">Μέχρι να κλείσει η εφαρμογή</string>
+    <string name="amount_memory_12h">12 ώρες</string>
+    <string name="amount_memory_24h">24 ώρες</string>
+    <string name="amount_memory_forever">Πάντα</string>
+    <string name="amount_memory_hint">Πόσο διατηρείται το ποσό που εισαγάγατε αφού βγείτε από την εφαρμογή. Μετά γίνεται ξανά 1.</string>
     <string name="version_label">Έκδοση %1$s</string>
     <string name="copied">Αντιγράφηκε</string>
 </resources>

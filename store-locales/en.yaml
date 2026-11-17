@@ -21,6 +21,9 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
 
 
+  • Remembers your amount — close the app and the number you typed is still there when you come back. You choose for how long in Settings: 12 or 24 hours, always, or only while the app is open.
+
+
   • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   Rates By Exchange Rate API.
 
   '
-whats_new: "New look: one style for all icons and labels. The rate time and source are now at the top — tap the line for details. New in Settings: round amounts up or to the nearest. Settings are one clear window, with the version number at the bottom."
+whats_new: "New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open."
 landing:
   page_title: FIXXE — currency converter
   install_title: Ways to install

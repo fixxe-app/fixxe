@@ -66,6 +66,12 @@
     <string name="rounding_up">În sus</string>
     <string name="rounding_nearest">La cel mai apropiat</string>
     <string name="rounding_hint">„În sus” nu arată niciodată mai puțin decât suma reală, așa că banii ajung mereu.</string>
+    <string name="amount_memory_title">Reține suma</string>
+    <string name="amount_memory_session">Până la închiderea aplicației</string>
+    <string name="amount_memory_12h">12 ore</string>
+    <string name="amount_memory_24h">24 de ore</string>
+    <string name="amount_memory_forever">Întotdeauna</string>
+    <string name="amount_memory_hint">Cât timp se păstrează suma introdusă după ieșirea din aplicație. Apoi revine la 1.</string>
     <string name="version_label">Versiunea %1$s</string>
     <string name="copied">Copiat</string>
 </resources>

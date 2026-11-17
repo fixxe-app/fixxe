@@ -112,7 +112,7 @@ extension AdjustmentTests {
         XCTAssertEqual(shown(app, "USD"), up, "вверх: \(eur) EUR по курсу \(r)")
 
         app.buttons["settings"].tap()
-        let ids = ["set-theme", "set-precision", "set-rounding", "set-grouping", "set-source", "set-language", "set-adjust"]
+        let ids = ["set-theme", "set-precision", "set-rounding", "set-grouping", "set-memory", "set-source", "set-language", "set-adjust"]
         for id in ids { XCTAssertTrue(app.buttons[id].waitForExistence(timeout: 5), "в настройках нет пункта \(id)") }
         let ys = ids.map { app.buttons[$0].frame.minY }
         XCTAssertEqual(ys, ys.sorted(), "пункты настроек не в том порядке")

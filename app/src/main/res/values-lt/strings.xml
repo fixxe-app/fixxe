@@ -66,6 +66,12 @@
     <string name="rounding_up">Į didesnę pusę</string>
     <string name="rounding_nearest">Iki artimiausio</string>
     <string name="rounding_hint">„Į didesnę pusę“ niekada nerodo mažiau nei tikroji suma, todėl pinigų visada užteks.</string>
+    <string name="amount_memory_title">Įsiminti sumą</string>
+    <string name="amount_memory_session">Kol programėlė atidaryta</string>
+    <string name="amount_memory_12h">12 valandų</string>
+    <string name="amount_memory_24h">24 valandos</string>
+    <string name="amount_memory_forever">Visada</string>
+    <string name="amount_memory_hint">Kiek laiko įvesta suma saugoma išėjus iš programėlės. Po to vėl bus 1.</string>
     <string name="version_label">Versija %1$s</string>
     <string name="copied">Nukopijuota</string>
 </resources>

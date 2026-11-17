@@ -21,6 +21,9 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
 
 
+  • Atceras summu — aizveriet lietotni, un ievadītais skaitlis jūs sagaidīs, kad atgriezīsieties. Cik ilgi, izvēlieties iestatījumos: 12 vai 24 stundas, vienmēr vai tikai, kamēr lietotne ir atvērta.
+
+
   • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu. Ja neatstājat to vienmēr ieslēgtu, tā pati izslēdzas pēc četrām stundām bez lietošanas, tāpēc aizmirsta komisija nekad neizkropļos rītdienas skaitļus.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   Rates By Exchange Rate API.
 
   '
-whats_new: "Jauns izskats: vienots stils visām ikonām un uzrakstiem. Kursa laiks un avots tagad ir augšā — pieskarieties rindai, lai redzētu sīkāk. Jaunums iestatījumos: summu noapaļošana uz augšu vai līdz tuvākajam. Iestatījumi ir viens pārskatāms logs, versijas numurs ir apakšā."
+whats_new: "Jaunums iestatījumos: atcerēties summu. Ievadītais skaitlis saglabājas arī pēc lietotnes aizvēršanas — pēc noklusējuma 12 stundas, vai izvēlieties 24 stundas, vienmēr vai tikai, kamēr lietotne ir atvērta."
 landing:
   page_title: FIXXE — valūtas konvertors
   install_title: Instalēšanas veidi

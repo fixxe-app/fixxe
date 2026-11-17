@@ -66,6 +66,12 @@
     <string name="rounding_up">Per eccesso</string>
     <string name="rounding_nearest">Al più vicino</string>
     <string name="rounding_hint">«Per eccesso» non mostra mai meno dell’importo reale, così i soldi bastano sempre.</string>
+    <string name="amount_memory_title">Ricorda importo</string>
+    <string name="amount_memory_session">Fino alla chiusura dell\'app</string>
+    <string name="amount_memory_12h">12 ore</string>
+    <string name="amount_memory_24h">24 ore</string>
+    <string name="amount_memory_forever">Sempre</string>
+    <string name="amount_memory_hint">Per quanto tempo l\'importo inserito resta salvato dopo l\'uscita dall\'app. Poi torna a 1.</string>
     <string name="version_label">Versione %1$s</string>
     <string name="copied">Copiato</string>
 </resources>

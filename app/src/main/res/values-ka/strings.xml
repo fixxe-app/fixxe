@@ -66,6 +66,12 @@
     <string name="rounding_up">ზემოთ</string>
     <string name="rounding_nearest">უახლოესამდე</string>
     <string name="rounding_hint">„ზემოთ“ არასდროს აჩვენებს რეალურ თანხაზე ნაკლებს, ასე რომ ფული ყოველთვის საკმარისი იქნება.</string>
+    <string name="amount_memory_title">თანხის დამახსოვრება</string>
+    <string name="amount_memory_session">აპის დახურვამდე</string>
+    <string name="amount_memory_12h">12 საათი</string>
+    <string name="amount_memory_24h">24 საათი</string>
+    <string name="amount_memory_forever">ყოველთვის</string>
+    <string name="amount_memory_hint">რამდენ ხანს ინახება შეყვანილი თანხა აპიდან გასვლის შემდეგ. შემდეგ ისევ 1 ხდება.</string>
     <string name="version_label">ვერსია %1$s</string>
     <string name="copied">დაკოპირდა</string>
 </resources>

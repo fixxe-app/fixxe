@@ -1,0 +1,114 @@
+<!doctype html>
+<!--
+  Сколько помнить введённую сумму — веб-версия. Открывается безголовым Chrome
+  из tools/smoke-web.sh; результат пишется в <pre id="result"> как PASS/FAIL.
+  Лежит вне web/, на сайт не попадает.
+
+  1. По умолчанию (12 ч): набрали 50 в USD, ушли со страницы, открыли заново — 50 USD.
+  2. Пятый пункт настроек, 4 варианта; «Пока приложение открыто» — после
+     перезагрузки снова 1 EUR, и сохранённая сумма стёрта.
+  3. Сроки при запуске: 12 ч / 24 ч / «всегда»; валюты суммы нет в списке.
+  4. Вкладка не перезагружалась, но вернулись после срока — сумма снова 1;
+     при «всегда» — не трогается.
+  Каждый сценарий — новая загрузка страницы с заранее записанным хранилищем.
+-->
+<meta charset="utf-8">
+<title>memory</title>
+<iframe id="app" style="width:420px;height:900px"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const H = 3600 * 1000;
+const problems = [];
+const check = (ok, msg) => { if (!ok) problems.push(msg); };
+const KEYS = ['currencies', 'amount_memory', 'saved_code', 'saved_amount', 'adjust_left_at', 'adjust_pct', 'round_up', 'decimals'];
+const put = (k, v) => localStorage.setItem('fixe.' + k, JSON.stringify(v));
+const clear = () => KEYS.forEach(k => localStorage.removeItem('fixe.' + k));
+
+// загрузить приложение заново; storage — что лежит в хранилище до запуска
+async function open(storage) {
+  // Сначала выгрузить прежнюю страницу: уходя, она записывает свою сумму и время
+  // и затёрла бы подготовленное хранилище.
+  await new Promise(r => { frame.onload = r; frame.src = 'about:blank'; });
+  if (storage) { clear(); put('currencies', ['EUR', 'USD', 'RSD']); for (const [k, v] of Object.entries(storage)) put(k, v); }
+  await new Promise(r => { frame.onload = r; frame.src = '/web/index.html?' + Math.random(); });
+  const d = frame.contentDocument;
+  for (let i = 0; i < 60 && !(d.querySelector('.card[data-code="RSD"] .rate')?.textContent); i++) await wait(250);
+  if (!d.querySelector('.card[data-code="RSD"] .rate')?.textContent) throw new Error('курсы не загрузились');
+  await wait(300);
+  return [frame.contentWindow, d];
+}
+const amountOf = (d, c) => d.querySelector(`.card[data-code="${c}"] .amount`).value;
+
+(async () => {
+  try {
+    // 1. по умолчанию 12 ч: сумма переживает уход со страницы
+    let [w, d] = await open({});
+    const inp = d.querySelector('.card[data-code="USD"] .amount');
+    inp.focus(); inp.dispatchEvent(new FocusEvent('focus')); await wait(120);
+    inp.value = '50'; inp.dispatchEvent(new Event('input', {bubbles: true})); await wait(200);
+    w.dispatchEvent(new Event('pagehide'));               // как закрыть вкладку
+    [w, d] = await open();
+    check(amountOf(d, 'USD') === '50', `12 ч: после перезагрузки USD = ${amountOf(d, 'USD')}, ожидалось 50`);
+    check(w.eval('baseCurrency') === 'USD', 'восстановленная сумма считается не от USD');
+
+    // 2. пункт настроек и «Пока приложение открыто»
+    d.getElementById('btnSettings').click(); await wait(100);
+    const rows = [...d.querySelectorAll('#modal-root .set-row')].map(b => b.dataset.k);
+    check(rows[4] === 'memory', `«Помнить сумму» не пятый пункт: ${rows.join(',')}`);
+    d.querySelector('#modal-root .set-row[data-k="memory"]').click(); await wait(100);
+    check(d.querySelectorAll('#modal-root .choice').length === 4, 'в «Помнить сумму» не 4 варианта');
+    check(d.querySelector('#modal-root .choice.sel')?.dataset.i === '1', 'по умолчанию отмечено не «12 часов»');
+    check(!!d.querySelector('#modal-root .hint'), 'нет пояснения под вариантами');
+    const sessionLabel = d.querySelector('#modal-root .choice[data-i="0"]').textContent.replace(/^[◉○]/, '');
+    d.querySelector('#modal-root .choice[data-i="0"]').click(); await wait(100);
+    const v = d.querySelector('#modal-root .set-row[data-k="memory"] .v');
+    check(!!v, 'выбор не вернул в настройки');
+    check(v && v.textContent === sessionLabel, `пункт показывает «${v && v.textContent}», ожидалось «${sessionLabel}»`);
+    check(localStorage.getItem('fixe.saved_amount') === null, '«не помнить» — а сохранённая сумма осталась');
+    d.querySelector('#modal-root [data-x]').click(); await wait(100);
+    w.dispatchEvent(new Event('pagehide'));
+    [w, d] = await open();
+    check(amountOf(d, 'EUR') === '1', `«Пока открыто»: после перезагрузки EUR = ${amountOf(d, 'EUR')}, ожидалось 1`);
+
+    // 3. сроки при запуске
+    const now = Date.now();
+    const saved = (h, mode) => ({ saved_code: 'USD', saved_amount: 50, adjust_left_at: now - h * H, ...(mode === undefined ? {} : { amount_memory: mode }) });
+    const cases = [[11, undefined, 'USD', '50', '12 ч, прошло 11'], [13, undefined, 'EUR', '1', '12 ч, прошло 13'],
+                   [13, 2, 'USD', '50', '24 ч, прошло 13'], [25, 2, 'EUR', '1', '24 ч, прошло 25'],
+                   [720, 3, 'USD', '50', '«всегда», прошло 30 дней'], [1, 0, 'EUR', '1', '«пока открыто», прошёл 1 ч']];
+    for (const [h, mode, code, exp, name] of cases) {
+      [w, d] = await open(saved(h, mode));
+      check(amountOf(d, code) === exp, `${name}: ${code} = ${amountOf(d, code)}, ожидалось ${exp}`);
+    }
+    [w, d] = await open({ ...saved(1), currencies: ['EUR', 'RSD'] });
+    check(amountOf(d, 'EUR') === '1', `валюты суммы нет в списке: EUR = ${amountOf(d, 'EUR')}, ожидалось 1`);
+
+    // 4. вкладка жила, вернулись после срока
+    [w, d] = await open(saved(1));
+    check(amountOf(d, 'USD') === '50', 'сумма не вернулась перед проверкой возврата');
+    put('adjust_left_at', Date.now() - 13 * H);
+    d.dispatchEvent(new Event('visibilitychange')); await wait(200);
+    check(amountOf(d, 'EUR') === '1' && w.eval('baseCurrency') === 'EUR',
+          `вернулись через 13 ч при 12 ч: EUR = ${amountOf(d, 'EUR')}, база ${w.eval('baseCurrency')}`);
+    [w, d] = await open(saved(1, 3));
+    put('adjust_left_at', Date.now() - 90 * 24 * H);
+    d.dispatchEvent(new Event('visibilitychange')); await wait(200);
+    check(amountOf(d, 'USD') === '50', `«всегда»: после долгого перерыва USD = ${amountOf(d, 'USD')}`);
+
+    // 5. правило само по себе
+    const t0 = 1e12;
+    check(!w.restoreOnLaunch(0, t0 - 1, t0) && !w.amountExpired(0, t0 - 100 * 24 * H, t0), 'правило: «пока открыто»');
+    check(w.restoreOnLaunch(1, t0 - 11 * H, t0) && !w.restoreOnLaunch(1, t0 - 13 * H, t0), 'правило: 12 ч');
+    check(w.restoreOnLaunch(2, t0 - 23 * H, t0) && !w.restoreOnLaunch(2, t0 - 25 * H, t0), 'правило: 24 ч');
+    check(w.restoreOnLaunch(3, 0, t0) && !w.amountExpired(3, 0, t0), 'правило: «всегда»');
+    check(!w.restoreOnLaunch(1, t0 + H, t0) && w.amountExpired(2, t0 + H, t0), 'правило: часы ушли назад');
+
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + (e.stack || e.message);
+  } finally { clear(); }
+})();
+</script>

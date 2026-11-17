@@ -60,6 +60,8 @@ enum ScreenshotArgs {
     static var openInfo: Bool { args.contains("-screen-info") }
     /// состарить кэш курсов, чтобы проверить предупреждение об устаревших данных
     static var staleCache: Bool { args.contains("-stale-cache") }
+    /// вернуть сохранённую сумму и в запуске для тестов (обычно они начинают с 1)
+    static var keepAmount: Bool { args.contains("-keep-amount") }
     static var initialQuery: String {
         guard let i = args.firstIndex(of: "-screen-query"), i + 1 < args.count else { return "" }
         return args[i + 1]
@@ -99,6 +101,7 @@ enum ScreenshotArgs {
     static var openSettings: Bool { false }
     static var openInfo: Bool { false }
     static var staleCache: Bool { false }
+    static var keepAmount: Bool { false }
     static var initialQuery: String { "" }
     static var initialFilter: Int { -1 }
     static var currencies: [String] { [] }

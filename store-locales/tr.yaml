@@ -21,6 +21,9 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
 
 
+  • Tutarı hatırlar — uygulamayı kapatın, döndüğünüzde yazdığınız sayı yerinde olur. Ne kadar süreyle olacağını ayarlardan seçin: 12 veya 24 saat, her zaman ya da yalnızca uygulama açıkken.
+
+
   • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız. Her zaman açık tutmadığınız sürece dört saat kullanılmadığında kendiliğinden kapanır; böylece unutulan bir komisyon yarının rakamlarını asla bozmaz.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   Rates By Exchange Rate API.
 
   '
-whats_new: "Yeni görünüm: tüm simgeler ve etiketler için tek bir stil. Kurun saati ve kaynağı artık en üstte — ayrıntılar için satıra dokunun. Ayarlar'da yeni: tutarları yukarı veya en yakına yuvarlama. Ayarlar tek ve anlaşılır bir pencere, sürüm numarası en altta."
+whats_new: "Ayarlarda yeni: Tutarı hatırla. Yazdığınız sayı uygulamayı kapattıktan sonra da kalır — varsayılan olarak 12 saat; isterseniz 24 saat, her zaman ya da yalnızca uygulama açıkken."
 landing:
   page_title: FIXXE — döviz çevirici
   install_title: Kurulum yolları

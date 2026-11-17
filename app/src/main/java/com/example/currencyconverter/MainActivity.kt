@@ -232,6 +232,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         vm.resetAdjustIfExpired()   // давно не открывали — курсы снова рыночные
+        vm.resetAmountIfExpired(beforeReset = ::dismissKeyboard)   // и сумма снова 1, если так выбрано
         vm.resumeAutoRefresh()
     }
 
@@ -467,6 +468,9 @@ class MainActivity : AppCompatActivity() {
         row(getString(R.string.precision_title), decimalLabel, "set-precision") { showDecimalDialog(true) }
         row(getString(R.string.rounding_title), roundLabel, "set-rounding") { showRoundingDialog(true) }
         row(getString(R.string.grouping_title), groupingLabel, "set-grouping") { showGroupingDialog(true) }
+        row(getString(R.string.amount_memory_title), getString(memoryLabels[vm.getAmountMemory()]), "set-memory") {
+            showAmountMemoryDialog(true)
+        }
         row(getString(R.string.source_title), srcName, "set-source") { showSourceDialog(true) }
         row(getString(R.string.language_title), currentLanguageLabel(), "set-language") { showLanguageDialog(true) }
         box.addView(View(this).apply {
@@ -512,6 +516,32 @@ class MainActivity : AppCompatActivity() {
             if (!isFinishing && !isDestroyed && !leavingScreen) showSettingsDialog()
         }
         return this
+    }
+
+    /** Подписи вариантов «Помнить сумму» — по номерам из AmountMemory. */
+    private val memoryLabels = intArrayOf(
+        R.string.amount_memory_session, R.string.amount_memory_12h,
+        R.string.amount_memory_24h, R.string.amount_memory_forever
+    )
+
+    /** Сколько помнить введённую сумму после ухода из приложения. */
+    private fun showAmountMemoryDialog(fromSettings: Boolean = false) {
+        val density = resources.displayMetrics.density
+        val hint = TextView(this).apply {
+            text = getString(R.string.amount_memory_hint)
+            textSize = 13f
+            setTextColor(getColor(R.color.text_secondary))
+            setPadding((24 * density).toInt(), (4 * density).toInt(), (24 * density).toInt(), 0)
+        }
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.amount_memory_title))
+            .setSingleChoiceItems(memoryLabels.map { getString(it) }.toTypedArray(), vm.getAmountMemory()) { dialog, which ->
+                vm.setAmountMemory(which)
+                dialog.dismiss()
+            }
+            .setView(hint)
+            .setNegativeButton(getString(R.string.back), null)
+            .show().backToSettings(fromSettings)
     }
 
     /** Округление сумм: вверх (как было всегда) или к ближайшему. Под каждым

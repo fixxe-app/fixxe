@@ -66,6 +66,12 @@
     <string name="rounding_up">رو به بالا</string>
     <string name="rounding_nearest">به نزدیک‌ترین</string>
     <string name="rounding_hint">«رو به بالا» هرگز کمتر از مبلغ واقعی نشان نمی‌دهد تا پول همیشه کافی باشد.</string>
+    <string name="amount_memory_title">به خاطر سپردن مبلغ</string>
+    <string name="amount_memory_session">تا بسته شدن برنامه</string>
+    <string name="amount_memory_12h">۱۲ ساعت</string>
+    <string name="amount_memory_24h">۲۴ ساعت</string>
+    <string name="amount_memory_forever">همیشه</string>
+    <string name="amount_memory_hint">مبلغ واردشده پس از خروج از برنامه چه مدت نگه داشته می‌شود. پس از آن دوباره ۱ می‌شود.</string>
     <string name="version_label">نسخه %1$s</string>
     <string name="copied">کپی شد</string>
 </resources>

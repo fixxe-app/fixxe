@@ -66,6 +66,12 @@
     <string name="rounding_up">Opp</string>
     <string name="rounding_nearest">Til nærmeste</string>
     <string name="rounding_hint">«Opp» viser aldri mindre enn det faktiske beløpet, så pengene alltid strekker til.</string>
+    <string name="amount_memory_title">Husk beløp</string>
+    <string name="amount_memory_session">Til appen lukkes</string>
+    <string name="amount_memory_12h">12 timer</string>
+    <string name="amount_memory_24h">24 timer</string>
+    <string name="amount_memory_forever">Alltid</string>
+    <string name="amount_memory_hint">Hvor lenge beløpet du skrev inn beholdes etter at du forlater appen. Deretter er det 1 igjen.</string>
     <string name="version_label">Versjon %1$s</string>
     <string name="copied">Kopiert</string>
 </resources>

@@ -66,6 +66,12 @@
     <string name="rounding_up">Aufrunden</string>
     <string name="rounding_nearest">Kaufmännisch runden</string>
     <string name="rounding_hint">„Aufrunden“ zeigt nie weniger als den echten Betrag – so reicht das Geld immer.</string>
+    <string name="amount_memory_title">Betrag merken</string>
+    <string name="amount_memory_session">Bis die App geschlossen wird</string>
+    <string name="amount_memory_12h">12 Stunden</string>
+    <string name="amount_memory_24h">24 Stunden</string>
+    <string name="amount_memory_forever">Immer</string>
+    <string name="amount_memory_hint">Wie lange der eingegebene Betrag nach dem Verlassen der App erhalten bleibt. Danach ist er wieder 1.</string>
     <string name="version_label">Version %1$s</string>
     <string name="copied">Kopiert</string>
 </resources>

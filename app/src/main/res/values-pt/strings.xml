@@ -66,6 +66,12 @@
     <string name="rounding_up">Para cima</string>
     <string name="rounding_nearest">Para o mais próximo</string>
     <string name="rounding_hint">«Para cima» nunca mostra menos do que o valor real, assim o dinheiro chega sempre.</string>
+    <string name="amount_memory_title">Memorizar valor</string>
+    <string name="amount_memory_session">Até fechar a app</string>
+    <string name="amount_memory_12h">12 horas</string>
+    <string name="amount_memory_24h">24 horas</string>
+    <string name="amount_memory_forever">Sempre</string>
+    <string name="amount_memory_hint">Durante quanto tempo o valor introduzido é guardado depois de sair da app. Depois volta a 1.</string>
     <string name="version_label">Versão %1$s</string>
     <string name="copied">Copiado</string>
 </resources>

@@ -204,7 +204,7 @@ frame.addEventListener('load', async () => {
     // пункт поправки в настройках — последний, под линией, цветом сумм с поправкой
     w.eval('showSettings()'); await wait(150);
     const rows = [...d.querySelectorAll('#modal-root .set-row')].map(b => b.dataset.k);
-    check(rows.join() === 'theme,precision,rounding,grouping,source,language,adjust', 'порядок пунктов настроек: ' + rows);
+    check(rows.join() === 'theme,precision,rounding,grouping,memory,source,language,adjust', 'порядок пунктов настроек: ' + rows);
     const adjRow = d.querySelector('#modal-root .set-row[data-k="adjust"]');
     check(adjRow && adjRow.previousElementSibling && adjRow.previousElementSibling.tagName === 'HR', 'перед пунктом поправки нет линии');
     check(adjRow && w.getComputedStyle(adjRow).color === w.getComputedStyle(banner).color, 'пункт поправки не цветом сумм с поправкой');

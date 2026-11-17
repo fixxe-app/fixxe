@@ -66,6 +66,12 @@
     <string name="rounding_up">Üles</string>
     <string name="rounding_nearest">Lähimale</string>
     <string name="rounding_hint">„Üles“ ei näita kunagi tegelikust summast vähem, nii et raha jätkub alati.</string>
+    <string name="amount_memory_title">Jäta summa meelde</string>
+    <string name="amount_memory_session">Kuni rakendus on avatud</string>
+    <string name="amount_memory_12h">12 tundi</string>
+    <string name="amount_memory_24h">24 tundi</string>
+    <string name="amount_memory_forever">Alati</string>
+    <string name="amount_memory_hint">Kui kaua sisestatud summa pärast rakendusest lahkumist alles jääb. Seejärel on see jälle 1.</string>
     <string name="version_label">Versioon %1$s</string>
     <string name="copied">Kopeeritud</string>
 </resources>

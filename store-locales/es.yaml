@@ -21,6 +21,9 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
+  • Recuerda el importe — cierra la app y el número que escribiste sigue ahí cuando vuelvas. Elige en los ajustes cuánto tiempo: 12 o 24 horas, siempre o solo mientras la app esté abierta.
+
+
   • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nuevo aspecto: un mismo estilo para todos los iconos y textos. La hora y la fuente del tipo ahora están arriba — toca la línea para ver los detalles. Novedad en Ajustes: redondear los importes hacia arriba o al más cercano. Los Ajustes son una sola ventana clara, con el número de versión abajo."
+whats_new: "Novedad en los ajustes: Recordar importe. El número que escribiste se queda tras cerrar la app: 12 horas por defecto, o elige 24 horas, siempre o solo mientras la app esté abierta."
 landing:
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar

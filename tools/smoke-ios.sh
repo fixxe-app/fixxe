@@ -4,6 +4,8 @@
 #
 #   RatesLoadTests (UI) — холодный запуск обязан показать курсы, а кнопка
 #     «обновить» обязана пережить частые нажатия и остаться живой.
+#   AmountMemoryUITests (UI) — введённая сумма после закрытия: 12 ч по
+#     умолчанию, 24 ч, «всегда», «пока приложение открыто».
 #   FIXXETests (юнит) — переключение строк не сдвигает суммы. Это ловит баг,
 #     который проявлялся только на Mac: там UI-тесты Apple не запускает,
 #     поэтому поведение Mac воспроизведено прямо в тесте модели.
@@ -36,11 +38,13 @@ xcodebuild test \
   -scheme FIXXE \
   -destination "platform=iOS Simulator,id=$UDID" \
   -only-testing:FIXXEUITests/RatesLoadTests \
+  -only-testing:FIXXEUITests/AmountMemoryUITests \
   -only-testing:FIXXETests \
   > "$LOG" 2>&1
 code=$?
 # -quiet прятал, какой тест упал и почему — печатаем именно это
 grep -E "error: -\[|: error:|Test Case.*failed" "$LOG" | cut -c1-300 | head -20
 set -e
-[ "$code" -eq 0 ] || fail "тесты iOS не прошли"
+[ "$code" -eq 0 ] || fail "тесты iOS не прошли (полный лог: $LOG)"
+rm -f "$LOG"
 echo "✓ iOS smoke пройден"

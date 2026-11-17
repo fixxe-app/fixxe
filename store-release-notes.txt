@@ -1,1 +1,1 @@
-New look: one style for all icons and labels. The rate time and source are now at the top — tap the line for details. New in Settings: round amounts up or to the nearest. Settings are one clear window, with the version number at the bottom.
+New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open.

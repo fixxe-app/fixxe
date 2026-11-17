@@ -66,6 +66,12 @@
     <string name="rounding_up">ऊपर की ओर</string>
     <string name="rounding_nearest">निकटतम तक</string>
     <string name="rounding_hint">“ऊपर की ओर” कभी भी असली राशि से कम नहीं दिखाता, ताकि पैसे हमेशा पूरे पड़ें।</string>
+    <string name="amount_memory_title">राशि याद रखें</string>
+    <string name="amount_memory_session">ऐप बंद होने तक</string>
+    <string name="amount_memory_12h">12 घंटे</string>
+    <string name="amount_memory_24h">24 घंटे</string>
+    <string name="amount_memory_forever">हमेशा</string>
+    <string name="amount_memory_hint">ऐप से बाहर जाने के बाद दर्ज की गई राशि कितनी देर तक रहती है। उसके बाद यह फिर से 1 हो जाती है।</string>
     <string name="version_label">संस्करण %1$s</string>
     <string name="copied">कॉपी हो गया</string>
 </resources>

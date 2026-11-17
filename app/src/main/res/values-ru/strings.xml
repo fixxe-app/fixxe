@@ -66,6 +66,12 @@
     <string name="rounding_up">Вверх</string>
     <string name="rounding_nearest">К ближайшему</string>
     <string name="rounding_hint">«Вверх» показывает сумму не меньше настоящей: удобно, чтобы денег точно хватило.</string>
+    <string name="amount_memory_title">Помнить сумму</string>
+    <string name="amount_memory_session">Пока приложение открыто</string>
+    <string name="amount_memory_12h">12 часов</string>
+    <string name="amount_memory_24h">24 часа</string>
+    <string name="amount_memory_forever">Всегда</string>
+    <string name="amount_memory_hint">Сколько хранится введённая сумма после выхода из приложения. Потом снова 1.</string>
     <string name="version_label">Версия %1$s</string>
     <string name="copied">Скопировано</string>
 </resources>

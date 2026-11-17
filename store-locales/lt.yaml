@@ -21,6 +21,9 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
 
 
+  • Įsimena sumą — uždarykite programėlę, o įvestas skaičius lauks sugrįžus. Kiek laiko, pasirenkate nustatymuose: 12 ar 24 valandas, visada arba tik kol programėlė atidaryta.
+
+
   • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu. Jei nepaliksite jos visada įjungtos, po keturių valandų nenaudojimo ji išsijungs pati, todėl pamirštas mokestis niekada neiškreips rytdienos skaičių.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nauja išvaizda: vienas stilius visoms piktogramoms ir užrašams. Kurso laikas ir šaltinis dabar viršuje — bakstelėkite eilutę, kad pamatytumėte išsamiau. Nauja nustatymuose: sumų apvalinimas į didesnę pusę arba iki artimiausio. Nustatymai — vienas aiškus langas, versijos numeris apačioje."
+whats_new: "Nauja nustatymuose: įsiminti sumą. Įvestas skaičius lieka ir uždarius programėlę — numatytai 12 valandų, arba pasirinkite 24 valandas, visada ar tik kol programėlė atidaryta."
 landing:
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai

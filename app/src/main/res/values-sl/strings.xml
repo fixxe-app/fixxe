@@ -66,6 +66,12 @@
     <string name="rounding_up">Navzgor</string>
     <string name="rounding_nearest">Na najbližje</string>
     <string name="rounding_hint">»Navzgor« nikoli ne pokaže manj od dejanskega zneska, zato denarja vedno zadošča.</string>
+    <string name="amount_memory_title">Zapomni si znesek</string>
+    <string name="amount_memory_session">Dokler je aplikacija odprta</string>
+    <string name="amount_memory_12h">12 ur</string>
+    <string name="amount_memory_24h">24 ur</string>
+    <string name="amount_memory_forever">Vedno</string>
+    <string name="amount_memory_hint">Kako dolgo se vneseni znesek ohrani po izhodu iz aplikacije. Nato je spet 1.</string>
     <string name="version_label">Različica %1$s</string>
     <string name="copied">Kopirano</string>
 </resources>

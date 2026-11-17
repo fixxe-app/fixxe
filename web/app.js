@@ -1,10 +1,11 @@
 'use strict';
-const APP_VERSION = '1.67';
+const APP_VERSION = '1.68';
 
 /* ---------- Persistence ---------- */
 const store = {
   get(k, d){ try{ const v = localStorage.getItem('fixe.'+k); return v===null?d:JSON.parse(v);}catch(e){return d;} },
-  set(k, v){ try{ localStorage.setItem('fixe.'+k, JSON.stringify(v)); }catch(e){} }
+  set(k, v){ try{ localStorage.setItem('fixe.'+k, JSON.stringify(v)); }catch(e){} },
+  del(k){ try{ localStorage.removeItem('fixe.'+k); }catch(e){} }
 };
 
 /* ---------- State ---------- */
@@ -71,7 +72,14 @@ let adjustResetFrom = null;       // поправку только что сбр
 const adjusted = () => adjustPct !== 0;
 const adjustFactor = () => 1 + adjustPct/100;
 const isAdjusted = code => adjusted() && code !== baseCurrency;   // все строки, кроме базовой
-function markUsed(){ store.set('adjust_left_at', Date.now()); }
+// Вкладка уходит с экрана — отсюда считаются сроки поправки и суммы; здесь же
+// записывается сумма (как есть, без округления: 1.1239 вернётся 1.1239).
+function markUsed(){
+  store.set('adjust_left_at', Date.now());
+  if (amountMemory !== MEMORY_SESSION && activeAmount > 0){
+    store.set('saved_code', baseCurrency); store.set('saved_amount', activeAmount);
+  } else forgetAmount();
+}
 function resetAdjustIfExpired(now){
   if (!shouldResetAdjust(adjustPct, adjustKeep, store.get('adjust_left_at', 0), now ?? Date.now())) return false;
   adjustResetFrom = adjustPct; adjustPct = 0; store.set('adjust_pct', 0);
@@ -79,6 +87,43 @@ function resetAdjustIfExpired(now){
   return true;
 }
 const adjustResetAtStart = resetAdjustIfExpired();   // давно не открывали — курсы снова рыночные
+
+/* ---------- Сколько помнить введённую сумму ---------- */
+// Выбор в настройках, так же на Android и iPhone. Сумма и строка, где её
+// набрали, записываются, когда вкладка уходит с экрана; срок — от этого момента.
+//   0 — пока приложение открыто: перезагрузили или закрыли — снова 1;
+//   1, 2 — 12 / 24 часа: после перерыва дольше срока снова 1, даже без перезагрузки;
+//   3 — всегда, пока сумму не поменяют.
+// «Снова 1» — как при первом запуске: 1 в первой валюте списка.
+const MEMORY_SESSION = 0, MEMORY_FOREVER = 3;
+const MEMORY_KEYS = ['amount_memory_session', 'amount_memory_12h', 'amount_memory_24h', 'amount_memory_forever'];
+const memoryLimit = mode => mode === 1 ? 12*60*60*1000 : mode === 2 ? 24*60*60*1000 : null;
+// Возврат после перерыва: вышел ли срок. Часы ушли назад — тоже сброс.
+function amountExpired(mode, leftAt, now){
+  const l = memoryLimit(mode);
+  return l !== null && (now - leftAt > l || now < leftAt);
+}
+// Холодный запуск: вернуть ли сумму, записанную при уходе с экрана в leftAt.
+function restoreOnLaunch(mode, leftAt, now){
+  return mode === MEMORY_FOREVER || (memoryLimit(mode) !== null && !amountExpired(mode, leftAt, now));
+}
+let amountMemory = Math.min(3, Math.max(0, +store.get('amount_memory', 1) || 0));
+function forgetAmount(){ store.del('saved_code'); store.del('saved_amount'); }
+function restoreAmount(now){
+  if (!restoreOnLaunch(amountMemory, store.get('adjust_left_at', 0), now ?? Date.now())) return;
+  const code = store.get('saved_code', null), amount = +store.get('saved_amount', 0);
+  if (!displayCurrencies.includes(code) || !(amount > 0) || !Number.isFinite(amount)) return;
+  activeCurrency = baseCurrency = code; activeAmount = amount;
+}
+restoreAmount();
+// true — сбросили: экран нужно перерисовать
+function resetAmountIfExpired(now){
+  if (!amountExpired(amountMemory, store.get('adjust_left_at', 0), now ?? Date.now())) return false;
+  const first = displayCurrencies[0];
+  if (!first || (baseCurrency === first && activeCurrency === first && activeAmount === 1)) return false;
+  activeCurrency = baseCurrency = first; activeAmount = 1;
+  return true;
+}
 let currentSource = '';
 let lastUpdated = '';
 let fromCache = false;   // данные из кэша (сеть недоступна)
@@ -764,6 +809,7 @@ function showSettings(){
       ${row('precision', t('precision_title'), dec)}
       ${row('rounding', t('rounding_title'), t(roundUp ? 'rounding_up' : 'rounding_nearest'))}
       ${row('grouping', t('grouping_title'), grp)}
+      ${row('memory', t('amount_memory_title'), t(MEMORY_KEYS[amountMemory]))}
       ${row('source', t('source_title'), src)}
       ${row('language', t('language_title'), langLabel)}
       <hr class="set-sep">
@@ -774,7 +820,7 @@ function showSettings(){
     <div class="actions"><button data-x>${t('close')}</button></div>
   </div>`);
   m.querySelector('[data-x]').onclick = closeModal;
-  const open = { theme:showTheme, precision:showPrecision, rounding:showRounding, grouping:showGrouping,
+  const open = { theme:showTheme, precision:showPrecision, rounding:showRounding, grouping:showGrouping, memory:showMemory,
                  source:showSource, language:showLanguage, adjust:showAdjust };
   m.querySelectorAll('.set-row').forEach(b => b.onclick = () => { backToSettings = true; open[b.dataset.k](); });
   const ver = m.querySelector('[data-ver]');
@@ -870,10 +916,10 @@ function showAdjust(){
   draw();
 }
 
-function choiceList(title, items, checkedIdx, onPick){
+function choiceList(title, items, checkedIdx, onPick, hint){
   const m = modal(`<div class="modal">
     <h3>${title}</h3>
-    <div class="list-choice">${items.map((it,i)=>`<button class="choice ${i===checkedIdx?'sel':''}" data-i="${i}"><span class="radio">${i===checkedIdx?'◉':'○'}</span>${it}</button>`).join('')}</div>
+    <div class="list-choice">${items.map((it,i)=>`<button class="choice ${i===checkedIdx?'sel':''}" data-i="${i}"><span class="radio">${i===checkedIdx?'◉':'○'}</span>${it}</button>`).join('')}${hint ? `<p class="hint">${hint}</p>` : ''}</div>
     <div class="actions"><button data-x>${t('back')}</button></div>
   </div>`);
   m.querySelector('[data-x]').onclick = closeModal;
@@ -899,6 +945,14 @@ function showGrouping(){
   choiceList(t('grouping_title'), groupingOptions(), grouping, i=>{
     grouping = i; store.set('grouping', grouping); closeModal(); render();
   });
+}
+// Сколько помнить введённую сумму; под вариантами — что будет потом
+function showMemory(){
+  choiceList(t('amount_memory_title'), MEMORY_KEYS.map(k => t(k)), amountMemory, i=>{
+    amountMemory = i; store.set('amount_memory', i);
+    if (i === MEMORY_SESSION) forgetAmount();      // «не помнить» — и прежнюю не хранить
+    closeModal();
+  }, t('amount_memory_hint'));
 }
 function showSource(){
   choiceList(t('source_title'), sourceOptions(), sourceMode, i=>{
@@ -937,6 +991,7 @@ setInterval(() => refresh(), 30*60*1000);
 document.addEventListener('visibilitychange', ()=>{
   if (document.hidden){ markUsed(); return; }      // отсюда считаются 4 часа до сброса поправки
   if (resetAdjustIfExpired()) noticeAdjustReset();
+  if (resetAmountIfExpired()){ document.activeElement?.blur?.(); render(); }   // и сумма снова 1, если так выбрано
   refresh();
 });
 window.addEventListener('pagehide', markUsed);

@@ -66,6 +66,12 @@
     <string name="rounding_up">Lên</string>
     <string name="rounding_nearest">Gần nhất</string>
     <string name="rounding_hint">“Lên” không bao giờ hiển thị ít hơn số tiền thật, nên bạn luôn đủ tiền.</string>
+    <string name="amount_memory_title">Nhớ số tiền</string>
+    <string name="amount_memory_session">Cho đến khi đóng ứng dụng</string>
+    <string name="amount_memory_12h">12 giờ</string>
+    <string name="amount_memory_24h">24 giờ</string>
+    <string name="amount_memory_forever">Luôn luôn</string>
+    <string name="amount_memory_hint">Thời gian giữ số tiền đã nhập sau khi rời ứng dụng. Sau đó sẽ trở lại 1.</string>
     <string name="version_label">Phiên bản %1$s</string>
     <string name="copied">Đã sao chép</string>
 </resources>

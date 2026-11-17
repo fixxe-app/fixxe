@@ -93,6 +93,18 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         _state.value = _state.value.copy(roundUp = up)
     }
 
+    /** Сколько помнить введённую сумму (см. AmountMemory). */
+    fun getAmountMemory(): Int = prefs.getInt("amount_memory", AmountMemory.DEFAULT).coerceIn(0, 3)
+
+    fun setAmountMemory(mode: Int) {
+        prefs.edit().putInt("amount_memory", mode).apply()
+        if (mode == AmountMemory.SESSION) forgetAmount()   // «не помнить» — и прежнюю не хранить
+    }
+
+    private fun forgetAmount() {
+        prefs.edit().remove("saved_code").remove("saved_amount").apply()
+    }
+
     /** Сколько будет [amount] валюты [from] в валюте [to] по рыночному курсу — для примера
      *  в окне округления. null, если курсов ещё нет. */
     fun convertPlain(amount: Double, from: String, to: String): Double? {
@@ -135,9 +147,36 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         )
     }
 
-    /** Приложение уходит с экрана — отсюда считается срок до сброса поправки. */
+    /** Приложение уходит с экрана — отсюда считаются сроки поправки и суммы.
+     *  Здесь же записывается сумма: процесс в фоне могут выгрузить в любой момент. */
     fun markUsed() {
-        prefs.edit().putLong("adjust_left_at", System.currentTimeMillis()).apply()
+        val e = prefs.edit().putLong("adjust_left_at", System.currentTimeMillis())
+        // сумма как есть, без округления: 1.1239 должна вернуться 1.1239, а не 1.13
+        if (getAmountMemory() != AmountMemory.SESSION && calc.amount > 0)
+            e.putString("saved_code", calc.base).putString("saved_amount", calc.amount.toString())
+        else e.remove("saved_code").remove("saved_amount")
+        e.apply()
+    }
+
+    /** Холодный запуск: вернуть сумму, если она ещё в сроке и её валюта в списке. */
+    private fun restoreAmount() {
+        val left = prefs.getLong("adjust_left_at", 0L)
+        if (!AmountMemory.restoreOnLaunch(getAmountMemory(), left, System.currentTimeMillis())) return
+        val code = prefs.getString("saved_code", null) ?: return
+        val amount = prefs.getString("saved_amount", null)?.toDoubleOrNull() ?: return
+        if (code in displayCurrencies && amount > 0) calc.type(code, amount)
+    }
+
+    /** Возврат на экран после перерыва дольше срока — сумма снова 1 в первой
+     *  валюте, как при первом запуске. true — сбросили (экран уберёт курсор из поля). */
+    fun resetAmountIfExpired(now: Long = System.currentTimeMillis(), beforeReset: () -> Unit = {}): Boolean {
+        if (!AmountMemory.expired(getAmountMemory(), prefs.getLong("adjust_left_at", 0L), now)) return false
+        val first = displayCurrencies.firstOrNull() ?: return false
+        if (calc.base == first && calc.active == first && calc.amount == 1.0) return false
+        beforeReset()      // поле в фокусе не перезаписывается — курсор убрать до пересчёта
+        calc.type(first, 1.0)
+        emitAmounts()
+        return true
     }
 
     private var resetNoticeJob: Job? = null
@@ -159,7 +198,8 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         _state.value = _state.value.copy(decimalPlaces = getDecimalPlaces(), grouping = getGrouping(),
             roundUp = getRoundUp())
         calc.setAdjust(prefs.getInt("adjust_pct_x100", 0) / 100.0)
-        _state.value = _state.value.copy(adjusted = calc.adjusted)
+        restoreAmount()
+        _state.value = _state.value.copy(adjusted = calc.adjusted, activeCurrency = calc.active)
         resetAdjustIfExpired()
         showCached()   // мгновенный старт с последними известными курсами
         refresh()

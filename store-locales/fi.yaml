@@ -21,6 +21,9 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
 
 
+  • Muistaa summan — sulje sovellus, ja syöttämäsi luku odottaa, kun palaat. Valitse asetuksista kuinka kauan: 12 tai 24 tuntia, aina tai vain niin kauan kuin sovellus on auki.
+
+
   • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin. Ellet pidä sitä aina käytössä, se kytkeytyy itsestään pois neljän tunnin käyttämättömyyden jälkeen, joten unohtunut palkkio ei koskaan vääristä huomisen lukuja.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE on nopea ja selkeä valuuttamuunnin, jossa on ajantasaiset k
   Rates By Exchange Rate API.
 
   '
-whats_new: "Uusi ilme: kaikki kuvakkeet ja tekstit samaa tyyliä. Kurssin aika ja lähde ovat nyt ylhäällä — napauta riviä nähdäksesi lisätiedot. Uutta asetuksissa: summien pyöristys ylöspäin tai lähimpään. Asetukset ovat yksi selkeä ikkuna, ja versionumero on alareunassa."
+whats_new: "Uutta asetuksissa: Muista summa. Syöttämäsi luku säilyy sovelluksen sulkemisen jälkeen — oletuksena 12 tuntia, tai valitse 24 tuntia, aina tai vain niin kauan kuin sovellus on auki."
 landing:
   page_title: FIXXE — valuuttamuunnin
   install_title: Asennustavat

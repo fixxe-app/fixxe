@@ -19,6 +19,8 @@
 #   9. поправка к курсу: полоса и метки на экране, курс пересчитан, переходы
 #      между строками не двигают суммы, окно настройки, сброс через 4 часа —
 #      и шаги 6–8 ещё раз, уже с включённой поправкой
+#  10. введённая сумма после закрытия: по сроку из настроек (12 ч по умолчанию,
+#      24 ч, «всегда», «пока приложение открыто»)
 #
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -91,7 +93,7 @@ wake()    { adb shell input keyevent KEYCODE_WAKEUP >/dev/null 2>&1 || true
 
 steps_basic() {
 # ── 1. холодный старт: ни кэша, ни настроек ────────────────────────────────
-echo "→ 1/9 холодный старт"
+echo "→ 1/10 холодный старт"
 adb shell pm clear $PKG >/dev/null
 adb logcat -c
 wake
@@ -111,7 +113,7 @@ sleep 2; n=$(fetches)
 echo "  ✓ курсы на экране, запросов: 1"
 
 # ── 2. частые нажатия не должны долбить API ────────────────────────────────
-echo "→ 2/9 защита от частых нажатий"
+echo "→ 2/10 защита от частых нажатий"
 screen
 BTN=$(grep -o 'resource-id="[^"]*btnRefresh"[^$]*bounds="\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]"' "$WORK/ui.txt" | grep -o 'bounds="\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]"' | head -1)
 [ -n "$BTN" ] || fail "не нашёл кнопку «обновить» на экране"
@@ -137,7 +139,7 @@ after=$(fetches)
 echo "  ✓ 1 нажатие → 1 запрос, следующие 11 за ${spent} с → 0 лишних"
 
 # ── 3. но кнопка не должна умирать насовсем ────────────────────────────────
-echo "→ 3/9 кнопка жива после паузы"
+echo "→ 3/10 кнопка жива после паузы"
 sleep 11
 adb shell input tap $TX $TY
 sleep 6
@@ -145,7 +147,7 @@ sleep 6
 echo "  ✓ после паузы запрос уходит"
 
 # ── 4. без сети работаем по кэшу ───────────────────────────────────────────
-echo "→ 4/9 поведение без сети"
+echo "→ 4/10 поведение без сети"
 adb shell svc wifi disable; adb shell svc data disable
 # Убеждаемся, что сеть действительно пропала: если команда не сработала,
 # приложение возьмёт свежие курсы, и проверка «работает по кэшу» прошла бы зря.
@@ -162,7 +164,7 @@ net_on
 [ "$offline_ok" -eq 1 ] || fail "без сети приложение не показало курсы из кэша с пометкой «Offline»"
 echo "  ✓ без сети считает по кэшу и пишет «Offline»"
 
-echo "→ 5/9 в фоне автообновление стоит"
+echo "→ 5/10 в фоне автообновление стоит"
 # Ждём запись в журнале с опросом, а не фиксированной паузой: медленному
 # эмулятору иногда не хватало трёх секунд, и тест падал через раз.
 wait_log() {   # wait_log <текст> <файл>
@@ -206,8 +208,11 @@ launch_with() {
   adb shell am force-stop $PKG; adb shell pm clear $PKG >/dev/null
   put_prefs "$@"
   wake; adb shell am start -n $ACT >/dev/null
-  for i in $(seq 1 25); do sleep 1; screen; onscreen "1 EUR = " && break; done
+  # Ждём и строку статуса: курсы в строках появляются чуть раньше, чем вверху
+  # сменяется «Загрузка…», и шаг 9 запоминал как «рыночный» именно её.
+  for i in $(seq 1 25); do sleep 1; screen; onscreen "1 EUR = " && loaded && break; done
   onscreen "1 EUR = " || fail "курсы не загрузились"
+  loaded || fail "курсы на экране, а строка статуса так и не сменилась: $(txt 'id/tvStatus')"
 }
 kb_shown() { adb shell dumpsys input_method > "$WORK/ime.txt" 2>/dev/null || true; grep -q "mInputShown=true" "$WORK/ime.txt"; }
 bounds() { grep "$1" "$WORK/ui.txt" | sed -n "${2:-1}p" | grep -o 'bounds="\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]"' | grep -o '[0-9]\+' | paste -sd' ' -; }
@@ -220,6 +225,8 @@ tap_on() {   # tap_on <что искать на экране> [какое по �
 # (нет такого элемента — пустая строка, а не молчаливый выход по set -e)
 txt() { grep "$1" "$WORK/ui.txt" | sed -n "${2:-1}p" | grep -o ' text="[^"]*"' | head -1 | sed 's/^ text="//; s/"$//' || true; }
 # первая часть строки статуса, до « · »: «Рыночный курс» или «Курсы с поправкой»
+# строка статуса готова: в ней « · время», а не «Загрузка…»
+loaded() { txt 'id/tvStatus' | grep -q '·'; }
 status_label() { txt 'id/tvStatus' | perl -CS -Mutf8 -pe 's/[\s\x{00A0}]*·.*//' ; }
 amounts() { grep 'id/etAmount' "$WORK/ui.txt" | grep -o 'text="[^"]*"' | paste -sd' ' -; }
 # С поправкой: полоса на месте и ни одна сумма не сдвинулась
@@ -331,24 +338,25 @@ adb shell input keyevent KEYCODE_BACK
 }
 
 if from 6; then
-echo "→ 6/9 клавиатура убирается"
+echo "→ 6/10 клавиатура убирается"
 step_keyboard
 echo "  ✓ «Готово», тап по пустому месту и значок в шапке закрывают клавиатуру; активная строка не меняется"
 fi
 
 if from 7; then
-echo "→ 7/9 после клавиатуры список встаёт на место"
+echo "→ 7/10 после клавиатуры список встаёт на место"
 step_list_restore
 echo "  ✓ после «Готово», «Назад» и значка в шапке список стоит как до клавиатуры"
 fi
 
 if from 8; then
-echo "→ 8/9 тап по любому месту карточки открывает ввод"
+echo "→ 8/10 тап по любому месту карточки открывает ввод"
 step_card_tap
 echo "  ✓ тап по названию валюты: строка активна, клавиатура открыта, число выделено целиком"
 fi
 
-echo "→ 9/9 поправка к курсу"
+if from 9; then
+echo "→ 9/10 поправка к курсу"
 # Проверки не зависят от языка: в шагах 6–9 язык приложения — язык эмулятора,
 # поэтому элементы ищем по идентификаторам, а тексты сравниваем между собой.
 usd_rate() { grep -o 'text="1 EUR = [0-9.]* USD"' "$WORK/ui.txt" | grep -o '[0-9]\+\.[0-9]\+' | head -1 || true; }
@@ -400,12 +408,12 @@ onscreen 'id/cbAdjustKeep' || fail "выбор значения закрыл о�
 tap_on 'id/button1'; sleep 1
 # пункт в настройках — последний, под линией, с выбранным значением
 screen; tap_on 'id/btnSettings'; sleep 1.5; screen
-[ "$(grep -c 'id/tvValue' "$WORK/ui.txt")" -eq 7 ] || fail "в окне настроек не 7 пунктов"
-case "$(txt 'id/tvValue' 7)" in
+[ "$(grep -c 'id/tvValue' "$WORK/ui.txt")" -eq 8 ] || fail "в окне настроек не 8 пунктов"
+case "$(txt 'id/tvValue' 8)" in
   *"+3%"*) ;;
-  *) fail "в настройках пункт поправки не последний или без значения +3% (последний: $(txt 'id/tvValue' 7))" ;;
+  *) fail "в настройках пункт поправки не последний или без значения +3% (последний: $(txt 'id/tvValue' 8))" ;;
 esac
-tap_on 'id/tvLabel' 7; sleep 1.5; screen
+tap_on 'id/tvLabel' 8; sleep 1.5; screen
 onscreen 'id/cbAdjustKeep' || fail "пункт настроек не открыл окно поправки"
 # своё значение: набрать и подтвердить клавишей «Готово»
 tap_on 'id/etAdjustCustom'; sleep 1.5
@@ -413,11 +421,11 @@ adb shell input text 2.25; adb shell input keyevent KEYCODE_ENTER; sleep 1.5
 screen; tap_on 'id/button1'; sleep 1.5; screen
 # открывали из настроек — «Закрыть» в поправке возвращает в настройки
 onscreen 'id/tvValue' || fail "окно поправки, открытое из настроек, закрылось на главный экран, а не в настройки"
-case "$(txt 'id/tvValue' 7)" in
+case "$(txt 'id/tvValue' 8)" in
   *"+2.25%"*) ;;
-  *) fail "своё значение 2.25 не применилось (пункт настроек: $(txt 'id/tvValue' 7))" ;;
+  *) fail "своё значение 2.25 не применилось (пункт настроек: $(txt 'id/tvValue' 8))" ;;
 esac
-tap_on 'id/tvLabel' 7; sleep 1.5; screen
+tap_on 'id/tvLabel' 8; sleep 1.5; screen
 [ "$(txt 'id/etAdjustCustom')" = "2.25" ] || fail "окно поправки не показывает своё значение 2.25: «$(txt 'id/etAdjustCustom')»"
 tap_on 'class="android.widget.RadioButton"' 1; sleep 1   # первая строка — «Выкл.»
 tap_on 'id/button1'; sleep 1.5; screen
@@ -479,5 +487,56 @@ step_keyboard;     echo "  ✓ с поправкой: клавиатура уб�
 step_list_restore; echo "  ✓ с поправкой: после клавиатуры список встаёт на место"
 step_card_tap;     echo "  ✓ с поправкой: тап по карточке открывает ввод и не двигает суммы"
 ADJ=""
+fi
+
+if from 10; then
+echo "→ 10/10 сумма после закрытия приложения"
+# start_wait <что ждать на экране>: запуск без очистки данных
+start_wait() {
+  wake; adb shell am start -n $ACT >/dev/null
+  for i in $(seq 1 25); do sleep 1; screen; onscreen "$1" && break; done
+  onscreen "$1" || fail "после запуска на экране нет «$1»"
+}
+# launch_saved <что ждать> <валюты> [строки настроек…]: чистые данные, настройки, запуск
+launch_saved() { local want=$1; shift; adb shell am force-stop $PKG; adb shell pm clear $PKG >/dev/null; put_prefs "$@"; start_wait "$want"; }
+# Свернуть (тут сумма записывается) и убить процесс — как смахнуть из «Недавних».
+kill_app() { adb shell input keyevent KEYCODE_HOME; sleep 1.5; adb shell am force-stop $PKG; }
+# По умолчанию — 12 часов: набрали в USD, закрыли, открыли — 50 USD на месте
+launch_with EUR,USD,RSD
+tap_on 'id/etAmount' 2; sleep 1; adb shell input text 50; adb shell input keyevent KEYCODE_BACK; sleep 1
+kill_app; start_wait 'text="1 USD = '
+[ "$(txt 'id/etAmount' 2)" = "50" ] || fail "после закрытия сумма не вернулась: в строке USD «$(txt 'id/etAmount' 2)», ждали 50"
+# «Пока приложение открыто» — пятый пункт настроек, первый вариант: после закрытия снова 1 EUR
+screen; tap_on 'id/btnSettings'; sleep 1.5; screen
+tap_on 'id/tvLabel' 5; sleep 1.5; screen
+onscreen 'class="android.widget.CheckedTextView"' || fail "пятый пункт настроек не открыл выбор «Помнить сумму»"
+[ "$(grep -c 'class="android.widget.CheckedTextView"' "$WORK/ui.txt")" -eq 4 ] || fail "в «Помнить сумму» не 4 варианта"
+SESSION_LABEL=$(txt 'android:id/text1' 1)
+tap_on 'android:id/text1' 1; sleep 1.5; screen
+onscreen 'id/tvValue' || fail "выбор «Помнить сумму» не вернул в настройки"
+[ "$(txt 'id/tvValue' 5)" = "$SESSION_LABEL" ] || fail "пункт «Помнить сумму» показывает «$(txt 'id/tvValue' 5)», ждали «$SESSION_LABEL»"
+tap_on 'android:id/button2'; sleep 1
+kill_app; start_wait 'text="1 EUR = '
+[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "«Пока приложение открыто»: после закрытия в EUR «$(txt 'id/etAmount' 1)», ждали 1"
+# Сроки — по часам устройства: сумма записана 11 / 13 часов / 30 дней назад
+NOW_MS=$(( $(adb shell date +%s | tr -d '\r') * 1000 ))
+ago() { echo "    <long name=\"adjust_left_at\" value=\"$(( NOW_MS - $1 * 3600 * 1000 ))\" />"; }
+SAVED='    <string name="saved_code">USD</string>
+    <string name="saved_amount">50.0</string>'
+launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 11)"
+[ "$(txt 'id/etAmount' 2)" = "50" ] || fail "12 часов, прошло 11: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
+launch_saved 'text="1 EUR = ' EUR,USD,RSD "$SAVED" "$(ago 13)"
+[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "12 часов, прошло 13: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
+launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 13)" '    <int name="amount_memory" value="2" />'
+[ "$(txt 'id/etAmount' 2)" = "50" ] || fail "24 часа, прошло 13: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
+launch_saved 'text="1 EUR = ' EUR,USD,RSD "$SAVED" "$(ago 25)" '    <int name="amount_memory" value="2" />'
+[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "24 часа, прошло 25: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
+launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 720)" '    <int name="amount_memory" value="3" />'
+[ "$(txt 'id/etAmount' 2)" = "50" ] || fail "«Всегда», прошло 30 дней: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
+# валюты из сохранённой суммы больше нет в списке — обычный старт
+launch_saved 'text="1 EUR = ' EUR,RSD "$SAVED" "$(ago 1)"
+[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "валюту суммы убрали из списка, а старт не с 1 EUR (EUR «$(txt 'id/etAmount' 1)»)"
+echo "  ✓ 12 ч по умолчанию: сумма переживает закрытие, через 13 ч — 1; 24 ч и «Всегда» помнят; «Пока открыто» забывает"
+fi
 
 echo "✓ Android smoke пройден"

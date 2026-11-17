@@ -45,6 +45,7 @@ struct ContentView: View {
         .onChange(of: scenePhase) { phase in
             if phase == .active {
                 vm.resetAdjustIfExpired()      // давно не открывали — поправка снята
+                vm.resetAmountIfExpired()      // и сумма снова 1, если так выбрано
                 Task { await vm.refresh() }
             } else {
                 vm.markUsed()                  // отсюда считаются 4 часа до сброса поправки

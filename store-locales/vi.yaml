@@ -21,6 +21,9 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
 
 
+  • Nhớ số tiền — đóng ứng dụng, khi quay lại con số bạn đã nhập vẫn còn đó. Chọn thời gian trong phần cài đặt: 12 hoặc 24 giờ, luôn luôn, hoặc chỉ khi ứng dụng đang mở.
+
+
   • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường. Trừ khi bạn để luôn bật, tính năng này sẽ tự tắt sau bốn giờ không sử dụng, nên một khoản phí bị quên sẽ không bao giờ làm sai lệch các con số của ngày mai.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE là ứng dụng quy đổi tiền tệ nhanh và gọn gàn
   Rates By Exchange Rate API.
 
   '
-whats_new: "Diện mạo mới: một phong cách thống nhất cho mọi biểu tượng và nhãn. Thời gian và nguồn tỷ giá giờ nằm ở trên cùng — chạm vào dòng đó để xem chi tiết. Mới trong Cài đặt: làm tròn số tiền lên hoặc đến giá trị gần nhất. Cài đặt gọn trong một cửa sổ rõ ràng, số phiên bản ở dưới cùng."
+whats_new: "Mới trong Cài đặt: Nhớ số tiền. Con số bạn đã nhập vẫn còn sau khi đóng ứng dụng — mặc định 12 giờ, hoặc chọn 24 giờ, luôn luôn, hoặc chỉ khi ứng dụng đang mở."
 landing:
   page_title: FIXXE — ứng dụng quy đổi tiền tệ
   install_title: Cách cài đặt

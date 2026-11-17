@@ -21,6 +21,9 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   • Bazë dinamike — kurset rillogariten kundrejt monedhës që po redaktoni, jo kundrejt një të fiksuari. Pa kaluar sa andej-këtej.
 
 
+  • Mban mend shumën — mbyllni aplikacionin dhe numri që shkruat ju pret kur ktheheni. Sa kohë, e zgjidhni te cilësimet: 12 ose 24 orë, gjithmonë ose vetëm sa është hapur aplikacioni.
+
+
   • Rregullimi i kursit — vendosni një përqindje për komisionin e bankës, marzhin ose humbjet gjatë transfertës (p.sh. +1,5%) dhe të gjitha shumat tregojnë menjëherë rezultatin real. Shifrat e rillogaritura shënohen qartë, që të mos i ngatërroni me kursin e tregut. Nëse nuk e mbani gjithmonë aktiv, çaktivizohet vetë pas katër orësh pa përdorim, që një komision i harruar të mos i shtrembërojë kurrë shifrat e nesërme.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   Rates By Exchange Rate API.
 
   '
-whats_new: "Pamje e re: një stil i vetëm për të gjitha ikonat dhe etiketat. Ora dhe burimi i kursit tani janë lart — prekni rreshtin për detaje. E re te cilësimet: rrumbullakimi i shumave lart ose te më i afërti. Cilësimet janë një dritare e vetme e qartë, me numrin e versionit poshtë."
+whats_new: "E re te cilësimet: Mbaj mend shumën. Numri që shkruat mbetet edhe pasi mbyllni aplikacionin — si parazgjedhje 12 orë, ose zgjidhni 24 orë, gjithmonë ose vetëm sa është hapur aplikacioni."
 landing:
   page_title: FIXXE — konvertues monedhash
   install_title: Mënyrat e instalimit

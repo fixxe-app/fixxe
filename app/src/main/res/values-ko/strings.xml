@@ -66,6 +66,12 @@
     <string name="rounding_up">올림</string>
     <string name="rounding_nearest">반올림</string>
     <string name="rounding_hint">‘올림’은 실제 금액보다 적게 표시하지 않으므로 돈이 부족하지 않습니다.</string>
+    <string name="amount_memory_title">금액 기억</string>
+    <string name="amount_memory_session">앱을 닫을 때까지</string>
+    <string name="amount_memory_12h">12시간</string>
+    <string name="amount_memory_24h">24시간</string>
+    <string name="amount_memory_forever">항상</string>
+    <string name="amount_memory_hint">앱을 나간 후 입력한 금액을 유지하는 기간입니다. 그 후에는 다시 1이 됩니다.</string>
     <string name="version_label">버전 %1$s</string>
     <string name="copied">복사됨</string>
 </resources>

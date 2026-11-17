@@ -9,6 +9,14 @@ cryptography). Ключ App Store Connect берётся из профиля tes
   asc_release.py state 1.65     — состояние версии в App Store (или NONE)
   asc_release.py finish 1.65    — проверить и отправить версию на ревью
   asc_release.py clear-shots 1.65 — убрать из версии все скриншоты
+  asc_release.py adopt 1.68     — прошлая версия ещё не вышла: снять её с ревью
+                                  и переименовать в 1.68
+  asc_release.py has-build 1.68 — загружена ли сборка этой версии (код 0/1)
+
+adopt: Apple не даёт завести новую версию, пока прошлая не выпущена. Если
+прошлая ещё ждёт ревью, заявку отменяем (версия становится DEVELOPER_REJECTED,
+то есть снова редактируемой) и меняем ей номер. Дальше ship-ios.sh загружает
+новую сборку, finish прикрепляет её вместо старой, тексты и кадры заменяются.
 
 clear-shots: новая версия в App Store наследует скриншоты прошлой, а
 `appstore-ops screenshots upload` только добавляет кадры. Без очистки на
@@ -67,6 +75,58 @@ def version(ver):
     return next((v for v in vs if v["attributes"]["versionString"] == ver), None)
 
 
+PENDING = ("WAITING_FOR_REVIEW", "IN_REVIEW")
+EDITABLE = ("PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED", "INVALID_BINARY")
+
+
+def cmd_adopt(ver):
+    if version(ver):
+        return
+    vs = req("GET", f"/v1/apps/{APP}/appStoreVersions?filter[platform]=IOS&limit=10")["data"]
+    old = next((v for v in vs if v["attributes"]["appStoreState"] in PENDING + EDITABLE), None)
+    if not old:
+        return
+    oid, over, ost = old["id"], old["attributes"]["versionString"], old["attributes"]["appStoreState"]
+    if ost in PENDING:
+        subs = req("GET", f"/v1/reviewSubmissions?filter[app]={APP}&filter[platform]=IOS&limit=20")["data"]
+        sid = None
+        for sub in subs:
+            if sub["attributes"]["state"] not in ("WAITING_FOR_REVIEW", "IN_REVIEW", "UNRESOLVED_ISSUES"):
+                continue
+            items = req("GET", f"/v1/reviewSubmissions/{sub['id']}/items?include=appStoreVersion").get("data", [])
+            if any(((i.get("relationships") or {}).get("appStoreVersion") or {}).get("data", {}).get("id") == oid
+                   for i in items):
+                sid = sub["id"]; break
+        if not sid:
+            sys.exit(f"✗ {over} в состоянии {ost}, но заявки на ревью с ней не нашёл")
+        r = req("PATCH", f"/v1/reviewSubmissions/{sid}", {"data": {"type": "reviewSubmissions", "id": sid,
+                "attributes": {"canceled": True}}})
+        if "err" in r:
+            sys.exit(f"✗ не удалось снять {over} с ревью: {r['body'][:300]}")
+        print(f"  {over} снята с ревью, жду, пока станет редактируемой…")
+        for _ in range(40):                        # до 10 минут
+            ost = req("GET", f"/v1/appStoreVersions/{oid}")["data"]["attributes"]["appStoreState"]
+            if ost in EDITABLE:
+                break
+            time.sleep(15)
+        else:
+            sys.exit(f"✗ {over} так и не стала редактируемой: {ost}")
+    r = req("PATCH", f"/v1/appStoreVersions/{oid}", {"data": {"type": "appStoreVersions", "id": oid,
+            "attributes": {"versionString": ver}}})
+    if "err" in r:
+        sys.exit(f"✗ не удалось переименовать {over} в {ver}: {r['body'][:300]}")
+    print(f"✓ невыпущенная {over} ({ost}) стала версией {ver}")
+
+
+def _builds(ver):
+    return req("GET", f"/v1/builds?filter[app]={APP}&filter[preReleaseVersion.version]={ver}"
+                      f"&sort=-uploadedDate&limit=5").get("data", [])
+
+
+def cmd_has_build(ver):
+    sys.exit(0 if _builds(ver) else 1)
+
+
 def cmd_state(ver):
     v = version(ver)
     print(v["attributes"]["appStoreState"] if v else "NONE")
@@ -99,13 +159,30 @@ def cmd_finish(ver):
     if state in ("WAITING_FOR_REVIEW", "IN_REVIEW", "READY_FOR_SALE", "PENDING_DEVELOPER_RELEASE"):
         print(f"✓ {ver} уже {state} — отправлять нечего"); return
 
-    # 1. сборка прикреплена и она этой же версии
+    # 1. сборка прикреплена и она этой же версии. Версия, переименованная
+    #    через adopt, ещё держит сборку прошлой — ставим свою, дождавшись,
+    #    пока Apple её обработает.
     b = req("GET", f"/v1/appStoreVersions/{vid}/build")
     build = b.get("data")
+    pre = req("GET", f"/v1/builds/{build['id']}/preReleaseVersion").get("data", {}) if build else {}
+    bver = pre.get("attributes", {}).get("version")
+    if bver != ver:
+        for _ in range(60):                        # до 30 минут
+            ok = [x for x in _builds(ver) if x["attributes"]["processingState"] == "VALID"]
+            if ok:
+                break
+            print("  сборка ещё обрабатывается у Apple, жду…"); time.sleep(30)
+        else:
+            sys.exit(f"✗ сборки {ver} в состоянии VALID так и не появилось")
+        r = req("PATCH", f"/v1/appStoreVersions/{vid}/relationships/build",
+                {"data": {"type": "builds", "id": ok[0]["id"]}})
+        if "err" in r:
+            sys.exit(f"✗ не удалось прикрепить сборку {ver}: {r['body'][:300]}")
+        build = req("GET", f"/v1/appStoreVersions/{vid}/build").get("data")
+        bver = ver
+        print(f"  прикреплена сборка {build['attributes']['version']} ({ver})")
     if not build:
         sys.exit(f"✗ к версии {ver} не прикреплена сборка")
-    pre = req("GET", f"/v1/builds/{build['id']}/preReleaseVersion").get("data", {})
-    bver = pre.get("attributes", {}).get("version")
     if bver != ver:
         sys.exit(f"✗ к версии {ver} прикреплена сборка версии {bver}")
     print(f"  сборка {build['attributes']['version']} ({bver}), {build['attributes']['processingState']}")
@@ -160,6 +237,8 @@ def cmd_finish(ver):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3 or sys.argv[1] not in ("state", "finish", "clear-shots"):
+    cmds = {"state": cmd_state, "finish": cmd_finish, "clear-shots": cmd_clear_shots,
+            "adopt": cmd_adopt, "has-build": cmd_has_build}
+    if len(sys.argv) != 3 or sys.argv[1] not in cmds:
         sys.exit(__doc__)
-    {"state": cmd_state, "finish": cmd_finish, "clear-shots": cmd_clear_shots}[sys.argv[1]](sys.argv[2])
+    cmds[sys.argv[1]](sys.argv[2])

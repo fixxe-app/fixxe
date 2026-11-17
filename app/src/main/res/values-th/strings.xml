@@ -66,6 +66,12 @@
     <string name="rounding_up">ปัดขึ้น</string>
     <string name="rounding_nearest">ปัดเป็นค่าที่ใกล้ที่สุด</string>
     <string name="rounding_hint">“ปัดขึ้น” จะไม่แสดงจำนวนน้อยกว่าจริง เงินจึงพอเสมอ</string>
+    <string name="amount_memory_title">จำจำนวนเงิน</string>
+    <string name="amount_memory_session">จนกว่าจะปิดแอป</string>
+    <string name="amount_memory_12h">12 ชั่วโมง</string>
+    <string name="amount_memory_24h">24 ชั่วโมง</string>
+    <string name="amount_memory_forever">ตลอดไป</string>
+    <string name="amount_memory_hint">ระยะเวลาที่เก็บจำนวนเงินที่ป้อนไว้หลังออกจากแอป จากนั้นจะกลับเป็น 1</string>
     <string name="version_label">เวอร์ชัน %1$s</string>
     <string name="copied">คัดลอกแล้ว</string>
 </resources>

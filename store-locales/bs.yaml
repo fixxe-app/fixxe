@@ -21,6 +21,9 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   • Dinamična osnovica — kursevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-nazad.
 
 
+  • Pamti iznos — zatvorite aplikaciju, a uneseni broj vas čeka kad se vratite. Koliko dugo, birate u postavkama: 12 ili 24 sata, uvijek ili samo dok je aplikacija otvorena.
+
+
   • Prilagodba kursa — zadajte procenat za bankovnu proviziju, maržu ili gubitke pri prijenosu (npr. +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene, pa ih nećete pomiješati s tržišnim kursom. Ako je ne ostavite uvijek uključenu, sama se isključuje nakon četiri sata bez korištenja, pa zaboravljena provizija nikad ne iskrivi sutrašnje brojke.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novi izgled: jedinstven stil za sve ikone i natpise. Vrijeme i izvor kursa sada su na vrhu — dodirnite red za detalje. Novo u postavkama: zaokruživanje iznosa naviše ili na najbliže. Postavke su jedan pregledan prozor, s brojem verzije na dnu."
+whats_new: "Novo u postavkama: „Pamti iznos“. Uneseni broj ostaje i nakon zatvaranja aplikacije — zadano 12 sati, ili odaberite 24 sata, uvijek ili samo dok je aplikacija otvorena."
 landing:
   page_title: FIXXE — konvertor valuta
   install_title: Načini instalacije

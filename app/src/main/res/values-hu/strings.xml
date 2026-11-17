@@ -66,6 +66,12 @@
     <string name="rounding_up">Felfelé</string>
     <string name="rounding_nearest">A legközelebbire</string>
     <string name="rounding_hint">A „Felfelé” sosem mutat kevesebbet a valós összegnél, így a pénz mindig elég lesz.</string>
+    <string name="amount_memory_title">Összeg megjegyzése</string>
+    <string name="amount_memory_session">Az alkalmazás bezárásáig</string>
+    <string name="amount_memory_12h">12 óra</string>
+    <string name="amount_memory_24h">24 óra</string>
+    <string name="amount_memory_forever">Mindig</string>
+    <string name="amount_memory_hint">Meddig marad meg a beírt összeg, miután kilépett az alkalmazásból. Utána ismét 1 lesz.</string>
     <string name="version_label">Verzió: %1$s</string>
     <string name="copied">Másolva</string>
 </resources>

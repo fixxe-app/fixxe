@@ -21,6 +21,9 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
   • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
 
 
+  • Husker beløbet — luk appen, og tallet du skrev, er der stadig, når du vender tilbage. Vælg i indstillingerne hvor længe: 12 eller 24 timer, altid eller kun mens appen er åben.
+
+
   • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen. Medmindre du har den slået altid til, slår den sig selv fra efter fire timer uden brug, så et glemt gebyr aldrig forvrider morgendagens tal.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nyt udseende: én stil for alle ikoner og tekster. Kursens tidspunkt og kilde står nu øverst — tryk på linjen for detaljer. Nyt i Indstillinger: afrund beløb op eller til nærmeste. Indstillinger er ét overskueligt vindue med versionsnummeret nederst."
+whats_new: "Nyt i indstillingerne: Husk beløb. Tallet du skrev, bliver stående, efter at appen er lukket — som standard i 12 timer, eller vælg 24 timer, altid eller kun mens appen er åben."
 landing:
   page_title: FIXXE — valutaomregner
   install_title: Måder at installere på

@@ -66,6 +66,12 @@
     <string name="rounding_up">Lart</string>
     <string name="rounding_nearest">Te më i afërti</string>
     <string name="rounding_hint">«Lart» nuk tregon kurrë më pak se shuma e vërtetë, që paratë të mjaftojnë gjithmonë.</string>
+    <string name="amount_memory_title">Mbaj mend shumën</string>
+    <string name="amount_memory_session">Derisa të mbyllet aplikacioni</string>
+    <string name="amount_memory_12h">12 orë</string>
+    <string name="amount_memory_24h">24 orë</string>
+    <string name="amount_memory_forever">Gjithmonë</string>
+    <string name="amount_memory_hint">Sa kohë ruhet shuma e futur pasi del nga aplikacioni. Pastaj bëhet sërish 1.</string>
     <string name="version_label">Versioni %1$s</string>
     <string name="copied">U kopjua</string>
 </resources>

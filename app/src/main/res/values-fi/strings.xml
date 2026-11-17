@@ -66,6 +66,12 @@
     <string name="rounding_up">Ylöspäin</string>
     <string name="rounding_nearest">Lähimpään</string>
     <string name="rounding_hint">”Ylöspäin” ei koskaan näytä todellista summaa pienempää, joten rahat riittävät aina.</string>
+    <string name="amount_memory_title">Muista summa</string>
+    <string name="amount_memory_session">Kunnes sovellus suljetaan</string>
+    <string name="amount_memory_12h">12 tuntia</string>
+    <string name="amount_memory_24h">24 tuntia</string>
+    <string name="amount_memory_forever">Aina</string>
+    <string name="amount_memory_hint">Kuinka kauan syötetty summa säilyy sovelluksesta poistumisen jälkeen. Sen jälkeen se on taas 1.</string>
     <string name="version_label">Versio %1$s</string>
     <string name="copied">Kopioitu</string>
 </resources>

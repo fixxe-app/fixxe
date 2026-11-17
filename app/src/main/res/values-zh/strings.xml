@@ -66,6 +66,12 @@
     <string name="rounding_up">向上取整</string>
     <string name="rounding_nearest">四舍五入</string>
     <string name="rounding_hint">“向上取整”显示的金额不会低于实际金额，钱总是够用。</string>
+    <string name="amount_memory_title">记住金额</string>
+    <string name="amount_memory_session">直到关闭应用</string>
+    <string name="amount_memory_12h">12 小时</string>
+    <string name="amount_memory_24h">24 小时</string>
+    <string name="amount_memory_forever">始终</string>
+    <string name="amount_memory_hint">离开应用后保留所输入金额的时长。之后会恢复为 1。</string>
     <string name="version_label">版本 %1$s</string>
     <string name="copied">已复制</string>
 </resources>

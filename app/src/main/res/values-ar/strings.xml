@@ -66,6 +66,12 @@
     <string name="rounding_up">للأعلى</string>
     <string name="rounding_nearest">إلى الأقرب</string>
     <string name="rounding_hint">«للأعلى» لا يُظهر أبدًا مبلغًا أقل من الحقيقي، فيكفيك المال دائمًا.</string>
+    <string name="amount_memory_title">تذكّر المبلغ</string>
+    <string name="amount_memory_session">حتى إغلاق التطبيق</string>
+    <string name="amount_memory_12h">12 ساعة</string>
+    <string name="amount_memory_24h">24 ساعة</string>
+    <string name="amount_memory_forever">دائمًا</string>
+    <string name="amount_memory_hint">المدة التي يُحفظ فيها المبلغ المُدخل بعد مغادرة التطبيق. بعدها يعود إلى 1.</string>
     <string name="version_label">الإصدار %1$s</string>
     <string name="copied">تم النسخ</string>
 </resources>

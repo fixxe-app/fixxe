@@ -13,6 +13,13 @@ final class ConverterViewModel: ObservableObject {
     @Published var roundUp: Bool { didSet { UserDefaults.standard.set(roundUp, forKey: "round_up") } }
     /// оформление: 0 — как в системе, 1 — светлое, 2 — тёмное
     @Published var theme: Int { didSet { UserDefaults.standard.set(theme, forKey: "theme") } }
+    /// сколько помнить введённую сумму (см. AmountMemory); «не помнить» — и прежнюю не хранить
+    @Published var amountMemory: Int {
+        didSet {
+            UserDefaults.standard.set(amountMemory, forKey: "amount_memory")
+            if amountMemory == AmountMemory.session { forgetAmount() }
+        }
+    }
 
     /// nil — отдаём решение системе
     var colorScheme: ColorScheme? {
@@ -80,8 +87,13 @@ final class ConverterViewModel: ObservableObject {
             UserDefaults.standard.set(2, forKey: "source_v")
         }
         sourceMode = ScreenshotArgs.sourceMode >= 0 ? ScreenshotArgs.sourceMode : storedSource
+        let d = UserDefaults.standard   // integer(forKey:) понимает и число, и строку из параметров запуска
+        amountMemory = min(max(d.object(forKey: "amount_memory") == nil ? AmountMemory.defaultMode
+                                                                         : d.integer(forKey: "amount_memory"), 0), 3)
         activeCode = list.first ?? "EUR"
         baseCode = activeCode
+        // запуски для тестов и кадров начинают с 1, если не попросили иначе
+        if ScreenshotArgs.currencies.isEmpty || ScreenshotArgs.keepAmount { restoreAmount() }
         adjustKeep = UserDefaults.standard.bool(forKey: "adjust_keep")
         adjustPct = ScreenshotArgs.adjust ?? RateAdjust.clamp(UserDefaults.standard.double(forKey: "adjust_pct"))
         resetAdjustIfExpired()   // давно не открывали — курсы снова рыночные
@@ -248,8 +260,48 @@ final class ConverterViewModel: ObservableObject {
         inputText = SmartFormat.amount(activeAmount, decimals: decimals, roundUp: roundUp)
     }
 
-    /// Приложение ушло с экрана (или им только что пользовались)
-    func markUsed() { UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: "adjust_left_at") }
+    /// Приложение ушло с экрана (или им только что пользовались) — отсюда считаются
+    /// сроки поправки и суммы. Здесь же записывается сумма: выгрузить могут в любой момент.
+    func markUsed() {
+        let d = UserDefaults.standard
+        d.set(Date().timeIntervalSince1970, forKey: "adjust_left_at")
+        // сумма как есть, без округления: 1,1239 должна вернуться 1,1239, а не 1,13
+        if amountMemory != AmountMemory.session, activeAmount > 0 {
+            d.set(baseCode, forKey: "saved_code")
+            d.set(activeAmount, forKey: "saved_amount")
+        } else { forgetAmount() }
+    }
+
+    private func forgetAmount() {
+        UserDefaults.standard.removeObject(forKey: "saved_code")
+        UserDefaults.standard.removeObject(forKey: "saved_amount")
+    }
+
+    /// Холодный запуск: вернуть сумму, если она ещё в сроке и её валюта в списке.
+    private func restoreAmount() {
+        let d = UserDefaults.standard
+        guard AmountMemory.restoreOnLaunch(mode: amountMemory, leftAt: d.double(forKey: "adjust_left_at"),
+                                           now: Date().timeIntervalSince1970),
+              let code = d.string(forKey: "saved_code"), currencies.contains(code) else { return }
+        let amount = d.double(forKey: "saved_amount")
+        guard amount > 0, amount.isFinite else { return }
+        baseCode = code
+        activeCode = code
+        activeAmount = amount
+        inputText = SmartFormat.amount(amount, decimals: decimals, roundUp: roundUp)
+    }
+
+    /// Возврат на экран после перерыва дольше срока — сумма снова 1 в первой
+    /// валюте, как при первом запуске.
+    func resetAmountIfExpired(now: TimeInterval = Date().timeIntervalSince1970) {
+        guard AmountMemory.expired(mode: amountMemory, leftAt: UserDefaults.standard.double(forKey: "adjust_left_at"), now: now),
+              let first = currencies.first,
+              !(baseCode == first && activeCode == first && activeAmount == 1) else { return }
+        baseCode = first
+        activeCode = first
+        activeAmount = 1
+        inputText = "1"
+    }
 
     /// Вызывается при запуске и при возврате на экран
     func resetAdjustIfExpired(now: TimeInterval = Date().timeIntervalSince1970) {

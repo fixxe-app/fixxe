@@ -21,6 +21,9 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
 
 
+  • Megjegyzi az összeget — zárja be az alkalmazást, és a beírt szám visszatéréskor is ott lesz. A beállításokban választhat, meddig: 12 vagy 24 óráig, mindig, vagy csak amíg az alkalmazás nyitva van.
+
+
   • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal. Ha nem hagyja mindig bekapcsolva, négy óra használat nélkül magától kikapcsol, így egy elfelejtett díj sosem torzítja a holnapi számokat.
 
 
@@ -62,7 +65,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   Rates By Exchange Rate API.
 
   '
-whats_new: "Új megjelenés: egységes stílus minden ikonon és feliraton. Az árfolyam ideje és forrása mostantól felül látható — a részletekért koppintson a sorra. Újdonság a Beállításokban: összegek kerekítése felfelé vagy a legközelebbire. A Beállítások egyetlen áttekinthető ablak, alul a verziószámmal."
+whats_new: "Új a beállításokban: Összeg megjegyzése. A beírt szám az alkalmazás bezárása után is megmarad — alapból 12 óráig, vagy választhat 24 órát, mindig, vagy csak amíg az alkalmazás nyitva van."
 landing:
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok

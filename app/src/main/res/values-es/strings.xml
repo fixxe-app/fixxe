@@ -66,6 +66,12 @@
     <string name="rounding_up">Hacia arriba</string>
     <string name="rounding_nearest">Al más cercano</string>
     <string name="rounding_hint">«Hacia arriba» nunca muestra menos que el importe real, así siempre te alcanzará el dinero.</string>
+    <string name="amount_memory_title">Recordar importe</string>
+    <string name="amount_memory_session">Hasta cerrar la app</string>
+    <string name="amount_memory_12h">12 horas</string>
+    <string name="amount_memory_24h">24 horas</string>
+    <string name="amount_memory_forever">Siempre</string>
+    <string name="amount_memory_hint">Cuánto tiempo se guarda el importe introducido al salir de la app. Después vuelve a 1.</string>
     <string name="version_label">Versión %1$s</string>
     <string name="copied">Copiado</string>
 </resources>

@@ -21,6 +21,9 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
 
 
+  • Merkt sich den Betrag — App schließen, und die eingegebene Zahl ist beim Zurückkommen noch da. Wie lange, wählen Sie in den Einstellungen: 12 oder 24 Stunden, immer oder nur solange die App geöffnet ist.
+
+
   • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln. Sofern Sie sie nicht dauerhaft aktiv lassen, schaltet sie sich nach vier Stunden ohne Nutzung selbst ab, damit eine vergessene Gebühr nie die Zahlen von morgen verfälscht.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "Neuer Look: ein einheitlicher Stil für alle Symbole und Beschriftungen. Uhrzeit und Quelle des Kurses stehen jetzt oben — tippen Sie auf die Zeile für Details. Neu in den Einstellungen: Beträge aufrunden oder kaufmännisch runden. Die Einstellungen sind ein übersichtliches Fenster, die Versionsnummer steht unten."
+whats_new: "Neu in den Einstellungen: Betrag merken. Die eingegebene Zahl bleibt nach dem Schließen der App erhalten — standardmäßig 12 Stunden, wahlweise 24 Stunden, immer oder nur solange die App geöffnet ist."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

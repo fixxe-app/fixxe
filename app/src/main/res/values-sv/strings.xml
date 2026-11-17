@@ -66,6 +66,12 @@
     <string name="rounding_up">Uppåt</string>
     <string name="rounding_nearest">Till närmaste</string>
     <string name="rounding_hint">”Uppåt” visar aldrig mindre än det verkliga beloppet, så pengarna räcker alltid.</string>
+    <string name="amount_memory_title">Kom ihåg belopp</string>
+    <string name="amount_memory_session">Tills appen stängs</string>
+    <string name="amount_memory_12h">12 timmar</string>
+    <string name="amount_memory_24h">24 timmar</string>
+    <string name="amount_memory_forever">Alltid</string>
+    <string name="amount_memory_hint">Hur länge det inmatade beloppet sparas efter att du lämnat appen. Sedan är det 1 igen.</string>
     <string name="version_label">Version %1$s</string>
     <string name="copied">Kopierat</string>
 </resources>

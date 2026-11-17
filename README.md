@@ -123,6 +123,11 @@ Things that behave differently on the oldest supported release, and how they are
 - **40 languages** with automatic device-language detection (RTL for Arabic/Hebrew/Persian)
 - **Drag to reorder**, delete-with-confirmation, Clear, searchable add dialog
 - **Persistent** currencies, order, precision, source and language across restarts
+- **Remembers the amount** — the number you typed and its row come back after the app is closed.
+  **Settings → Remember amount**: *Until the app is closed*, *12 hours* (default), *24 hours* or
+  *Always*. The time counts from leaving the app; once it runs out — even if the app was still in
+  memory — the screen starts again from 1 in the first currency. Converted values are never stored:
+  they are recalculated from the current rates
 - **Works offline** — the last rates are cached on-device, so conversion keeps working with no
   network; if the cache is older than 24 h the header says so instead of passing stale numbers
   off as current
@@ -133,8 +138,8 @@ Things that behave differently on the oldest supported release, and how they are
 ## Settings
 
 One window on all three platforms: the name of each setting on the left, its value on the right,
-each opening its own choice — *Appearance, Display precision, Rounding, Digit grouping, Rate
-source, Language*, then below a line *Rate adjustment*. Back, a choice, or a tap outside a choice
+each opening its own choice — *Appearance, Display precision, Rounding, Digit grouping, Remember
+amount, Rate source, Language*, then below a line *Rate adjustment*. Back, a choice, or a tap outside a choice
 window return to Settings, not to the main screen. At the bottom, small, the version — tap to
 copy it for a bug report (the web version also links the Android APK there).
 

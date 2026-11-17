@@ -66,6 +66,12 @@
     <string name="rounding_up">W górę</string>
     <string name="rounding_nearest">Do najbliższej</string>
     <string name="rounding_hint">„W górę” nigdy nie pokazuje mniej niż rzeczywista kwota, więc pieniędzy zawsze wystarczy.</string>
+    <string name="amount_memory_title">Zapamiętaj kwotę</string>
+    <string name="amount_memory_session">Do zamknięcia aplikacji</string>
+    <string name="amount_memory_12h">12 godzin</string>
+    <string name="amount_memory_24h">24 godziny</string>
+    <string name="amount_memory_forever">Zawsze</string>
+    <string name="amount_memory_hint">Jak długo wpisana kwota jest pamiętana po wyjściu z aplikacji. Potem znów wynosi 1.</string>
     <string name="version_label">Wersja %1$s</string>
     <string name="copied">Skopiowano</string>
 </resources>

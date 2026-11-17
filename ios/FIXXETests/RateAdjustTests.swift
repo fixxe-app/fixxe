@@ -17,6 +17,9 @@ final class RateAdjustTests: XCTestCase {
 
     private func model(_ pct: Double) -> ConverterViewModel {
         UserDefaults.standard.removeObject(forKey: "adjust_pct")
+        // сумму, сохранённую прошлыми запусками (UI-тестами), не возвращать:
+        // модель должна начать с 1, как у нового пользователя
+        UserDefaults.standard.removeObject(forKey: "saved_code")
         let vm = ConverterViewModel()
         vm.currencies = ["EUR", "USD", "RSD", "BTC"]
         vm.decimals = 2; vm.grouping = 0

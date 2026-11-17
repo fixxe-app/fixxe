@@ -34,6 +34,9 @@ final class SwitchRowsTests: XCTestCase {
     }
 
     private func model() -> ConverterViewModel {
+        // сумму, сохранённую прошлыми запусками (UI-тестами), не возвращать:
+        // модель должна начать с 1, как у нового пользователя
+        UserDefaults.standard.removeObject(forKey: "saved_code")
         let vm = ConverterViewModel()
         // Точность и группировку задаём явно, а не берём из сохранённых
         // настроек: при точности 4 знака 1,1239 показывается без округления,

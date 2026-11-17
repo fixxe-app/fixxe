@@ -66,6 +66,12 @@
     <string name="rounding_up">Навише</string>
     <string name="rounding_nearest">На најближе</string>
     <string name="rounding_hint">„Навише“ никад не приказује мање од стварног износа, па ће новца увек бити довољно.</string>
+    <string name="amount_memory_title">Памти износ</string>
+    <string name="amount_memory_session">Док је апликација отворена</string>
+    <string name="amount_memory_12h">12 сати</string>
+    <string name="amount_memory_24h">24 сата</string>
+    <string name="amount_memory_forever">Увек</string>
+    <string name="amount_memory_hint">Колико дуго се чува унети износ након изласка из апликације. Затим је поново 1.</string>
     <string name="version_label">Верзија %1$s</string>
     <string name="copied">Копирано</string>
 </resources>

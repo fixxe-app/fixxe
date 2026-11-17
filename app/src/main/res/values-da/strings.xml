@@ -66,6 +66,12 @@
     <string name="rounding_up">Op</string>
     <string name="rounding_nearest">Til nærmeste</string>
     <string name="rounding_hint">„Op“ viser aldrig mindre end det faktiske beløb, så pengene altid rækker.</string>
+    <string name="amount_memory_title">Husk beløb</string>
+    <string name="amount_memory_session">Indtil appen lukkes</string>
+    <string name="amount_memory_12h">12 timer</string>
+    <string name="amount_memory_24h">24 timer</string>
+    <string name="amount_memory_forever">Altid</string>
+    <string name="amount_memory_hint">Hvor længe det indtastede beløb gemmes, efter du forlader appen. Derefter er det 1 igen.</string>
     <string name="version_label">Version %1$s</string>
     <string name="copied">Kopieret</string>
 </resources>

@@ -21,6 +21,9 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
 
 
+  • Onthoudt het bedrag — sluit de app en het getal dat je typte staat er nog als je terugkomt. Kies in de instellingen hoe lang: 12 of 24 uur, altijd of alleen zolang de app open is.
+
+
   • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers. Tenzij je hem altijd aan laat staan, schakelt hij zichzelf uit na vier uur zonder gebruik, zodat vergeten kosten nooit de cijfers van morgen vertekenen.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nieuwe look: één stijl voor alle pictogrammen en labels. Tijd en bron van de koers staan nu bovenaan — tik op de regel voor details. Nieuw in Instellingen: bedragen naar boven of naar het dichtstbijzijnde afronden. Instellingen is één overzichtelijk venster, met het versienummer onderaan."
+whats_new: "Nieuw in de instellingen: Bedrag onthouden. Het getal dat je typte blijft staan nadat je de app sluit — standaard 12 uur, of kies 24 uur, altijd of alleen zolang de app open is."
 landing:
   page_title: FIXXE — valutaomrekener
   install_title: Manieren om te installeren

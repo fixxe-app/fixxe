@@ -66,6 +66,12 @@
     <string name="rounding_up">切り上げ</string>
     <string name="rounding_nearest">四捨五入</string>
     <string name="rounding_hint">「切り上げ」は実際の金額より少なく表示しないので、お金が足りなくなりません。</string>
+    <string name="amount_memory_title">金額を記憶</string>
+    <string name="amount_memory_session">アプリを閉じるまで</string>
+    <string name="amount_memory_12h">12時間</string>
+    <string name="amount_memory_24h">24時間</string>
+    <string name="amount_memory_forever">常に</string>
+    <string name="amount_memory_hint">アプリを離れた後、入力した金額を保持する期間です。その後は1に戻ります。</string>
     <string name="version_label">バージョン %1$s</string>
     <string name="copied">コピーしました</string>
 </resources>

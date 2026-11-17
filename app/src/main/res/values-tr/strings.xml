@@ -66,6 +66,12 @@
     <string name="rounding_up">Yukarı</string>
     <string name="rounding_nearest">En yakına</string>
     <string name="rounding_hint">“Yukarı” hiçbir zaman gerçek tutardan azını göstermez, böylece para hep yeter.</string>
+    <string name="amount_memory_title">Tutarı hatırla</string>
+    <string name="amount_memory_session">Uygulama kapanana kadar</string>
+    <string name="amount_memory_12h">12 saat</string>
+    <string name="amount_memory_24h">24 saat</string>
+    <string name="amount_memory_forever">Her zaman</string>
+    <string name="amount_memory_hint">Girilen tutarın uygulamadan çıktıktan sonra ne kadar süre saklanacağı. Sonra yeniden 1 olur.</string>
     <string name="version_label">Sürüm %1$s</string>
     <string name="copied">Kopyalandı</string>
 </resources>

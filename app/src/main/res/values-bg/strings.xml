@@ -66,6 +66,12 @@
     <string name="rounding_up">Нагоре</string>
     <string name="rounding_nearest">До най-близкото</string>
     <string name="rounding_hint">„Нагоре“ никога не показва по-малко от реалната сума, така че парите винаги ще стигнат.</string>
+    <string name="amount_memory_title">Запомняне на сумата</string>
+    <string name="amount_memory_session">Докато приложението е отворено</string>
+    <string name="amount_memory_12h">12 часа</string>
+    <string name="amount_memory_24h">24 часа</string>
+    <string name="amount_memory_forever">Винаги</string>
+    <string name="amount_memory_hint">Колко дълго се пази въведената сума след излизане от приложението. След това отново е 1.</string>
     <string name="version_label">Версия %1$s</string>
     <string name="copied">Копирано</string>
 </resources>

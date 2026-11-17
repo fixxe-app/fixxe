@@ -21,6 +21,9 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
+  • Mémorise le montant — fermez l’app, le nombre saisi vous attend à votre retour. Choisissez la durée dans les réglages : 12 ou 24 heures, toujours, ou seulement tant que l’app est ouverte.
+
+
   • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nouveau look : un style unique pour toutes les icônes et tous les libellés. L'heure et la source du taux sont désormais en haut — touchez la ligne pour les détails. Nouveau dans les Paramètres : arrondir les montants vers le haut ou au plus proche. Les Paramètres tiennent dans une seule fenêtre claire, avec le numéro de version en bas."
+whats_new: "Nouveau dans les réglages : Mémoriser le montant. Le nombre saisi reste affiché après la fermeture de l’app — 12 heures par défaut, ou choisissez 24 heures, toujours, ou seulement tant que l’app est ouverte."
 landing:
   page_title: FIXXE — convertisseur de devises
   install_title: Façons d'installer

@@ -57,6 +57,9 @@ locales:
       • أساس متغيّر — تُحتسب الأسعار مقابل العملة التي تحرّرها، لا مقابل عملة ثابتة. بلا تنقّل ذهابًا وإيابًا.
 
 
+      • يتذكّر المبلغ — أغلق التطبيق وستجد الرقم الذي أدخلته في مكانه عند عودتك. اختر في الإعدادات مدة الحفظ: 12 أو 24 ساعة، أو دائمًا، أو فقط ما دام التطبيق مفتوحًا.
+
+
       • تعديل السعر — حدّد نسبة مئوية لعمولة البنك أو الهامش أو خسائر التحويل (مثلًا ‎+1.5%‎) فتُظهر كل المبالغ النتيجة الفعلية فورًا. الأرقام المعدّلة مميَّزة بوضوح، فلا تخلط بينها وبين سعر السوق. وما لم تجعله مفعَّلًا دائمًا، يتوقف تلقائيًا بعد أربع ساعات من عدم الاستخدام، فلا تشوّه عمولةٌ منسية أرقام الغد.
 
 
@@ -117,6 +120,9 @@ locales:
 
 
       • Динамична база — курсовете се преизчисляват спрямо валутата, която редактирате, а не спрямо фиксирана. Без превключване напред-назад.
+
+
+      • Помни сумата — затворете приложението и въведеното число ще ви чака, когато се върнете. Колко дълго, избирате в настройките: 12 или 24 часа, винаги или само докато приложението е отворено.
 
 
       • Корекция на курса — задайте процент за банкова комисиона, марж или загуби при превод (например +1,5%) и всички суми веднага показват реалния резултат. Преизчислените числа са ясно обозначени, за да не ги сбъркате с пазарния курс. Ако не я оставите винаги включена, тя се изключва сама след четири часа без използване, така че забравена комисиона никога не изкривява утрешните числа.
@@ -181,6 +187,9 @@ locales:
       • Dynamický základ — kurzy se přepočítávají vůči měně, kterou právě upravujete, ne vůči pevné. Žádné přepínání sem a tam.
 
 
+      • Pamatuje si částku — zavřete aplikaci a zadané číslo na vás po návratu počká. Jak dlouho, zvolíte v nastavení: 12 nebo 24 hodin, vždy, nebo jen dokud je aplikace otevřená.
+
+
       • Úprava kurzu — nastavte procento za bankovní poplatek, marži nebo ztráty při převodu (např. +1,5 %) a všechny částky hned ukážou skutečný výsledek. Přepočtená čísla jsou zřetelně označena, takže si je nespletete s tržním kurzem. Pokud ji nenecháte trvale zapnutou, po čtyřech hodinách bez použití se sama vypne, takže zapomenutý poplatek nikdy nezkreslí zítřejší čísla.
 
 
@@ -241,6 +250,9 @@ locales:
 
 
       • Dynamisk basis — kurserne beregnes i forhold til den valuta, du redigerer, ikke en fast. Ingen frem og tilbage.
+
+
+      • Husker beløbet — luk appen, og tallet du skrev, er der stadig, når du vender tilbage. Vælg i indstillingerne hvor længe: 12 eller 24 timer, altid eller kun mens appen er åben.
 
 
       • Kursjustering — angiv en procentsats for bankens gebyr, margin eller tab ved overførsel (for eksempel +1,5 %), så viser alle beløb straks det reelle resultat. Justerede tal er tydeligt markeret, så du aldrig forveksler dem med markedskursen. Medmindre du har den slået altid til, slår den sig selv fra efter fire timer uden brug, så et glemt gebyr aldrig forvrider morgendagens tal.
@@ -305,6 +317,9 @@ locales:
       • Dynamische Basis — die Kurse werden auf die Währung bezogen, die Sie gerade bearbeiten, nicht auf eine feste. Kein Hin- und Herschalten.
 
 
+      • Merkt sich den Betrag — App schließen, und die eingegebene Zahl ist beim Zurückkommen noch da. Wie lange, wählen Sie in den Einstellungen: 12 oder 24 Stunden, immer oder nur solange die App geöffnet ist.
+
+
       • Kursanpassung — legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest (z. B. +1,5 %), und alle Beträge zeigen sofort das tatsächliche Ergebnis. Angepasste Werte sind deutlich markiert, damit Sie sie nie mit dem Marktkurs verwechseln. Sofern Sie sie nicht dauerhaft aktiv lassen, schaltet sie sich nach vier Stunden ohne Nutzung selbst ab, damit eine vergessene Gebühr nie die Zahlen von morgen verfälscht.
 
 
@@ -365,6 +380,9 @@ locales:
 
 
       • Δυναμική βάση — οι ισοτιμίες υπολογίζονται ως προς το νόμισμα που επεξεργάζεστε, όχι ως προς ένα σταθερό. Χωρίς συνεχείς εναλλαγές.
+
+
+      • Θυμάται το ποσό — κλείστε την εφαρμογή και ο αριθμός που πληκτρολογήσατε σας περιμένει όταν επιστρέψετε. Επιλέγετε στις ρυθμίσεις για πόσο: 12 ή 24 ώρες, πάντα ή μόνο όσο η εφαρμογή είναι ανοιχτή.
 
 
       • Προσαρμογή ισοτιμίας — ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς (π.χ. +1,5%) και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα. Τα προσαρμοσμένα ποσά επισημαίνονται καθαρά, ώστε να μην τα μπερδέψετε με την ισοτιμία της αγοράς. Αν δεν την κρατήσετε πάντα ενεργή, απενεργοποιείται μόνη της μετά από τέσσερις ώρες χωρίς χρήση, ώστε μια ξεχασμένη προμήθεια να μην αλλοιώνει ποτέ τα αυριανά νούμερα.
@@ -429,6 +447,9 @@ locales:
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
 
 
+      • Remembers your amount — close the app and the number you typed is still there when you come back. You choose for how long in Settings: 12 or 24 hours, always, or only while the app is open.
+
+
       • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
 
 
@@ -489,6 +510,9 @@ locales:
 
 
       • Dynamic base — rates are recalculated against the currency you are editing, not a fixed one. No switching back and forth.
+
+
+      • Remembers your amount — close the app and the number you typed is still there when you come back. You choose for how long in Settings: 12 or 24 hours, always, or only while the app is open.
 
 
       • Rate adjustment — add a percentage for your bank''s fee, a margin or transfer losses (say +1.5%) and every amount shows the real result straight away. Adjusted figures are clearly marked, so you never mistake them for market rates. Unless you keep it always on, it switches itself off after four hours without use, so a forgotten fee never distorts tomorrow''s numbers.
@@ -553,6 +577,9 @@ locales:
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
 
 
+      • Recuerda el importe — cierra la app y el número que escribiste sigue ahí cuando vuelvas. Elige en los ajustes cuánto tiempo: 12 o 24 horas, siempre o solo mientras la app esté abierta.
+
+
       • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
 
 
@@ -613,6 +640,9 @@ locales:
 
 
       • Base dinámica: los tipos se recalculan respecto a la moneda que estás editando, no a una fija. Sin ir y venir.
+
+
+      • Recuerda el importe — cierra la app y el número que escribiste sigue ahí cuando vuelvas. Elige en los ajustes cuánto tiempo: 12 o 24 horas, siempre o solo mientras la app esté abierta.
 
 
       • Ajuste del tipo — indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia (por ejemplo, +1,5 %) y todos los importes muestran al instante el resultado real. Las cifras ajustadas se marcan claramente para que nunca las confundas con el tipo de mercado. Salvo que lo dejes siempre activo, se desactiva solo tras cuatro horas sin uso, así una comisión olvidada nunca distorsiona las cifras de mañana.
@@ -677,6 +707,9 @@ locales:
       • Muutuv alus — kursid arvutatakse ümber selle valuuta suhtes, mida parajasti sisestate, mitte kindla suhtes. Pole vaja edasi-tagasi lülitada.
 
 
+      • Jätab summa meelde — sulge rakendus ja sisestatud number ootab sind tagasi tulles. Kui kauaks, vali seadetes: 12 või 24 tundi, alati või ainult seni, kuni rakendus on avatud.
+
+
       • Kursi korrektsioon — määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks (näiteks +1,5%) ja kõik summad näitavad kohe tegelikku tulemust. Korrigeeritud arvud on selgelt tähistatud, nii et te ei aja neid turukursiga segi. Kui te ei hoia seda alati sees, lülitub see pärast nelja tundi kasutamata olekut ise välja, nii et unustatud teenustasu ei moonuta kunagi homseid numbreid.
 
 
@@ -737,6 +770,9 @@ locales:
 
 
       • پایهٔ پویا — نرخ‌ها نسبت به ارزی که در حال ویرایش آن هستید دوباره حساب می‌شوند، نه نسبت به ارزی ثابت. بی‌نیاز از رفت‌وبرگشت.
+
+
+      • مبلغ را به خاطر می‌سپارد — برنامه را ببندید و وقتی برگردید، عددی که وارد کرده‌اید سر جایش است. مدت آن را در تنظیمات انتخاب کنید: ۱۲ یا ۲۴ ساعت، همیشه، یا فقط تا وقتی برنامه باز است.
 
 
       • تعدیل نرخ — درصدی برای کارمزد بانک، حاشیهٔ سود یا افت انتقال تعیین کنید (مثلاً ‎+1.5%‎) تا همهٔ مبلغ‌ها بی‌درنگ نتیجهٔ واقعی را نشان دهند. ارقام تعدیل‌شده به‌روشنی علامت‌گذاری می‌شوند تا با نرخ بازار اشتباه نشوند. اگر آن را همیشه فعال نگذارید، پس از چهار ساعت بدون استفاده خودبه‌خود خاموش می‌شود تا کارمزدی فراموش‌شده هرگز ارقام فردا را منحرف نکند.
@@ -801,6 +837,9 @@ locales:
       • Dynaaminen perusta — kurssit lasketaan sen valuutan suhteen, jota parhaillaan muokkaat, ei kiinteän. Ei edestakaista vaihtamista.
 
 
+      • Muistaa summan — sulje sovellus, ja syöttämäsi luku odottaa, kun palaat. Valitse asetuksista kuinka kauan: 12 tai 24 tuntia, aina tai vain niin kauan kuin sovellus on auki.
+
+
       • Kurssin korjaus — aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille (esimerkiksi +1,5 %), niin kaikki summat näyttävät heti todellisen tuloksen. Korjatut luvut on merkitty selvästi, joten et sekoita niitä markkinakurssiin. Ellet pidä sitä aina käytössä, se kytkeytyy itsestään pois neljän tunnin käyttämättömyyden jälkeen, joten unohtunut palkkio ei koskaan vääristä huomisen lukuja.
 
 
@@ -861,6 +900,9 @@ locales:
 
 
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
+
+
+      • Mémorise le montant — fermez l’app, le nombre saisi vous attend à votre retour. Choisissez la durée dans les réglages : 12 ou 24 heures, toujours, ou seulement tant que l’app est ouverte.
 
 
       • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
@@ -925,6 +967,9 @@ locales:
       • Base dynamique — les taux sont recalculés par rapport à la devise que vous modifiez, pas à une devise figée. Plus besoin de basculer sans cesse.
 
 
+      • Mémorise le montant — fermez l’app, le nombre saisi vous attend à votre retour. Choisissez la durée dans les réglages : 12 ou 24 heures, toujours, ou seulement tant que l’app est ouverte.
+
+
       • Ajustement du taux — indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert (par exemple +1,5 %) et tous les montants affichent aussitôt le résultat réel. Les chiffres ajustés sont clairement signalés : impossible de les confondre avec le taux du marché. Sauf si vous le laissez toujours actif, il se désactive tout seul après quatre heures sans utilisation : des frais oubliés ne faussent jamais les chiffres du lendemain.
 
 
@@ -985,6 +1030,9 @@ locales:
 
 
       • בסיס דינמי — השערים מחושבים מחדש מול המטבע שאתם עורכים, לא מול מטבע קבוע. בלי מעבר הלוך ושוב.
+
+
+      • זוכר את הסכום — סגרתם את האפליקציה, והמספר שהקלדתם מחכה כשתחזרו. בהגדרות בוחרים לכמה זמן: 12 או 24 שעות, תמיד, או רק כל עוד האפליקציה פתוחה.
 
 
       • התאמת שער — הגדירו אחוז עבור עמלת הבנק, המרווח או הפסדי ההעברה (למשל ‎+1.5%‎) וכל הסכומים יציגו מיד את התוצאה האמיתית. המספרים המותאמים מסומנים בבירור, כך שלא תתבלבלו בינם לבין שער השוק. אם לא תשאירו אותה פעילה תמיד, היא נכבית מעצמה אחרי ארבע שעות ללא שימוש, כך שעמלה שנשכחה לעולם לא תעוות את המספרים של מחר.
@@ -1049,6 +1097,9 @@ locales:
       • गतिशील आधार — दरें उसी मुद्रा के सापेक्ष फिर से निकाली जाती हैं जिसे आप लिख रहे हैं, किसी तय मुद्रा के नहीं। बार-बार अदल-बदल की ज़रूरत नहीं।
 
 
+      • राशि याद रखता है — ऐप बंद करें, और लौटने पर आपकी लिखी संख्या वहीं मिलेगी। कितनी देर तक, यह सेटिंग्स में चुनें: 12 या 24 घंटे, हमेशा, या सिर्फ़ जब तक ऐप खुला है।
+
+
       • दर समायोजन — बैंक शुल्क, मार्जिन या ट्रांसफ़र में होने वाले नुकसान के लिए एक प्रतिशत तय करें (जैसे +1.5%) और हर राशि तुरंत असली नतीजा दिखाती है। समायोजित आँकड़े साफ़ चिह्नित रहते हैं, इसलिए आप उन्हें बाज़ार दर नहीं समझ बैठेंगे। अगर आप इसे हमेशा चालू नहीं रखते, तो चार घंटे उपयोग न होने पर यह अपने आप बंद हो जाता है, ताकि भूला हुआ शुल्क कभी कल के आँकड़े न बिगाड़े।
 
 
@@ -1109,6 +1160,9 @@ locales:
 
 
       • Dinamična osnovica — tečajevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromjenjivoj. Bez prebacivanja naprijed-natrag.
+
+
+      • Pamti iznos — zatvorite aplikaciju, a uneseni broj čeka vas kad se vratite. Koliko dugo, birate u postavkama: 12 ili 24 sata, uvijek ili samo dok je aplikacija otvorena.
 
 
       • Prilagodba tečaja — zadajte postotak za bankovnu naknadu, maržu ili gubitke pri prijenosu (npr. +1,5 %) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke jasno su označene pa ih nećete zamijeniti s tržišnim tečajem. Ako je ne ostavite uvijek uključenu, sama se isključuje nakon četiri sata bez korištenja, pa zaboravljena naknada nikad ne iskrivljuje sutrašnje brojke.
@@ -1173,6 +1227,9 @@ locales:
       • Dinamikus alap — az árfolyamok ahhoz a pénznemhez igazodnak, amelyet éppen szerkesztesz, nem egy rögzítetthez. Nem kell ide-oda kapcsolgatni.
 
 
+      • Megjegyzi az összeget — zárja be az alkalmazást, és a beírt szám visszatéréskor is ott lesz. A beállításokban választhat, meddig: 12 vagy 24 óráig, mindig, vagy csak amíg az alkalmazás nyitva van.
+
+
       • Árfolyam-korrekció — adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre (például +1,5%), és minden összeg azonnal a valós eredményt mutatja. A korrigált számok jól láthatóan meg vannak jelölve, így nem téveszthetők össze a piaci árfolyammal. Ha nem hagyja mindig bekapcsolva, négy óra használat nélkül magától kikapcsol, így egy elfelejtett díj sosem torzítja a holnapi számokat.
 
 
@@ -1233,6 +1290,9 @@ locales:
 
 
       • Basis dinamis — kurs dihitung ulang terhadap mata uang yang sedang Anda ketik, bukan terhadap satu yang tetap. Tidak perlu bolak-balik mengganti.
+
+
+      • Mengingat jumlah — tutup aplikasi, dan angka yang Anda ketik masih ada saat Anda kembali. Pilih durasinya di pengaturan: 12 atau 24 jam, selalu, atau hanya selama aplikasi terbuka.
 
 
       • Penyesuaian kurs — atur persentase untuk biaya bank, margin, atau selisih saat transfer (misalnya +1,5%) dan semua jumlah langsung menampilkan hasil sebenarnya. Angka yang disesuaikan ditandai dengan jelas, sehingga tidak tertukar dengan kurs pasar. Kecuali Anda membiarkannya selalu aktif, fitur ini mati sendiri setelah empat jam tidak digunakan, sehingga biaya yang terlupa tidak pernah mengacaukan angka esok hari.
@@ -1297,6 +1357,9 @@ locales:
       • Base dinamica — i tassi vengono ricalcolati rispetto alla valuta che stai modificando, non a una fissa. Senza continui cambi avanti e indietro.
 
 
+      • Ricorda l’importo — chiudi l’app e il numero digitato è ancora lì quando torni. Scegli nelle impostazioni per quanto tempo: 12 o 24 ore, sempre o solo finché l’app è aperta.
+
+
       • Correzione del tasso — imposta una percentuale per la commissione della banca, il margine o le perdite di trasferimento (ad esempio +1,5%) e tutti gli importi mostrano subito il risultato reale. Le cifre corrette sono evidenziate chiaramente, così non le confondi con il tasso di mercato. Se non la lasci sempre attiva, si disattiva da sola dopo quattro ore senza utilizzo, così una commissione dimenticata non falsa mai i numeri del giorno dopo.
 
 
@@ -1357,6 +1420,9 @@ locales:
 
 
       • 動く基準通貨 — レートは固定通貨ではなく、いま入力している通貨を基準に計算し直されます。行ったり来たりの切り替えは不要です。
+
+
+      • 金額を記憶 — アプリを閉じても、戻ったときに入力した数字がそのまま残ります。保持する期間は設定で選べます：12時間、24時間、常に、またはアプリを開いている間だけ。
 
 
       • レート調整 — 銀行手数料やマージン、送金時の目減り分をパーセントで設定すると（例：+1.5%）、すべての金額が実際の結果をすぐに表示します。調整後の数字ははっきり区別して表示されるので、市場レートと取り違えることはありません。「常にオン」にしない限り、4時間使わないと自動でオフになるので、消し忘れた手数料が翌日の数字を狂わせることはありません。
@@ -1421,6 +1487,9 @@ locales:
       • დინამიური ბაზისი — კურსები გადაითვლება იმ ვალუტასთან, რომელსაც ამჟამად ასწორებთ, და არა ფიქსირებულთან. აღარ არის საჭირო წინ-უკან გადართვა.
 
 
+      • იმახსოვრებს თანხას — დახურეთ აპი და დაბრუნებისას შეყვანილი რიცხვი ადგილზე დაგხვდებათ. რამდენ ხანს — პარამეტრებში ირჩევთ: 12 ან 24 საათი, ყოველთვის ან მხოლოდ სანამ აპი გახსნილია.
+
+
       • კურსის შესწორება — მიუთითეთ პროცენტი ბანკის საკომისიოს, მარჟის ან გადარიცხვის დანაკარგისთვის (მაგალითად, +1,5%) და ყველა თანხა მაშინვე რეალურ შედეგს აჩვენებს. გადათვლილი რიცხვები მკაფიოდ არის მონიშნული, ასე რომ მათ საბაზრო კურსში არ აგერევათ. თუ მას ყოველთვის ჩართულს არ დატოვებთ, ოთხი საათის გამოუყენებლობის შემდეგ თავისით გაითიშება, ასე რომ დავიწყებული საკომისიო ხვალინდელ ციფრებს ვერასოდეს დაამახინჯებს.
 
 
@@ -1481,6 +1550,9 @@ locales:
 
 
       • 바뀌는 기준 통화 — 환율은 고정된 통화가 아니라 지금 입력 중인 통화를 기준으로 다시 계산됩니다. 앞뒤로 전환할 필요가 없습니다.
+
+
+      • 금액 기억 — 앱을 닫아도 돌아오면 입력한 숫자가 그대로 있습니다. 유지 기간은 설정에서 선택하세요: 12시간, 24시간, 항상, 또는 앱이 열려 있는 동안만.
 
 
       • 환율 조정 — 은행 수수료, 마진 또는 송금 손실을 퍼센트로 설정하면(예: +1.5%) 모든 금액이 실제 결과를 바로 보여 줍니다. 조정된 숫자는 뚜렷하게 표시되어 시장 환율과 혼동할 일이 없습니다. 항상 켜 두지 않으면 4시간 동안 사용하지 않을 때 저절로 꺼지므로, 잊어버린 수수료가 다음 날 숫자를 왜곡할 일이 없습니다.
@@ -1545,6 +1617,9 @@ locales:
       • Dinamiškas pagrindas — kursai perskaičiuojami pagal tą valiutą, kurią tuo metu redaguojate, o ne pagal fiksuotą. Nereikia nuolat perjunginėti.
 
 
+      • Įsimena sumą — uždarykite programėlę, o įvestas skaičius lauks sugrįžus. Kiek laiko, pasirenkate nustatymuose: 12 ar 24 valandas, visada arba tik kol programėlė atidaryta.
+
+
       • Kurso pataisa — nustatykite procentą banko mokesčiui, maržai ar pervedimo nuostoliams (pvz., +1,5 %), ir visos sumos iškart parodys tikrąjį rezultatą. Perskaičiuoti skaičiai aiškiai pažymėti, todėl jų nesupainiosite su rinkos kursu. Jei nepaliksite jos visada įjungtos, po keturių valandų nenaudojimo ji išsijungs pati, todėl pamirštas mokestis niekada neiškreips rytdienos skaičių.
 
 
@@ -1605,6 +1680,9 @@ locales:
 
 
       • Dinamiska bāze — kursi tiek pārrēķināti pret to valūtu, kuru tobrīd rediģējat, nevis pret fiksētu. Nav jāpārslēdzas turp un atpakaļ.
+
+
+      • Atceras summu — aizveriet lietotni, un ievadītais skaitlis jūs sagaidīs, kad atgriezīsieties. Cik ilgi, izvēlieties iestatījumos: 12 vai 24 stundas, vienmēr vai tikai, kamēr lietotne ir atvērta.
 
 
       • Kursa korekcija — iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem (piemēram, +1,5 %), un visas summas uzreiz parādīs reālo rezultātu. Pārrēķinātie skaitļi ir skaidri iezīmēti, tāpēc tos nesajauksiet ar tirgus kursu. Ja neatstājat to vienmēr ieslēgtu, tā pati izslēdzas pēc četrām stundām bez lietošanas, tāpēc aizmirsta komisija nekad neizkropļos rītdienas skaitļus.
@@ -1669,6 +1747,9 @@ locales:
       • Динамична основа — курсевите се пресметуваат спрема валутата што ја уредувате, а не спрема фиксна. Без префрлање напред-назад.
 
 
+      • Ја памети сумата — затворете ја апликацијата, а внесениот број ве чека кога ќе се вратите. Колку долго, избирате во поставките: 12 или 24 часа, секогаш или само додека апликацијата е отворена.
+
+
       • Корекција на курсот — задајте процент за банкарска провизија, маржа или загуби при пренос (на пример +1,5%) и сите износи веднаш го покажуваат вистинскиот резултат. Пресметаните бројки се јасно означени, па нема да ги помешате со пазарниот курс. Ако не ја оставите секогаш вклучена, таа сама се исклучува по четири часа без користење, па заборавена провизија никогаш нема да ги искриви утрешните бројки.
 
 
@@ -1729,6 +1810,9 @@ locales:
 
 
       • Dynamisk basis — kursene regnes om mot valutaen du redigerer, ikke mot en fast. Ingen fram og tilbake.
+
+
+      • Husker beløpet — lukk appen, og tallet du skrev er der fortsatt når du kommer tilbake. Velg i innstillingene hvor lenge: 12 eller 24 timer, alltid eller bare mens appen er åpen.
 
 
       • Kursjustering — angi en prosentsats for bankens gebyr, margin eller tap ved overføring (for eksempel +1,5 %), så viser alle beløp straks det reelle resultatet. Justerte tall er tydelig merket, slik at du aldri forveksler dem med markedskursen. Med mindre du har den alltid på, slår den seg av selv etter fire timer uten bruk, så et glemt gebyr aldri forvrenger morgendagens tall.
@@ -1793,6 +1877,9 @@ locales:
       • Dynamische basis — koersen worden herberekend ten opzichte van de valuta die je aan het bewerken bent, niet van een vaste. Geen heen-en-weergeschakel.
 
 
+      • Onthoudt het bedrag — sluit de app en het getal dat je typte staat er nog als je terugkomt. Kies in de instellingen hoe lang: 12 of 24 uur, altijd of alleen zolang de app open is.
+
+
       • Koerscorrectie — stel een percentage in voor bankkosten, marge of verlies bij overboekingen (bijvoorbeeld +1,5%) en alle bedragen tonen meteen het werkelijke resultaat. Gecorrigeerde cijfers zijn duidelijk gemarkeerd, zodat je ze nooit verwart met de marktkoers. Tenzij je hem altijd aan laat staan, schakelt hij zichzelf uit na vier uur zonder gebruik, zodat vergeten kosten nooit de cijfers van morgen vertekenen.
 
 
@@ -1853,6 +1940,9 @@ locales:
 
 
       • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
+
+
+      • Pamięta kwotę — zamknij aplikację, a wpisana liczba będzie czekać po powrocie. Jak długo, wybierasz w ustawieniach: 12 lub 24 godziny, zawsze albo tylko dopóki aplikacja jest otwarta.
 
 
       • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym. Jeśli nie zostawisz jej zawsze włączonej, wyłączy się sama po czterech godzinach bez użycia, więc zapomniana prowizja nigdy nie zniekształci jutrzejszych liczb.
@@ -1917,6 +2007,9 @@ locales:
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
 
 
+      • Memoriza o valor — feche a app e o número que escreveu continua lá quando voltar. Escolha nas definições durante quanto tempo: 12 ou 24 horas, sempre ou só enquanto a app estiver aberta.
+
+
       • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado. A menos que o mantenha sempre ativo, desliga-se sozinho após quatro horas sem utilização, para que uma comissão esquecida nunca distorça os números do dia seguinte.
 
 
@@ -1977,6 +2070,9 @@ locales:
 
 
       • Base dinâmica — as taxas são recalculadas em relação à moeda que está a editar, não a uma fixa. Sem andar para trás e para a frente.
+
+
+      • Memoriza o valor — feche a app e o número que escreveu continua lá quando voltar. Escolha nas definições durante quanto tempo: 12 ou 24 horas, sempre ou só enquanto a app estiver aberta.
 
 
       • Ajuste da taxa — defina uma percentagem para a comissão do banco, a margem ou as perdas na transferência (por exemplo, +1,5%) e todos os valores mostram de imediato o resultado real. Os valores ajustados ficam claramente assinalados, para nunca os confundir com a taxa de mercado. A menos que o mantenha sempre ativo, desliga-se sozinho após quatro horas sem utilização, para que uma comissão esquecida nunca distorça os números do dia seguinte.
@@ -2041,6 +2137,9 @@ locales:
       • Bază dinamică — cursurile se recalculează față de valuta pe care o editezi, nu față de una fixă. Fără comutări înainte și înapoi.
 
 
+      • Reține suma — închideți aplicația, iar numărul introdus vă așteaptă când reveniți. Cât timp, alegeți în setări: 12 sau 24 de ore, întotdeauna sau doar cât aplicația e deschisă.
+
+
       • Ajustarea cursului — setați un procent pentru comisionul băncii, marjă sau pierderile la transfer (de exemplu +1,5%) și toate sumele arată imediat rezultatul real. Cifrele recalculate sunt marcate clar, ca să nu le confundați cu cursul pieței. Dacă nu o lăsați mereu activă, se dezactivează singură după patru ore fără utilizare, așa că un comision uitat nu denaturează niciodată cifrele de mâine.
 
 
@@ -2101,6 +2200,9 @@ locales:
 
 
       • Динамическая база — курсы пересчитываются относительно той валюты, которую вы редактируете, а не фиксированной. Не нужно переключаться туда-сюда.
+
+
+      • Помнит сумму — закрыли приложение, а введённое число на месте, когда вернётесь. Сколько помнить, выбираете в настройках: 12 или 24 часа, всегда или только пока приложение открыто.
 
 
       • Поправка к курсу — задайте процент комиссии банка, маржи или потерь на переводе (например, +1,5%), и все суммы сразу покажут реальный результат. Пересчитанные цифры заметно помечены — их не спутать с рыночным курсом. Если не сделать её постоянной, поправка сама отключается через четыре часа без использования, так что забытая комиссия не исказит завтрашние цифры.
@@ -2165,6 +2267,9 @@ locales:
       • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
 
 
+      • Pamätá si sumu — zatvorte aplikáciu a zadané číslo na vás po návrate počká. Ako dlho, zvolíte v nastaveniach: 12 alebo 24 hodín, vždy, alebo len kým je aplikácia otvorená.
+
+
       • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom. Ak ju nenecháte trvalo zapnutú, po štyroch hodinách bez použitia sa sama vypne, takže zabudnutý poplatok nikdy neskreslí zajtrajšie čísla.
 
 
@@ -2225,6 +2330,9 @@ locales:
 
 
       • Dinamična osnova — tečaji se preračunajo glede na valuto, ki jo urejate, ne glede na stalno. Brez preklapljanja sem in tja.
+
+
+      • Zapomni si znesek — zaprite aplikacijo in vneseno število vas počaka, ko se vrnete. Kako dolgo, izberete v nastavitvah: 12 ali 24 ur, vedno ali samo, dokler je aplikacija odprta.
 
 
       • Prilagoditev tečaja — nastavite odstotek za bančno provizijo, maržo ali izgube pri nakazilu (npr. +1,5 %) in vsi zneski takoj pokažejo dejanski rezultat. Preračunane številke so jasno označene, zato jih ne boste zamenjali s tržnim tečajem. Če je ne pustite vedno vklopljene, se po štirih urah brez uporabe sama izklopi, zato pozabljena provizija nikoli ne popači jutrišnjih številk.
@@ -2289,6 +2397,9 @@ locales:
       • Динамична основица — курсеви се прерачунавају према валути коју управо уређујете, а не према непроменљивој. Без пребацивања напред-назад.
 
 
+      • Памти износ — затворите апликацију, а унети број вас чека кад се вратите. Колико дуго, бирате у подешавањима: 12 или 24 сата, увек или само док је апликација отворена.
+
+
       • Корекција курса — задајте проценат за провизију банке, маржу или губитке при преносу (на пример +1,5%) и сви износи одмах показују стварни резултат. Прерачунате бројке су јасно означене, па их нећете помешати са тржишним курсом. Ако је не оставите увек укључену, сама се искључује после четири сата без коришћења, па заборављена провизија никад не искривљује сутрашње бројке.
 
 
@@ -2349,6 +2460,9 @@ locales:
 
 
       • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
+
+
+      • Kommer ihåg beloppet — stäng appen så finns talet du skrev kvar när du kommer tillbaka. Välj i inställningarna hur länge: 12 eller 24 timmar, alltid eller bara medan appen är öppen.
 
 
       • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen. Om du inte har den alltid på stänger den av sig själv efter fyra timmar utan användning, så att en bortglömd avgift aldrig snedvrider morgondagens siffror.
@@ -2413,6 +2527,9 @@ locales:
       • ฐานยืดหยุ่น — อัตราคำนวณใหม่เทียบกับสกุลเงินที่คุณกำลังพิมพ์ ไม่ใช่สกุลที่ตายตัว ไม่ต้องสลับไปมา
 
 
+      • จำจำนวนเงิน — ปิดแอปแล้ว ตัวเลขที่พิมพ์ไว้ยังอยู่เมื่อกลับมา เลือกระยะเวลาได้ในการตั้งค่า: 12 หรือ 24 ชั่วโมง ตลอดไป หรือเฉพาะตอนที่แอปเปิดอยู่
+
+
       • การปรับอัตรา — กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน (เช่น +1.5%) แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที ตัวเลขที่ปรับแล้วมีเครื่องหมายชัดเจน จึงไม่สับสนกับอัตราตลาด หากไม่ได้ตั้งให้เปิดตลอด การปรับจะปิดเองเมื่อไม่ได้ใช้งานสี่ชั่วโมง ค่าธรรมเนียมที่ลืมไว้จึงไม่ทำให้ตัวเลขของวันพรุ่งนี้คลาดเคลื่อน
 
 
@@ -2473,6 +2590,9 @@ locales:
 
 
       • Dinamik temel — kurlar sabit bir para birimine göre değil, düzenlediğiniz para birimine göre yeniden hesaplanır. İleri geri geçmeye gerek yok.
+
+
+      • Tutarı hatırlar — uygulamayı kapatın, döndüğünüzde yazdığınız sayı yerinde olur. Ne kadar süreyle olacağını ayarlardan seçin: 12 veya 24 saat, her zaman ya da yalnızca uygulama açıkken.
 
 
       • Kur düzeltmesi — banka komisyonu, marj veya transfer kayıpları için bir yüzde belirleyin (örneğin +%1,5) ve tüm tutarlar gerçek sonucu hemen göstersin. Düzeltilmiş rakamlar açıkça işaretlenir; piyasa kuruyla karıştırmazsınız. Her zaman açık tutmadığınız sürece dört saat kullanılmadığında kendiliğinden kapanır; böylece unutulan bir komisyon yarının rakamlarını asla bozmaz.
@@ -2537,6 +2657,9 @@ locales:
       • Cơ sở động — tỷ giá được tính lại theo đồng tiền bạn đang nhập, không theo một đồng cố định. Không phải chuyển qua chuyển lại.
 
 
+      • Nhớ số tiền — đóng ứng dụng, khi quay lại con số bạn đã nhập vẫn còn đó. Chọn thời gian trong phần cài đặt: 12 hoặc 24 giờ, luôn luôn, hoặc chỉ khi ứng dụng đang mở.
+
+
       • Điều chỉnh tỷ giá — đặt một tỷ lệ phần trăm cho phí ngân hàng, biên lợi nhuận hoặc hao hụt khi chuyển tiền (ví dụ +1,5%) và mọi số tiền lập tức hiển thị kết quả thực tế. Các con số đã điều chỉnh được đánh dấu rõ ràng nên bạn không nhầm với tỷ giá thị trường. Trừ khi bạn để luôn bật, tính năng này sẽ tự tắt sau bốn giờ không sử dụng, nên một khoản phí bị quên sẽ không bao giờ làm sai lệch các con số của ngày mai.
 
 
@@ -2597,6 +2720,9 @@ locales:
 
 
       • 动态基准——汇率按你正在输入的那种货币重新计算，而不是某个固定货币。不必来回切换。
+
+
+      • 记住金额 — 关闭应用后再回来，刚才输入的数字仍在原处。在设置中选择保留多久：12 或 24 小时、始终，或仅在应用打开时。
 
 
       • 汇率调整——设置一个百分比来计入银行手续费、差价或转账损耗（例如 +1.5%），所有金额立即显示实际结果。调整后的数字有醒目标记，不会与市场汇率混淆。除非设为始终开启，否则闲置 4 小时后会自动关闭，忘记关掉的手续费不会扭曲第二天的数字。

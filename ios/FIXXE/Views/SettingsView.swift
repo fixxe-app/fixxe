@@ -11,6 +11,7 @@ struct SettingsView: View {
     private var themeOptions: [String] { ["theme_system", "theme_light", "theme_dark"].map { L10n.t($0) } }
     private var precisionValues: [Int] { [0, 1, 2, 4] }
     private var groupingOptions: [String] { ["group_none", "group_space", "group_comma"].map { L10n.t($0) } }
+    private var memoryOptions: [String] { AmountMemory.labelKeys.map { L10n.t($0) } }
     private var sourceLabel: String {
         vm.sourceMode == 0 ? L10n.t("source_auto")
             : RatesService.sources.indices.contains(vm.sourceMode - 1) ? RatesService.sources[vm.sourceMode - 1].title : L10n.t("source_auto")
@@ -54,6 +55,10 @@ struct SettingsView: View {
                     }
                     row("set-grouping", L10n.t("grouping_title"), groupingOptions[min(max(vm.grouping, 0), 2)]) {
                         ChoicePage(title: L10n.t("grouping_title"), options: groupingOptions, selected: vm.grouping, idPrefix: "grouping") { vm.grouping = $0 }
+                    }
+                    row("set-memory", L10n.t("amount_memory_title"), memoryOptions[min(max(vm.amountMemory, 0), 3)]) {
+                        ChoicePage(title: L10n.t("amount_memory_title"), options: memoryOptions, selected: vm.amountMemory,
+                                   idPrefix: "memory", footer: L10n.t("amount_memory_hint")) { vm.amountMemory = $0 }
                     }
                     row("set-source", L10n.t("source_title"), sourceLabel) { SourcePage(vm: vm) }
                     row("set-language", L10n.t("language_title"), languageLabel) { LanguagePage(vm: vm) }

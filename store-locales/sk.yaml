@@ -21,6 +21,9 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
   • Dynamický základ — kurzy sa prepočítavajú voči mene, ktorú práve upravujete, nie voči pevnej. Žiadne prepínanie sem a tam.
 
 
+  • Pamätá si sumu — zatvorte aplikáciu a zadané číslo na vás po návrate počká. Ako dlho, zvolíte v nastaveniach: 12 alebo 24 hodín, vždy, alebo len kým je aplikácia otvorená.
+
+
   • Úprava kurzu — nastavte percento za bankový poplatok, maržu alebo straty pri prevode (napr. +1,5 %) a všetky sumy hneď ukážu skutočný výsledok. Prepočítané čísla sú zreteľne označené, takže si ich nepomýlite s trhovým kurzom. Ak ju nenecháte trvalo zapnutú, po štyroch hodinách bez použitia sa sama vypne, takže zabudnutý poplatok nikdy neskreslí zajtrajšie čísla.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nový vzhľad: jednotný štýl všetkých ikon a popisov. Čas a zdroj kurzu sú teraz hore — ťuknutím na riadok zobrazíte podrobnosti. Novinka v Nastaveniach: zaokrúhľovanie súm nahor alebo k najbližšiemu. Nastavenia sú jedno prehľadné okno s číslom verzie dole."
+whats_new: "Novinka v nastaveniach: Pamätať sumu. Zadané číslo zostane aj po zatvorení aplikácie — predvolene 12 hodín, alebo zvoľte 24 hodín, vždy, či len kým je aplikácia otvorená."
 landing:
   page_title: FIXXE — prevodník mien
   install_title: Spôsoby inštalácie

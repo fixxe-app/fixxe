@@ -66,6 +66,12 @@
     <string name="rounding_up">Naar boven</string>
     <string name="rounding_nearest">Naar dichtstbijzijnde</string>
     <string name="rounding_hint">„Naar boven” toont nooit minder dan het echte bedrag, zodat je altijd genoeg geld hebt.</string>
+    <string name="amount_memory_title">Bedrag onthouden</string>
+    <string name="amount_memory_session">Tot de app wordt gesloten</string>
+    <string name="amount_memory_12h">12 uur</string>
+    <string name="amount_memory_24h">24 uur</string>
+    <string name="amount_memory_forever">Altijd</string>
+    <string name="amount_memory_hint">Hoe lang het ingevoerde bedrag bewaard blijft nadat je de app verlaat. Daarna is het weer 1.</string>
     <string name="version_label">Versie %1$s</string>
     <string name="copied">Gekopieerd</string>
 </resources>

@@ -66,6 +66,12 @@
     <string name="rounding_up">Nahoru</string>
     <string name="rounding_nearest">K nejbližšímu</string>
     <string name="rounding_hint">„Nahoru“ nikdy neukáže méně než skutečnou částku, takže peníze vždy vystačí.</string>
+    <string name="amount_memory_title">Pamatovat částku</string>
+    <string name="amount_memory_session">Dokud je aplikace otevřená</string>
+    <string name="amount_memory_12h">12 hodin</string>
+    <string name="amount_memory_24h">24 hodin</string>
+    <string name="amount_memory_forever">Vždy</string>
+    <string name="amount_memory_hint">Jak dlouho se zadaná částka uchová po odchodu z aplikace. Potom je opět 1.</string>
     <string name="version_label">Verze %1$s</string>
     <string name="copied">Zkopírováno</string>
 </resources>

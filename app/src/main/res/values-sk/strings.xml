@@ -66,6 +66,12 @@
     <string name="rounding_up">Nahor</string>
     <string name="rounding_nearest">K najbližšiemu</string>
     <string name="rounding_hint">„Nahor“ nikdy neukáže menej ako skutočnú sumu, takže peniaze vždy vystačia.</string>
+    <string name="amount_memory_title">Pamätať sumu</string>
+    <string name="amount_memory_session">Kým je aplikácia otvorená</string>
+    <string name="amount_memory_12h">12 hodín</string>
+    <string name="amount_memory_24h">24 hodín</string>
+    <string name="amount_memory_forever">Vždy</string>
+    <string name="amount_memory_hint">Ako dlho sa zadaná suma uchová po odchode z aplikácie. Potom je opäť 1.</string>
     <string name="version_label">Verzia %1$s</string>
     <string name="copied">Skopírované</string>
 </resources>

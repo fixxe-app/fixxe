@@ -85,6 +85,12 @@
     <string name="rounding_up">Up</string>
     <string name="rounding_nearest">To nearest</string>
     <string name="rounding_hint">“Up” never shows less than the real amount, so you always have enough money.</string>
+    <string name="amount_memory_title">Remember amount</string>
+    <string name="amount_memory_session">Until the app is closed</string>
+    <string name="amount_memory_12h">12 hours</string>
+    <string name="amount_memory_24h">24 hours</string>
+    <string name="amount_memory_forever">Always</string>
+    <string name="amount_memory_hint">How long the amount you entered is kept after you leave the app. Then it is 1 again.</string>
     <string name="version_label">Version %1$s</string>
     <string name="copied">Copied</string>
 </resources>

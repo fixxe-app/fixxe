@@ -66,6 +66,12 @@
     <string name="rounding_up">כלפי מעלה</string>
     <string name="rounding_nearest">לקרוב ביותר</string>
     <string name="rounding_hint">«כלפי מעלה» לעולם לא מציג סכום נמוך מהאמיתי, כך שהכסף תמיד יספיק.</string>
+    <string name="amount_memory_title">לזכור את הסכום</string>
+    <string name="amount_memory_session">עד לסגירת האפליקציה</string>
+    <string name="amount_memory_12h">12 שעות</string>
+    <string name="amount_memory_24h">24 שעות</string>
+    <string name="amount_memory_forever">תמיד</string>
+    <string name="amount_memory_hint">כמה זמן נשמר הסכום שהוזן אחרי היציאה מהאפליקציה. אחר כך הוא חוזר ל־1.</string>
     <string name="version_label">גרסה %1$s</string>
     <string name="copied">הועתק</string>
 </resources>

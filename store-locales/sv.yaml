@@ -21,6 +21,9 @@ description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurse
   • Dynamisk bas — kurserna räknas om mot den valuta du redigerar, inte mot en fast. Inget växlande fram och tillbaka.
 
 
+  • Kommer ihåg beloppet — stäng appen så finns talet du skrev kvar när du kommer tillbaka. Välj i inställningarna hur länge: 12 eller 24 timmar, alltid eller bara medan appen är öppen.
+
+
   • Kursjustering — ange en procentsats för bankens avgift, marginal eller överföringsförluster (till exempel +1,5 %) så visar alla belopp direkt det verkliga resultatet. Justerade siffror är tydligt markerade, så du aldrig förväxlar dem med marknadskursen. Om du inte har den alltid på stänger den av sig själv efter fyra timmar utan användning, så att en bortglömd avgift aldrig snedvrider morgondagens siffror.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurse
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nytt utseende: en enhetlig stil för alla ikoner och etiketter. Kursens tid och källa visas nu högst upp — tryck på raden för detaljer. Nytt i Inställningar: avrunda belopp uppåt eller till närmaste. Inställningar är ett överskådligt fönster med versionsnumret längst ned."
+whats_new: "Nytt i inställningarna: Kom ihåg belopp. Talet du skrev finns kvar efter att appen stängts — som standard i 12 timmar, eller välj 24 timmar, alltid eller bara medan appen är öppen."
 landing:
   page_title: FIXXE — valutaomvandlare
   install_title: Sätt att installera

@@ -21,6 +21,9 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   • Dynamiczna baza — kursy są przeliczane względem waluty, którą właśnie edytujesz, a nie sztywno ustalonej. Bez przeskakiwania tam i z powrotem.
 
 
+  • Pamięta kwotę — zamknij aplikację, a wpisana liczba będzie czekać po powrocie. Jak długo, wybierasz w ustawieniach: 12 lub 24 godziny, zawsze albo tylko dopóki aplikacja jest otwarta.
+
+
   • Korekta kursu — ustaw procent prowizji banku, marży lub strat na przelewie (np. +1,5%), a wszystkie kwoty od razu pokażą rzeczywisty wynik. Przeliczone liczby są wyraźnie oznaczone, więc nie pomylisz ich z kursem rynkowym. Jeśli nie zostawisz jej zawsze włączonej, wyłączy się sama po czterech godzinach bez użycia, więc zapomniana prowizja nigdy nie zniekształci jutrzejszych liczb.
 
 
@@ -62,7 +65,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nowy wygląd: jeden styl wszystkich ikon i podpisów. Godzina i źródło kursu są teraz na górze — dotknij wiersza, aby zobaczyć szczegóły. Nowość w Ustawieniach: zaokrąglanie kwot w górę lub do najbliższej. Ustawienia to jedno przejrzyste okno z numerem wersji na dole."
+whats_new: "Nowość w ustawieniach: Zapamiętaj kwotę. Wpisana liczba zostaje po zamknięciu aplikacji — domyślnie przez 12 godzin, albo wybierz 24 godziny, zawsze lub tylko dopóki aplikacja jest otwarta."
 landing:
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji
