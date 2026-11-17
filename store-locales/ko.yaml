@@ -65,7 +65,7 @@ description: 'FIXXE는 실시간 중간환율로 동작하는 빠르고 깔끔�
   Rates By Exchange Rate API.
 
   '
-whats_new: "설정에 새 기능: 금액 기억. 앱을 닫아도 입력한 숫자가 남아 있습니다. 기본값은 12시간이며 24시간, 항상, 또는 앱이 열려 있는 동안만으로 바꿀 수 있습니다."
+whats_new: "긴 금액이 잘리지 않고 칸에 맞게 작게 표시됩니다."
 landing:
   page_title: FIXXE — 환율 계산기
   install_title: 설치 방법

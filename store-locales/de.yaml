@@ -65,7 +65,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "Neu in den Einstellungen: Betrag merken. Die eingegebene Zahl bleibt nach dem Schließen der App erhalten — standardmäßig 12 Stunden, wahlweise 24 Stunden, immer oder nur solange die App geöffnet ist."
+whats_new: "Lange Beträge werden jetzt verkleinert, damit sie passen, statt abgeschnitten zu werden."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

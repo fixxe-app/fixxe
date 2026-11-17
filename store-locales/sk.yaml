@@ -65,7 +65,7 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novinka v nastaveniach: Pamätať sumu. Zadané číslo zostane aj po zatvorení aplikácie — predvolene 12 hodín, alebo zvoľte 24 hodín, vždy, či len kým je aplikácia otvorená."
+whats_new: "Dlhé sumy sa teraz zmenšia, aby sa zmestili, namiesto orezania."
 landing:
   page_title: FIXXE — prevodník mien
   install_title: Spôsoby inštalácie

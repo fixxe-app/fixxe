@@ -65,7 +65,7 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novidade nas definições: Memorizar valor. O número que escreveu fica guardado depois de fechar a app — 12 horas por predefinição, ou escolha 24 horas, sempre ou só enquanto a app estiver aberta."
+whats_new: "Valores longos agora diminuem para caber, em vez de serem cortados."
 landing:
   page_title: FIXXE — conversor de moedas
   install_title: Formas de instalar

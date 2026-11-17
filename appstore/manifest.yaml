@@ -87,7 +87,7 @@ locales:
       '
     promotional_text: خمسة مصادر للأسعار مع تبديل تلقائي، أسعار دون اتصال مع تنبيه عند تقادمها، وتقريب ذكي يحفظ المبالغ الصغيرة.
     keywords: عملة,محول,صرف,سعر,مال,سفر,فوركس,عملات رقمية,مالية,يورو,fixer,fixe
-    whats_new: 'جديد في الإعدادات: تذكّر المبلغ. يبقى الرقم الذي أدخلته بعد إغلاق التطبيق — 12 ساعة افتراضيًا، أو اختر 24 ساعة، أو دائمًا، أو فقط ما دام التطبيق مفتوحًا.'
+    whats_new: المبالغ الطويلة تُصغَّر الآن لتتسع بدلًا من أن تُقطع.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   cs:
@@ -157,7 +157,7 @@ locales:
       '
     promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
     keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro,fixer,fixe
-    whats_new: 'Novinka v nastavení: Pamatovat částku. Zadané číslo zůstane i po zavření aplikace — ve výchozím stavu 12 hodin, nebo zvolte 24 hodin, vždy, či jen dokud je aplikace otevřená.'
+    whats_new: Dlouhé částky se nyní zmenší, aby se vešly, místo aby byly oříznuté.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   da:
@@ -227,7 +227,7 @@ locales:
       '
     promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
     keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro,fixer,fixe
-    whats_new: 'Nyt i indstillingerne: Husk beløb. Tallet du skrev, bliver stående, efter at appen er lukket — som standard i 12 timer, eller vælg 24 timer, altid eller kun mens appen er åben.'
+    whats_new: Lange beløb bliver nu mindre, så de passer, i stedet for at blive skåret af.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   de-DE:
@@ -297,7 +297,7 @@ locales:
       '
     promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
     keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro,fixer,fixe
-    whats_new: 'Neu in den Einstellungen: Betrag merken. Die eingegebene Zahl bleibt nach dem Schließen der App erhalten — standardmäßig 12 Stunden, wahlweise 24 Stunden, immer oder nur solange die App geöffnet ist.'
+    whats_new: Lange Beträge werden jetzt verkleinert, damit sie passen, statt abgeschnitten zu werden.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   el:
@@ -367,7 +367,7 @@ locales:
       '
     promotional_text: Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή, ισοτιμίες εκτός σύνδεσης με προειδοποίηση παλαιότητας και στρογγυλοποίηση που δεν χαλάει τα μικρά ποσά.
     keywords: νόμισμα,μετατροπέας,ισοτιμία,συνάλλαγμα,χρήματα,ταξίδι,forex,κρυπτο,ευρώ,fixer,fixe
-    whats_new: 'Νέο στις ρυθμίσεις: Απομνημόνευση ποσού. Ο αριθμός που πληκτρολογήσατε μένει και αφού κλείσει η εφαρμογή — 12 ώρες από προεπιλογή, ή επιλέξτε 24 ώρες, πάντα ή μόνο όσο η εφαρμογή είναι ανοιχτή.'
+    whats_new: Τα μεγάλα ποσά πλέον μικραίνουν για να χωρούν, αντί να κόβονται.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-US:
@@ -437,7 +437,7 @@ locales:
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: 'New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open.'
+    whats_new: Long amounts now shrink to fit instead of being cut off.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-GB:
@@ -507,7 +507,7 @@ locales:
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: 'New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open.'
+    whats_new: Long amounts now shrink to fit instead of being cut off.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-AU:
@@ -577,7 +577,7 @@ locales:
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: 'New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open.'
+    whats_new: Long amounts now shrink to fit instead of being cut off.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-CA:
@@ -647,7 +647,7 @@ locales:
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: 'New in Settings: Remember amount. The number you typed stays after you close the app — for 12 hours by default, or choose 24 hours, always, or only while the app is open.'
+    whats_new: Long amounts now shrink to fit instead of being cut off.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-ES:
@@ -717,7 +717,7 @@ locales:
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
     keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
-    whats_new: 'Novedad en los ajustes: Recordar importe. El número que escribiste se queda tras cerrar la app: 12 horas por defecto, o elige 24 horas, siempre o solo mientras la app esté abierta.'
+    whats_new: Los importes largos ahora se reducen para caber en lugar de cortarse.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-MX:
@@ -787,7 +787,7 @@ locales:
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
     keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
-    whats_new: 'Novedad en los ajustes: Recordar importe. El número que escribiste se queda tras cerrar la app: 12 horas por defecto, o elige 24 horas, siempre o solo mientras la app esté abierta.'
+    whats_new: Los importes largos ahora se reducen para caber en lugar de cortarse.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fi:
@@ -857,7 +857,7 @@ locales:
       '
     promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
     keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro,fixer,fixe
-    whats_new: 'Uutta asetuksissa: Muista summa. Syöttämäsi luku säilyy sovelluksen sulkemisen jälkeen — oletuksena 12 tuntia, tai valitse 24 tuntia, aina tai vain niin kauan kuin sovellus on auki.'
+    whats_new: Pitkät summat pienenevät nyt mahtuakseen eivätkä enää katkea.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-FR:
@@ -927,7 +927,7 @@ locales:
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
-    whats_new: 'Nouveau dans les réglages : Mémoriser le montant. Le nombre saisi reste affiché après la fermeture de l’app — 12 heures par défaut, ou choisissez 24 heures, toujours, ou seulement tant que l’app est ouverte.'
+    whats_new: Les montants longs sont désormais réduits pour tenir, au lieu d’être coupés.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-CA:
@@ -997,7 +997,7 @@ locales:
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
-    whats_new: 'Nouveau dans les réglages : Mémoriser le montant. Le nombre saisi reste affiché après la fermeture de l’app — 12 heures par défaut, ou choisissez 24 heures, toujours, ou seulement tant que l’app est ouverte.'
+    whats_new: Les montants longs sont désormais réduits pour tenir, au lieu d’être coupés.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   he:
@@ -1067,7 +1067,7 @@ locales:
       '
     promotional_text: חמישה מקורות שערים עם מעבר אוטומטי, שערים לא מקוונים עם אזהרה כשהם מתיישנים, ועיגול חכם ששומר על סכומים קטנים.
     keywords: מטבע,ממיר,שער,חליפין,כסף,טיולים,פורקס,קריפטו,פיננסים,שקל,fixer,fixe
-    whats_new: 'חדש בהגדרות: לזכור את הסכום. המספר שהקלדתם נשאר גם אחרי סגירת האפליקציה — 12 שעות כברירת מחדל, או 24 שעות, תמיד, או רק כל עוד האפליקציה פתוחה.'
+    whats_new: סכומים ארוכים מוקטנים עכשיו כדי להיכנס, במקום להיחתך.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hi:
@@ -1137,7 +1137,7 @@ locales:
       '
     promotional_text: स्वतः बदलने वाले पाँच दर-स्रोत, पुरानी पड़ने पर चेतावनी देती ऑफ़लाइन दरें, और छोटी रकम बचाने वाला समझदार पूर्णांकन।
     keywords: मुद्रा,कनवर्टर,विनिमय,दर,पैसा,यात्रा,फॉरेक्स,क्रिप्टो,वित्त,रुपया,fixer,fixe
-    whats_new: 'सेटिंग्स में नया: राशि याद रखें। ऐप बंद करने के बाद भी आपकी लिखी संख्या बनी रहती है — डिफ़ॉल्ट रूप से 12 घंटे, या चुनें 24 घंटे, हमेशा, या सिर्फ़ जब तक ऐप खुला है।'
+    whats_new: लंबी राशियाँ अब कटने के बजाय छोटी होकर पूरी दिखती हैं।
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hr:
@@ -1207,7 +1207,7 @@ locales:
       '
     promotional_text: Pet izvora tečaja s automatskom zamjenom, offline tečajevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
     keywords: valuta,pretvarač,tečaj,mjenjačnica,novac,putovanje,forex,kripto,financije,euro,fixer,fixe
-    whats_new: 'Novo u postavkama: „Pamti iznos”. Uneseni broj ostaje i nakon zatvaranja aplikacije — zadano 12 sati, ili odaberite 24 sata, uvijek ili samo dok je aplikacija otvorena.'
+    whats_new: Dugi iznosi sada se smanjuju da stanu, umjesto da budu odrezani.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hu:
@@ -1277,7 +1277,7 @@ locales:
       '
     promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
     keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró,fixer,fixe
-    whats_new: 'Új a beállításokban: Összeg megjegyzése. A beírt szám az alkalmazás bezárása után is megmarad — alapból 12 óráig, vagy választhat 24 órát, mindig, vagy csak amíg az alkalmazás nyitva van.'
+    whats_new: A hosszú összegek most kisebbek lesznek, hogy elférjenek, nem vágódnak le.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   id:
@@ -1347,7 +1347,7 @@ locales:
       '
     promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
     keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah,fixer,fixe
-    whats_new: 'Baru di Pengaturan: Ingat jumlah. Angka yang Anda ketik tetap ada setelah aplikasi ditutup — 12 jam secara default, atau pilih 24 jam, selalu, atau hanya selama aplikasi terbuka.'
+    whats_new: Jumlah yang panjang kini mengecil agar muat, tidak lagi terpotong.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   it:
@@ -1417,7 +1417,7 @@ locales:
       '
     promotional_text: Cinque fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
     keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro,fixer,fixe
-    whats_new: 'Novità nelle impostazioni: Ricorda importo. Il numero digitato resta dopo la chiusura dell’app — 12 ore per impostazione predefinita, oppure scegli 24 ore, sempre o solo finché l’app è aperta.'
+    whats_new: Gli importi lunghi ora si rimpiccioliscono per entrare, invece di essere tagliati.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ja:
@@ -1487,7 +1487,7 @@ locales:
       '
     promotional_text: 自動で切り替わる5つのレート情報源、古くなると知らせるオフラインレート、そして少額を崩さない賢い丸め。
     keywords: 通貨,換算,為替,レート,両替,旅行,外国為替,暗号資産,金融,円,fixer,fixe
-    whats_new: 設定に新機能「金額を記憶」。アプリを閉じても入力した数字が残ります。初期設定は12時間で、24時間、常に、またはアプリを開いている間だけも選べます。
+    whats_new: 長い金額は切れずに、収まるよう縮小して表示されるようになりました。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ko:
@@ -1557,7 +1557,7 @@ locales:
       '
     promotional_text: 자동으로 전환되는 다섯 곳의 환율 출처, 오래되면 알려주는 오프라인 환율, 작은 금액을 망치지 않는 똑똑한 반올림.
     keywords: 환율,환전,통화,변환,계산기,여행,외환,암호화폐,금융,원화,fixer,fixe
-    whats_new: '설정에 새 기능: 금액 기억. 앱을 닫아도 입력한 숫자가 남아 있습니다. 기본값은 12시간이며 24시간, 항상, 또는 앱이 열려 있는 동안만으로 바꿀 수 있습니다.'
+    whats_new: 긴 금액이 잘리지 않고 칸에 맞게 작게 표시됩니다.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   'no':
@@ -1627,7 +1627,7 @@ locales:
       '
     promotional_text: Fem kurskilder med automatisk bytte, offlinekurser som varsler når de blir gamle, og avrunding som ikke ødelegger små beløp.
     keywords: valuta,omregner,vekslingskurs,kurs,penger,reise,forex,krypto,økonomi,euro,fixer,fixe
-    whats_new: 'Nytt i innstillingene: Husk beløp. Tallet du skrev blir stående etter at appen er lukket — som standard i 12 timer, eller velg 24 timer, alltid eller bare mens appen er åpen.'
+    whats_new: Lange beløp blir nå mindre så de får plass, i stedet for å bli kuttet.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   nl-NL:
@@ -1697,7 +1697,7 @@ locales:
       '
     promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
     keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro,fixer,fixe
-    whats_new: 'Nieuw in de instellingen: Bedrag onthouden. Het getal dat je typte blijft staan nadat je de app sluit — standaard 12 uur, of kies 24 uur, altijd of alleen zolang de app open is.'
+    whats_new: Lange bedragen worden nu verkleind zodat ze passen, in plaats van afgekapt.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pl:
@@ -1767,7 +1767,7 @@ locales:
       '
     promotional_text: Pięć źródeł kursów z automatycznym przełączaniem, kursy offline z ostrzeżeniem o nieaktualności i zaokrąglanie, które nie psuje małych kwot.
     keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro,fixer,fixe
-    whats_new: 'Nowość w ustawieniach: Zapamiętaj kwotę. Wpisana liczba zostaje po zamknięciu aplikacji — domyślnie przez 12 godzin, albo wybierz 24 godziny, zawsze lub tylko dopóki aplikacja jest otwarta.'
+    whats_new: Długie kwoty są teraz zmniejszane, aby się zmieściły, zamiast być ucinane.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-PT:
@@ -1837,7 +1837,7 @@ locales:
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
-    whats_new: 'Novidade nas definições: Memorizar valor. O número que escreveu fica guardado depois de fechar a app — 12 horas por predefinição, ou escolha 24 horas, sempre ou só enquanto a app estiver aberta.'
+    whats_new: Valores longos agora diminuem para caber, em vez de serem cortados.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-BR:
@@ -1907,7 +1907,7 @@ locales:
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
-    whats_new: 'Novidade nas definições: Memorizar valor. O número que escreveu fica guardado depois de fechar a app — 12 horas por predefinição, ou escolha 24 horas, sempre ou só enquanto a app estiver aberta.'
+    whats_new: Valores longos agora diminuem para caber, em vez de serem cortados.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ro:
@@ -1977,7 +1977,7 @@ locales:
       '
     promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
     keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro,fixer,fixe
-    whats_new: 'Nou în setări: Reține suma. Numărul introdus rămâne și după închiderea aplicației — implicit 12 ore, sau alegeți 24 de ore, întotdeauna ori doar cât aplicația e deschisă.'
+    whats_new: Sumele lungi se micșorează acum ca să încapă, în loc să fie tăiate.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ru:
@@ -2047,7 +2047,7 @@ locales:
       '
     promotional_text: Пять источников курсов с автоматическим резервом, работа офлайн с предупреждением об устаревании и умное округление, которое бережёт малые суммы.
     keywords: валюта,конвертер,курс,обмен,деньги,путешествия,форекс,криптовалюта,финансы,рубль,fixer,fixe
-    whats_new: 'Новое в настройках — «Помнить сумму». Введённое число остаётся после закрытия приложения: по умолчанию 12 часов, а можно выбрать 24 часа, всегда или только пока приложение открыто.'
+    whats_new: Длинные суммы теперь уменьшаются, чтобы поместиться, а не обрезаются.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sk:
@@ -2117,7 +2117,7 @@ locales:
       '
     promotional_text: Päť zdrojov kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
     keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro,fixer,fixe
-    whats_new: 'Novinka v nastaveniach: Pamätať sumu. Zadané číslo zostane aj po zatvorení aplikácie — predvolene 12 hodín, alebo zvoľte 24 hodín, vždy, či len kým je aplikácia otvorená.'
+    whats_new: Dlhé sumy sa teraz zmenšia, aby sa zmestili, namiesto orezania.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sv:
@@ -2187,7 +2187,7 @@ locales:
       '
     promotional_text: Fem kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
     keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro,fixer,fixe
-    whats_new: 'Nytt i inställningarna: Kom ihåg belopp. Talet du skrev finns kvar efter att appen stängts — som standard i 12 timmar, eller välj 24 timmar, alltid eller bara medan appen är öppen.'
+    whats_new: Långa belopp krymper nu så att de får plats i stället för att klippas av.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   th:
@@ -2257,7 +2257,7 @@ locales:
       '
     promotional_text: ห้าแหล่งอัตราที่สลับให้อัตโนมัติ อัตราออฟไลน์ที่เตือนเมื่อเก่าเกินไป และการปัดเศษที่ไม่ทำให้จำนวนเล็ก ๆ เพี้ยน
     keywords: สกุลเงิน,แปลงค่า,อัตราแลกเปลี่ยน,เงิน,ท่องเที่ยว,ฟอเร็กซ์,คริปโต,การเงิน,บาท,fixer,fixe
-    whats_new: 'ใหม่ในการตั้งค่า: จำจำนวนเงิน ตัวเลขที่พิมพ์ไว้ยังอยู่หลังปิดแอป ค่าเริ่มต้น 12 ชั่วโมง หรือเลือก 24 ชั่วโมง ตลอดไป หรือเฉพาะตอนที่แอปเปิดอยู่'
+    whats_new: จำนวนเงินที่ยาวจะย่อให้พอดีแทนการถูกตัด
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   tr:
@@ -2327,7 +2327,7 @@ locales:
       '
     promotional_text: Otomatik yedekli beş kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
     keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro,fixer,fixe
-    whats_new: 'Ayarlarda yeni: Tutarı hatırla. Yazdığınız sayı uygulamayı kapattıktan sonra da kalır — varsayılan olarak 12 saat; isterseniz 24 saat, her zaman ya da yalnızca uygulama açıkken.'
+    whats_new: Uzun tutarlar artık kesilmek yerine sığacak şekilde küçülüyor.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   vi:
@@ -2397,7 +2397,7 @@ locales:
       '
     promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
     keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro,fixer,fixe
-    whats_new: 'Mới trong Cài đặt: Nhớ số tiền. Con số bạn đã nhập vẫn còn sau khi đóng ứng dụng — mặc định 12 giờ, hoặc chọn 24 giờ, luôn luôn, hoặc chỉ khi ứng dụng đang mở.'
+    whats_new: Số tiền dài giờ được thu nhỏ cho vừa thay vì bị cắt mất.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   zh-Hans:
@@ -2467,6 +2467,6 @@ locales:
       '
     promotional_text: 五个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
     keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币,fixer,fixe
-    whats_new: 设置新增“记住金额”：关闭应用后，输入的数字仍会保留——默认 12 小时，也可选择 24 小时、始终，或仅在应用打开时。
+    whats_new: 较长的金额现在会缩小以完整显示，不再被截断。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html

@@ -65,7 +65,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nauja nustatymuose: įsiminti sumą. Įvestas skaičius lieka ir uždarius programėlę — numatytai 12 valandų, arba pasirinkite 24 valandas, visada ar tik kol programėlė atidaryta."
+whats_new: "Ilgos sumos dabar sumažinamos, kad tilptų, o ne nukerpamos."
 landing:
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai

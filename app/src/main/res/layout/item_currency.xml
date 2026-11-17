@@ -90,7 +90,8 @@
                     android:textColor="@color/text_secondary"
                     android:layout_marginEnd="3dp" />
 
-                <EditText
+                <!-- Длинное число уменьшается, а не обрезается -->
+                <com.example.currencyconverter.ui.FitAmountEditText
                     android:id="@+id/etAmount"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"

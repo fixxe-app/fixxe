@@ -7,6 +7,7 @@ struct CurrencyRowView: View {
     var focusedCode: FocusState<String?>.Binding
     @Binding var dragged: String?
     let onDelete: () -> Void
+    @Environment(\.sizeCategory) private var sizeCategory
 
     private var isActive: Bool { vm.activeCode == code }
     private var isFocused: Bool { focusedCode.wrappedValue == code }
@@ -145,6 +146,16 @@ struct CurrencyRowView: View {
             }
     }
 
+    /// Шрифт поля ввода: обычный — как у сумм в других строках (.title3, жирный),
+    /// а длинное число — мельче, чтобы влезло. Учитывает крупный шрифт в системе.
+    private var inputFont: Font {
+        _ = sizeCategory   // сменили размер шрифта в системе — пересчитать
+        let base = UIFont.preferredFont(forTextStyle: .title3).pointSize
+        let size = AmountFit.fontSize(for: vm.inputText, base: base, width: Self.amountWidth - 4)   // 4 — под курсор
+        return .system(size: size, weight: .bold).monospacedDigit()
+    }
+    private static let amountWidth: CGFloat = 130
+
     @ViewBuilder private var amountField: some View {
         if isActive {
             TextField("0", text: Binding(
@@ -155,9 +166,9 @@ struct CurrencyRowView: View {
                 set: { if vm.activeCode == code { vm.inputChanged($0) } }))
                 .keyboardType(.decimalPad)
                 .multilineTextAlignment(.trailing)
-                .font(.title3.bold().monospacedDigit())
+                .font(inputFont)   // длинное число уменьшается, а не обрезается
                 .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
-                .frame(width: 130)
+                .frame(width: Self.amountWidth)
                 .focused(focusedCode, equals: code)
                 .accessibilityIdentifier("amount-\(code)")
                 .onAppear {
@@ -194,7 +205,7 @@ struct CurrencyRowView: View {
                 .font(.title3.bold().monospacedDigit())
                 .foregroundColor(vm.isAdjusted(code) ? Color.adjusted : .primary)   // пересчитано с поправкой
                 .lineLimit(1).minimumScaleFactor(0.5)   // длинная сумма ужимается, а не обрезается
-                .frame(width: 130, alignment: .trailing)
+                .frame(width: Self.amountWidth, alignment: .trailing)
                 .accessibilityIdentifier("amount-\(code)")
                 .onTapGesture { activate() }
                 .accessibilityAction { activate() }

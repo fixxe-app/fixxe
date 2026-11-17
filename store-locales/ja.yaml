@@ -65,7 +65,7 @@ description: 'FIXXEは、実勢の仲値レートで動く速くて見やすい�
   Rates By Exchange Rate API.
 
   '
-whats_new: "設定に新機能「金額を記憶」。アプリを閉じても入力した数字が残ります。初期設定は12時間で、24時間、常に、またはアプリを開いている間だけも選べます。"
+whats_new: "長い金額は切れずに、収まるよう縮小して表示されるようになりました。"
 landing:
   page_title: FIXXE — 通貨換算アプリ
   install_title: インストール方法

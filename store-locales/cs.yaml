@@ -65,7 +65,7 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novinka v nastavení: Pamatovat částku. Zadané číslo zůstane i po zavření aplikace — ve výchozím stavu 12 hodin, nebo zvolte 24 hodin, vždy, či jen dokud je aplikace otevřená."
+whats_new: "Dlouhé částky se nyní zmenší, aby se vešly, místo aby byly oříznuté."
 landing:
   page_title: FIXXE — převodník měn
   install_title: Způsoby instalace

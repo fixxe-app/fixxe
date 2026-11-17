@@ -65,7 +65,7 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   Rates By Exchange Rate API.
 
   '
-whats_new: "Ayarlarda yeni: Tutarı hatırla. Yazdığınız sayı uygulamayı kapattıktan sonra da kalır — varsayılan olarak 12 saat; isterseniz 24 saat, her zaman ya da yalnızca uygulama açıkken."
+whats_new: "Uzun tutarlar artık kesilmek yerine sığacak şekilde küçülüyor."
 landing:
   page_title: FIXXE — döviz çevirici
   install_title: Kurulum yolları

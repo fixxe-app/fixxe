@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.68';
+const APP_VERSION = '1.69';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -538,7 +538,31 @@ function render(){
     attachDrag(r1.querySelector('.handle'), card);
 
     list.appendChild(card);
+    fitAmount(input);   // мерить можно только в документе
   });
+}
+
+// Длинная сумма («150 000 000») уменьшается, а не обрезается. Пока число
+// влезает — обычный размер; не влезает — шрифт меньше ровно настолько, чтобы
+// влезло, но не меньше половины. Правило то же, что на Android и iOS.
+const AMOUNT_MIN_FACTOR = 0.5;
+function amountFitSize(base, widthAtBase, available){
+  if (widthAtBase <= available || widthAtBase <= 0 || available <= 0) return base;
+  return Math.max(base * AMOUNT_MIN_FACTOR, base * available / widthAtBase);
+}
+function fitAmount(input){
+  input.style.fontSize = '';                        // мерить при обычном размере
+  const room = input.clientWidth;
+  const wide = input.scrollWidth;                   // ширина числа целиком
+  if (wide <= room) return;
+  const base = parseFloat(getComputedStyle(input).fontSize);
+  let size = amountFitSize(base, wide, room - 2);   // 2 px — под курсор
+  input.style.fontSize = size + 'px';
+  // ширина текста не строго пропорциональна размеру: добрать, если не влезло
+  for (let i = 0; i < 3 && input.scrollWidth > room && size > base * AMOUNT_MIN_FACTOR; i++){
+    size = Math.max(base * AMOUNT_MIN_FACTOR, size * (room - 2) / input.scrollWidth);
+    input.style.fontSize = size + 'px';
+  }
 }
 
 // Экранная клавиатура на телефоне.
@@ -596,6 +620,7 @@ function recompute(){
     const conv = amountIn(code);
     const input = card.querySelector('.amount');
     if (document.activeElement !== input) input.value = fmtAmount(conv);
+    fitAmount(input);
     const rate = card.querySelector('.rate');
     const text = rateTextFor(code, pivot, pivotRate);
     rate.textContent = text;

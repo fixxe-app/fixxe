@@ -65,7 +65,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nowość w ustawieniach: Zapamiętaj kwotę. Wpisana liczba zostaje po zamknięciu aplikacji — domyślnie przez 12 godzin, albo wybierz 24 godziny, zawsze lub tylko dopóki aplikacja jest otwarta."
+whats_new: "Długie kwoty są teraz zmniejszane, aby się zmieściły, zamiast być ucinane."
 landing:
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji

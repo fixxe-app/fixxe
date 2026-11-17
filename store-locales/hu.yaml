@@ -65,7 +65,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   Rates By Exchange Rate API.
 
   '
-whats_new: "Új a beállításokban: Összeg megjegyzése. A beírt szám az alkalmazás bezárása után is megmarad — alapból 12 óráig, vagy választhat 24 órát, mindig, vagy csak amíg az alkalmazás nyitva van."
+whats_new: "A hosszú összegek most kisebbek lesznek, hogy elférjenek, nem vágódnak le."
 landing:
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok

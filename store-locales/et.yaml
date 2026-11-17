@@ -65,7 +65,7 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
   Rates By Exchange Rate API.
 
   '
-whats_new: "Uus seadetes: Jäta summa meelde. Sisestatud number jääb alles ka pärast rakenduse sulgemist — vaikimisi 12 tundi, või vali 24 tundi, alati või ainult seni, kuni rakendus on avatud."
+whats_new: "Pikad summad muutuvad nüüd väiksemaks, et mahtuda, mitte ei lõigata ära."
 landing:
   page_title: FIXXE — valuutakalkulaator
   install_title: Paigaldusviisid

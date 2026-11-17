@@ -65,7 +65,7 @@ description: 'FIXXE je brz i pregledan pretvarač valuta sa živim srednjim teč
   Rates By Exchange Rate API.
 
   '
-whats_new: "Novo u postavkama: „Pamti iznos”. Uneseni broj ostaje i nakon zatvaranja aplikacije — zadano 12 sati, ili odaberite 24 sata, uvijek ili samo dok je aplikacija otvorena."
+whats_new: "Dugi iznosi sada se smanjuju da stanu, umjesto da budu odrezani."
 landing:
   page_title: FIXXE — pretvarač valuta
   install_title: Načini instalacije

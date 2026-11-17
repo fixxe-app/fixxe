@@ -10,6 +10,8 @@
 #   4. переключение строк не сбрасывает и не сдвигает суммы
 #   5. источники курсов
 #   6. поправка к курсу: полоса, пересчёт, переходы между строками, сброс
+#   7. введённая сумма после закрытия: по сроку из настроек
+#   8. длинная сумма уменьшается, а не обрезается
 #
 # Пункт 3 — статическая проверка, и она не придирка: присваивание
 # `onclick = refresh` передаёт в refresh объект события, тот оказывается
@@ -25,11 +27,11 @@ cleanup() { [ -n "${SRV:-}" ] && kill "$SRV" 2>/dev/null || true; rm -rf "$WORK"
 trap cleanup EXIT
 fail() { echo "✗ $*" >&2; exit 1; }
 
-echo "→ 1/7 синтаксис скриптов"
+echo "→ 1/8 синтаксис скриптов"
 for f in web/*.js; do node --check "$f" >/dev/null || fail "синтаксическая ошибка в $f"; done
 echo "  ✓ $(ls web/*.js | wc -l | tr -d ' ') файлов разобраны"
 
-echo "→ 2/7 страница в безголовом Chrome"
+echo "→ 2/8 страница в безголовом Chrome"
 # корень сервера — репозиторий: так рядом с сайтом доступны и тестовые страницы
 python3 -m http.server "$PORT" --directory . >/dev/null 2>&1 &
 SRV=$!
@@ -43,12 +45,12 @@ grep -q "1 EUR = " "$WORK/dom.html" || {
 }
 echo "  ✓ курсы отрисованы"
 
-echo "→ 3/7 обработчик кнопки «обновить»"
+echo "→ 3/8 обработчик кнопки «обновить»"
 grep -q "btnRefresh').onclick = () => refresh()" web/app.js \
   || fail "кнопка «обновить» должна вызывать refresh() без аргумента, иначе событие попадёт в параметр force и отключит тротлинг"
 echo "  ✓ refresh() вызывается без аргумента"
 
-echo "→ 4/7 переключение строк, удаление валюты, разбор сумм"
+echo "→ 4/8 переключение строк, удаление валюты, разбор сумм"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/switch-rows.html" > "$WORK/switch.html" 2>/dev/null || true
 RES=$(sed -n 's/.*<pre id="result">\([^<]*\)<\/pre>.*/\1/p' "$WORK/switch.html" | head -1)
@@ -59,7 +61,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/switch.html"; then
 fi
 echo "  ✓ переключение строк ничего не сбрасывает и не сдвигает; удаление активной валюты переводит сумму; разбор сумм как на Android и iOS"
 
-echo "→ 5/7 источники курсов: разбор ответов, порядок, резерв, перенос выбора"
+echo "→ 5/8 источники курсов: разбор ответов, порядок, резерв, перенос выбора"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/sources.html" > "$WORK/sources.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/sources.html"; then
@@ -69,7 +71,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/sources.html"; then
 fi
 echo "  ✓ Coinbase первый, FXRatesAPI резерв; ответы разбираются; сохранённый выбор переносится"
 
-echo "→ 6/7 поправка к курсу: полоса, пересчёт, переходы между строками, сброс"
+echo "→ 6/8 поправка к курсу: полоса, пересчёт, переходы между строками, сброс"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/adjust.html" > "$WORK/adjust.html" 2>/dev/null || true
 if ! grep -q '^<pre id="result">PASS</pre>' "$WORK/adjust.html"; then
@@ -79,7 +81,7 @@ if ! grep -q '^<pre id="result">PASS</pre>' "$WORK/adjust.html"; then
 fi
 echo "  ✓ без поправки экран прежний; с поправкой полоса видна, базовая строка точная, остальные пересчитаны и помечены; переходы числа не двигают; сброс через 4 часа с сообщением"
 
-echo "→ 7/7 введённая сумма после закрытия: 12 ч по умолчанию, 24 ч, «всегда», «пока открыто»"
+echo "→ 7/8 введённая сумма после закрытия: 12 ч по умолчанию, 24 ч, «всегда», «пока открыто»"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/memory.html" > "$WORK/memory.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/memory.html"; then
@@ -88,5 +90,15 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/memory.html"; then
   fail "память суммы не прошла проверку"
 fi
 echo "  ✓ сумма переживает перезагрузку по сроку; «пока открыто» её стирает; после срока — снова 1, и без перезагрузки"
+
+echo "→ 8/8 длинная сумма уменьшается, а не обрезается"
+"$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 \
+  --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/fit.html" > "$WORK/fit.html" 2>/dev/null || true
+if ! grep -q '<pre id="result">PASS</pre>' "$WORK/fit.html"; then
+  echo "  результат:" >&2
+  sed -n '/<pre id="result">/,/<\/pre>/p' "$WORK/fit.html" | sed 's/<[^>]*>//g; s/^/    /' >&2
+  fail "длинная сумма не влезает в поле"
+fi
+echo "  ✓ «150 000 000» и пересчитанные суммы видны целиком; стёрли — размер обычный; не меньше половины"
 
 echo "✓ Web smoke пройден"

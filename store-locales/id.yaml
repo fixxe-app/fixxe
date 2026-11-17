@@ -65,7 +65,7 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   Rates By Exchange Rate API.
 
   '
-whats_new: "Baru di Pengaturan: Ingat jumlah. Angka yang Anda ketik tetap ada setelah aplikasi ditutup — 12 jam secara default, atau pilih 24 jam, selalu, atau hanya selama aplikasi terbuka."
+whats_new: "Jumlah yang panjang kini mengecil agar muat, tidak lagi terpotong."
 landing:
   page_title: FIXXE — konverter mata uang
   install_title: Cara memasang

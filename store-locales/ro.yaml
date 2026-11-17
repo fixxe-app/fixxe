@@ -65,7 +65,7 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
   Rates By Exchange Rate API.
 
   '
-whats_new: "Nou în setări: Reține suma. Numărul introdus rămâne și după închiderea aplicației — implicit 12 ore, sau alegeți 24 de ore, întotdeauna ori doar cât aplicația e deschisă."
+whats_new: "Sumele lungi se micșorează acum ca să încapă, în loc să fie tăiate."
 landing:
   page_title: FIXXE — convertor valutar
   install_title: Moduri de instalare

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00BAE5DFE7FB59C0603C99DA /* i18n.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BB6DBB2EF7C08A8B04EBA9 /* i18n.json */; };
+		024E7526D6062B5D06DDC2CB /* AmountFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E763941D84D51B521792E97 /* AmountFitTests.swift */; };
 		038FD2E09713D66C0264A4A9 /* RateAdjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3197D60F238EA67679E36 /* RateAdjust.swift */; };
 		03908585D112F8D26A44D113 /* SwitchRowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7966DADB7A2BF6843B45DD3 /* SwitchRowsTests.swift */; };
 		0A92B8F83040587BE49D5DA0 /* OrientationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5993802983544C36948747 /* OrientationTests.swift */; };
@@ -41,6 +42,7 @@
 		C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933F86173051CB4DCF18630E /* RatesSourcesTests.swift */; };
 		D1D7EBE85C806C0137511631 /* RatesLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB061C5369A19F9AA1D56E /* RatesLoadTests.swift */; };
 		D8A363D4F4A3CD6D7B2E4B48 /* FIXXEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62226A2CEBCEFBC634494829 /* FIXXEApp.swift */; };
+		E3CAC68E85A1A6F3D950E358 /* AmountFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C113C5D6BB81B0F83E010EE /* AmountFit.swift */; };
 		E5D87D9076E22FE36EB8715B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0CDC4F07CFC6D685D38F31 /* SettingsView.swift */; };
 		FC08E47FCCBEA39A5B23BFDF /* TapInteractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7133CCCB4E17D72E1EA442 /* TapInteractionTests.swift */; };
 /* End PBXBuildFile section */
@@ -68,9 +70,11 @@
 		10AE730FAD8CAD8576907366 /* RowDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowDropDelegate.swift; sourceTree = "<group>"; };
 		226419E3D43E1EAEF8D4330C /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 		2D7AADCB29CC6B6160A445F9 /* FIXXETests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FIXXETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E763941D84D51B521792E97 /* AmountFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountFitTests.swift; sourceTree = "<group>"; };
 		3DF378A4C6A36231768A881B /* ListAfterKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAfterKeyboardTests.swift; sourceTree = "<group>"; };
 		49913A2918A7F81595A8568F /* AmountMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountMemory.swift; sourceTree = "<group>"; };
 		4BCB061C5369A19F9AA1D56E /* RatesLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesLoadTests.swift; sourceTree = "<group>"; };
+		4C113C5D6BB81B0F83E010EE /* AmountFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountFit.swift; sourceTree = "<group>"; };
 		5C5993802983544C36948747 /* OrientationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationTests.swift; sourceTree = "<group>"; };
 		603B72B1ECB700C2621B94EE /* FIXXE.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FIXXE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62226A2CEBCEFBC634494829 /* FIXXEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIXXEApp.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		5AAC08019C78B6A3DD292A30 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				4C113C5D6BB81B0F83E010EE /* AmountFit.swift */,
 				49913A2918A7F81595A8568F /* AmountMemory.swift */,
 				95A1AE2DFE66B9DF951C9FF0 /* CaretTap.swift */,
 				A505ADFDFDB7331D089D1EB7 /* KeyboardScrollRestore.swift */,
@@ -181,6 +186,7 @@
 		BB41EA2BD3D78679835A4242 /* FIXXETests */ = {
 			isa = PBXGroup;
 			children = (
+				2E763941D84D51B521792E97 /* AmountFitTests.swift */,
 				D6671D126ECE080A64736DCD /* AmountMemoryTests.swift */,
 				8D7090ED0E933D13F31A8E67 /* RateAdjustTests.swift */,
 				933F86173051CB4DCF18630E /* RatesSourcesTests.swift */,
@@ -373,6 +379,7 @@
 			files = (
 				7E87FB7549406A57E1DBC87D /* AddCurrencyView.swift in Sources */,
 				41AB2CCD186F76257AC2DDA2 /* AdjustViews.swift in Sources */,
+				E3CAC68E85A1A6F3D950E358 /* AmountFit.swift in Sources */,
 				9E9C3489775D2DEADDAE99C4 /* AmountMemory.swift in Sources */,
 				26156AA96B8CF040F1010702 /* CaretTap.swift in Sources */,
 				AD53D43B2FA5EA24FA49BF61 /* ContentView.swift in Sources */,
@@ -396,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024E7526D6062B5D06DDC2CB /* AmountFitTests.swift in Sources */,
 				C8098087920DC8DE7A4BD778 /* AmountMemoryTests.swift in Sources */,
 				44BFB3295F0681A8318C9C0F /* RateAdjustTests.swift in Sources */,
 				C9FA566B38DC1E2CD50FBCA9 /* RatesSourcesTests.swift in Sources */,
@@ -425,7 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 68;
+				CURRENT_PROJECT_VERSION = 69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -437,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.68;
+				MARKETING_VERSION = 1.69;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;
@@ -642,7 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 68;
+				CURRENT_PROJECT_VERSION = 69;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FIXXE/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FIXXE;
@@ -654,7 +662,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.68;
+				MARKETING_VERSION = 1.69;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karpinity.fixxe;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.9;

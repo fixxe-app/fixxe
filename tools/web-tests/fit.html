@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+  Длинная сумма уменьшается, а не обрезается — веб-версия. Открывается
+  безголовым Chrome из tools/smoke-web.sh; результат пишется в <pre id="result">
+  как PASS/FAIL. Лежит вне web/, на сайт не попадает.
+
+  1. Обычные суммы — обычный размер шрифта.
+  2. Набрали «150 000 000» (с пробелами между тысячами) — каждое число в своей
+     строке видно целиком: и в поле ввода, и пересчитанные.
+  3. Стёрли цифры — размер снова обычный.
+  4. Совсем длинное число — не меньше половины размера.
+-->
+<meta charset="utf-8">
+<title>fit</title>
+<iframe id="app" style="width:420px;height:900px"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const problems = [];
+const check = (ok, msg) => { if (!ok) problems.push(msg); };
+const KEYS = ['currencies', 'grouping', 'amount_memory', 'saved_code', 'saved_amount', 'adjust_left_at', 'adjust_pct', 'decimals'];
+const put = (k, v) => localStorage.setItem('fixe.' + k, JSON.stringify(v));
+const clear = () => KEYS.forEach(k => localStorage.removeItem('fixe.' + k));
+
+(async () => {
+  try {
+    clear(); put('currencies', ['EUR', 'USD', 'RSD', 'IDR']); put('grouping', 1);
+    await new Promise(r => { frame.onload = r; frame.src = '/web/index.html?' + Math.random(); });
+    const w = frame.contentWindow, d = frame.contentDocument;
+    for (let i = 0; i < 60 && !(d.querySelector('.card[data-code="IDR"] .rate')?.textContent); i++) await wait(250);
+    if (!d.querySelector('.card[data-code="IDR"] .rate')?.textContent) throw new Error('курсы не загрузились');
+    await wait(300);
+
+    const fields = () => [...d.querySelectorAll('.card .amount')];
+    const size = el => parseFloat(w.getComputedStyle(el).fontSize);
+    const base = size(fields()[0]);
+    const code = el => el.closest('.card').dataset.code;
+    const fits = el => el.scrollWidth <= el.clientWidth;
+
+    // 1. обычные суммы
+    for (const f of fields()) check(size(f) === base, `${code(f)} = ${f.value}: шрифт ${size(f)}, а не обычный ${base}`);
+
+    // 2. «150 000 000» — как набирает человек, цифра за цифрой
+    const eur = d.querySelector('.card[data-code="EUR"] .amount');
+    eur.focus(); eur.dispatchEvent(new FocusEvent('focus')); await wait(120);
+    for (const v of ['1', '15', '150', '1500', '15000', '150000', '1500000', '15000000', '150 000 000']) {
+      eur.value = v; eur.dispatchEvent(new Event('input', {bubbles: true}));
+    }
+    await wait(200);
+    for (const f of fields()) check(fits(f), `${code(f)} = ${f.value}: не влезает (${f.scrollWidth} > ${f.clientWidth}), шрифт ${size(f)}`);
+    const idr = d.querySelector('.card[data-code="IDR"] .amount');
+    check(size(idr) < base, `IDR = ${idr.value} — шрифт не уменьшился`);
+    check(size(idr) >= base / 2, `IDR = ${idr.value} — шрифт меньше половины: ${size(idr)}`);
+
+    // 3. стёрли — снова обычный
+    eur.value = '15'; eur.dispatchEvent(new Event('input', {bubbles: true})); await wait(200);
+    for (const f of fields()) check(size(f) === base, `после стирания ${code(f)} = ${f.value}: шрифт ${size(f)}, а не ${base}`);
+
+    // 4. совсем длинное — не меньше половины
+    eur.value = '150 000 000 000 000 000 000'; eur.dispatchEvent(new Event('input', {bubbles: true})); await wait(200);
+    for (const f of fields()) check(size(f) >= base / 2, `${code(f)} = ${f.value}: шрифт ${size(f)} меньше половины`);
+    check(size(eur) === base / 2, `EUR = ${eur.value}: ожидалась половина размера, а ${size(eur)}`);
+
+    // 5. правило само по себе
+    check(w.amountFitSize(22, 100, 130) === 22 && w.amountFitSize(22, 130, 130) === 22, 'правило: влезает — размер прежний');
+    check(Math.abs(w.amountFitSize(22, 200, 130) - 14.3) < 1e-9, 'правило: не влезает — ровно до ширины поля');
+    check(w.amountFitSize(22, 1000, 130) === 11, 'правило: не меньше половины');
+
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + (e.stack || e.message);
+  } finally { clear(); }
+})();
+</script>
