@@ -49,9 +49,10 @@ select{
 }
 
 h2{font-size:17px; margin:30px 0 12px; font-weight:650}
+#install{scroll-margin-top:14px}   /* по ссылке #install заголовок не прилипает к краю */
 
 /* способы установки */
-.ways{display:grid; gap:10px}
+.ways{display:grid; gap:10px; grid-template-columns:minmax(0,1fr)}   /* карточка не шире экрана: без minmax её растягивала надпись кнопки */
 .way{
   display:flex; align-items:center; gap:14px; background:var(--card);
   border:1px solid var(--line); border-radius:13px; padding:14px 15px;
@@ -90,9 +91,21 @@ footer a{color:var(--blue)}
 footer .ver{margin-top:6px; font-size:11px}
 /* в RTL разворачиваем только стрелку: зеркальная надпись нечитаема */
 [dir="rtl"] .way .arr{display:inline-block; transform:scaleX(-1)}
+/* Значки магазинов — строкой под названием. Высота по видимой части значка;
+   прозрачное поле вокруг PNG Google Play (41 из 250 px) съедают отрицательные отступы. */
+.stores{--bh:44px; flex-basis:100%; display:flex; flex-wrap:wrap; gap:10px; margin-top:6px}
+.stores a{display:block; line-height:0; border-radius:8px}
+.stores .badge-ios{height:var(--bh); width:auto; display:block}
+.stores .play{overflow:hidden; height:var(--bh)}
+.stores .play img{height:calc(var(--bh) * 250 / 168); width:auto; display:block; margin:calc(var(--bh) * -41 / 168)}
 @media (max-width:420px){
   .name{font-size:23px} .logo{width:48px;height:48px}
-  .langbox{margin-inline-start:0; width:100%} select{width:100%}
+  .langbox{margin-inline-start:0; width:100%; order:3} select{width:100%}
+  .stores{--bh:42px; order:2; margin-top:2px}   /* на телефоне — до выбора языка */
+}
+/* самые узкие телефоны: надпись кнопки переносится, иначе описанию не остаётся места */
+@media (max-width:360px){
+  .way .go{white-space:normal; text-align:end; max-width:96px}
 }
 </style>
 </head>
@@ -107,19 +120,27 @@ footer .ver{margin-top:6px; font-size:11px}
     <div class="langbox">
       <select id="lang" aria-label="Language"></select>
     </div>
+    <!-- Официальные значки магазинов (Apple / Google): только в исходном виде, без перерисовки -->
+    <nav class="stores" aria-label="App Store, Google Play">
+      <a id="storeIos" href="https://apps.apple.com/app/id6815242016" target="_blank" rel="noopener"><img src="../icons/badge-app-store.svg" alt="Download on the App Store" class="badge-ios"></a>
+      <a id="storePlay" href="https://play.google.com/store/apps/details?id=com.karpinity.fixxe" target="_blank" rel="noopener" class="play"><img src="../icons/badge-google-play.png" alt="Get it on Google Play"></a>
+    </nav>
   </header>
 
   <h2 id="about-title">About the app</h2>
   <div class="about" id="about"></div>
 
-  <h2 id="install-title">Ways to install</h2>
-  <div class="ways" id="ways"></div>
+  <!-- id="install" — ссылка сразу на магазины: telebimmer.com/fixxe/about/#install -->
+  <section id="install">
+    <h2 id="install-title">Ways to install</h2>
+    <div class="ways" id="ways"></div>
+  </section>
 
   <footer>
     <p>Rates By <a href="https://www.exchangerate-api.com">Exchange Rate API</a><br>
     <a href="../privacy.html" id="privacy-link">Privacy</a> · <a href="../terms.html" id="terms-link">Terms</a></p>
     <p><a id="source-link" href="https://github.com/fixxe-app/fixxe">Source code on GitHub (GPL-3.0)</a></p>
-    <p class="ver" id="app-version">FIXXE 1.69</p>
+    <p class="ver" id="app-version">FIXXE 1.70</p>
   </footer>
 </div>
 
@@ -234,6 +255,11 @@ function pick(codes){
   $("#lang").innerHTML = langs.map(l => `<option value="${l.code}">${esc(l.native)}</option>`).join("");
   $("#lang").onchange = e => load(e.target.value, true);
   await load(pick(langs.map(l => l.code)));
+  // Ссылка с якорем (#install): браузер прокручивает к разделу сразу при
+  // загрузке, когда описание выше ещё пустое, — потом текст его сдвигает вниз,
+  // и человек оказывается посреди описания. Докручиваем, когда всё на месте.
+  const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target) target.scrollIntoView();
 })();
 </script>
 </body>

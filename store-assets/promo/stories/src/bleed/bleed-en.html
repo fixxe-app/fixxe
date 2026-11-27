@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&display=block" rel="stylesheet">
+<style>
+:root{--night:#0B0F17;--blue:#64B5F6;--gold:#C9A55C;--gold-hi:#E8C77A;--green:#81C784;--appbg:#121212}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden}
+body{position:relative;background:var(--night);color:#fff;
+  font-family:Manrope,-apple-system,"SF Pro Display",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.abs{position:absolute}
+
+/* ambient light behind the proof card */
+.glow{left:-200px;top:760px;width:1480px;height:760px;
+  background:radial-gradient(ellipse 50% 45% at 50% 50%,rgba(100,181,246,.13),rgba(100,181,246,0) 70%)}
+
+/* giant number: the real VND amount, cut by both canvas edges */
+.big{left:-61px;top:646px;white-space:nowrap;font-family:Unbounded,sans-serif;font-weight:900;
+  font-size:252px;line-height:1;letter-spacing:-.02em;color:var(--blue);opacity:.42}
+
+/* lockup (shared) */
+.icon{left:64px;top:268px;width:84px;height:84px;border-radius:20px}
+.word{left:168px;top:268px;height:84px;display:flex;align-items:center;
+  font:800 46px Manrope,sans-serif;letter-spacing:.22em;color:var(--green)}
+.rule{left:64px;top:360px;width:120px;height:4px;background:var(--gold)}
+
+/* headline */
+.head{left:64px;top:404px;width:952px;font-family:Unbounded,sans-serif;font-weight:800;
+  line-height:1.02;letter-spacing:-.015em;color:#fff}
+.head b{font-weight:800;color:var(--blue)}
+
+/* real app crop */
+.card{left:64px;top:884px;width:952px;height:444px;border-radius:40px;overflow:hidden;
+  background:var(--appbg) url(cap-en.png) no-repeat 0 -264.44px / 952px auto;
+  box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1.5px rgba(255,255,255,.07)}
+
+/* annotation: thin gold hairline + big gold squeeze arrows on the long row */
+.hl{left:88.3px;top:1119.0px;width:903.3px;height:196.4px;box-sizing:border-box;
+  border:2px solid rgba(232,199,122,.6);border-radius:28px}
+.sq{top:1181px;width:90px;height:72px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.55))}
+.sqL{left:0}.sqR{left:990px}
+
+/* sub */
+.sub{left:64px;top:1354px;width:952px;font-weight:700;line-height:1.22;color:rgba(255,255,255,.9);white-space:nowrap}
+
+/* CTA (shared, round 2: no URL) */
+.cta1{left:64px;top:1440px;font:700 34px Manrope,sans-serif;line-height:1.2;color:rgba(255,255,255,.75);white-space:nowrap}
+.cta2{left:64px;top:1494px;font:800 44px Manrope,sans-serif;line-height:1.2;color:var(--blue);white-space:nowrap}
+.cta2 i{font-style:normal;color:var(--gold);margin-right:.32em}
+</style></head><body>
+
+<div class="abs glow"></div>
+<div class="abs big">28 181 894 209.00</div>
+
+<img class="abs icon" src="icon-512.png" alt="">
+<div class="abs word">FIXXE</div>
+<div class="abs rule"></div>
+
+<div class="abs head" id="head">Every zero <b>fits.</b></div>
+
+<div class="abs card"></div>
+<div class="abs hl"></div>
+<svg class="abs sq sqL" viewBox="0 0 90 72"><path d="M4 36H60" stroke="#C9A55C" stroke-width="10" stroke-linecap="round"/><path d="M46 6L86 36L46 66Z" fill="#E8C77A" stroke="#E8C77A" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg class="abs sq sqR" viewBox="0 0 90 72" style="transform:scaleX(-1)"><path d="M4 36H60" stroke="#C9A55C" stroke-width="10" stroke-linecap="round"/><path d="M46 6L86 36L46 66Z" fill="#E8C77A" stroke="#E8C77A" stroke-width="4" stroke-linejoin="round"/></svg>
+
+<div class="abs sub" id="sub">Long numbers shrink to fit, never cut off.</div>
+
+<div class="abs cta1">Free · App Store · Google Play · Web</div>
+<div class="abs cta2"><i>→</i>Search “FIXXE”</div>
+
+<script>
+// Fit-to-width: shrink until the text fits the box (max lines), like the app itself.
+function fit(el, max, min, lines){
+  let s = max; el.style.fontSize = s + 'px';
+  const lh = () => parseFloat(getComputedStyle(el).lineHeight);
+  while (s > min && (el.scrollWidth > el.clientWidth + 1 || el.offsetHeight > lh() * lines + 2)){
+    s -= 1; el.style.fontSize = s + 'px';
+  }
+}
+document.fonts.ready.then(()=>{
+  fit(document.getElementById('head'), 114, 70, 2);
+  fit(document.getElementById('sub'), 40, 30, 1);
+});
+</script>
+</body></html>

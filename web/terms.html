@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>FIXXE — Terms of Use</h1>
-<p class="muted">Last updated: 9 October 2026</p>
+<p class="muted">Last updated: 18 November 2026</p>
 
 <p>FIXXE is a currency converter for Android, iPhone, iPad, Mac with Apple silicon and the web. By using the app or
 the web version you agree to these terms. Short version: <strong>the app is free, the rates
@@ -22,12 +22,21 @@ are reference values, and you use them at your own judgement.</strong></p>
 
 <h2>Rates are for reference, not for trading</h2>
 <p>FIXXE shows <strong>mid-market rates</strong> — the midpoint between global buy and sell
-prices. They are published by third-party providers and typically update once a day.
-They are <strong>not real-time trading quotes</strong>, and they are not the rate your bank,
-card issuer or exchange office will give you: those add their own spread and fees.</p>
+prices, published by third-party providers. The main sources update about once a minute; the
+reserve sources, used when the main ones are unavailable, update about once a day. Either way
+they are <strong>not real-time trading quotes</strong>, and they are not the rate your bank,
+card issuer or exchange office will give you: those add their own spread and fees.
+Cryptocurrency rates in particular can move sharply within minutes.</p>
 <p>Do not rely on FIXXE as the sole basis for a financial decision, a payment, a trade, a
 contract, an invoice or a tax filing. Always check the actual rate with the party you are
 transacting with.</p>
+
+<h2>Your own rate adjustment</h2>
+<p>You can apply your own percentage to the rates — for example, to approximate your bank’s
+or exchange office’s margin. Amounts calculated this way are marked in the app as adjusted.
+They are your own calculation based on a figure you entered, not a rate offered by anyone.
+Unless you choose to keep it, the adjustment is cleared automatically after four hours
+without use.</p>
 
 <h2>No warranty</h2>
 <p>The app is provided “as is”, without warranty of any kind. We do not guarantee that rates
@@ -46,20 +55,31 @@ and no advertising. Nothing is collected about you — see the
 <h2>Rate sources</h2>
 <p>Rates come from these public providers, used under their own licences and terms:</p>
 <ul>
-  <li>ExchangeRate-API — <a href="https://www.exchangerate-api.com">exchangerate-api.com</a>;
-      attribution “Rates By Exchange Rate API” is required and is shown in the app.</li>
-  <li>Fawaz Ahmed currency-api — CC0 (public domain).</li>
-  <li>Frankfurter — MIT licence, data from the European Central Bank (ECB).</li>
+  <li><strong>Coinbase</strong> — <a href="https://www.coinbase.com">coinbase.com</a>, public exchange-rate data;</li>
+  <li><strong>FXRatesAPI</strong> — <a href="https://fxratesapi.com">fxratesapi.com</a>;</li>
+  <li><strong>ExchangeRate-API</strong> — <a href="https://www.exchangerate-api.com">exchangerate-api.com</a>;
+      attribution “Rates By Exchange Rate API” is required and is shown in the app;</li>
+  <li><strong>Fawaz Ahmed currency-api</strong> — CC0 (public domain);</li>
+  <li><strong>Frankfurter</strong> — MIT licence, data from the European Central Bank (ECB);</li>
+  <li><strong>Wise</strong> — <a href="https://wise.com">wise.com</a>, Android and iOS only, used only when
+      you choose it in the settings. This source is experimental (beta) and may stop working at
+      any time.</li>
 </ul>
-<p>FIXXE is not affiliated with, endorsed by, or operated by any of these providers, nor by
-the European Central Bank.</p>
+<p>By default the app picks the source automatically and falls back to the next one when a
+source is unavailable; you can also choose a source yourself. The app always shows which
+source the current rates come from. FIXXE is not affiliated with, endorsed by, or operated by
+any of these providers, nor by the European Central Bank.</p>
 
 <h2>Using the app</h2>
-<p>You may use FIXXE on any number of your devices, personally or at work. Please do not
-redistribute modified builds as if they were the original app, or use the FIXXE name and icon
-for something that is not this app.</p>
-<p>Installing outside an app store: the APK published on this site is the same app, signed
-with our key. Builds obtained anywhere else are not ours and we cannot vouch for them.</p>
+<p>You may use FIXXE on any number of your devices, personally or at work.</p>
+<p>The source code is published at <a href="https://github.com/fixxe-app/fixxe">github.com/fixxe-app/fixxe</a>
+under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0 or later</a>.
+You may study, modify and redistribute it under that licence. The FIXXE name and icon are not
+covered by the licence: modified versions must use their own name and icon, and must not
+present themselves as FIXXE or as published by us.</p>
+<p>Installing outside an app store: the APK published on this site and on the project’s GitHub
+releases page is the same app, signed with our key. Builds obtained anywhere else are not ours
+and we cannot vouch for them.</p>
 
 <h2>Store terms also apply</h2>
 <p>If you installed FIXXE from Google Play or the Apple App Store, that store’s own terms

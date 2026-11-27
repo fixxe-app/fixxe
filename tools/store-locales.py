@@ -39,6 +39,29 @@ PLAY = {
     # Google Play не знает этих языков приложения: bs sq
 }
 
+# Карточки Google Play, которые уходят латиницей: в Сербии ищут «kurs dinara»,
+# а не «курс динара». В sr.yaml (и на странице About) текст остаётся кириллицей.
+PLAY_LATIN = {"sr"}
+_SR_LAT = dict(zip("абвгдђежзијклљмнњопрстћуфхцчџш",
+                   ["a","b","v","g","d","đ","e","ž","z","i","j","k","l","lj","m","n","nj","o","p","r",
+                    "s","t","ć","u","f","h","c","č","dž","š"]))
+
+
+def sr_latin(text):
+    """Сербская кириллица → латиница; Љ/Њ/Џ в слове заглавными — LJ/NJ/DŽ."""
+    out = []
+    for i, ch in enumerate(text):
+        lat = _SR_LAT.get(ch.lower())
+        if lat is None:
+            out.append(ch)
+        elif ch.islower():
+            out.append(lat)
+        else:
+            nxt = text[i + 1] if i + 1 < len(text) else ""
+            out.append(lat.upper() if len(lat) > 1 and nxt.isupper() else lat[0].upper() + lat[1:])
+    return "".join(out)
+
+
 LIMITS = {           # жёсткие лимиты магазинов
     "title": 30,               # оба магазина: «FIXXE – Конвертер валют»
     "subtitle": 30,            # App Store
@@ -69,6 +92,15 @@ def check(data):
             n = len(d[k].strip())
             if n > LIMITS[k]:
                 bad.append(f"{lang}.{k}: {n} символов, лимит {LIMITS[k]}")
+        # overrides: {локаль магазина: {поле: текст}} — своё значение для одной локали
+        for code, fields in (d.get("overrides") or {}).items():
+            if code not in APPSTORE.get(lang, []) + PLAY.get(lang, []):
+                bad.append(f"{lang}.overrides: {code} — не локаль этого языка")
+            for k, v in fields.items():
+                if k not in LIMITS:
+                    bad.append(f"{lang}.overrides.{code}: неизвестное поле {k}")
+                elif len(v.strip()) > LIMITS[k]:
+                    bad.append(f"{lang}.overrides.{code}.{k}: {len(v.strip())} символов, лимит {LIMITS[k]}")
     # en-US обязан быть английским — его видят все страны без своей карточки
     cyr = re.compile("[Ѐ-ӿ]")
     en = data.get("en", {})
@@ -88,16 +120,20 @@ def sync(data):
           "promotional_text": "promotional_text", "keywords": "keywords",
           "whats_new": "whats_new"}),
     ):
+        is_play = mapping is PLAY
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         base = doc["locales"][next(iter(doc["locales"]))]
         locales = {}
         for lang, d in sorted(data.items()):
             for code in mapping.get(lang, []):
                 entry = {}
+                own = (d.get("overrides") or {}).get(code, {})
                 for field, src in fields.items():
                     # Название — с ключевым словом на языке витрины: по одному
                     # «FIXXE» никто не ищет, а «конвертер валют» ищут все.
-                    entry[field] = d[src]
+                    entry[field] = own.get(src, d[src])
+                    if is_play and lang in PLAY_LATIN:
+                        entry[field] = sr_latin(entry[field])
                 # ссылки и контакты одинаковы во всех локалях
                 for k in ("support_url", "privacy_policy_url", "marketing_url", "video_url"):
                     if k in base:

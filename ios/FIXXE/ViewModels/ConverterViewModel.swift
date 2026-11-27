@@ -232,6 +232,7 @@ final class ConverterViewModel: ObservableObject {
         inputText = text
         baseCode = activeCode             // настоящий ввод: эта строка теперь база
         activeAmount = SmartFormat.parse(text, grouping: grouping)
+        ReviewAsk.amountTyped()           // давно и часто пользуется — попросить оценку (Support/ReviewAsk)
     }
 
     func clearAll() {

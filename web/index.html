@@ -38,11 +38,18 @@
   <!-- List -->
   <main id="list" class="list"></main>
 
-  <!-- Footer: одна строка. Подпись ExchangeRate-API — только когда курсы от него
+  <!-- Footer: одна строка — «Добавить валюту» и значки магазинов. Подпись ExchangeRate-API — только когда курсы от него
        (условие их бесплатного тарифа); номер версии и APK — в настройках. -->
   <footer class="footer">
     <div class="footer-top">
-      <button id="btnAdd" class="add-btn"><svg viewBox="0 0 24 24" width="18" height="18" class="line" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span id="btnAddText"></span></button>
+      <div class="footer-main">
+        <button id="btnAdd" class="add-btn"><svg viewBox="0 0 24 24" width="18" height="18" class="line" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span id="btnAddText"></span></button>
+        <!-- Официальные значки магазинов (Apple / Google): только в исходном виде, без перерисовки -->
+        <nav class="stores" aria-label="App Store, Google Play">
+          <a id="storeIos" href="https://apps.apple.com/app/id6815242016" target="_blank" rel="noopener"><img src="icons/badge-app-store.svg" alt="Download on the App Store" class="badge-ios"></a>
+          <a id="storePlay" href="https://play.google.com/store/apps/details?id=com.karpinity.fixxe" target="_blank" rel="noopener" class="play"><img src="icons/badge-google-play.png" alt="Get it on Google Play"></a>
+        </nav>
+      </div>
       <a id="attribution" class="attribution" href="https://www.exchangerate-api.com" target="_blank" rel="noopener" hidden>Rates By Exchange Rate API</a>
     </div>
   </footer>

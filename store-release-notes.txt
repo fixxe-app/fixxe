@@ -1,1 +1,1 @@
-Long amounts now shrink to fit instead of being cut off. Also a clearer info screen about rates.
+Small improvements and fixes.

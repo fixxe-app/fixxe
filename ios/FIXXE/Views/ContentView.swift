@@ -33,6 +33,7 @@ struct ContentView: View {
         .environment(\.layoutDirection, L10n.isRTL ? .rightToLeft : .leftToRight)
         .id(vm.langVersion)   // смена языка → полная перерисовка
         .task {
+            ReviewAsk.countOpen()   // холодный запуск: scenePhase может не смениться (повтор не посчитается)
             await vm.refresh()
             await vm.loadSourceCodes()
             if ScreenshotArgs.openAdd { showAdd = true }
@@ -44,10 +45,12 @@ struct ContentView: View {
         // висеть сутками, курсы так и оставались от момента запуска.
         .onChange(of: scenePhase) { phase in
             if phase == .active {
+                ReviewAsk.countOpen()          // до сброса: нужен прошлый уход с экрана
                 vm.resetAdjustIfExpired()      // давно не открывали — поправка снята
                 vm.resetAmountIfExpired()      // и сумма снова 1, если так выбрано
                 Task { await vm.refresh() }
             } else {
+                ReviewAsk.left()
                 vm.markUsed()                  // отсюда считаются 4 часа до сброса поправки
             }
         }

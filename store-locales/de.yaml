@@ -1,7 +1,7 @@
 title: "FIXXE – Währungsrechner"
-subtitle: Kurse aus fünf Quellen
-short_description: Mittelkurse aus 5 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
-keywords: "währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro,fixer,fixe"
+subtitle: "Wechselkurse live & offline"
+short_description: "Wechselkurse live aus 5 Quellen. 300+ Währungen, offline, ohne Werbung"
+keywords: "umrechnen,devisen,kurs,geld,reise,euro,dollar,franken,pfund,rechner,bargeld,krypto,werbefrei"
 promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
 description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
@@ -65,7 +65,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   Rates By Exchange Rate API.
 
   '
-whats_new: "Lange Beträge werden jetzt verkleinert, damit sie passen, statt abgeschnitten zu werden."
+whats_new: "Kleine Verbesserungen und Fehlerbehebungen."
 landing:
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege

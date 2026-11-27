@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.69';
+const APP_VERSION = '1.70';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -563,6 +563,16 @@ function fitAmount(input){
     size = Math.max(base * AMOUNT_MIN_FACTOR, size * (room - 2) / input.scrollWidth);
     input.style.fontSize = size + 'px';
   }
+}
+// Поле суммы гибкое: окно сузили (поворот, разделение экрана) — поле стало
+// уже, и суммы надо подогнать заново, иначе длинная обрежется.
+{
+  let pending = false;
+  window.addEventListener('resize', ()=>{
+    if (pending) return;
+    pending = true;
+    setTimeout(()=>{ pending = false; document.querySelectorAll('.card .amount').forEach(fitAmount); }, 50);
+  });
 }
 
 // Экранная клавиатура на телефоне.

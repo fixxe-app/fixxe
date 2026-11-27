@@ -24,8 +24,8 @@ android {
         applicationId = "com.karpinity.fixxe"
         minSdk = 24
         targetSdk = 36
-        versionCode = 69
-        versionName = "1.69"
+        versionCode = 70
+        versionName = "1.70"
     }
 
     signingConfigs {
@@ -65,6 +65,11 @@ android {
         getByName("release").java.srcDir("src/noupdate/java")
         getByName("standalone").java.srcDir("src/updatecheck/java")
         getByName("standalone").res.srcDir("src/updatecheck/res")
+        // Окно оценки (Google Play In-App Review) — только в сборке для Play;
+        // вне Play и в отладке — пустышка, без библиотеки Google.
+        getByName("release").java.srcDir("src/review/java")
+        getByName("debug").java.srcDir("src/noreview/java")
+        getByName("standalone").java.srcDir("src/noreview/java")
     }
 
     compileOptions {
@@ -86,6 +91,8 @@ dependencies {
     // юнит-тесты на JVM: разбор сумм и другие правила без эмулятора
     testImplementation("junit:junit:4.13.2")
     implementation("androidx.core:core-ktx:1.12.0")
+    // только для сборки в Google Play: окно оценки (см. src/review)
+    releaseImplementation("com.google.android.play:review:2.0.2")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.activity:activity-ktx:1.8.2")

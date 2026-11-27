@@ -48,6 +48,9 @@ def structure(en_description):
         t = line.strip()
         if not t:                 kinds.append("")
         elif t.startswith("•"):   kinds.append("li")
+        # Строка об источнике курсов — для магазинов. На сайте она уже есть в
+        # подвале, со ссылкой, и в описании повторялась бы.
+        elif t.startswith("Rates By"): kinds.append("credit")
         elif t == t.upper() and len(t) < 60 and any(c.isalpha() for c in t): kinds.append("h")
         else:                     kinds.append("p")
     return kinds
@@ -62,6 +65,10 @@ def blocks(description, kinds, lang):
     for kind, line in zip(kinds, lines):
         t = line.strip()
         if not kind: continue
+        if kind == "credit":
+            if "Exchange Rate API" not in t:
+                raise SystemExit(f"{lang}: на месте строки об источнике курсов другой текст: {t!r}")
+            continue
         out.append([kind, t[1:].strip() if kind == "li" else t])
     return out
 

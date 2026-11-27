@@ -87,7 +87,7 @@ locales:
       '
     promotional_text: خمسة مصادر للأسعار مع تبديل تلقائي، أسعار دون اتصال مع تنبيه عند تقادمها، وتقريب ذكي يحفظ المبالغ الصغيرة.
     keywords: عملة,محول,صرف,سعر,مال,سفر,فوركس,عملات رقمية,مالية,يورو,fixer,fixe
-    whats_new: المبالغ الطويلة تُصغَّر الآن لتتسع بدلًا من أن تُقطع.
+    whats_new: تحسينات وإصلاحات صغيرة.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   cs:
@@ -157,7 +157,7 @@ locales:
       '
     promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
     keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro,fixer,fixe
-    whats_new: Dlouhé částky se nyní zmenší, aby se vešly, místo aby byly oříznuté.
+    whats_new: Drobná vylepšení a opravy.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   da:
@@ -227,12 +227,12 @@ locales:
       '
     promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
     keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro,fixer,fixe
-    whats_new: Lange beløb bliver nu mindre, så de passer, i stedet for at blive skåret af.
+    whats_new: Små forbedringer og rettelser.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   de-DE:
     name: FIXXE – Währungsrechner
-    subtitle: Kurse aus fünf Quellen
+    subtitle: Wechselkurse live & offline
     description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
 
@@ -296,8 +296,8 @@ locales:
 
       '
     promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
-    keywords: währung,umrechner,wechselkurs,geld,reise,devisen,krypto,finanzen,rechner,euro,fixer,fixe
-    whats_new: Lange Beträge werden jetzt verkleinert, damit sie passen, statt abgeschnitten zu werden.
+    keywords: umrechnen,devisen,kurs,geld,reise,euro,dollar,franken,pfund,rechner,bargeld,krypto,werbefrei
+    whats_new: Kleine Verbesserungen und Fehlerbehebungen.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   el:
@@ -367,12 +367,12 @@ locales:
       '
     promotional_text: Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή, ισοτιμίες εκτός σύνδεσης με προειδοποίηση παλαιότητας και στρογγυλοποίηση που δεν χαλάει τα μικρά ποσά.
     keywords: νόμισμα,μετατροπέας,ισοτιμία,συνάλλαγμα,χρήματα,ταξίδι,forex,κρυπτο,ευρώ,fixer,fixe
-    whats_new: Τα μεγάλα ποσά πλέον μικραίνουν για να χωρούν, αντί να κόβονται.
+    whats_new: Μικρές βελτιώσεις και διορθώσεις.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-US:
     name: FIXXE – Currency Converter
-    subtitle: Live rates from five sources
+    subtitle: Live exchange rates, offline
     description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -436,13 +436,13 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: Long amounts now shrink to fit instead of being cut off.
+    keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
+    whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-GB:
     name: FIXXE – Currency Converter
-    subtitle: Live rates from five sources
+    subtitle: Live exchange rates, offline
     description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -506,13 +506,13 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: Long amounts now shrink to fit instead of being cut off.
+    keywords: dinar,lari,tenge,dram,som,rsd,gel,kzt,amd,kgs,kurs,menjacnica,valuta,euro,pound,money,calculator
+    whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-AU:
     name: FIXXE – Currency Converter
-    subtitle: Live rates from five sources
+    subtitle: Live exchange rates, offline
     description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -576,13 +576,13 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: Long amounts now shrink to fit instead of being cut off.
+    keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
+    whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   en-CA:
     name: FIXXE – Currency Converter
-    subtitle: Live rates from five sources
+    subtitle: Live exchange rates, offline
     description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -646,13 +646,13 @@ locales:
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
-    keywords: convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe
-    whats_new: Long amounts now shrink to fit instead of being cut off.
+    keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
+    whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-ES:
     name: FIXXE – Conversor de divisas
-    subtitle: Tipos de cinco fuentes
+    subtitle: Tipo de cambio sin conexión
     description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
@@ -716,13 +716,13 @@ locales:
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
-    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
-    whats_new: Los importes largos ahora se reducen para caber en lugar de cortarse.
+    keywords: moneda,euro,dólar,libra,peso,calculadora,viaje,dinero,forex,cripto,tasa,gratis,divisa,efectivo
+    whats_new: Pequeñas mejoras y correcciones.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   es-MX:
     name: FIXXE – Conversor de divisas
-    subtitle: Tipos de cinco fuentes
+    subtitle: Tipo de cambio sin conexión
     description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
@@ -786,8 +786,8 @@ locales:
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
-    keywords: moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe
-    whats_new: Los importes largos ahora se reducen para caber en lugar de cortarse.
+    keywords: moneda,euro,dólar,libra,peso,calculadora,viaje,dinero,forex,cripto,tasa,gratis,divisa,efectivo
+    whats_new: Pequeñas mejoras y correcciones.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fi:
@@ -857,7 +857,7 @@ locales:
       '
     promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
     keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro,fixer,fixe
-    whats_new: Pitkät summat pienenevät nyt mahtuakseen eivätkä enää katkea.
+    whats_new: Pieniä parannuksia ja korjauksia.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-FR:
@@ -927,7 +927,7 @@ locales:
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
-    whats_new: Les montants longs sont désormais réduits pour tenir, au lieu d’être coupés.
+    whats_new: Petites améliorations et corrections.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   fr-CA:
@@ -997,7 +997,7 @@ locales:
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
-    whats_new: Les montants longs sont désormais réduits pour tenir, au lieu d’être coupés.
+    whats_new: Petites améliorations et corrections.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   he:
@@ -1067,7 +1067,7 @@ locales:
       '
     promotional_text: חמישה מקורות שערים עם מעבר אוטומטי, שערים לא מקוונים עם אזהרה כשהם מתיישנים, ועיגול חכם ששומר על סכומים קטנים.
     keywords: מטבע,ממיר,שער,חליפין,כסף,טיולים,פורקס,קריפטו,פיננסים,שקל,fixer,fixe
-    whats_new: סכומים ארוכים מוקטנים עכשיו כדי להיכנס, במקום להיחתך.
+    whats_new: שיפורים ותיקונים קטנים.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hi:
@@ -1137,7 +1137,7 @@ locales:
       '
     promotional_text: स्वतः बदलने वाले पाँच दर-स्रोत, पुरानी पड़ने पर चेतावनी देती ऑफ़लाइन दरें, और छोटी रकम बचाने वाला समझदार पूर्णांकन।
     keywords: मुद्रा,कनवर्टर,विनिमय,दर,पैसा,यात्रा,फॉरेक्स,क्रिप्टो,वित्त,रुपया,fixer,fixe
-    whats_new: लंबी राशियाँ अब कटने के बजाय छोटी होकर पूरी दिखती हैं।
+    whats_new: छोटे सुधार और बग फ़िक्स।
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hr:
@@ -1207,7 +1207,7 @@ locales:
       '
     promotional_text: Pet izvora tečaja s automatskom zamjenom, offline tečajevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
     keywords: valuta,pretvarač,tečaj,mjenjačnica,novac,putovanje,forex,kripto,financije,euro,fixer,fixe
-    whats_new: Dugi iznosi sada se smanjuju da stanu, umjesto da budu odrezani.
+    whats_new: Manja poboljšanja i ispravci.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   hu:
@@ -1277,7 +1277,7 @@ locales:
       '
     promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
     keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró,fixer,fixe
-    whats_new: A hosszú összegek most kisebbek lesznek, hogy elférjenek, nem vágódnak le.
+    whats_new: Kisebb fejlesztések és javítások.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   id:
@@ -1347,7 +1347,7 @@ locales:
       '
     promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
     keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah,fixer,fixe
-    whats_new: Jumlah yang panjang kini mengecil agar muat, tidak lagi terpotong.
+    whats_new: Peningkatan kecil dan perbaikan.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   it:
@@ -1417,7 +1417,7 @@ locales:
       '
     promotional_text: Cinque fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
     keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro,fixer,fixe
-    whats_new: Gli importi lunghi ora si rimpiccioliscono per entrare, invece di essere tagliati.
+    whats_new: Piccoli miglioramenti e correzioni.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ja:
@@ -1487,7 +1487,7 @@ locales:
       '
     promotional_text: 自動で切り替わる5つのレート情報源、古くなると知らせるオフラインレート、そして少額を崩さない賢い丸め。
     keywords: 通貨,換算,為替,レート,両替,旅行,外国為替,暗号資産,金融,円,fixer,fixe
-    whats_new: 長い金額は切れずに、収まるよう縮小して表示されるようになりました。
+    whats_new: 細かな改善と修正。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ko:
@@ -1557,7 +1557,7 @@ locales:
       '
     promotional_text: 자동으로 전환되는 다섯 곳의 환율 출처, 오래되면 알려주는 오프라인 환율, 작은 금액을 망치지 않는 똑똑한 반올림.
     keywords: 환율,환전,통화,변환,계산기,여행,외환,암호화폐,금융,원화,fixer,fixe
-    whats_new: 긴 금액이 잘리지 않고 칸에 맞게 작게 표시됩니다.
+    whats_new: 소소한 개선 및 수정.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   'no':
@@ -1627,7 +1627,7 @@ locales:
       '
     promotional_text: Fem kurskilder med automatisk bytte, offlinekurser som varsler når de blir gamle, og avrunding som ikke ødelegger små beløp.
     keywords: valuta,omregner,vekslingskurs,kurs,penger,reise,forex,krypto,økonomi,euro,fixer,fixe
-    whats_new: Lange beløp blir nå mindre så de får plass, i stedet for å bli kuttet.
+    whats_new: Små forbedringer og rettelser.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   nl-NL:
@@ -1697,7 +1697,7 @@ locales:
       '
     promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
     keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro,fixer,fixe
-    whats_new: Lange bedragen worden nu verkleind zodat ze passen, in plaats van afgekapt.
+    whats_new: Kleine verbeteringen en oplossingen.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pl:
@@ -1767,7 +1767,7 @@ locales:
       '
     promotional_text: Pięć źródeł kursów z automatycznym przełączaniem, kursy offline z ostrzeżeniem o nieaktualności i zaokrąglanie, które nie psuje małych kwot.
     keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro,fixer,fixe
-    whats_new: Długie kwoty są teraz zmniejszane, aby się zmieściły, zamiast być ucinane.
+    whats_new: Drobne usprawnienia i poprawki.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-PT:
@@ -1837,7 +1837,7 @@ locales:
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
-    whats_new: Valores longos agora diminuem para caber, em vez de serem cortados.
+    whats_new: Pequenas melhorias e correções.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   pt-BR:
@@ -1907,7 +1907,7 @@ locales:
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
-    whats_new: Valores longos agora diminuem para caber, em vez de serem cortados.
+    whats_new: Pequenas melhorias e correções.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ro:
@@ -1977,12 +1977,12 @@ locales:
       '
     promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
     keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro,fixer,fixe
-    whats_new: Sumele lungi se micșorează acum ca să încapă, în loc să fie tăiate.
+    whats_new: Mici îmbunătățiri și remedieri.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   ru:
     name: FIXXE – Конвертер валют
-    subtitle: Курсы из пяти источников
+    subtitle: Курсы валют онлайн и офлайн
     description: 'FIXXE — быстрый и чистый конвертер валют со среднерыночными курсами: это нейтральная середина между мировыми ценами покупки и продажи, без банковских наценок.
 
 
@@ -2046,8 +2046,8 @@ locales:
 
       '
     promotional_text: Пять источников курсов с автоматическим резервом, работа офлайн с предупреждением об устаревании и умное округление, которое бережёт малые суммы.
-    keywords: валюта,конвертер,курс,обмен,деньги,путешествия,форекс,криптовалюта,финансы,рубль,fixer,fixe
-    whats_new: Длинные суммы теперь уменьшаются, чтобы поместиться, а не обрезаются.
+    keywords: курс,обменник,доллар,евро,рубль,тенге,лари,динар,драм,сом,лира,калькулятор,деньги,обмен,юань
+    whats_new: Небольшие улучшения и исправления.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sk:
@@ -2117,7 +2117,7 @@ locales:
       '
     promotional_text: Päť zdrojov kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
     keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro,fixer,fixe
-    whats_new: Dlhé sumy sa teraz zmenšia, aby sa zmestili, namiesto orezania.
+    whats_new: Drobné vylepšenia a opravy.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   sv:
@@ -2187,7 +2187,7 @@ locales:
       '
     promotional_text: Fem kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
     keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro,fixer,fixe
-    whats_new: Långa belopp krymper nu så att de får plats i stället för att klippas av.
+    whats_new: Små förbättringar och buggfixar.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   th:
@@ -2257,7 +2257,7 @@ locales:
       '
     promotional_text: ห้าแหล่งอัตราที่สลับให้อัตโนมัติ อัตราออฟไลน์ที่เตือนเมื่อเก่าเกินไป และการปัดเศษที่ไม่ทำให้จำนวนเล็ก ๆ เพี้ยน
     keywords: สกุลเงิน,แปลงค่า,อัตราแลกเปลี่ยน,เงิน,ท่องเที่ยว,ฟอเร็กซ์,คริปโต,การเงิน,บาท,fixer,fixe
-    whats_new: จำนวนเงินที่ยาวจะย่อให้พอดีแทนการถูกตัด
+    whats_new: ปรับปรุงและแก้ไขเล็กน้อย
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   tr:
@@ -2327,7 +2327,7 @@ locales:
       '
     promotional_text: Otomatik yedekli beş kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
     keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro,fixer,fixe
-    whats_new: Uzun tutarlar artık kesilmek yerine sığacak şekilde küçülüyor.
+    whats_new: Küçük iyileştirmeler ve düzeltmeler.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   vi:
@@ -2397,7 +2397,7 @@ locales:
       '
     promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
     keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro,fixer,fixe
-    whats_new: Số tiền dài giờ được thu nhỏ cho vừa thay vì bị cắt mất.
+    whats_new: Cải tiến và sửa lỗi nhỏ.
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
   zh-Hans:
@@ -2467,6 +2467,6 @@ locales:
       '
     promotional_text: 五个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
     keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币,fixer,fixe
-    whats_new: 较长的金额现在会缩小以完整显示，不再被截断。
+    whats_new: 细节改进与问题修复。
     support_url: https://telebimmer.com/fixxe/
     privacy_policy_url: https://telebimmer.com/fixxe-privacy.html

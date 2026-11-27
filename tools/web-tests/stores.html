@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+  Значки App Store и Google Play в нижней строке веб-версии. Открывается
+  безголовым Chrome из tools/smoke-web.sh; результат — в <pre id="result">
+  как PASS/FAIL. Лежит вне web/, на сайт не попадает.
+
+  На ширинах от 320 до 768 px и на языках с самой длинной подписью
+  «Добавить валюту» (и арабском, справа налево):
+  1. оба значка загрузились, ведут в магазины FIXXE, одного роста;
+  2. стоят в той же строке, что «Добавить валюту», и её не перекрывают;
+  3. ничего не вылезает за ширину экрана;
+  4. подпись «Rates By Exchange Rate API» (когда курсы от неё) видна и
+     не налезает на значки.
+-->
+<meta charset="utf-8">
+<title>stores</title>
+<div id="host"></div>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const host = document.getElementById('host');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const problems = [];
+const check = (ok, msg) => { if (!ok) problems.push(msg); };
+const KEYS = ['currencies', 'lang', 'source', 'source_v'];
+const put = (k, v) => localStorage.setItem('fixe.' + k, JSON.stringify(v));
+const clear = () => KEYS.forEach(k => localStorage.removeItem('fixe.' + k));
+const IOS = 'https://apps.apple.com/app/id6815242016';
+const PLAY = 'https://play.google.com/store/apps/details?id=com.karpinity.fixxe';
+const overlap = (a, b) => a.left < b.right - 0.5 && b.left < a.right - 0.5 && a.top < b.bottom - 0.5 && b.top < a.bottom - 0.5;
+
+async function open(width, lang, source){
+  clear(); put('currencies', ['EUR', 'USD']); put('lang', lang);
+  if (source) { put('source', source); put('source_v', 2); }
+  host.innerHTML = '';
+  const f = document.createElement('iframe');
+  f.style.cssText = `width:${width}px;height:640px;border:0`;
+  host.appendChild(f);
+  await new Promise(r => { f.onload = r; f.src = '/web/index.html?' + Math.random(); });
+  const d = f.contentDocument;
+  for (let i = 0; i < 60 && !d.querySelector('.card[data-code="USD"] .rate')?.textContent; i++) await wait(250);
+  await wait(300);
+  return { w: f.contentWindow, d };
+}
+
+(async () => {
+  try {
+    for (const width of [320, 360, 375, 390, 414, 430, 768]) {
+      for (const lang of ['en', 'ru', 'el', 'de', 'ka', 'ar']) {
+        const { w, d } = await open(width, lang);
+        const tag = `${width}px ${lang}`;
+        const ios = d.getElementById('storeIos'), play = d.getElementById('storePlay');
+        if (!ios || !play) { check(false, `${tag}: значков нет на странице`); continue; }
+        check(ios.href === IOS, `${tag}: App Store ведёт на ${ios.href}`);
+        check(play.href === PLAY, `${tag}: Google Play ведёт на ${play.href}`);
+        for (const img of [ios.querySelector('img'), play.querySelector('img')])
+          check(img && img.complete && img.naturalWidth > 0, `${tag}: значок ${img?.getAttribute('src')} не загрузился`);
+        const ri = ios.getBoundingClientRect(), rp = play.getBoundingClientRect();
+        const add = d.getElementById('btnAdd').getBoundingClientRect();
+        check(ri.height >= 24 && Math.abs(ri.height - rp.height) <= 1, `${tag}: значки разного роста: ${ri.height} и ${rp.height}`);
+        check(rp.width > rp.height * 3, `${tag}: значок Google Play обрезан: ${Math.round(rp.width)}×${Math.round(rp.height)}`);
+        const midAdd = (add.top + add.bottom) / 2;
+        for (const [n, r] of [['App Store', ri], ['Google Play', rp]]) {
+          check(r.top < midAdd && midAdd < r.bottom, `${tag}: ${n} не в строке «Добавить валюту»`);
+          check(!overlap(r, add), `${tag}: ${n} налезает на «Добавить валюту»`);
+          check(r.left >= 0 && r.right <= width + 0.5, `${tag}: ${n} за краем экрана (${Math.round(r.left)}…${Math.round(r.right)})`);
+        }
+        check(add.width >= 80, `${tag}: «Добавить валюту» сжата до ${Math.round(add.width)} px`);
+        check(d.documentElement.scrollWidth <= width, `${tag}: страница шире экрана (${d.documentElement.scrollWidth} > ${width})`);
+      }
+    }
+    // подпись ExchangeRate-API: источник выбран вручную (3 = ExchangeRate-API)
+    for (const width of [320, 375, 430]) {
+      const { d } = await open(width, 'ru', 3);
+      const a = d.getElementById('attribution');
+      if (a.hidden) { check(false, `${width}px: подпись ExchangeRate-API не показана (курсы не от него?)`); continue; }
+      const ra = a.getBoundingClientRect();
+      for (const id of ['storeIos', 'storePlay', 'btnAdd'])
+        check(!overlap(ra, d.getElementById(id).getBoundingClientRect()), `${width}px: подпись налезает на ${id}`);
+      check(ra.left >= 0 && ra.right <= width + 0.5, `${width}px: подпись за краем экрана`);
+    }
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + (e.stack || e.message);
+  } finally { clear(); }
+})();
+</script>

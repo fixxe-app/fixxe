@@ -29,6 +29,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.currencyconverter.data.CurrencyRepository
 import com.example.currencyconverter.databinding.ActivityMainBinding
+import com.example.currencyconverter.ui.ReviewAsk
 import com.example.currencyconverter.ui.AmountFormat
 import com.example.currencyconverter.ui.CurrencyAdapter
 import com.example.currencyconverter.ui.CurrencyInfo
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter = CurrencyAdapter(
-            onAmountChanged = { code, amount -> vm.setActiveAmount(code, amount) },
+            onAmountChanged = { code, amount -> vm.setActiveAmount(code, amount); maybeAskReview() },
             onFocused       = { code -> vm.focusRow(code) },
             onDeleteClick   = { code -> confirmDelete(code) },
             onDone          = { dismissKeyboard() }
@@ -231,6 +232,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        countOpen()                 // до markUsed: нужен прошлый уход с экрана
         vm.resetAdjustIfExpired()   // давно не открывали — курсы снова рыночные
         vm.resetAmountIfExpired(beforeReset = ::dismissKeyboard)   // и сумма снова 1, если так выбрано
         vm.resumeAutoRefresh()
@@ -244,8 +246,41 @@ class MainActivity : AppCompatActivity() {
     // приложение ушло с экрана — свёрнуто, заблокирован телефон, открыто другое
     override fun onStop() {
         super.onStop()
+        reviewHandler.removeCallbacks(askReview)
         vm.markUsed()               // отсюда считаются 4 часа до сброса поправки
         vm.pauseAutoRefresh()
+    }
+
+    // ── Просьба об оценке (правила — ui/ReviewAsk) ──────────────────────
+    private val reviewPrefs get() = getSharedPreferences("axe_prefs", MODE_PRIVATE)
+    private val reviewHandler = android.os.Handler(android.os.Looper.getMainLooper())
+
+    private fun reviewState() = reviewPrefs.let {
+        ReviewAsk.State(it.getInt("review_opens", 0), it.getLong("review_first_at", 0),
+            it.getInt("review_asks", 0), it.getLong("review_last_ask_at", 0), it.getInt("review_opens_at_ask", 0))
+    }
+    private fun saveReviewState(s: ReviewAsk.State) = reviewPrefs.edit()
+        .putInt("review_opens", s.opens).putLong("review_first_at", s.firstAt)
+        .putInt("review_asks", s.asks).putLong("review_last_ask_at", s.lastAskAt)
+        .putInt("review_opens_at_ask", s.opensAtAsk).apply()
+
+    /** Приложение вышло на экран. Уход с экрана записывает vm.markUsed в onStop. */
+    private fun countOpen() = saveReviewState(
+        ReviewAsk.opened(reviewState(), System.currentTimeMillis(), reviewPrefs.getLong("adjust_left_at", 0)))
+
+    /** Ввели сумму: если пора — попросить оценку, когда ввод затихнет. */
+    private fun maybeAskReview() {
+        reviewHandler.removeCallbacks(askReview)
+        if (ReviewAsk.due(reviewState(), System.currentTimeMillis()))
+            reviewHandler.postDelayed(askReview, ReviewAsk.QUIET_MS)
+    }
+
+    private val askReview = Runnable {
+        val now = System.currentTimeMillis()
+        val s = reviewState()
+        if (isFinishing || !ReviewAsk.due(s, now)) return@Runnable
+        saveReviewState(ReviewAsk.asked(s, now))
+        StoreReview.request(this)   // в сборке вне Play — пустышка
     }
 
     /** На планшетах строка во всю ширину экрана выглядит пустой: код слева,

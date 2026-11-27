@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>FIXXE — Privacy Policy</h1>
-<p class="muted">Last updated: 9 October 2026</p>
+<p class="muted">Last updated: 18 November 2026</p>
 
 <p>FIXXE is a currency converter for Android, iPhone, iPad, Mac with Apple silicon and the web (PWA). This policy
 covers all of them and explains what data the app handles. Short version: <strong>FIXXE does
@@ -26,23 +26,37 @@ and no tracking. We do not collect your name, email, location, contacts, device 
 or usage data.</p>
 
 <h2>Data stored on your device</h2>
-<p>Your preferences — the list of currencies, their order, decimal precision, digit
-grouping, appearance, chosen rate source, and interface language — are stored
-<strong>locally on your device only</strong> (Android <code>SharedPreferences</code>,
-iOS and macOS <code>UserDefaults</code>, browser <code>localStorage</code>). The last downloaded rates
-are cached the same way, so the app keeps converting without a connection. None of this
-leaves your device or is sent to us or anyone else. Removing the app deletes it.</p>
+<p>Your preferences — the list of currencies and their order, decimal precision, rounding,
+digit grouping, appearance, chosen rate source and interface language — are stored
+locally on your device only (Android SharedPreferences, iOS and macOS UserDefaults,
+browser localStorage). The same applies to:</p>
+<ul>
+  <li>the last downloaded rates, so the app keeps converting without a connection;</li>
+  <li>the amount you last entered and its currency — kept for 12 hours by default; you can
+      change how long, or turn this off, in the settings;</li>
+  <li>your own rate adjustment, if you set one, and when it was last used, so it can be
+      cleared automatically.</li>
+</ul>
+<p>None of this leaves your device or is sent to us or anyone else. Removing the app (or
+clearing the site’s data in your browser) deletes it.</p>
 
 <h2>Network requests</h2>
-<p>To show exchange rates, the app fetches public mid-market rate data from these third-party
-services. Only a standard rate request is made; no personal data is included:</p>
+<p>To show exchange rates, the app fetches public rate data from these third-party services.
+Only a standard rate request is made; no personal data is included:</p>
 <ul>
+  <li>Coinbase — <a href="https://www.coinbase.com">coinbase.com</a></li>
+  <li>FXRatesAPI — <a href="https://fxratesapi.com">fxratesapi.com</a></li>
   <li>ExchangeRate-API — <a href="https://www.exchangerate-api.com">exchangerate-api.com</a></li>
   <li>Fawaz Ahmed currency-api (jsDelivr / Cloudflare)</li>
   <li>Frankfurter — data from the European Central Bank</li>
+  <li>Wise — <a href="https://wise.com">wise.com</a>, Android and iOS only, and only if you choose
+      it as the rate source in the settings. Its rates are requested per currency pair, so the
+      request names the currencies on your list — but never an amount.</li>
 </ul>
-<p>These providers may log standard technical request information (such as IP address) under
-their own privacy policies, as any website does. FIXXE does not control or receive that data.</p>
+<p>The amounts you enter are never sent anywhere: all conversion happens on your device.
+These providers may log standard technical request information (such as IP address) under
+their own privacy policies, as any website does. The same is true of the servers that host
+the web version and the APK download. FIXXE does not control or receive that data.</p>
 
 <h2>Permissions</h2>
 <p>The app requests only Internet access, used solely to fetch exchange rates. On iPhone,

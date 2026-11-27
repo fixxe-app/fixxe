@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FIXXE story · stamp · en</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&display=block" rel="stylesheet">
+<style>
+  :root{--paper:#F3EFE7;--ink:#14121A;--gold:#C9A55C;--gold-hi:#E8C77A;--green:#2E7D32;--blue:#1565C0;--purple:#6A1B9A}
+  html,body{width:1080px;height:1920px;margin:0;overflow:hidden}
+  body{position:relative;background:var(--paper);color:var(--ink);
+       font-family:Manrope,-apple-system,"SF Pro Display",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .abs{position:absolute}
+  #paper{left:0;top:0;width:1080px;height:1920px}
+  #icon{left:64px;top:268px;width:84px;height:84px;border-radius:20px;display:block;box-shadow:0 6px 16px rgba(20,18,26,.18)}
+  #word{left:168px;top:268px;height:84px;display:flex;align-items:center;font:800 46px/1 Manrope,sans-serif;letter-spacing:.22em;color:var(--green)}
+  #rule{left:64px;top:360px;width:120px;height:4px;background:var(--gold)}
+  #h1{left:64px;top:404px;width:952px;margin:0;font-family:Unbounded,sans-serif;font-weight:800;font-size:84px;
+      line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+  #h1 span{display:block;white-space:nowrap}
+  #h1 .b{color:var(--purple)}
+  #card{left:64px;top:584px;width:952px;height:545px;border-radius:40px;overflow:hidden;
+        transform:rotate(2deg);transform-origin:50% 50%;background:#F2F3F5;
+        box-shadow:0 40px 80px rgba(60,20,80,.18),0 6px 18px rgba(60,20,80,.10),0 0 0 1px rgba(60,20,80,.06)}
+  #card img{position:absolute;left:0;top:-264px;width:952px;display:block}
+  #stamp{left:53px;top:952px;width:570px;height:320px;transform:rotate(-9deg);transform-origin:50% 50%;
+         mix-blend-mode:multiply;overflow:visible}
+  /* the cut: market vs adjusted, outside the card under the USD amount */
+  #call{right:64px;top:1172px;display:grid;grid-template-columns:auto auto auto;column-gap:14px;row-gap:0;align-items:baseline;justify-items:end}
+  #call .lbl{grid-column:1/4}
+  #call .t{font:700 25px/1.3 Manrope,sans-serif;color:rgba(20,18,26,.5)}
+  #call .t.adj{color:#6A1B9A}
+  #call .lbl{font:700 26px/1.2 Manrope,sans-serif;color:rgba(20,18,26,.55);letter-spacing:.02em}
+  #call .row{display:flex;align-items:baseline;gap:14px;white-space:nowrap}
+  #call .was{font:700 38px/1.15 Manrope,sans-serif;color:#8C8794;text-decoration:line-through;
+             text-decoration-thickness:3px;text-decoration-color:rgba(20,18,26,.55)}
+  #call .arr{font:800 36px/1 Manrope,sans-serif;color:var(--gold)}
+  #call .now{font:800 54px/1.1 Manrope,sans-serif;color:var(--purple);letter-spacing:-.01em}
+  #call .tags{display:flex;gap:14px;font:600 22px/1.2 Manrope,sans-serif;color:rgba(20,18,26,.5)}
+  #sub{left:64px;top:1330px;width:952px;margin:0;font:700 34px/1.25 Manrope,sans-serif;color:var(--purple);text-wrap:balance}
+  #cta1{left:64px;top:1440px;font:700 34px/1.2 Manrope,sans-serif;color:rgba(20,18,26,.70);white-space:nowrap}
+  #cta2{left:64px;top:1494px;font:800 44px/1.2 Manrope,sans-serif;color:var(--blue);white-space:nowrap;display:flex;align-items:center;gap:16px}
+  #cta2 .arr{color:var(--gold);font-weight:800;font-size:40px;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+<svg id="paper" class="abs" viewBox="0 0 1080 1920" aria-hidden="true">
+  <defs>
+    <filter id="fibre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.06" numOctaves="3" seed="4"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.28  0 0 0 0 0.20  0 0 0 0.9 -0.25"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0.6 -0.1"/>
+    </filter>
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="60%" stop-color="#5a4630" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#5a4630" stop-opacity=".10"/>
+    </radialGradient>
+    <!-- calm the top 250 px (platform avatar/"Sponsored" sit there) -->
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3040" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#3a3040" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" filter="url(#fibre)" opacity=".05"/>
+  <rect width="1080" height="1920" filter="url(#grain)" opacity=".05"/>
+  <rect width="1080" height="1920" fill="url(#vig)"/>
+  <rect width="1080" height="250" fill="url(#top)"/>
+</svg>
+
+<img id="icon" class="abs" src="icon-512.png" alt="">
+<div id="word" class="abs">FIXXE</div>
+<div id="rule" class="abs"></div>
+
+<h1 id="h1" class="abs"><span class="a">Exchange booths take a cut.</span><span class="b">Know it first.</span></h1>
+
+<div id="card" class="abs"><img src="cap-en.png" alt=""></div>
+
+<div id="call" class="abs">
+  <div class="lbl">100 EUR → USD</div>
+  <span class="was">109.69</span><span class="arr">→</span><span class="now">111.34</span>
+  <span class="t">market</span><span></span><span class="t adj">with +1.5%</span>
+</div>
+
+<svg id="stamp" class="abs" viewBox="0 0 570 320" aria-hidden="true">
+  <defs>
+    <filter id="ink" x="-6%" y="-10%" width="112%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="21" result="w1"/>
+      <feDisplacementMap in="SourceGraphic" in2="w1" scale="5" xChannelSelector="R" yChannelSelector="G" result="d1"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" seed="8" result="w2"/>
+      <feDisplacementMap in="d1" in2="w2" scale="3.5" xChannelSelector="G" yChannelSelector="R" result="rough"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.42" numOctaves="2" seed="5" result="sp"/>
+      <feColorMatrix in="sp" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -17 0 0 0 12.6" result="speck"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.014" numOctaves="3" seed="13" result="pt"/>
+      <feColorMatrix in="pt" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1.5 0 0 0 0.22" result="patch"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.08" numOctaves="3" seed="44" result="sc"/>
+      <feColorMatrix in="sc" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -7 0 0 0 5.3" result="scuff"/>
+      <feComposite in="speck" in2="patch" operator="arithmetic" k1="1" result="m1"/>
+      <feComposite in="m1" in2="scuff" operator="arithmetic" k1="1" result="mask"/>
+      <feComposite in="rough" in2="mask" operator="in" result="inked"/>
+      <feGaussianBlur in="inked" stdDeviation="0.5"/>
+    </filter>
+    <linearGradient id="pressG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#f4f4f4"/><stop offset="1" stop-color="#a6a6a6"/>
+    </linearGradient>
+    <mask id="press" maskUnits="userSpaceOnUse" x="-40" y="-40" width="650" height="400">
+      <rect x="-40" y="-40" width="650" height="400" fill="url(#pressG)"/>
+    </mask>
+  </defs>
+  <g mask="url(#press)"><g filter="url(#ink)" fill="#6A1B9A" stroke="#6A1B9A" opacity=".92">
+    <rect x="9" y="9" width="552" height="302" rx="36" fill="none" stroke-width="13"/>
+    <rect x="32" y="32" width="506" height="256" rx="18" fill="none" stroke-width="4"/>
+    <text id="stTxt" x="285" y="200" text-anchor="middle" stroke="none"
+          font-family="Unbounded" font-weight="900" font-size="150" letter-spacing="-3">+1.5%</text>
+    <line x1="58" y1="234" x2="512" y2="234" stroke-width="5"/>
+    <text id="stCap" x="285" y="290" text-anchor="middle" stroke="none"
+          font-family="Unbounded" font-weight="800" font-size="40" letter-spacing="6">YOUR FEE</text>
+  </g></g>
+</svg>
+
+<p id="sub" class="abs">Set your % once. Every amount includes it.</p>
+
+<div id="cta1" class="abs">Free · App Store · Google Play · Web</div>
+<div id="cta2" class="abs"><span class="arr">→</span><span>Search “FIXXE”</span></div>
+
+<script>
+document.fonts.ready.then(() => {
+  const h = document.getElementById('h1');
+  let fs = 84;
+  const fits = () => [...h.children].every(s => s.scrollWidth <= 952);
+  while (!fits() && fs > 40) { fs -= 1; h.style.fontSize = fs + 'px'; }
+
+  const cv = document.createElement('canvas').getContext('2d');
+  const t = document.getElementById('stTxt');
+  let size = 150;
+  for (let i = 0; i < 4; i++) { size *= 450 / t.getComputedTextLength(); t.setAttribute('font-size', size.toFixed(1)); }
+  cv.font = '900 ' + size + 'px Unbounded';
+  const m = cv.measureText('+1.5%');
+  const gh = m.actualBoundingBoxAscent + m.actualBoundingBoxDescent;
+  t.setAttribute('y', (44 + (226 - 44 - gh) / 2 + m.actualBoundingBoxAscent).toFixed(1));
+
+  const c = document.getElementById('stCap');
+  let cs = 40;
+  let ls = 6;
+  while (c.getComputedTextLength() > 430 && ls > 2) { ls -= 0.5; c.setAttribute('letter-spacing', ls); }
+  while (c.getComputedTextLength() > 430 && cs > 22) { cs -= 1; c.setAttribute('font-size', cs); }
+  cv.font = '800 ' + cs + 'px Unbounded';
+  const mc = cv.measureText(c.textContent);
+  const ch = mc.actualBoundingBoxAscent + mc.actualBoundingBoxDescent;
+  c.setAttribute('y', (246 + (292 - 246 - ch) / 2 + mc.actualBoundingBoxAscent).toFixed(1));
+
+  // sub: max two lines, shrink if needed
+  const s = document.getElementById('sub');
+  let ss = 34;
+  while (s.offsetHeight > 2 * 34 * 1.25 + 2 && ss > 26) { ss -= 1; s.style.fontSize = ss + 'px'; }
+
+  document.body.dataset.fonts = ['Unbounded','Manrope'].map(f => f + ':' + document.fonts.check('800 40px ' + f)).join(',');
+  document.body.dataset.sizes = fs + '/' + size.toFixed(0) + '/' + cs + '/' + ss + '/sub-h' + s.offsetHeight;
+});
+</script>
+</body>
+</html>

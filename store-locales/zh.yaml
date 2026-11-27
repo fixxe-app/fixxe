@@ -65,7 +65,7 @@ description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实
   Rates By Exchange Rate API.
 
   '
-whats_new: "较长的金额现在会缩小以完整显示，不再被截断。"
+whats_new: "细节改进与问题修复。"
 landing:
   page_title: FIXXE — 货币换算
   install_title: 安装方式

@@ -80,6 +80,9 @@ META=$(mktemp -t fixxe-meta)   # при успехе удаляется, при 
 for attempt in 1 2 3; do
   (cd ios && appstore-ops metadata push) > "$META" 2>&1 || true
   echo "  залито локалей: $(grep -c '^  metadata: ' "$META" || true)"
+  # push сначала пишет категории; если Apple на этом зависла, до текстов он
+  # не дошёл — «Что нового» записываем напрямую (остальные тексты у версии от прошлой)
+  $PY -I tools/asc_release.py whats-new "$VER"
   # 4. Проверка и отправка; код 3 — остались пустые «Что нового»
   [ "$attempt" = 1 ] && echo "→ 4/4 проверка и отправка на ревью"
   set +e; $PY -I tools/asc_release.py finish "$VER"; code=$?; set -e

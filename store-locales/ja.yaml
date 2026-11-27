@@ -65,7 +65,7 @@ description: 'FIXXEは、実勢の仲値レートで動く速くて見やすい�
   Rates By Exchange Rate API.
 
   '
-whats_new: "長い金額は切れずに、収まるよう縮小して表示されるようになりました。"
+whats_new: "細かな改善と修正。"
 landing:
   page_title: FIXXE — 通貨換算アプリ
   install_title: インストール方法

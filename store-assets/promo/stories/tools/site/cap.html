@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><script>
+// cap.html?s=<json {key:value}>&type=EUR:150000000 — ставит настройки и открывает приложение
+const q = new URLSearchParams(location.search);
+for (const k of Object.keys(localStorage)) if (k.startsWith('fixe.')) localStorage.removeItem(k);
+const s = JSON.parse(q.get('s') || '{}');
+for (const k in s) if (s[k] === "NOW") s[k] = Date.now();
+for (const k in s) localStorage.setItem('fixe.' + k, JSON.stringify(s[k]));
+location.replace('/web/index.html' + (q.get('type') ? '#type=' + q.get('type') : ''));
+</script>

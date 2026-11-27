@@ -1,7 +1,7 @@
 title: "FIXXE – Conversor de divisas"
-subtitle: Tipos de cinco fuentes
-short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
-keywords: "moneda,conversor,divisas,cambio,tipo,dinero,viaje,forex,cripto,finanzas,fixer,fixe"
+subtitle: "Tipo de cambio sin conexión"
+short_description: "Tipos de cambio en vivo de 5 fuentes. 300+ divisas, sin conexión, sin anuncios"
+keywords: "moneda,euro,dólar,libra,peso,calculadora,viaje,dinero,forex,cripto,tasa,gratis,divisa,efectivo"
 promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
 description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
@@ -65,7 +65,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   Rates By Exchange Rate API.
 
   '
-whats_new: "Los importes largos ahora se reducen para caber en lugar de cortarse."
+whats_new: "Pequeñas mejoras y correcciones."
 landing:
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar

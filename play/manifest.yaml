@@ -298,7 +298,7 @@ locales:
       '
   de-DE:
     title: FIXXE – Währungsrechner
-    short_description: Mittelkurse aus 5 Quellen, 300+ Währungen, offline nutzbar, ohne Werbung.
+    short_description: Wechselkurse live aus 5 Quellen. 300+ Währungen, offline, ohne Werbung
     full_description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuellen Mittelkursen — der neutralen Mitte zwischen weltweiten An- und Verkaufspreisen, ohne Bankaufschläge.
 
 
@@ -428,7 +428,7 @@ locales:
       '
   en-US:
     title: FIXXE – Currency Converter
-    short_description: 'Currency calculator: live rates from 5 sources, 300+ currencies, offline, no ads'
+    short_description: 'Live exchange rates from 5 sources: 300+ currencies, works offline, no ads'
     full_description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -493,7 +493,7 @@ locales:
       '
   en-GB:
     title: FIXXE – Currency Converter
-    short_description: 'Currency calculator: live rates from 5 sources, 300+ currencies, offline, no ads'
+    short_description: 'Live exchange rates from 5 sources: 300+ currencies, works offline, no ads'
     full_description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
 
@@ -558,7 +558,7 @@ locales:
       '
   es-ES:
     title: FIXXE – Conversor de divisas
-    short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    short_description: Tipos de cambio en vivo de 5 fuentes. 300+ divisas, sin conexión, sin anuncios
     full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
@@ -623,7 +623,7 @@ locales:
       '
   es-419:
     title: FIXXE – Conversor de divisas
-    short_description: Tipos medios de 5 fuentes, 300+ monedas, sin conexión y sin anuncios.
+    short_description: Tipos de cambio en vivo de 5 fuentes. 300+ divisas, sin conexión, sin anuncios
     full_description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos medios de mercado en directo: el punto neutro entre los precios mundiales de compra y venta, sin márgenes bancarios.
 
 
@@ -1468,7 +1468,7 @@ locales:
       '
   ka-GE:
     title: FIXXE – ვალუტის კონვერტორი
-    short_description: საშუალო კურსები 5 წყაროდან, 300+ ვალუტა, მუშაობს ოფლაინ, რეკლამის გარეშე.
+    short_description: ლარისა და 300+ ვალუტის კურსები 5 წყაროდან, მუშაობს ოფლაინ, რეკლამის გარეშე.
     full_description: 'FIXXE არის სწრაფი და მოწესრიგებული ვალუტის კონვერტორი ბაზრის საშუალო კურსებით — ეს არის ნეიტრალური შუაწერტილი მსოფლიო ყიდვისა და გაყიდვის ფასებს შორის, საბანკო ზედნადების გარეშე.
 
 
@@ -2183,7 +2183,7 @@ locales:
       '
   ru-RU:
     title: FIXXE – Конвертер валют
-    short_description: Среднерыночные курсы из 5 источников, 300+ валют, офлайн, без рекламы.
+    short_description: Курсы валют онлайн и без интернета. Рубль, тенге, лари, динар и ещё 300+ валют
     full_description: 'FIXXE — быстрый и чистый конвертер валют со среднерыночными курсами: это нейтральная середина между мировыми ценами покупки и продажи, без банковских наценок.
 
 
@@ -2377,66 +2377,66 @@ locales:
 
       '
   sr:
-    title: FIXXE – Конвертор валута
-    short_description: Средњи курсеви из 5 извора, 300+ валута, ради офлајн, без реклама.
-    full_description: 'FIXXE је брз и прегледан конвертор валута са живим средњим курсевима — неутралном средином између светских куповних и продајних цена, без банкарских маржи.
+    title: FIXXE – Konvertor valuta
+    short_description: Kurs dinara, evra i 300+ valuta uživo. Radi bez interneta. Bez reklama.
+    full_description: 'FIXXE je brz i pregledan konvertor valuta sa živim srednjim kursevima — neutralnom sredinom između svetskih kupovnih i prodajnih cena, bez bankarskih marži.
 
 
-      ПО ЧЕМУ СЕ FIXXE РАЗЛИКУЈЕ
+      PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Пет извора курса са аутоматском заменом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако извор падне, апликација тихо прелази на следећи и показује одакле су бројке. Већина конвертора зависи од једног јединог API-ја и, кад он закаже, једноставно не приказује ништа. Више волите један извор? Изаберите га у подешавањима — остали остају као резерва.
+      • Pet izvora kursa sa automatskom zamenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sledeći i pokazuje odakle su brojke. Većina konvertora zavisi od jednog jedinog API-ja i, kad on zakaže, jednostavno ne prikazuje ništa. Više volite jedan izvor? Izaberite ga u podešavanjima — ostali ostaju kao rezerva.
 
 
-      • Ради без интернета — последњи курсеви остају на уређају, па апликација рачуна и без везе. А ако су ти курсеви старији од једног дана, то отворено каже уместо да их приказује као свеже.
+      • Radi bez interneta — poslednji kursevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti kursevi stariji od jednog dana, to otvoreno kaže umesto da ih prikazuje kao sveže.
 
 
-      • Паметно заокруживање — изабрана прецизност је минимум, а не лудачка кошуља: ако би заокруживање искривило износ за више од 2%, децимале се додају саме. 0,94 CHF никада не постаје „1", а мали износи у криптовалутама никада не падну на нулу. Ви бирате како се износи заокружују: навише, па приказани износ никад није мањи од стварног и новца је увек довољно, или на најближе.
+      • Pametno zaokruživanje — izabrana preciznost je minimum, a ne ludačka košulja: ako bi zaokruživanje iskrivilo iznos za više od 2%, decimale se dodaju same. 0,94 CHF nikada ne postaje „1", a mali iznosi u kriptovalutama nikada ne padnu na nulu. Vi birate kako se iznosi zaokružuju: naviše, pa prikazani iznos nikad nije manji od stvarnog i novca je uvek dovoljno, ili na najbliže.
 
 
-      • Динамична основица — курсеви се прерачунавају према валути коју управо уређујете, а не према непроменљивој. Без пребацивања напред-назад.
+      • Dinamična osnovica — kursevi se preračunavaju prema valuti koju upravo uređujete, a ne prema nepromenljivoj. Bez prebacivanja napred-nazad.
 
 
-      • Памти износ — затворите апликацију, а унети број вас чека кад се вратите. Колико дуго, бирате у подешавањима: 12 или 24 сата, увек или само док је апликација отворена.
+      • Pamti iznos — zatvorite aplikaciju, a uneti broj vas čeka kad se vratite. Koliko dugo, birate u podešavanjima: 12 ili 24 sata, uvek ili samo dok je aplikacija otvorena.
 
 
-      • Корекција курса — задајте проценат за провизију банке, маржу или губитке при преносу (на пример +1,5%) и сви износи одмах показују стварни резултат. Прерачунате бројке су јасно означене, па их нећете помешати са тржишним курсом. Ако је не оставите увек укључену, сама се искључује после четири сата без коришћења, па заборављена провизија никад не искривљује сутрашње бројке.
+      • Korekcija kursa — zadajte procenat za proviziju banke, maržu ili gubitke pri prenosu (na primer +1,5%) i svi iznosi odmah pokazuju stvarni rezultat. Preračunate brojke su jasno označene, pa ih nećete pomešati sa tržišnim kursom. Ako je ne ostavite uvek uključenu, sama se isključuje posle četiri sata bez korišćenja, pa zaboravljena provizija nikad ne iskrivljuje sutrašnje brojke.
 
 
-      • Без реклама. Без налога. Без праћења. Једина дозвола је приступ интернету; ваш списак, његов редослед и подешавања никада не напуштају уређај.
+      • Bez reklama. Bez naloga. Bez praćenja. Jedina dozvola je pristup internetu; vaš spisak, njegov redosled i podešavanja nikada ne napuštaju uređaj.
 
 
-      ВАЛУТЕ
+      VALUTE
 
 
-      • 300+ валута са заставама држава
+      • 300+ valuta sa zastavama država
 
-      • Регионалне валуте које конвертори често прескачу: руска рубља, српски динар, грузијски лари, таџикистански сомони, киргиски сом
+      • Regionalne valute koje konvertori često preskaču: ruska rublja, srpski dinar, gruzijski lari, tadžikistanski somoni, kirgiski som
 
-      • Криптовалуте — Bitcoin, Ethereum и још 150+ — и племенити метали
-
-
-      СВАКОДНЕВНИ ДЕТАЉИ
+      • Kriptovalute — Bitcoin, Ethereum i još 150+ — i plemeniti metali
 
 
-      • Упишите у било које поље и све остале валуте прерачунавају се одмах
-
-      • Превуците редове за ручицу да промените редослед, уклоните један једним додиром
-
-      • Претрага свесна извора: филтрирајте валуте по пружаоцу, видите где је која доступна, промените извор једним додиром
-
-      • Прецизност: цели бројеви, 1, 2 или 4 децимале
-
-      • Одвајање хиљада размаком или зарезом: 1 234.56 или 1,234.56
-
-      • Светла или тамна тема, или као систем
-
-      • 40 језика, енглески као подразумевани, уз могућност праћења језика уређаја — укључујући распореде здесна налево
-
-      • Телефон, таблет и веб: иста апликација на iPhone-у, iPad-у, Android-у и као веб апликација коју можете поставити на почетни екран
+      SVAKODNEVNI DETALJI
 
 
-      Приказани курсеви су оквирне средње вредности, а не берзанске котације у реалном времену.
+      • Upišite u bilo koje polje i sve ostale valute preračunavaju se odmah
+
+      • Prevucite redove za ručicu da promenite redosled, uklonite jedan jednim dodirom
+
+      • Pretraga svesna izvora: filtrirajte valute po pružaocu, vidite gde je koja dostupna, promenite izvor jednim dodirom
+
+      • Preciznost: celi brojevi, 1, 2 ili 4 decimale
+
+      • Odvajanje hiljada razmakom ili zarezom: 1 234.56 ili 1,234.56
+
+      • Svetla ili tamna tema, ili kao sistem
+
+      • 40 jezika, engleski kao podrazumevani, uz mogućnost praćenja jezika uređaja — uključujući rasporede zdesna nalevo
+
+      • Telefon, tablet i veb: ista aplikacija na iPhone-u, iPad-u, Android-u i kao veb aplikacija koju možete postaviti na početni ekran
+
+
+      Prikazani kursevi su okvirne srednje vrednosti, a ne berzanske kotacije u realnom vremenu.
 
       Rates By Exchange Rate API.
 

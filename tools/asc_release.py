@@ -12,6 +12,8 @@ cryptography). Ключ App Store Connect берётся из профиля tes
   asc_release.py adopt 1.68     — прошлая версия ещё не вышла: снять её с ревью
                                   и переименовать в 1.68
   asc_release.py has-build 1.68 — загружена ли сборка этой версии (код 0/1)
+  asc_release.py unsubmit 1.69  — снять версию с ревью (станет редактируемой)
+  asc_release.py whats-new 1.69 — записать «Что нового» из манифеста во все локали
 
 adopt: Apple не даёт завести новую версию, пока прошлая не выпущена. Если
 прошлая ещё ждёт ревью, заявку отменяем (версия становится DEVELOPER_REJECTED,
@@ -24,14 +26,15 @@ clear-shots: новая версия в App Store наследует скрин�
 
 finish:
   1. версия есть и к ней прикреплена сборка этой же версии;
-  2. «Что нового» заполнено во ВСЕХ локалях — `metadata push` может
-     оборваться на полпути (1.64), и тогда Apple отвечает на отправку только
-     невнятным ENTITY_STATE_INVALID;
+  2. «Что нового» заполнено во ВСЕХ локалях и совпадает с манифестом —
+     `metadata push` может оборваться на полпути (1.64), и тогда Apple отвечает
+     на отправку только невнятным ENTITY_STATE_INVALID; а может не залить
+     ничего, и тогда остались бы тексты прошлой версии (1.69);
   3. выпуск сразу после одобрения (AFTER_APPROVAL), без рекламного ID;
   4. отправка на ревью через reviewSubmissions — `appstore-ops submit`
      сломан (Apple убрала appAvailabilities); сразу после загрузки сборки
      Apple ещё обрабатывает материалы, поэтому — с повторами.
-Код возврата 3 — пустые «Что нового» (ship-ios.sh перезальёт тексты и
+Код возврата 3 — пустые или старые «Что нового» (ship-ios.sh перезальёт тексты и
 повторит), остальное ненулевое — ошибка.
 """
 import base64, json, os, pathlib, re, sys, time, urllib.error, urllib.request
@@ -70,6 +73,11 @@ def req(method, path, body=None):
         return {"err": e.code, "body": e.read().decode()}
 
 
+def _manifest():
+    import yaml
+    return yaml.safe_load((pathlib.Path(__file__).resolve().parent.parent / "appstore/manifest.yaml").read_text())
+
+
 def version(ver):
     vs = req("GET", f"/v1/apps/{APP}/appStoreVersions?filter[platform]=IOS&limit=10")["data"]
     return next((v for v in vs if v["attributes"]["versionString"] == ver), None)
@@ -77,6 +85,40 @@ def version(ver):
 
 PENDING = ("WAITING_FOR_REVIEW", "IN_REVIEW")
 EDITABLE = ("PREPARE_FOR_SUBMISSION", "DEVELOPER_REJECTED", "REJECTED", "METADATA_REJECTED", "INVALID_BINARY")
+
+
+def _cancel_review(vid, label, state):
+    """Снять версию с ревью и дождаться, пока она станет редактируемой (DEVELOPER_REJECTED)."""
+    subs = req("GET", f"/v1/reviewSubmissions?filter[app]={APP}&filter[platform]=IOS&limit=20")["data"]
+    sid = None
+    for sub in subs:
+        if sub["attributes"]["state"] not in ("WAITING_FOR_REVIEW", "IN_REVIEW", "UNRESOLVED_ISSUES"):
+            continue
+        items = req("GET", f"/v1/reviewSubmissions/{sub['id']}/items?include=appStoreVersion").get("data", [])
+        if any(((i.get("relationships") or {}).get("appStoreVersion") or {}).get("data", {}).get("id") == vid
+               for i in items):
+            sid = sub["id"]; break
+    if not sid:
+        sys.exit(f"✗ {label} в состоянии {state}, но заявки на ревью с ней не нашёл")
+    r = req("PATCH", f"/v1/reviewSubmissions/{sid}", {"data": {"type": "reviewSubmissions", "id": sid,
+            "attributes": {"canceled": True}}})
+    if "err" in r:
+        sys.exit(f"✗ не удалось снять {label} с ревью: {r['body'][:300]}")
+    print(f"  {label} снята с ревью, жду, пока станет редактируемой…")
+    for _ in range(40):                        # до 10 минут
+        state = req("GET", f"/v1/appStoreVersions/{vid}")["data"]["attributes"]["appStoreState"]
+        if state in EDITABLE:
+            return state
+        time.sleep(15)
+    sys.exit(f"✗ {label} так и не стала редактируемой: {state}")
+
+
+def cmd_unsubmit(ver):
+    v = version(ver) or sys.exit(f"✗ версии {ver} в App Store Connect нет")
+    state = v["attributes"]["appStoreState"]
+    if state not in PENDING:
+        print(f"  {ver} в состоянии {state} — снимать с ревью нечего"); return
+    print(f"✓ {ver} теперь {_cancel_review(v['id'], ver, state)}")
 
 
 def cmd_adopt(ver):
@@ -88,29 +130,7 @@ def cmd_adopt(ver):
         return
     oid, over, ost = old["id"], old["attributes"]["versionString"], old["attributes"]["appStoreState"]
     if ost in PENDING:
-        subs = req("GET", f"/v1/reviewSubmissions?filter[app]={APP}&filter[platform]=IOS&limit=20")["data"]
-        sid = None
-        for sub in subs:
-            if sub["attributes"]["state"] not in ("WAITING_FOR_REVIEW", "IN_REVIEW", "UNRESOLVED_ISSUES"):
-                continue
-            items = req("GET", f"/v1/reviewSubmissions/{sub['id']}/items?include=appStoreVersion").get("data", [])
-            if any(((i.get("relationships") or {}).get("appStoreVersion") or {}).get("data", {}).get("id") == oid
-                   for i in items):
-                sid = sub["id"]; break
-        if not sid:
-            sys.exit(f"✗ {over} в состоянии {ost}, но заявки на ревью с ней не нашёл")
-        r = req("PATCH", f"/v1/reviewSubmissions/{sid}", {"data": {"type": "reviewSubmissions", "id": sid,
-                "attributes": {"canceled": True}}})
-        if "err" in r:
-            sys.exit(f"✗ не удалось снять {over} с ревью: {r['body'][:300]}")
-        print(f"  {over} снята с ревью, жду, пока станет редактируемой…")
-        for _ in range(40):                        # до 10 минут
-            ost = req("GET", f"/v1/appStoreVersions/{oid}")["data"]["attributes"]["appStoreState"]
-            if ost in EDITABLE:
-                break
-            time.sleep(15)
-        else:
-            sys.exit(f"✗ {over} так и не стала редактируемой: {ost}")
+        ost = _cancel_review(oid, over, ost)
     r = req("PATCH", f"/v1/appStoreVersions/{oid}", {"data": {"type": "appStoreVersions", "id": oid,
             "attributes": {"versionString": ver}}})
     if "err" in r:
@@ -148,6 +168,26 @@ def cmd_clear_shots(ver):
                 if r.get("err"): sys.exit(f"✗ не удалось удалить скриншот: {r['err']} {r['body'][:200]}")
                 gone += 1
     print(f"✓ из версии {ver} убрано старых скриншотов: {gone}")
+
+
+def cmd_whats_new(ver):
+    """«Что нового» из манифеста — напрямую в локали версии. `metadata push`
+    сначала пишет категории, и если Apple на этом зависает (1.69: таймаут),
+    до текстов он не доходит вовсе."""
+    v = version(ver) or sys.exit(f"✗ версии {ver} в App Store Connect нет")
+    want = {k: (x.get("whats_new") or "").strip() for k, x in _manifest()["locales"].items()}
+    locs = req("GET", f"/v1/appStoreVersions/{v['id']}/appStoreVersionLocalizations?limit=50")["data"]
+    done = 0
+    for loc in locs:
+        text = want.get(loc["attributes"]["locale"])
+        if not text or (loc["attributes"].get("whatsNew") or "").strip() == text:
+            continue
+        r = req("PATCH", f"/v1/appStoreVersionLocalizations/{loc['id']}", {"data": {
+                "type": "appStoreVersionLocalizations", "id": loc["id"], "attributes": {"whatsNew": text}}})
+        if "err" in r:
+            sys.exit(f"✗ {loc['attributes']['locale']}: не записать «Что нового»: {r['body'][:300]}")
+        done += 1
+    print(f"  «Что нового» записано в {done} из {len(locs)} локалей (остальные уже совпадали)")
 
 
 def cmd_finish(ver):
@@ -188,12 +228,18 @@ def cmd_finish(ver):
     print(f"  сборка {build['attributes']['version']} ({bver}), {build['attributes']['processingState']}")
 
     # 2. «Что нового» во всех локалях
+    #    и совпадает с манифестом: новая версия наследует тексты прошлой, и
+    #    если заливка не прошла, на ревью ушли бы старые «Что нового» (1.69)
     locs = req("GET", f"/v1/appStoreVersions/{vid}/appStoreVersionLocalizations?limit=50")["data"]
-    empty = [l["attributes"]["locale"] for l in locs if not (l["attributes"].get("whatsNew") or "").strip()]
-    if empty:
-        print(f"✗ пустое «Что нового» в {len(empty)} из {len(locs)} локалей: {', '.join(empty)}")
+    want = {k: (v.get("whats_new") or "").strip() for k, v in _manifest()["locales"].items()}
+    got = {l["attributes"]["locale"]: (l["attributes"].get("whatsNew") or "").strip() for l in locs}
+    empty = [k for k, v in got.items() if not v]
+    stale = [k for k, v in got.items() if v and want.get(k) and v != want[k]]
+    if empty or stale:
+        if empty: print(f"✗ пустое «Что нового» в {len(empty)} из {len(locs)} локалей: {', '.join(empty)}")
+        if stale: print(f"✗ «Что нового» не из манифеста (старое?) в {len(stale)} из {len(locs)} локалей: {', '.join(stale)}")
         sys.exit(3)
-    print(f"  «Что нового» заполнено во всех {len(locs)} локалях")
+    print(f"  «Что нового» во всех {len(locs)} локалях — как в манифесте")
 
     # 3. выпуск сразу после одобрения
     r = req("PATCH", f"/v1/appStoreVersions/{vid}", {"data": {"type": "appStoreVersions", "id": vid,
@@ -238,7 +284,8 @@ def cmd_finish(ver):
 
 if __name__ == "__main__":
     cmds = {"state": cmd_state, "finish": cmd_finish, "clear-shots": cmd_clear_shots,
-            "adopt": cmd_adopt, "has-build": cmd_has_build}
+            "adopt": cmd_adopt, "has-build": cmd_has_build, "unsubmit": cmd_unsubmit,
+            "whats-new": cmd_whats_new}
     if len(sys.argv) != 3 or sys.argv[1] not in cmds:
         sys.exit(__doc__)
     cmds[sys.argv[1]](sys.argv[2])

@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""Generates bleed-en.html and bleed-ru.html from one template (same layout, only copy differs).
+Round 2. Numbers come from cap-en.png / cap-ru.png: real web app, 360 CSS px wide, dark,
+currencies EUR+VND, EUR 1 000 000 typed, grouping 1, decimals 2."""
+import pathlib
+
+HERE = pathlib.Path(__file__).parent
+
+# Crop of the real capture (1080 px wide = 360 CSS px x3): rows EUR (318-552) + VND (570-786)
+CAP_W = 1080
+CROP_Y0, CROP_Y1 = 300, 804
+CARD_W = 952
+S = CARD_W / CAP_W                     # 0.8815
+CARD_H = round((CROP_Y1 - CROP_Y0) * S)
+CARD_TOP = 884
+ROW = dict(x0=31, x1=1049, y0=570, y1=786)       # VND row card in capture px
+
+def ad_x(x): return 64 + x * S
+def ad_y(y): return CARD_TOP + (y - CROP_Y0) * S
+
+BIG = "28 181 894 209.00"                         # VND amount, identical in cap-en.png and cap-ru.png
+
+COPY = {
+    "en": dict(lang="en", head='Every zero <b>fits.</b>',
+               sub="Long numbers shrink to fit, never cut off.",
+               cta1="Free · App Store · Google Play · Web",
+               cta2="Search “FIXXE”", cap="cap-en.png"),
+    "ru": dict(lang="ru", head='Все нули <b>влезут.</b>',
+               sub="Длинная сумма ужмётся, но влезет целиком.",
+               cta1="Бесплатно · App Store · Google Play · веб",
+               cta2="Ищи «FIXXE» в магазине", cap="cap-ru.png"),
+}
+
+TEMPLATE = r"""<!doctype html>
+<html lang="%(lang)s"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&display=block" rel="stylesheet">
+<style>
+:root{--night:#0B0F17;--blue:#64B5F6;--gold:#C9A55C;--gold-hi:#E8C77A;--green:#81C784;--appbg:#121212}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden}
+body{position:relative;background:var(--night);color:#fff;
+  font-family:Manrope,-apple-system,"SF Pro Display",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.abs{position:absolute}
+
+/* ambient light behind the proof card */
+.glow{left:-200px;top:760px;width:1480px;height:760px;
+  background:radial-gradient(ellipse 50%% 45%% at 50%% 50%%,rgba(100,181,246,.13),rgba(100,181,246,0) 70%%)}
+
+/* giant number: the real VND amount, cut by both canvas edges */
+.big{left:-61px;top:%(big_top)dpx;white-space:nowrap;font-family:Unbounded,sans-serif;font-weight:900;
+  font-size:%(big_fs)dpx;line-height:1;letter-spacing:-.02em;color:var(--blue);opacity:.42}
+
+/* lockup (shared) */
+.icon{left:64px;top:268px;width:84px;height:84px;border-radius:20px}
+.word{left:168px;top:268px;height:84px;display:flex;align-items:center;
+  font:800 46px Manrope,sans-serif;letter-spacing:.22em;color:var(--green)}
+.rule{left:64px;top:360px;width:120px;height:4px;background:var(--gold)}
+
+/* headline */
+.head{left:64px;top:404px;width:952px;font-family:Unbounded,sans-serif;font-weight:800;
+  line-height:1.02;letter-spacing:-.015em;color:#fff}
+.head b{font-weight:800;color:var(--blue)}
+
+/* real app crop */
+.card{left:64px;top:%(card_top)dpx;width:%(card_w)dpx;height:%(card_h)dpx;border-radius:40px;overflow:hidden;
+  background:var(--appbg) url(%(cap)s) no-repeat 0 -%(bg_y).2fpx / %(card_w)dpx auto;
+  box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1.5px rgba(255,255,255,.07)}
+
+/* annotation: thin gold hairline + big gold squeeze arrows on the long row */
+.hl{left:%(hl_x).1fpx;top:%(hl_y).1fpx;width:%(hl_w).1fpx;height:%(hl_h).1fpx;box-sizing:border-box;
+  border:2px solid rgba(232,199,122,.6);border-radius:28px}
+.sq{top:%(sq_top)dpx;width:%(sq_w)dpx;height:72px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.55))}
+.sqL{left:0}.sqR{left:%(sqR_x)dpx}
+
+/* sub */
+.sub{left:64px;top:%(sub_top)dpx;width:952px;font-weight:700;line-height:1.22;color:rgba(255,255,255,.9);white-space:nowrap}
+
+/* CTA (shared, round 2: no URL) */
+.cta1{left:64px;top:1440px;font:700 34px Manrope,sans-serif;line-height:1.2;color:rgba(255,255,255,.75);white-space:nowrap}
+.cta2{left:64px;top:1494px;font:800 44px Manrope,sans-serif;line-height:1.2;color:var(--blue);white-space:nowrap}
+.cta2 i{font-style:normal;color:var(--gold);margin-right:.32em}
+</style></head><body>
+
+<div class="abs glow"></div>
+<div class="abs big">%(big)s</div>
+
+<img class="abs icon" src="icon-512.png" alt="">
+<div class="abs word">FIXXE</div>
+<div class="abs rule"></div>
+
+<div class="abs head" id="head">%(head)s</div>
+
+<div class="abs card"></div>
+<div class="abs hl"></div>
+<svg class="abs sq sqL" viewBox="0 0 %(sq_w)d 72"><path d="M4 36H%(shaft_end)d" stroke="#C9A55C" stroke-width="10" stroke-linecap="round"/><path d="M%(head_base)d 6L%(tip)d 36L%(head_base)d 66Z" fill="#E8C77A" stroke="#E8C77A" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg class="abs sq sqR" viewBox="0 0 %(sq_w)d 72" style="transform:scaleX(-1)"><path d="M4 36H%(shaft_end)d" stroke="#C9A55C" stroke-width="10" stroke-linecap="round"/><path d="M%(head_base)d 6L%(tip)d 36L%(head_base)d 66Z" fill="#E8C77A" stroke="#E8C77A" stroke-width="4" stroke-linejoin="round"/></svg>
+
+<div class="abs sub" id="sub">%(sub)s</div>
+
+<div class="abs cta1">%(cta1)s</div>
+<div class="abs cta2"><i>→</i>%(cta2)s</div>
+
+<script>
+// Fit-to-width: shrink until the text fits the box (max lines), like the app itself.
+function fit(el, max, min, lines){
+  let s = max; el.style.fontSize = s + 'px';
+  const lh = () => parseFloat(getComputedStyle(el).lineHeight);
+  while (s > min && (el.scrollWidth > el.clientWidth + 1 || el.offsetHeight > lh() * lines + 2)){
+    s -= 1; el.style.fontSize = s + 'px';
+  }
+}
+document.fonts.ready.then(()=>{
+  fit(document.getElementById('head'), 114, 70, 2);
+  fit(document.getElementById('sub'), 40, 30, 1);
+});
+</script>
+</body></html>
+"""
+
+# arrows: tip touches the hairline around the VND row
+hl_x = ad_x(ROW["x0"]) - 3
+hl_w = (ROW["x1"] - ROW["x0"]) * S + 6
+SQ_W = round(hl_x) + 2                    # left arrow spans canvas edge → hairline
+for lang, c in COPY.items():
+    html = TEMPLATE % dict(
+        c, big=BIG, big_fs=252, big_top=646,
+        card_top=CARD_TOP, card_w=CARD_W, card_h=CARD_H, bg_y=CROP_Y0 * S,
+        hl_x=hl_x, hl_y=ad_y(ROW["y0"]) - 3, hl_w=hl_w, hl_h=(ROW["y1"] - ROW["y0"]) * S + 6,
+        sq_w=SQ_W, sq_top=round(ad_y((ROW["y0"] + ROW["y1"]) / 2)) - 36, sqR_x=1080 - SQ_W,
+        shaft_end=SQ_W - 30, head_base=SQ_W - 44, tip=SQ_W - 4,
+        sub_top=CARD_TOP + CARD_H + 26,
+    )
+    (HERE / f"bleed-{lang}.html").write_text(html, encoding="utf-8")
+    print("wrote", f"bleed-{lang}.html", "card", CARD_TOP, CARD_TOP + CARD_H, "arrow w", SQ_W)

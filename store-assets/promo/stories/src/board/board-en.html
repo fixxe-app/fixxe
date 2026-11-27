@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>board-en</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&display=block" rel="stylesheet">
+<link rel="stylesheet" href="board.css">
+</head><body>
+<div class="glow"></div>
+<div class="ghost" id="ghost"></div><div class="ghostfade"></div>
+<img class="abs icon" src="icon-512.png" alt="">
+<div class="abs word">FIXXE</div>
+<div class="abs rule"></div>
+<h1 class="abs head" id="head"></h1>
+<div class="abs board">
+  <i class="bolt" style="left:10px;top:10px"></i><i class="bolt" style="right:10px;top:10px"></i>
+  <i class="bolt" style="left:10px;bottom:10px"></i><i class="bolt" style="right:10px;bottom:10px"></i>
+  <div class="bar">
+    <svg viewBox="0 0 24 24"><path fill="#FFD54A" d="M21.5 15.5v-2l-8-5V3.2c0-.9-.7-1.7-1.5-1.7s-1.5.8-1.5 1.7v5.3l-8 5v2l8-2.5v5.5l-2 1.5v1.5l3.5-1 3.5 1v-1.5l-2-1.5V13z" transform="rotate(45 12 12)"/></svg>
+    <span class="ttl" id="ttl"></span>
+    <span class="dots"><i class="on"></i><i></i><i></i></span>
+  </div>
+  <div class="rows" id="rows"></div>
+</div>
+<div class="abs proof" id="proof"></div>
+<div class="abs sub" id="sub"></div>
+<div class="abs cta1" id="cta1"></div>
+<div class="abs cta2"><b>→</b><span id="cta2"></span></div>
+<div class="ghostb" id="ghostb"></div>
+<div class="vign" style="pointer-events:none"></div>
+<script>const LANG='en';</script>
+<script src="board.js"></script>
+</body></html>

@@ -495,12 +495,22 @@ echo "→ 10/10 сумма после закрытия приложения"
 start_wait() {
   wake; adb shell am start -n $ACT >/dev/null
   for i in $(seq 1 25); do sleep 1; screen; onscreen "$1" && break; done
-  onscreen "$1" || fail "после запуска на экране нет «$1»"
+  onscreen "$1" || { adb shell "run-as $PKG cat shared_prefs/axe_prefs.xml" | grep -E "saved_|adjust_left|amount_memory" >&2; adb logcat -b events -d | grep -E "wm_on_(stop|paused)_called.*MainActivity" >&2; fail "после запуска на экране нет «$1»"; }
 }
 # launch_saved <что ждать> <валюты> [строки настроек…]: чистые данные, настройки, запуск
 launch_saved() { local want=$1; shift; adb shell am force-stop $PKG; adb shell pm clear $PKG >/dev/null; put_prefs "$@"; start_wait "$want"; }
 # Свернуть (тут сумма записывается) и убить процесс — как смахнуть из «Недавних».
-kill_app() { adb shell input keyevent KEYCODE_HOME; sleep 1.5; adb shell am force-stop $PKG; }
+# Ждём настоящего onStop (там пишется сумма), а не фиксированную паузу: на медленном
+# эмуляторе он приходил через 1,8 с, и убитый через 1,5 с процесс ничего не сохранял.
+kill_app() {
+  adb logcat -b events -c
+  adb shell input keyevent KEYCODE_HOME
+  for i in $(seq 1 40); do
+    adb logcat -b events -d | grep -q 'wm_on_stop_called.*MainActivity' && break; sleep 0.25
+  done
+  adb logcat -b events -d | grep -q 'wm_on_stop_called.*MainActivity' || fail "после «Домой» приложение так и не остановилось за 10 с"
+  sleep 0.3; adb shell am force-stop $PKG
+}
 # По умолчанию — 12 часов: набрали в USD, закрыли, открыли — 50 USD на месте
 launch_with EUR,USD,RSD
 tap_on 'id/etAmount' 2; sleep 1; adb shell input text 50; adb shell input keyevent KEYCODE_BACK; sleep 1

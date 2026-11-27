@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+  Узкие экраны (от 320 px): строка валюты целиком помещается в карточку.
+  Открывается безголовым Chrome из tools/smoke-web.sh; результат — в
+  <pre id="result"> как PASS/FAIL. Лежит вне web/, на сайт не попадает.
+
+  На 320, 360, 375 и 430 px, в активной строке и в остальных:
+  1. код валюты не слипается с символом (между ними видимый зазор);
+  2. крестик, флаг, код, символ, сумма и ручка — внутри карточки;
+  3. сумма видна целиком (длинная — уменьшается);
+  4. название валюты стоит под кодом.
+  5. Окно сузили с 430 до 320 px (поворот, разделение экрана) — суммы
+     пересчитались и снова видны целиком.
+-->
+<meta charset="utf-8">
+<title>narrow</title>
+<iframe id="app" style="width:430px;height:700px;border:0"></iframe>
+<pre id="result">RUNNING</pre>
+<script>
+const out = document.getElementById('result');
+const frame = document.getElementById('app');
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const problems = [];
+const check = (ok, msg) => { if (!ok) problems.push(msg); };
+const KEYS = ['currencies', 'grouping', 'saved_code', 'saved_amount', 'amount_memory', 'lang'];
+const put = (k, v) => localStorage.setItem('fixe.' + k, JSON.stringify(v));
+const clear = () => KEYS.forEach(k => localStorage.removeItem('fixe.' + k));
+
+async function open(width){
+  clear();
+  put('currencies', ['EUR', 'RSD', 'USD', 'IDR', 'CHF']); put('grouping', 1);
+  put('saved_code', 'EUR'); put('saved_amount', 1500000); put('amount_memory', 3);
+  frame.style.width = width + 'px';
+  await new Promise(r => { frame.onload = r; frame.src = '/web/index.html?' + Math.random(); });
+  const d = frame.contentDocument;
+  for (let i = 0; i < 60 && !d.querySelector('.card[data-code="IDR"] .rate')?.textContent; i++) await wait(250);
+  if (!d.querySelector('.card[data-code="IDR"] .rate')?.textContent) throw new Error('курсы не загрузились');
+  await wait(300);
+  return d;
+}
+
+function inspect(d, tag){
+  for (const card of d.querySelectorAll('.card')) {
+    const code = card.dataset.code, t = `${tag} ${code}${card.classList.contains('active') ? ' (активная)' : ''}`;
+    const box = card.getBoundingClientRect();
+    const r = sel => card.querySelector(sel).getBoundingClientRect();
+    const c = r('.code'), s = r('.sym'), a = r('.amount'), h = r('.handle svg'), x = r('.del svg'), n = r('.name');
+    check(s.left - c.right >= 4, `${t}: код и символ слиплись (зазор ${Math.round(s.left - c.right)} px)`);
+    check(a.left - s.right >= 0, `${t}: символ налезает на сумму`);
+    for (const [name, e] of [['крестик', x], ['код', c], ['символ', s], ['сумма', a], ['ручка', h]])
+      check(e.left >= box.left - 0.5 && e.right <= box.right + 0.5, `${t}: ${name} за краем карточки (${Math.round(e.left)}…${Math.round(e.right)} при ${Math.round(box.left)}…${Math.round(box.right)})`);
+    const inp = card.querySelector('.amount');
+    check(inp.scrollWidth <= inp.clientWidth, `${t}: сумма «${inp.value}» не видна целиком (${inp.scrollWidth} > ${inp.clientWidth})`);
+    check(Math.abs(n.left - c.left) <= 2, `${t}: название не под кодом (${Math.round(n.left)} vs ${Math.round(c.left)})`);
+  }
+}
+
+(async () => {
+  try {
+    for (const width of [320, 360, 375, 430]) inspect(await open(width), `${width}px`);
+    // сузили окно без перезагрузки
+    const d = await open(430);
+    frame.style.width = '320px';
+    // Настоящий браузер сам шлёт resize; безголовый Chrome у iframe — нет
+    // (ширина меняется, а событие не приходит). Шлём его как браузер.
+    frame.contentWindow.dispatchEvent(new Event('resize'));
+    await wait(600);
+    inspect(d, '430→320px');
+    out.textContent = problems.length ? 'FAIL\n' + problems.join('\n') : 'PASS';
+  } catch (e) {
+    out.textContent = 'FAIL\n' + (e.stack || e.message);
+  } finally { clear(); }
+})();
+</script>

@@ -1,7 +1,12 @@
 title: "FIXXE – Currency Converter"
-subtitle: Live rates from five sources
-short_description: "Currency calculator: live rates from 5 sources, 300+ currencies, offline, no ads"
-keywords: "convertor,calculator,calc,exchange,rate,money,travel,forex,crypto,finance,ruble,fixer,fixe"
+subtitle: "Live exchange rates, offline"
+short_description: "Live exchange rates from 5 sources: 300+ currencies, works offline, no ads"
+# en-GB видят и в странах, где App Store не знает местного языка (Сербия, Грузия,
+# Армения, Казахстан) — там ищут латиницей названия своих валют
+overrides:
+  en-GB:
+    keywords: "dinar,lari,tenge,dram,som,rsd,gel,kzt,amd,kgs,kurs,menjacnica,valuta,euro,pound,money,calculator"
+keywords: "money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket"
 promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
 description: 'FIXXE is a fast, clean currency converter and currency calculator with live mid-market exchange rates — the neutral midpoint between global buy and sell prices, not bank spreads.
 
@@ -65,7 +70,7 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   Rates By Exchange Rate API.
 
   '
-whats_new: "Long amounts now shrink to fit instead of being cut off."
+whats_new: "Small improvements and fixes."
 landing:
   page_title: FIXXE — currency converter
   install_title: Ways to install

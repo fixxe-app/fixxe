@@ -65,7 +65,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   Rates By Exchange Rate API.
 
   '
-whats_new: "Długie kwoty są teraz zmniejszane, aby się zmieściły, zamiast być ucinane."
+whats_new: "Drobne usprawnienia i poprawki."
 landing:
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji

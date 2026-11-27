@@ -1,0 +1,98 @@
+:root{
+  --night:#0B0F17; --gold:#C9A55C; --gold-hi:#E8C77A; --green:#81C784; --blue:#64B5F6;
+  --flap:#FFD54A; --pill:#2E7D32;
+}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden}
+body{position:relative;background:var(--night);color:#fff;
+  font-family:Manrope,-apple-system,"SF Pro Display",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.abs{position:absolute}
+
+/* ---------- background atmosphere ---------- */
+.glow{position:absolute;left:-200px;top:440px;width:1480px;height:900px;
+  background:radial-gradient(ellipse at 50% 50%,rgba(255,213,74,.10),rgba(255,213,74,0) 62%);}
+.vign{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
+/* ghost flap row under the story progress bar (decorative only, outside safe zone) */
+.ghost{position:absolute;left:28px;top:44px;display:flex;gap:8px;opacity:.16}
+.ghost .t{width:86px;height:118px;border-radius:9px}
+.ghost .t .g{height:118px;line-height:118px;font-size:84px}
+.ghost .t .h.bot .g{top:-59px}
+.ghost .t .g{font-size:84px}
+.ghostfade{position:absolute;left:0;top:0;width:1080px;height:250px;
+  background:linear-gradient(rgba(11,15,23,.0) 0,rgba(11,15,23,.55) 60%,var(--night) 100%)}
+
+/* ---------- lockup (shared system) ---------- */
+.icon{left:64px;top:268px;width:84px;height:84px;border-radius:20px;display:block}
+.word{left:168px;top:268px;height:84px;display:flex;align-items:center;
+  font:800 46px/1 Manrope;letter-spacing:.22em;color:#81C784}
+.rule{left:64px;top:360px;width:120px;height:4px;background:var(--gold)}
+
+/* ---------- headline ---------- */
+.head{left:64px;top:384px;width:952px;white-space:nowrap;font-family:Unbounded;font-weight:800;
+  line-height:1.06;letter-spacing:-.01em;color:#fff;margin:0}
+.head em{font-style:normal;color:var(--flap)}
+
+/* ---------- board ---------- */
+.board{left:36px;top:576px;width:1008px;height:408px;border-radius:22px;
+  background:linear-gradient(180deg,#16181c 0,#0f1013 100%);
+  box-shadow:0 0 0 2px #23262c, 0 0 0 9px #0a0b0d, 0 0 0 11px #2a2d33, 0 40px 80px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.05)}
+.bolt{position:absolute;width:10px;height:10px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#5a5e66,#1b1d21 70%)}
+.bar{position:absolute;left:22px;right:22px;top:10px;height:46px;display:flex;align-items:center;gap:16px;
+  border-bottom:2px solid #24272d}
+.bar svg{width:38px;height:38px;flex:none}
+.bar .ttl{font:800 32px/1 "JetBrains Mono";letter-spacing:.24em;color:var(--flap);
+  text-shadow:0 0 18px rgba(255,213,74,.35)}
+.bar .dots{margin-left:auto;display:flex;gap:8px}
+.bar .dots i{width:9px;height:9px;border-radius:50%;background:#3a3d44}
+.bar .dots i.on{background:var(--flap);box-shadow:0 0 10px rgba(255,213,74,.8)}
+.labels{position:absolute;top:70px;left:0;right:0;height:22px;
+  font:700 17px/22px "JetBrains Mono";letter-spacing:.16em;color:#7b808a}
+.labels span{position:absolute;top:0}
+.rows{position:absolute;left:22px;top:68px}
+.row{position:absolute;left:0;height:50px;display:flex;align-items:center}
+.row .flag{width:56px;height:50px;border-radius:6px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(#202227,#16171a);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 2px 3px rgba(0,0,0,.6);
+  font:38px/1 "Apple Color Emoji","Noto Color Emoji",sans-serif}
+.tiles{display:flex;gap:4px}
+
+/* flap tile */
+.t{position:relative;width:42px;height:50px;border-radius:5px;flex:none;
+  box-shadow:0 2px 3px rgba(0,0,0,.7)}
+.t .h{position:absolute;left:0;right:0;height:50%;overflow:hidden}
+.t .h.top{top:0;border-radius:5px 5px 0 0;background:linear-gradient(#26282d,#1c1d21)}
+.t .h.bot{bottom:0;border-radius:0 0 5px 5px;background:linear-gradient(#18191c,#121315)}
+.t .g{position:absolute;left:0;right:0;top:0;height:50px;line-height:50px;text-align:center;
+  font:800 37px "JetBrains Mono";color:var(--flap)}
+.t .h.bot .g{top:-25px;color:#f2c63e}
+.t::after{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#050506;z-index:3}
+.t::before{content:"";position:absolute;left:-1px;right:-1px;top:calc(50% - 5px);height:10px;z-index:4;
+  background:linear-gradient(90deg,#3a3c42 0 3px,transparent 3px calc(100% - 3px),#3a3c42 calc(100% - 3px));}
+/* the one tile caught mid-flip: new top is in place, the lower flap (new bottom half)
+   is still falling toward the viewer over the old bottom half */
+.t.flipping{z-index:6}
+.t .flap{position:absolute;left:0;right:0;top:50%;height:50%;overflow:hidden;z-index:5;
+  border-radius:0 0 5px 5px;background:linear-gradient(#2a2c31,#1d1e22);
+  transform-origin:50% 0;transform:perspective(160px) rotateX(var(--fx,56deg));
+  box-shadow:0 5px 6px rgba(0,0,0,.7)}
+.t .flap .g{top:-25px;color:#ffe27e}
+.t .flap::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,0) 70%)}
+.t.flipping .h.bot{background:linear-gradient(#060607,#141518)}
+.t.flipping .h.bot .g{opacity:.9;color:#d9ae3c}
+
+.pill{width:296px;height:46px;border-radius:23px;background:var(--pill);display:flex;align-items:center;justify-content:center;gap:12px;
+  font:800 27px/1 Manrope;letter-spacing:.06em;color:#fff;box-shadow:0 0 22px rgba(46,125,50,.45), inset 0 1px 0 rgba(255,255,255,.18)}
+.pill i{width:11px;height:11px;border-radius:50%;background:#B9F6CA;box-shadow:0 0 10px #B9F6CA}
+
+/* ---------- proof: three real app rows, full width ---------- */
+.proof{left:64px;top:1072px;width:952px;display:flex;flex-direction:column;gap:8px}
+.proof img{display:block;width:952px;border-radius:24px;
+  box-shadow:0 18px 40px rgba(0,0,0,.55), 0 0 0 1.5px rgba(255,255,255,.07)}
+
+/* ---------- sub + CTA (shared) ---------- */
+.sub{left:64px;top:1012px;width:952px;font:700 36px/1.2 Manrope;color:rgba(255,255,255,.92);white-space:nowrap}
+.cta1{left:64px;top:1446px;font:700 34px/1.2 Manrope;color:rgba(255,255,255,.75);white-space:nowrap}
+.cta2{left:64px;top:1496px;font:800 44px/1.2 Manrope;color:var(--blue);white-space:nowrap}
+.cta2 b{color:var(--gold);font-weight:800;margin-right:14px}
+.ghostb{position:absolute;left:28px;top:1690px;display:flex;gap:8px;opacity:.12}
+.ghostb .t{width:86px;height:118px;border-radius:9px}

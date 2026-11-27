@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<title>FIXXE — nothing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&display=block&subset=cyrillic,latin" rel="stylesheet">
+<style>
+:root{--night:#0B0F17;--card:#1E1E1E;--gold:#C9A55C;--gold-hi:#E8C77A;--green:#81C784;--blue:#64B5F6}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden}
+body{position:relative;background:var(--night);color:#fff;-webkit-font-smoothing:antialiased;
+  font-family:Manrope,-apple-system,"SF Pro Display",system-ui,sans-serif}
+.abs{position:absolute}
+/* atmosphere */
+.glow{position:absolute;inset:0;pointer-events:none;
+  background:
+   radial-gradient(900px 700px at 15% 32%, rgba(201,165,92,.07), transparent 70%),
+   radial-gradient(800px 420px at 30% 62%, rgba(129,199,132,.10), transparent 70%),
+   linear-gradient(180deg, rgba(255,255,255,0) 70%, rgba(255,255,255,.02) 100%)}
+.grain{position:absolute;inset:0;opacity:.05;pointer-events:none;mix-blend-mode:screen}
+/* lockup */
+.icon{left:64px;top:268px;width:84px;height:84px;border-radius:20px;display:block}
+.word{left:168px;top:268px;height:84px;display:flex;align-items:center;
+  font:800 46px/1 Manrope;letter-spacing:.22em;color:var(--green)}
+.rule{left:64px;top:360px;width:120px;height:4px;background:var(--gold)}
+/* struck words */
+#stack{left:64px;top:0;width:952px}
+.w{position:absolute;left:0;white-space:nowrap;font-family:Unbounded;font-weight:900;
+  letter-spacing:-.015em;color:rgba(255,255,255,.92);line-height:1}
+.base{display:inline-block;width:0;height:0;vertical-align:baseline}
+#strikes{left:0;top:0;width:1080px;height:1920px;overflow:visible;pointer-events:none}
+/* the answer */
+#yes{left:64px;white-space:nowrap;font-family:Unbounded;font-weight:800;line-height:1;color:var(--green);
+  letter-spacing:-.03em;text-shadow:0 0 44px rgba(129,199,132,.30)}
+#sub{left:64px;width:952px;white-space:nowrap;font:600 36px/1.25 Manrope;color:rgba(255,255,255,.80)}
+/* real app strip */
+.strip{left:64px;border-radius:36px;overflow:hidden;background-repeat:no-repeat;
+  box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1.5px rgba(255,255,255,.07)}
+/* CTA */
+.cta1{left:64px;top:1440px;font:700 36px/1.2 Manrope;color:rgba(255,255,255,.75);white-space:nowrap}
+.cta2{left:64px;top:1494px;font:800 52px/1.2 Manrope;color:var(--blue);white-space:nowrap;display:flex;align-items:center;gap:18px}
+.cta2 .arr{color:var(--gold);font-weight:800;font-size:46px;transform:translateY(-2px)}
+</style></head>
+<body>
+<div class="glow"></div>
+<svg class="grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+
+<img class="abs icon" src="icon-512.png" alt="">
+<div class="abs word">FIXXE</div>
+<div class="abs rule"></div>
+
+<div id="stack" class="abs"></div>
+<svg id="strikes" class="abs" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="400" x2="1080" y2="800">
+      <stop offset="0" stop-color="#C29B52"/>
+      <stop offset=".35" stop-color="#E8C77A"/>
+      <stop offset=".7" stop-color="#D9B66C"/>
+      <stop offset="1" stop-color="#C9A55C"/>
+    </linearGradient>
+    <!-- edge roughness only: no halo, no shadow (they cut extra bands out of the letters) -->
+    <filter id="brush" x="-5%" y="-100%" width="110%" height="300%">
+      <feTurbulence type="fractalNoise" baseFrequency=".03 .6" numOctaves="2" seed="3" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g id="sg" filter="url(#brush)"></g>
+</svg>
+
+<div id="yes" class="abs"></div>
+<div id="sub" class="abs"></div>
+<div id="strip" class="abs strip"></div>
+
+<div class="abs cta1" id="cta1"></div>
+<div class="abs cta2"><span class="arr">→</span><span>telebimmer.com/fixxe</span></div>
+
+<script>
+const LANG = document.documentElement.lang;
+const T = {
+  en:{words:["ADS","ACCOUNT","TRACKING"], yes:["Just the","number."],
+      sub:"The only permission it asks for is internet.",
+      cta:"Free · App Store · Google Play · Web", cap:"strip-en.png"},
+  ru:{words:["РЕКЛАМА","РЕГИСТРАЦИЯ","СМС"], yes:["Просто","курс."],
+      sub:"Единственное разрешение — доступ в интернет.",
+      cta:"Бесплатно · App Store · Google Play · веб", cap:"strip-ru.png"}
+}[LANG];
+
+// ---- tunables (shared by EN and RU)
+const COL = 952, X0 = 64;
+const WORD_FS = 92;       // struck words: one shared size; only a word that can't fit shrinks
+const WORD_GAP = 22;      // between cap-bottom and next cap-top
+const YES_MAX = 112, YES_MIN = 80;   // payoff: two lines, as large as fits
+const STRIKE_Y = 0.36;    // stroke centre, fraction of cap height above baseline (same on every word)
+const STRIKE_W = 0.11;    // stroke thickness, fraction of cap height
+// Unbounded 900 С/C aperture spans 0.435–0.56 of cap height: band 0.305–0.415 keeps it open.
+const CROP = {y0:164, y1:792, w:1512};   // capture px (3×): header + 2 rows, below the status line
+const STRIP_BOTTOM = 1414;
+
+let seed = 20261118; const rnd = () => (seed = (seed*1664525 + 1013904223) >>> 0) / 4294967296;
+const cv = document.createElement('canvas').getContext('2d');
+const capOf = (font, txt) => { cv.font = font; const m = cv.measureText(txt); return {asc:m.actualBoundingBoxAscent, desc:m.actualBoundingBoxDescent, w:m.width}; };
+
+function baselineOffset(el){ // distance from element box top to its text baseline
+  el.insertAdjacentHTML('beforeend','<span class="base"></span>');
+  const b = el.lastChild, off = b.getBoundingClientRect().top - el.getBoundingClientRect().top; b.remove(); return off;
+}
+
+async function build(){
+  await document.fonts.load('900 100px Unbounded', T.words.join(''));
+  const YES = T.yes.join(' ');
+  await document.fonts.load('800 100px Unbounded', YES);
+  await document.fonts.load('600 36px Manrope', T.sub);
+  await document.fonts.load('800 46px Manrope', 'FIXXE telebimmer.com/fixxe →');
+  await document.fonts.load('700 36px Manrope', T.cta);
+  await document.fonts.ready;
+  document.getElementById('cta1').textContent = T.cta;
+
+  // ---- strip (fixed: full column width, same crop both languages)
+  const s = COL / CROP.w, stripH = (CROP.y1 - CROP.y0) * s, stripTop = STRIP_BOTTOM - stripH;
+  Object.assign(document.getElementById('strip').style, {top: stripTop+'px', height: stripH+'px', width: COL+'px',
+    backgroundImage:`url(${T.cap})`, backgroundSize:`${COL}px auto`, backgroundPosition:`0 ${-CROP.y0*s}px`});
+
+  // ---- struck words
+  const stack = document.getElementById('stack');
+  let y = 412;   // first cap top
+  const placed = T.words.map(t => {
+    const el = document.createElement('div'); el.className = 'w'; el.textContent = t; stack.appendChild(el);
+    let fs = WORD_FS; el.style.fontSize = fs+'px';
+    while (el.getBoundingClientRect().width > COL && fs > 40) { fs--; el.style.fontSize = fs+'px'; }
+    const m = capOf(`900 ${fs}px Unbounded`, 'H'), w = capOf(`900 ${fs}px Unbounded`, t).w;
+    el.style.top = '0px'; const bo = baselineOffset(el);
+    const base = y + m.asc; el.style.top = (base - bo) + 'px';
+    y = base + WORD_GAP;
+    return {t, fs, x0: X0, x1: X0 + w, base, capH: m.asc};
+  });
+  const wordsBottom = placed[placed.length-1].base;
+
+  // ---- payoff: two lines, ≥ struck size
+  const yes = document.getElementById('yes');
+  yes.innerHTML = T.yes.map(l => '<span style="display:block;width:max-content">' + l + '</span>').join('');
+  let fs = YES_MAX; yes.style.fontSize = fs+'px';
+  const widest = () => Math.max(...[...yes.children].map(c => c.getBoundingClientRect().width));
+  while (widest() > COL && fs > YES_MIN) { fs--; yes.style.fontSize = fs+'px'; }
+  const ym = capOf(`800 ${fs}px Unbounded`, 'H');
+  const PITCH = fs * 1.0;
+  // sub
+  const sub = document.getElementById('sub'); sub.textContent = T.sub;
+  let ss = 38; sub.style.fontSize = ss+'px';
+  while (sub.getBoundingClientRect().width > COL && ss > 28) { ss--; sub.style.fontSize = ss+'px'; }
+  const subH = sub.getBoundingClientRect().height;
+  // vertical: words → payoff → sub → strip; free space split between the gaps
+  const yesBlock = ym.asc + PITCH + ym.asc*0.30;     // cap + one line pitch + descender room (same EN/RU)
+  const free = stripTop - wordsBottom - yesBlock - subH;
+  const g2 = 12, g1 = (free - g2)*0.58;
+  const yesBase = wordsBottom + g1 + ym.asc;
+  yes.style.lineHeight = PITCH + 'px';
+  yes.style.top = '0px'; const ybo = yes.firstChild.getBoundingClientRect().top; // line box top
+  const bo1 = (()=>{ const sp=document.createElement('span'); sp.className='base'; yes.firstChild.appendChild(sp); const v=sp.getBoundingClientRect().top - yes.getBoundingClientRect().top; sp.remove(); return v; })();
+  yes.style.top = (yesBase - bo1)+'px';
+  sub.style.top = (yesBase + PITCH + ym.asc*0.30 + g2 - 6) + 'px';
+  window.__dbg = {fs, free, stripTop, stripH, wordsBottom, subBottom: yesBase + PITCH + ym.asc*0.30 + g2 - 6 + subH};
+
+  // ---- hand-drawn gold strikes: thin, same relative height on every word
+  const dir = [-1, 1, -1], sg = document.getElementById('sg');
+  const f = v => v.toFixed(1);
+  const add = d => { const el = document.createElementNS('http://www.w3.org/2000/svg','path'); el.setAttribute('d', d); el.setAttribute('fill','url(#gold)'); sg.appendChild(el); };
+  placed.forEach((p, i) => {
+    const over1 = 14 + rnd()*26, over2 = 26 + rnd()*20;
+    const xa = Math.max(26, p.x0 - over1), xb = Math.min(p.x1 + over2, 1056), len = xb - xa;
+    const cy = p.base - p.capH*STRIKE_Y;
+    const span = p.x1 - p.x0;
+    const a = dir[i] * Math.atan(p.capH*0.012/(span/2));            // ≤ ±1.2% cap drift across the word
+    const cx = (p.x0 + p.x1)/2;                                      // centred on the word, not the overshoot
+    const P = t => { const lx = xa - cx + t*len;
+      const ly = Math.sin(t*Math.PI) * (i%2? 1:-1) * p.capH*0.008 + Math.sin(t*19 + i)*0.35;
+      return [cx + lx*Math.cos(a) - ly*Math.sin(a), cy + lx*Math.sin(a) + ly*Math.cos(a)]; };
+    const Wd = p.capH * STRIKE_W;
+    const wid = t => Wd * (1 + 0.18*Math.exp(-t*30)) * (0.94 + 0.06*Math.sin(t*Math.PI));
+    let TS = 2;
+    const ribbon = (t0, t1, o0, o1, taper, capStart) => {
+      const N = Math.max(8, Math.round((t1-t0)*140)), A = [], B = [];
+      for (let k = 0; k <= N; k++) {
+        const t = t0 + (t1-t0)*k/N, [x,y] = P(t), [x2,y2] = P(Math.min(1,t+0.002)), [x1,y1] = P(Math.max(0,t-0.002));
+        let dx = x2-x1, dy = y2-y1; const d = Math.hypot(dx,dy); dx/=d; dy/=d;
+        const w = wid(t), tp = taper && t > TS ? 1 - 0.8*Math.pow((t-TS)/Math.max(1e-3,t1-TS), 1.3) : 1;
+        const m = (o0+o1)/2, hw = (o1-o0)/2*tp;
+        A.push([x - dy*w*(m-hw), y + dx*w*(m-hw)]); B.push([x - dy*w*(m+hw), y + dx*w*(m+hw)]);
+      }
+      let d = `M${f(A[0][0])},${f(A[0][1])} ` + A.slice(1).map(q=>`L${f(q[0])},${f(q[1])}`).join(' ');
+      const e = Math.hypot(A[N][0]-B[N][0], A[N][1]-B[N][1])/2;
+      d += taper ? ` A${f(e)},${f(e)} 0 0 1 ${f(B[N][0])},${f(B[N][1])} ` : ` L${f(B[N][0])},${f(B[N][1])} `;
+      d += B.slice().reverse().slice(1).map(q=>`L${f(q[0])},${f(q[1])}`).join(' ');
+      const r0 = Math.hypot(A[0][0]-B[0][0], A[0][1]-B[0][1])/2;
+      d += capStart ? ` A${f(r0)},${f(r0)} 0 0 1 ${f(A[0][0])},${f(A[0][1])} Z` : ' Z';
+      return d;
+    };
+    const TL = Math.min(0.2, 110/len), BODY = 1 - TL;
+    TS = BODY - TL*0.15;
+    const NB = 5;
+    for (let b = 0; b < NB; b++) {
+      const o0 = -0.5 + b/NB, o1 = Math.min(.5, o0 + 1/NB*1.4);
+      const c = Math.abs((o0+o1)/2)*2;
+      const end = BODY + TL*(0.3 + 0.7*(1 - c*0.6)*(0.55 + 0.45*rnd()));
+      add(ribbon(BODY - TL*0.6, end, o0, o1, true, false));
+    }
+    TS = 2;
+    add(ribbon(0, BODY - TL*0.3, -0.5, 0.5, false, true));
+  });
+  document.title = 'ready';
+}
+build();
+</script>
+</body></html>
