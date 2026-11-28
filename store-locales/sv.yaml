@@ -9,7 +9,7 @@ description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurse
   DET HÄR SKILJER FIXXE
 
 
-  • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
+  • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Livekurserna stämmer med referenskurserna du ser i webbsökningar och på stora valutasajter. Om en leverantör ligger nere byter appen automatiskt till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
 
 
   • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
@@ -62,11 +62,12 @@ description: 'FIXXE är en snabb och ren valutaomvandlare med aktuella mittkurse
 
   Visade kurser är vägledande mittkurser, inte handelskurser i realtid.
 
-  Rates By Exchange Rate API.
+  En av reservkällorna för kurser: Rates By Exchange Rate API.
 
   '
 whats_new: "Små förbättringar och buggfixar."
 landing:
+  credit_prefix: "En av reservkällorna för kurser:"
   page_title: FIXXE — valutaomvandlare
   install_title: Sätt att installera
   about_title: Om appen
@@ -91,3 +92,5 @@ landing:
   btn_store: Öppna i butiken
   privacy: Integritet
   terms: Villkor
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Livekurserna stämmer med referenskurserna du ser i webbsökningar och på stora valutasajter.", "about": "Kurserna från Coinbase och FXRatesAPI stämmer i praktiken med Google och XE.com: för de viktigaste valutorna är skillnaden under 0,005 %."}

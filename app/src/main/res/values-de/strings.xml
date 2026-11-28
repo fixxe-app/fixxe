@@ -30,7 +30,7 @@
     <string name="language_title">Sprache</string>
     <string name="language_system">Systemstandard</string>
     <string name="source_info_title">Kursquelle</string>
-    <string name="source_info_message">Mittelkurs — der Mittelwert zwischen An- und Verkauf am globalen Markt.\n\nQuellen (automatischer Fallback):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nWenn die primäre Quelle bei der automatischen Aktualisierung oder bei ↻ nicht antwortet, bezieht die App die Daten automatisch von der nächsten. Die aktuelle Quelle wird oben neben der Aktualisierungszeit angezeigt.\n\nIn den Einstellungen (⚙) kannst du eine bestimmte Quelle erzwingen — die anderen bleiben weiterhin als Fallback.\n\nCoinbase und FXRatesAPI werden jede Minute aktualisiert, die anderen Quellen einmal täglich. Es sind Referenzkurse, keine Handelskurse.\n\nLizenzen und Namensnennung:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — erfordert den Link „Rates By Exchange Rate API“ (in der Fußzeile, anklickbar).\n• F.A. — CC0 (gemeinfrei), keine Namensnennung erforderlich.\n• Frankfurter — MIT, Daten der European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Mittelkurs — der Mittelwert zwischen An- und Verkauf am globalen Markt.\n\nDie Kurse von Coinbase und FXRatesAPI stimmen praktisch mit Google und XE.com überein: Bei den wichtigsten Währungen liegt die Abweichung unter 0,005 %.\n\nQuellen (automatischer Fallback):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nWenn die primäre Quelle bei der automatischen Aktualisierung oder bei ↻ nicht antwortet, bezieht die App die Daten automatisch von der nächsten. Die aktuelle Quelle wird oben neben der Aktualisierungszeit angezeigt.\n\nIn den Einstellungen (⚙) kannst du eine bestimmte Quelle erzwingen — die anderen bleiben weiterhin als Fallback.\n\nCoinbase und FXRatesAPI werden jede Minute aktualisiert, die anderen Quellen einmal täglich. Es sind Referenzkurse, keine Handelskurse.\n\nLizenzen und Namensnennung:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — erfordert den Link „Rates By Exchange Rate API“ (in der Fußzeile, anklickbar).\n• F.A. — CC0 (gemeinfrei), keine Namensnennung erforderlich.\n• Frankfurter — MIT, Daten der European Central Bank (ECB).</string>
     <string name="filter_all">Alle</string>
     <string name="switch_source_title">Quelle wechseln?</string>
     <string name="switch_source_msg">%1$s ist über %2$s verfügbar, nicht über die aktuelle Quelle. Wechseln und hinzufügen?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Leerzeichen — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
     <string name="adjust_title">Kursanpassung</string>
+    <string name="about_link">Über die App</string>
+    <string name="privacy_link">Datenschutz</string>
+    <string name="adjust_about">Legen Sie einen Prozentsatz für Bankgebühr, Marge oder Überweisungsverluste fest, und alle Beträge zeigen sofort das tatsächliche Ergebnis.</string>
     <string name="adjust_off">Aus</string>
     <string name="adjusted_rates">Angepasste Kurse</string>
     <string name="adjusted_short">Angepasst</string>

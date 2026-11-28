@@ -45,7 +45,7 @@ locales:
       ما الذي يميز FIXXE
 
 
-      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها. تفضّل مصدرًا واحدًا؟ اختره في الإعدادات — وتبقى المصادر الأخرى احتياطًا.
+      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). الأسعار المباشرة تطابق الأسعار المرجعية التي تراها في محركات البحث وعلى كبرى مواقع العملات. إذا تعطّل مزوّد، ينتقل التطبيق تلقائيًا إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها. تفضّل مصدرًا واحدًا؟ اختره في الإعدادات — وتبقى المصادر الأخرى احتياطًا.
 
 
       • يعمل دون اتصال — تبقى آخر الأسعار على جهازك، فيواصل التطبيق الحساب بلا شبكة. وإذا مضى على تلك الأسعار أكثر من يوم، يقولها صراحةً بدل أن يُظهرها وكأنها حديثة.
@@ -98,7 +98,7 @@ locales:
 
       الأسعار المعروضة قيم وسطية استرشادية، وليست تسعيرات تداول لحظية.
 
-      Rates By Exchange Rate API.
+      أحد مصادر الأسعار الاحتياطية: Rates By Exchange Rate API.
 
       '
   bg:
@@ -110,7 +110,7 @@ locales:
       С КАКВО FIXXE Е РАЗЛИЧЕН
 
 
-      • Пет източника на курсове с автоматично превключване — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако доставчик падне, приложението тихо минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже. Предпочитате един източник? Изберете го в настройките — останалите остават като резерв.
+      • Пет източника на курсове с автоматично превключване — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Курсовете в реално време съвпадат с референтните курсове, които виждате при търсене в мрежата и в големите валутни сайтове. Ако доставчик падне, приложението автоматично минава към следващия и показва откъде идват числата. Повечето конвертори зависят от едно-единствено API и просто не показват нищо, когато то откаже. Предпочитате един източник? Изберете го в настройките — останалите остават като резерв.
 
 
       • Работи офлайн — последните курсове остават на устройството, така че приложението смята и без връзка. А ако тези курсове са по-стари от денонощие, го казва направо, вместо да ги представя за актуални.
@@ -163,7 +163,7 @@ locales:
 
       Показаните курсове са ориентировъчни средни стойности, а не борсови котировки в реално време.
 
-      Rates By Exchange Rate API.
+      Един от резервните източници на курсове: Rates By Exchange Rate API.
 
       '
   cs-CZ:
@@ -175,7 +175,7 @@ locales:
       ČÍM SE FIXXE LIŠÍ
 
 
-      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
+      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy se shodují s referenčními kurzy, které vidíte ve webovém vyhledávání a na velkých měnových webech. Když poskytovatel neodpovídá, aplikace automaticky přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
 
 
       • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
@@ -228,7 +228,7 @@ locales:
 
       Zobrazené kurzy jsou orientační střední hodnoty, nikoli burzovní kotace v reálném čase.
 
-      Rates By Exchange Rate API.
+      Jeden ze záložních zdrojů kurzů: Rates By Exchange Rate API.
 
       '
   da-DK:
@@ -240,7 +240,7 @@ locales:
       DET HER GØR FIXXE ANDERLEDES
 
 
-      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
+      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Livekurserne svarer til de referencekurser, du ser i websøgning og på store valutasider. Hvis en udbyder er nede, skifter appen automatisk til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
 
 
       • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
@@ -293,7 +293,7 @@ locales:
 
       De viste kurser er vejledende middelkurser, ikke handelskurser i realtid.
 
-      Rates By Exchange Rate API.
+      En af reservekilderne til kurser: Rates By Exchange Rate API.
 
       '
   de-DE:
@@ -305,7 +305,7 @@ locales:
       WAS FIXXE ANDERS MACHT
 
 
-      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
+      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Die Live-Kurse entsprechen den Referenzkursen, die Sie in der Websuche und auf großen Währungsseiten sehen. Fällt ein Anbieter aus, wechselt die App automatisch zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
 
 
       • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
@@ -358,7 +358,7 @@ locales:
 
       Die angezeigten Kurse sind Mittelkurse als Richtwert, keine Börsenkurse in Echtzeit.
 
-      Rates By Exchange Rate API.
+      Eine der Reserve-Kursquellen: Rates By Exchange Rate API.
 
       '
   el-GR:
@@ -370,7 +370,7 @@ locales:
       ΤΙ ΚΑΝΕΙ ΤΟ FIXXE ΔΙΑΦΟΡΕΤΙΚΟ
 
 
-      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα. Προτιμάτε μία πηγή; Επιλέξτε τη στις Ρυθμίσεις — οι υπόλοιπες μένουν ως εφεδρεία.
+      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Οι ζωντανές ισοτιμίες ταυτίζονται με τις ισοτιμίες αναφοράς που βλέπετε στην αναζήτηση στο διαδίκτυο και στους μεγάλους ιστότοπους συναλλάγματος. Αν μια πηγή πέσει, η εφαρμογή περνά αυτόματα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα. Προτιμάτε μία πηγή; Επιλέξτε τη στις Ρυθμίσεις — οι υπόλοιπες μένουν ως εφεδρεία.
 
 
       • Λειτουργεί εκτός σύνδεσης — οι τελευταίες ισοτιμίες μένουν στη συσκευή, οπότε η εφαρμογή συνεχίζει να υπολογίζει χωρίς δίκτυο. Κι αν αυτές οι ισοτιμίες είναι πάνω από μία ημέρα παλιές, το λέει καθαρά αντί να τις παρουσιάζει ως τρέχουσες.
@@ -423,7 +423,7 @@ locales:
 
       Οι ισοτιμίες που εμφανίζονται είναι ενδεικτικές μέσες τιμές, όχι χρηματιστηριακές τιμές σε πραγματικό χρόνο.
 
-      Rates By Exchange Rate API.
+      Μία από τις εφεδρικές πηγές ισοτιμιών: Rates By Exchange Rate API.
 
       '
   en-US:
@@ -435,7 +435,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -488,7 +488,7 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
   en-GB:
@@ -500,7 +500,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -553,7 +553,7 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
   es-ES:
@@ -565,7 +565,7 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas. Si un proveedor se cae, la aplicación pasa automáticamente al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -618,7 +618,7 @@ locales:
 
       Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
 
-      Rates By Exchange Rate API.
+      Una de las fuentes de tipos de respaldo: Rates By Exchange Rate API.
 
       '
   es-419:
@@ -630,7 +630,7 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas. Si un proveedor se cae, la aplicación pasa automáticamente al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -683,7 +683,7 @@ locales:
 
       Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
 
-      Rates By Exchange Rate API.
+      Una de las fuentes de tipos de respaldo: Rates By Exchange Rate API.
 
       '
   et:
@@ -695,7 +695,7 @@ locales:
       MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-      • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
+      • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Reaalajas kursid langevad kokku viitekurssidega, mida näete veebiotsingus ja suurtel valuutasaitidel. Kui üks pakkuja kukub, läheb rakendus automaatselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
 
 
       • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
@@ -748,7 +748,7 @@ locales:
 
       Näidatud kursid on orienteerivad keskväärtused, mitte reaalajas kauplemisnoteeringud.
 
-      Rates By Exchange Rate API.
+      Üks varukursiallikatest: Rates By Exchange Rate API.
 
       '
   fa:
@@ -760,7 +760,7 @@ locales:
       چه چیزی FIXXE را متفاوت می‌کند
 
 
-      • پنج منبع نرخ با جابه‌جایی خودکار — Coinbase، FXRatesAPI، ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). اگر یک منبع از کار بیفتد، برنامه بی‌سروصدا به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند. یک منبع را ترجیح می‌دهید؟ آن را در تنظیمات انتخاب کنید — بقیه به‌عنوان پشتیبان می‌مانند.
+      • پنج منبع نرخ با جابه‌جایی خودکار — Coinbase، FXRatesAPI، ExchangeRate-API و F.A. و Frankfurter (بانک مرکزی اروپا). نرخ‌های زنده با نرخ‌های مرجعی که در جست‌وجوی وب و سایت‌های بزرگ ارز می‌بینید مطابقت دارند. اگر یک منبع از کار بیفتد، برنامه خودکار به بعدی می‌رود و نشان می‌دهد اعداد از کجا آمده‌اند. بیشتر مبدل‌ها به یک رابط برنامه‌نویسی تکیه دارند و با از کار افتادن آن، هیچ چیز نشان نمی‌دهند. یک منبع را ترجیح می‌دهید؟ آن را در تنظیمات انتخاب کنید — بقیه به‌عنوان پشتیبان می‌مانند.
 
 
       • بدون اینترنت کار می‌کند — آخرین نرخ‌ها روی دستگاه می‌مانند، پس برنامه بدون اتصال هم محاسبه می‌کند. و اگر آن نرخ‌ها بیش از یک روز قدیمی باشند، همین را صریح می‌گوید، نه اینکه آن‌ها را تازه جلوه دهد.
@@ -813,7 +813,7 @@ locales:
 
       نرخ‌های نمایش‌داده‌شده مقادیر میانهٔ مرجع‌اند، نه قیمت‌های معاملاتی لحظه‌ای.
 
-      Rates By Exchange Rate API.
+      یکی از منابع پشتیبان نرخ: Rates By Exchange Rate API.
 
       '
   fi-FI:
@@ -825,7 +825,7 @@ locales:
       MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
+      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Reaaliaikaiset kurssit vastaavat viitekursseja, jotka näet verkkohaussa ja suurilla valuuttasivustoilla. Jos palveluntarjoaja kaatuu, sovellus siirtyy automaattisesti seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
 
 
       • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
@@ -878,7 +878,7 @@ locales:
 
       Näytetyt kurssit ovat ohjeellisia keskikursseja, eivät reaaliaikaisia pörssinoteerauksia.
 
-      Rates By Exchange Rate API.
+      Yksi varakurssilähteistä: Rates By Exchange Rate API.
 
       '
   fr-FR:
@@ -890,7 +890,7 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change. Si un fournisseur tombe, l''application passe automatiquement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -943,7 +943,7 @@ locales:
 
       Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
 
-      Rates By Exchange Rate API.
+      L’une des sources de taux de secours : Rates By Exchange Rate API.
 
       '
   fr-CA:
@@ -955,7 +955,7 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change. Si un fournisseur tombe, l''application passe automatiquement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -1008,7 +1008,7 @@ locales:
 
       Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
 
-      Rates By Exchange Rate API.
+      L’une des sources de taux de secours : Rates By Exchange Rate API.
 
       '
   iw-IL:
@@ -1020,7 +1020,7 @@ locales:
       מה שונה ב-FIXXE
 
 
-      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום. מעדיפים מקור אחד? בחרו אותו בהגדרות — האחרים נשארים כגיבוי.
+      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). השערים החיים תואמים לשערי הייחוס שאתם רואים בחיפוש ברשת ובאתרי המטבע הגדולים. אם ספק נופל, האפליקציה עוברת אוטומטית לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום. מעדיפים מקור אחד? בחרו אותו בהגדרות — האחרים נשארים כגיבוי.
 
 
       • עובד לא מקוון — השערים האחרונים נשמרים במכשיר, כך שהאפליקציה ממשיכה לחשב גם בלי חיבור. ואם השערים האלה בני יותר מיממה, היא אומרת זאת במפורש במקום להציג אותם כעדכניים.
@@ -1073,7 +1073,7 @@ locales:
 
       השערים המוצגים הם ערכי אמצע להתמצאות, לא ציטוטי מסחר בזמן אמת.
 
-      Rates By Exchange Rate API.
+      אחד ממקורות השערים לגיבוי: Rates By Exchange Rate API.
 
       '
   hi-IN:
@@ -1085,7 +1085,7 @@ locales:
       FIXXE अलग कैसे है
 
 
-      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते। कोई एक स्रोत पसंद है? उसे सेटिंग्स में चुनें — बाक़ी बैकअप के रूप में बने रहते हैं।
+      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। लाइव दरें उन्हीं संदर्भ दरों से मेल खाती हैं जो आप वेब सर्च और बड़ी मुद्रा वेबसाइटों पर देखते हैं। कोई स्रोत बंद हो जाए तो ऐप अपने-आप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते। कोई एक स्रोत पसंद है? उसे सेटिंग्स में चुनें — बाक़ी बैकअप के रूप में बने रहते हैं।
 
 
       • ऑफ़लाइन काम करता है — पिछली दरें आपके उपकरण पर रहती हैं, इसलिए बिना कनेक्शन भी ऐप गणना करता रहता है। और अगर वे दरें एक दिन से पुरानी हों, तो वह साफ़ कह देता है, उन्हें ताज़ा बताकर नहीं चलाता।
@@ -1138,7 +1138,7 @@ locales:
 
       दिखाई गई दरें संदर्भ के लिए मध्य-बाज़ार मान हैं, वास्तविक समय के ट्रेडिंग भाव नहीं।
 
-      Rates By Exchange Rate API.
+      बैकअप दर स्रोतों में से एक: Rates By Exchange Rate API.
 
       '
   hr:
@@ -1150,7 +1150,7 @@ locales:
       PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
+      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Tečajevi uživo podudaraju se s referentnim tečajevima koje vidite u internetskom pretraživanju i na velikim valutnim stranicama. Ako izvor padne, aplikacija automatski prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
 
 
       • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
@@ -1203,7 +1203,7 @@ locales:
 
       Prikazani tečajevi su okvirne srednje vrijednosti, a ne burzovne kotacije u stvarnom vremenu.
 
-      Rates By Exchange Rate API.
+      Jedan od rezervnih izvora tečaja: Rates By Exchange Rate API.
 
       '
   hu-HU:
@@ -1215,7 +1215,7 @@ locales:
       MIBEN MÁS A FIXXE
 
 
-      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
+      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Az élő árfolyamok megegyeznek azokkal a referencia-árfolyamokkal, amelyeket a webes keresőkben és a nagy devizaoldalakon lát. Ha egy szolgáltató kiesik, az alkalmazás automatikusan a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
 
 
       • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
@@ -1268,7 +1268,7 @@ locales:
 
       A megjelenített árfolyamok tájékoztató középárfolyamok, nem valós idejű tőzsdei jegyzések.
 
-      Rates By Exchange Rate API.
+      Az egyik tartalék árfolyamforrás: Rates By Exchange Rate API.
 
       '
   id:
@@ -1280,7 +1280,7 @@ locales:
       APA YANG MEMBUAT FIXXE BERBEDA
 
 
-      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
+      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Kurs langsung sama dengan kurs referensi yang Anda lihat di penelusuran web dan di situs mata uang besar. Jika satu penyedia tumbang, aplikasi otomatis beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
 
 
       • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
@@ -1333,7 +1333,7 @@ locales:
 
       Kurs yang ditampilkan adalah nilai tengah sebagai acuan, bukan kuotasi perdagangan waktu nyata.
 
-      Rates By Exchange Rate API.
+      Salah satu sumber kurs cadangan: Rates By Exchange Rate API.
 
       '
   it-IT:
@@ -1345,7 +1345,7 @@ locales:
       COSA RENDE FIXXE DIVERSO
 
 
-      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
+      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). I tassi in tempo reale coincidono con i tassi di riferimento che vedi nella ricerca web e sui principali siti di cambio. Se un fornitore non risponde, l''app passa automaticamente al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
 
 
       • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
@@ -1398,7 +1398,7 @@ locales:
 
       I tassi mostrati sono valori medi di riferimento, non quotazioni di mercato in tempo reale.
 
-      Rates By Exchange Rate API.
+      Una delle fonti di tassi di riserva: Rates By Exchange Rate API.
 
       '
   ja-JP:
@@ -1410,7 +1410,7 @@ locales:
       FIXXEが違うところ
 
 
-      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。特定の情報源を使いたいなら設定で選べます — ほかは予備として残ります。
+      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ライブレートは、ウェブ検索や大手為替サイトで目にする参考レートと一致します。ある提供元が落ちてもアプリは自動で次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。特定の情報源を使いたいなら設定で選べます — ほかは予備として残ります。
 
 
       • オフラインでも動く — 最後のレートは端末に残るので、通信がなくても計算を続けられます。そのレートが1日以上前のものなら、新しいふりをせずにはっきりそう伝えます。
@@ -1463,7 +1463,7 @@ locales:
 
       表示されるレートは参考用の仲値であり、リアルタイムの取引値ではありません。
 
-      Rates By Exchange Rate API.
+      予備のレート情報源の一つ：Rates By Exchange Rate API.
 
       '
   ka-GE:
@@ -1475,7 +1475,7 @@ locales:
       რით განსხვავდება FIXXE
 
 
-      • კურსის ხუთი წყარო ავტომატური გადართვით — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. და Frankfurter (ECB). თუ რომელიმე წყარო გაითიშა, აპლიკაცია ჩუმად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს. ერთი წყარო გირჩევნიათ? აირჩიეთ ის პარამეტრებში — დანარჩენები სარეზერვოდ დარჩება.
+      • კურსის ხუთი წყარო ავტომატური გადართვით — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. და Frankfurter (ECB). ცოცხალი კურსები ემთხვევა იმ საცნობარო კურსებს, რომლებსაც ხედავთ ვებ-ძიებაში და დიდ სავალუტო საიტებზე. თუ რომელიმე წყარო გაითიშა, აპლიკაცია ავტომატურად გადადის შემდეგზე და აჩვენებს, საიდან მოვიდა ციფრები. კონვერტორების უმეტესობა ერთ API-ზეა დამოკიდებული და მისი მწყობრიდან გამოსვლისას უბრალოდ აღარაფერს აჩვენებს. ერთი წყარო გირჩევნიათ? აირჩიეთ ის პარამეტრებში — დანარჩენები სარეზერვოდ დარჩება.
 
 
       • მუშაობს ოფლაინ — ბოლო კურსები რჩება მოწყობილობაზე, ამიტომ აპლიკაცია კავშირის გარეშეც ითვლის. და თუ ეს კურსები ერთ დღეზე ძველია, ამას პირდაპირ ამბობს, ნაცვლად იმისა, რომ ახალივით წარმოაჩინოს.
@@ -1528,7 +1528,7 @@ locales:
 
       ნაჩვენები კურსები საორიენტაციო საშუალო მნიშვნელობებია და არა რეალურ დროში სავაჭრო კოტირებები.
 
-      Rates By Exchange Rate API.
+      ერთ-ერთი სარეზერვო კურსის წყარო: Rates By Exchange Rate API.
 
       '
   ko-KR:
@@ -1540,7 +1540,7 @@ locales:
       FIXXE가 다른 점
 
 
-      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다. 한 출처만 쓰고 싶다면 설정에서 고르세요 — 나머지는 예비로 남습니다.
+      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 실시간 환율은 웹 검색과 주요 환율 사이트에서 보는 기준 환율과 일치합니다. 한 곳이 멈추면 앱이 자동으로 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다. 한 출처만 쓰고 싶다면 설정에서 고르세요 — 나머지는 예비로 남습니다.
 
 
       • 오프라인에서도 동작 — 마지막 환율이 기기에 남아 있어 연결이 없어도 계산이 이어집니다. 그 환율이 하루보다 오래됐다면 최신인 척하지 않고 분명히 알려줍니다.
@@ -1593,7 +1593,7 @@ locales:
 
       표시되는 환율은 참고용 중간값이며, 실시간 거래 호가가 아닙니다.
 
-      Rates By Exchange Rate API.
+      예비 환율 출처 중 하나: Rates By Exchange Rate API.
 
       '
   lt:
@@ -1605,7 +1605,7 @@ locales:
       KUO FIXXE SKIRIASI
 
 
-      • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
+      • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Tiesioginiai kursai sutampa su orientaciniais kursais, kuriuos matote interneto paieškoje ir didžiosiose valiutų svetainėse. Jei tiekėjas nustoja veikti, programėlė automatiškai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
 
 
       • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
@@ -1658,7 +1658,7 @@ locales:
 
       Rodomi kursai yra orientaciniai vidutiniai dydžiai, o ne tikralaikės biržos kotiruotės.
 
-      Rates By Exchange Rate API.
+      Vienas iš atsarginių kursų šaltinių: Rates By Exchange Rate API.
 
       '
   lv:
@@ -1670,7 +1670,7 @@ locales:
       AR KO FIXXE ATŠĶIRAS
 
 
-      • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
+      • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Tiešsaistes kursi sakrīt ar atsauces kursiem, ko redzat tīmekļa meklēšanā un lielākajās valūtu vietnēs. Ja kāds avots nestrādā, lietotne automātiski pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
 
 
       • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
@@ -1723,7 +1723,7 @@ locales:
 
       Rādītie kursi ir orientējošas vidējās vērtības, nevis reāllaika biržas kotācijas.
 
-      Rates By Exchange Rate API.
+      Viens no rezerves kursu avotiem: Rates By Exchange Rate API.
 
       '
   mk-MK:
@@ -1735,7 +1735,7 @@ locales:
       ПО ШТО СЕ РАЗЛИКУВА FIXXE
 
 
-      • Пет извори на курсеви со автоматска замена — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Ако некој извор падне, апликацијата тивко преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо. Претпочитате еден извор? Изберете го во поставките — другите остануваат како резерва.
+      • Пет извори на курсеви со автоматска замена — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ЕЦБ). Курсовите во живо се совпаѓаат со референтните курсеви што ги гледате во пребарувањето и на големите сајтови за валути. Ако некој извор падне, апликацијата автоматски преминува на следниот и покажува од каде доаѓаат бројките. Повеќето конвертори зависат од едно единствено API и, кога тоа откажува, едноставно не покажуваат ништо. Претпочитате еден извор? Изберете го во поставките — другите остануваат како резерва.
 
 
       • Работи офлајн — последните курсеви остануваат на уредот, па апликацијата пресметува и без врска. А ако тие курсеви се постари од еден ден, тоа го кажува отворено наместо да ги претставува како свежи.
@@ -1788,7 +1788,7 @@ locales:
 
       Прикажаните курсеви се ориентациони средни вредности, а не берзански котации во реално време.
 
-      Rates By Exchange Rate API.
+      Еден од резервните извори на курсеви: Rates By Exchange Rate API.
 
       '
   no-NO:
@@ -1800,7 +1800,7 @@ locales:
       DETTE GJØR FIXXE ANNERLEDES
 
 
-      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
+      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Livekursene samsvarer med referansekursene du ser i nettsøk og på store valutanettsteder. Om en leverandør er nede, går appen automatisk over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
 
 
       • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
@@ -1853,7 +1853,7 @@ locales:
 
       Kursene som vises er veiledende middelkurser, ikke handelskurser i sanntid.
 
-      Rates By Exchange Rate API.
+      En av reservekildene for kurser: Rates By Exchange Rate API.
 
       '
   nl-NL:
@@ -1865,7 +1865,7 @@ locales:
       WAT FIXXE ANDERS MAAKT
 
 
-      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
+      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). De live koersen komen overeen met de referentiekoersen die je ziet in zoekmachines en op grote valutasites. Valt een aanbieder uit, dan schakelt de app automatisch over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
 
 
       • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
@@ -1918,7 +1918,7 @@ locales:
 
       Getoonde koersen zijn middenkoersen ter referentie, geen handelskoersen in realtime.
 
-      Rates By Exchange Rate API.
+      Een van de reservebronnen voor koersen: Rates By Exchange Rate API.
 
       '
   pl-PL:
@@ -1930,7 +1930,7 @@ locales:
       CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
+      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Kursy na żywo pokrywają się z kursami referencyjnymi, które widzisz w wyszukiwarce i na dużych serwisach walutowych. Gdy dostawca przestaje odpowiadać, aplikacja automatycznie przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
 
 
       • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
@@ -1983,7 +1983,7 @@ locales:
 
       Pokazywane kursy to średnie wartości odniesienia, a nie notowania giełdowe w czasie rzeczywistym.
 
-      Rates By Exchange Rate API.
+      Jedno z zapasowych źródeł kursów: Rates By Exchange Rate API.
 
       '
   pt-PT:
@@ -1995,7 +1995,7 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio. Se um fornecedor cair, a aplicação passa automaticamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -2048,7 +2048,7 @@ locales:
 
       As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
 
-      Rates By Exchange Rate API.
+      Uma das fontes de taxas de reserva: Rates By Exchange Rate API.
 
       '
   pt-BR:
@@ -2060,7 +2060,7 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio. Se um fornecedor cair, a aplicação passa automaticamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -2113,7 +2113,7 @@ locales:
 
       As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
 
-      Rates By Exchange Rate API.
+      Uma das fontes de taxas de reserva: Rates By Exchange Rate API.
 
       '
   ro:
@@ -2125,7 +2125,7 @@ locales:
       CE ÎL FACE PE FIXXE DIFERIT
 
 
-      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
+      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Cursurile live coincid cu cursurile de referință pe care le vedeți în căutarea pe internet și pe marile site-uri valutare. Dacă un furnizor cade, aplicația trece automat la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
 
 
       • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
@@ -2178,7 +2178,7 @@ locales:
 
       Cursurile afișate sunt valori medii de referință, nu cotații bursiere în timp real.
 
-      Rates By Exchange Rate API.
+      Una dintre sursele de curs de rezervă: Rates By Exchange Rate API.
 
       '
   ru-RU:
@@ -2190,7 +2190,7 @@ locales:
       ЧЕМ FIXXE ОТЛИЧАЕТСЯ
 
 
-      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает. Предпочитаете один источник? Выберите его в настройках — остальные останутся в резерве.
+      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Живые курсы совпадают со справочными курсами, которые вы видите в поиске и на крупных валютных сайтах. Если источник недоступен, приложение автоматически переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает. Предпочитаете один источник? Выберите его в настройках — остальные останутся в резерве.
 
 
       • Работает офлайн — последние курсы хранятся на устройстве, так что приложение считает и без связи. А если этим курсам больше суток, оно честно об этом говорит, а не делает вид, что они свежие.
@@ -2243,7 +2243,7 @@ locales:
 
       Показанные курсы — среднерыночные справочные значения, а не биржевые котировки в реальном времени.
 
-      Rates By Exchange Rate API.
+      Один из резервных источников курсов: Rates By Exchange Rate API.
 
       '
   sk:
@@ -2255,7 +2255,7 @@ locales:
       ČÍM SA FIXXE LÍŠI
 
 
-      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
+      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy sa zhodujú s referenčnými kurzami, ktoré vidíte vo webovom vyhľadávaní a na veľkých menových weboch. Keď poskytovateľ neodpovedá, aplikácia automaticky prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
 
 
       • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
@@ -2308,7 +2308,7 @@ locales:
 
       Zobrazené kurzy sú orientačné stredné hodnoty, nie burzové kotácie v reálnom čase.
 
-      Rates By Exchange Rate API.
+      Jeden zo záložných zdrojov kurzov: Rates By Exchange Rate API.
 
       '
   sl:
@@ -2320,7 +2320,7 @@ locales:
       V ČEM JE FIXXE DRUGAČEN
 
 
-      • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Če ponudnik odpove, aplikacija tiho preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar. Vam je ljubši en vir? Izberite ga v nastavitvah — drugi ostanejo kot rezerva.
+      • Pet virov tečajev s samodejnim preklopom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. in Frankfurter (ECB). Tečaji v živo se ujemajo z referenčnimi tečaji, ki jih vidite v spletnem iskanju in na velikih valutnih straneh. Če ponudnik odpove, aplikacija samodejno preide na naslednjega in pokaže, od kod so številke. Večina pretvornikov je odvisna od enega samega API-ja in ob njegovem izpadu preprosto ne pokaže ničesar. Vam je ljubši en vir? Izberite ga v nastavitvah — drugi ostanejo kot rezerva.
 
 
       • Deluje brez povezave — zadnji tečaji ostanejo v napravi, zato aplikacija računa tudi brez omrežja. Če pa so ti tečaji starejši od dneva, to pove naravnost, namesto da bi jih prikazovala kot sveže.
@@ -2373,7 +2373,7 @@ locales:
 
       Prikazani tečaji so okvirne srednje vrednosti, ne borzne kotacije v realnem času.
 
-      Rates By Exchange Rate API.
+      Eden od rezervnih virov tečajev: Rates By Exchange Rate API.
 
       '
   sr:
@@ -2385,7 +2385,7 @@ locales:
       PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Pet izvora kursa sa automatskom zamenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Ako izvor padne, aplikacija tiho prelazi na sledeći i pokazuje odakle su brojke. Većina konvertora zavisi od jednog jedinog API-ja i, kad on zakaže, jednostavno ne prikazuje ništa. Više volite jedan izvor? Izaberite ga u podešavanjima — ostali ostaju kao rezerva.
+      • Pet izvora kursa sa automatskom zamenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ECB). Kursevi uživo se poklapaju sa referentnim kursevima koje vidite u pretrazi i na velikim sajtovima za valute. Ako izvor padne, aplikacija automatski prelazi na sledeći i pokazuje odakle su brojke. Većina konvertora zavisi od jednog jedinog API-ja i, kad on zakaže, jednostavno ne prikazuje ništa. Više volite jedan izvor? Izaberite ga u podešavanjima — ostali ostaju kao rezerva.
 
 
       • Radi bez interneta — poslednji kursevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti kursevi stariji od jednog dana, to otvoreno kaže umesto da ih prikazuje kao sveže.
@@ -2438,7 +2438,7 @@ locales:
 
       Prikazani kursevi su okvirne srednje vrednosti, a ne berzanske kotacije u realnom vremenu.
 
-      Rates By Exchange Rate API.
+      Jedan od rezervnih izvora kursa: Rates By Exchange Rate API.
 
       '
   sv-SE:
@@ -2450,7 +2450,7 @@ locales:
       DET HÄR SKILJER FIXXE
 
 
-      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
+      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Livekurserna stämmer med referenskurserna du ser i webbsökningar och på stora valutasajter. Om en leverantör ligger nere byter appen automatiskt till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
 
 
       • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
@@ -2503,7 +2503,7 @@ locales:
 
       Visade kurser är vägledande mittkurser, inte handelskurser i realtid.
 
-      Rates By Exchange Rate API.
+      En av reservkällorna för kurser: Rates By Exchange Rate API.
 
       '
   th:
@@ -2515,7 +2515,7 @@ locales:
       FIXXE ต่างออกไปอย่างไร
 
 
-      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย อยากใช้แหล่งเดียว? เลือกได้ในการตั้งค่า — แหล่งอื่นยังคงเป็นตัวสำรอง
+      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) อัตราแบบเรียลไทม์ตรงกับอัตราอ้างอิงที่คุณเห็นในการค้นหาเว็บและบนเว็บไซต์สกุลเงินชั้นนำ ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปโดยอัตโนมัติ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย อยากใช้แหล่งเดียว? เลือกได้ในการตั้งค่า — แหล่งอื่นยังคงเป็นตัวสำรอง
 
 
       • ใช้งานออฟไลน์ได้ — อัตราล่าสุดถูกเก็บไว้ในเครื่อง แอปจึงคำนวณต่อได้แม้ไม่มีสัญญาณ และถ้าอัตราเหล่านั้นเก่ากว่าหนึ่งวัน แอปจะบอกตรง ๆ แทนที่จะทำเป็นว่ายังใหม่อยู่
@@ -2568,7 +2568,7 @@ locales:
 
       อัตราที่แสดงเป็นค่ากลางสำหรับอ้างอิง ไม่ใช่ราคาซื้อขายแบบเรียลไทม์
 
-      Rates By Exchange Rate API.
+      หนึ่งในแหล่งอัตราสำรอง: Rates By Exchange Rate API.
 
       '
   tr-TR:
@@ -2580,7 +2580,7 @@ locales:
       FIXXE''Yİ FARKLI KILAN NE
 
 
-      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
+      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Canlı kurlar, web aramasında ve büyük döviz sitelerinde gördüğünüz referans kurlarla örtüşür. Bir sağlayıcı yanıt vermezse uygulama otomatik olarak bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
 
 
       • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
@@ -2633,7 +2633,7 @@ locales:
 
       Gösterilen kurlar referans niteliğinde piyasa ortalamalarıdır, gerçek zamanlı borsa fiyatları değildir.
 
-      Rates By Exchange Rate API.
+      Yedek kur kaynaklarından biri: Rates By Exchange Rate API.
 
       '
   vi:
@@ -2645,7 +2645,7 @@ locales:
       ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
+      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Tỷ giá trực tiếp trùng khớp với tỷ giá tham chiếu bạn thấy khi tìm kiếm trên web và trên các trang tiền tệ lớn. Nếu một nhà cung cấp gặp sự cố, ứng dụng tự động chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
 
 
       • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
@@ -2698,7 +2698,7 @@ locales:
 
       Tỷ giá hiển thị là giá trị trung bình để tham khảo, không phải giá giao dịch theo thời gian thực.
 
-      Rates By Exchange Rate API.
+      Một trong các nguồn tỷ giá dự phòng: Rates By Exchange Rate API.
 
       '
   zh-CN:
@@ -2710,7 +2710,7 @@ locales:
       FIXXE 的不同之处
 
 
-      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
+      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。实时汇率与您在网页搜索和主要汇率网站上看到的参考汇率一致。某个来源出故障时，应用会自动换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
 
 
       • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
@@ -2763,6 +2763,6 @@ locales:
 
       显示的汇率为参考性中间价，并非实时交易报价。
 
-      Rates By Exchange Rate API.
+      备用汇率来源之一：Rates By Exchange Rate API.
 
       '

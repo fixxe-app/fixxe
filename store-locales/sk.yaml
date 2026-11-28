@@ -9,7 +9,7 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
   ČÍM SA FIXXE LÍŠI
 
 
-  • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
+  • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy sa zhodujú s referenčnými kurzami, ktoré vidíte vo webovom vyhľadávaní a na veľkých menových weboch. Keď poskytovateľ neodpovedá, aplikácia automaticky prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
 
 
   • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
@@ -62,11 +62,12 @@ description: 'FIXXE je rýchly a prehľadný prevodník mien s aktuálnymi stred
 
   Zobrazené kurzy sú orientačné stredné hodnoty, nie burzové kotácie v reálnom čase.
 
-  Rates By Exchange Rate API.
+  Jeden zo záložných zdrojov kurzov: Rates By Exchange Rate API.
 
   '
 whats_new: "Drobné vylepšenia a opravy."
 landing:
+  credit_prefix: "Jeden zo záložných zdrojov kurzov:"
   page_title: FIXXE — prevodník mien
   install_title: Spôsoby inštalácie
   about_title: O aplikácii
@@ -91,3 +92,5 @@ landing:
   btn_store: Otvoriť v obchode
   privacy: Súkromie
   terms: Podmienky
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Živé kurzy sa zhodujú s referenčnými kurzami, ktoré vidíte vo webovom vyhľadávaní a na veľkých menových weboch.", "about": "Kurzy Coinbase a FXRatesAPI sa prakticky zhodujú s kurzom v Google a na XE.com: pri hlavných menách je rozdiel menší ako 0,005 %."}

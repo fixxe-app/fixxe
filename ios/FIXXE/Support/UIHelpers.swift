@@ -48,6 +48,16 @@ enum AppInfo {
     static var version: String {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
     }
+    /// theme: 1 — светлая, 2 — тёмная, иначе системная (страница решает сама)
+    static func aboutURL(lang: String, theme: Int) -> URL {
+        URL(string: "https://telebimmer.com/fixxe/about/?lang=\(lang)" + themeParam(theme, "&"))!
+    }
+    static func privacyURL(theme: Int) -> URL {
+        URL(string: "https://telebimmer.com/fixxe/privacy.html" + themeParam(theme, "?"))!
+    }
+    private static func themeParam(_ theme: Int, _ sep: String) -> String {
+        theme == 1 ? sep + "theme=light" : theme == 2 ? sep + "theme=dark" : ""
+    }
 }
 
 /// Аргументы запуска для автоматической съёмки скриншотов магазина.

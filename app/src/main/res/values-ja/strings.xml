@@ -30,7 +30,7 @@
     <string name="language_title">言語</string>
     <string name="language_system">システムのデフォルト</string>
     <string name="source_info_title">レートソース</string>
-    <string name="source_info_message">仲値レート — 世界市場での買値と売値の中間値です。\n\nソース（自動フォールバック）:\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\n自動更新時または ↻ 押下時に主要ソースが応答しない場合、アプリは自動的に次のソースからデータを取得します。現在のソースは更新時刻の隣に上部に表示されます。\n\n設定（⚙）で特定のソースを強制指定できます — 他のソースは引き続きフォールバックとして残ります。\n\nCoinbase と FXRatesAPI は 1 分ごとに、その他のソースは 1 日 1 回更新されます。これらは参考レートであり、取引レートではありません。\n\nライセンスと表記:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API —「Rates By Exchange Rate API」リンクが必要です（フッター内、クリック可能）。\n• F.A. — CC0（パブリックドメイン）、表記は不要です。\n• Frankfurter — MIT、データは欧州中央銀行 (ECB) から提供されています。</string>
+    <string name="source_info_message" formatted="false">仲値レート — 世界市場での買値と売値の中間値です。\n\nCoinbaseとFXRatesAPIのレートは、GoogleやXE.comのレートと実質的に一致します。主要通貨では差は0.005%未満です。\n\nソース（自動フォールバック）:\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\n自動更新時または ↻ 押下時に主要ソースが応答しない場合、アプリは自動的に次のソースからデータを取得します。現在のソースは更新時刻の隣に上部に表示されます。\n\n設定（⚙）で特定のソースを強制指定できます — 他のソースは引き続きフォールバックとして残ります。\n\nCoinbase と FXRatesAPI は 1 分ごとに、その他のソースは 1 日 1 回更新されます。これらは参考レートであり、取引レートではありません。\n\nライセンスと表記:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API —「Rates By Exchange Rate API」リンクが必要です（フッター内、クリック可能）。\n• F.A. — CC0（パブリックドメイン）、表記は不要です。\n• Frankfurter — MIT、データは欧州中央銀行 (ECB) から提供されています。</string>
     <string name="filter_all">すべて</string>
     <string name="switch_source_title">ソースを切り替えますか？</string>
     <string name="switch_source_msg">%1$s は現在のソースではなく %2$s から利用できます。切り替えて追加しますか？</string>
@@ -51,6 +51,9 @@
     <string name="group_space">スペース — 1 234.56</string>
     <string name="group_comma">カンマ — 1,234.56</string>
     <string name="adjust_title">レート調整</string>
+    <string name="about_link">このアプリについて</string>
+    <string name="privacy_link">プライバシー</string>
+    <string name="adjust_about">銀行手数料やマージン、送金時の目減り分をパーセントで設定すると、すべての金額が実際の結果をすぐに表示します。</string>
     <string name="adjust_off">オフ</string>
     <string name="adjusted_rates">調整済みレート</string>
     <string name="adjusted_short">調整済み</string>

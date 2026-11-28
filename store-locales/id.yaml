@@ -9,7 +9,7 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
   APA YANG MEMBUAT FIXXE BERBEDA
 
 
-  • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
+  • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Kurs langsung sama dengan kurs referensi yang Anda lihat di penelusuran web dan di situs mata uang besar. Jika satu penyedia tumbang, aplikasi otomatis beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
 
 
   • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
@@ -62,11 +62,12 @@ description: 'FIXXE adalah konverter mata uang yang cepat dan rapi dengan kurs t
 
   Kurs yang ditampilkan adalah nilai tengah sebagai acuan, bukan kuotasi perdagangan waktu nyata.
 
-  Rates By Exchange Rate API.
+  Salah satu sumber kurs cadangan: Rates By Exchange Rate API.
 
   '
 whats_new: "Peningkatan kecil dan perbaikan."
 landing:
+  credit_prefix: "Salah satu sumber kurs cadangan:"
   page_title: FIXXE — konverter mata uang
   install_title: Cara memasang
   about_title: Tentang aplikasi
@@ -91,3 +92,5 @@ landing:
   btn_store: Buka di toko
   privacy: Privasi
   terms: Ketentuan
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Kurs langsung sama dengan kurs referensi yang Anda lihat di penelusuran web dan di situs mata uang besar.", "about": "Kurs Coinbase dan FXRatesAPI praktis sama dengan kurs di Google dan XE.com: untuk mata uang utama selisihnya kurang dari 0,005%."}

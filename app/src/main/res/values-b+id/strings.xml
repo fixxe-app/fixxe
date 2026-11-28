@@ -30,7 +30,7 @@
     <string name="language_title">Bahasa</string>
     <string name="language_system">Bawaan sistem</string>
     <string name="source_info_title">Sumber kurs</string>
-    <string name="source_info_message">Kurs tengah pasar — titik tengah antara harga beli dan jual di pasar global.\n\nSumber (cadangan otomatis):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJika sumber utama tidak merespons saat pembaruan otomatis atau saat menekan ↻, aplikasi otomatis mengambil data dari sumber berikutnya. Sumber saat ini ditampilkan di atas, di samping waktu pembaruan.\n\nDi Pengaturan (⚙) Anda dapat memaksa sumber tertentu — yang lain tetap menjadi cadangan.\n\nCoinbase dan FXRatesAPI diperbarui setiap menit, sumber lainnya sekali sehari. Ini adalah kurs referensi, bukan kuotasi perdagangan.\n\nLisensi dan atribusi:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — memerlukan tautan “Rates By Exchange Rate API” (di footer, dapat diklik).\n• F.A. — CC0 (domain publik), tanpa atribusi.\n• Frankfurter — MIT, data dari Bank Sentral Eropa (ECB).</string>
+    <string name="source_info_message" formatted="false">Kurs tengah pasar — titik tengah antara harga beli dan jual di pasar global.\n\nKurs Coinbase dan FXRatesAPI praktis sama dengan kurs di Google dan XE.com: untuk mata uang utama selisihnya kurang dari 0,005%.\n\nSumber (cadangan otomatis):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJika sumber utama tidak merespons saat pembaruan otomatis atau saat menekan ↻, aplikasi otomatis mengambil data dari sumber berikutnya. Sumber saat ini ditampilkan di atas, di samping waktu pembaruan.\n\nDi Pengaturan (⚙) Anda dapat memaksa sumber tertentu — yang lain tetap menjadi cadangan.\n\nCoinbase dan FXRatesAPI diperbarui setiap menit, sumber lainnya sekali sehari. Ini adalah kurs referensi, bukan kuotasi perdagangan.\n\nLisensi dan atribusi:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — memerlukan tautan “Rates By Exchange Rate API” (di footer, dapat diklik).\n• F.A. — CC0 (domain publik), tanpa atribusi.\n• Frankfurter — MIT, data dari Bank Sentral Eropa (ECB).</string>
     <string name="filter_all">Semua</string>
     <string name="switch_source_title">Ganti sumber?</string>
     <string name="switch_source_msg">%1$s tersedia melalui %2$s, bukan sumber saat ini. Ganti dan tambahkan?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Spasi — 1 234.56</string>
     <string name="group_comma">Koma — 1,234.56</string>
     <string name="adjust_title">Penyesuaian kurs</string>
+    <string name="about_link">Tentang aplikasi</string>
+    <string name="privacy_link">Privasi</string>
+    <string name="adjust_about">Atur persentase untuk biaya bank, margin, atau selisih saat transfer dan semua jumlah langsung menampilkan hasil sebenarnya.</string>
     <string name="adjust_off">Mati</string>
     <string name="adjusted_rates">Kurs disesuaikan</string>
     <string name="adjusted_short">Disesuaikan</string>

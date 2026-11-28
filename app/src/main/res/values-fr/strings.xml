@@ -30,7 +30,7 @@
     <string name="language_title">Langue</string>
     <string name="language_system">Réglage du système</string>
     <string name="source_info_title">Source des taux</string>
-    <string name="source_info_message">Taux du marché — le point médian entre l\'achat et la vente sur le marché mondial.\n\nSources (repli automatique) :\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nSi la source principale ne répond pas lors de la mise à jour automatique ou sur ↻, l\'application prend automatiquement les données de la suivante. La source actuelle est affichée en haut, à côté de l\'heure de mise à jour.\n\nDans les Paramètres (⚙), vous pouvez forcer une source précise — les autres restent en repli.\n\nCoinbase et FXRatesAPI sont mis à jour chaque minute, les autres sources une fois par jour. Ce sont des taux de référence, pas des cours de négociation.\n\nLicences et attribution :\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nécessite le lien « Rates By Exchange Rate API » (dans le pied de page, cliquable).\n• F.A. — CC0 (domaine public), aucune attribution requise.\n• Frankfurter — MIT, données de la European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Taux du marché — le point médian entre l\'achat et la vente sur le marché mondial.\n\nLes taux de Coinbase et FXRatesAPI correspondent pratiquement à ceux de Google et de XE.com : pour les principales devises, l’écart est inférieur à 0,005 %.\n\nSources (repli automatique) :\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nSi la source principale ne répond pas lors de la mise à jour automatique ou sur ↻, l\'application prend automatiquement les données de la suivante. La source actuelle est affichée en haut, à côté de l\'heure de mise à jour.\n\nDans les Paramètres (⚙), vous pouvez forcer une source précise — les autres restent en repli.\n\nCoinbase et FXRatesAPI sont mis à jour chaque minute, les autres sources une fois par jour. Ce sont des taux de référence, pas des cours de négociation.\n\nLicences et attribution :\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nécessite le lien « Rates By Exchange Rate API » (dans le pied de page, cliquable).\n• F.A. — CC0 (domaine public), aucune attribution requise.\n• Frankfurter — MIT, données de la European Central Bank (ECB).</string>
     <string name="filter_all">Toutes</string>
     <string name="switch_source_title">Changer de source ?</string>
     <string name="switch_source_msg">%1$s est disponible via %2$s, pas via la source actuelle. Changer et l\'ajouter ?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Espace — 1 234.56</string>
     <string name="group_comma">Virgule — 1,234.56</string>
     <string name="adjust_title">Ajustement du taux</string>
+    <string name="about_link">À propos de l\'application</string>
+    <string name="privacy_link">Confidentialité</string>
+    <string name="adjust_about">Indiquez un pourcentage pour les frais bancaires, la marge ou les pertes de transfert et tous les montants affichent aussitôt le résultat réel.</string>
     <string name="adjust_off">Désactivé</string>
     <string name="adjusted_rates">Taux ajustés</string>
     <string name="adjusted_short">Ajusté</string>

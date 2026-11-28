@@ -30,7 +30,7 @@
     <string name="language_title">Kieli</string>
     <string name="language_system">Järjestelmän oletus</string>
     <string name="source_info_title">Kurssilähde</string>
-    <string name="source_info_message">Keskimarkkinakurssi — osto- ja myyntikurssin keskiarvo maailmanmarkkinoilla.\n\nLähteet (automaattinen varajärjestelmä):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJos ensisijainen lähde ei vastaa automaattipäivityksen aikana tai painettaessa ↻, sovellus hakee tiedot automaattisesti seuraavasta. Nykyinen lähde näkyy ylhäällä päivitysajan vieressä.\n\nAsetuksissa (⚙) voit pakottaa tietyn lähteen — muut jäävät silti varalähteiksi.\n\nCoinbase ja FXRatesAPI päivittyvät minuutin välein, muut lähteet kerran päivässä. Nämä ovat viitekursseja, eivät kaupankäyntinoteerauksia.\n\nLisenssit ja attribuutio:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — vaatii linkin “Rates By Exchange Rate API” (alatunnisteessa, klikattava).\n• F.A. — CC0 (public domain), ei attribuutiota vaadita.\n• Frankfurter — MIT, tiedot European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Keskimarkkinakurssi — osto- ja myyntikurssin keskiarvo maailmanmarkkinoilla.\n\nCoinbasen ja FXRatesAPI:n kurssit vastaavat käytännössä Googlen ja XE.comin kurssia: tärkeimmissä valuutoissa ero on alle 0,005 %.\n\nLähteet (automaattinen varajärjestelmä):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJos ensisijainen lähde ei vastaa automaattipäivityksen aikana tai painettaessa ↻, sovellus hakee tiedot automaattisesti seuraavasta. Nykyinen lähde näkyy ylhäällä päivitysajan vieressä.\n\nAsetuksissa (⚙) voit pakottaa tietyn lähteen — muut jäävät silti varalähteiksi.\n\nCoinbase ja FXRatesAPI päivittyvät minuutin välein, muut lähteet kerran päivässä. Nämä ovat viitekursseja, eivät kaupankäyntinoteerauksia.\n\nLisenssit ja attribuutio:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — vaatii linkin “Rates By Exchange Rate API” (alatunnisteessa, klikattava).\n• F.A. — CC0 (public domain), ei attribuutiota vaadita.\n• Frankfurter — MIT, tiedot European Central Bank (ECB).</string>
     <string name="filter_all">Kaikki</string>
     <string name="switch_source_title">Vaihdetaanko lähde?</string>
     <string name="switch_source_msg">%1$s on saatavilla lähteen %2$s kautta, ei nykyisen lähteen. Vaihda ja lisää?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Välilyönti — 1 234.56</string>
     <string name="group_comma">Pilkku — 1,234.56</string>
     <string name="adjust_title">Kurssin korjaus</string>
+    <string name="about_link">Tietoja sovelluksesta</string>
+    <string name="privacy_link">Tietosuoja</string>
+    <string name="adjust_about">Aseta prosentti pankin palkkiolle, marginaalille tai siirron kuluille, niin kaikki summat näyttävät heti todellisen tuloksen.</string>
     <string name="adjust_off">Pois</string>
     <string name="adjusted_rates">Korjatut kurssit</string>
     <string name="adjusted_short">Korjattu</string>

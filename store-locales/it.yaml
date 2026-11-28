@@ -9,7 +9,7 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
   COSA RENDE FIXXE DIVERSO
 
 
-  • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
+  • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). I tassi in tempo reale coincidono con i tassi di riferimento che vedi nella ricerca web e sui principali siti di cambio. Se un fornitore non risponde, l''app passa automaticamente al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
 
 
   • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
@@ -62,11 +62,12 @@ description: 'FIXXE è un convertitore di valute rapido e pulito, con tassi medi
 
   I tassi mostrati sono valori medi di riferimento, non quotazioni di mercato in tempo reale.
 
-  Rates By Exchange Rate API.
+  Una delle fonti di tassi di riserva: Rates By Exchange Rate API.
 
   '
 whats_new: "Piccoli miglioramenti e correzioni."
 landing:
+  credit_prefix: "Una delle fonti di tassi di riserva:"
   page_title: FIXXE — convertitore di valute
   install_title: Modi per installare
   about_title: Informazioni sull'app
@@ -91,3 +92,5 @@ landing:
   btn_store: Apri nello store
   privacy: Privacy
   terms: Termini
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "I tassi in tempo reale coincidono con i tassi di riferimento che vedi nella ricerca web e sui principali siti di cambio.", "about": "I tassi di Coinbase e FXRatesAPI coincidono praticamente con quelli di Google e XE.com: per le valute principali la differenza è inferiore allo 0,005%."}

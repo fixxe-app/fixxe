@@ -30,7 +30,7 @@
     <string name="language_title">Γλώσσα</string>
     <string name="language_system">Προεπιλογή συστήματος</string>
     <string name="source_info_title">Πηγή τιμών</string>
-    <string name="source_info_message">Μέση τιμή αγοράς — το μέσο σημείο μεταξύ αγοράς και πώλησης στην παγκόσμια αγορά.\n\nΠηγές (αυτόματη εφεδρεία):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nΑν η κύρια πηγή δεν απαντήσει κατά την αυτόματη ενημέρωση ή με ↻, η εφαρμογή παίρνει αυτόματα δεδομένα από την επόμενη. Η τρέχουσα πηγή εμφανίζεται επάνω, δίπλα στην ώρα ενημέρωσης.\n\nΣτις Ρυθμίσεις (⚙) μπορείτε να επιβάλετε συγκεκριμένη πηγή — οι υπόλοιπες παραμένουν ως εφεδρεία.\n\nΤα Coinbase και FXRatesAPI ενημερώνονται κάθε λεπτό, οι άλλες πηγές μία φορά την ημέρα. Πρόκειται για ισοτιμίες αναφοράς, όχι για τιμές διαπραγμάτευσης.\n\nΆδειες και απόδοση:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — απαιτεί τον σύνδεσμο “Rates By Exchange Rate API” (στο υποσέλιδο, με δυνατότητα κλικ).\n• F.A. — CC0 (δημόσια κτήση), δεν απαιτείται απόδοση.\n• Frankfurter — MIT, δεδομένα από την Ευρωπαϊκή Κεντρική Τράπεζα (ECB).</string>
+    <string name="source_info_message" formatted="false">Μέση τιμή αγοράς — το μέσο σημείο μεταξύ αγοράς και πώλησης στην παγκόσμια αγορά.\n\nΟι ισοτιμίες του Coinbase και του FXRatesAPI ταυτίζονται πρακτικά με αυτές της Google και του XE.com: στα κύρια νομίσματα η διαφορά είναι κάτω από 0,005%.\n\nΠηγές (αυτόματη εφεδρεία):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nΑν η κύρια πηγή δεν απαντήσει κατά την αυτόματη ενημέρωση ή με ↻, η εφαρμογή παίρνει αυτόματα δεδομένα από την επόμενη. Η τρέχουσα πηγή εμφανίζεται επάνω, δίπλα στην ώρα ενημέρωσης.\n\nΣτις Ρυθμίσεις (⚙) μπορείτε να επιβάλετε συγκεκριμένη πηγή — οι υπόλοιπες παραμένουν ως εφεδρεία.\n\nΤα Coinbase και FXRatesAPI ενημερώνονται κάθε λεπτό, οι άλλες πηγές μία φορά την ημέρα. Πρόκειται για ισοτιμίες αναφοράς, όχι για τιμές διαπραγμάτευσης.\n\nΆδειες και απόδοση:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — απαιτεί τον σύνδεσμο “Rates By Exchange Rate API” (στο υποσέλιδο, με δυνατότητα κλικ).\n• F.A. — CC0 (δημόσια κτήση), δεν απαιτείται απόδοση.\n• Frankfurter — MIT, δεδομένα από την Ευρωπαϊκή Κεντρική Τράπεζα (ECB).</string>
     <string name="filter_all">Όλα</string>
     <string name="switch_source_title">Αλλαγή πηγής;</string>
     <string name="switch_source_msg">Το %1$s είναι διαθέσιμο μέσω %2$s, όχι μέσω της τρέχουσας πηγής. Αλλαγή και προσθήκη;</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Κενό — 1 234.56</string>
     <string name="group_comma">Κόμμα — 1,234.56</string>
     <string name="adjust_title">Προσαρμογή ισοτιμίας</string>
+    <string name="about_link">Σχετικά με την εφαρμογή</string>
+    <string name="privacy_link">Απόρρητο</string>
+    <string name="adjust_about">Ορίστε ένα ποσοστό για την προμήθεια της τράπεζας, το περιθώριο ή τις απώλειες μεταφοράς και όλα τα ποσά δείχνουν αμέσως το πραγματικό αποτέλεσμα.</string>
     <string name="adjust_off">Ανενεργή</string>
     <string name="adjusted_rates">Προσαρμοσμένες ισοτιμίες</string>
     <string name="adjusted_short">Προσαρμοσμένη</string>

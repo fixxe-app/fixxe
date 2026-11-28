@@ -30,6 +30,9 @@ struct AdjustSection: View {
 
     var body: some View {
         Section {
+            Text(L10n.t("adjust_about"))
+                .font(.footnote).foregroundColor(.secondary)
+                .accessibilityIdentifier("adjust-about")
             Button { vm.setAdjust(0); custom = "" } label: {
                 HStack {
                     Text(L10n.t("adjust_off")).foregroundColor(.primary)

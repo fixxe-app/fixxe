@@ -9,7 +9,7 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
   DET HER GØR FIXXE ANDERLEDES
 
 
-  • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
+  • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Livekurserne svarer til de referencekurser, du ser i websøgning og på store valutasider. Hvis en udbyder er nede, skifter appen automatisk til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
 
 
   • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
@@ -62,11 +62,12 @@ description: 'FIXXE er en hurtig og ren valutaomregner med aktuelle middelkurser
 
   De viste kurser er vejledende middelkurser, ikke handelskurser i realtid.
 
-  Rates By Exchange Rate API.
+  En af reservekilderne til kurser: Rates By Exchange Rate API.
 
   '
 whats_new: "Små forbedringer og rettelser."
 landing:
+  credit_prefix: "En af reservekilderne til kurser:"
   page_title: FIXXE — valutaomregner
   install_title: Måder at installere på
   about_title: Om appen
@@ -91,3 +92,5 @@ landing:
   btn_store: Åbn i butikken
   privacy: Privatliv
   terms: Vilkår
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Livekurserne svarer til de referencekurser, du ser i websøgning og på store valutasider.", "about": "Kurserne fra Coinbase og FXRatesAPI svarer praktisk talt til Google og XE.com: for de vigtigste valutaer er forskellen under 0,005 %."}

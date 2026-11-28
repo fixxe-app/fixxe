@@ -65,11 +65,14 @@
 
     <!-- Source info -->
     <string name="source_info_title">Rate source</string>
-    <string name="source_info_message">Mid-market rate — the midpoint between buy and sell on the global market.\n\nSources (automatic fallback):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nIf the primary source does not respond during auto-update or on ↻, the app automatically takes data from the next one. The current source is shown at the top next to the update time.\n\nIn Settings (⚙) you can force a specific source — the others still remain as fallback.\n\nCoinbase and FXRatesAPI update every minute, the other sources once a day. These are reference rates, not trading quotes.\n\nLicenses and attribution:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — requires the “Rates By Exchange Rate API” link (in the footer, clickable).\n• F.A. — CC0 (public domain), no attribution required.\n• Frankfurter — MIT, data from the European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Mid-market rate — the midpoint between buy and sell on the global market.\n\nCoinbase and FXRatesAPI rates practically match Google and XE.com: for major currencies the difference is under 0.005%.\n\nSources (automatic fallback):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nIf the primary source does not respond during auto-update or on ↻, the app automatically takes data from the next one. The current source is shown at the top next to the update time.\n\nIn Settings (⚙) you can force a specific source — the others still remain as fallback.\n\nCoinbase and FXRatesAPI update every minute, the other sources once a day. These are reference rates, not trading quotes.\n\nLicenses and attribution:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — requires the “Rates By Exchange Rate API” link (in the footer, clickable).\n• F.A. — CC0 (public domain), no attribution required.\n• Frankfurter — MIT, data from the European Central Bank (ECB).</string>
     <string name="reorder">Reorder</string>
     <string name="rates_offline">Offline · rates from %1$s · %2$s</string>
     <string name="rates_stale">⚠ Rates are out of date — from %1$s · %2$s</string>
     <string name="adjust_title">Rate adjustment</string>
+    <string name="about_link">About the app</string>
+    <string name="privacy_link">Privacy</string>
+    <string name="adjust_about">Add a percentage for your bank\'s fee, a margin or transfer losses and every amount shows the real result straight away.</string>
     <string name="adjust_off">Off</string>
     <string name="adjusted_rates">Adjusted rates</string>
     <string name="adjusted_short">Adjusted</string>

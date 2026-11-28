@@ -9,7 +9,7 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
   WAS FIXXE ANDERS MACHT
 
 
-  • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
+  • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Die Live-Kurse entsprechen den Referenzkursen, die Sie in der Websuche und auf großen Währungsseiten sehen. Fällt ein Anbieter aus, wechselt die App automatisch zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
 
 
   • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
@@ -62,11 +62,12 @@ description: 'FIXXE ist ein schneller, aufgeräumter Währungsrechner mit aktuel
 
   Die angezeigten Kurse sind Mittelkurse als Richtwert, keine Börsenkurse in Echtzeit.
 
-  Rates By Exchange Rate API.
+  Eine der Reserve-Kursquellen: Rates By Exchange Rate API.
 
   '
 whats_new: "Kleine Verbesserungen und Fehlerbehebungen."
 landing:
+  credit_prefix: "Eine der Reserve-Kursquellen:"
   page_title: FIXXE — Währungsrechner
   install_title: Installationswege
   about_title: Über die App
@@ -91,3 +92,5 @@ landing:
   btn_store: Im Store öffnen
   privacy: Datenschutz
   terms: Nutzungsbedingungen
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Die Live-Kurse entsprechen den Referenzkursen, die Sie in der Websuche und auf großen Währungsseiten sehen.", "about": "Die Kurse von Coinbase und FXRatesAPI stimmen praktisch mit Google und XE.com überein: Bei den wichtigsten Währungen liegt die Abweichung unter 0,005 %."}

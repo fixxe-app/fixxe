@@ -9,7 +9,7 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
   FIXXE''Yİ FARKLI KILAN NE
 
 
-  • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
+  • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Canlı kurlar, web aramasında ve büyük döviz sitelerinde gördüğünüz referans kurlarla örtüşür. Bir sağlayıcı yanıt vermezse uygulama otomatik olarak bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
 
 
   • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
@@ -62,11 +62,12 @@ description: 'FIXXE, canlı piyasa ortalaması kurlarla çalışan hızlı ve sa
 
   Gösterilen kurlar referans niteliğinde piyasa ortalamalarıdır, gerçek zamanlı borsa fiyatları değildir.
 
-  Rates By Exchange Rate API.
+  Yedek kur kaynaklarından biri: Rates By Exchange Rate API.
 
   '
 whats_new: "Küçük iyileştirmeler ve düzeltmeler."
 landing:
+  credit_prefix: "Yedek kur kaynaklarından biri:"
   page_title: FIXXE — döviz çevirici
   install_title: Kurulum yolları
   about_title: Uygulama hakkında
@@ -91,3 +92,5 @@ landing:
   btn_store: Mağazada aç
   privacy: Gizlilik
   terms: Koşullar
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Canlı kurlar, web aramasında ve büyük döviz sitelerinde gördüğünüz referans kurlarla örtüşür.", "about": "Coinbase ve FXRatesAPI kurları Google ve XE.com’daki kurla neredeyse aynıdır: başlıca para birimlerinde fark %0,005’ten azdır."}

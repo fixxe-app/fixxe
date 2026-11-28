@@ -30,7 +30,7 @@
     <string name="language_title">Jezik</string>
     <string name="language_system">Zadano sistemom</string>
     <string name="source_info_title">Izvor kursa</string>
-    <string name="source_info_message">Srednji tržišni kurs — sredina između kupovnog i prodajnog na globalnom tržištu.\n\nIzvori (automatska rezerva):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nAko primarni izvor ne odgovori tokom automatskog ažuriranja ili na ↻, aplikacija automatski uzima podatke od sljedećeg. Trenutni izvor je prikazan na vrhu pored vremena ažuriranja.\n\nU Postavkama (⚙) možete nametnuti određeni izvor — ostali i dalje ostaju kao rezerva.\n\nCoinbase i FXRatesAPI ažuriraju se svake minute, ostali izvori jednom dnevno. To su referentni kursevi, a ne trgovačke kotacije.\n\nLicence i atribucija:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — zahtijeva link „Rates By Exchange Rate API“ (u podnožju, klikabilan).\n• F.A. — CC0 (javno vlasništvo), bez obavezne atribucije.\n• Frankfurter — MIT, podaci iz Evropske centralne banke (ECB).</string>
+    <string name="source_info_message" formatted="false">Srednji tržišni kurs — sredina između kupovnog i prodajnog na globalnom tržištu.\n\nKursevi Coinbasea i FXRatesAPI-ja praktično se podudaraju s kursom na Googleu i XE.com: kod glavnih valuta razlika je manja od 0,005%.\n\nIzvori (automatska rezerva):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nAko primarni izvor ne odgovori tokom automatskog ažuriranja ili na ↻, aplikacija automatski uzima podatke od sljedećeg. Trenutni izvor je prikazan na vrhu pored vremena ažuriranja.\n\nU Postavkama (⚙) možete nametnuti određeni izvor — ostali i dalje ostaju kao rezerva.\n\nCoinbase i FXRatesAPI ažuriraju se svake minute, ostali izvori jednom dnevno. To su referentni kursevi, a ne trgovačke kotacije.\n\nLicence i atribucija:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — zahtijeva link „Rates By Exchange Rate API“ (u podnožju, klikabilan).\n• F.A. — CC0 (javno vlasništvo), bez obavezne atribucije.\n• Frankfurter — MIT, podaci iz Evropske centralne banke (ECB).</string>
     <string name="filter_all">Sve</string>
     <string name="switch_source_title">Promijeniti izvor?</string>
     <string name="switch_source_msg">%1$s je dostupan preko %2$s, ne preko trenutnog izvora. Promijeniti i dodati?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Razmak — 1 234.56</string>
     <string name="group_comma">Zarez — 1,234.56</string>
     <string name="adjust_title">Prilagodba kursa</string>
+    <string name="about_link">O aplikaciji</string>
+    <string name="privacy_link">Privatnost</string>
+    <string name="adjust_about">Zadajte procenat za bankovnu proviziju, maržu ili gubitke pri prijenosu i svi iznosi odmah pokazuju stvarni rezultat.</string>
     <string name="adjust_off">Isključeno</string>
     <string name="adjusted_rates">Prilagođeni kursevi</string>
     <string name="adjusted_short">Prilagođeno</string>

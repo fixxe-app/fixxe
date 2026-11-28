@@ -30,7 +30,7 @@
     <string name="language_title">Nyelv</string>
     <string name="language_system">Rendszer alapértelmezése</string>
     <string name="source_info_title">Árfolyamforrás</string>
-    <string name="source_info_message">Középárfolyam — a vételi és eladási ár közötti középpont a globális piacon.\n\nForrások (automatikus tartalék):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nHa az elsődleges forrás nem válaszol az automatikus frissítés során vagy a ↻ gombra, az alkalmazás automatikusan a következőből veszi az adatokat. Az aktuális forrás felül látható a frissítés ideje mellett.\n\nA Beállításokban (⚙) kényszeríthet egy adott forrást — a többi továbbra is tartalékként marad.\n\nA Coinbase és az FXRatesAPI percenként frissül, a többi forrás naponta egyszer. Ezek referencia-árfolyamok, nem kereskedési jegyzések.\n\nLicencek és forrásmegjelölés:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — megköveteli a “Rates By Exchange Rate API” hivatkozást (a láblécben, kattintható).\n• F.A. — CC0 (közkincs), forrásmegjelölés nem szükséges.\n• Frankfurter — MIT, adatok a European Central Bank (ECB) forrásból.</string>
+    <string name="source_info_message" formatted="false">Középárfolyam — a vételi és eladási ár közötti középpont a globális piacon.\n\nA Coinbase és az FXRatesAPI árfolyamai gyakorlatilag megegyeznek a Google és az XE.com árfolyamával: a fő devizáknál az eltérés 0,005% alatti.\n\nForrások (automatikus tartalék):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nHa az elsődleges forrás nem válaszol az automatikus frissítés során vagy a ↻ gombra, az alkalmazás automatikusan a következőből veszi az adatokat. Az aktuális forrás felül látható a frissítés ideje mellett.\n\nA Beállításokban (⚙) kényszeríthet egy adott forrást — a többi továbbra is tartalékként marad.\n\nA Coinbase és az FXRatesAPI percenként frissül, a többi forrás naponta egyszer. Ezek referencia-árfolyamok, nem kereskedési jegyzések.\n\nLicencek és forrásmegjelölés:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — megköveteli a “Rates By Exchange Rate API” hivatkozást (a láblécben, kattintható).\n• F.A. — CC0 (közkincs), forrásmegjelölés nem szükséges.\n• Frankfurter — MIT, adatok a European Central Bank (ECB) forrásból.</string>
     <string name="filter_all">Mind</string>
     <string name="switch_source_title">Forrás váltása?</string>
     <string name="switch_source_msg">A(z) %1$s a(z) %2$s forráson keresztül érhető el, nem a jelenlegin. Váltasz és hozzáadod?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Szóköz — 1 234.56</string>
     <string name="group_comma">Vessző — 1,234.56</string>
     <string name="adjust_title">Árfolyam-korrekció</string>
+    <string name="about_link">Az alkalmazásról</string>
+    <string name="privacy_link">Adatvédelem</string>
+    <string name="adjust_about">Adjon meg egy százalékot a banki díjra, árrésre vagy az átutalási veszteségre, és minden összeg azonnal a valós eredményt mutatja.</string>
     <string name="adjust_off">Ki</string>
     <string name="adjusted_rates">Korrigált árfolyamok</string>
     <string name="adjusted_short">Korrigált</string>

@@ -9,7 +9,7 @@ description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurse
   DETTE GJØR FIXXE ANNERLEDES
 
 
-  • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
+  • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Livekursene samsvarer med referansekursene du ser i nettsøk og på store valutanettsteder. Om en leverandør er nede, går appen automatisk over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
 
 
   • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
@@ -62,11 +62,12 @@ description: 'FIXXE er en rask og ryddig valutakalkulator med ferske middelkurse
 
   Kursene som vises er veiledende middelkurser, ikke handelskurser i sanntid.
 
-  Rates By Exchange Rate API.
+  En av reservekildene for kurser: Rates By Exchange Rate API.
 
   '
 whats_new: "Små forbedringer og rettelser."
 landing:
+  credit_prefix: "En av reservekildene for kurser:"
   page_title: FIXXE — valutakalkulator
   install_title: Måter å installere på
   about_title: Om appen
@@ -91,3 +92,5 @@ landing:
   btn_store: Åpne i butikken
   privacy: Personvern
   terms: Vilkår
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Livekursene samsvarer med referansekursene du ser i nettsøk og på store valutanettsteder.", "about": "Kursene fra Coinbase og FXRatesAPI samsvarer praktisk talt med Google og XE.com: for de viktigste valutaene er forskjellen under 0,005 %."}

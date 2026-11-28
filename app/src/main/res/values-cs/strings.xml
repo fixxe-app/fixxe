@@ -30,7 +30,7 @@
     <string name="language_title">Jazyk</string>
     <string name="language_system">Výchozí nastavení systému</string>
     <string name="source_info_title">Zdroj kurzů</string>
-    <string name="source_info_message">Střední tržní kurz — střed mezi nákupem a prodejem na globálním trhu.\n\nZdroje (automatická záloha):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nPokud primární zdroj během automatické aktualizace nebo po ↻ neodpovídá, aplikace automaticky převezme data z dalšího. Aktuální zdroj je zobrazen nahoře vedle času aktualizace.\n\nV Nastavení (⚙) můžete vynutit konkrétní zdroj — ostatní stále zůstávají jako záloha.\n\nCoinbase a FXRatesAPI se aktualizují každou minutu, ostatní zdroje jednou denně. Jde o referenční kurzy, ne o obchodní kotace.\n\nLicence a uvedení zdroje:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — vyžaduje odkaz “Rates By Exchange Rate API” (v zápatí, klikací).\n• F.A. — CC0 (volné dílo), uvedení zdroje není nutné.\n• Frankfurter — MIT, data z European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Střední tržní kurz — střed mezi nákupem a prodejem na globálním trhu.\n\nKurzy Coinbase a FXRatesAPI se prakticky shodují s kurzem v Googlu a na XE.com: u hlavních měn je rozdíl menší než 0,005 %.\n\nZdroje (automatická záloha):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nPokud primární zdroj během automatické aktualizace nebo po ↻ neodpovídá, aplikace automaticky převezme data z dalšího. Aktuální zdroj je zobrazen nahoře vedle času aktualizace.\n\nV Nastavení (⚙) můžete vynutit konkrétní zdroj — ostatní stále zůstávají jako záloha.\n\nCoinbase a FXRatesAPI se aktualizují každou minutu, ostatní zdroje jednou denně. Jde o referenční kurzy, ne o obchodní kotace.\n\nLicence a uvedení zdroje:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — vyžaduje odkaz “Rates By Exchange Rate API” (v zápatí, klikací).\n• F.A. — CC0 (volné dílo), uvedení zdroje není nutné.\n• Frankfurter — MIT, data z European Central Bank (ECB).</string>
     <string name="filter_all">Vše</string>
     <string name="switch_source_title">Přepnout zdroj?</string>
     <string name="switch_source_msg">%1$s je dostupné přes %2$s, ne přes aktuální zdroj. Přepnout a přidat?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Mezera — 1 234.56</string>
     <string name="group_comma">Čárka — 1,234.56</string>
     <string name="adjust_title">Úprava kurzu</string>
+    <string name="about_link">O aplikaci</string>
+    <string name="privacy_link">Soukromí</string>
+    <string name="adjust_about">Nastavte procento za bankovní poplatek, marži nebo ztráty při převodu a všechny částky hned ukážou skutečný výsledek.</string>
     <string name="adjust_off">Vyp.</string>
     <string name="adjusted_rates">Upravené kurzy</string>
     <string name="adjusted_short">Upraveno</string>

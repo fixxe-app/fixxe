@@ -167,14 +167,14 @@ class CurrencyViewModel(app: Application) : AndroidViewModel(app) {
         if (code in displayCurrencies && amount > 0) calc.type(code, amount)
     }
 
-    /** Возврат на экран после перерыва дольше срока — сумма снова 1 в первой
+    /** Возврат на экран после перерыва дольше срока — снова стартовая сумма в первой
      *  валюте, как при первом запуске. true — сбросили (экран уберёт курсор из поля). */
     fun resetAmountIfExpired(now: Long = System.currentTimeMillis(), beforeReset: () -> Unit = {}): Boolean {
         if (!AmountMemory.expired(getAmountMemory(), prefs.getLong("adjust_left_at", 0L), now)) return false
         val first = displayCurrencies.firstOrNull() ?: return false
-        if (calc.base == first && calc.active == first && calc.amount == 1.0) return false
+        if (calc.base == first && calc.active == first && calc.amount == AmountModel.START) return false
         beforeReset()      // поле в фокусе не перезаписывается — курсор убрать до пересчёта
-        calc.type(first, 1.0)
+        calc.type(first, AmountModel.START)
         emitAmounts()
         return true
     }

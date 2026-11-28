@@ -71,27 +71,27 @@ const amountOf = (d, c) => d.querySelector(`.card[data-code="${c}"] .amount`).va
     d.querySelector('#modal-root [data-x]').click(); await wait(100);
     w.dispatchEvent(new Event('pagehide'));
     [w, d] = await open();
-    check(amountOf(d, 'EUR') === '1', `«Пока открыто»: после перезагрузки EUR = ${amountOf(d, 'EUR')}, ожидалось 1`);
+    check(amountOf(d, 'EUR') === '42', `«Пока открыто»: после перезагрузки EUR = ${amountOf(d, 'EUR')}, ожидалось 42`);
 
     // 3. сроки при запуске
     const now = Date.now();
     const saved = (h, mode) => ({ saved_code: 'USD', saved_amount: 50, adjust_left_at: now - h * H, ...(mode === undefined ? {} : { amount_memory: mode }) });
-    const cases = [[11, undefined, 'USD', '50', '12 ч, прошло 11'], [13, undefined, 'EUR', '1', '12 ч, прошло 13'],
-                   [13, 2, 'USD', '50', '24 ч, прошло 13'], [25, 2, 'EUR', '1', '24 ч, прошло 25'],
-                   [720, 3, 'USD', '50', '«всегда», прошло 30 дней'], [1, 0, 'EUR', '1', '«пока открыто», прошёл 1 ч']];
+    const cases = [[11, undefined, 'USD', '50', '12 ч, прошло 11'], [13, undefined, 'EUR', '42', '12 ч, прошло 13'],
+                   [13, 2, 'USD', '50', '24 ч, прошло 13'], [25, 2, 'EUR', '42', '24 ч, прошло 25'],
+                   [720, 3, 'USD', '50', '«всегда», прошло 30 дней'], [1, 0, 'EUR', '42', '«пока открыто», прошёл 1 ч']];
     for (const [h, mode, code, exp, name] of cases) {
       [w, d] = await open(saved(h, mode));
       check(amountOf(d, code) === exp, `${name}: ${code} = ${amountOf(d, code)}, ожидалось ${exp}`);
     }
     [w, d] = await open({ ...saved(1), currencies: ['EUR', 'RSD'] });
-    check(amountOf(d, 'EUR') === '1', `валюты суммы нет в списке: EUR = ${amountOf(d, 'EUR')}, ожидалось 1`);
+    check(amountOf(d, 'EUR') === '42', `валюты суммы нет в списке: EUR = ${amountOf(d, 'EUR')}, ожидалось 42`);
 
     // 4. вкладка жила, вернулись после срока
     [w, d] = await open(saved(1));
     check(amountOf(d, 'USD') === '50', 'сумма не вернулась перед проверкой возврата');
     put('adjust_left_at', Date.now() - 13 * H);
     d.dispatchEvent(new Event('visibilitychange')); await wait(200);
-    check(amountOf(d, 'EUR') === '1' && w.eval('baseCurrency') === 'EUR',
+    check(amountOf(d, 'EUR') === '42' && w.eval('baseCurrency') === 'EUR',
           `вернулись через 13 ч при 12 ч: EUR = ${amountOf(d, 'EUR')}, база ${w.eval('baseCurrency')}`);
     [w, d] = await open(saved(1, 3));
     put('adjust_left_at', Date.now() - 90 * 24 * H);

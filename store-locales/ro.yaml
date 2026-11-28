@@ -9,7 +9,7 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
   CE ÎL FACE PE FIXXE DIFERIT
 
 
-  • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
+  • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Cursurile live coincid cu cursurile de referință pe care le vedeți în căutarea pe internet și pe marile site-uri valutare. Dacă un furnizor cade, aplicația trece automat la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
 
 
   • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
@@ -62,11 +62,12 @@ description: 'FIXXE este un convertor valutar rapid și curat, cu cursuri medii 
 
   Cursurile afișate sunt valori medii de referință, nu cotații bursiere în timp real.
 
-  Rates By Exchange Rate API.
+  Una dintre sursele de curs de rezervă: Rates By Exchange Rate API.
 
   '
 whats_new: "Mici îmbunătățiri și remedieri."
 landing:
+  credit_prefix: "Una dintre sursele de curs de rezervă:"
   page_title: FIXXE — convertor valutar
   install_title: Moduri de instalare
   about_title: Despre aplicație
@@ -91,3 +92,5 @@ landing:
   btn_store: Deschide în magazin
   privacy: Confidențialitate
   terms: Termeni
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Cursurile live coincid cu cursurile de referință pe care le vedeți în căutarea pe internet și pe marile site-uri valutare.", "about": "Cursurile Coinbase și FXRatesAPI coincid practic cu cursul din Google și de pe XE.com: la principalele valute diferența este sub 0,005%."}

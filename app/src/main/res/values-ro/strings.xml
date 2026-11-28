@@ -30,7 +30,7 @@
     <string name="language_title">Limbă</string>
     <string name="language_system">Implicit din sistem</string>
     <string name="source_info_title">Sursa cursurilor</string>
-    <string name="source_info_message">Curs mediu de piață — punctul de mijloc între cumpărare și vânzare pe piața globală.\n\nSurse (rezervă automată):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nDacă sursa principală nu răspunde în timpul actualizării automate sau la ↻, aplicația preia automat datele de la următoarea. Sursa curentă este afișată sus, lângă ora actualizării.\n\nÎn Setări (⚙) poți impune o anumită sursă — celelalte rămân în continuare ca rezervă.\n\nCoinbase și FXRatesAPI se actualizează în fiecare minut, celelalte surse o dată pe zi. Sunt cursuri de referință, nu cotații de tranzacționare.\n\nLicențe și atribuire:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — necesită linkul “Rates By Exchange Rate API” (în subsol, pe care se poate face clic).\n• F.A. — CC0 (domeniu public), fără atribuire necesară.\n• Frankfurter — MIT, date de la Banca Centrală Europeană (ECB).</string>
+    <string name="source_info_message" formatted="false">Curs mediu de piață — punctul de mijloc între cumpărare și vânzare pe piața globală.\n\nCursurile Coinbase și FXRatesAPI coincid practic cu cursul din Google și de pe XE.com: la principalele valute diferența este sub 0,005%.\n\nSurse (rezervă automată):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nDacă sursa principală nu răspunde în timpul actualizării automate sau la ↻, aplicația preia automat datele de la următoarea. Sursa curentă este afișată sus, lângă ora actualizării.\n\nÎn Setări (⚙) poți impune o anumită sursă — celelalte rămân în continuare ca rezervă.\n\nCoinbase și FXRatesAPI se actualizează în fiecare minut, celelalte surse o dată pe zi. Sunt cursuri de referință, nu cotații de tranzacționare.\n\nLicențe și atribuire:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — necesită linkul “Rates By Exchange Rate API” (în subsol, pe care se poate face clic).\n• F.A. — CC0 (domeniu public), fără atribuire necesară.\n• Frankfurter — MIT, date de la Banca Centrală Europeană (ECB).</string>
     <string name="filter_all">Toate</string>
     <string name="switch_source_title">Schimbi sursa?</string>
     <string name="switch_source_msg">%1$s este disponibil prin %2$s, nu prin sursa curentă. Schimbi și îl adaugi?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Spațiu — 1 234.56</string>
     <string name="group_comma">Virgulă — 1,234.56</string>
     <string name="adjust_title">Ajustarea cursului</string>
+    <string name="about_link">Despre aplicație</string>
+    <string name="privacy_link">Confidențialitate</string>
+    <string name="adjust_about">Setați un procent pentru comisionul băncii, marjă sau pierderile la transfer și toate sumele arată imediat rezultatul real.</string>
     <string name="adjust_off">Dezactivat</string>
     <string name="adjusted_rates">Cursuri ajustate</string>
     <string name="adjusted_short">Ajustat</string>

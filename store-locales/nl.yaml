@@ -9,7 +9,7 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
   WAT FIXXE ANDERS MAAKT
 
 
-  • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
+  • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). De live koersen komen overeen met de referentiekoersen die je ziet in zoekmachines en op grote valutasites. Valt een aanbieder uit, dan schakelt de app automatisch over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
 
 
   • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
@@ -62,11 +62,12 @@ description: 'FIXXE is een snelle, opgeruimde valutaomrekener met actuele midden
 
   Getoonde koersen zijn middenkoersen ter referentie, geen handelskoersen in realtime.
 
-  Rates By Exchange Rate API.
+  Een van de reservebronnen voor koersen: Rates By Exchange Rate API.
 
   '
 whats_new: "Kleine verbeteringen en oplossingen."
 landing:
+  credit_prefix: "Een van de reservebronnen voor koersen:"
   page_title: FIXXE — valutaomrekener
   install_title: Manieren om te installeren
   about_title: Over de app
@@ -91,3 +92,5 @@ landing:
   btn_store: In de store openen
   privacy: Privacy
   terms: Voorwaarden
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "De live koersen komen overeen met de referentiekoersen die je ziet in zoekmachines en op grote valutasites.", "about": "De koersen van Coinbase en FXRatesAPI komen vrijwel overeen met die van Google en XE.com: bij de belangrijkste valuta is het verschil kleiner dan 0,005%."}

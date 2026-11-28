@@ -30,7 +30,7 @@
     <string name="language_title">Idioma</string>
     <string name="language_system">Predeterminado del sistema</string>
     <string name="source_info_title">Fuente de tasas</string>
-    <string name="source_info_message">Tasa de mercado medio — el punto medio entre la compra y la venta en el mercado global.\n\nFuentes (respaldo automático):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nSi la fuente principal no responde durante la actualización automática o al pulsar ↻, la app toma automáticamente los datos de la siguiente. La fuente actual se muestra arriba, junto a la hora de actualización.\n\nEn Ajustes (⚙) puedes forzar una fuente específica — las demás siguen disponibles como respaldo.\n\nCoinbase y FXRatesAPI se actualizan cada minuto; las demás fuentes, una vez al día. Son tipos de referencia, no cotizaciones de negociación.\n\nLicencias y atribución:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — requiere el enlace “Rates By Exchange Rate API” (en el pie de página, con enlace).\n• F.A. — CC0 (dominio público), sin atribución requerida.\n• Frankfurter — MIT, datos del European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Tasa de mercado medio — el punto medio entre la compra y la venta en el mercado global.\n\nLos tipos de Coinbase y FXRatesAPI coinciden prácticamente con los de Google y XE.com: en las principales divisas la diferencia es inferior al 0,005 %.\n\nFuentes (respaldo automático):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nSi la fuente principal no responde durante la actualización automática o al pulsar ↻, la app toma automáticamente los datos de la siguiente. La fuente actual se muestra arriba, junto a la hora de actualización.\n\nEn Ajustes (⚙) puedes forzar una fuente específica — las demás siguen disponibles como respaldo.\n\nCoinbase y FXRatesAPI se actualizan cada minuto; las demás fuentes, una vez al día. Son tipos de referencia, no cotizaciones de negociación.\n\nLicencias y atribución:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — requiere el enlace “Rates By Exchange Rate API” (en el pie de página, con enlace).\n• F.A. — CC0 (dominio público), sin atribución requerida.\n• Frankfurter — MIT, datos del European Central Bank (ECB).</string>
     <string name="filter_all">Todas</string>
     <string name="switch_source_title">¿Cambiar de fuente?</string>
     <string name="switch_source_msg">%1$s está disponible a través de %2$s, no de la fuente actual. ¿Cambiar y añadirlo?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Espacio — 1 234.56</string>
     <string name="group_comma">Coma — 1,234.56</string>
     <string name="adjust_title">Ajuste del tipo</string>
+    <string name="about_link">Sobre la aplicación</string>
+    <string name="privacy_link">Privacidad</string>
+    <string name="adjust_about">Indica un porcentaje para la comisión del banco, el margen o las pérdidas de la transferencia y todos los importes muestran al instante el resultado real.</string>
     <string name="adjust_off">Desactivado</string>
     <string name="adjusted_rates">Tipos ajustados</string>
     <string name="adjusted_short">Ajustado</string>

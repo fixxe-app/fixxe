@@ -1,5 +1,5 @@
 // FIXXE service worker — offline app shell + fresh rates
-const CACHE = 'fixe-v70';
+const CACHE = 'fixe-v71';
 const SHELL = [
   './', './index.html', './styles.css', './app.js',
   './i18n.js', './currency-data.js', './manifest.webmanifest',
@@ -22,7 +22,18 @@ self.addEventListener('fetch', e=>{
   // версии: каждое скачивание APK отставало бы на релиз, а 6 МБ лежали бы
   // в хранилище браузера.
   if (/\.apk$|\/latest\.json$/.test(url.pathname)){ return; }
-  // App shell — cache-first, с фоновым обновлением
+  // Страницы (index, About, Privacy, Terms) — сначала из сети, кэш только без связи:
+  // иначе после выкладки человек видит старую копию, пока не перезагрузит дважды
+  if (e.request.mode === 'navigate' || /\.html$|\/$/.test(url.pathname)){
+    e.respondWith(
+      fetch(e.request, {cache: 'no-cache'}).then(res=>{
+        if (res && res.status===200){ const clone=res.clone(); caches.open(CACHE).then(c=>c.put(e.request, clone)); }
+        return res;
+      }).catch(()=> caches.match(e.request).then(c=> c || caches.match('./index.html')))
+    );
+    return;
+  }
+  // Скрипты, стили, значки — cache-first с фоновым обновлением (в адресах версия ?v=)
   e.respondWith(
     caches.match(e.request).then(cached=>{
       const net = fetch(e.request).then(res=>{

@@ -31,11 +31,11 @@ cleanup() { [ -n "${SRV:-}" ] && kill "$SRV" 2>/dev/null || true; rm -rf "$WORK"
 trap cleanup EXIT
 fail() { echo "✗ $*" >&2; exit 1; }
 
-echo "→ 1/12 синтаксис скриптов"
+echo "→ 1/13 синтаксис скриптов"
 for f in web/*.js; do node --check "$f" >/dev/null || fail "синтаксическая ошибка в $f"; done
 echo "  ✓ $(ls web/*.js | wc -l | tr -d ' ') файлов разобраны"
 
-echo "→ 2/12 страница в безголовом Chrome"
+echo "→ 2/13 страница в безголовом Chrome"
 # корень сервера — репозиторий: так рядом с сайтом доступны и тестовые страницы
 python3 -m http.server "$PORT" --directory . >/dev/null 2>&1 &
 SRV=$!
@@ -49,12 +49,12 @@ grep -q "1 EUR = " "$WORK/dom.html" || {
 }
 echo "  ✓ курсы отрисованы"
 
-echo "→ 3/12 обработчик кнопки «обновить»"
+echo "→ 3/13 обработчик кнопки «обновить»"
 grep -q "btnRefresh').onclick = () => refresh()" web/app.js \
   || fail "кнопка «обновить» должна вызывать refresh() без аргумента, иначе событие попадёт в параметр force и отключит тротлинг"
 echo "  ✓ refresh() вызывается без аргумента"
 
-echo "→ 4/12 переключение строк, удаление валюты, разбор сумм"
+echo "→ 4/13 переключение строк, удаление валюты, разбор сумм"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/switch-rows.html" > "$WORK/switch.html" 2>/dev/null || true
 RES=$(sed -n 's/.*<pre id="result">\([^<]*\)<\/pre>.*/\1/p' "$WORK/switch.html" | head -1)
@@ -65,7 +65,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/switch.html"; then
 fi
 echo "  ✓ переключение строк ничего не сбрасывает и не сдвигает; удаление активной валюты переводит сумму; разбор сумм как на Android и iOS"
 
-echo "→ 5/12 источники курсов: разбор ответов, порядок, резерв, перенос выбора"
+echo "→ 5/13 источники курсов: разбор ответов, порядок, резерв, перенос выбора"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/sources.html" > "$WORK/sources.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/sources.html"; then
@@ -75,7 +75,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/sources.html"; then
 fi
 echo "  ✓ Coinbase первый, FXRatesAPI резерв; ответы разбираются; сохранённый выбор переносится"
 
-echo "→ 6/12 поправка к курсу: полоса, пересчёт, переходы между строками, сброс"
+echo "→ 6/13 поправка к курсу: полоса, пересчёт, переходы между строками, сброс"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/adjust.html" > "$WORK/adjust.html" 2>/dev/null || true
 if ! grep -q '^<pre id="result">PASS</pre>' "$WORK/adjust.html"; then
@@ -83,9 +83,9 @@ if ! grep -q '^<pre id="result">PASS</pre>' "$WORK/adjust.html"; then
   sed -n '/^<pre id="result">/,/<\/pre>/p' "$WORK/adjust.html" | sed 's/<[^>]*>//g; s/^/    /' >&2
   fail "поправка к курсу не прошла проверку"
 fi
-echo "  ✓ без поправки экран прежний; с поправкой полоса видна, базовая строка точная, остальные пересчитаны и помечены; переходы числа не двигают; сброс через 4 часа с сообщением"
+echo "  ✓ без поправки экран прежний; с поправкой полоса видна, базовая строка точная, остальные пересчитаны и помечены; переходы числа не двигают; сброс через 4 часа с сообщением; FIXXE и «О приложении» ведут на About, Privacy — в новой вкладке"
 
-echo "→ 7/12 введённая сумма после закрытия: 12 ч по умолчанию, 24 ч, «всегда», «пока открыто»"
+echo "→ 7/13 введённая сумма после закрытия: 12 ч по умолчанию, 24 ч, «всегда», «пока открыто»"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/memory.html" > "$WORK/memory.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/memory.html"; then
@@ -93,9 +93,9 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/memory.html"; then
   sed -n '/<pre id="result">/,/<\/pre>/p' "$WORK/memory.html" | sed 's/<[^>]*>//g; s/^/    /' >&2
   fail "память суммы не прошла проверку"
 fi
-echo "  ✓ сумма переживает перезагрузку по сроку; «пока открыто» её стирает; после срока — снова 1, и без перезагрузки"
+echo "  ✓ сумма переживает перезагрузку по сроку; «пока открыто» её стирает; после срока — снова 42, и без перезагрузки"
 
-echo "→ 8/12 длинная сумма уменьшается, а не обрезается"
+echo "→ 8/13 длинная сумма уменьшается, а не обрезается"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=60000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/fit.html" > "$WORK/fit.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/fit.html"; then
@@ -105,7 +105,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/fit.html"; then
 fi
 echo "  ✓ «150 000 000» и пересчитанные суммы видны целиком; стёрли — размер обычный; не меньше половины"
 
-echo "→ 9/12 страница About: значки магазинов вверху, ссылка #install, источник курсов в подвале"
+echo "→ 9/13 страница About: значки магазинов вверху, ссылка #install, источник курсов в подвале"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=40000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/anchor.html" > "$WORK/anchor.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/anchor.html"; then
@@ -113,9 +113,9 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/anchor.html"; then
   sed -n '/<pre id="result">/,/<\/pre>/p' "$WORK/anchor.html" | sed 's/<[^>]*>//g; s/^/    /' >&2
   fail "страница About не прошла проверку"
 fi
-echo "  ✓ about/#install — раздел вверху экрана после отрисовки описания; без якоря — страница сверху; источник курсов только в подвале; значки App Store и Google Play вверху (320–900 px, RU и арабский)"
+echo "  ✓ about/#install — раздел вверху экрана после отрисовки описания; без якоря — страница сверху; источник курсов только в подвале; значки App Store и Google Play вверху (320–900 px, RU и арабский); логотип ведёт в калькулятор; Privacy/Terms в новой вкладке"
 
-echo "→ 10/12 в Terms и Privacy перечислены все источники курсов"
+echo "→ 10/13 в Terms и Privacy перечислены все источники курсов, подвал одинаковый"
 # Источник добавили в приложение, а условия о нём молчат — так Terms и
 # Privacy уже однажды отстали на три источника. Имена — из кода всех трёх платформ.
 python3 - <<'PY' || fail "Terms или Privacy не называют все источники курсов — допиши web/terms.html и web/privacy.html"
@@ -135,8 +135,17 @@ for page in ("terms", "privacy"):
 if bad: sys.exit("\n".join(bad))
 print("  ✓ все " + str(len(names)) + ": " + ", ".join(sorted(names)))
 PY
+# Внизу Privacy и Terms — один и тот же подвал со ссылками на все страницы
+python3 - <<'PY' || fail "подвал Privacy и Terms разный или без нужных ссылок"
+import re, pathlib, sys
+feet = [re.findall(r'<p class="links">.*?</p>', pathlib.Path(f"web/{p}.html").read_text()) for p in ("privacy", "terms")]
+if not all(len(f) == 1 for f in feet) or feet[0] != feet[1]: sys.exit("  подвалы различаются или их нет")
+hrefs = re.findall(r'href="([^"]+)"', feet[0][0])
+if hrefs != ["privacy.html", "terms.html", "about/", "./"]: sys.exit(f"  ссылки в подвале: {hrefs}")
+print("  ✓ подвал Privacy · Terms · About · Web version FIXXE — одинаковый на обеих страницах")
+PY
 
-echo "→ 11/12 значки App Store и Google Play в нижней строке"
+echo "→ 11/13 значки App Store и Google Play в нижней строке"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=240000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/stores.html" > "$WORK/stores.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/stores.html"; then
@@ -146,7 +155,7 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/stores.html"; then
 fi
 echo "  ✓ оба значка ведут в FIXXE, одного роста, в строке «Добавить валюту»; 320–768 px, 6 языков вкл. арабский — ничего не налезает и не вылезает"
 
-echo "→ 12/12 узкий экран: строка валюты целиком в карточке"
+echo "→ 12/13 узкий экран: строка валюты целиком в карточке"
 "$CHROME" --headless --disable-gpu --no-sandbox --virtual-time-budget=90000 \
   --dump-dom "http://127.0.0.1:$PORT/tools/web-tests/narrow.html" > "$WORK/narrow.html" 2>/dev/null || true
 if ! grep -q '<pre id="result">PASS</pre>' "$WORK/narrow.html"; then
@@ -155,5 +164,19 @@ if ! grep -q '<pre id="result">PASS</pre>' "$WORK/narrow.html"; then
   fail "строка валюты не помещается на узком экране"
 fi
 echo "  ✓ 320–430 px: код не слипается с символом, ручка и сумма в карточке, название под кодом; сузили окно — суммы подогнаны заново"
+
+echo "→ 13/13 service worker берёт страницы из сети, а не старые из кэша"
+# В безголовом Chrome service worker не запускается — проверяем код: для
+# страниц сначала fetch, кэш — только в .catch (без связи)
+python3 - <<'PY' || fail "service worker отдаёт страницы из кэша — после выкладки люди видят старые"
+import re, pathlib, sys
+s = pathlib.Path("web/sw.js").read_text()
+m = re.search(r"if \(e\.request\.mode === 'navigate'[^\n]*\{(.*?)\n    return;\n  \}", s, re.S)
+if not m: sys.exit("  в sw.js нет отдельной ветки для страниц (navigate)")
+body = m.group(1)
+f, c = body.find("fetch("), body.find("caches.match")
+if f < 0 or c < 0 or c < f or ".catch(" not in body[f:c]: sys.exit("  страницы не из сети: кэш раньше fetch или не только без связи")
+PY
+echo "  ✓ страницы (index, About, Privacy, Terms) — сначала из сети, кэш только без связи"
 
 echo "✓ Web smoke пройден"

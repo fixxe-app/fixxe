@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = '1.70';
+const APP_VERSION = '1.71';
 
 /* ---------- Persistence ---------- */
 const store = {
@@ -37,7 +37,9 @@ const SYSTEM_LANG = 'system';
 let lang = store.get('lang', null);
 let allRates = {};
 let activeCurrency = displayCurrencies[0] || 'EUR';
-let activeAmount = 1;
+// Стартовая сумма — не 1: единица читается как надпись «курс», а не как поле для ввода
+const START_AMOUNT = 42;
+let activeAmount = START_AMOUNT;
 // Базовая строка — та, в которой последний раз ввели число; activeAmount — её
 // сумма, все остальные считаются от неё. Без поправки это всегда строка с
 // курсором (activeCurrency). С поправкой переход на другую строку базу не
@@ -120,8 +122,8 @@ restoreAmount();
 function resetAmountIfExpired(now){
   if (!amountExpired(amountMemory, store.get('adjust_left_at', 0), now ?? Date.now())) return false;
   const first = displayCurrencies[0];
-  if (!first || (baseCurrency === first && activeCurrency === first && activeAmount === 1)) return false;
-  activeCurrency = baseCurrency = first; activeAmount = 1;
+  if (!first || (baseCurrency === first && activeCurrency === first && activeAmount === START_AMOUNT)) return false;
+  activeCurrency = baseCurrency = first; activeAmount = START_AMOUNT;
   return true;
 }
 let currentSource = '';
@@ -152,6 +154,19 @@ function applyDir(){
   const L = resolveLang();
   document.documentElement.lang = L;
   document.documentElement.dir = RTL_LANGS.includes(L) ? 'rtl' : 'ltr';
+  linkAbout();
+}
+// страница About — на том же языке, что и приложение
+function aboutHref(){ return 'about/?lang=' + resolveLang() + themeParam('&'); }
+// Тема, выбранная в приложении, — и на About, Privacy, Terms (они на другом сайте могут не знать о ней)
+function themeParam(sep){ return theme === 1 ? sep + 'theme=light' : theme === 2 ? sep + 'theme=dark' : ''; }
+const PRIVACY_URL = 'privacy.html';
+// Надпись FIXXE и значок в шапке ведут на About
+function linkAbout(){
+  for (const id of ['brandAbout', 'logoAbout']){
+    const a = document.getElementById(id);
+    if (a) { a.href = aboutHref(); a.title = t('about_link'); }
+  }
 }
 
 /* ---------- Currency helpers ---------- */
@@ -194,6 +209,7 @@ function applyTheme(){
   let meta = document.querySelector('meta[name="theme-color"]');
   if (!meta){ meta = document.createElement('meta'); meta.name='theme-color'; document.head.appendChild(meta); }
   meta.content = dark ? '#1E1E1E' : '#FFFFFF';
+  linkAbout();
 }
 
 // Название источника не должно рваться переносом посередине
@@ -835,8 +851,8 @@ function showSettings(){
     ? (LANGUAGES.find(l=>l[0]===lang)?.[1]||lang)
     : (lang === SYSTEM_LANG ? t('language_system') : (LANGUAGES.find(l=>l[0]==='en')?.[1]||'English'));
   const adj = adjusted() ? `<span dir="ltr">${adjustLabel(adjustPct)}</span>` : t('adjust_off');
-  const row = (k, label, value, cls='') =>
-    `<button class="set-row ${cls}" data-k="${k}"><span class="k">${label}</span><span class="v">${value}</span>${ICON_CHEV}</button>`;
+  const row = (k, label, value, cls='', tip='') =>
+    `<button class="set-row ${cls}" data-k="${k}"${tip?` title="${tip.replace(/"/g,"&quot;")}"`:''}><span class="k">${label}</span><span class="v">${value}</span>${ICON_CHEV}</button>`;
   const m = modal(`<div class="modal settings">
     <h3>${t('settings')}</h3>
     <div class="list-choice">
@@ -848,9 +864,11 @@ function showSettings(){
       ${row('source', t('source_title'), src)}
       ${row('language', t('language_title'), langLabel)}
       <hr class="set-sep">
-      ${row('adjust', t('adjust_title'), adj, 'adj')}
+      ${row('adjust', t('adjust_title'), adj, 'adj', t('adjust_about'))}
       <div class="set-foot"><button class="set-ver" data-ver>${t('version_label', APP_VERSION)}</button>
-        <a class="set-apk" href="FIXXE.apk" download>Android APK</a></div>
+        <a class="set-apk" href="FIXXE.apk" download>Android APK</a>
+        <a class="set-apk set-about" href="${aboutHref()}">${t('about_link')}</a>
+        <a class="set-apk set-privacy" href="${PRIVACY_URL + themeParam('?')}" target="_blank" rel="noopener">${t('privacy_link')}</a></div>
     </div>
     <div class="actions"><button data-x>${t('close')}</button></div>
   </div>`);
@@ -925,6 +943,7 @@ function showAdjust(){
     const radio = on => `<span class="radio">${on?'◉':'○'}</span>`;
     const m = modal(`<div class="modal adjust-modal">
       <h3>${t('adjust_title')}${adjusted()?` <span class="adj-value" dir="ltr">${adjustLabel(adjustPct)}</span>`:''}</h3>
+      <p class="hint adjust-about">${t('adjust_about')}</p>
       <div class="sign" role="group"><button data-sign="+" class="${neg?'':'on'}" aria-pressed="${!neg}">+</button>`+
       `<button data-sign="-" class="${neg?'on':''}" aria-pressed="${neg}">\u2212</button></div>
       <div class="list-choice">

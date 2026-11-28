@@ -40,6 +40,7 @@ body{
 /* шапка */
 header{padding:28px 0 8px; display:flex; align-items:center; gap:14px; flex-wrap:wrap}
 .logo{width:56px; height:56px; border-radius:13px; flex:none}
+.home{display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none; min-width:0}
 .name{font-size:26px; font-weight:700; letter-spacing:1.5px; color:var(--green); margin:0}
 .tagline{color:var(--gray); margin:2px 0 0; font-size:15px}
 .langbox{margin-inline-start:auto}
@@ -108,15 +109,30 @@ footer .ver{margin-top:6px; font-size:11px}
   .way .go{white-space:normal; text-align:end; max-width:96px}
 }
 </style>
+<script>
+// Тема как в приложении: ?theme= из ссылки, иначе выбор в приложении на этом сайте, иначе системная.
+// Ссылки .keep-theme несут её дальше: Privacy и Terms бывают на другом сайте.
+(function(){
+  var t = new URLSearchParams(location.search).get('theme');
+  if (!t) { try { var v = JSON.parse(localStorage.getItem('fixe.theme')); t = v === 1 ? 'light' : v === 2 ? 'dark' : null; } catch (e) {} }
+  if (t !== 'light' && t !== 'dark') return;
+  document.documentElement.setAttribute('data-theme', t);
+  addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('a.keep-theme').forEach(function(a){ var u = new URL(a.href); u.searchParams.set('theme', t); a.href = u; });
+  });
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <img class="logo" src="../icons/icon-192.png" alt="FIXXE">
-    <div>
-      <h1 class="name">FIXXE</h1>
-      <p class="tagline" id="tagline">Live rates from three sources</p>
-    </div>
+    <a class="home" id="home" href="../" title="FIXXE">
+      <img class="logo" src="../icons/icon-192.png" alt="FIXXE">
+      <div>
+        <h1 class="name">FIXXE</h1>
+        <p class="tagline" id="tagline">Live rates from three sources</p>
+      </div>
+    </a>
     <div class="langbox">
       <select id="lang" aria-label="Language"></select>
     </div>
@@ -137,10 +153,11 @@ footer .ver{margin-top:6px; font-size:11px}
   </section>
 
   <footer>
-    <p>Rates By <a href="https://www.exchangerate-api.com">Exchange Rate API</a><br>
-    <a href="../privacy.html" id="privacy-link">Privacy</a> · <a href="../terms.html" id="terms-link">Terms</a></p>
+    <p><span id="credit-prefix">One of the backup rate sources:</span> Rates By <a href="https://www.exchangerate-api.com">Exchange Rate API</a><br>
+    <a href="../privacy.html" id="privacy-link" class="keep-theme" target="_blank" rel="noopener">Privacy</a> · <a href="../terms.html" id="terms-link" class="keep-theme" target="_blank" rel="noopener">Terms</a>
+    · <a href="./" id="about-self" class="keep-theme">About</a> · <a href="../" id="web-link">Web version FIXXE</a></p>
     <p><a id="source-link" href="https://github.com/fixxe-app/fixxe">Source code on GitHub (GPL-3.0)</a></p>
-    <p class="ver" id="app-version">FIXXE 1.70</p>
+    <p class="ver" id="app-version">FIXXE 1.71</p>
   </footer>
 </div>
 
@@ -177,6 +194,9 @@ function render(t){
   $("#privacy-link").textContent = t.privacy;
   $("#source-link").textContent = t.source_note;
   $("#terms-link").textContent = t.terms;
+  if (t.credit_prefix) $("#credit-prefix").textContent = t.credit_prefix;
+  $("#about-self").textContent = t.about_title;
+  $("#web-link").textContent = t.web_title + " FIXXE";
 
   const ways = [
     ["play", t.play_title, t.play_desc, LINKS.play, t.btn_store],
@@ -232,11 +252,18 @@ async function load(code, chosen){
   render(t);
   // Запоминаем только явный выбор: иначе первое автоопределение навсегда
   // перебивало бы язык браузера, даже если человек его потом сменил.
-  if (chosen) { try { localStorage.setItem("fixxe-about-lang", code); } catch {} }
+  if (chosen) {
+    try { localStorage.setItem("fixxe-about-lang", code); } catch {}
+    // выбор на странице важнее ?lang= из приложения — и после перезагрузки
+    const u = new URL(location.href);
+    if (u.searchParams.has("lang")) { u.searchParams.delete("lang"); history.replaceState(null, "", u); }
+  }
   $("#lang").value = code;
 }
 
 function pick(codes){
+  const asked = new URLSearchParams(location.search).get("lang");
+  if (asked && codes.includes(asked)) return asked;
   try {
     const saved = localStorage.getItem("fixxe-about-lang");
     if (saved && codes.includes(saved)) return saved;

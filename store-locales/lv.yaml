@@ -9,7 +9,7 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
   AR KO FIXXE ATŠĶIRAS
 
 
-  • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Ja kāds avots nestrādā, lietotne klusi pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
+  • Pieci kursu avoti ar automātisku pāreju — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. un Frankfurter (ECB). Tiešsaistes kursi sakrīt ar atsauces kursiem, ko redzat tīmekļa meklēšanā un lielākajās valūtu vietnēs. Ja kāds avots nestrādā, lietotne automātiski pāriet uz nākamo un parāda, no kurienes skaitļi nāk. Vairums konvertoru balstās uz vienu vienīgu saskarni un, tai krītot, vienkārši nerāda neko. Dodat priekšroku vienam avotam? Izvēlieties to iestatījumos — pārējie paliek rezervē.
 
 
   • Darbojas bezsaistē — pēdējie kursi paliek ierīcē, tāpēc lietotne rēķina arī bez savienojuma. Un, ja šie kursi ir vecāki par diennakti, tā to pasaka tieši, nevis izliekas, ka tie ir svaigi.
@@ -62,11 +62,12 @@ description: 'FIXXE ir ātrs un pārskatāms valūtas konvertors ar reāllaika v
 
   Rādītie kursi ir orientējošas vidējās vērtības, nevis reāllaika biržas kotācijas.
 
-  Rates By Exchange Rate API.
+  Viens no rezerves kursu avotiem: Rates By Exchange Rate API.
 
   '
 whats_new: "Nelieli uzlabojumi un labojumi."
 landing:
+  credit_prefix: "Viens no rezerves kursu avotiem:"
   page_title: FIXXE — valūtas konvertors
   install_title: Instalēšanas veidi
   about_title: Par lietotni
@@ -91,3 +92,5 @@ landing:
   btn_store: Atvērt veikalā
   privacy: Privātums
   terms: Noteikumi
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Tiešsaistes kursi sakrīt ar atsauces kursiem, ko redzat tīmekļa meklēšanā un lielākajās valūtu vietnēs.", "about": "Coinbase un FXRatesAPI kursi praktiski sakrīt ar Google un XE.com kursu: galvenajām valūtām atšķirība ir mazāka par 0,005%."}

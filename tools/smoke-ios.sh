@@ -26,7 +26,11 @@ command -v xcodegen  >/dev/null && xcodegen generate --quiet
 UDID=$(xcrun simctl list devices available | grep -F "    $SIM (" | head -1 | grep -oE '[0-9A-F-]{36}')
 [ -n "$UDID" ] || fail "нет симулятора «$SIM»"
 xcrun simctl boot "$UDID" >/dev/null 2>&1 || true          # уже запущен — не ошибка
-xcrun simctl bootstatus "$UDID" -b >/dev/null 2>&1 || fail "симулятор «$SIM» не загрузился"
+# bootstatus иногда виснет навсегда, хотя симулятор уже Booted (так release.sh простоял 9 ч):
+# ждём не дольше 5 минут, потом верим списку устройств
+if ! perl -e 'alarm shift; exec @ARGV' 300 xcrun simctl bootstatus "$UDID" -b >/dev/null 2>&1; then
+  xcrun simctl list devices | grep -F "($UDID)" | grep -q '(Booted)' || fail "симулятор «$SIM» не загрузился"
+fi
 if xcrun simctl get_app_container "$UDID" com.karpinity.fixxe >/dev/null 2>&1; then
   xcrun simctl uninstall "$UDID" com.karpinity.fixxe || fail "не удалось удалить приложение с «$SIM»"
 fi

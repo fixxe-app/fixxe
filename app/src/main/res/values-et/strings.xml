@@ -30,7 +30,7 @@
     <string name="language_title">Keel</string>
     <string name="language_system">Süsteemi vaikeväärtus</string>
     <string name="source_info_title">Kursi allikas</string>
-    <string name="source_info_message">Keskturu kurss — keskpunkt ostu- ja müügikursi vahel maailmaturul.\n\nAllikad (automaatne varuvariant):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nKui peamine allikas ei vasta automaatse uuendamise ajal või ↻ vajutamisel, võtab rakendus andmed automaatselt järgmisest. Praegune allikas kuvatakse üleval uuendamisaja kõrval.\n\nSeadetes (⚙) saad sundida kindla allika — teised jäävad ikkagi varuvariandiks.\n\nCoinbase ja FXRatesAPI uuenevad iga minut, teised allikad kord päevas. Need on viitekursid, mitte kauplemisnoteeringud.\n\nLitsentsid ja viited:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nõuab linki “Rates By Exchange Rate API” (jaluses, klõpsatav).\n• F.A. — CC0 (public domain), viidet pole vaja.\n• Frankfurter — MIT, andmed European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Keskturu kurss — keskpunkt ostu- ja müügikursi vahel maailmaturul.\n\nCoinbase’i ja FXRatesAPI kursid langevad praktiliselt kokku Google’i ja XE.com-i kursiga: peamiste valuutade puhul on erinevus alla 0,005%.\n\nAllikad (automaatne varuvariant):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nKui peamine allikas ei vasta automaatse uuendamise ajal või ↻ vajutamisel, võtab rakendus andmed automaatselt järgmisest. Praegune allikas kuvatakse üleval uuendamisaja kõrval.\n\nSeadetes (⚙) saad sundida kindla allika — teised jäävad ikkagi varuvariandiks.\n\nCoinbase ja FXRatesAPI uuenevad iga minut, teised allikad kord päevas. Need on viitekursid, mitte kauplemisnoteeringud.\n\nLitsentsid ja viited:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nõuab linki “Rates By Exchange Rate API” (jaluses, klõpsatav).\n• F.A. — CC0 (public domain), viidet pole vaja.\n• Frankfurter — MIT, andmed European Central Bank (ECB).</string>
     <string name="filter_all">Kõik</string>
     <string name="switch_source_title">Vahetada allikat?</string>
     <string name="switch_source_msg">%1$s on saadaval %2$s kaudu, mitte praeguse allika kaudu. Vahetada ja lisada?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Tühik — 1 234.56</string>
     <string name="group_comma">Koma — 1,234.56</string>
     <string name="adjust_title">Kursi korrektsioon</string>
+    <string name="about_link">Rakendusest</string>
+    <string name="privacy_link">Privaatsus</string>
+    <string name="adjust_about">Määrake protsent panga teenustasu, marginaali või ülekandekulude jaoks ja kõik summad näitavad kohe tegelikku tulemust.</string>
     <string name="adjust_off">Väljas</string>
     <string name="adjusted_rates">Korrigeeritud kursid</string>
     <string name="adjusted_short">Korrigeeritud</string>

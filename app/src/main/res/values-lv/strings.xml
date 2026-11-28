@@ -30,7 +30,7 @@
     <string name="language_title">Valoda</string>
     <string name="language_system">Sistēmas noklusējums</string>
     <string name="source_info_title">Kursu avots</string>
-    <string name="source_info_message">Vidējā tirgus kurss — viduspunkts starp pirkšanas un pārdošanas kursu pasaules tirgū.\n\nAvoti (automātiska pārslēgšanās):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJa primārais avots neatbild automātiskās atjaunināšanas laikā vai nospiežot ↻, lietotne automātiski ņem datus no nākamā. Pašreizējais avots ir redzams augšpusē blakus atjaunināšanas laikam.\n\nIestatījumos (⚙) varat piespiedu kārtā izvēlēties konkrētu avotu — pārējie joprojām paliek kā rezerve.\n\nCoinbase un FXRatesAPI atjaunojas katru minūti, pārējie avoti reizi dienā. Tie ir atsauces kursi, nevis tirdzniecības kotācijas.\n\nLicences un atsauces:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nepieciešama saite “Rates By Exchange Rate API” (kājenē, noklikšķināma).\n• F.A. — CC0 (public domain), atsauce nav nepieciešama.\n• Frankfurter — MIT, dati no European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Vidējā tirgus kurss — viduspunkts starp pirkšanas un pārdošanas kursu pasaules tirgū.\n\nCoinbase un FXRatesAPI kursi praktiski sakrīt ar Google un XE.com kursu: galvenajām valūtām atšķirība ir mazāka par 0,005%.\n\nAvoti (automātiska pārslēgšanās):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nJa primārais avots neatbild automātiskās atjaunināšanas laikā vai nospiežot ↻, lietotne automātiski ņem datus no nākamā. Pašreizējais avots ir redzams augšpusē blakus atjaunināšanas laikam.\n\nIestatījumos (⚙) varat piespiedu kārtā izvēlēties konkrētu avotu — pārējie joprojām paliek kā rezerve.\n\nCoinbase un FXRatesAPI atjaunojas katru minūti, pārējie avoti reizi dienā. Tie ir atsauces kursi, nevis tirdzniecības kotācijas.\n\nLicences un atsauces:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — nepieciešama saite “Rates By Exchange Rate API” (kājenē, noklikšķināma).\n• F.A. — CC0 (public domain), atsauce nav nepieciešama.\n• Frankfurter — MIT, dati no European Central Bank (ECB).</string>
     <string name="filter_all">Visi</string>
     <string name="switch_source_title">Mainīt avotu?</string>
     <string name="switch_source_msg">%1$s ir pieejams caur %2$s, nevis pašreizējo avotu. Pārslēgt un pievienot?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Atstarpe — 1 234.56</string>
     <string name="group_comma">Komats — 1,234.56</string>
     <string name="adjust_title">Kursa korekcija</string>
+    <string name="about_link">Par lietotni</string>
+    <string name="privacy_link">Privātums</string>
+    <string name="adjust_about">Iestatiet procentu bankas komisijai, maržai vai pārskaitījuma zudumiem, un visas summas uzreiz parādīs reālo rezultātu.</string>
     <string name="adjust_off">Izsl.</string>
     <string name="adjusted_rates">Koriģētie kursi</string>
     <string name="adjusted_short">Koriģēts</string>

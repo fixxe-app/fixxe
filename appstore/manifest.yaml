@@ -29,7 +29,7 @@ locales:
       ما الذي يميز FIXXE
 
 
-      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). إذا تعطّل مزوّد، ينتقل التطبيق بهدوء إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها. تفضّل مصدرًا واحدًا؟ اختره في الإعدادات — وتبقى المصادر الأخرى احتياطًا.
+      • خمسة مصادر للأسعار مع تبديل تلقائي — Coinbase وFXRatesAPI وExchangeRate-API وF.A. وFrankfurter (البنك المركزي الأوروبي). الأسعار المباشرة تطابق الأسعار المرجعية التي تراها في محركات البحث وعلى كبرى مواقع العملات. إذا تعطّل مزوّد، ينتقل التطبيق تلقائيًا إلى التالي ويبيّن من أين جاءت الأرقام. معظم المحوّلات تعتمد على واجهة واحدة ولا تعرض شيئًا عند تعطّلها. تفضّل مصدرًا واحدًا؟ اختره في الإعدادات — وتبقى المصادر الأخرى احتياطًا.
 
 
       • يعمل دون اتصال — تبقى آخر الأسعار على جهازك، فيواصل التطبيق الحساب بلا شبكة. وإذا مضى على تلك الأسعار أكثر من يوم، يقولها صراحةً بدل أن يُظهرها وكأنها حديثة.
@@ -82,14 +82,14 @@ locales:
 
       الأسعار المعروضة قيم وسطية استرشادية، وليست تسعيرات تداول لحظية.
 
-      Rates By Exchange Rate API.
+      أحد مصادر الأسعار الاحتياطية: Rates By Exchange Rate API.
 
       '
     promotional_text: خمسة مصادر للأسعار مع تبديل تلقائي، أسعار دون اتصال مع تنبيه عند تقادمها، وتقريب ذكي يحفظ المبالغ الصغيرة.
     keywords: عملة,محول,صرف,سعر,مال,سفر,فوركس,عملات رقمية,مالية,يورو,fixer,fixe
     whats_new: تحسينات وإصلاحات صغيرة.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   cs:
     name: FIXXE – Převodník měn
     subtitle: Kurzy z pěti zdrojů
@@ -99,7 +99,7 @@ locales:
       ČÍM SE FIXXE LIŠÍ
 
 
-      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
+      • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy se shodují s referenčními kurzy, které vidíte ve webovém vyhledávání a na velkých měnových webech. Když poskytovatel neodpovídá, aplikace automaticky přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
 
 
       • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
@@ -152,14 +152,14 @@ locales:
 
       Zobrazené kurzy jsou orientační střední hodnoty, nikoli burzovní kotace v reálném čase.
 
-      Rates By Exchange Rate API.
+      Jeden ze záložních zdrojů kurzů: Rates By Exchange Rate API.
 
       '
     promotional_text: Pět zdrojů kurzů s automatickým přepnutím, offline kurzy s upozorněním na stáří a chytré zaokrouhlování, které nezkazí malé částky.
     keywords: měna,převodník,kurz,směna,peníze,cestování,forex,krypto,finance,euro,fixer,fixe
     whats_new: Drobná vylepšení a opravy.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   da:
     name: FIXXE – Valutaomregner
     subtitle: Kurser fra fem kilder
@@ -169,7 +169,7 @@ locales:
       DET HER GØR FIXXE ANDERLEDES
 
 
-      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Hvis en udbyder er nede, skifter appen stille til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
+      • Fem kurskilder med automatisk skift — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ECB). Livekurserne svarer til de referencekurser, du ser i websøgning og på store valutasider. Hvis en udbyder er nede, skifter appen automatisk til den næste og viser, hvor tallene kommer fra. De fleste omregnere hænger på ét enkelt API og viser ganske enkelt intet, når det svigter. Foretrækker du én kilde? Vælg den i Indstillinger — de andre bliver som reserve.
 
 
       • Virker offline — de seneste kurser bliver på enheden, så appen regner videre uden forbindelse. Og er kurserne mere end et døgn gamle, siger den det ligeud i stedet for at lade dem gå for at være friske.
@@ -222,14 +222,14 @@ locales:
 
       De viste kurser er vejledende middelkurser, ikke handelskurser i realtid.
 
-      Rates By Exchange Rate API.
+      En af reservekilderne til kurser: Rates By Exchange Rate API.
 
       '
     promotional_text: Fem kurskilder med automatisk skift, offlinekurser der advarer når de bliver gamle, og afrunding der ikke ødelægger små beløb.
     keywords: valuta,omregner,vekselkurs,kurs,penge,rejse,forex,krypto,økonomi,euro,fixer,fixe
     whats_new: Små forbedringer og rettelser.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   de-DE:
     name: FIXXE – Währungsrechner
     subtitle: Wechselkurse live & offline
@@ -239,7 +239,7 @@ locales:
       WAS FIXXE ANDERS MACHT
 
 
-      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Fällt ein Anbieter aus, wechselt die App still zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
+      • Fünf Kursquellen mit automatischem Wechsel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. und Frankfurter (EZB). Die Live-Kurse entsprechen den Referenzkursen, die Sie in der Websuche und auf großen Währungsseiten sehen. Fällt ein Anbieter aus, wechselt die App automatisch zum nächsten und zeigt, woher die Zahlen stammen. Die meisten Rechner hängen an einer einzigen API und zeigen bei Ausfall schlicht nichts an. Lieber eine bestimmte Quelle? Wählen Sie sie in den Einstellungen — die anderen bleiben als Reserve.
 
 
       • Funktioniert offline — die letzten Kurse bleiben auf dem Gerät, die App rechnet also auch ohne Verbindung weiter. Und sind diese Kurse älter als einen Tag, sagt sie das deutlich, statt sie als aktuell auszugeben.
@@ -292,14 +292,14 @@ locales:
 
       Die angezeigten Kurse sind Mittelkurse als Richtwert, keine Börsenkurse in Echtzeit.
 
-      Rates By Exchange Rate API.
+      Eine der Reserve-Kursquellen: Rates By Exchange Rate API.
 
       '
     promotional_text: Fünf Kursquellen mit automatischem Wechsel, Offline-Kurse mit Hinweis auf veraltete Daten und eine Rundung, die kleine Beträge nicht verfälscht.
     keywords: umrechnen,devisen,kurs,geld,reise,euro,dollar,franken,pfund,rechner,bargeld,krypto,werbefrei
     whats_new: Kleine Verbesserungen und Fehlerbehebungen.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   el:
     name: FIXXE – Μετατροπέας νομισμάτων
     subtitle: Ισοτιμίες από πέντε πηγές
@@ -309,7 +309,7 @@ locales:
       ΤΙ ΚΑΝΕΙ ΤΟ FIXXE ΔΙΑΦΟΡΕΤΙΚΟ
 
 
-      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Αν μια πηγή πέσει, η εφαρμογή περνά αθόρυβα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα. Προτιμάτε μία πηγή; Επιλέξτε τη στις Ρυθμίσεις — οι υπόλοιπες μένουν ως εφεδρεία.
+      • Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. και Frankfurter (ΕΚΤ). Οι ζωντανές ισοτιμίες ταυτίζονται με τις ισοτιμίες αναφοράς που βλέπετε στην αναζήτηση στο διαδίκτυο και στους μεγάλους ιστότοπους συναλλάγματος. Αν μια πηγή πέσει, η εφαρμογή περνά αυτόματα στην επόμενη και δείχνει από πού προήλθαν οι αριθμοί. Οι περισσότεροι μετατροπείς στηρίζονται σε ένα μόνο API και, όταν αυτό αποτύχει, απλώς δεν δείχνουν τίποτα. Προτιμάτε μία πηγή; Επιλέξτε τη στις Ρυθμίσεις — οι υπόλοιπες μένουν ως εφεδρεία.
 
 
       • Λειτουργεί εκτός σύνδεσης — οι τελευταίες ισοτιμίες μένουν στη συσκευή, οπότε η εφαρμογή συνεχίζει να υπολογίζει χωρίς δίκτυο. Κι αν αυτές οι ισοτιμίες είναι πάνω από μία ημέρα παλιές, το λέει καθαρά αντί να τις παρουσιάζει ως τρέχουσες.
@@ -362,14 +362,14 @@ locales:
 
       Οι ισοτιμίες που εμφανίζονται είναι ενδεικτικές μέσες τιμές, όχι χρηματιστηριακές τιμές σε πραγματικό χρόνο.
 
-      Rates By Exchange Rate API.
+      Μία από τις εφεδρικές πηγές ισοτιμιών: Rates By Exchange Rate API.
 
       '
     promotional_text: Πέντε πηγές ισοτιμιών με αυτόματη εναλλαγή, ισοτιμίες εκτός σύνδεσης με προειδοποίηση παλαιότητας και στρογγυλοποίηση που δεν χαλάει τα μικρά ποσά.
     keywords: νόμισμα,μετατροπέας,ισοτιμία,συνάλλαγμα,χρήματα,ταξίδι,forex,κρυπτο,ευρώ,fixer,fixe
     whats_new: Μικρές βελτιώσεις και διορθώσεις.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   en-US:
     name: FIXXE – Currency Converter
     subtitle: Live exchange rates, offline
@@ -379,7 +379,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -432,14 +432,14 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
     whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   en-GB:
     name: FIXXE – Currency Converter
     subtitle: Live exchange rates, offline
@@ -449,7 +449,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -502,14 +502,14 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: dinar,lari,tenge,dram,som,rsd,gel,kzt,amd,kgs,kurs,menjacnica,valuta,euro,pound,money,calculator
     whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   en-AU:
     name: FIXXE – Currency Converter
     subtitle: Live exchange rates, offline
@@ -519,7 +519,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -572,14 +572,14 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
     whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   en-CA:
     name: FIXXE – Currency Converter
     subtitle: Live exchange rates, offline
@@ -589,7 +589,7 @@ locales:
       WHY FIXXE IS DIFFERENT
 
 
-      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+      • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
       • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -642,14 +642,14 @@ locales:
 
       Displayed rates are mid-market reference values, not real-time trading quotes.
 
-      Rates By Exchange Rate API.
+      One of the backup rate sources: Rates By Exchange Rate API.
 
       '
     promotional_text: Five rate sources with automatic fallback, offline rates with a staleness warning, and smart rounding that keeps small amounts accurate.
     keywords: money,calculator,forex,fx,travel,dollar,euro,pound,yen,peso,cad,aud,crypto,bitcoin,cash,midmarket
     whats_new: Small improvements and fixes.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   es-ES:
     name: FIXXE – Conversor de divisas
     subtitle: Tipo de cambio sin conexión
@@ -659,7 +659,7 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas. Si un proveedor se cae, la aplicación pasa automáticamente al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -712,14 +712,14 @@ locales:
 
       Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
 
-      Rates By Exchange Rate API.
+      Una de las fuentes de tipos de respaldo: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
     keywords: moneda,euro,dólar,libra,peso,calculadora,viaje,dinero,forex,cripto,tasa,gratis,divisa,efectivo
     whats_new: Pequeñas mejoras y correcciones.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   es-MX:
     name: FIXXE – Conversor de divisas
     subtitle: Tipo de cambio sin conexión
@@ -729,7 +729,7 @@ locales:
       QUÉ HACE DISTINTO A FIXXE
 
 
-      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
+      • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas. Si un proveedor se cae, la aplicación pasa automáticamente al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
       • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -782,14 +782,14 @@ locales:
 
       Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
 
-      Rates By Exchange Rate API.
+      Una de las fuentes de tipos de respaldo: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinco fuentes de tipos con relevo automático, tipos sin conexión con aviso cuando caducan y un redondeo que no estropea las cantidades pequeñas.
     keywords: moneda,euro,dólar,libra,peso,calculadora,viaje,dinero,forex,cripto,tasa,gratis,divisa,efectivo
     whats_new: Pequeñas mejoras y correcciones.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   fi:
     name: FIXXE – Valuuttalaskuri
     subtitle: Kurssit viidestä lähteestä
@@ -799,7 +799,7 @@ locales:
       MIKÄ TEKEE FIXXESTÄ ERILAISEN
 
 
-      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Jos palveluntarjoaja kaatuu, sovellus siirtyy hiljaa seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
+      • Viisi kurssilähdettä automaattisella vaihdolla — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Reaaliaikaiset kurssit vastaavat viitekursseja, jotka näet verkkohaussa ja suurilla valuuttasivustoilla. Jos palveluntarjoaja kaatuu, sovellus siirtyy automaattisesti seuraavaan ja näyttää, mistä luvut ovat peräisin. Useimmat muuntimet nojaavat yhteen ainoaan rajapintaan eivätkä näytä sen kaatuessa yhtään mitään. Suositko yhtä lähdettä? Valitse se asetuksista — muut jäävät varalle.
 
 
       • Toimii ilman verkkoa — viimeisimmät kurssit säilyvät laitteessa, joten sovellus laskee myös yhteydettä. Ja jos kurssit ovat yli vuorokauden vanhoja, se sanoo sen suoraan sen sijaan että esittäisi ne tuoreina.
@@ -852,14 +852,14 @@ locales:
 
       Näytetyt kurssit ovat ohjeellisia keskikursseja, eivät reaaliaikaisia pörssinoteerauksia.
 
-      Rates By Exchange Rate API.
+      Yksi varakurssilähteistä: Rates By Exchange Rate API.
 
       '
     promotional_text: Viisi kurssilähdettä automaattisella vaihdolla, offline-kurssit vanhenemisvaroituksella ja pyöristys, joka ei pilaa pieniä summia.
     keywords: valuutta,muunnin,valuuttakurssi,kurssi,raha,matkailu,forex,krypto,talous,euro,fixer,fixe
     whats_new: Pieniä parannuksia ja korjauksia.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   fr-FR:
     name: FIXXE – Convertisseur devises
     subtitle: Taux de cinq sources
@@ -869,7 +869,7 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change. Si un fournisseur tombe, l''application passe automatiquement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -922,14 +922,14 @@ locales:
 
       Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
 
-      Rates By Exchange Rate API.
+      L’une des sources de taux de secours : Rates By Exchange Rate API.
 
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
     whats_new: Petites améliorations et corrections.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   fr-CA:
     name: FIXXE – Convertisseur devises
     subtitle: Taux de cinq sources
@@ -939,7 +939,7 @@ locales:
       CE QUI DISTINGUE FIXXE
 
 
-      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
+      • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change. Si un fournisseur tombe, l''application passe automatiquement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
       • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -992,14 +992,14 @@ locales:
 
       Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
 
-      Rates By Exchange Rate API.
+      L’une des sources de taux de secours : Rates By Exchange Rate API.
 
       '
     promotional_text: Cinq sources de taux avec bascule automatique, taux hors ligne signalés quand ils datent, et un arrondi intelligent qui préserve les petits montants.
     keywords: devise,convertisseur,taux,change,argent,voyage,forex,crypto,finance,euro,fixer,fixe
     whats_new: Petites améliorations et corrections.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   he:
     name: FIXXE – ממיר מטבעות
     subtitle: שערים מחמישה מקורות
@@ -1009,7 +1009,7 @@ locales:
       מה שונה ב-FIXXE
 
 
-      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). אם ספק נופל, האפליקציה עוברת בשקט לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום. מעדיפים מקור אחד? בחרו אותו בהגדרות — האחרים נשארים כגיבוי.
+      • חמישה מקורות שערים עם מעבר אוטומטי — Coinbase, FXRatesAPI, ExchangeRate-API, ‏F.A. ו-Frankfurter (הבנק המרכזי האירופי). השערים החיים תואמים לשערי הייחוס שאתם רואים בחיפוש ברשת ובאתרי המטבע הגדולים. אם ספק נופל, האפליקציה עוברת אוטומטית לבא אחריו ומראה מאיפה הגיעו המספרים. רוב הממירים תלויים בממשק אחד בלבד, וכשהוא נופל הם פשוט לא מציגים כלום. מעדיפים מקור אחד? בחרו אותו בהגדרות — האחרים נשארים כגיבוי.
 
 
       • עובד לא מקוון — השערים האחרונים נשמרים במכשיר, כך שהאפליקציה ממשיכה לחשב גם בלי חיבור. ואם השערים האלה בני יותר מיממה, היא אומרת זאת במפורש במקום להציג אותם כעדכניים.
@@ -1062,14 +1062,14 @@ locales:
 
       השערים המוצגים הם ערכי אמצע להתמצאות, לא ציטוטי מסחר בזמן אמת.
 
-      Rates By Exchange Rate API.
+      אחד ממקורות השערים לגיבוי: Rates By Exchange Rate API.
 
       '
     promotional_text: חמישה מקורות שערים עם מעבר אוטומטי, שערים לא מקוונים עם אזהרה כשהם מתיישנים, ועיגול חכם ששומר על סכומים קטנים.
     keywords: מטבע,ממיר,שער,חליפין,כסף,טיולים,פורקס,קריפטו,פיננסים,שקל,fixer,fixe
     whats_new: שיפורים ותיקונים קטנים.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   hi:
     name: FIXXE – मुद्रा परिवर्तक
     subtitle: पाँच स्रोतों से दरें
@@ -1079,7 +1079,7 @@ locales:
       FIXXE अलग कैसे है
 
 
-      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। कोई स्रोत बंद हो जाए तो ऐप चुपचाप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते। कोई एक स्रोत पसंद है? उसे सेटिंग्स में चुनें — बाक़ी बैकअप के रूप में बने रहते हैं।
+      • स्वतः बदलने वाले पाँच दर-स्रोत — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. और Frankfurter (ECB)। लाइव दरें उन्हीं संदर्भ दरों से मेल खाती हैं जो आप वेब सर्च और बड़ी मुद्रा वेबसाइटों पर देखते हैं। कोई स्रोत बंद हो जाए तो ऐप अपने-आप अगले पर चला जाता है और बताता है कि आँकड़े कहाँ से आए। ज़्यादातर कनवर्टर एक ही API पर टिके होते हैं और उसके गिरते ही कुछ नहीं दिखाते। कोई एक स्रोत पसंद है? उसे सेटिंग्स में चुनें — बाक़ी बैकअप के रूप में बने रहते हैं।
 
 
       • ऑफ़लाइन काम करता है — पिछली दरें आपके उपकरण पर रहती हैं, इसलिए बिना कनेक्शन भी ऐप गणना करता रहता है। और अगर वे दरें एक दिन से पुरानी हों, तो वह साफ़ कह देता है, उन्हें ताज़ा बताकर नहीं चलाता।
@@ -1132,14 +1132,14 @@ locales:
 
       दिखाई गई दरें संदर्भ के लिए मध्य-बाज़ार मान हैं, वास्तविक समय के ट्रेडिंग भाव नहीं।
 
-      Rates By Exchange Rate API.
+      बैकअप दर स्रोतों में से एक: Rates By Exchange Rate API.
 
       '
     promotional_text: स्वतः बदलने वाले पाँच दर-स्रोत, पुरानी पड़ने पर चेतावनी देती ऑफ़लाइन दरें, और छोटी रकम बचाने वाला समझदार पूर्णांकन।
     keywords: मुद्रा,कनवर्टर,विनिमय,दर,पैसा,यात्रा,फॉरेक्स,क्रिप्टो,वित्त,रुपया,fixer,fixe
     whats_new: छोटे सुधार और बग फ़िक्स।
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   hr:
     name: FIXXE – Pretvarač valuta
     subtitle: Tečajevi iz pet izvora
@@ -1149,7 +1149,7 @@ locales:
       PO ČEMU SE FIXXE RAZLIKUJE
 
 
-      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
+      • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Tečajevi uživo podudaraju se s referentnim tečajevima koje vidite u internetskom pretraživanju i na velikim valutnim stranicama. Ako izvor padne, aplikacija automatski prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
 
 
       • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
@@ -1202,14 +1202,14 @@ locales:
 
       Prikazani tečajevi su okvirne srednje vrijednosti, a ne burzovne kotacije u stvarnom vremenu.
 
-      Rates By Exchange Rate API.
+      Jedan od rezervnih izvora tečaja: Rates By Exchange Rate API.
 
       '
     promotional_text: Pet izvora tečaja s automatskom zamjenom, offline tečajevi s upozorenjem na starost i zaokruživanje koje ne kvari male iznose.
     keywords: valuta,pretvarač,tečaj,mjenjačnica,novac,putovanje,forex,kripto,financije,euro,fixer,fixe
     whats_new: Manja poboljšanja i ispravci.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   hu:
     name: FIXXE – Valutaváltó
     subtitle: Árfolyam öt forrásból
@@ -1219,7 +1219,7 @@ locales:
       MIBEN MÁS A FIXXE
 
 
-      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
+      • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Az élő árfolyamok megegyeznek azokkal a referencia-árfolyamokkal, amelyeket a webes keresőkben és a nagy devizaoldalakon lát. Ha egy szolgáltató kiesik, az alkalmazás automatikusan a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
 
 
       • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
@@ -1272,14 +1272,14 @@ locales:
 
       A megjelenített árfolyamok tájékoztató középárfolyamok, nem valós idejű tőzsdei jegyzések.
 
-      Rates By Exchange Rate API.
+      Az egyik tartalék árfolyamforrás: Rates By Exchange Rate API.
 
       '
     promotional_text: Öt árfolyamforrás automatikus váltással, offline árfolyamok elavulási figyelmeztetéssel és okos kerekítés, amely a kis összegeket is megőrzi.
     keywords: valuta,átváltó,árfolyam,pénz,utazás,deviza,forex,kripto,pénzügy,euró,fixer,fixe
     whats_new: Kisebb fejlesztések és javítások.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   id:
     name: FIXXE – Konversi Mata Uang
     subtitle: Kurs dari lima sumber
@@ -1289,7 +1289,7 @@ locales:
       APA YANG MEMBUAT FIXXE BERBEDA
 
 
-      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Jika satu penyedia tumbang, aplikasi diam-diam beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
+      • Lima sumber kurs dengan pergantian otomatis — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., dan Frankfurter (ECB). Kurs langsung sama dengan kurs referensi yang Anda lihat di penelusuran web dan di situs mata uang besar. Jika satu penyedia tumbang, aplikasi otomatis beralih ke berikutnya dan menunjukkan dari mana angkanya berasal. Kebanyakan konverter bergantung pada satu API saja dan tidak menampilkan apa pun begitu API itu mati. Lebih suka satu sumber? Pilih di Pengaturan — sumber lain tetap menjadi cadangan.
 
 
       • Jalan tanpa koneksi — kurs terakhir tersimpan di perangkat, jadi aplikasi tetap menghitung tanpa jaringan. Dan kalau kurs itu sudah lebih dari sehari, aplikasi mengatakannya terus terang alih-alih berpura-pura masih baru.
@@ -1342,14 +1342,14 @@ locales:
 
       Kurs yang ditampilkan adalah nilai tengah sebagai acuan, bukan kuotasi perdagangan waktu nyata.
 
-      Rates By Exchange Rate API.
+      Salah satu sumber kurs cadangan: Rates By Exchange Rate API.
 
       '
     promotional_text: Lima sumber kurs dengan pergantian otomatis, kurs offline yang memberi tahu saat menua, dan pembulatan yang tidak merusak jumlah kecil.
     keywords: mata uang,konverter,kurs,tukar,uang,wisata,forex,kripto,keuangan,rupiah,fixer,fixe
     whats_new: Peningkatan kecil dan perbaikan.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   it:
     name: FIXXE – Convertitore valute
     subtitle: Tassi da cinque fonti
@@ -1359,7 +1359,7 @@ locales:
       COSA RENDE FIXXE DIVERSO
 
 
-      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se un fornitore non risponde, l''app passa in silenzio al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
+      • Cinque fonti di tassi con passaggio automatico — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). I tassi in tempo reale coincidono con i tassi di riferimento che vedi nella ricerca web e sui principali siti di cambio. Se un fornitore non risponde, l''app passa automaticamente al successivo e mostra da dove arrivano i numeri. La maggior parte dei convertitori dipende da una sola API e, quando cade, non mostra più nulla. Preferisci una fonte? Sceglila nelle Impostazioni — le altre restano di riserva.
 
 
       • Funziona offline — gli ultimi tassi restano sul dispositivo, così l''app continua a convertire anche senza connessione. E se quei tassi hanno più di un giorno, lo dice chiaramente invece di spacciarli per aggiornati.
@@ -1412,14 +1412,14 @@ locales:
 
       I tassi mostrati sono valori medi di riferimento, non quotazioni di mercato in tempo reale.
 
-      Rates By Exchange Rate API.
+      Una delle fonti di tassi di riserva: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinque fonti di tassi con passaggio automatico, tassi offline con avviso quando invecchiano e un arrotondamento che non rovina gli importi piccoli.
     keywords: valuta,convertitore,cambio,tasso,denaro,viaggio,forex,cripto,finanza,euro,fixer,fixe
     whats_new: Piccoli miglioramenti e correzioni.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   ja:
     name: FIXXE – 通貨換算・為替レート
     subtitle: 5つの情報源のレート
@@ -1429,7 +1429,7 @@ locales:
       FIXXEが違うところ
 
 
-      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ある提供元が落ちてもアプリは静かに次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。特定の情報源を使いたいなら設定で選べます — ほかは予備として残ります。
+      • 自動で切り替わる5つのレート情報源 — Coinbase、FXRatesAPI、ExchangeRate-API、F.A.、Frankfurter（ECB）。ライブレートは、ウェブ検索や大手為替サイトで目にする参考レートと一致します。ある提供元が落ちてもアプリは自動で次へ切り替え、数字の出どころを表示します。多くの換算アプリは単一のAPIに頼り、それが止まると何も表示できません。特定の情報源を使いたいなら設定で選べます — ほかは予備として残ります。
 
 
       • オフラインでも動く — 最後のレートは端末に残るので、通信がなくても計算を続けられます。そのレートが1日以上前のものなら、新しいふりをせずにはっきりそう伝えます。
@@ -1482,14 +1482,14 @@ locales:
 
       表示されるレートは参考用の仲値であり、リアルタイムの取引値ではありません。
 
-      Rates By Exchange Rate API.
+      予備のレート情報源の一つ：Rates By Exchange Rate API.
 
       '
     promotional_text: 自動で切り替わる5つのレート情報源、古くなると知らせるオフラインレート、そして少額を崩さない賢い丸め。
     keywords: 通貨,換算,為替,レート,両替,旅行,外国為替,暗号資産,金融,円,fixer,fixe
     whats_new: 細かな改善と修正。
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   ko:
     name: FIXXE – 환율 계산기
     subtitle: 다섯 곳에서 받는 환율
@@ -1499,7 +1499,7 @@ locales:
       FIXXE가 다른 점
 
 
-      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 한 곳이 멈추면 앱이 조용히 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다. 한 출처만 쓰고 싶다면 설정에서 고르세요 — 나머지는 예비로 남습니다.
+      • 자동으로 전환되는 다섯 곳의 환율 출처 — Coinbase, FXRatesAPI, ExchangeRate-API, F.A., Frankfurter(ECB). 실시간 환율은 웹 검색과 주요 환율 사이트에서 보는 기준 환율과 일치합니다. 한 곳이 멈추면 앱이 자동으로 다음 출처로 넘어가고 숫자가 어디서 왔는지 보여줍니다. 대부분의 계산기는 단 하나의 API에 기대고 있어, 그것이 멈추면 아무것도 보여주지 못합니다. 한 출처만 쓰고 싶다면 설정에서 고르세요 — 나머지는 예비로 남습니다.
 
 
       • 오프라인에서도 동작 — 마지막 환율이 기기에 남아 있어 연결이 없어도 계산이 이어집니다. 그 환율이 하루보다 오래됐다면 최신인 척하지 않고 분명히 알려줍니다.
@@ -1552,14 +1552,14 @@ locales:
 
       표시되는 환율은 참고용 중간값이며, 실시간 거래 호가가 아닙니다.
 
-      Rates By Exchange Rate API.
+      예비 환율 출처 중 하나: Rates By Exchange Rate API.
 
       '
     promotional_text: 자동으로 전환되는 다섯 곳의 환율 출처, 오래되면 알려주는 오프라인 환율, 작은 금액을 망치지 않는 똑똑한 반올림.
     keywords: 환율,환전,통화,변환,계산기,여행,외환,암호화폐,금융,원화,fixer,fixe
     whats_new: 소소한 개선 및 수정.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   'no':
     name: FIXXE – Valutakalkulator
     subtitle: Kurser fra fem kilder
@@ -1569,7 +1569,7 @@ locales:
       DETTE GJØR FIXXE ANNERLEDES
 
 
-      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Om en leverandør er nede, går appen stille over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
+      • Fem kurskilder med automatisk bytte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. og Frankfurter (ESB). Livekursene samsvarer med referansekursene du ser i nettsøk og på store valutanettsteder. Om en leverandør er nede, går appen automatisk over til den neste og viser hvor tallene kommer fra. De fleste kalkulatorer henger på ett eneste API og viser rett og slett ingenting når det svikter. Foretrekker du én kilde? Velg den i Innstillinger — de andre blir værende som reserve.
 
 
       • Virker offline — de siste kursene blir liggende på enheten, så appen regner videre uten forbindelse. Og er kursene mer enn et døgn gamle, sier den det rett ut i stedet for å la dem gå for å være ferske.
@@ -1622,14 +1622,14 @@ locales:
 
       Kursene som vises er veiledende middelkurser, ikke handelskurser i sanntid.
 
-      Rates By Exchange Rate API.
+      En av reservekildene for kurser: Rates By Exchange Rate API.
 
       '
     promotional_text: Fem kurskilder med automatisk bytte, offlinekurser som varsler når de blir gamle, og avrunding som ikke ødelegger små beløp.
     keywords: valuta,omregner,vekslingskurs,kurs,penger,reise,forex,krypto,økonomi,euro,fixer,fixe
     whats_new: Små forbedringer og rettelser.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   nl-NL:
     name: FIXXE – Valutacalculator
     subtitle: Koersen uit vijf bronnen
@@ -1639,7 +1639,7 @@ locales:
       WAT FIXXE ANDERS MAAKT
 
 
-      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). Valt een aanbieder uit, dan schakelt de app stilletjes over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
+      • Vijf koersbronnen met automatische wissel — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. en Frankfurter (ECB). De live koersen komen overeen met de referentiekoersen die je ziet in zoekmachines en op grote valutasites. Valt een aanbieder uit, dan schakelt de app automatisch over naar de volgende en laat zien waar de cijfers vandaan komen. De meeste omrekeners hangen aan één API en tonen bij uitval domweg niets. Liever één bron? Kies die in Instellingen — de andere blijven als reserve.
 
 
       • Werkt offline — de laatste koersen blijven op je toestel, dus de app rekent ook zonder verbinding door. En zijn die koersen ouder dan een dag, dan zegt hij dat gewoon in plaats van ze voor actueel te laten doorgaan.
@@ -1692,14 +1692,14 @@ locales:
 
       Getoonde koersen zijn middenkoersen ter referentie, geen handelskoersen in realtime.
 
-      Rates By Exchange Rate API.
+      Een van de reservebronnen voor koersen: Rates By Exchange Rate API.
 
       '
     promotional_text: Vijf koersbronnen met automatische wissel, offline koersen met waarschuwing als ze verouderen, en afronding die kleine bedragen heel laat.
     keywords: valuta,omrekenen,wisselkoers,koers,geld,reizen,forex,crypto,financiën,euro,fixer,fixe
     whats_new: Kleine verbeteringen en oplossingen.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   pl:
     name: FIXXE – Przelicznik walut
     subtitle: Kursy z pięciu źródeł
@@ -1709,7 +1709,7 @@ locales:
       CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
+      • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Kursy na żywo pokrywają się z kursami referencyjnymi, które widzisz w wyszukiwarce i na dużych serwisach walutowych. Gdy dostawca przestaje odpowiadać, aplikacja automatycznie przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
 
 
       • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
@@ -1762,14 +1762,14 @@ locales:
 
       Pokazywane kursy to średnie wartości odniesienia, a nie notowania giełdowe w czasie rzeczywistym.
 
-      Rates By Exchange Rate API.
+      Jedno z zapasowych źródeł kursów: Rates By Exchange Rate API.
 
       '
     promotional_text: Pięć źródeł kursów z automatycznym przełączaniem, kursy offline z ostrzeżeniem o nieaktualności i zaokrąglanie, które nie psuje małych kwot.
     keywords: waluta,przelicznik,kurs,wymiana,pieniądze,podróż,forex,krypto,finanse,euro,fixer,fixe
     whats_new: Drobne usprawnienia i poprawki.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   pt-PT:
     name: FIXXE – Conversor de moedas
     subtitle: Taxas de cinco fontes
@@ -1779,7 +1779,7 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio. Se um fornecedor cair, a aplicação passa automaticamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -1832,14 +1832,14 @@ locales:
 
       As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
 
-      Rates By Exchange Rate API.
+      Uma das fontes de taxas de reserva: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
     whats_new: Pequenas melhorias e correções.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   pt-BR:
     name: FIXXE – Conversor de moedas
     subtitle: Taxas de cinco fontes
@@ -1849,7 +1849,7 @@ locales:
       O QUE TORNA O FIXXE DIFERENTE
 
 
-      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
+      • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio. Se um fornecedor cair, a aplicação passa automaticamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
       • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -1902,14 +1902,14 @@ locales:
 
       As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
 
-      Rates By Exchange Rate API.
+      Uma das fontes de taxas de reserva: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinco fontes de taxas com troca automática, taxas offline com aviso quando envelhecem e um arredondamento que não estraga valores pequenos.
     keywords: moeda,conversor,câmbio,taxa,dinheiro,viagem,forex,cripto,finanças,euro,fixer,fixe
     whats_new: Pequenas melhorias e correções.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   ro:
     name: FIXXE – Convertor valutar
     subtitle: Cursuri din cinci surse
@@ -1919,7 +1919,7 @@ locales:
       CE ÎL FACE PE FIXXE DIFERIT
 
 
-      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Dacă un furnizor cade, aplicația trece discret la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
+      • Cinci surse de curs cu trecere automată — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. și Frankfurter (BCE). Cursurile live coincid cu cursurile de referință pe care le vedeți în căutarea pe internet și pe marile site-uri valutare. Dacă un furnizor cade, aplicația trece automat la următorul și arată de unde vin cifrele. Majoritatea convertoarelor depind de un singur API și, când acesta cedează, pur și simplu nu mai arată nimic. Preferați o singură sursă? Alegeți-o în Setări — celelalte rămân drept rezervă.
 
 
       • Funcționează offline — ultimele cursuri rămân pe dispozitiv, așa că aplicația continuă să calculeze fără conexiune. Iar dacă acele cursuri sunt mai vechi de o zi, o spune răspicat în loc să le dea drept actuale.
@@ -1972,14 +1972,14 @@ locales:
 
       Cursurile afișate sunt valori medii de referință, nu cotații bursiere în timp real.
 
-      Rates By Exchange Rate API.
+      Una dintre sursele de curs de rezervă: Rates By Exchange Rate API.
 
       '
     promotional_text: Cinci surse de curs cu trecere automată, cursuri offline cu avertisment când se învechesc și rotunjire care nu strică sumele mici.
     keywords: valuta,convertor,curs,schimb,bani,calatorie,forex,cripto,finante,euro,fixer,fixe
     whats_new: Mici îmbunătățiri și remedieri.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   ru:
     name: FIXXE – Конвертер валют
     subtitle: Курсы валют онлайн и офлайн
@@ -1989,7 +1989,7 @@ locales:
       ЧЕМ FIXXE ОТЛИЧАЕТСЯ
 
 
-      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Если источник недоступен, приложение молча переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает. Предпочитаете один источник? Выберите его в настройках — остальные останутся в резерве.
+      • Пять источников курсов с автоматическим резервом — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. и Frankfurter (ECB). Живые курсы совпадают со справочными курсами, которые вы видите в поиске и на крупных валютных сайтах. Если источник недоступен, приложение автоматически переключается на следующий и показывает, откуда взяты цифры. Большинство конвертеров зависят от одного API и просто ничего не показывают, когда он падает. Предпочитаете один источник? Выберите его в настройках — остальные останутся в резерве.
 
 
       • Работает офлайн — последние курсы хранятся на устройстве, так что приложение считает и без связи. А если этим курсам больше суток, оно честно об этом говорит, а не делает вид, что они свежие.
@@ -2042,14 +2042,14 @@ locales:
 
       Показанные курсы — среднерыночные справочные значения, а не биржевые котировки в реальном времени.
 
-      Rates By Exchange Rate API.
+      Один из резервных источников курсов: Rates By Exchange Rate API.
 
       '
     promotional_text: Пять источников курсов с автоматическим резервом, работа офлайн с предупреждением об устаревании и умное округление, которое бережёт малые суммы.
     keywords: курс,обменник,доллар,евро,рубль,тенге,лари,динар,драм,сом,лира,калькулятор,деньги,обмен,юань
     whats_new: Небольшие улучшения и исправления.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   sk:
     name: FIXXE – Prevodník mien
     subtitle: Kurzy z piatich zdrojov
@@ -2059,7 +2059,7 @@ locales:
       ČÍM SA FIXXE LÍŠI
 
 
-      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Keď poskytovateľ neodpovedá, aplikácia ticho prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
+      • Päť zdrojov kurzov s automatickým prepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy sa zhodujú s referenčnými kurzami, ktoré vidíte vo webovom vyhľadávaní a na veľkých menových weboch. Keď poskytovateľ neodpovedá, aplikácia automaticky prejde na ďalší a ukáže, odkiaľ čísla pochádzajú. Väčšina prevodníkov závisí od jediného API a pri jeho výpadku jednoducho neukáže nič. Uprednostňujete jeden zdroj? Zvoľte ho v Nastaveniach — ostatné zostanú ako záloha.
 
 
       • Funguje offline — posledné kurzy zostávajú v zariadení, takže aplikácia počíta aj bez pripojenia. A ak sú tie kurzy staršie ako deň, povie to priamo, namiesto aby ich vydávala za aktuálne.
@@ -2112,14 +2112,14 @@ locales:
 
       Zobrazené kurzy sú orientačné stredné hodnoty, nie burzové kotácie v reálnom čase.
 
-      Rates By Exchange Rate API.
+      Jeden zo záložných zdrojov kurzov: Rates By Exchange Rate API.
 
       '
     promotional_text: Päť zdrojov kurzov s automatickým prepnutím, offline kurzy s upozornením na vek a chytré zaokrúhľovanie, ktoré nepokazí malé sumy.
     keywords: mena,prevodník,kurz,výmena,peniaze,cestovanie,forex,krypto,financie,euro,fixer,fixe
     whats_new: Drobné vylepšenia a opravy.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   sv:
     name: FIXXE – Valutaomvandlare
     subtitle: Kurser från fem källor
@@ -2129,7 +2129,7 @@ locales:
       DET HÄR SKILJER FIXXE
 
 
-      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Om en leverantör ligger nere byter appen tyst till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
+      • Fem kurskällor med automatiskt byte — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. och Frankfurter (ECB). Livekurserna stämmer med referenskurserna du ser i webbsökningar och på stora valutasajter. Om en leverantör ligger nere byter appen automatiskt till nästa och visar varifrån siffrorna kommer. De flesta omvandlare hänger på ett enda API och visar helt enkelt ingenting när det fallerar. Föredrar du en enda källa? Välj den i Inställningar — de andra finns kvar som reserv.
 
 
       • Fungerar offline — de senaste kurserna sparas på enheten, så appen fortsätter räkna utan uppkoppling. Och är kurserna äldre än ett dygn säger den det rakt ut i stället för att låtsas att de är färska.
@@ -2182,14 +2182,14 @@ locales:
 
       Visade kurser är vägledande mittkurser, inte handelskurser i realtid.
 
-      Rates By Exchange Rate API.
+      En av reservkällorna för kurser: Rates By Exchange Rate API.
 
       '
     promotional_text: Fem kurskällor med automatiskt byte, offlinekurser som varnar när de blivit gamla och avrundning som inte förstör små belopp.
     keywords: valuta,omvandlare,växelkurs,kurs,pengar,resa,forex,krypto,ekonomi,euro,fixer,fixe
     whats_new: Små förbättringar och buggfixar.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   th:
     name: FIXXE – แปลงสกุลเงิน
     subtitle: อัตราจากห้าแหล่ง
@@ -2199,7 +2199,7 @@ locales:
       FIXXE ต่างออกไปอย่างไร
 
 
-      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปอย่างเงียบ ๆ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย อยากใช้แหล่งเดียว? เลือกได้ในการตั้งค่า — แหล่งอื่นยังคงเป็นตัวสำรอง
+      • ห้าแหล่งอัตราที่สลับให้อัตโนมัติ — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. และ Frankfurter (ECB) อัตราแบบเรียลไทม์ตรงกับอัตราอ้างอิงที่คุณเห็นในการค้นหาเว็บและบนเว็บไซต์สกุลเงินชั้นนำ ถ้าผู้ให้บริการล่ม แอปจะเปลี่ยนไปใช้แหล่งถัดไปโดยอัตโนมัติ และบอกว่าตัวเลขมาจากไหน เครื่องแปลงส่วนใหญ่พึ่ง API เพียงตัวเดียว และเมื่อมันล่มก็ไม่แสดงอะไรเลย อยากใช้แหล่งเดียว? เลือกได้ในการตั้งค่า — แหล่งอื่นยังคงเป็นตัวสำรอง
 
 
       • ใช้งานออฟไลน์ได้ — อัตราล่าสุดถูกเก็บไว้ในเครื่อง แอปจึงคำนวณต่อได้แม้ไม่มีสัญญาณ และถ้าอัตราเหล่านั้นเก่ากว่าหนึ่งวัน แอปจะบอกตรง ๆ แทนที่จะทำเป็นว่ายังใหม่อยู่
@@ -2252,14 +2252,14 @@ locales:
 
       อัตราที่แสดงเป็นค่ากลางสำหรับอ้างอิง ไม่ใช่ราคาซื้อขายแบบเรียลไทม์
 
-      Rates By Exchange Rate API.
+      หนึ่งในแหล่งอัตราสำรอง: Rates By Exchange Rate API.
 
       '
     promotional_text: ห้าแหล่งอัตราที่สลับให้อัตโนมัติ อัตราออฟไลน์ที่เตือนเมื่อเก่าเกินไป และการปัดเศษที่ไม่ทำให้จำนวนเล็ก ๆ เพี้ยน
     keywords: สกุลเงิน,แปลงค่า,อัตราแลกเปลี่ยน,เงิน,ท่องเที่ยว,ฟอเร็กซ์,คริปโต,การเงิน,บาท,fixer,fixe
     whats_new: ปรับปรุงและแก้ไขเล็กน้อย
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   tr:
     name: FIXXE – Döviz Çevirici
     subtitle: Beş kaynaktan kurlar
@@ -2269,7 +2269,7 @@ locales:
       FIXXE''Yİ FARKLI KILAN NE
 
 
-      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Bir sağlayıcı yanıt vermezse uygulama sessizce bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
+      • Otomatik yedekli beş kur kaynağı — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ve Frankfurter (AMB). Canlı kurlar, web aramasında ve büyük döviz sitelerinde gördüğünüz referans kurlarla örtüşür. Bir sağlayıcı yanıt vermezse uygulama otomatik olarak bir sonrakine geçer ve sayıların nereden geldiğini gösterir. Çoğu çevirici tek bir API''ye bağlıdır ve o çöktüğünde hiçbir şey göstermez. Tek bir kaynağı mı tercih ediyorsunuz? Ayarlar''dan seçin — diğerleri yedek olarak kalır.
 
 
       • Çevrimdışı çalışır — son kurlar cihazınızda saklanır, böylece uygulama bağlantı olmadan da hesaplamayı sürdürür. Bu kurlar bir günden eskiyse, güncelmiş gibi davranmak yerine bunu açıkça söyler.
@@ -2322,14 +2322,14 @@ locales:
 
       Gösterilen kurlar referans niteliğinde piyasa ortalamalarıdır, gerçek zamanlı borsa fiyatları değildir.
 
-      Rates By Exchange Rate API.
+      Yedek kur kaynaklarından biri: Rates By Exchange Rate API.
 
       '
     promotional_text: Otomatik yedekli beş kur kaynağı, eskidiğinde uyaran çevrimdışı kurlar ve küçük tutarları bozmayan akıllı yuvarlama.
     keywords: döviz,çevirici,kur,para,seyahat,forex,kripto,finans,hesaplama,euro,fixer,fixe
     whats_new: Küçük iyileştirmeler ve düzeltmeler.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   vi:
     name: FIXXE – Chuyển đổi tiền tệ
     subtitle: Tỷ giá từ năm nguồn
@@ -2339,7 +2339,7 @@ locales:
       ĐIỀU LÀM NÊN KHÁC BIỆT
 
 
-      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Nếu một nhà cung cấp gặp sự cố, ứng dụng lặng lẽ chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
+      • Năm nguồn tỷ giá tự động chuyển đổi — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. và Frankfurter (ECB). Tỷ giá trực tiếp trùng khớp với tỷ giá tham chiếu bạn thấy khi tìm kiếm trên web và trên các trang tiền tệ lớn. Nếu một nhà cung cấp gặp sự cố, ứng dụng tự động chuyển sang nguồn kế tiếp và cho biết các con số đến từ đâu. Phần lớn ứng dụng quy đổi chỉ dựa vào một API duy nhất và chẳng hiển thị gì khi nó hỏng. Muốn dùng một nguồn? Hãy chọn trong phần Cài đặt — các nguồn khác vẫn làm dự phòng.
 
 
       • Hoạt động ngoại tuyến — tỷ giá mới nhất được giữ trên máy, nên ứng dụng vẫn tính được khi mất kết nối. Và nếu tỷ giá đó đã quá một ngày, ứng dụng nói thẳng thay vì làm như chúng còn mới.
@@ -2392,14 +2392,14 @@ locales:
 
       Tỷ giá hiển thị là giá trị trung bình để tham khảo, không phải giá giao dịch theo thời gian thực.
 
-      Rates By Exchange Rate API.
+      Một trong các nguồn tỷ giá dự phòng: Rates By Exchange Rate API.
 
       '
     promotional_text: Năm nguồn tỷ giá tự động chuyển đổi, tỷ giá ngoại tuyến có cảnh báo khi cũ, và cách làm tròn không phá hỏng số tiền nhỏ.
     keywords: tiền tệ,quy đổi,tỷ giá,ngoại tệ,tiền,du lịch,forex,crypto,tài chính,euro,fixer,fixe
     whats_new: Cải tiến và sửa lỗi nhỏ.
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html
   zh-Hans:
     name: FIXXE – 汇率换算·货币转换
     subtitle: 五个来源的汇率
@@ -2409,7 +2409,7 @@ locales:
       FIXXE 的不同之处
 
 
-      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
+      • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。实时汇率与您在网页搜索和主要汇率网站上看到的参考汇率一致。某个来源出故障时，应用会自动换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
 
 
       • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
@@ -2462,11 +2462,11 @@ locales:
 
       显示的汇率为参考性中间价，并非实时交易报价。
 
-      Rates By Exchange Rate API.
+      备用汇率来源之一：Rates By Exchange Rate API.
 
       '
     promotional_text: 五个汇率来源自动接替，离线汇率会提示是否过期，智能取整不会把小额算没。
     keywords: 货币,汇率,换算,兑换,外汇,旅行,加密货币,金融,计算器,人民币,fixer,fixe
     whats_new: 细节改进与问题修复。
     support_url: https://telebimmer.com/fixxe/
-    privacy_policy_url: https://telebimmer.com/fixxe-privacy.html
+    privacy_policy_url: https://telebimmer.com/fixxe/privacy.html

@@ -9,7 +9,7 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
   KUO FIXXE SKIRIASI
 
 
-  • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Jei tiekėjas nustoja veikti, programėlė tyliai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
+  • Penki kursų šaltiniai su automatiniu perjungimu — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ir Frankfurter (ECB). Tiesioginiai kursai sutampa su orientaciniais kursais, kuriuos matote interneto paieškoje ir didžiosiose valiutų svetainėse. Jei tiekėjas nustoja veikti, programėlė automatiškai pereina prie kito ir parodo, iš kur paimti skaičiai. Dauguma keitiklių remiasi viena vienintele sąsaja ir, jai sugedus, tiesiog nieko nerodo. Norite vieno šaltinio? Pasirinkite jį nustatymuose — kiti liks atsarginiai.
 
 
   • Veikia neprisijungus — paskutiniai kursai lieka įrenginyje, tad programėlė skaičiuoja ir be ryšio. O jei tie kursai senesni nei para, ji tai pasako tiesiai, o ne apsimeta, kad jie švieži.
@@ -62,11 +62,12 @@ description: 'FIXXE — greitas ir tvarkingas valiutų keitiklis su tikralaikiai
 
   Rodomi kursai yra orientaciniai vidutiniai dydžiai, o ne tikralaikės biržos kotiruotės.
 
-  Rates By Exchange Rate API.
+  Vienas iš atsarginių kursų šaltinių: Rates By Exchange Rate API.
 
   '
 whats_new: "Smulkūs patobulinimai ir pataisymai."
 landing:
+  credit_prefix: "Vienas iš atsarginių kursų šaltinių:"
   page_title: FIXXE — valiutų keitiklis
   install_title: Diegimo būdai
   about_title: Apie programėlę
@@ -91,3 +92,5 @@ landing:
   btn_store: Atidaryti parduotuvėje
   privacy: Privatumas
   terms: Sąlygos
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Tiesioginiai kursai sutampa su orientaciniais kursais, kuriuos matote interneto paieškoje ir didžiosiose valiutų svetainėse.", "about": "Coinbase ir FXRatesAPI kursai praktiškai sutampa su Google ir XE.com kursu: pagrindinių valiutų skirtumas mažesnis nei 0,005 %."}

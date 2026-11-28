@@ -44,8 +44,10 @@ final class ConverterViewModel: ObservableObject {
 
     // Активная валюта и ввод
     @Published var activeCode: String
-    @Published var activeAmount: Double = 1
-    @Published var inputText: String = "1"
+    /// Стартовая сумма — не 1: единица читается как надпись «курс», а не как поле для ввода.
+    static let startAmount: Double = 42
+    @Published var activeAmount: Double = startAmount
+    @Published var inputText: String = "42"
     /// Базовая строка — та, в которой последний раз ввели число. Её сумма
     /// (`activeAmount`) ровно введённая, все остальные считаются от неё.
     /// Без поправки база и строка с курсором (`activeCode`) — одно и то же.
@@ -292,16 +294,16 @@ final class ConverterViewModel: ObservableObject {
         inputText = SmartFormat.amount(amount, decimals: decimals, roundUp: roundUp)
     }
 
-    /// Возврат на экран после перерыва дольше срока — сумма снова 1 в первой
+    /// Возврат на экран после перерыва дольше срока — снова стартовая сумма в первой
     /// валюте, как при первом запуске.
     func resetAmountIfExpired(now: TimeInterval = Date().timeIntervalSince1970) {
         guard AmountMemory.expired(mode: amountMemory, leftAt: UserDefaults.standard.double(forKey: "adjust_left_at"), now: now),
               let first = currencies.first,
-              !(baseCode == first && activeCode == first && activeAmount == 1) else { return }
+              !(baseCode == first && activeCode == first && activeAmount == Self.startAmount) else { return }
         baseCode = first
         activeCode = first
-        activeAmount = 1
-        inputText = "1"
+        activeAmount = Self.startAmount
+        inputText = SmartFormat.amount(Self.startAmount, decimals: decimals, roundUp: roundUp)
     }
 
     /// Вызывается при запуске и при возврате на экран

@@ -1,1 +1,4 @@
-Small improvements and fixes.
+• Settings now link to About and the Privacy Policy, and the web version's logo opens About too.
+• The rate source info explains how closely live rates match the reference rates in web search and on major currency sites (under 0.005% for major currencies).
+• A fresh start shows 42 in the first currency, so it's clear the amount is yours to type.
+• About, Privacy and Terms share one footer and follow your light or dark theme.

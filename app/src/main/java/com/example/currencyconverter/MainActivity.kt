@@ -531,6 +531,27 @@ class MainActivity : AppCompatActivity() {
                 android.widget.Toast.makeText(this@MainActivity, R.string.copied, android.widget.Toast.LENGTH_SHORT).show()
             }
         })
+        // About — на языке приложения; Privacy — актуальная копия на сайте
+        val lang = resources.configuration.locales[0].toLanguageTag().substringBefore('-')
+        // выбранная в приложении тема — и на страницах (иначе браузер покажет системную)
+        val theme = when (getSharedPreferences("axe_prefs", MODE_PRIVATE).getInt("theme", 0)) {
+            1 -> "theme=light"; 2 -> "theme=dark"; else -> null
+        }
+        box.addView(android.widget.LinearLayout(this).apply {
+            gravity = android.view.Gravity.CENTER
+            fun link(label: String, viewId: Int, url: String) = addView(TextView(this@MainActivity).apply {
+                text = label
+                textSize = 11f
+                setTextColor(getColor(R.color.hint))
+                minHeight = (44 * density).toInt()
+                gravity = android.view.Gravity.CENTER
+                setPadding((10 * density).toInt(), 0, (10 * density).toInt(), 0)
+                id = viewId
+                setOnClickListener { openUrl(url) }
+            })
+            link(getString(R.string.about_link), R.id.setAbout, "$WEB_URL/about/?lang=$lang" + (theme?.let { "&$it" } ?: ""))
+            link(getString(R.string.privacy_link), R.id.setPrivacy, PRIVACY_URL + (theme?.let { "?$it" } ?: ""))
+        })
 
         dialog = AlertDialog.Builder(this)
             .setTitle(getString(R.string.settings))
@@ -954,6 +975,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
+        const val WEB_URL = "https://telebimmer.com/fixxe"
+        const val PRIVACY_URL = "https://telebimmer.com/fixxe/privacy.html"
+
         // 40 языков: тег (совпадает с папкой ресурсов) → родное название
         const val KEY_LANG_INITIALIZED = "lang_initialized"
 

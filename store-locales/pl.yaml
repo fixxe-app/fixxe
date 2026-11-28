@@ -9,7 +9,7 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
   CZYM FIXXE SIĘ WYRÓŻNIA
 
 
-  • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Gdy dostawca przestaje odpowiadać, aplikacja po cichu przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
+  • Pięć źródeł kursów z automatycznym przełączaniem — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (EBC). Kursy na żywo pokrywają się z kursami referencyjnymi, które widzisz w wyszukiwarce i na dużych serwisach walutowych. Gdy dostawca przestaje odpowiadać, aplikacja automatycznie przechodzi do następnego i pokazuje, skąd pochodzą liczby. Większość przeliczników opiera się na jednym API i po jego awarii po prostu nic nie pokazuje. Wolisz jedno źródło? Wybierz je w Ustawieniach — pozostałe zostaną jako zapas.
 
 
   • Działa offline — ostatnie kursy zostają na urządzeniu, więc aplikacja liczy także bez połączenia. A jeśli te kursy mają więcej niż dobę, mówi o tym wprost, zamiast udawać, że są świeże.
@@ -62,11 +62,12 @@ description: 'FIXXE to szybki, przejrzysty przelicznik walut z aktualnymi kursam
 
   Pokazywane kursy to średnie wartości odniesienia, a nie notowania giełdowe w czasie rzeczywistym.
 
-  Rates By Exchange Rate API.
+  Jedno z zapasowych źródeł kursów: Rates By Exchange Rate API.
 
   '
 whats_new: "Drobne usprawnienia i poprawki."
 landing:
+  credit_prefix: "Jedno z zapasowych źródeł kursów:"
   page_title: FIXXE — przelicznik walut
   install_title: Sposoby instalacji
   about_title: O aplikacji
@@ -91,3 +92,5 @@ landing:
   btn_store: Otwórz w sklepie
   privacy: Prywatność
   terms: Warunki
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Kursy na żywo pokrywają się z kursami referencyjnymi, które widzisz w wyszukiwarce i na dużych serwisach walutowych.", "about": "Kursy Coinbase i FXRatesAPI praktycznie pokrywają się z kursem w Google i na XE.com: dla głównych walut różnica wynosi mniej niż 0,005%."}

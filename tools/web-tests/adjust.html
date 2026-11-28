@@ -16,7 +16,10 @@
   7. «Очистить» и смена процента.
   8. Правило сброса: 4 часа без использования, «Действует постоянно»,
      часы назад; сообщение о сбросе с «Вернуть» и его исчезновение.
-  9. Окно настройки: выбор не закрывает окно, знак, своё значение, галочка.
+  9. Окно настройки: короткая справка вверху, выбор не закрывает окно, знак,
+     своё значение, галочка; у пункта в настройках — та же справка при наведении.
+     Надпись FIXXE в шапке и «О приложении» внизу настроек ведут на About на
+     языке приложения.
  10. Запись процента и его границы.
 
   Фокус отправляется событием явно — см. пояснение в switch-rows.html.
@@ -182,6 +185,9 @@ frame.addEventListener('load', async () => {
     banner.click(); await wait(150);
     const m = () => d.querySelector('#modal-root .adjust-modal');
     check(!!m(), 'нажатие на полосу не открыло настройку поправки');
+    const about = m().querySelector('.adjust-about');
+    check(about && about.textContent === w.t('adjust_about') && about.textContent.length > 40,
+      'в окне поправки нет короткой справки: ' + (about && about.textContent));
     m().querySelector('[data-p="2"]').click(); await wait(150);
     check(w.eval('adjustPct') === 2 && !!m(), 'выбор 2% не применился или закрыл окно');
     check(m().querySelector('[data-p="2"]').classList.contains('sel'), 'выбранная строка не отмечена');
@@ -206,10 +212,36 @@ frame.addEventListener('load', async () => {
     const rows = [...d.querySelectorAll('#modal-root .set-row')].map(b => b.dataset.k);
     check(rows.join() === 'theme,precision,rounding,grouping,memory,source,language,adjust', 'порядок пунктов настроек: ' + rows);
     const adjRow = d.querySelector('#modal-root .set-row[data-k="adjust"]');
+    check(adjRow && adjRow.title === w.t('adjust_about'), 'у пункта поправки в настройках нет всплывающей справки');
+    // внизу настроек — «О приложении» на страницу About на языке приложения
+    const lang = d.documentElement.lang;
+    const aboutUrl = new URL('about/?lang=' + lang, w.location.href).href;
+    const setAbout = d.querySelector('#modal-root .set-foot a.set-about');
+    check(setAbout && setAbout.href === aboutUrl && setAbout.textContent === w.t('about_link'),
+      'внизу настроек нет ссылки «О приложении»: ' + (setAbout && setAbout.href));
+    const setPriv = d.querySelector('#modal-root .set-foot a.set-privacy');
+    check(setPriv && setPriv.href === new URL('privacy.html', w.location.href).href && setPriv.target === '_blank'
+      && /noopener/.test(setPriv.rel) && setPriv.textContent === w.t('privacy_link') && setPriv.textContent !== 'privacy_link',
+      'внизу настроек нет ссылки на Privacy в новой вкладке: ' + (setPriv && setPriv.href));
+    const foot = d.querySelector('#modal-root .set-foot');
+    check(foot && [...foot.children].every(el => { const r = el.getBoundingClientRect(), f = foot.getBoundingClientRect(); return r.left >= f.left - 1 && r.right <= f.right + 1; }),
+      'подвал настроек вылезает за окно');
+    const logo = d.getElementById('logoAbout');
+    check(logo && logo.tagName === 'A' && logo.href === aboutUrl && logo.querySelector('img.mini-logo'), 'значок в шапке не ведёт на About: ' + (logo && logo.href));
+    const brand = d.getElementById('brandAbout');
+    check(brand && brand.tagName === 'A' && brand.href === aboutUrl, 'надпись FIXXE в шапке не ведёт на About: ' + (brand && brand.href));
     check(adjRow && adjRow.previousElementSibling && adjRow.previousElementSibling.tagName === 'HR', 'перед пунктом поправки нет линии');
     check(adjRow && w.getComputedStyle(adjRow).color === w.getComputedStyle(banner).color, 'пункт поправки не цветом сумм с поправкой');
     check(!!d.querySelector('#modal-root .set-ver') && d.querySelector('#modal-root .set-ver').textContent === w.t('version_label', w.eval('APP_VERSION')),
           'внизу настроек нет номера версии');
+    // выбранная тема уходит на About и Privacy
+    w.eval("theme = 2; applyTheme(); render(); showSettings()");
+    await wait(300);
+    check(d.getElementById('logoAbout')?.href.endsWith('&theme=dark') && d.getElementById('brandAbout').href.endsWith('&theme=dark')
+      && d.querySelector('#modal-root .set-foot a.set-about').href.endsWith('&theme=dark')
+      && d.querySelector('#modal-root .set-foot a.set-privacy').href.endsWith('?theme=dark'), 'тёмная тема не передаётся на About и Privacy');
+    w.eval("theme = 0; applyTheme(); render(); showSettings()");
+    await wait(300);
     w.eval('closeModal()');
     // округление: вверх и к ближайшему, пункт настроек меняет суммы на экране
     check(w.fmtAmount(112.06, true) === '113' && w.fmtAmount(112.06, false) === '112', 'fmtAmount: вверх/к ближайшему');

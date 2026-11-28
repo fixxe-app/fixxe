@@ -30,7 +30,7 @@
     <string name="language_title">Språk</string>
     <string name="language_system">Systemstandard</string>
     <string name="source_info_title">Kurskilde</string>
-    <string name="source_info_message">Midtmarkedskurs — midtpunktet mellom kjøp og salg på det globale markedet.\n\nKilder (automatisk reserve):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nHvis den primære kilden ikke svarer under autooppdatering eller ved ↻, henter appen automatisk data fra den neste. Den gjeldende kilden vises øverst ved siden av oppdateringstidspunktet.\n\nI Innstillinger (⚙) kan du tvinge en bestemt kilde — de andre forblir fortsatt som reserve.\n\nCoinbase og FXRatesAPI oppdateres hvert minutt, de andre kildene én gang om dagen. Dette er referansekurser, ikke handelskurser.\n\nLisenser og attribusjon:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — krever lenken “Rates By Exchange Rate API” (i bunnteksten, klikkbar).\n• F.A. — CC0 (public domain), ingen attribusjon kreves.\n• Frankfurter — MIT, data fra European Central Bank (ECB).</string>
+    <string name="source_info_message" formatted="false">Midtmarkedskurs — midtpunktet mellom kjøp og salg på det globale markedet.\n\nKursene fra Coinbase og FXRatesAPI samsvarer praktisk talt med Google og XE.com: for de viktigste valutaene er forskjellen under 0,005 %.\n\nKilder (automatisk reserve):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nHvis den primære kilden ikke svarer under autooppdatering eller ved ↻, henter appen automatisk data fra den neste. Den gjeldende kilden vises øverst ved siden av oppdateringstidspunktet.\n\nI Innstillinger (⚙) kan du tvinge en bestemt kilde — de andre forblir fortsatt som reserve.\n\nCoinbase og FXRatesAPI oppdateres hvert minutt, de andre kildene én gang om dagen. Dette er referansekurser, ikke handelskurser.\n\nLisenser og attribusjon:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — krever lenken “Rates By Exchange Rate API” (i bunnteksten, klikkbar).\n• F.A. — CC0 (public domain), ingen attribusjon kreves.\n• Frankfurter — MIT, data fra European Central Bank (ECB).</string>
     <string name="filter_all">Alle</string>
     <string name="switch_source_title">Bytte kilde?</string>
     <string name="switch_source_msg">%1$s er tilgjengelig via %2$s, ikke den gjeldende kilden. Bytte og legge til?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Mellomrom — 1 234.56</string>
     <string name="group_comma">Komma — 1,234.56</string>
     <string name="adjust_title">Kursjustering</string>
+    <string name="about_link">Om appen</string>
+    <string name="privacy_link">Personvern</string>
+    <string name="adjust_about">Angi en prosentsats for bankens gebyr, margin eller tap ved overføring, så viser alle beløp straks det reelle resultatet.</string>
     <string name="adjust_off">Av</string>
     <string name="adjusted_rates">Justerte kurser</string>
     <string name="adjusted_short">Justert</string>

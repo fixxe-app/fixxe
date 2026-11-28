@@ -9,7 +9,7 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
   ÇFARË E BËN FIXXE-NË TË NDRYSHËM
 
 
-  • Pesë burime kursesh me kalim automatik — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. dhe Frankfurter (BQE). Nëse një ofrues bie, aplikacioni kalon në heshtje te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë. Preferoni një burim? Zgjidheni te cilësimet — të tjerët mbeten si rezervë.
+  • Pesë burime kursesh me kalim automatik — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. dhe Frankfurter (BQE). Kurset live përputhen me kurset referuese që shihni në kërkimin në internet dhe në faqet kryesore të monedhave. Nëse një ofrues bie, aplikacioni kalon automatikisht te tjetri dhe tregon nga erdhën shifrat. Shumica e konvertuesve varen nga një API i vetëm dhe, kur ai dështon, thjesht nuk shfaqin asgjë. Preferoni një burim? Zgjidheni te cilësimet — të tjerët mbeten si rezervë.
 
 
   • Punon pa internet — kurset e fundit ruhen në pajisje, kështu që aplikacioni vazhdon të llogarisë edhe pa lidhje. Dhe nëse ato kurse janë më të vjetra se një ditë, e thotë hapur në vend që t''i paraqesë si të freskëta.
@@ -62,11 +62,12 @@ description: 'FIXXE është një konvertues monedhash i shpejtë dhe i pastër m
 
   Kurset e shfaqura janë vlera mesatare orientuese, jo kuotime bursash në kohë reale.
 
-  Rates By Exchange Rate API.
+  Një nga burimet rezervë të kurseve: Rates By Exchange Rate API.
 
   '
 whats_new: "Përmirësime dhe rregullime të vogla."
 landing:
+  credit_prefix: "Një nga burimet rezervë të kurseve:"
   page_title: FIXXE — konvertues monedhash
   install_title: Mënyrat e instalimit
   about_title: Rreth aplikacionit
@@ -91,3 +92,5 @@ landing:
   btn_store: Hap në dyqan
   privacy: Privatësia
   terms: Kushtet
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Kurset live përputhen me kurset referuese që shihni në kërkimin në internet dhe në faqet kryesore të monedhave.", "about": "Kurset e Coinbase dhe FXRatesAPI përputhen praktikisht me kursin në Google dhe XE.com: për monedhat kryesore diferenca është më pak se 0,005%."}

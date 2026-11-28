@@ -9,7 +9,7 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
   O QUE TORNA O FIXXE DIFERENTE
 
 
-  • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). Se um fornecedor cair, a aplicação passa discretamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
+  • Cinco fontes de taxas com troca automática — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. e Frankfurter (BCE). As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio. Se um fornecedor cair, a aplicação passa automaticamente para o seguinte e mostra de onde vieram os números. A maioria dos conversores depende de uma única API e, quando ela falha, simplesmente não mostra nada. Prefere uma só fonte? Escolha-a nas Configurações — as outras ficam como reserva.
 
 
   • Funciona offline — as últimas taxas ficam no seu dispositivo, por isso a aplicação continua a converter sem ligação. E se essas taxas tiverem mais de um dia, di-lo com todas as letras em vez de as fazer passar por atuais.
@@ -62,11 +62,12 @@ description: 'O FIXXE é um conversor de moedas rápido e limpo, com taxas médi
 
   As taxas apresentadas são valores médios de referência, não cotações de mercado em tempo real.
 
-  Rates By Exchange Rate API.
+  Uma das fontes de taxas de reserva: Rates By Exchange Rate API.
 
   '
 whats_new: "Pequenas melhorias e correções."
 landing:
+  credit_prefix: "Uma das fontes de taxas de reserva:"
   page_title: FIXXE — conversor de moedas
   install_title: Formas de instalar
   about_title: Sobre a aplicação
@@ -91,3 +92,5 @@ landing:
   btn_store: Abrir na loja
   privacy: Privacidade
   terms: Termos
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "As taxas ao vivo coincidem com as taxas de referência que você vê na pesquisa na web e nos grandes sites de câmbio.", "about": "As taxas da Coinbase e da FXRatesAPI praticamente coincidem com as do Google e do XE.com: nas principais moedas a diferença é inferior a 0,005%."}

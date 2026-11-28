@@ -30,7 +30,7 @@
     <string name="language_title">Язык</string>
     <string name="language_system">Системный</string>
     <string name="source_info_title">Источник курсов</string>
-    <string name="source_info_message">Среднерыночный курс — середина между покупкой и продажей на мировом рынке.\n\nИсточники (автоматический резерв):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nЕсли основной источник не отвечает при автообновлении или по ↻, приложение автоматически берёт данные из следующего. Текущий источник показан вверху рядом со временем обновления.\n\nВ Настройках (⚙) можно принудительно выбрать конкретный источник — остальные всё равно останутся резервом.\n\nCoinbase и FXRatesAPI обновляются раз в минуту, остальные источники — раз в день. Это справочные курсы, а не биржевые котировки.\n\nЛицензии и указание источников:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — требует ссылку “Rates By Exchange Rate API” (в подвале, кликабельна).\n• F.A. — CC0 (общественное достояние), указание не требуется.\n• Frankfurter — MIT, данные Европейского центрального банка (ECB).</string>
+    <string name="source_info_message" formatted="false">Среднерыночный курс — середина между покупкой и продажей на мировом рынке.\n\nКурсы Coinbase и FXRatesAPI практически совпадают с курсом в Google и на XE.com: по основным валютам расхождение менее 0,005%.\n\nИсточники (автоматический резерв):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nЕсли основной источник не отвечает при автообновлении или по ↻, приложение автоматически берёт данные из следующего. Текущий источник показан вверху рядом со временем обновления.\n\nВ Настройках (⚙) можно принудительно выбрать конкретный источник — остальные всё равно останутся резервом.\n\nCoinbase и FXRatesAPI обновляются раз в минуту, остальные источники — раз в день. Это справочные курсы, а не биржевые котировки.\n\nЛицензии и указание источников:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — требует ссылку “Rates By Exchange Rate API” (в подвале, кликабельна).\n• F.A. — CC0 (общественное достояние), указание не требуется.\n• Frankfurter — MIT, данные Европейского центрального банка (ECB).</string>
     <string name="filter_all">Все</string>
     <string name="switch_source_title">Сменить источник?</string>
     <string name="switch_source_msg">%1$s доступен через %2$s, а не текущий источник. Переключить и добавить?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Пробел — 1 234.56</string>
     <string name="group_comma">Запятая — 1,234.56</string>
     <string name="adjust_title">Поправка к курсу</string>
+    <string name="about_link">О приложении</string>
+    <string name="privacy_link">Конфиденциальность</string>
+    <string name="adjust_about">Задайте процент комиссии банка, маржи или потерь на переводе, и все суммы сразу покажут реальный результат.</string>
     <string name="adjust_off">Выкл.</string>
     <string name="adjusted_rates">Курсы с поправкой</string>
     <string name="adjusted_short">С поправкой</string>

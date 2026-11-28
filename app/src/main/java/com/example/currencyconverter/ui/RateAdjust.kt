@@ -52,12 +52,17 @@ object RateAdjust {
  * процент прибавлялся бы при каждом переходе и числа уползали бы сами.
  */
 class AmountModel(first: String) {
+    companion object {
+        /** Стартовая сумма — не 1: единица читается как надпись «курс», а не как поле для ввода. */
+        const val START = 42.0
+    }
+
     /** Строка, в которой последний раз ввели число. */
     var base = first; private set
     /** Строка с курсором. */
     var active = first; private set
     /** Сумма в базовой строке. */
-    var amount = 1.0; private set
+    var amount = START; private set
     var adjustPct = 0.0; private set
 
     val adjusted get() = adjustPct != 0.0

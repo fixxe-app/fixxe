@@ -7,12 +7,18 @@
   1. about/#install — после загрузки раздел вверху экрана, а не посреди
      описания (описание заполняется после загрузки и сдвигает раздел вниз).
   2. about/ без якоря — страница открывается сверху.
-  3. Строка «Rates By Exchange Rate API» — только в подвале, со ссылкой;
+  3. Строка «Rates By Exchange Rate API» — только в подвале, со ссылкой и пояснением «резервный источник» (EN, RU);
      в описании её нет (там она повторялась бы).
   4. Вверху страницы — значки App Store и Google Play: ведут в магазины
      FIXXE, загрузились, одного роста (не меньше 40 px), на первом экране
      до «Об приложении», за край не вылезают. На телефоне (320, 390 px) и
      на компьютере (900 px), по-русски и по-арабски (справа налево).
+  5. Логотип с названием — ссылка на калькулятор (../), Privacy и Terms
+     открываются в новой вкладке.
+  6. about/?lang=ru (ссылка из приложения) — страница по-русски, даже если
+     раньше на ней выбрали другой язык.
+  7. Тема из приложения на About, Privacy и Terms: ?theme= или выбор в
+     приложении на том же сайте; ссылки Privacy/Terms/About несут её дальше.
 -->
 <meta charset="utf-8">
 <title>anchor</title>
@@ -57,6 +63,63 @@ async function open(hash, width = 420){
       'в описании осталась строка «Rates By Exchange Rate API»');
     check(d.querySelector('footer a[href*="exchangerate-api.com"]'),
       'в подвале нет ссылки на Exchange Rate API');
+    // перед дословной атрибуцией (условие тарифа ER-API) — пояснение на языке страницы
+    for (const [lang, pre] of [['en', 'One of the backup rate sources:'], ['ru', 'Один из резервных источников курсов:']]) {
+      const { d: dl } = await open('&lang=' + lang);
+      const credit = dl.querySelector('footer a[href*="exchangerate-api.com"]')?.parentElement;
+      const text = (credit?.textContent || '').replace(/\s+/g, ' ').trim();
+      check(text.startsWith(pre + ' Rates By Exchange Rate API'), `${lang}: подпись в подвале «${text.slice(0, 80)}»`);
+    }
+    ({ w, d } = await open(''));
+
+    // 5. логотип ведёт в калькулятор, Privacy и Terms — в новой вкладке
+    const home = d.getElementById('home');
+    const app = new URL('../', frame.contentWindow.location.href).href;
+    check(home && home.href === app, `логотип не ведёт в калькулятор: ${home && home.href}`);
+    check(home && home.querySelector('.logo') && home.querySelector('.name'), 'в ссылке нет логотипа и названия');
+    for (const id of ['privacy-link', 'terms-link']) {
+      const a = d.getElementById(id);
+      check(a && a.target === '_blank' && /noopener/.test(a.rel), `${id}: открывается не в новой вкладке`);
+    }
+    // подвал как у Privacy и Terms: Privacy · Terms · About · Web version FIXXE — страницы этого же сайта
+    const foot = ['privacy-link', 'terms-link', 'about-self', 'web-link'].map(id => d.getElementById(id));
+    const want = [new URL('../privacy.html', frame.contentWindow.location.href).href, new URL('../terms.html', frame.contentWindow.location.href).href,
+                  new URL('./', frame.contentWindow.location.href).href, app];
+    check(foot.every((a, i) => a && a.href === want[i] && a.textContent.trim()),
+          'подвал About: ' + foot.map(a => a && a.href).join(' · '));
+
+    // 6. язык из приложения
+    try { localStorage.setItem('fixxe-about-lang', 'de'); } catch {}
+    frame.style.width = '420px';
+    await new Promise(r => { frame.onload = r; frame.src = '/web/about/index.html?lang=ru'; });
+    for (let i = 0; i < 60 && !frame.contentDocument.querySelector('#ways .way'); i++) await wait(250);
+    await wait(300);
+    check(frame.contentDocument.documentElement.lang === 'ru' && frame.contentDocument.getElementById('lang').value === 'ru',
+      `about/?lang=ru открылась на «${frame.contentDocument.documentElement.lang}»`);
+    try { localStorage.removeItem('fixxe-about-lang'); } catch {}
+
+    // 7. тема из приложения: ?theme= или выбор на этом сайте; ссылки несут её дальше
+    async function page(src){
+      await new Promise(r => { frame.onload = r; frame.src = src; });
+      await wait(300);
+      const d = frame.contentDocument;
+      return { d, bg: frame.contentWindow.getComputedStyle(d.body).backgroundColor,
+               links: [...d.querySelectorAll('a.keep-theme')].map(a => a.href) };
+    }
+    const DARK = 'rgb(18, 18, 18)', LIGHT = 'rgb(255, 255, 255)';
+    let p = await page('/web/privacy.html?theme=dark');
+    check(p.bg === DARK && p.links.length === 4 && p.links.every(h => h.includes('theme=dark')),
+      `privacy.html?theme=dark: фон ${p.bg}, ссылки ${p.links.join(' ')}`);
+    try { localStorage.setItem('fixe.theme', '1'); } catch {}
+    p = await page('/web/terms.html');
+    check(p.bg === LIGHT && p.links.every(h => h.includes('theme=light')), `terms.html, в приложении светлая тема: фон ${p.bg}`);
+    try { localStorage.setItem('fixe.theme', '2'); } catch {}
+    p = await page('/web/terms.html');
+    check(p.bg === DARK, `terms.html, в приложении тёмная тема: фон ${p.bg}`);
+    try { localStorage.removeItem('fixe.theme'); } catch {}
+    p = await page('/web/about/index.html?theme=light');
+    check(p.d.documentElement.dataset.theme === 'light' && p.links.length === 3 && p.links.every(h => h.includes('theme=light')),
+      `about/?theme=light: тема ${p.d.documentElement.dataset.theme}, ссылки ${p.links.join(' ')}`);
 
     // 4. значки магазинов вверху
     const IOS = 'https://apps.apple.com/app/id6815242016';

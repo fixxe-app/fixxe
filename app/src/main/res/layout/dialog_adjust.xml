@@ -17,6 +17,15 @@
         android:paddingEnd="20dp"
         android:paddingTop="12dp">
 
+        <TextView
+            android:id="@+id/adjustAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/adjust_about"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
         <!-- Знак: «+» — заплачу больше, «−» — получу меньше -->
         <LinearLayout
             android:layout_width="match_parent"

@@ -7,7 +7,8 @@ Built entirely with CLI tools — no Android Studio required.
 **Get FIXXE:** [Google Play](https://play.google.com/store/apps/details?id=com.karpinity.fixxe) ·
 [App Store](https://apps.apple.com/app/id6815242016) (iPhone, iPad, Apple-silicon Mac) ·
 [APK from GitHub releases](https://github.com/fixxe-app/fixxe/releases/latest) for Android without
-Google Play · [web app](https://telebimmer.com/fixxe/) that installs to the home screen.
+Google Play · [web app](https://telebimmer.com/fixxe/) that installs to the home screen
+(also at [fixxe.app](https://fixxe.app)).
 
 **Open source.** The complete source code — Android, iOS and the web app — is published here under
 the [GPL-3.0](LICENSE) licence. See [About the app](https://telebimmer.com/fixxe/about/) for a
@@ -388,7 +389,8 @@ are side-loaded into the DEBUG bundle for the shoot only — release builds neve
 ## PWA hosting
 
 The web app is a static site: any web server will do. The address published in the stores is
-`telebimmer.com/fixxe/`, updated by hand. `release.sh` can also redeploy a mirror over SSH
+`telebimmer.com/fixxe/`, updated by hand; `fixxe.app` is a second address served by the
+mirror. `release.sh` can also redeploy the mirror over SSH
 (`tar → scp → extract → systemctl reload nginx`) when `FIXXE_MIRROR_SSH` is set in
 `.release.local`. Assets carry `Cache-Control: no-cache` so updates propagate immediately;
 installed PWAs refresh on the next open via the SW cache bump.

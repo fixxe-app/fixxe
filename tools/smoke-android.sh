@@ -403,6 +403,7 @@ adb shell input keyevent KEYCODE_BACK; sleep 1
 # полоса ведёт в настройку; выбор значения окно не закрывает
 screen; tap_on 'id/adjustBanner'; sleep 1.5; screen
 onscreen 'id/cbAdjustKeep' || fail "нажатие на полосу не открыло настройку поправки"
+onscreen 'id/adjustAbout' || fail "в окне поправки нет короткой справки"
 tap_on 'text="+3%"'; sleep 1; screen
 onscreen 'id/cbAdjustKeep' || fail "выбор значения закрыл окно — до «Действует постоянно» не добраться"
 tap_on 'id/button1'; sleep 1
@@ -473,6 +474,8 @@ tap_on 'id/tvLabel' 3; sleep 1.5; screen
 onscreen 'class="android.widget.CheckedTextView"' || fail "третий пункт настроек не открыл выбор округления"
 tap_on 'android:id/text1' 2; sleep 1.5; screen
 onscreen 'id/tvValue' || fail "выбор округления не вернул в настройки"
+onscreen 'id/setAbout' || fail "внизу настроек нет ссылки «О приложении»"
+onscreen 'id/setPrivacy' || fail "внизу настроек нет ссылки на Privacy"
 # «Назад» в окне выбора тоже возвращает в настройки, а не на главный экран
 tap_on 'id/tvLabel' 1; sleep 1.5; screen
 onscreen 'class="android.widget.CheckedTextView"' || fail "первый пункт настроек не открыл выбор оформления"
@@ -527,7 +530,7 @@ onscreen 'id/tvValue' || fail "выбор «Помнить сумму» не в�
 [ "$(txt 'id/tvValue' 5)" = "$SESSION_LABEL" ] || fail "пункт «Помнить сумму» показывает «$(txt 'id/tvValue' 5)», ждали «$SESSION_LABEL»"
 tap_on 'android:id/button2'; sleep 1
 kill_app; start_wait 'text="1 EUR = '
-[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "«Пока приложение открыто»: после закрытия в EUR «$(txt 'id/etAmount' 1)», ждали 1"
+[ "$(txt 'id/etAmount' 1)" = "42" ] || fail "«Пока приложение открыто»: после закрытия в EUR «$(txt 'id/etAmount' 1)», ждали 42"
 # Сроки — по часам устройства: сумма записана 11 / 13 часов / 30 дней назад
 NOW_MS=$(( $(adb shell date +%s | tr -d '\r') * 1000 ))
 ago() { echo "    <long name=\"adjust_left_at\" value=\"$(( NOW_MS - $1 * 3600 * 1000 ))\" />"; }
@@ -536,17 +539,17 @@ SAVED='    <string name="saved_code">USD</string>
 launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 11)"
 [ "$(txt 'id/etAmount' 2)" = "50" ] || fail "12 часов, прошло 11: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
 launch_saved 'text="1 EUR = ' EUR,USD,RSD "$SAVED" "$(ago 13)"
-[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "12 часов, прошло 13: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
+[ "$(txt 'id/etAmount' 1)" = "42" ] || fail "12 часов, прошло 13: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
 launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 13)" '    <int name="amount_memory" value="2" />'
 [ "$(txt 'id/etAmount' 2)" = "50" ] || fail "24 часа, прошло 13: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
 launch_saved 'text="1 EUR = ' EUR,USD,RSD "$SAVED" "$(ago 25)" '    <int name="amount_memory" value="2" />'
-[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "24 часа, прошло 25: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
+[ "$(txt 'id/etAmount' 1)" = "42" ] || fail "24 часа, прошло 25: сумма не сбросилась (EUR «$(txt 'id/etAmount' 1)»)"
 launch_saved 'text="1 USD = ' EUR,USD,RSD "$SAVED" "$(ago 720)" '    <int name="amount_memory" value="3" />'
 [ "$(txt 'id/etAmount' 2)" = "50" ] || fail "«Всегда», прошло 30 дней: сумма не вернулась (USD «$(txt 'id/etAmount' 2)»)"
 # валюты из сохранённой суммы больше нет в списке — обычный старт
 launch_saved 'text="1 EUR = ' EUR,RSD "$SAVED" "$(ago 1)"
-[ "$(txt 'id/etAmount' 1)" = "1" ] || fail "валюту суммы убрали из списка, а старт не с 1 EUR (EUR «$(txt 'id/etAmount' 1)»)"
-echo "  ✓ 12 ч по умолчанию: сумма переживает закрытие, через 13 ч — 1; 24 ч и «Всегда» помнят; «Пока открыто» забывает"
+[ "$(txt 'id/etAmount' 1)" = "42" ] || fail "валюту суммы убрали из списка, а старт не с 42 EUR (EUR «$(txt 'id/etAmount' 1)»)"
+echo "  ✓ 12 ч по умолчанию: сумма переживает закрытие, через 13 ч — снова 42; 24 ч и «Всегда» помнят; «Пока открыто» забывает"
 fi
 
 echo "✓ Android smoke пройден"

@@ -50,7 +50,7 @@ def structure(en_description):
         elif t.startswith("•"):   kinds.append("li")
         # Строка об источнике курсов — для магазинов. На сайте она уже есть в
         # подвале, со ссылкой, и в описании повторялась бы.
-        elif t.startswith("Rates By"): kinds.append("credit")
+        elif "Rates By Exchange Rate API" in t: kinds.append("credit")
         elif t == t.upper() and len(t) < 60 and any(c.isalpha() for c in t): kinds.append("h")
         else:                     kinds.append("p")
     return kinds
@@ -70,6 +70,18 @@ def blocks(description, kinds, lang):
                 raise SystemExit(f"{lang}: на месте строки об источнике курсов другой текст: {t!r}")
             continue
         out.append([kind, t[1:].strip() if kind == "li" else t])
+    return out
+
+
+def about_blocks(d, kinds, lang):
+    """В магазинах — нейтральная фраза о точности (чужие бренды в описании
+    запрещены правилами), на странице About — с названиями Google и XE.com."""
+    out = blocks(d["description"], kinds, lang)
+    rm = d.get("rates_match") or {}
+    first = next((b for b in out if b[0] == "li"), None)
+    if not rm.get("store") or not first or rm["store"] not in first[1]:
+        raise SystemExit(f"{lang}: в первом пункте описания нет фразы rates_match.store")
+    first[1] = first[1].replace(rm["store"], rm["about"])
     return out
 
 
@@ -97,7 +109,7 @@ def main():
             "rtl": lang in RTL,
             "native": NATIVE.get(lang, lang),
             "subtitle": d["subtitle"],
-            "blocks": blocks(d["description"], kinds, lang),
+            "blocks": about_blocks(d, kinds, lang),
             **landing,
         }
         (OUT / f"{lang}.json").write_text(

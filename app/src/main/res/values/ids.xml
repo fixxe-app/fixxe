@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ссылки внизу настроек: по id их находит smoke-android.sh на любом языке -->
+    <item name="setAbout" type="id" />
+    <item name="setPrivacy" type="id" />
+</resources>

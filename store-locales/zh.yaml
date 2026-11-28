@@ -9,7 +9,7 @@ description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实
   FIXXE 的不同之处
 
 
-  • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。某个来源出故障时，应用会悄悄换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
+  • 五个汇率来源自动接替——Coinbase、FXRatesAPI、ExchangeRate-API、F.A. 和 Frankfurter（欧洲央行）。实时汇率与您在网页搜索和主要汇率网站上看到的参考汇率一致。某个来源出故障时，应用会自动换到下一个，并显示数字出自哪里。多数换算工具只靠一个接口，接口一挂就什么都显示不出来。偏好某个来源？在设置中选定即可——其他来源仍作为备用。
 
 
   • 离线可用——最近一次的汇率保存在设备上，没有网络也能继续换算。如果这些汇率已经超过一天，它会直截了当地说明，而不是装作是最新的。
@@ -62,11 +62,12 @@ description: 'FIXXE 是一款快速、清爽的货币换算工具，用的是实
 
   显示的汇率为参考性中间价，并非实时交易报价。
 
-  Rates By Exchange Rate API.
+  备用汇率来源之一：Rates By Exchange Rate API.
 
   '
 whats_new: "细节改进与问题修复。"
 landing:
+  credit_prefix: "备用汇率来源之一："
   page_title: FIXXE — 货币换算
   install_title: 安装方式
   about_title: 关于应用
@@ -91,3 +92,5 @@ landing:
   btn_store: 在商店中打开
   privacy: 隐私
   terms: 条款
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "实时汇率与您在网页搜索和主要汇率网站上看到的参考汇率一致。", "about": "Coinbase 和 FXRatesAPI 的汇率与 Google 和 XE.com 的汇率几乎一致：主要货币的差异小于 0.005%。"}

@@ -30,7 +30,7 @@
     <string name="language_title">ภาษา</string>
     <string name="language_system">ค่าเริ่มต้นของระบบ</string>
     <string name="source_info_title">แหล่งอัตรา</string>
-    <string name="source_info_message">อัตรากลางตลาด — จุดกึ่งกลางระหว่างราคาซื้อและขายในตลาดโลก\n\nแหล่งข้อมูล (สลับสำรองอัตโนมัติ):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nหากแหล่งหลักไม่ตอบสนองระหว่างการอัปเดตอัตโนมัติหรือเมื่อกด ↻ แอปจะดึงข้อมูลจากแหล่งถัดไปให้อัตโนมัติ แหล่งที่ใช้อยู่จะแสดงด้านบนถัดจากเวลาอัปเดต\n\nในการตั้งค่า (⚙) คุณสามารถบังคับใช้แหล่งใดแหล่งหนึ่งได้ — แหล่งอื่นยังคงเป็นตัวสำรอง\n\nCoinbase และ FXRatesAPI อัปเดตทุกนาที ส่วนแหล่งอื่นอัปเดตวันละครั้ง อัตราเหล่านี้เป็นอัตราอ้างอิง ไม่ใช่ราคาซื้อขาย\n\nสัญญาอนุญาตและการให้เครดิต:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — ต้องมีลิงก์ “Rates By Exchange Rate API” (อยู่ด้านล่าง คลิกได้)\n• F.A. — CC0 (สาธารณสมบัติ) ไม่ต้องให้เครดิต\n• Frankfurter — MIT ข้อมูลจากธนาคารกลางยุโรป (ECB)</string>
+    <string name="source_info_message" formatted="false">อัตรากลางตลาด — จุดกึ่งกลางระหว่างราคาซื้อและขายในตลาดโลก\n\nอัตราของ Coinbase และ FXRatesAPI แทบจะตรงกับอัตราใน Google และ XE.com สำหรับสกุลเงินหลัก ส่วนต่างน้อยกว่า 0.005%\n\nแหล่งข้อมูล (สลับสำรองอัตโนมัติ):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nหากแหล่งหลักไม่ตอบสนองระหว่างการอัปเดตอัตโนมัติหรือเมื่อกด ↻ แอปจะดึงข้อมูลจากแหล่งถัดไปให้อัตโนมัติ แหล่งที่ใช้อยู่จะแสดงด้านบนถัดจากเวลาอัปเดต\n\nในการตั้งค่า (⚙) คุณสามารถบังคับใช้แหล่งใดแหล่งหนึ่งได้ — แหล่งอื่นยังคงเป็นตัวสำรอง\n\nCoinbase และ FXRatesAPI อัปเดตทุกนาที ส่วนแหล่งอื่นอัปเดตวันละครั้ง อัตราเหล่านี้เป็นอัตราอ้างอิง ไม่ใช่ราคาซื้อขาย\n\nสัญญาอนุญาตและการให้เครดิต:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — ต้องมีลิงก์ “Rates By Exchange Rate API” (อยู่ด้านล่าง คลิกได้)\n• F.A. — CC0 (สาธารณสมบัติ) ไม่ต้องให้เครดิต\n• Frankfurter — MIT ข้อมูลจากธนาคารกลางยุโรป (ECB)</string>
     <string name="filter_all">ทั้งหมด</string>
     <string name="switch_source_title">สลับแหล่งข้อมูลไหม</string>
     <string name="switch_source_msg">%1$s ใช้งานได้ผ่าน %2$s ไม่ใช่แหล่งข้อมูลปัจจุบัน สลับและเพิ่มไหม</string>
@@ -51,6 +51,9 @@
     <string name="group_space">เว้นวรรค — 1 234.56</string>
     <string name="group_comma">จุลภาค — 1,234.56</string>
     <string name="adjust_title">การปรับอัตรา</string>
+    <string name="about_link">เกี่ยวกับแอป</string>
+    <string name="privacy_link">ความเป็นส่วนตัว</string>
+    <string name="adjust_about">กำหนดเปอร์เซ็นต์สำหรับค่าธรรมเนียมธนาคาร ส่วนต่าง หรือส่วนที่เสียไปกับการโอน แล้วทุกยอดจะแสดงผลลัพธ์จริงทันที</string>
     <string name="adjust_off">ปิด</string>
     <string name="adjusted_rates">อัตราที่ปรับแล้ว</string>
     <string name="adjusted_short">ปรับแล้ว</string>

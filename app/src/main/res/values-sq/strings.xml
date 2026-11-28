@@ -30,7 +30,7 @@
     <string name="language_title">Gjuha</string>
     <string name="language_system">Parazgjedhja e sistemit</string>
     <string name="source_info_title">Burimi i kursit</string>
-    <string name="source_info_message">Kursi mesatar i tregut — pika e mesme midis blerjes dhe shitjes në tregun global.\n\nBurimet (rezervë automatike):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nNëse burimi kryesor nuk përgjigjet gjatë përditësimit automatik ose në ↻, aplikacioni merr automatikisht të dhënat nga i ardhshmi. Burimi aktual shfaqet në krye pranë kohës së përditësimit.\n\nNë Cilësimet (⚙) mund të impononi një burim të caktuar — të tjerët përsëri mbeten si rezervë.\n\nCoinbase dhe FXRatesAPI përditësohen çdo minutë, burimet e tjera një herë në ditë. Këto janë kurse referuese, jo kuotime tregtimi.\n\nLicencat dhe atribuimi:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — kërkon lidhjen „Rates By Exchange Rate API“ (në fund, e klikueshme).\n• F.A. — CC0 (domen publik), pa atribuim të detyrueshëm.\n• Frankfurter — MIT, të dhëna nga Banka Qendrore Evropiane (ECB).</string>
+    <string name="source_info_message" formatted="false">Kursi mesatar i tregut — pika e mesme midis blerjes dhe shitjes në tregun global.\n\nKurset e Coinbase dhe FXRatesAPI përputhen praktikisht me kursin në Google dhe XE.com: për monedhat kryesore diferenca është më pak se 0,005%.\n\nBurimet (rezervë automatike):\n1. Coinbase\n2. FXRatesAPI\n3. ExchangeRate-API\n4. F.A.\n5. Frankfurter (ECB)\n\nNëse burimi kryesor nuk përgjigjet gjatë përditësimit automatik ose në ↻, aplikacioni merr automatikisht të dhënat nga i ardhshmi. Burimi aktual shfaqet në krye pranë kohës së përditësimit.\n\nNë Cilësimet (⚙) mund të impononi një burim të caktuar — të tjerët përsëri mbeten si rezervë.\n\nCoinbase dhe FXRatesAPI përditësohen çdo minutë, burimet e tjera një herë në ditë. Këto janë kurse referuese, jo kuotime tregtimi.\n\nLicencat dhe atribuimi:\n• Coinbase — api.coinbase.com\n• FXRatesAPI — fxratesapi.com\n• ExchangeRate-API — kërkon lidhjen „Rates By Exchange Rate API“ (në fund, e klikueshme).\n• F.A. — CC0 (domen publik), pa atribuim të detyrueshëm.\n• Frankfurter — MIT, të dhëna nga Banka Qendrore Evropiane (ECB).</string>
     <string name="filter_all">Të gjitha</string>
     <string name="switch_source_title">Të ndërrohet burimi?</string>
     <string name="switch_source_msg">%1$s është i disponueshëm përmes %2$s, jo përmes burimit aktual. Ta ndërroni dhe ta shtoni?</string>
@@ -51,6 +51,9 @@
     <string name="group_space">Hapësirë — 1 234.56</string>
     <string name="group_comma">Presje — 1,234.56</string>
     <string name="adjust_title">Rregullimi i kursit</string>
+    <string name="about_link">Rreth aplikacionit</string>
+    <string name="privacy_link">Privatësia</string>
+    <string name="adjust_about">Vendosni një përqindje për komisionin e bankës, marzhin ose humbjet gjatë transfertës dhe të gjitha shumat tregojnë menjëherë rezultatin real.</string>
     <string name="adjust_off">Fikur</string>
     <string name="adjusted_rates">Kurse të rregulluara</string>
     <string name="adjusted_short">I rregulluar</string>

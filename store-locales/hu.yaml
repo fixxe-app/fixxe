@@ -9,7 +9,7 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
   MIBEN MÁS A FIXXE
 
 
-  • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Ha egy szolgáltató kiesik, az alkalmazás csendben a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
+  • Öt árfolyamforrás automatikus váltással — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. és Frankfurter (EKB). Az élő árfolyamok megegyeznek azokkal a referencia-árfolyamokkal, amelyeket a webes keresőkben és a nagy devizaoldalakon lát. Ha egy szolgáltató kiesik, az alkalmazás automatikusan a következőre vált, és megmutatja, honnan származnak a számok. A legtöbb váltó egyetlen API-ra támaszkodik, és annak kiesésekor egyszerűen semmit sem mutat. Egy forrást részesít előnyben? Válassza ki a Beállításokban — a többi tartalékként megmarad.
 
 
   • Offline is működik — az utolsó árfolyamok a készüléken maradnak, így az alkalmazás kapcsolat nélkül is számol. Ha pedig ezek az árfolyamok egy napnál régebbiek, ezt kereken kimondja, ahelyett hogy frissnek tüntetné fel őket.
@@ -62,11 +62,12 @@ description: 'A FIXXE gyors, letisztult valutaváltó élő középárfolyamokka
 
   A megjelenített árfolyamok tájékoztató középárfolyamok, nem valós idejű tőzsdei jegyzések.
 
-  Rates By Exchange Rate API.
+  Az egyik tartalék árfolyamforrás: Rates By Exchange Rate API.
 
   '
 whats_new: "Kisebb fejlesztések és javítások."
 landing:
+  credit_prefix: "Az egyik tartalék árfolyamforrás:"
   page_title: FIXXE — valutaváltó
   install_title: Telepítési módok
   about_title: Az alkalmazásról
@@ -91,3 +92,5 @@ landing:
   btn_store: Megnyitás az áruházban
   privacy: Adatvédelem
   terms: Feltételek
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Az élő árfolyamok megegyeznek azokkal a referencia-árfolyamokkal, amelyeket a webes keresőkben és a nagy devizaoldalakon lát.", "about": "A Coinbase és az FXRatesAPI árfolyamai gyakorlatilag megegyeznek a Google és az XE.com árfolyamával: a fő devizáknál az eltérés 0,005% alatti."}

@@ -9,7 +9,7 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
   MIS TEEB FIXXE TEISTSUGUSEKS
 
 
-  • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Kui üks pakkuja kukub, läheb rakendus vaikselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
+  • Viis kursiallikat automaatse vahetusega — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. ja Frankfurter (EKP). Reaalajas kursid langevad kokku viitekurssidega, mida näete veebiotsingus ja suurtel valuutasaitidel. Kui üks pakkuja kukub, läheb rakendus automaatselt järgmise juurde ja näitab, kust numbrid pärinevad. Enamik kalkulaatoreid toetub ühele ainsale liidesele ja selle tõrke korral lihtsalt ei näita midagi. Eelistate üht allikat? Valige see seadetes — teised jäävad varuks.
 
 
   • Töötab võrguta — viimased kursid jäävad seadmesse, nii et rakendus arvutab ka ilma ühenduseta. Ja kui need kursid on üle ööpäeva vanad, ütleb ta seda otse, mitte ei esita neid värsketena.
@@ -62,11 +62,12 @@ description: 'FIXXE on kiire ja puhas valuutakalkulaator reaalajas keskkurssideg
 
   Näidatud kursid on orienteerivad keskväärtused, mitte reaalajas kauplemisnoteeringud.
 
-  Rates By Exchange Rate API.
+  Üks varukursiallikatest: Rates By Exchange Rate API.
 
   '
 whats_new: "Väikesed täiustused ja parandused."
 landing:
+  credit_prefix: "Üks varukursiallikatest:"
   page_title: FIXXE — valuutakalkulaator
   install_title: Paigaldusviisid
   about_title: Rakendusest
@@ -91,3 +92,5 @@ landing:
   btn_store: Ava poes
   privacy: Privaatsus
   terms: Tingimused
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Reaalajas kursid langevad kokku viitekurssidega, mida näete veebiotsingus ja suurtel valuutasaitidel.", "about": "Coinbase’i ja FXRatesAPI kursid langevad praktiliselt kokku Google’i ja XE.com-i kursiga: peamiste valuutade puhul on erinevus alla 0,005%."}

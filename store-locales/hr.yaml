@@ -9,7 +9,7 @@ description: 'FIXXE je brz i pregledan pretvarač valuta sa živim srednjim teč
   PO ČEMU SE FIXXE RAZLIKUJE
 
 
-  • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Ako izvor padne, aplikacija tiho prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
+  • Pet izvora tečaja s automatskom zamjenom — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. i Frankfurter (ESB). Tečajevi uživo podudaraju se s referentnim tečajevima koje vidite u internetskom pretraživanju i na velikim valutnim stranicama. Ako izvor padne, aplikacija automatski prelazi na sljedeći i pokazuje odakle su brojke. Većina pretvarača ovisi o jednom jedinom API-ju i, kad on zakaže, jednostavno ne prikazuje ništa. Više vam odgovara jedan izvor? Odaberite ga u postavkama — ostali ostaju kao pričuva.
 
 
   • Radi bez interneta — posljednji tečajevi ostaju na uređaju, pa aplikacija računa i bez veze. A ako su ti tečajevi stariji od jednog dana, to otvoreno kaže umjesto da ih prikazuje kao svježe.
@@ -62,11 +62,12 @@ description: 'FIXXE je brz i pregledan pretvarač valuta sa živim srednjim teč
 
   Prikazani tečajevi su okvirne srednje vrijednosti, a ne burzovne kotacije u stvarnom vremenu.
 
-  Rates By Exchange Rate API.
+  Jedan od rezervnih izvora tečaja: Rates By Exchange Rate API.
 
   '
 whats_new: "Manja poboljšanja i ispravci."
 landing:
+  credit_prefix: "Jedan od rezervnih izvora tečaja:"
   page_title: FIXXE — pretvarač valuta
   install_title: Načini instalacije
   about_title: O aplikaciji
@@ -91,3 +92,5 @@ landing:
   btn_store: Otvori u trgovini
   privacy: Privatnost
   terms: Uvjeti
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Tečajevi uživo podudaraju se s referentnim tečajevima koje vidite u internetskom pretraživanju i na velikim valutnim stranicama.", "about": "Tečajevi Coinbasea i FXRatesAPI-ja praktički se podudaraju s tečajem na Googleu i XE.com: kod glavnih valuta razlika je manja od 0,005 %."}

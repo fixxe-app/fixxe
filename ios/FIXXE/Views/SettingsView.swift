@@ -70,16 +70,27 @@ struct SettingsView: View {
                             .navigationBarTitleDisplayMode(.inline)
                     }
                 } footer: {
-                    Button {
-                        UIPasteboard.general.string = "FIXXE " + AppInfo.version
-                        copied = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { copied = false }
-                    } label: {
-                        Text(copied ? L10n.t("copied") : L10n.t("version_label", AppInfo.version))
-                            .font(.caption2).foregroundColor(Color.textDim)
-                            .frame(maxWidth: .infinity, minHeight: 36)
+                    VStack(spacing: 0) {
+                        Button {
+                            UIPasteboard.general.string = "FIXXE " + AppInfo.version
+                            copied = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { copied = false }
+                        } label: {
+                            Text(copied ? L10n.t("copied") : L10n.t("version_label", AppInfo.version))
+                                .font(.caption2).foregroundColor(Color.textDim)
+                                .frame(maxWidth: .infinity, minHeight: 36)
+                        }
+                        .accessibilityIdentifier("set-version")
+                        // About — на языке приложения; Privacy — актуальная копия на сайте
+                        HStack(spacing: 20) {
+                            Link(L10n.t("about_link"), destination: AppInfo.aboutURL(lang: L10n.resolved(), theme: vm.theme))
+                                .accessibilityIdentifier("set-about")
+                            Link(L10n.t("privacy_link"), destination: AppInfo.privacyURL(theme: vm.theme))
+                                .accessibilityIdentifier("set-privacy")
+                        }
+                        .font(.caption2).foregroundColor(Color.textDim)
+                        .frame(maxWidth: .infinity, minHeight: 36)
                     }
-                    .accessibilityIdentifier("set-version")
                 }
             }
             .listStyle(.insetGrouped)

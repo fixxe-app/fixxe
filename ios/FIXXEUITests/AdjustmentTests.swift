@@ -117,6 +117,13 @@ extension AdjustmentTests {
         let ys = ids.map { app.buttons[$0].frame.minY }
         XCTAssertEqual(ys, ys.sorted(), "пункты настроек не в том порядке")
         XCTAssertTrue(app.buttons["set-version"].exists, "внизу настроек нет номера версии")
+        app.swipeUp()   // подвал списка создаётся, только когда виден
+        for (id, label) in [("set-about", "About the app"), ("set-privacy", "Privacy")] {
+            let link = app.descendants(matching: .any)[id]
+            XCTAssertTrue(link.waitForExistence(timeout: 3), "внизу настроек нет ссылки \(id)")
+            XCTAssertEqual(link.label, label, "подпись ссылки \(id)")
+        }
+        app.swipeDown()
         app.buttons["set-rounding"].tap()
         XCTAssertTrue(app.buttons["rounding-1"].waitForExistence(timeout: 5), "не открылся выбор округления")
         app.buttons["rounding-1"].tap()

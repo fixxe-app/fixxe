@@ -14,7 +14,7 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
   WHY FIXXE IS DIFFERENT
 
 
-  • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). If a provider is down, the app quietly switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
+  • Five rate sources with automatic fallback — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. and Frankfurter (ECB). The live rates match the reference rates you see in web search and on major currency sites. If a provider is down, the app automatically switches to the next one and shows which source the numbers came from. Most converters depend on a single API and simply show nothing when it fails. Prefer one source? Pick it in Settings — the others stay as a backup.
 
 
   • Works offline — the last rates are kept on your device, so the app keeps converting with no connection. And if those rates are more than a day old, it says so plainly instead of pretending they are current.
@@ -67,11 +67,12 @@ description: 'FIXXE is a fast, clean currency converter and currency calculator 
 
   Displayed rates are mid-market reference values, not real-time trading quotes.
 
-  Rates By Exchange Rate API.
+  One of the backup rate sources: Rates By Exchange Rate API.
 
   '
 whats_new: "Small improvements and fixes."
 landing:
+  credit_prefix: "One of the backup rate sources:"
   page_title: FIXXE — currency converter
   install_title: Ways to install
   about_title: About the app
@@ -96,3 +97,5 @@ landing:
   btn_store: Open in store
   privacy: Privacy
   terms: Terms
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "The live rates match the reference rates you see in web search and on major currency sites.", "about": "Coinbase and FXRatesAPI rates practically match Google and XE.com: for major currencies the difference is under 0.005%."}

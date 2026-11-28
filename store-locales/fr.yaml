@@ -9,7 +9,7 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
   CE QUI DISTINGUE FIXXE
 
 
-  • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Si un fournisseur tombe, l''application passe discrètement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
+  • Cinq sources de taux avec bascule automatique — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. et Frankfurter (BCE). Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change. Si un fournisseur tombe, l''application passe automatiquement au suivant et indique d''où viennent les chiffres. La plupart des convertisseurs dépendent d''une seule API et n''affichent plus rien dès qu''elle flanche. Vous préférez une source ? Choisissez-la dans les Paramètres — les autres restent en secours.
 
 
   • Fonctionne hors ligne — les derniers taux restent sur votre appareil, l''application continue donc de convertir sans connexion. Et si ces taux datent de plus d''une journée, elle le dit clairement au lieu de les faire passer pour récents.
@@ -62,11 +62,12 @@ description: 'FIXXE est un convertisseur de devises rapide et épuré, avec des 
 
   Les taux affichés sont des valeurs interbancaires de référence, et non des cotations de marché en temps réel.
 
-  Rates By Exchange Rate API.
+  L’une des sources de taux de secours : Rates By Exchange Rate API.
 
   '
 whats_new: "Petites améliorations et corrections."
 landing:
+  credit_prefix: "L’une des sources de taux de secours :"
   page_title: FIXXE — convertisseur de devises
   install_title: Façons d'installer
   about_title: À propos de l'application
@@ -91,3 +92,5 @@ landing:
   btn_store: Ouvrir dans la boutique
   privacy: Confidentialité
   terms: Conditions
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Les taux en direct correspondent aux taux de référence que vous voyez dans les moteurs de recherche et sur les grands sites de change.", "about": "Les taux de Coinbase et FXRatesAPI correspondent pratiquement à ceux de Google et de XE.com : pour les principales devises, l’écart est inférieur à 0,005 %."}

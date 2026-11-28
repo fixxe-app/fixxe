@@ -9,7 +9,7 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
   QUÉ HACE DISTINTO A FIXXE
 
 
-  • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Si un proveedor se cae, la aplicación pasa en silencio al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
+  • Cinco fuentes de tipos con relevo automático: Coinbase, FXRatesAPI, ExchangeRate-API, F.A. y Frankfurter (BCE). Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas. Si un proveedor se cae, la aplicación pasa automáticamente al siguiente y muestra de dónde salen las cifras. La mayoría de los conversores dependen de una sola API y, cuando falla, simplemente no muestran nada. ¿Prefieres una sola fuente? Elígela en Ajustes — las demás quedan de reserva.
 
 
   • Funciona sin conexión: los últimos tipos se guardan en el dispositivo, así que la aplicación sigue calculando sin red. Y si esos tipos tienen más de un día, lo dice claramente en vez de hacerlos pasar por actuales.
@@ -62,11 +62,12 @@ description: 'FIXXE es un conversor de divisas rápido y despejado, con tipos me
 
   Los tipos mostrados son valores medios de referencia, no cotizaciones de mercado en tiempo real.
 
-  Rates By Exchange Rate API.
+  Una de las fuentes de tipos de respaldo: Rates By Exchange Rate API.
 
   '
 whats_new: "Pequeñas mejoras y correcciones."
 landing:
+  credit_prefix: "Una de las fuentes de tipos de respaldo:"
   page_title: FIXXE — conversor de divisas
   install_title: Formas de instalar
   about_title: Sobre la aplicación
@@ -91,3 +92,5 @@ landing:
   btn_store: Abrir en la tienda
   privacy: Privacidad
   terms: Términos
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Los tipos en vivo coinciden con los tipos de referencia que ves en los buscadores y en los grandes sitios de divisas.", "about": "Los tipos de Coinbase y FXRatesAPI coinciden prácticamente con los de Google y XE.com: en las principales divisas la diferencia es inferior al 0,005 %."}

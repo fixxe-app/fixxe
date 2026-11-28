@@ -9,7 +9,7 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
   ČÍM SE FIXXE LIŠÍ
 
 
-  • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Když poskytovatel neodpovídá, aplikace tiše přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
+  • Pět zdrojů kurzů s automatickým přepnutím — Coinbase, FXRatesAPI, ExchangeRate-API, F.A. a Frankfurter (ECB). Živé kurzy se shodují s referenčními kurzy, které vidíte ve webovém vyhledávání a na velkých měnových webech. Když poskytovatel neodpovídá, aplikace automaticky přejde na další a ukáže, odkud čísla pocházejí. Většina převodníků závisí na jediném API a při jeho výpadku prostě neukáže nic. Dáváte přednost jednomu zdroji? Zvolte ho v Nastavení — ostatní zůstanou jako záloha.
 
 
   • Funguje offline — poslední kurzy zůstávají v zařízení, takže aplikace počítá i bez připojení. A jsou-li ty kurzy starší než den, řekne to na rovinu, místo aby je vydávala za aktuální.
@@ -62,11 +62,12 @@ description: 'FIXXE je rychlý a přehledný převodník měn s aktuálními st�
 
   Zobrazené kurzy jsou orientační střední hodnoty, nikoli burzovní kotace v reálném čase.
 
-  Rates By Exchange Rate API.
+  Jeden ze záložních zdrojů kurzů: Rates By Exchange Rate API.
 
   '
 whats_new: "Drobná vylepšení a opravy."
 landing:
+  credit_prefix: "Jeden ze záložních zdrojů kurzů:"
   page_title: FIXXE — převodník měn
   install_title: Způsoby instalace
   about_title: O aplikaci
@@ -91,3 +92,5 @@ landing:
   btn_store: Otevřít v obchodě
   privacy: Soukromí
   terms: Podmínky
+# окно About: нейтральная фраза из описания заменяется на фразу с названиями (tools/build-about.py)
+rates_match: {"store": "Živé kurzy se shodují s referenčními kurzy, které vidíte ve webovém vyhledávání a na velkých měnových webech.", "about": "Kurzy Coinbase a FXRatesAPI se prakticky shodují s kurzem v Googlu a na XE.com: u hlavních měn je rozdíl menší než 0,005 %."}
